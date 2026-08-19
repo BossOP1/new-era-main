@@ -1,0 +1,13 @@
+{
+  "name": "anew-era-homepage",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Anew Era Health homepage — PHP templates styled with Tailwind CSS",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/input.css -o ./assets/css/tailwind.css --minify",
+    "watch:css": "tailwindcss -i ./src/input.css -o ./assets/css/tailwind.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.16"
+  }
+}

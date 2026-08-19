@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white font-sans text-ink antialiased;
+  }
+}
+
+@layer components {
+  /* Soft fade at both ends of the insurer marquee */
+  .marquee-mask {
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+  }
+
+  /* Image placeholder shown until a real photo is dropped into assets/img/ */
+  .img-slot {
+    @apply flex h-full w-full items-center justify-center bg-white/[0.06] p-6 text-center;
+  }
+  .img-slot__hint {
+    @apply max-w-[26ch] text-[13px] font-semibold leading-snug text-white/45;
+  }
+}

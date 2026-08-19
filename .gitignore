@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.DS_Store
+
+# Reference screenshots of another practice's site, kept locally only —
+# they are not ours to redistribute in a public repo.
+uploads/
+.thumbnail

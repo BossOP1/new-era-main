@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/modernist-c38380dc-d781-4320-a5c9-420dab26c0eb/styles.css">
+<script src="_ds/modernist-c38380dc-d781-4320-a5c9-420dab26c0eb/_ds_bundle.js"></script>
+<script src="./image-slot.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Newsreader:ital@1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --font-heading: 'Manrope', system-ui, sans-serif;
+  --font-body: 'Manrope', system-ui, sans-serif;
+  --color-bg:#ffffff;
+  --color-surface:#f7f6f4;
+  --color-text:#14202b;
+  --color-accent:#0f639b;
+  --color-accent-600:#0c5081;
+  --color-accent-700:#0a4268;
+  --brand-blue:#0f639b;
+  --brand-orange:#e8922f;
+  --brand-green:#86be52;
+  --color-divider:rgba(20,32,43,0.16);
+}
+body{background:#fff;color:#14202b;margin:0;font-family:'Manrope', system-ui, sans-serif}
+a{color:#0f639b;text-decoration:none}
+a:hover{color:#0a4268}
+footer a:hover{color:#fff !important}
+@keyframes anew-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+</style>
+</helmet>
+
+<div style="background:#fff;color:#14202b;font-family:'Manrope', system-ui, sans-serif;min-height:100%">
+
+  <section id="top" style="position:relative;min-height:840px;display:flex;flex-direction:column;overflow:hidden;background:#0b1720">
+    <div style="position:absolute;inset:0">
+      <image-slot id="anew-hero" style="position:absolute;inset:0;width:100%;height:100%" shape="rect" fit="cover" placeholder="Drop hero photo or video still"></image-slot>
+    </div>
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg, rgba(20,20,20,0.28) 0%, rgba(15,20,25,0.5) 45%, rgba(10,15,20,0.68) 100%), radial-gradient(circle at 15% 90%, rgba(232,146,47,0.22), transparent 55%), radial-gradient(circle at 85% 5%, rgba(134,190,82,0.16), transparent 50%);pointer-events:none"></div>
+
+    <header style="position:relative;z-index:20;padding:20px">
+      <div style="position:relative;background:linear-gradient(135deg, rgba(255,255,255,0.62), rgba(255,255,255,0.32));backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border:1px solid rgba(255,255,255,0.6);box-shadow:0 8px 32px rgba(9,20,28,0.18), inset 0 1px 0 rgba(255,255,255,0.7);border-radius:20px;padding:0 12px 0 28px;height:74px;display:flex;align-items:center;justify-content:space-between;gap:32px">
+        <a href="#top" style="display:flex;align-items:center;gap:12px;text-decoration:none">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" aria-hidden="true">
+            <path d="M4 22 L13 4" stroke="#0f639b" stroke-width="3"></path>
+            <path d="M12 22 L21 4" stroke="#e8922f" stroke-width="3"></path>
+            <path d="M20 22 L29 4" stroke="#86be52" stroke-width="3"></path>
+          </svg>
+          <span style="font-size:21px;font-weight:800;letter-spacing:-0.02em;color:#0f639b">Anew<span style="color:#e8922f">Era</span></span>
+        </a>
+        <nav style="display:flex;align-items:center;gap:28px">
+          <a href="#conditions" style="font-size:14px;font-weight:600;color:#14202b">Conditions</a>
+          <a href="#focus" style="font-size:14px;font-weight:600;color:#14202b">Our Focus</a>
+          <a href="#treatments" style="font-size:14px;font-weight:600;color:#14202b">Treatments</a>
+          <a href="#tms" style="font-size:14px;font-weight:600;color:#14202b">TMS</a>
+          <a href="#faq" style="font-size:14px;font-weight:600;color:#14202b">FAQs</a>
+        </nav>
+        <div style="display:flex;align-items:center;gap:20px">
+          <a href="#book" style="font-size:14px;font-weight:600;color:#14202b">Patient login</a>
+          <a href="#book" style="display:inline-flex;align-items:center;gap:8px;background:#e8922f;color:#fff;font-size:14px;font-weight:800;padding:15px 24px;border-radius:999px" style-hover="background:#c97a1f">Get started</a>
+        </div>
+      </div>
+    </header>
+
+    <div style="position:relative;z-index:10;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:80px 40px 100px;pointer-events:none">
+      <div style="display:flex;gap:6px;margin-bottom:30px">
+        <span style="width:44px;height:4px;background:#0f639b;display:block"></span>
+        <span style="width:44px;height:4px;background:#e8922f;display:block"></span>
+        <span style="width:44px;height:4px;background:#86be52;display:block"></span>
+      </div>
+      <h1 style="font-size:74px;line-height:1.04;letter-spacing:-0.035em;color:#fff;margin:0;max-width:17ch;text-wrap:balance">A new era of mental health care.</h1>
+      <p style="font-size:19px;line-height:1.6;color:rgba(255,255,255,0.85);max-width:54ch;margin:26px 0 38px">Evidence-based psychiatry, therapy and TMS — delivered by clinicians who take the time to know you. In-person and telehealth, most insurance accepted.</p>
+      <div style="display:flex;gap:12px;pointer-events:auto">
+        <a href="#book" style="display:inline-flex;align-items:center;gap:10px;background:#fff;color:#0f639b;font-size:15px;font-weight:800;padding:17px 28px;border-radius:999px" style-hover="background:#e8922f;color:#fff">Get started</a>
+        <a href="tel:+15550000000" style="display:inline-flex;align-items:center;gap:10px;border:2px solid rgba(255,255,255,0.55);color:#fff;font-size:15px;font-weight:800;padding:17px 28px;border-radius:999px" style-hover="background:rgba(255,255,255,0.14)">(555) 000-0000</a>
+      </div>
+      <a href="#tms" style="display:inline-flex;align-items:center;gap:8px;margin-top:34px;font-size:14px;font-weight:800;color:#fff;pointer-events:auto" style-hover="color:#86be52">Learn about TMS
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17 17 7M9 7h8v8"></path></svg>
+      </a>
+    </div>
+  </section>
+
+  <section style="border-bottom:2px solid rgba(20,32,43,0.12)">
+    <div style="max-width:1280px;margin:0 auto;padding:36px 40px;display:flex;align-items:center;gap:48px;flex-wrap:wrap">
+      <p style="font-size:12px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:rgba(20,32,43,0.5);margin:0;white-space:nowrap">In-network with</p>
+      <div style="flex:1;min-width:0;overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)">
+        <div style="display:flex;align-items:center;gap:56px;width:max-content;animation:anew-marquee 34s linear infinite">
+          <sc-for list="{{ insurers }}" as="ins" hint-placeholder-count="16">
+            <span style="font-size:19px;font-weight:800;letter-spacing:-0.01em;color:rgba(20,32,43,0.42);white-space:nowrap">{{ ins.name }}</span>
+          </sc-for>
+        </div>
+      </div>
+      <a href="#book" style="font-size:13px;font-weight:800;color:#0f639b;white-space:nowrap">Verify my coverage →</a>
+    </div>
+  </section>
+
+  <section id="conditions" style="max-width:1280px;margin:0 auto;padding:104px 40px">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:40px;border-bottom:2px solid rgba(20,32,43,0.16);padding-bottom:24px;margin-bottom:48px">
+      <div>
+        <p style="font-size:12px;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#c97a1f;margin:0 0 14px">Conditions we treat</p>
+        <h2 style="font-size:44px;line-height:1.06;letter-spacing:-0.025em;margin:0;max-width:20ch">Care for the whole range of what you're carrying.</h2>
+      </div>
+      <p style="font-size:15px;line-height:1.6;color:rgba(20,32,43,0.62);max-width:34ch;margin:0">Every plan starts with a full diagnostic assessment — never a fifteen-minute script.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:minmax(0,0.9fr) minmax(0,1.1fr);gap:40px;align-items:stretch">
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <sc-for list="{{ conditions }}" as="c" hint-placeholder-count="7">
+          <button type="button" onClick="{{ c.select }}" onMouseEnter="{{ c.select }}" style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px;align-items:center;width:100%;flex:1;text-align:left;cursor:pointer;font-family:'Manrope', system-ui, sans-serif;padding:22px 26px;border:0;border-left:4px solid {{ c.edge }};border-radius:16px;background:{{ c.bg }}">
+            <span style="font-size:20px;font-weight:800;letter-spacing:-0.02em;color:#14202b;min-width:0">{{ c.name }}</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="{{ c.color }}" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+          </button>
+        </sc-for>
+        <a href="#book" style="display:inline-flex;align-items:center;gap:8px;margin-top:24px;font-size:14px;font-weight:800;color:#0f639b">See all conditions we treat
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+        </a>
+      </div>
+
+      <div style="position:relative;min-width:0;min-height:620px;overflow:hidden;border-radius:24px;background:#0b1720">
+        <sc-for list="{{ conditions }}" as="c" hint-placeholder-count="1">
+          <sc-if value="{{ c.active }}" hint-placeholder-val="{{ true }}">
+            <div style="position:absolute;inset:0">
+              <div style="position:absolute;inset:0">
+                <image-slot id="{{ c.slot }}" style="position:absolute;inset:0;width:100%;height:100%" shape="rect" fit="cover" placeholder="{{ c.name }} photo"></image-slot>
+              </div>
+              <div style="position:absolute;inset:0;background:linear-gradient(100deg, rgba(9,20,28,0.7) 0%, rgba(9,20,28,0.35) 55%, rgba(9,20,28,0.1) 100%);pointer-events:none"></div>
+              <div style="position:absolute;left:32px;top:32px;width:min(400px,calc(100% - 64px));background:rgba(11,23,32,0.55);backdrop-filter:blur(14px);border-radius:18px;padding:30px 30px 28px">
+                <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+                  <span style="width:28px;height:4px;background:{{ c.colorOnDark }}"></span>
+                  <h3 style="font-size:26px;letter-spacing:-0.025em;margin:0;color:#fff">{{ c.name }}</h3>
+                </div>
+                <p style="font-size:15px;line-height:1.6;color:rgba(255,255,255,0.82);margin:0 0 22px">{{ c.blurb }}</p>
+                <div style="border-top:1px solid rgba(255,255,255,0.25);padding-top:20px">
+                  <p style="font-size:13px;font-weight:600;color:rgba(255,255,255,0.7);margin:0 0 12px">How we treat it:</p>
+                  <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px">
+                    <sc-for list="{{ c.chips }}" as="chip" hint-placeholder-count="3">
+                      <span style="font-size:13px;font-weight:600;color:#fff;border:1px solid rgba(255,255,255,0.4);border-radius:999px;padding:8px 12px">{{ chip.label }}</span>
+                    </sc-for>
+                  </div>
+                  <div style="display:flex;gap:2px">
+                    <a href="#book" style="display:inline-flex;align-items:center;gap:8px;background:#fff;color:#14202b;font-size:14px;font-weight:800;padding:14px 18px;border-radius:999px" style-hover="background:#e8922f;color:#fff">Get care
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+                    </a>
+                    <a href="#treatments" style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.16);color:#fff;font-size:14px;font-weight:800;padding:14px 18px;border-radius:999px" style-hover="background:rgba(255,255,255,0.28)">Treatments</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </sc-if>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="focus" style="padding:40px">
+    <div style="max-width:1400px;margin:0 auto;border-radius:28px;padding:88px 80px 96px;background:#0f639b">
+      <p style="font-size:15px;font-weight:600;color:rgba(255,255,255,0.68);margin:0 0 44px">Our focus</p>
+      <div style="border-left:1px solid rgba(255,255,255,0.35);padding-left:56px;max-width:960px;display:flex;flex-direction:column;gap:40px">
+        <p style="font-size:30px;line-height:1.42;letter-spacing:-0.02em;color:rgba(255,255,255,0.92);margin:0;text-wrap:pretty">We are committed to forward-thinking, personalized psychiatric care for people living with depression, anxiety, postpartum mood changes, PTSD, tinnitus, migraines and OCD.</p>
+        <p style="font-size:30px;line-height:1.42;letter-spacing:-0.02em;color:rgba(255,255,255,0.92);margin:0;text-wrap:pretty">We are patient-centered, thoughtful and intentional. Sixty-minute intakes, symptom scores at every visit, and the same clinician each time — a specialized experience coupled with treatment backed by evidence.</p>
+        <p style="font-size:30px;line-height:1.42;letter-spacing:-0.02em;color:rgba(255,255,255,0.92);margin:0;text-wrap:pretty">Additionally, we deliver FDA-cleared TMS for treatment-resistant depression and OCD, and stay at the forefront of neuromodulation so medication is never the only answer we have.</p>
+        <a href="#book" style="align-self:flex-start;display:inline-flex;align-items:center;gap:10px;background:#fff;color:#0f639b;font-size:15px;font-weight:800;padding:17px 34px;border-radius:999px;margin-top:8px" style-hover="background:#e8922f;color:#fff">About us
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="treatments" style="background:#f7f6f4;padding:104px 40px">
+    <div style="max-width:1280px;margin:0 auto">
+      <div style="text-align:center;margin-bottom:56px">
+        <p style="font-size:12px;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#0f639b;margin:0 0 16px">Treatments</p>
+        <h2 style="font-size:46px;line-height:1.08;letter-spacing:-0.03em;margin:0">A full spectrum of care, under one roof.</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px">
+        <sc-for list="{{ treatments }}" as="t" hint-placeholder-count="6">
+          <div style="background:#fff;border-radius:22px;padding:36px 32px 32px;display:flex;flex-direction:column">
+            <h3 style="font-size:24px;letter-spacing:-0.02em;margin:0 0 12px;color:{{ t.color }};text-align:center">{{ t.name }}</h3>
+            <p style="font-size:15px;line-height:1.55;color:rgba(20,32,43,0.62);margin:0 0 24px;text-align:center">{{ t.detail }}</p>
+            <div style="position:relative;flex:1;min-height:180px;border-radius:16px;overflow:hidden">
+              <image-slot id="{{ t.slot }}" style="position:absolute;inset:0;width:100%;height:100%" shape="rect" fit="cover" placeholder="{{ t.name }} photo"></image-slot>
+              <div style="position:absolute;inset:0;background:linear-gradient(0deg, rgba(9,20,28,0.45) 0%, rgba(9,20,28,0) 55%);pointer-events:none"></div>
+              <div style="position:absolute;left:12px;right:12px;bottom:12px;display:flex;flex-wrap:wrap;gap:8px">
+                <sc-for list="{{ t.chips }}" as="chip" hint-placeholder-count="2">
+                  <span style="font-size:12px;font-weight:700;color:#14202b;background:rgba(255,255,255,0.92);border-radius:999px;padding:7px 12px">{{ chip.label }}</span>
+                </sc-for>
+              </div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+      <div style="text-align:center;margin-top:48px">
+        <a href="#book" style="display:inline-flex;align-items:center;background:#0f639b;color:#fff;font-size:15px;font-weight:800;padding:18px 36px;border-radius:999px" style-hover="background:#0a4268">Get care today</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:104px 40px;background:#fff">
+    <div style="max-width:1280px;margin:0 auto">
+      <div style="text-align:center;margin-bottom:56px">
+        <h2 style="font-size:46px;line-height:1.08;letter-spacing:-0.03em;margin:0 0 16px">Not sure what kind of support you need?</h2>
+        <p style="font-size:17px;color:rgba(20,32,43,0.62);margin:0">Treatment isn't one-size-fits-all. Therapy and psychiatry can work separately or as a team.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:minmax(160px,0.7fr) minmax(0,1fr) minmax(0,1fr);gap:0 24px">
+        <div></div>
+        <div style="background:#eaf2f8;border-radius:20px 20px 0 0;padding:36px 32px 24px">
+          <h3 style="font-size:28px;letter-spacing:-0.02em;margin:0;color:#0a4268">Therapy</h3>
+        </div>
+        <div style="background:#fdf1e4;border-radius:20px 20px 0 0;padding:36px 32px 24px">
+          <h3 style="font-size:28px;letter-spacing:-0.02em;margin:0;color:#8a5a1d">Psychiatry</h3>
+        </div>
+        <sc-for list="{{ compareRows }}" as="row" hint-placeholder-count="6">
+          <div style="display:contents">
+            <div style="padding:24px 16px 24px 0;font-size:16px;font-weight:800;color:#14202b;border-top:1px solid rgba(20,32,43,0.14);display:flex;align-items:center">{{ row.label }}</div>
+            <div style="background:#eaf2f8;padding:24px 32px;border-top:1px solid rgba(15,99,155,0.18)">
+              <p style="font-size:15px;line-height:1.6;color:#0a4268;margin:0">{{ row.therapy }}</p>
+            </div>
+            <div style="background:#fdf1e4;padding:24px 32px;border-top:1px solid rgba(232,146,47,0.28)">
+              <p style="font-size:15px;line-height:1.6;color:#7c4f18;margin:0">{{ row.psychiatry }}</p>
+            </div>
+          </div>
+        </sc-for>
+        <div></div>
+        <div style="background:#eaf2f8;border-radius:0 0 20px 20px;padding:28px 32px 40px">
+          <a href="#book" style="display:inline-flex;align-items:center;gap:8px;background:#0f639b;color:#fff;font-size:14px;font-weight:800;padding:14px 24px;border-radius:999px" style-hover="background:#0a4268">Get started
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+          </a>
+        </div>
+        <div style="background:#fdf1e4;border-radius:0 0 20px 20px;padding:28px 32px 40px">
+          <a href="#book" style="display:inline-flex;align-items:center;gap:8px;background:#e8922f;color:#fff;font-size:14px;font-weight:800;padding:14px 24px;border-radius:999px" style-hover="background:#c97a1f">Get started
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tms" style="padding:40px">
+    <div style="max-width:1400px;margin:0 auto;position:relative;border-radius:28px;overflow:hidden;min-height:640px;display:flex;align-items:flex-end;background:#0b1720">
+      <div style="position:absolute;inset:0">
+        <image-slot id="anew-tms" style="position:absolute;inset:0;width:100%;height:100%" shape="rect" fit="cover" placeholder="TMS treatment room photo"></image-slot>
+      </div>
+      <div style="position:absolute;inset:0;background:linear-gradient(0deg, rgba(9,20,28,0.9) 0%, rgba(9,20,28,0.55) 45%, rgba(9,20,28,0.15) 75%, rgba(9,20,28,0) 100%), radial-gradient(circle at 90% 10%, rgba(232,146,47,0.18), transparent 50%);pointer-events:none"></div>
+      <div style="position:relative;width:100%;padding:64px 64px 56px;display:flex;flex-direction:column;gap:32px">
+        <div style="max-width:640px">
+          <p style="font-size:12px;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#86be52;margin:0 0 16px">TMS Therapy</p>
+          <h2 style="font-size:42px;line-height:1.1;letter-spacing:-0.03em;margin:0 0 16px;color:#fff">When medication hasn't been enough.</h2>
+          <p style="font-size:16px;line-height:1.6;color:rgba(255,255,255,0.82);margin:0">Non-invasive, FDA-cleared magnetic stimulation for depression and OCD. No anesthesia, no sedation — you drive yourself home and go back to your day.</p>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,0.25);padding-top:28px">
+          <div style="display:flex;gap:40px;flex-wrap:wrap">
+            <div>
+              <p style="font-size:32px;font-weight:800;letter-spacing:-0.03em;margin:0;color:#e8922f">19 min</p>
+              <p style="font-size:13px;color:rgba(255,255,255,0.75);margin:2px 0 0">per session</p>
+            </div>
+            <div>
+              <p style="font-size:32px;font-weight:800;letter-spacing:-0.03em;margin:0;color:#86be52">36</p>
+              <p style="font-size:13px;color:rgba(255,255,255,0.75);margin:2px 0 0">sessions in a course</p>
+            </div>
+            <div>
+              <p style="font-size:32px;font-weight:800;letter-spacing:-0.03em;margin:0;color:#fff">0</p>
+              <p style="font-size:13px;color:rgba(255,255,255,0.75);margin:2px 0 0">days of downtime</p>
+            </div>
+          </div>
+          <a href="#book" style="display:inline-flex;align-items:center;gap:10px;background:#fff;color:#0f639b;font-size:15px;font-weight:800;padding:16px 28px;border-radius:999px;white-space:nowrap" style-hover="background:#e8922f;color:#fff">See if TMS is right for you
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:40px">
+    <div style="max-width:1400px;margin:0 auto;border-radius:28px;padding:72px 64px;background:radial-gradient(circle at 90% -10%, rgba(232,146,47,0.35), transparent 55%), radial-gradient(circle at -10% 110%, rgba(134,190,82,0.3), transparent 55%), #10202c">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:24px;margin-bottom:32px">
+        <div>
+          <p style="font-size:12px;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#86be52;margin:0 0 10px">Reviews</p>
+          <h2 style="font-size:36px;line-height:1.1;letter-spacing:-0.02em;margin:0;color:#fff">In their words.</h2>
+        </div>
+        <div style="display:flex;gap:10px">
+          <button type="button" onClick="{{ reviewsPrev }}" aria-label="Previous reviews" style="width:48px;height:48px;border-radius:999px;border:2px solid rgba(255,255,255,0.4);background:transparent;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center" style-hover="background:rgba(255,255,255,0.12)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 6l-6 6 6 6"></path></svg>
+          </button>
+          <button type="button" onClick="{{ reviewsNext }}" aria-label="Next reviews" style="width:48px;height:48px;border-radius:999px;border:2px solid rgba(255,255,255,0.4);background:transparent;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center" style-hover="background:rgba(255,255,255,0.12)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 6l6 6-6 6"></path></svg>
+          </button>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px">
+        <sc-for list="{{ reviews }}" as="r" hint-placeholder-count="6">
+          <figure style="background:{{ r.bg }};border-radius:18px;padding:32px 28px;height:260px;display:flex;flex-direction:column;justify-content:space-between;margin:0">
+            <blockquote style="font-size:17px;line-height:1.5;letter-spacing:-0.01em;color:#14202b;margin:0;display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden">{{ r.quote }}</blockquote>
+            <figcaption style="font-size:14px;font-weight:800;color:#14202b;margin:20px 0 0">{{ r.who }}</figcaption>
+          </figure>
+        </sc-for>
+      </div>
+      <div style="text-align:center;margin-top:40px">
+        <a href="#book" style="display:inline-flex;align-items:center;background:#fff;color:#0f639b;font-size:15px;font-weight:800;padding:16px 32px;border-radius:999px" style-hover="background:#e8922f;color:#fff">More success stories</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" style="background:#eef6f9">
+    <div style="max-width:1280px;margin:0 auto;padding:104px 40px">
+      <h2 style="font-size:52px;line-height:1.04;letter-spacing:-0.03em;margin:0 0 14px;color:#0a4268">Any questions?</h2>
+      <p style="font-size:16px;color:#0f639b;margin:0 0 56px">Find trust-worthy answers on everything we treat and how we treat it.</p>
+      <div style="display:grid;grid-template-columns:minmax(0,0.85fr) minmax(0,1.15fr);gap:72px;align-items:start">
+        <div style="position:relative;height:420px;border-radius:20px;overflow:hidden">
+          <image-slot id="anew-faq" style="position:absolute;inset:0;width:100%;height:100%" shape="rect" fit="cover" placeholder="Drop a supporting photo"></image-slot>
+        </div>
+        <div>
+          <div style="display:flex;gap:10px;margin-bottom:36px;flex-wrap:wrap">
+            <sc-for list="{{ faqCats }}" as="cat" hint-placeholder-count="3">
+              <button type="button" onClick="{{ cat.select }}" style="font-size:13px;font-weight:800;letter-spacing:0.04em;text-transform:uppercase;padding:14px 22px;border-radius:999px;cursor:pointer;font-family:'Manrope', system-ui, sans-serif;background:{{ cat.bg }};color:{{ cat.fg }};border:2px solid {{ cat.border }}">{{ cat.name }}</button>
+            </sc-for>
+          </div>
+          <div>
+            <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="5">
+              <div style="border-bottom:1px solid rgba(15,99,155,0.28)">
+                <button type="button" onClick="{{ f.toggle }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;background:transparent;border:0;cursor:pointer;padding:24px 0;text-align:left;font-family:'Manrope', system-ui, sans-serif;font-size:20px;font-weight:800;letter-spacing:-0.015em;color:#0a4268">
+                  {{ f.q }}
+                  <span style="font-size:22px;font-weight:400;color:#0f639b;line-height:1;flex-shrink:0">{{ f.sign }}</span>
+                </button>
+                <sc-if value="{{ f.open }}" hint-placeholder-val="{{ false }}">
+                  <p style="font-size:15px;line-height:1.7;color:rgba(10,66,104,0.75);margin:0;padding:0 60px 26px 0;max-width:62ch">{{ f.a }}</p>
+                </sc-if>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="book" style="max-width:1400px;margin:0 auto;padding:40px">
+    <div style="position:relative;border-radius:24px;overflow:hidden;padding:52px 64px;text-align:center;background:radial-gradient(circle at 8% 15%, rgba(15,99,155,0.85), transparent 42%), radial-gradient(circle at 92% 85%, rgba(15,99,155,0.85), transparent 42%), radial-gradient(circle at 30% 90%, rgba(232,146,47,0.55), transparent 45%), radial-gradient(circle at 75% 10%, rgba(134,190,82,0.5), transparent 45%), #fdfaf6">
+      <h2 style="font-size:34px;line-height:1.18;letter-spacing:-0.02em;margin:0 0 12px;color:#14202b">Care designed for <em style="font-style:italic;font-family:'Newsreader', Georgia, serif;font-weight:400">real life — and real progress</em></h2>
+      <p style="font-size:16px;color:rgba(20,32,43,0.72);margin:0 0 24px;max-width:52ch;margin-left:auto;margin-right:auto">New patient appointments typically available within five days. Insurance verified before your first visit — no surprise bills.</p>
+      <a href="#book" style="display:inline-flex;align-items:center;background:#14202b;color:#fff;font-size:15px;font-weight:700;padding:14px 28px;border-radius:999px" style-hover="background:#0a4268">Book a consultation</a>
+      <p style="font-size:12px;color:rgba(20,32,43,0.55);margin:18px 0 0">In crisis? Call or text 988 any time.</p>
+    </div>
+  </section>
+
+  <footer style="background:radial-gradient(circle at 90% 0%, rgba(232,146,47,0.16), transparent 45%), radial-gradient(circle at 0% 100%, rgba(134,190,82,0.14), transparent 45%), #0b1720;color:#fff">
+    <div style="max-width:1280px;margin:0 auto;padding:80px 40px 48px">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:40px;flex-wrap:wrap;border-bottom:1px solid rgba(255,255,255,0.14);padding-bottom:48px;margin-bottom:48px">
+        <div>
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px">
+            <svg width="28" height="28" viewBox="0 0 30 30" fill="none" aria-hidden="true">
+              <path d="M4 22 L13 4" stroke="#0f639b" stroke-width="3"></path>
+              <path d="M12 22 L21 4" stroke="#e8922f" stroke-width="3"></path>
+              <path d="M20 22 L29 4" stroke="#86be52" stroke-width="3"></path>
+            </svg>
+            <span style="font-size:22px;font-weight:800;letter-spacing:-0.02em;color:#fff">Anew<span style="color:#e8922f">Era</span></span>
+          </div>
+          <p style="font-size:15px;line-height:1.65;color:rgba(255,255,255,0.6);margin:0;max-width:38ch">Psychiatry, therapy and TMS for adults and adolescents. In-person and telehealth.</p>
+        </div>
+        <a href="#book" style="display:inline-flex;align-items:center;gap:10px;background:#fff;color:#0f639b;font-size:15px;font-weight:800;padding:16px 28px;border-radius:999px;white-space:nowrap" style-hover="background:#e8922f;color:#fff">Book a consultation
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+        </a>
+      </div>
+      <div style="display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);gap:48px;margin-bottom:56px">
+        <div style="display:flex;gap:6px">
+          <span style="width:30px;height:4px;background:#0f639b"></span>
+          <span style="width:30px;height:4px;background:#e8922f"></span>
+          <span style="width:30px;height:4px;background:#86be52"></span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <p style="font-size:12px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin:0 0 4px">Care</p>
+          <a href="#conditions" style="font-size:14px;color:rgba(255,255,255,0.78)">Conditions</a>
+          <a href="#treatments" style="font-size:14px;color:rgba(255,255,255,0.78)">Treatments</a>
+          <a href="#tms" style="font-size:14px;color:rgba(255,255,255,0.78)">TMS therapy</a>
+          <a href="#focus" style="font-size:14px;color:rgba(255,255,255,0.78)">Our focus</a>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <p style="font-size:12px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin:0 0 4px">Patients</p>
+          <a href="#book" style="font-size:14px;color:rgba(255,255,255,0.78)">Book a visit</a>
+          <a href="#book" style="font-size:14px;color:rgba(255,255,255,0.78)">Insurance</a>
+          <a href="#faq" style="font-size:14px;color:rgba(255,255,255,0.78)">FAQs</a>
+          <a href="#book" style="font-size:14px;color:rgba(255,255,255,0.78)">Patient portal</a>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <p style="font-size:12px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin:0 0 4px">Visit</p>
+          <p style="font-size:14px;line-height:1.6;color:rgba(255,255,255,0.78);margin:0">1200 Harbor Street<br>Suite 210</p>
+          <a href="tel:+15550000000" style="font-size:14px;color:rgba(255,255,255,0.78)">(555) 000-0000</a>
+          <a href="mailto:hello@anewera.com" style="font-size:14px;color:rgba(255,255,255,0.78)">hello@anewera.com</a>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;padding-top:24px;padding-bottom:48px;border-top:1px solid rgba(255,255,255,0.14);border-bottom:1px solid rgba(255,255,255,0.14)">
+        <div style="display:flex;gap:24px;flex-wrap:wrap">
+          <a href="#top" style="font-size:12px;color:rgba(255,255,255,0.4)">Terms &amp; conditions</a>
+          <a href="#top" style="font-size:12px;color:rgba(255,255,255,0.4)">Privacy notice</a>
+          <a href="#top" style="font-size:12px;color:rgba(255,255,255,0.4)">Cookie policy</a>
+          <a href="#top" style="font-size:12px;color:rgba(255,255,255,0.4)">Accessibility</a>
+          <a href="#top" style="font-size:12px;color:rgba(255,255,255,0.4)">Sitemap</a>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <span style="font-size:12px;font-weight:700;color:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.25);border-radius:999px;padding:7px 14px">HIPAA Compliant</span>
+          <span style="font-size:12px;font-weight:700;color:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.25);border-radius:999px;padding:7px 14px">Licensed Providers</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:#14202b;background:#86be52;border-radius:999px;padding:7px 14px">★ 4.9 · 380+ reviews</span>
+        </div>
+      </div>
+      <p style="font-size:min(18vw,220px);font-weight:800;letter-spacing:-0.04em;line-height:0.85;margin:40px 0 24px;padding-bottom:14px;text-align:center;user-select:none;white-space:nowrap">
+        <span style="color:#0f639b">Anew</span><span style="color:#e8922f">Era</span>
+      </p>
+      <p style="font-size:12px;line-height:1.7;color:rgba(255,255,255,0.35);margin:32px 0 0;max-width:900px">Copyright © Anew Era Health. All rights reserved. Anew Era is a trading name of Anew Era Health, PLLC. Registered office 1200 Harbor Street, Suite 210. Licensed to provide psychiatric care, therapy and TMS services in the states listed at booking.</p>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+class Component extends DCLogic {
+  state = { open: 0, treat: 0, cond: 0, reviewPage: 0, faqCat: 0 };
+  renderVals() {
+    const B = '#0f639b', O = '#e8922f', G = '#86be52';
+    const faqCatData = [
+      { name: 'What to expect', faqs: [
+        ['What happens at my first visit?', 'A sixty-minute diagnostic intake covering history, physical health, sleep and current symptoms, ending with a written plan you leave with the same day.'],
+        ['Do I have to take medication?', 'No. Medication is one option among several. Many patients do well with therapy alone, or with TMS, and we will say so plainly rather than defaulting to a prescription.'],
+        ['How long does treatment take?', 'It depends on the plan — a TMS course runs about six weeks, therapy is ongoing and reviewed monthly, medication changes are checked every two to four weeks at first.'],
+        ['Do you see adolescents?', 'We see patients aged 13 and up. Adolescent care includes family sessions and, with consent, coordination with school counselors.']
+      ]},
+      { name: 'Getting started', faqs: [
+        ['How soon can I be seen?', 'New patient consultations are usually available within five business days, and same-week telehealth slots often open up.'],
+        ['What do I need for my first appointment?', 'A photo ID, your insurance card, and a list of current medications. We send intake forms ahead of time so the visit itself is all conversation.'],
+        ['Can I switch clinicians if it is not a fit?', 'Yes, any time. Our intake team will match you with someone new at no extra cost and no awkward conversation required.']
+      ]},
+      { name: 'Insurance', faqs: [
+        ['Do you take my insurance?', 'We are in-network with most major commercial plans as well as Medicare and Tricare. We verify your benefits before your first appointment.'],
+        ['Is TMS covered by insurance?', 'For treatment-resistant depression, yes — most plans cover TMS once you have tried two or more medications. We handle the prior authorization for you.'],
+        ['What if I am not covered?', 'We offer transparent self-pay rates and can walk you through a payment plan before you commit to anything.']
+      ]}
+    ];
+    const faqData = faqCatData[this.state.faqCat].faqs;
+    const insurerNames = ['Aetna', 'Cigna', 'United Healthcare', 'Blue Cross Blue Shield', 'Medicare', 'Tricare', 'Humana', 'Optum'];
+    return {
+      insurers: insurerNames.concat(insurerNames).map((name, i) => ({ name, key: i })),
+      compareRows: [
+        { label: 'What it is', therapy: 'Mental healthcare for emotional, behavioral or relationship challenges — often guided conversation.', psychiatry: 'Medical support for mental health conditions, often involving medication.' },
+        { label: 'Who you meet with', therapy: 'A licensed therapist (LCSW, LMFT, PhD/PsyD).', psychiatry: 'A psychiatric provider (MD, DO or PMHNP).' },
+        { label: 'What they do', therapy: 'Use evidence-based approaches — CBT, DBT, EMDR, ACT — to build coping skills and support growth.', psychiatry: 'Evaluate symptoms, provide a diagnosis where appropriate, and determine whether medication or TMS may help.' },
+        { label: 'Can they prescribe medication?', therapy: 'No.', psychiatry: 'Yes.' },
+        { label: 'How sessions work', therapy: 'Weekly or biweekly, about 60 minutes, focused on support and skill-building.', psychiatry: 'Starts with a 60-minute evaluation, then shorter, less frequent follow-ups.' },
+        { label: 'Signs of a good fit', therapy: 'You feel understood and supported, and are making progress toward your goals.', psychiatry: 'Your symptoms are improving and treatment feels manageable and medically appropriate.' }
+      ],
+      conditions: [
+        { slot: 'cond-1', name: 'Depression', color: B, blurb: 'Persistent low mood, loss of interest, and the treatment-resistant cases other clinics give up on.', chips: ['Medication', 'Therapy', 'TMS'] },
+        { slot: 'cond-2', name: 'Anxiety', color: B, blurb: 'Generalised anxiety, panic disorder, social anxiety and the physical symptoms that come with them.', chips: ['CBT', 'Exposure work', 'Medication'] },
+        { slot: 'cond-3', name: 'Postpartum', color: B, blurb: 'Postpartum depression and anxiety, treated with options that fit feeding, sleep and a new baby.', chips: ['Therapy', 'Medication review', 'TMS'] },
+        { slot: 'cond-4', name: 'PTSD', color: B, blurb: 'Trauma-focused therapy at your pace, with clinicians trained in EMDR and prolonged exposure.', chips: ['EMDR', 'Prolonged exposure', 'Medication'] },
+        { slot: 'cond-5', name: 'Tinnitus', color: B, blurb: 'Persistent ringing that disrupts sleep and mood — addressed with retraining therapy and TMS protocols.', chips: ['TMS', 'Sound retraining', 'Sleep support'] },
+        { slot: 'cond-6', name: 'Migraines', color: B, blurb: 'Chronic migraine care coordinated with your mood and sleep treatment rather than in isolation.', chips: ['Preventive care', 'Trigger tracking', 'Sleep support'] },
+        { slot: 'cond-7', name: 'OCD', color: B, blurb: 'Exposure and response prevention, plus TMS for OCD that has not responded to therapy alone.', chips: ['ERP therapy', 'TMS', 'Medication'] }
+      ].map((c, i) => ({
+        ...c,
+        colorOnDark: c.color === B ? '#8fc7e8' : c.color,
+        active: this.state.cond === i,
+        bg: this.state.cond === i ? '#fdf1e4' : '#ffffff',
+        edge: this.state.cond === i ? '#e8922f' : 'rgba(20,32,43,0.14)',
+        chips: c.chips.map(label => ({ label })),
+        select: () => this.setState({ cond: i })
+      })),
+      treatments: [
+        { name: 'TMS', color: B, slot: 'treat-1', detail: 'FDA-cleared magnetic stimulation for depression and OCD when medication has fallen short.', chips: ['Depression', 'OCD'] },
+        { name: 'Accelerated TMS', color: B, slot: 'treat-2', detail: 'A full course compressed into days, not weeks, for patients who need results fast.', chips: ['5-day course', 'Depression'] },
+        { name: 'Psychiatry', color: B, slot: 'treat-3', detail: 'Diagnostic evaluation and ongoing medication management from a clinician who knows you.', chips: ['Evaluation', 'Med management'] },
+        { name: 'Spravato', color: B, slot: 'treat-4', detail: 'In-office esketamine treatment for treatment-resistant depression, monitored start to finish.', chips: ['Esketamine', 'In-office'] },
+        { name: 'Ketamine', color: B, slot: 'treat-5', detail: 'Infusion therapy for depression, anxiety and chronic pain that hasn\u2019t responded to other care.', chips: ['Infusion', 'Depression'] },
+        { name: 'Therapy', color: B, slot: 'treat-6', detail: 'CBT, DBT, EMDR and ACT with therapists working alongside your prescriber, never in a silo.', chips: ['CBT', 'EMDR'] }
+      ].map(t => ({ ...t, chips: t.chips.map(label => ({ label })) })),
+      reviewsPrev: () => this.setState(s => ({ reviewPage: (s.reviewPage + 1) % 2 })),
+      reviewsNext: () => this.setState(s => ({ reviewPage: (s.reviewPage + 1) % 2 })),
+      reviews: [
+        { quote: '"The first psychiatrist who read my chart before walking in. Six months later I am off two medications and doing better than I was on four."', who: 'Marisa L.' },
+        { quote: '"TMS gave me back the version of myself my family remembers. A 36-session course felt routine instead of daunting."', who: 'Devon R.' },
+        { quote: '"They found the ADHD everyone else had been treating as anxiety. That one appointment changed how I work and parent."', who: 'Priya S.' },
+        { quote: '"Sixty-minute intake, real symptom scores at every visit — the first practice that treated my chart like it mattered."', who: 'Andre K.' },
+        { quote: '"Spravato got me out of a depressive episode nothing else had touched. The team monitored every session closely."', who: 'Renee T.' },
+        { quote: '"My therapist and prescriber actually talk to each other. I have never had that before and it changed everything."', who: 'Jordan M.' },
+        { quote: '"Accelerated TMS fit into one week off work instead of two months of daily visits. Results came just as fast."', who: 'Sam O.' },
+        { quote: '"Telehealth visits in the evening meant I never had to choose between therapy and my job."', who: 'Layla H.' },
+        { quote: '"Ketamine infusions paired with therapy pulled me out of a depression I thought was permanent."', who: 'Chris B.' },
+        { quote: '"The intake team verified my insurance before I even walked in. No surprise bills, no runaround."', who: 'Talia F.' },
+        { quote: '"OCD treatment that finally worked — ERP therapy plus TMS when medication alone plateaued."', who: 'Miguel A.' },
+        { quote: '"Postpartum anxiety hit hard. They saw me within days and built a plan around my baby\u2019s schedule."', who: 'Nina W.' }
+      ].slice(this.state.reviewPage * 6, this.state.reviewPage * 6 + 6).map((r, i) => ({
+        ...r, bg: i % 2 === 0 ? '#f7f6f4' : '#ffffff'
+      })),
+      faqCats: faqCatData.map((cat, i) => ({
+        name: cat.name,
+        bg: this.state.faqCat === i ? '#0a4268' : 'transparent',
+        fg: this.state.faqCat === i ? '#fff' : '#0a4268',
+        border: this.state.faqCat === i ? '#0a4268' : 'rgba(10,66,104,0.35)',
+        select: () => this.setState({ faqCat: i, open: 0 })
+      })),
+      faqs: faqData.map(([q, a], i) => ({
+        q, a,
+        open: this.state.open === i,
+        sign: this.state.open === i ? '−' : '+',
+        toggle: () => this.setState(s => ({ open: s.open === i ? -1 : i }))
+      }))
+    };
+  }
+}
+</script>
+</body>
+</html>
