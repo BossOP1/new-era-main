@@ -22,6 +22,52 @@ if (!function_exists('asset')) {
     }
 }
 
+if (!function_exists('font_faces')) {
+    /**
+     * @font-face rules for the two self-hosted Klim faces — Tobias for the
+     * headings, Untitled Sans for the copy.
+     *
+     * Only the cuts actually sitting in assets/fonts/ get declared. The
+     * licences are per-domain so the .woff2 files are not in the repo; while
+     * they are missing this returns nothing at all, no browser goes looking
+     * for a file that isn't there, and the fallback stack in
+     * assets/js/tailwind.config.js carries the page. Drop the files in and
+     * they light up on the next request — see assets/fonts/README.md.
+     */
+    function font_faces(): string
+    {
+        $faces = [
+            ['Untitled Sans', 'UntitledSans-Regular',   400, 'normal'],
+            ['Untitled Sans', 'UntitledSans-Medium',    500, 'normal'],
+            ['Untitled Sans', 'UntitledSans-Bold',      700, 'normal'],
+            ['Tobias',        'Tobias-Regular',         400, 'normal'],
+            ['Tobias',        'Tobias-RegularItalic',   400, 'italic'],
+            ['Tobias',        'Tobias-Medium',          500, 'normal'],
+            ['Tobias',        'Tobias-Bold',            700, 'normal'],
+        ];
+
+        $css = '';
+
+        foreach ($faces as [$family, $file, $weight, $style]) {
+            $path = 'assets/fonts/' . $file . '.woff2';
+
+            if (!is_file(__DIR__ . '/../' . $path)) {
+                continue;
+            }
+
+            $css .= sprintf(
+                "@font-face{font-family:'%s';src:url('%s') format('woff2');font-weight:%d;font-style:%s;font-display:swap}",
+                $family,
+                e(asset($path)),
+                $weight,
+                $style
+            );
+        }
+
+        return $css === '' ? '' : "<style>$css</style>\n";
+    }
+}
+
 if (!function_exists('image_slot')) {
     /**
      * Renders a photo if one exists, otherwise a labelled placeholder.

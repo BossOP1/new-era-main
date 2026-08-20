@@ -67,7 +67,7 @@ $footer_link = 'text-sm text-white/75 transition-colors hover:text-white';
       </div>
     </div>
 
-    <p class="mb-6 mt-10 select-none whitespace-nowrap pb-3.5 text-center text-[min(18vw,220px)] font-extrabold leading-[0.85] tracking-[-0.04em]">
+    <p class="display-mark mb-6 mt-10 select-none whitespace-nowrap pb-3.5 text-center text-[min(18vw,220px)] font-extrabold leading-[0.85] tracking-[-0.04em]">
       <span class="text-brand-blue"><?= e($site['brand'][0]) ?></span><span class="text-brand-orange"><?= e($site['brand'][1]) ?></span>
     </p>
 

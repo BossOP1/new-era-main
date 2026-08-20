@@ -12,7 +12,9 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
 <!-- ─── Hero ─────────────────────────────────────────────────────────── -->
 <section id="top" class="relative flex min-h-[720px] flex-col overflow-hidden bg-night pt-[92px] sm:pt-[114px] lg:min-h-[840px]">
   <div class="absolute inset-0">
-    <?= image_slot('hero', 'Drop hero photo or video still', 'A group therapy session in a sunlit room', true) ?>
+    <!-- Swapping this photo is a file drop: replace assets/img/hero.jpg and
+         update the alt text below to match whatever it shows. -->
+    <?= image_slot('hero', 'Drop hero photo', 'A woman sitting with her family in a sunlit living room', true) ?>
   </div>
   <div class="pointer-events-none absolute inset-0 bg-hero-veil"></div>
 
@@ -186,7 +188,7 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
         <div class="flex flex-wrap gap-10">
           <?php foreach ($data['tms_stats'] as $stat): ?>
             <div>
-              <p class="m-0 text-[32px] font-extrabold tracking-[-0.03em]" style="color:<?= e($stat['color']) ?>"><?= e($stat['value']) ?></p>
+              <p class="display-mark m-0 text-[32px] font-extrabold tracking-[-0.03em]" style="color:<?= e($stat['color']) ?>"><?= e($stat['value']) ?></p>
               <p class="m-0 mt-0.5 text-[13px] text-white/75"><?= e($stat['label']) ?></p>
             </div>
           <?php endforeach; ?>

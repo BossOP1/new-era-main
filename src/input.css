@@ -2,9 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+/* The @font-face rules for Tobias and Untitled Sans are emitted by
+   font_faces() in includes/functions.php rather than living here — the
+   licensed files are not in the repo, and that helper only declares the
+   faces it can actually find. See assets/fonts/README.md. */
+
 @layer base {
   body {
     @apply bg-white font-sans text-ink antialiased;
+  }
+
+  /* Headings are Tobias throughout; everything else inherits Untitled Sans
+     from body. Smaller headings that should read as UI rather than editorial
+     opt back out with .font-sans — see the conditions tabs and FAQ pills. */
+  h1,
+  h2,
+  h3 {
+    @apply font-serif;
   }
 }
 
@@ -13,6 +27,12 @@
   .marquee-mask {
     -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
     mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+  }
+
+  /* A number or word set as a display moment rather than as copy — the TMS
+     figures, the oversized footer wordmark. Tobias, like the headings. */
+  .display-mark {
+    @apply font-serif;
   }
 
   /* Capsule badges that sit directly on a photo. Smoked glass rather than a

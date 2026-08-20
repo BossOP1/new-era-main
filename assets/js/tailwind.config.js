@@ -27,9 +27,20 @@ const anewEraTailwindConfig = {
         mist: '#eef6f9',
         cream: '#fdfaf6',
       },
+      // Tobias sets the headings and the display moments; Untitled Sans does
+      // the reading. Both are Klim retail faces — see assets/fonts/README.md.
+      // Manrope and Newsreader stay on as fallbacks so the page never loses
+      // its shape while the licensed files are missing.
       fontFamily: {
-        sans: ['Manrope', 'system-ui', 'sans-serif'],
-        serif: ['Newsreader', 'Georgia', 'serif'],
+        sans: ['Untitled Sans', 'Manrope', 'system-ui', 'sans-serif'],
+        serif: ['Tobias', 'Newsreader', 'Georgia', 'serif'],
+      },
+      // Untitled Sans ships Regular, Medium and Bold. The design reaches for
+      // extrabold and semibold constantly, so point those at the cuts that
+      // exist rather than letting the browser fake a heavier one.
+      fontWeight: {
+        semibold: '500',
+        extrabold: '700',
       },
       backgroundImage: {
         'hero-veil':

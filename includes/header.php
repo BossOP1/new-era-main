@@ -39,7 +39,11 @@ $nav_link  = 'text-sm font-semibold text-ink transition-colors hover:text-brand-
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Newsreader:ital@1&display=swap" rel="stylesheet">
+<!-- Fallbacks only. Tobias and Untitled Sans are self-hosted out of
+     assets/fonts/ by font_faces() below; these two stand in until the
+     licensed files are dropped in. -->
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Newsreader:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<?= font_faces() ?>
 
 <?php if ($compiled_css): ?>
 <link rel="stylesheet" href="<?= e(asset('assets/css/tailwind.css')) ?>">
@@ -50,7 +54,11 @@ $nav_link  = 'text-sm font-semibold text-ink transition-colors hover:text-brand-
 <script src="https://cdn.tailwindcss.com/3.4.16"></script>
 <script src="<?= e(asset('assets/js/tailwind.config.js')) ?>"></script>
 <style type="text/tailwindcss">
+  @layer base {
+    h1, h2, h3 { @apply font-serif; }
+  }
   @layer components {
+    .display-mark { @apply font-serif; }
     .marquee-mask {
       -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
       mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
