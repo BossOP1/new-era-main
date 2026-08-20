@@ -149,11 +149,11 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
           <h3 class="m-0 mb-3 text-center text-2xl tracking-[-0.02em] text-brand-blue"><?= e($treatment['name']) ?></h3>
           <p class="m-0 mb-6 text-center text-[15px] leading-[1.55] text-ink/60"><?= e($treatment['detail']) ?></p>
           <div class="relative min-h-[180px] flex-1 overflow-hidden rounded-2xl bg-night">
-            <?= image_slot($treatment['slot'], $treatment['name'] . ' photo', $treatment['alt']) ?>
+            <?= image_slot($treatment['slot'], $treatment['name'] . ' photo', $treatment['alt'], false, $treatment['focus'] ?? '') ?>
             <div class="pointer-events-none absolute inset-0 bg-card-veil"></div>
             <div class="absolute inset-x-3 bottom-3 flex flex-wrap gap-2">
               <?php foreach ($treatment['chips'] as $chip): ?>
-                <span class="rounded-full bg-white/90 px-3 py-[7px] text-xs font-bold text-ink"><?= e($chip) ?></span>
+                <span class="chip-glass"><?= e($chip) ?></span>
               <?php endforeach; ?>
             </div>
           </div>
@@ -163,6 +163,38 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
 
     <div class="mt-12 text-center">
       <a href="#book" class="inline-flex items-center rounded-full bg-brand-blue px-9 py-[18px] text-[15px] font-extrabold text-white transition-colors hover:bg-brand-blue-dark">Get care today</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── TMS ──────────────────────────────────────────────────────────── -->
+<section id="tms" class="p-5 sm:p-10">
+  <div class="relative mx-auto flex min-h-[560px] max-w-[1400px] items-end overflow-hidden rounded-[28px] bg-night lg:min-h-[640px]">
+    <div class="absolute inset-0">
+      <?= image_slot('homepage/tms-new-era.webp', 'TMS treatment room photo', 'A smiling patient in the TMS chair, coil positioned, with a clinician talking her through the session') ?>
+    </div>
+    <div class="pointer-events-none absolute inset-0 bg-tms-veil"></div>
+
+    <div class="relative flex w-full flex-col gap-8 p-6 sm:p-12 lg:px-16 lg:pb-14 lg:pt-16">
+      <div class="max-w-[640px]">
+        <p class="<?= $eyebrow ?> mb-4 text-brand-green">TMS Therapy</p>
+        <h2 class="m-0 mb-4 text-[30px] leading-[1.1] tracking-[-0.03em] text-white sm:text-[42px]">When medication hasn't been enough.</h2>
+        <p class="m-0 text-base leading-relaxed text-white/80">Non-invasive, FDA-cleared magnetic stimulation for depression and OCD. No anesthesia, no sedation — you drive yourself home and go back to your day.</p>
+      </div>
+
+      <div class="flex flex-wrap items-center justify-between gap-8 border-t border-white/25 pt-7">
+        <div class="flex flex-wrap gap-10">
+          <?php foreach ($data['tms_stats'] as $stat): ?>
+            <div>
+              <p class="m-0 text-[32px] font-extrabold tracking-[-0.03em]" style="color:<?= e($stat['color']) ?>"><?= e($stat['value']) ?></p>
+              <p class="m-0 mt-0.5 text-[13px] text-white/75"><?= e($stat['label']) ?></p>
+            </div>
+          <?php endforeach; ?>
+        </div>
+        <a href="#book" class="inline-flex items-center gap-2.5 whitespace-nowrap rounded-full bg-white px-7 py-4 text-[15px] font-extrabold text-brand-blue transition-colors hover:bg-brand-orange hover:text-white">
+          See if TMS is right for you <?= arrow_icon(16) ?>
+        </a>
+      </div>
     </div>
   </div>
 </section>
@@ -213,38 +245,6 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
   </div>
 </section>
 
-<!-- ─── TMS ──────────────────────────────────────────────────────────── -->
-<section id="tms" class="p-5 sm:p-10">
-  <div class="relative mx-auto flex min-h-[560px] max-w-[1400px] items-end overflow-hidden rounded-[28px] bg-night lg:min-h-[640px]">
-    <div class="absolute inset-0">
-      <?= image_slot('tms', 'TMS treatment room photo', 'A man sitting on a sofa with his hands clasped') ?>
-    </div>
-    <div class="pointer-events-none absolute inset-0 bg-tms-veil"></div>
-
-    <div class="relative flex w-full flex-col gap-8 p-6 sm:p-12 lg:px-16 lg:pb-14 lg:pt-16">
-      <div class="max-w-[640px]">
-        <p class="<?= $eyebrow ?> mb-4 text-brand-green">TMS Therapy</p>
-        <h2 class="m-0 mb-4 text-[30px] leading-[1.1] tracking-[-0.03em] text-white sm:text-[42px]">When medication hasn't been enough.</h2>
-        <p class="m-0 text-base leading-relaxed text-white/80">Non-invasive, FDA-cleared magnetic stimulation for depression and OCD. No anesthesia, no sedation — you drive yourself home and go back to your day.</p>
-      </div>
-
-      <div class="flex flex-wrap items-center justify-between gap-8 border-t border-white/25 pt-7">
-        <div class="flex flex-wrap gap-10">
-          <?php foreach ($data['tms_stats'] as $stat): ?>
-            <div>
-              <p class="m-0 text-[32px] font-extrabold tracking-[-0.03em]" style="color:<?= e($stat['color']) ?>"><?= e($stat['value']) ?></p>
-              <p class="m-0 mt-0.5 text-[13px] text-white/75"><?= e($stat['label']) ?></p>
-            </div>
-          <?php endforeach; ?>
-        </div>
-        <a href="#book" class="inline-flex items-center gap-2.5 whitespace-nowrap rounded-full bg-white px-7 py-4 text-[15px] font-extrabold text-brand-blue transition-colors hover:bg-brand-orange hover:text-white">
-          See if TMS is right for you <?= arrow_icon(16) ?>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ─── Reviews ──────────────────────────────────────────────────────── -->
 <?php $review_pages = array_chunk($data['reviews'], 6); ?>
 <section class="p-5 sm:p-10">
@@ -289,7 +289,7 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
 
     <div class="grid items-start gap-10 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-[72px]">
       <div class="relative h-[280px] overflow-hidden rounded-[20px] bg-night lg:h-[420px]">
-        <?= image_slot('faq', 'Drop a supporting photo', 'The clinic waiting area, with seating and plants') ?>
+        <?= image_slot('homepage/home-ambience-nera.webp', 'Drop a supporting photo', 'A quiet Anew Era treatment room, with a reclining chair and a clinician’s desk') ?>
       </div>
 
       <div data-faq>

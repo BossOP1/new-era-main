@@ -69,15 +69,16 @@ return [
     'treatments' => [
         [
             'name'   => 'TMS',
-            'slot'   => 'treat-1',
-            'alt'    => 'A luminous render of a human brain',
+            'slot'   => 'homepage/tms-new-era-2.jpg',
+            'alt'    => 'A patient resting under the Magstim coil during a TMS session',
+            'focus'  => 'object-[45%_66%]',   // portrait source — sit the crop on the coil and the patient's face
             'detail' => 'FDA-cleared magnetic stimulation for depression and OCD when medication has fallen short.',
             'chips'  => ['Depression', 'OCD'],
         ],
         [
             'name'   => 'Accelerated TMS',
-            'slot'   => 'treat-2',
-            'alt'    => 'Two clinicians reviewing brain scans on a screen',
+            'slot'   => 'homepage/tms-newera.webp',
+            'alt'    => 'A clinician positioning the TMS coil over a patient’s head',
             'detail' => 'A full course compressed into days, not weeks, for patients who need results fast.',
             'chips'  => ['5-day course', 'Depression'],
         ],

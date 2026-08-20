@@ -30,6 +30,9 @@ if (!function_exists('image_slot')) {
      * for the Depression card — and it appears automatically. Supported
      * extensions: jpg, jpeg, png, webp, avif.
      *
+     * A slot may also name a file outright, extension and all, for photos kept in
+     * a subfolder: image_slot('homepage/home-ambience-nera.webp', ...).
+     *
      * @param string $slot        Slot id, doubles as the filename.
      * @param string $placeholder Hint text shown while the slot is empty.
      * @param string $alt         Alt text used once a real photo is present.
@@ -41,12 +44,19 @@ if (!function_exists('image_slot')) {
     {
         $dir = __DIR__ . '/../assets/img/';
 
-        foreach (['jpg', 'jpeg', 'png', 'webp', 'avif'] as $ext) {
-            $file = $dir . $slot . '.' . $ext;
+        $names = pathinfo($slot, PATHINFO_EXTENSION) !== ''
+            ? [$slot]
+            : array_map(
+                static fn (string $ext): string => $slot . '.' . $ext,
+                ['jpg', 'jpeg', 'png', 'webp', 'avif']
+            );
+
+        foreach ($names as $name) {
+            $file = $dir . $name;
             if (is_file($file)) {
                 return sprintf(
                     '<img src="%s" alt="%s" %s class="absolute inset-0 h-full w-full object-cover %s">',
-                    e(asset('assets/img/' . $slot . '.' . $ext)),
+                    e(asset('assets/img/' . $name)),
                     e($alt !== '' ? $alt : $placeholder),
                     $eager ? 'fetchpriority="high" decoding="async"' : 'loading="lazy" decoding="async"',
                     e($focus)
@@ -73,16 +83,28 @@ if (!function_exists('arrow_icon')) {
     }
 }
 
-if (!function_exists('brand_mark')) {
-    /** The three-stroke logo glyph. */
-    function brand_mark(int $size = 30): string
+if (!function_exists('brand_logo')) {
+    /**
+     * The Anew Era lockup — glyph, wordmark and strapline in one image.
+     *
+     * Two transparent PNGs live in assets/img/logo/: the full-colour file for
+     * light backgrounds, and a variant with the wordmark reversed to white for
+     * the night-coloured footer. The glyph keeps its brand colours in both.
+     *
+     * @param string $alt     Alt text — the site name on the header, '' where a
+     *                        nearby heading already names the practice.
+     * @param string $classes Tailwind sizing utilities.
+     * @param bool   $on_dark True to use the reversed variant.
+     */
+    function brand_logo(string $alt, string $classes = 'h-10 w-auto', bool $on_dark = false): string
     {
+        $file = 'assets/img/logo/new-era-final-logo' . ($on_dark ? '-white' : '') . '.png';
+
         return sprintf(
-            '<svg width="%1$d" height="%1$d" viewBox="0 0 30 30" fill="none" aria-hidden="true">'
-            . '<path d="M4 22 L13 4" stroke="#0f639b" stroke-width="3"></path>'
-            . '<path d="M12 22 L21 4" stroke="#e8922f" stroke-width="3"></path>'
-            . '<path d="M20 22 L29 4" stroke="#86be52" stroke-width="3"></path></svg>',
-            $size
+            '<img src="%s" alt="%s" width="721" height="214" decoding="async" class="%s">',
+            e(asset($file)),
+            e($alt),
+            e($classes)
         );
     }
 }

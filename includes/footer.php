@@ -17,11 +17,8 @@ $footer_link = 'text-sm text-white/75 transition-colors hover:text-white';
 
     <div class="mb-12 flex flex-wrap items-end justify-between gap-10 border-b border-white/15 pb-12">
       <div>
-        <div class="mb-4 flex items-center gap-3">
-          <?= brand_mark(28) ?>
-          <span class="text-[22px] font-extrabold tracking-[-0.02em] text-white">
-            <?= e($site['brand'][0]) ?><span class="text-brand-orange"><?= e($site['brand'][1]) ?></span>
-          </span>
+        <div class="mb-5 flex items-center">
+          <?= brand_logo($site['name'], 'h-10 w-auto', true) ?>
         </div>
         <p class="m-0 max-w-[38ch] text-[15px] leading-[1.65] text-white/60"><?= e($site['tagline']) ?></p>
       </div>
