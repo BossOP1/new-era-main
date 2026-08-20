@@ -47,7 +47,7 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
       <div class="flex w-max animate-marquee items-center gap-14">
         <?php for ($copy = 0; $copy < 2; $copy++): ?>
           <?php foreach ($data['insurers'] as $insurer): ?>
-            <span class="whitespace-nowrap text-[19px] font-extrabold tracking-[-0.01em] text-ink/40"<?= $copy ? ' aria-hidden="true"' : '' ?>><?= e($insurer) ?></span>
+            <?= insurer_mark($insurer, $copy > 0) ?>
           <?php endforeach; ?>
         <?php endfor; ?>
       </div>

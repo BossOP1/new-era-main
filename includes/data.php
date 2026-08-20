@@ -5,9 +5,22 @@
  */
 
 return [
+    // Carriers shown in the "In-network with" marquee. Add 'logo' (a file in
+    // assets/img/insurers/) to show the mark instead of the name; 'size' is the
+    // Tailwind height class, tuned per logo so they read as one optical size.
+    // Anything without a logo falls back to its name set in the same style.
     'insurers' => [
-        'Aetna', 'Cigna', 'United Healthcare', 'Blue Cross Blue Shield',
-        'Medicare', 'Tricare', 'Humana', 'Optum',
+        ['name' => 'Aetna',                  'logo' => 'aetna.svg',    'size' => 'h-5'],
+        ['name' => 'Cigna',                  'logo' => 'cigna.svg',    'size' => 'h-10'],
+        ['name' => 'Anthem',                 'logo' => 'anthem.svg',   'size' => 'h-6'],
+        ['name' => 'Highmark',               'logo' => 'highmark.svg', 'size' => 'h-8'],
+        ['name' => 'Moda Health',            'logo' => 'moda.svg',     'size' => 'h-9'],
+        ['name' => 'United Healthcare'],
+        ['name' => 'Blue Cross Blue Shield'],
+        ['name' => 'Medicare'],
+        ['name' => 'Tricare'],
+        ['name' => 'Humana'],
+        ['name' => 'Optum'],
     ],
 
     'conditions' => [
