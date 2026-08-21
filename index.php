@@ -62,9 +62,9 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
 
 <!-- ─── Results ──────────────────────────────────────────────────────── -->
 <?php $results = $data['results']; ?>
-<section id="results" class="bg-surface px-5 py-20 sm:px-10 lg:py-[104px]">
+<section id="results" class="bg-surface px-5 py-14 sm:px-10 lg:py-[72px]">
   <div class="mx-auto max-w-[1280px]">
-    <h2 class="m-0 mb-12 text-center text-[30px] leading-[1.1] tracking-[-0.03em] sm:text-[44px] lg:mb-16">
+    <h2 class="m-0 mb-9 text-center text-[30px] leading-[1.1] tracking-[-0.03em] sm:text-[44px] lg:mb-12">
       <em class="italic text-brand-blue"><?= e($results['heading_accent']) ?></em><?= e($results['heading_rest']) ?>
     </h2>
 
@@ -88,8 +88,8 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
 </section>
 
 <!-- ─── Conditions ───────────────────────────────────────────────────── -->
-<section id="conditions" class="mx-auto max-w-[1280px] px-5 py-20 sm:px-10 lg:py-[104px]">
-  <div class="mb-12 flex flex-wrap items-end justify-between gap-10 border-b-2 border-ink/15 pb-6">
+<section id="conditions" class="mx-auto max-w-[1280px] px-5 py-14 sm:px-10 lg:py-[72px]">
+  <div class="mb-9 flex flex-wrap items-end justify-between gap-10 border-b-2 border-ink/15 pb-6">
     <div>
       <p class="<?= $eyebrow ?> mb-3.5 text-brand-orange-dark">Conditions we treat</p>
       <h2 class="m-0 max-w-[20ch] text-[32px] leading-[1.06] tracking-[-0.025em] sm:text-[44px]">Care for the whole range of what you're carrying.</h2>
@@ -152,8 +152,8 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
 </section>
 
 <!-- ─── Our focus ────────────────────────────────────────────────────── -->
-<section id="focus" class="p-5 sm:p-10">
-  <div class="mx-auto max-w-[1400px] rounded-[28px] bg-brand-blue px-6 py-16 sm:px-12 lg:px-20 lg:pb-24 lg:pt-[88px]">
+<section id="focus" class="px-5 py-3 sm:px-10 sm:py-5">
+  <div class="mx-auto max-w-[1400px] rounded-[28px] bg-brand-blue px-6 py-12 sm:px-12 lg:px-20 lg:py-16">
     <p class="m-0 mb-11 text-[15px] font-semibold text-white/70">Our focus</p>
     <div class="flex max-w-[960px] flex-col gap-10 border-l border-white/35 pl-6 sm:pl-14">
       <?php foreach ($data['focus_paragraphs'] as $paragraph): ?>
@@ -167,9 +167,9 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
 </section>
 
 <!-- ─── Treatments ───────────────────────────────────────────────────── -->
-<section id="treatments" class="bg-surface px-5 py-20 sm:px-10 lg:py-[104px]">
+<section id="treatments" class="bg-surface px-5 py-14 sm:px-10 lg:py-[72px]">
   <div class="mx-auto max-w-[1280px]">
-    <div class="mb-14 text-center">
+    <div class="mb-10 text-center">
       <p class="<?= $eyebrow ?> mb-4 text-brand-blue">Treatments</p>
       <h2 class="m-0 text-[34px] leading-[1.08] tracking-[-0.03em] sm:text-[46px]">A full spectrum of care, under one roof.</h2>
     </div>
@@ -199,7 +199,7 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
 </section>
 
 <!-- ─── TMS ──────────────────────────────────────────────────────────── -->
-<section id="tms" class="p-5 sm:p-10">
+<section id="tms" class="px-5 py-3 sm:px-10 sm:py-5">
   <div class="relative mx-auto flex min-h-[560px] max-w-[1400px] items-end overflow-hidden rounded-[28px] bg-night lg:min-h-[640px]">
     <div class="absolute inset-0">
       <?= image_slot('homepage/tms-new-era.webp', 'TMS treatment room photo', 'A smiling patient in the TMS chair, coil positioned, with a clinician talking her through the session') ?>
@@ -231,9 +231,9 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
 </section>
 
 <!-- ─── Therapy vs psychiatry ────────────────────────────────────────── -->
-<section class="bg-white px-5 py-20 sm:px-10 lg:py-[104px]">
+<section class="bg-white px-5 py-14 sm:px-10 lg:py-[72px]">
   <div class="mx-auto max-w-[1280px]">
-    <div class="mb-14 text-center">
+    <div class="mb-10 text-center">
       <h2 class="m-0 mb-4 text-[32px] leading-[1.08] tracking-[-0.03em] sm:text-[46px]">Not sure what kind of support you need?</h2>
       <p class="m-0 text-[17px] text-ink/60">Treatment isn't one-size-fits-all. Therapy and psychiatry can work separately or as a team.</p>
     </div>
@@ -278,8 +278,8 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
 
 <!-- ─── Reviews ──────────────────────────────────────────────────────── -->
 <?php $review_pages = array_chunk($data['reviews'], 6); ?>
-<section class="p-5 sm:p-10">
-  <div class="mx-auto max-w-[1400px] rounded-[28px] bg-[#10202c] bg-reviews-glow px-6 py-14 sm:px-16 lg:py-[72px]" data-reviews>
+<section class="px-5 py-3 sm:px-10 sm:py-5">
+  <div class="mx-auto max-w-[1400px] rounded-[28px] bg-[#10202c] bg-reviews-glow px-6 py-12 sm:px-16 lg:py-[56px]" data-reviews>
     <div class="mb-8 flex items-center justify-between gap-6">
       <div>
         <p class="<?= $eyebrow ?> mb-2.5 text-brand-green">Reviews</p>
@@ -314,9 +314,9 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
 
 <!-- ─── FAQ ──────────────────────────────────────────────────────────── -->
 <section id="faq" class="bg-mist">
-  <div class="mx-auto max-w-[1280px] px-5 py-20 sm:px-10 lg:py-[104px]">
+  <div class="mx-auto max-w-[1280px] px-5 py-14 sm:px-10 lg:py-[72px]">
     <h2 class="m-0 mb-3.5 text-[38px] leading-[1.04] tracking-[-0.03em] text-brand-blue-dark sm:text-[52px]">Any questions?</h2>
-    <p class="m-0 mb-14 text-base text-brand-blue">Find trust-worthy answers on everything we treat and how we treat it.</p>
+    <p class="m-0 mb-10 text-base text-brand-blue">Find trust-worthy answers on everything we treat and how we treat it.</p>
 
     <div class="grid items-start gap-10 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-[72px]">
       <div class="relative h-[280px] overflow-hidden rounded-[20px] bg-night lg:h-[420px]">
@@ -357,7 +357,7 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
 </section>
 
 <!-- ─── Booking CTA ──────────────────────────────────────────────────── -->
-<section id="book" class="mx-auto max-w-[1400px] p-5 sm:p-10">
+<section id="book" class="mx-auto max-w-[1400px] px-5 py-3 sm:px-10 sm:py-8">
   <div class="relative overflow-hidden rounded-3xl bg-cream bg-cta-glow px-6 py-12 text-center sm:px-16 lg:py-[52px]">
     <h2 class="m-0 mb-3 text-[26px] leading-[1.18] tracking-[-0.02em] text-ink sm:text-[34px]">
       Care designed for <em class="font-serif font-normal italic">real life — and real progress</em>
