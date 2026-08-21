@@ -189,3 +189,40 @@ if (!function_exists('insurer_mark')) {
         );
     }
 }
+
+if (!function_exists('video_slot')) {
+    /**
+     * Background video for a hero-style section.
+     *
+     * The poster frame paints immediately and stands in anywhere autoplay is
+     * refused (iOS Low Power Mode, data saver, reduced-motion — see
+     * assets/js/main.js). If the video file is missing the slot falls back to
+     * image_slot(), so the section always has artwork.
+     *
+     * @param string $file         Path under assets/img/, e.g. 'homepage/hero.mp4'.
+     * @param string $poster       Poster image, same base path.
+     * @param string $fallbackSlot Slot id used when the video is absent.
+     * @param string $alt          Description, used only by the image fallback.
+     */
+    function video_slot(string $file, string $poster = '', string $fallbackSlot = '', string $alt = ''): string
+    {
+        if (!is_file(__DIR__ . '/../assets/img/' . $file)) {
+            return image_slot($fallbackSlot, $alt, $alt, true);
+        }
+
+        $posterAttr = '';
+        if ($poster !== '' && is_file(__DIR__ . '/../assets/img/' . $poster)) {
+            $posterAttr = sprintf(' poster="%s"', e(asset('assets/img/' . $poster)));
+        }
+
+        // Decorative: the headline carries the meaning, so it is hidden from
+        // assistive tech rather than given a label it would read out.
+        return sprintf(
+            '<video class="absolute inset-0 h-full w-full scale-105 object-cover" autoplay muted loop playsinline'
+            . ' preload="auto"%s aria-hidden="true" data-hero-video>'
+            . '<source src="%s" type="video/mp4"></video>',
+            $posterAttr,
+            e(asset('assets/img/' . $file))
+        );
+    }
+}

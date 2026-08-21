@@ -43,8 +43,11 @@ const anewEraTailwindConfig = {
         extrabold: '700',
       },
       backgroundImage: {
+        // Tuned for the daylight hero video: a soft pool of shade behind the
+        // copy, a darker floor, and a corner vignette that settles the
+        // bottom-right of the frame.
         'hero-veil':
-          'linear-gradient(180deg, rgba(20,20,20,0.28) 0%, rgba(15,20,25,0.5) 45%, rgba(10,15,20,0.68) 100%), radial-gradient(circle at 15% 90%, rgba(232,146,47,0.22), transparent 55%), radial-gradient(circle at 85% 5%, rgba(134,190,82,0.16), transparent 50%)',
+          'radial-gradient(ellipse 70% 55% at 50% 44%, rgba(9,20,28,0.58) 0%, rgba(9,20,28,0.22) 65%, transparent 100%), radial-gradient(circle at 90% 84%, rgba(9,20,28,0.72) 0%, rgba(9,20,28,0.3) 40%, transparent 70%), linear-gradient(180deg, rgba(20,20,20,0.4) 0%, rgba(15,20,25,0.5) 45%, rgba(10,15,20,0.78) 100%), radial-gradient(circle at 15% 90%, rgba(232,146,47,0.2), transparent 55%), radial-gradient(circle at 85% 5%, rgba(134,190,82,0.16), transparent 50%)',
         'glass-bar':
           'linear-gradient(135deg, rgba(255,255,255,0.62), rgba(255,255,255,0.32))',
         'cond-veil':

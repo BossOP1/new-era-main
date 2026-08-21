@@ -12,9 +12,11 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
 <!-- ─── Hero ─────────────────────────────────────────────────────────── -->
 <section id="top" class="relative flex min-h-[720px] flex-col overflow-hidden bg-night pt-[92px] sm:pt-[114px] lg:min-h-[840px]">
   <div class="absolute inset-0">
-    <!-- Swapping this photo is a file drop: replace assets/img/hero.jpg and
-         update the alt text below to match whatever it shows. -->
-    <?= image_slot('hero', 'Drop hero photo', 'A woman sitting with her family in a sunlit living room', true) ?>
+    <!-- Background video, with a poster frame that shows first and stands in
+         wherever autoplay is refused. Drop in a different file and update the
+         two paths below; remove the video and the slot falls back to
+         assets/img/hero.jpg on its own. -->
+    <?= video_slot('homepage/hero-video-newEra.mp4', 'homepage/hero-video-poster.jpg', 'hero', 'A woman sitting with her family in a sunlit living room') ?>
   </div>
   <div class="pointer-events-none absolute inset-0 bg-hero-veil"></div>
 

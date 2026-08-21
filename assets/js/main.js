@@ -23,6 +23,33 @@
     });
   }
 
+  /* Hero video — hold on the poster frame if motion is unwelcome ---------- */
+  var heroVideo = document.querySelector('[data-hero-video]');
+
+  if (heroVideo && window.matchMedia) {
+    var reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    var applyMotionPreference = function () {
+      if (reduced.matches) {
+        heroVideo.pause();
+        heroVideo.currentTime = 0;
+        heroVideo.removeAttribute('autoplay');
+        return;
+      }
+      // Browsers that refuse autoplay reject this promise; the poster stays up.
+      var started = heroVideo.play();
+      if (started && started.catch) {
+        started.catch(function () {});
+      }
+    };
+
+    applyMotionPreference();
+
+    if (reduced.addEventListener) {
+      reduced.addEventListener('change', applyMotionPreference);
+    }
+  }
+
   /* Conditions — hover or click a name to swap the panel ------------------ */
   var conditions = document.querySelector('[data-conditions]');
 
