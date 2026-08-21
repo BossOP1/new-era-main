@@ -152,16 +152,18 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
 <!-- ─── Our focus ────────────────────────────────────────────────────── -->
 <section id="focus" class="px-5 py-3 sm:px-10 sm:py-5">
   <div class="mx-auto max-w-[1400px] rounded-[28px] bg-brand-blue px-6 py-12 sm:px-12 lg:px-20 lg:py-16">
-    <p class="m-0 mb-11 text-center text-[15px] font-semibold text-white/70">Our focus</p>
-    <?php // Centred: the rule that used to anchor these paragraphs on the left
-          // would fight the alignment, so it goes and the column centres itself. ?>
-    <div class="mx-auto flex max-w-[960px] flex-col items-center gap-10 text-center">
-      <?php foreach ($data['focus_paragraphs'] as $paragraph): ?>
-        <p class="m-0 text-pretty text-xl leading-[1.42] tracking-[-0.02em] text-white/90 sm:text-2xl lg:text-[30px]"><?= e($paragraph) ?></p>
-      <?php endforeach; ?>
-      <a href="#book" class="mt-2 inline-flex items-center gap-2.5 rounded-full bg-white px-8 py-[17px] text-[15px] font-extrabold text-brand-blue transition-colors hover:bg-brand-orange hover:text-white">
-        About us <?= arrow_icon(15) ?>
-      </a>
+    <?php // The column keeps its left-aligned text but sits centred in the
+          // panel, so the space either side of it matches. ?>
+    <div class="mx-auto max-w-[960px]">
+      <p class="m-0 mb-11 text-[15px] font-semibold text-white/70">Our focus</p>
+      <div class="flex flex-col gap-10 border-l border-white/35 pl-6 sm:pl-14">
+        <?php foreach ($data['focus_paragraphs'] as $paragraph): ?>
+          <p class="m-0 text-pretty text-xl leading-[1.42] tracking-[-0.02em] text-white/90 sm:text-2xl lg:text-[30px]"><?= e($paragraph) ?></p>
+        <?php endforeach; ?>
+        <a href="#book" class="mt-2 inline-flex items-center gap-2.5 self-start rounded-full bg-white px-8 py-[17px] text-[15px] font-extrabold text-brand-blue transition-colors hover:bg-brand-orange hover:text-white">
+          About us <?= arrow_icon(15) ?>
+        </a>
+      </div>
     </div>
   </div>
 </section>
