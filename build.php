@@ -26,6 +26,7 @@ $_SERVER['HTTPS']          = 'on';
 // planned can sit here until they are written.
 $pages = [
     'index.php'   => 'index.html',
+    'index2.php'  => 'index2.html',   // vibrant variant
     'privacy.php' => 'privacy.html',   // privacy policy
     'terms.php'   => 'terms.html',     // terms of use
 ];

@@ -16,8 +16,14 @@ const anewEraTailwindConfig = {
           orange: '#e8922f',
           'orange-dark': '#c97a1f',
           green: '#86be52',
+          'green-dark': '#5f8f38',
         },
         ink: '#14202b',
+        // Tints and a darker green, for the vibrant variant (index2.php) where
+        // sections carry colour rather than sitting on white.
+        grove: '#eef7e6',
+        blush: '#fdeee0',
+        sky: '#e4f1fa',
         night: '#0b1720',
         surface: '#f7f6f4',
         therapy: '#eaf2f8',
@@ -58,6 +64,14 @@ const anewEraTailwindConfig = {
           'radial-gradient(circle at 90% -10%, rgba(232,146,47,0.35), transparent 55%), radial-gradient(circle at -10% 110%, rgba(134,190,82,0.3), transparent 55%)',
         'cta-glow':
           'radial-gradient(circle at 8% 15%, rgba(15,99,155,0.85), transparent 42%), radial-gradient(circle at 92% 85%, rgba(15,99,155,0.85), transparent 42%), radial-gradient(circle at 30% 90%, rgba(232,146,47,0.55), transparent 45%), radial-gradient(circle at 75% 10%, rgba(134,190,82,0.5), transparent 45%)',
+        // The CTA wash, reworked to hold up at section scale: same four points
+        // of brand colour on cream, pulled back so it sits under content
+        // instead of competing with it. 'aurora-warm' rotates the hues so two
+        // sections in a row do not read as the same image.
+        'aurora':
+          'radial-gradient(circle at 6% 12%, rgba(15,99,155,0.30), transparent 46%), radial-gradient(circle at 94% 22%, rgba(134,190,82,0.26), transparent 44%), radial-gradient(circle at 78% 92%, rgba(232,146,47,0.30), transparent 46%), radial-gradient(circle at 22% 88%, rgba(15,99,155,0.22), transparent 44%)',
+        'aurora-warm':
+          'radial-gradient(circle at 90% 10%, rgba(232,146,47,0.32), transparent 46%), radial-gradient(circle at 10% 30%, rgba(15,99,155,0.24), transparent 46%), radial-gradient(circle at 30% 95%, rgba(134,190,82,0.30), transparent 46%), radial-gradient(circle at 70% 70%, rgba(15,99,155,0.16), transparent 42%)',
         'footer-glow':
           'radial-gradient(circle at 90% 0%, rgba(232,146,47,0.16), transparent 45%), radial-gradient(circle at 0% 100%, rgba(134,190,82,0.14), transparent 45%)',
       },
