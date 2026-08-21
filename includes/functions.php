@@ -142,14 +142,15 @@ if (!function_exists('brand_logo')) {
      * @param string $classes Tailwind sizing utilities.
      * @param bool   $on_dark True to use the reversed variant.
      */
-    function brand_logo(string $alt, string $classes = 'h-10 w-auto', bool $on_dark = false): string
+    function brand_logo(string $alt, string $classes = 'h-10 w-auto', bool $on_dark = false, bool $decorative = false): string
     {
         $file = 'assets/img/logo/new-era-final-logo' . ($on_dark ? '-white' : '') . '.png';
 
         return sprintf(
-            '<img src="%s" alt="%s" width="721" height="214" decoding="async" class="%s">',
+            '<img src="%s" alt="%s"%s width="721" height="214" decoding="async" class="%s">',
             e(asset($file)),
-            e($alt),
+            $decorative ? '' : e($alt),
+            $decorative ? ' aria-hidden="true" loading="lazy"' : '',
             e($classes)
         );
     }

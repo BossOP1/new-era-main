@@ -67,10 +67,10 @@ $footer_link = 'text-sm text-white/75 transition-colors hover:text-white';
       </div>
     </div>
 
-    <!-- Brand sign-off: the mark on its own, since the full lockup already
-         sits at the top of the footer. -->
+    <!-- Brand sign-off: the full lockup at display scale. Decorative — the
+         same logo is announced at the top of the footer. -->
     <div class="mb-6 mt-10 flex justify-center pb-3.5">
-      <?= brand_glyph('w-[min(28vw,200px)] select-none') ?>
+      <?= brand_logo($site['name'], 'w-[min(72vw,560px)] select-none', true, true) ?>
     </div>
 
     <p class="m-0 mt-8 max-w-[900px] text-xs leading-[1.7] text-white/35"><?= e($site['legal']) ?></p>
