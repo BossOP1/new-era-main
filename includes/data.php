@@ -202,20 +202,23 @@ return [
         ],
     ],
 
-    // The numbers panel above the conditions section. Every figure here is one
-    // the site already states elsewhere — appointment wait, intake length, TMS
-    // course, review score — rather than a clinical outcome claim. Swap in
-    // outcome percentages only where the practice has its own data behind them.
+    // The numbers panel above the conditions section.
+    //
+    // ⚠ PLACEHOLDER FIGURES. These four percentages are dummy values standing in
+    // for the real thing — they are not measured, and outcome claims on a
+    // psychiatry site are regulated marketing. Replace every one with a figure
+    // the practice can evidence (intake-to-discharge symptom scores, PHQ-9
+    // response rates, TMS remission rates) before this page goes live.
     'results' => [
         'heading_accent' => 'Quality care',
         'heading_rest'   => ' that delivers real results',
-        'photo'          => 'homepage/tms-newera.webp',
-        'photo_alt'      => 'A clinician positioning the TMS coil for a patient partway through a session',
+        'photo'          => 'homepage/results-joy.jpg',
+        'photo_alt'      => 'A father and his daughter laughing together outdoors in autumn light',
         'stats' => [
-            ['value' => '5 days', 'label' => 'typical wait for a new patient appointment, in person or by telehealth'],
-            ['value' => '60 min', 'label' => 'diagnostic intake at your first visit — never a fifteen-minute script'],
-            ['value' => '36',     'label' => 'sessions in a full TMS course, run over about six weeks'],
-            ['value' => '4.9',    'label' => 'average rating across 380+ patient reviews'],
+            ['value' => '83%', 'label' => 'of patients start care within five days of reaching out'],
+            ['value' => '95%', 'label' => 'of patients say they feel heard by their clinician'],
+            ['value' => '26%', 'label' => 'average drop in reported stress after eight weeks of care'],
+            ['value' => '84%', 'label' => 'of patients see measurable symptom improvement within two months'],
         ],
     ],
 
