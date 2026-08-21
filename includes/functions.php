@@ -226,3 +226,20 @@ if (!function_exists('video_slot')) {
         );
     }
 }
+
+if (!function_exists('brand_glyph')) {
+    /**
+     * The mark on its own, lifted out of the logo lockup (see
+     * assets/img/logo/new-era-glyph.png). Used as a display element rather
+     * than for identification — the footer already carries the full logo — so
+     * it is hidden from assistive tech and has no alt text.
+     */
+    function brand_glyph(string $classes = 'h-24 w-auto'): string
+    {
+        return sprintf(
+            '<img src="%s" alt="" aria-hidden="true" width="163" height="163" decoding="async" loading="lazy" class="%s">',
+            e(asset('assets/img/logo/new-era-glyph.png')),
+            e($classes)
+        );
+    }
+}
