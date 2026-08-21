@@ -27,9 +27,9 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
       <span class="block h-1 w-11 bg-brand-green"></span>
     </div>
 
-    <h1 class="m-0 max-w-[17ch] text-balance text-[40px] leading-[1.04] tracking-[-0.035em] text-white sm:text-[56px] lg:text-[74px]">A new era of mental health care.</h1>
+    <h1 class="on-footage m-0 max-w-[17ch] text-balance text-[40px] leading-[1.04] tracking-[-0.035em] text-white sm:text-[56px] lg:text-[74px]">A new era of mental health care.</h1>
 
-    <p class="mb-9 mt-6 max-w-[54ch] text-base leading-relaxed text-white/85 sm:text-[19px]">Evidence-based psychiatry, therapy and TMS — delivered by clinicians who take the time to know you. In-person and telehealth, most insurance accepted.</p>
+    <p class="on-footage mb-9 mt-6 max-w-[54ch] text-base leading-relaxed text-white/85 sm:text-[19px]">Evidence-based psychiatry, therapy and TMS — delivered by clinicians who take the time to know you. In-person and telehealth, most insurance accepted.</p>
 
     <div class="pointer-events-auto flex flex-wrap justify-center gap-3">
       <a href="#book" class="inline-flex items-center gap-2.5 rounded-full bg-white px-7 py-[17px] text-[15px] font-extrabold text-brand-blue transition-colors hover:bg-brand-orange hover:text-white">Get started</a>

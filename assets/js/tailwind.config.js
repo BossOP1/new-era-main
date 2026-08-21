@@ -43,13 +43,11 @@ const anewEraTailwindConfig = {
         extrabold: '700',
       },
       backgroundImage: {
-        // Tuned for the daylight hero video: a soft pool of shade behind the
-        // copy, a darker floor, and a corner vignette that settles the
-        // bottom-right of the frame.
+        // Daylight footage under white type: enough shade to hold the copy,
+        // but light-handed — the frame should still read as daylight. The
+        // headline carries a soft text-shadow so this can stay this gentle.
         'hero-veil':
-          'radial-gradient(ellipse 70% 55% at 50% 44%, rgba(9,20,28,0.58) 0%, rgba(9,20,28,0.22) 65%, transparent 100%), radial-gradient(circle at 90% 84%, rgba(9,20,28,0.72) 0%, rgba(9,20,28,0.3) 40%, transparent 70%), linear-gradient(180deg, rgba(20,20,20,0.4) 0%, rgba(15,20,25,0.5) 45%, rgba(10,15,20,0.78) 100%), radial-gradient(circle at 15% 90%, rgba(232,146,47,0.2), transparent 55%), radial-gradient(circle at 85% 5%, rgba(134,190,82,0.16), transparent 50%)',
-        'glass-bar':
-          'linear-gradient(135deg, rgba(255,255,255,0.62), rgba(255,255,255,0.32))',
+          'radial-gradient(ellipse 68% 52% at 50% 44%, rgba(9,20,28,0.34) 0%, rgba(9,20,28,0.12) 66%, transparent 100%), radial-gradient(circle at 90% 84%, rgba(9,20,28,0.42) 0%, rgba(9,20,28,0.16) 42%, transparent 70%), linear-gradient(180deg, rgba(20,20,20,0.2) 0%, rgba(15,20,25,0.26) 45%, rgba(10,15,20,0.52) 100%), radial-gradient(circle at 15% 90%, rgba(232,146,47,0.16), transparent 55%), radial-gradient(circle at 85% 5%, rgba(134,190,82,0.12), transparent 50%)',
         'cond-veil':
           'linear-gradient(100deg, rgba(9,20,28,0.7) 0%, rgba(9,20,28,0.35) 55%, rgba(9,20,28,0.1) 100%)',
         'card-veil':

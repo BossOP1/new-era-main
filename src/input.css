@@ -43,6 +43,46 @@
     box-shadow: 0 2px 10px rgba(9, 20, 28, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.28);
   }
 
+  /* Liquid glass: the header bar reads as a slab of glass floating over the
+     hero rather than a translucent panel. Heavy blur plus saturation and a
+     touch of brightness keeps whatever is behind it colourful instead of
+     grey; the inset edges are the specular highlights that make it read as a
+     curved, physical surface. */
+  .liquid-glass {
+    @apply relative isolate rounded-[20px] border border-white/45 bg-white/[0.22];
+    -webkit-backdrop-filter: blur(30px) saturate(200%) brightness(1.08);
+    backdrop-filter: blur(30px) saturate(200%) brightness(1.08);
+    box-shadow:
+      0 16px 48px rgba(9, 20, 28, 0.22),
+      0 2px 8px rgba(9, 20, 28, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.8),
+      inset 0 -1px 0 rgba(255, 255, 255, 0.25),
+      inset 1px 0 0 rgba(255, 255, 255, 0.32),
+      inset -1px 0 0 rgba(255, 255, 255, 0.32);
+  }
+
+  /* The sheen raking across the top-left, the way light catches a rounded
+     glass edge. Negative z-index keeps it above the fill but under the nav;
+     .liquid-glass isolates so that stays local to the bar. */
+  .liquid-glass::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    pointer-events: none;
+    background:
+      linear-gradient(135deg, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0.14) 26%, transparent 52%),
+      radial-gradient(130% 190% at 6% -45%, rgba(255, 255, 255, 0.42), transparent 62%);
+  }
+
+  /* White copy sitting directly on footage. A wide, soft shadow rather than a
+     hard one: it lifts the type off bright frames without reading as a drop
+     shadow, which lets .bg-hero-veil stay light. */
+  .on-footage {
+    text-shadow: 0 2px 28px rgba(9, 20, 28, 0.55), 0 1px 5px rgba(9, 20, 28, 0.35);
+  }
+
   /* Image placeholder shown until a real photo is dropped into assets/img/ */
   .img-slot {
     @apply flex h-full w-full items-center justify-center bg-white/[0.06] p-6 text-center;

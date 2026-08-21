@@ -67,6 +67,17 @@ $nav_link  = 'text-sm font-semibold text-ink transition-colors hover:text-brand-
       @apply rounded-full border border-white/30 bg-night/45 px-3 py-[7px] text-xs font-bold text-white backdrop-blur-md backdrop-saturate-150;
       box-shadow: 0 2px 10px rgba(9,20,28,0.28), inset 0 1px 0 rgba(255,255,255,0.28);
     }
+    .liquid-glass {
+      @apply relative isolate rounded-[20px] border border-white/45 bg-white/[0.22];
+      -webkit-backdrop-filter: blur(30px) saturate(200%) brightness(1.08);
+      backdrop-filter: blur(30px) saturate(200%) brightness(1.08);
+      box-shadow: 0 16px 48px rgba(9,20,28,0.22), 0 2px 8px rgba(9,20,28,0.1), inset 0 1px 0 rgba(255,255,255,0.8), inset 0 -1px 0 rgba(255,255,255,0.25), inset 1px 0 0 rgba(255,255,255,0.32), inset -1px 0 0 rgba(255,255,255,0.32);
+    }
+    .liquid-glass::before {
+      content: ''; position: absolute; inset: 0; z-index: -1; border-radius: inherit; pointer-events: none;
+      background: linear-gradient(135deg, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0.14) 26%, transparent 52%), radial-gradient(130% 190% at 6% -45%, rgba(255,255,255,0.42), transparent 62%);
+    }
+    .on-footage { text-shadow: 0 2px 28px rgba(9,20,28,0.55), 0 1px 5px rgba(9,20,28,0.35); }
     .img-slot { @apply flex h-full w-full items-center justify-center bg-white/[0.06] p-6 text-center; }
     .img-slot__hint { @apply max-w-[26ch] text-[13px] font-semibold leading-snug text-white/45; }
   }
@@ -78,7 +89,7 @@ $nav_link  = 'text-sm font-semibold text-ink transition-colors hover:text-brand-
 <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-white focus:px-5 focus:py-3 focus:text-sm focus:font-extrabold focus:text-brand-blue">Skip to content</a>
 
 <header class="<?= $header_solid ? 'relative bg-night' : 'absolute inset-x-0 top-0' ?> z-50 p-3 sm:p-5" data-site-header>
-  <div class="relative mx-auto flex min-h-[74px] items-center justify-between gap-6 rounded-[20px] border border-white/60 bg-glass-bar bg-white/40 px-3 py-3 shadow-glass backdrop-blur-[20px] backdrop-saturate-[180%] sm:py-0 sm:pl-7 lg:gap-8">
+  <div class="liquid-glass mx-auto flex min-h-[74px] items-center justify-between gap-6 px-3 py-3 sm:py-0 sm:pl-7 lg:gap-8">
 
     <a href="index.php#top" class="flex shrink-0 items-center no-underline">
       <?= brand_logo($site['name'], 'h-8 w-auto sm:h-9') ?>
