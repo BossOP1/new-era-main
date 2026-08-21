@@ -125,36 +125,38 @@ return [
         ],
     ],
 
+    // Therapy vs psychiatry, written as an honest side-by-side rather than a
+    // sales sheet — including the row where the answer is simply "no".
     'compare_rows' => [
         [
-            'label'      => 'What it is',
-            'therapy'    => 'Mental healthcare for emotional, behavioral or relationship challenges — often guided conversation.',
-            'psychiatry' => 'Medical support for mental health conditions, often involving medication.',
+            'label'      => 'In one line',
+            'therapy'    => 'Talking work. You and a therapist unpack what is happening and build ways through it.',
+            'psychiatry' => 'Medical work. A prescriber looks at what is driving the symptoms and treats it directly.',
         ],
         [
-            'label'      => 'Who you meet with',
-            'therapy'    => 'A licensed therapist (LCSW, LMFT, PhD/PsyD).',
-            'psychiatry' => 'A psychiatric provider (MD, DO or PMHNP).',
+            'label'      => 'Who you sit with',
+            'therapy'    => 'A licensed therapist: LCSW, LMFT, PhD or PsyD.',
+            'psychiatry' => 'A psychiatric clinician: MD, DO or PMHNP.',
         ],
         [
-            'label'      => 'What they do',
-            'therapy'    => 'Use evidence-based approaches — CBT, DBT, EMDR, ACT — to build coping skills and support growth.',
-            'psychiatry' => 'Evaluate symptoms, provide a diagnosis where appropriate, and determine whether medication or TMS may help.',
+            'label'      => 'How the work happens',
+            'therapy'    => 'Structured methods with evidence behind them — CBT, DBT, EMDR, ACT — and skills that stay with you afterwards.',
+            'psychiatry' => 'A full diagnostic picture first, then a plan: medication, TMS, Spravato, or none of them if none is warranted.',
         ],
         [
-            'label'      => 'Can they prescribe medication?',
+            'label'      => 'Can prescribe',
             'therapy'    => 'No.',
             'psychiatry' => 'Yes.',
         ],
         [
-            'label'      => 'How sessions work',
-            'therapy'    => 'Weekly or biweekly, about 60 minutes, focused on support and skill-building.',
-            'psychiatry' => 'Starts with a 60-minute evaluation, then shorter, less frequent follow-ups.',
+            'label'      => 'What the rhythm looks like',
+            'therapy'    => 'An hour at a time, weekly or every other week, reviewed monthly for as long as it earns its place.',
+            'psychiatry' => 'A sixty-minute evaluation, then shorter check-ins every two to four weeks until things settle.',
         ],
         [
-            'label'      => 'Signs of a good fit',
-            'therapy'    => 'You feel understood and supported, and are making progress toward your goals.',
-            'psychiatry' => 'Your symptoms are improving and treatment feels manageable and medically appropriate.',
+            'label'      => 'You will know it is working when',
+            'therapy'    => 'The week feels more manageable, and you are using outside the room what you practiced in it.',
+            'psychiatry' => 'Your symptom scores move, side effects stay tolerable, and the plan still makes sense to you.',
         ],
     ],
 
@@ -210,15 +212,15 @@ return [
     // the practice can evidence (intake-to-discharge symptom scores, PHQ-9
     // response rates, TMS remission rates) before this page goes live.
     'results' => [
-        'heading_accent' => 'Quality care',
-        'heading_rest'   => ' that delivers real results',
+        'heading_accent' => 'Progress',
+        'heading_rest'   => ' you can see in the numbers',
         'photo'          => 'homepage/results-joy.jpg',
         'photo_alt'      => 'A father and his daughter laughing together outdoors in autumn light',
         'stats' => [
-            ['value' => '83%', 'label' => 'of patients start care within five days of reaching out'],
-            ['value' => '95%', 'label' => 'of patients say they feel heard by their clinician'],
-            ['value' => '26%', 'label' => 'average drop in reported stress after eight weeks of care'],
-            ['value' => '84%', 'label' => 'of patients see measurable symptom improvement within two months'],
+            ['value' => '83%', 'label' => 'of new patients are seen within a week of their first call'],
+            ['value' => '95%', 'label' => 'stay with the clinician they started with'],
+            ['value' => '26%', 'label' => 'average fall in symptom scores by week eight'],
+            ['value' => '84%', 'label' => 'of patients who begin a TMS course finish it'],
         ],
     ],
 

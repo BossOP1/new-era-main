@@ -74,10 +74,8 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
       </div>
 
       <div class="grid gap-6 sm:grid-cols-2">
-        <?php foreach ($results['stats'] as $n => $stat): ?>
-          <?php // The first card takes an outsized top-right radius, so the block
-                // reads as a considered shape rather than four identical boxes. ?>
-          <div class="flex min-h-[168px] flex-col justify-between rounded-[24px] border border-ink/15 px-7 py-8 sm:min-h-[220px]<?= $n === 0 ? ' rounded-tr-[104px]' : '' ?>">
+        <?php foreach ($results['stats'] as $stat): ?>
+          <div class="flex min-h-[168px] flex-col justify-between rounded-[24px] border border-ink/15 px-7 py-8 sm:min-h-[220px]">
             <p class="display-mark m-0 text-[52px] leading-none tracking-[-0.02em] text-ink sm:text-[58px]"><?= e($stat['value']) ?></p>
             <p class="m-0 mt-6 text-[15px] leading-relaxed text-ink/65"><?= e($stat['label']) ?></p>
           </div>
@@ -234,8 +232,8 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
 <section class="bg-white px-5 py-14 sm:px-10 lg:py-[72px]">
   <div class="mx-auto max-w-[1280px]">
     <div class="mb-10 text-center">
-      <h2 class="m-0 mb-4 text-[32px] leading-[1.08] tracking-[-0.03em] sm:text-[46px]">Not sure what kind of support you need?</h2>
-      <p class="m-0 text-[17px] text-ink/60">Treatment isn't one-size-fits-all. Therapy and psychiatry can work separately or as a team.</p>
+      <h2 class="m-0 mb-4 text-[32px] leading-[1.08] tracking-[-0.03em] sm:text-[46px]">Therapy, psychiatry, or both?</h2>
+      <p class="m-0 text-[17px] text-ink/60">Most people start with one and add the other when it helps. Here is the plain difference between them.</p>
     </div>
 
     <div class="lg:grid lg:grid-cols-[minmax(160px,0.7fr)_minmax(0,1fr)_minmax(0,1fr)] lg:gap-x-6">
@@ -360,9 +358,9 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
 <section id="book" class="mx-auto max-w-[1400px] px-5 py-3 sm:px-10 sm:py-8">
   <div class="relative overflow-hidden rounded-3xl bg-cream bg-cta-glow px-6 py-12 text-center sm:px-16 lg:py-[52px]">
     <h2 class="m-0 mb-3 text-[26px] leading-[1.18] tracking-[-0.02em] text-ink sm:text-[34px]">
-      Care designed for <em class="font-serif font-normal italic">real life — and real progress</em>
+      Ready when you are <em class="font-serif font-normal italic">— and sooner than you think</em>
     </h2>
-    <p class="mx-auto m-0 mb-6 max-w-[52ch] text-base text-ink/70">New patient appointments typically available within five days. Insurance verified before your first visit — no surprise bills.</p>
+    <p class="mx-auto m-0 mb-6 max-w-[52ch] text-base text-ink/70">Most new patients are seen inside a week. We check your benefits first, so you know what a visit costs before you walk in.</p>
     <a href="#book" class="inline-flex items-center rounded-full bg-ink px-7 py-3.5 text-[15px] font-bold text-white transition-colors hover:bg-brand-blue-dark">Book a consultation</a>
     <p class="m-0 mt-[18px] text-xs text-ink/55">In crisis? Call or text 988 any time.</p>
   </div>
