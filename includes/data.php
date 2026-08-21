@@ -202,6 +202,23 @@ return [
         ],
     ],
 
+    // The numbers panel above the conditions section. Every figure here is one
+    // the site already states elsewhere — appointment wait, intake length, TMS
+    // course, review score — rather than a clinical outcome claim. Swap in
+    // outcome percentages only where the practice has its own data behind them.
+    'results' => [
+        'heading_accent' => 'Quality care',
+        'heading_rest'   => ' that delivers real results',
+        'photo'          => 'homepage/tms-newera.webp',
+        'photo_alt'      => 'A clinician positioning the TMS coil for a patient partway through a session',
+        'stats' => [
+            ['value' => '5 days', 'label' => 'typical wait for a new patient appointment, in person or by telehealth'],
+            ['value' => '60 min', 'label' => 'diagnostic intake at your first visit — never a fifteen-minute script'],
+            ['value' => '36',     'label' => 'sessions in a full TMS course, run over about six weeks'],
+            ['value' => '4.9',    'label' => 'average rating across 380+ patient reviews'],
+        ],
+    ],
+
     'tms_stats' => [
         ['value' => '19 min', 'label' => 'per session',        'color' => '#e8922f'],
         ['value' => '36',     'label' => 'sessions in a course','color' => '#86be52'],

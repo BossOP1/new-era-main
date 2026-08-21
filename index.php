@@ -60,6 +60,33 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
   </div>
 </section>
 
+<!-- ─── Results ──────────────────────────────────────────────────────── -->
+<?php $results = $data['results']; ?>
+<section id="results" class="bg-surface px-5 py-20 sm:px-10 lg:py-[104px]">
+  <div class="mx-auto max-w-[1280px]">
+    <h2 class="m-0 mb-12 text-center text-[30px] leading-[1.1] tracking-[-0.03em] sm:text-[44px] lg:mb-16">
+      <em class="italic text-brand-blue"><?= e($results['heading_accent']) ?></em><?= e($results['heading_rest']) ?>
+    </h2>
+
+    <div class="grid items-stretch gap-6 lg:grid-cols-2">
+      <div class="relative min-h-[300px] overflow-hidden rounded-[24px] bg-night sm:min-h-[380px] lg:min-h-[520px]">
+        <?= image_slot($results['photo'], 'Drop a supporting photo', $results['photo_alt']) ?>
+      </div>
+
+      <div class="grid gap-6 sm:grid-cols-2">
+        <?php foreach ($results['stats'] as $n => $stat): ?>
+          <?php // The first card takes an outsized top-right radius, so the block
+                // reads as a considered shape rather than four identical boxes. ?>
+          <div class="flex min-h-[168px] flex-col justify-between rounded-[24px] border border-ink/15 px-7 py-8 sm:min-h-[220px]<?= $n === 0 ? ' rounded-tr-[104px]' : '' ?>">
+            <p class="display-mark m-0 text-[52px] leading-none tracking-[-0.02em] text-ink sm:text-[58px]"><?= e($stat['value']) ?></p>
+            <p class="m-0 mt-6 text-[15px] leading-relaxed text-ink/65"><?= e($stat['label']) ?></p>
+          </div>
+        <?php endforeach; ?>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ─── Conditions ───────────────────────────────────────────────────── -->
 <section id="conditions" class="mx-auto max-w-[1280px] px-5 py-20 sm:px-10 lg:py-[104px]">
   <div class="mb-12 flex flex-wrap items-end justify-between gap-10 border-b-2 border-ink/15 pb-6">
