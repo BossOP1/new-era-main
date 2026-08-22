@@ -36,29 +36,47 @@ if (!function_exists('font_faces')) {
      */
     function font_faces(): string
     {
+        // family, css weight, style, and the filenames to look for in
+        // assets/fonts/ — first match wins. woff2 leads because it is roughly
+        // half the size of otf; the globs cover vendor folders and the hashed
+        // filenames download sites attach.
         $faces = [
-            ['Untitled Sans', 'UntitledSans-Regular',   400, 'normal'],
-            ['Untitled Sans', 'UntitledSans-Medium',    500, 'normal'],
-            ['Untitled Sans', 'UntitledSans-Bold',      700, 'normal'],
-            ['Tobias',        'Tobias-Regular',         400, 'normal'],
-            ['Tobias',        'Tobias-RegularItalic',   400, 'italic'],
-            ['Tobias',        'Tobias-Medium',          500, 'normal'],
-            ['Tobias',        'Tobias-Bold',            700, 'normal'],
+            ['Untitled Sans', 400, 'normal', ['UntitledSans-Regular.woff2', '**/UntitledSans-Regular.*']],
+            ['Untitled Sans', 500, 'normal', ['UntitledSans-Medium.woff2', '**/UntitledSans-Medium.*']],
+            ['Untitled Sans', 700, 'normal', ['UntitledSans-Bold.woff2', '**/UntitledSans-Bold.*']],
+            ['Tobias',        400, 'normal', ['Tobias-Regular.woff2', '**/TobiasTRIAL-Regular-*.otf', '**/Tobias-Regular.*']],
+            ['Tobias',        400, 'italic', ['Tobias-RegularItalic.woff2', '**/TobiasTRIAL-RegularItalic-*.otf', '**/Tobias-RegularItalic.*']],
+            ['Tobias',        500, 'normal', ['Tobias-Medium.woff2', '**/TobiasTRIAL-Medium-*.otf', '**/Tobias-Medium.*']],
+            ['Tobias',        700, 'normal', ['Tobias-Bold.woff2', '**/TobiasTRIAL-Bold-*.otf', '**/Tobias-Bold.*']],
         ];
 
+        $dir = __DIR__ . '/../assets/fonts/';
         $css = '';
 
-        foreach ($faces as [$family, $file, $weight, $style]) {
-            $path = 'assets/fonts/' . $file . '.woff2';
+        foreach ($faces as [$family, $weight, $style, $patterns]) {
+            $match = null;
 
-            if (!is_file(__DIR__ . '/../' . $path)) {
+            foreach ($patterns as $pattern) {
+                $found = glob($dir . $pattern, GLOB_BRACE);
+                if ($found) {
+                    $match = $found[0];
+                    break;
+                }
+            }
+
+            if ($match === null) {
                 continue;
             }
 
+            $rel = 'assets/fonts/' . ltrim(str_replace($dir, '', $match), '/');
+            $ext = strtolower(pathinfo($match, PATHINFO_EXTENSION));
+            $format = ['woff2' => 'woff2', 'woff' => 'woff', 'otf' => 'opentype', 'ttf' => 'truetype'][$ext] ?? 'opentype';
+
             $css .= sprintf(
-                "@font-face{font-family:'%s';src:url('%s') format('woff2');font-weight:%d;font-style:%s;font-display:swap}",
+                "@font-face{font-family:'%s';src:url('%s') format('%s');font-weight:%d;font-style:%s;font-display:swap}",
                 $family,
-                e(asset($path)),
+                e(asset($rel)),
+                $format,
                 $weight,
                 $style
             );

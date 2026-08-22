@@ -78,6 +78,15 @@ $nav_link  = 'text-sm font-semibold text-ink transition-colors hover:text-brand-
       background: linear-gradient(135deg, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0.14) 26%, transparent 52%), radial-gradient(130% 190% at 6% -45%, rgba(255,255,255,0.42), transparent 62%);
     }
     .on-footage { text-shadow: 0 2px 28px rgba(9,20,28,0.55), 0 1px 5px rgba(9,20,28,0.35); }
+    .reveal { opacity: 0; transform: translateY(16px); transition: opacity .7s cubic-bezier(.22,.61,.24,1), transform .7s cubic-bezier(.22,.61,.24,1); }
+    .reveal.is-in { opacity: 1; transform: none; }
+    .lift { transition: transform .35s cubic-bezier(.22,.61,.24,1), box-shadow .35s cubic-bezier(.22,.61,.24,1); }
+    .lift:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(9,20,28,.12); }
+    [data-review-page] { transition: opacity .3s ease, transform .34s cubic-bezier(.22,.61,.24,1); }
+    [data-review-page].is-off-left { opacity: 0; transform: translateX(-30px); }
+    [data-review-page].is-off-right { opacity: 0; transform: translateX(30px); }
+    [data-review-page].is-entering figure { animation: review-card-in .5s cubic-bezier(.22,.61,.24,1) both; }
+    @keyframes review-card-in { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
     .img-slot { @apply flex h-full w-full items-center justify-center bg-white/[0.06] p-6 text-center; }
     .img-slot__hint { @apply max-w-[26ch] text-[13px] font-semibold leading-snug text-white/45; }
   }

@@ -8,6 +8,10 @@
    faces it can actually find. See assets/fonts/README.md. */
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-white font-sans text-ink antialiased;
   }
@@ -83,11 +87,99 @@
     text-shadow: 0 2px 28px rgba(9, 20, 28, 0.55), 0 1px 5px rgba(9, 20, 28, 0.35);
   }
 
+  /* Motion ------------------------------------------------------------------
+     .reveal is added by assets/js/main.js, never in the markup, so a visitor
+     without JS gets the finished page rather than a blank one. Everything here
+     is opacity and transform only — the two properties a browser can animate
+     without laying the page out again. */
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.7s cubic-bezier(0.22, 0.61, 0.24, 1),
+                transform 0.7s cubic-bezier(0.22, 0.61, 0.24, 1);
+  }
+  .reveal.is-in {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Cards that lift a little under the cursor. */
+  .lift {
+    transition: transform 0.35s cubic-bezier(0.22, 0.61, 0.24, 1),
+                box-shadow 0.35s cubic-bezier(0.22, 0.61, 0.24, 1);
+  }
+  .lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(9, 20, 28, 0.12);
+  }
+
+  /* Review pager -------------------------------------------------------------
+     Targeted by attribute, so the slider needs no extra classes in the markup.
+     The outgoing page leaves towards the arrow that was pressed and the
+     incoming one arrives from the opposite side, which is what makes the
+     direction of travel legible. */
+  [data-review-page] {
+    transition: opacity 0.3s ease, transform 0.34s cubic-bezier(0.22, 0.61, 0.24, 1);
+  }
+  [data-review-page].is-off-left {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  [data-review-page].is-off-right {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+
+  /* Cards land one after another rather than as a block. */
+  [data-review-page].is-entering figure {
+    animation: review-card-in 0.5s cubic-bezier(0.22, 0.61, 0.24, 1) both;
+  }
+
+  @keyframes review-card-in {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: none; }
+  }
+
   /* Image placeholder shown until a real photo is dropped into assets/img/ */
   .img-slot {
     @apply flex h-full w-full items-center justify-center bg-white/[0.06] p-6 text-center;
   }
   .img-slot__hint {
     @apply max-w-[26ch] text-[13px] font-semibold leading-snug text-white/45;
+  }
+}
+
+/* Someone who has asked their system for less motion gets none of it: no
+   reveal, no lift, no smooth scrolling, and the counters land on their final
+   value immediately (see main.js). */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal,
+  .reveal.is-in {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .lift,
+  .lift:hover {
+    transition: none;
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+/* The pager still works with reduced motion — it just cuts between pages. */
+@media (prefers-reduced-motion: reduce) {
+  [data-review-page],
+  [data-review-page].is-off-left,
+  [data-review-page].is-off-right {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+  [data-review-page].is-entering figure {
+    animation: none;
   }
 }
