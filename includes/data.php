@@ -26,6 +26,7 @@ return [
     'conditions' => [
         [
             'slot'  => 'cond-1',
+            'icon'  => 'cloud-rain',
             'alt'   => 'A person sitting on a window sill, looking outside',
             'name'  => 'Depression',
             'blurb' => 'Persistent low mood, loss of interest, and the treatment-resistant cases other clinics give up on.',
@@ -33,6 +34,7 @@ return [
         ],
         [
             'slot'  => 'cond-2',
+            'icon'  => 'pulse',
             'focus' => 'object-left',   // wide crop: keeps the subject clear of the info card
             'alt'   => 'A woman standing outdoors with her eyes closed, breathing slowly',
             'name'  => 'Anxiety',
@@ -41,6 +43,7 @@ return [
         ],
         [
             'slot'  => 'cond-3',
+            'icon'  => 'parent-child',
             'focus' => 'object-left',   // wide crop: keeps the subject clear of the info card
             'alt'   => 'A new mother holding her newborn baby',
             'name'  => 'Postpartum',
@@ -49,6 +52,7 @@ return [
         ],
         [
             'slot'  => 'cond-4',
+            'icon'  => 'shield-bolt',
             'alt'   => 'Two people holding hands across a table in support',
             'name'  => 'PTSD',
             'blurb' => 'Trauma-focused therapy at your pace, with clinicians trained in EMDR and prolonged exposure.',
@@ -56,6 +60,7 @@ return [
         ],
         [
             'slot'  => 'cond-5',
+            'icon'  => 'ear-waves',
             'focus' => 'object-left',   // wide crop: keeps the subject clear of the info card
             'alt'   => 'A man pressing his hands to his temples',
             'name'  => 'Tinnitus',
@@ -64,6 +69,7 @@ return [
         ],
         [
             'slot'  => 'cond-6',
+            'icon'  => 'head-bolt',
             'focus' => 'object-left',   // wide crop: keeps the subject clear of the info card
             'alt'   => 'A person sitting on a sofa holding their head',
             'name'  => 'Migraines',
@@ -72,6 +78,7 @@ return [
         ],
         [
             'slot'  => 'cond-7',
+            'icon'  => 'loop',
             'alt'   => 'Close-up of hands being washed under a running tap',
             'name'  => 'OCD',
             'blurb' => 'Exposure and response prevention, plus TMS for OCD that has not responded to therapy alone.',

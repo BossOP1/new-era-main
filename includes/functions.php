@@ -262,3 +262,37 @@ if (!function_exists('brand_glyph')) {
         );
     }
 }
+
+if (!function_exists('condition_icon')) {
+    /**
+     * Line icons for the conditions list. Drawn on the same 24px grid and
+     * close to the stroke weight of the arrows, so they read as one family
+     * rather than a borrowed icon set — and in currentColor, so a tab can
+     * recolour its icon when selected.
+     *
+     * Keys are set per condition in includes/data.php.
+     */
+    function condition_icon(string $key, string $classes = 'h-7 w-7 shrink-0'): string
+    {
+        $paths = [
+            'cloud-rain' => '<path d="M7.2 14.5a3.3 3.3 0 0 1 .45-6.57 4.9 4.9 0 0 1 9.3 1.2 2.9 2.9 0 0 1 .05 5.37"/><path d="M8.5 18v1.6M12 17.6v2.4M15.5 18v1.6"/>',
+            'pulse' => '<path d="M2.5 12.5h4l2-5.5 3.4 11 2.6-7 1.6 3h5.4"/>',
+            'parent-child' => '<circle cx="10" cy="7.6" r="2.9"/><path d="M4.6 20.4v-2.6a5.4 5.4 0 0 1 8.2-4.6"/><circle cx="17" cy="12.6" r="2.1"/><path d="M13.4 20.4v-1.7a3.6 3.6 0 0 1 7.2 0v1.7"/>',
+            'shield-bolt' => '<path d="M12 3.2 5 6v5.2c0 4.4 2.9 7.8 7 9.6 4.1-1.8 7-5.2 7-9.6V6l-7-2.8Z"/><path d="M12.8 8.2 10.2 12h3.2l-2.4 3.8"/>',
+            'ear-waves' => '<path d="M13.4 5.6a4.4 4.4 0 0 0-7.3 3.3c0 2.1.7 2.9.7 4.9 0 2.2-1.1 3.6-3 4.1"/><path d="M9.4 9.1a2.5 2.5 0 1 1 4.5 1.5c-.9 1.2-2 1.7-2.4 3-.3 1 .2 1.8-.6 2.6"/><path d="M16.8 6.6a7.2 7.2 0 0 1 0 10.2"/><path d="M19.6 4.2a11 11 0 0 1 0 15"/>',
+            'head-bolt' => '<path d="M15.6 20.4v-2.1c0-1 .4-1.7 1.1-2.4A6.6 6.6 0 1 0 7.8 18.8v1.6"/><path d="M12.9 8.3 10.4 11.7h2.9l-2.4 3.4"/>',
+            'loop' => '<path d="M19.6 11.2a7.8 7.8 0 0 0-13.4-4.4"/><path d="M4.4 12.8a7.8 7.8 0 0 0 13.4 4.4"/><path d="M6.4 3.2v3.6H10"/><path d="M17.6 20.8v-3.6H14"/>'
+        ];
+
+        if (!isset($paths[$key])) {
+            return '';
+        }
+
+        return sprintf(
+            '<svg class="%s" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"'
+            . ' stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">%s</svg>',
+            e($classes),
+            $paths[$key]
+        );
+    }
+}
