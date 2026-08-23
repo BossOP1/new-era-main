@@ -128,6 +128,29 @@
     }, 3000);
   }
 
+  /* Sticky header ---------------------------------------------------------
+     The bar firms up once it is no longer over the hero. Scroll position is
+     read inside a rAF so the handler cannot run more than once a frame. */
+  var siteHeader = document.querySelector('[data-site-header]');
+
+  if (siteHeader && !siteHeader.classList.contains('relative')) {
+    var ticking = false;
+
+    var syncHeader = function () {
+      siteHeader.classList.toggle('is-stuck', window.scrollY > 80);
+      ticking = false;
+    };
+
+    window.addEventListener('scroll', function () {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(syncHeader);
+      }
+    }, { passive: true });
+
+    syncHeader();
+  }
+
   /* Mobile navigation ---------------------------------------------------- */
   var toggle = document.querySelector('[data-menu-toggle]');
   var menu = document.getElementById('mobile-menu');
@@ -180,6 +203,8 @@
     var tabs = conditions.querySelectorAll('[data-cond-tab]');
     var panels = conditions.querySelectorAll('[data-cond-panel]');
 
+    var panelBox = conditions.querySelector('.cond-panelbox');
+
     var showCondition = function (index) {
       tabs.forEach(function (tab) {
         tab.dataset.active = String(tab.dataset.condTab === index);
@@ -187,6 +212,11 @@
       panels.forEach(function (panel) {
         panel.dataset.active = String(panel.dataset.condPanel === index);
       });
+      // Below lg this slots the panel directly under the tab just chosen. The
+      // rule only applies inside the mobile media query, so desktop ignores it.
+      if (panelBox) {
+        panelBox.style.setProperty('--cond-order', (parseInt(index, 10) * 2) + 1);
+      }
     };
 
     tabs.forEach(function (tab) {
@@ -227,8 +257,8 @@
       var arriving = pages[index];
 
       if (!wantsMotion) {
-        leaving.classList.add('hidden');
-        arriving.classList.remove('hidden');
+        leaving.classList.add('review-off');
+        arriving.classList.remove('review-off');
         current = index;
         return;
       }
@@ -239,14 +269,14 @@
       leaving.classList.add(direction > 0 ? 'is-off-left' : 'is-off-right');
 
       setTimeout(function () {
-        leaving.classList.add('hidden');
+        leaving.classList.add('review-off');
         leaving.classList.remove('is-off-left', 'is-off-right');
 
         // ...and in from the far side. The page is placed at its offset while
         // still hidden, then a forced reflow commits that position so the
         // browser animates from it instead of skipping straight to the end.
         arriving.classList.add(direction > 0 ? 'is-off-right' : 'is-off-left');
-        arriving.classList.remove('hidden');
+        arriving.classList.remove('review-off');
         void arriving.offsetWidth;
 
         arriving.classList.remove('is-off-left', 'is-off-right');

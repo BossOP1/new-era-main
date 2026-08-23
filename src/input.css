@@ -140,6 +140,51 @@
     to   { opacity: 1; transform: none; }
   }
 
+  /* Sticky header ------------------------------------------------------------
+     Over the hero the bar is glass and barely there. Once it is over content
+     it firms up: whiter fill, tighter, a real shadow — so the page reads
+     through it rather than behind it. */
+  [data-site-header].is-stuck {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  [data-site-header].is-stuck .liquid-glass {
+    min-height: 62px;
+    background-color: rgb(255 255 255 / 0.88);
+    box-shadow: 0 10px 30px rgba(9, 20, 28, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  }
+
+  /* Phone action bar: the two things someone on a phone actually wants. Sits
+     above the home indicator on iOS via the safe-area inset. */
+  .action-bar {
+    padding-bottom: calc(0.75rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  /* Review pager: the hidden page. Needs to beat the slider's own sm:grid,
+     so it carries weight rather than relying on utility order. */
+  .review-off {
+    display: none !important;
+  }
+
+  /* Conditions on mobile ------------------------------------------------------
+     Tabs and panel share one flow, ordered so the panel lands under whichever
+     tab is selected. --cond-order is set by main.js on selection; the default
+     puts the panel after the first tab, matching the initial state. From lg up
+     the grid is back and order is irrelevant. */
+  @media (max-width: 1023px) {
+    .cond-tab {
+      order: var(--tab-order, 0);
+    }
+    .cond-panelbox {
+      order: var(--cond-order, 1);
+      margin-top: 0.25rem;
+      margin-bottom: 0.75rem;
+    }
+    .cond-tail {
+      order: 999;
+    }
+  }
+
   /* Image placeholder shown until a real photo is dropped into assets/img/ */
   .img-slot {
     @apply flex h-full w-full items-center justify-center bg-white/[0.06] p-6 text-center;

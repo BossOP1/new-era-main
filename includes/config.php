@@ -23,12 +23,15 @@ return [
         'ink'    => '#14202b',
     ],
 
-    // Primary navigation, rendered in includes/header.php
+    // Primary navigation, rendered in includes/header.php. Kept in the same
+    // order as the sections appear on the page, and labelled with the words a
+    // patient would use rather than internal ones.
     'nav' => [
-        ['label' => 'Conditions', 'href' => '#conditions'],
-        ['label' => 'Our Focus',  'href' => '#focus'],
+        ['label' => 'About',      'href' => '#focus'],
         ['label' => 'Treatments', 'href' => '#treatments'],
         ['label' => 'TMS',        'href' => '#tms'],
+        ['label' => 'Conditions', 'href' => '#conditions'],
+        ['label' => 'Reviews',    'href' => '#reviews'],
         ['label' => 'FAQs',       'href' => '#faq'],
     ],
 

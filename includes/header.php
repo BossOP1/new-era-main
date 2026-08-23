@@ -87,6 +87,11 @@ $nav_link  = 'text-sm font-semibold text-ink transition-colors hover:text-brand-
     [data-review-page].is-off-right { opacity: 0; transform: translateX(30px); }
     [data-review-page].is-entering figure { animation: review-card-in .5s cubic-bezier(.22,.61,.24,1) both; }
     @keyframes review-card-in { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+    [data-site-header].is-stuck { padding-top: .5rem; padding-bottom: .5rem; }
+    [data-site-header].is-stuck .liquid-glass { min-height: 62px; background-color: rgb(255 255 255 / .88); box-shadow: 0 10px 30px rgba(9,20,28,.14), inset 0 1px 0 rgba(255,255,255,.9); }
+    .action-bar { padding-bottom: calc(.75rem + env(safe-area-inset-bottom, 0px)); }
+    .review-off { display: none !important; }
+    @media (max-width: 1023px) { .cond-tab { order: var(--tab-order, 0); } .cond-panelbox { order: var(--cond-order, 1); margin-top: .25rem; margin-bottom: .75rem; } .cond-tail { order: 999; } }
     .img-slot { @apply flex h-full w-full items-center justify-center bg-white/[0.06] p-6 text-center; }
     .img-slot__hint { @apply max-w-[26ch] text-[13px] font-semibold leading-snug text-white/45; }
   }
@@ -97,8 +102,8 @@ $nav_link  = 'text-sm font-semibold text-ink transition-colors hover:text-brand-
 
 <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-white focus:px-5 focus:py-3 focus:text-sm focus:font-extrabold focus:text-brand-blue">Skip to content</a>
 
-<header class="<?= $header_solid ? 'relative bg-night' : 'absolute inset-x-0 top-0' ?> z-50 p-3 sm:p-5" data-site-header>
-  <div class="liquid-glass mx-auto flex min-h-[74px] items-center justify-between gap-6 px-3 py-3 sm:py-0 sm:pl-7 lg:gap-8">
+<header class="<?= $header_solid ? 'relative bg-night' : 'fixed inset-x-0 top-0' ?> z-50 p-3 transition-[padding] duration-300 sm:p-5" data-site-header>
+  <div class="liquid-glass mx-auto flex min-h-[74px] items-center justify-between gap-6 px-3 py-3 transition-[min-height] duration-300 sm:py-0 sm:pl-7 lg:gap-8">
 
     <a href="index.php#top" class="flex shrink-0 items-center no-underline">
       <?= brand_logo($site['name'], 'h-8 w-auto sm:h-9') ?>

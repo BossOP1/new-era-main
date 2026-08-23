@@ -77,6 +77,17 @@ $footer_link = 'text-sm text-white/75 transition-colors hover:text-white';
   </div>
 </footer>
 
+<!-- Phone action bar. Fixed to the bottom below lg, where the header's own
+     "Get started" is folded into the menu — so calling or booking is always
+     one tap away rather than a scroll back to the top. -->
+<div class="action-bar fixed inset-x-0 bottom-0 z-40 flex gap-2 border-t border-ink/10 bg-white/95 px-3 pt-3 backdrop-blur-md lg:hidden">
+  <a href="<?= e($site['phone_href']) ?>" class="flex flex-1 items-center justify-center gap-2 rounded-full border-2 border-brand-blue px-5 py-3.5 text-sm font-extrabold text-brand-blue">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6.5 3.5h3l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4.5 5.7 2 2 0 0 1 6.5 3.5Z"/></svg>
+    Call
+  </a>
+  <a href="#book" class="flex flex-1 items-center justify-center rounded-full bg-brand-orange px-5 py-3.5 text-sm font-extrabold text-white">Book a visit</a>
+</div>
+
 <script src="<?= e(asset('assets/js/main.js')) ?>" defer></script>
 </body>
 </html>
