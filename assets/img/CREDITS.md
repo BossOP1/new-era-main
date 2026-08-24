@@ -19,8 +19,8 @@ a file with the same name into this folder.
 | `treat-1.jpg` | images.unsplash.com/photo-1711409645921-ef3db0501f96 | Brain render (TMS) |
 | `treat-2.jpg` | images.unsplash.com/photo-1738707060236-42d641096f96 | Clinicians reviewing brain scans (Accelerated TMS) |
 | `treat-3.jpg` | images.unsplash.com/photo-1631217868264-e5b90bb7e133 | Clinician and patient (Psychiatry) |
-| `treat-4.jpg` | images.unsplash.com/photo-1666214277730-e9c7e755e5a3 | Exam-room consultation (Spravato) |
-| `treat-5.jpg` | images.unsplash.com/photo-1763310225009-50214e3c99d9 | Infusion line (Ketamine) |
+| `treat-4.jpg` | images.unsplash.com/photo-1576157401730-e73772de4796 | Nasal spray in use (Spravato) |
+| `treat-5.jpg` | images.unsplash.com/photo-1516575901726-efcb7a9895a0 | Infusion drip chamber (Ketamine) |
 | `treat-6.jpg` | images.unsplash.com/photo-1714976694810-85add1a29c96 | Therapy session (Therapy) |
 | `tms.jpg`     | images.unsplash.com/photo-1550504630-cc20eca3b23e | Man seated, hands clasped (TMS section) |
 | `faq.jpg`     | images.unsplash.com/photo-1776886099265-6366478b341b | Clinic waiting area (FAQ) |

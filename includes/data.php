@@ -27,6 +27,7 @@ return [
         [
             'slot'  => 'cond-1',
             'icon'  => 'cloud-rain',
+            'art'   => 'depression',
             'alt'   => 'A person sitting on a window sill, looking outside',
             'name'  => 'Depression',
             'blurb' => 'Persistent low mood, loss of interest, and the treatment-resistant cases other clinics give up on.',
@@ -35,6 +36,7 @@ return [
         [
             'slot'  => 'cond-2',
             'icon'  => 'pulse',
+            'art'   => 'anxiety',
             'focus' => 'object-left',   // wide crop: keeps the subject clear of the info card
             'alt'   => 'A woman standing outdoors with her eyes closed, breathing slowly',
             'name'  => 'Anxiety',
@@ -44,6 +46,7 @@ return [
         [
             'slot'  => 'cond-3',
             'icon'  => 'parent-child',
+            'art'   => 'postpartum',
             'focus' => 'object-left',   // wide crop: keeps the subject clear of the info card
             'alt'   => 'A new mother holding her newborn baby',
             'name'  => 'Postpartum',
@@ -53,6 +56,7 @@ return [
         [
             'slot'  => 'cond-4',
             'icon'  => 'shield-bolt',
+            'art'   => 'ptsd',
             'alt'   => 'Two people holding hands across a table in support',
             'name'  => 'PTSD',
             'blurb' => 'Trauma-focused therapy at your pace, with clinicians trained in EMDR and prolonged exposure.',
@@ -61,6 +65,7 @@ return [
         [
             'slot'  => 'cond-5',
             'icon'  => 'ear-waves',
+            'art'   => 'tinnitus',
             'focus' => 'object-left',   // wide crop: keeps the subject clear of the info card
             'alt'   => 'A man pressing his hands to his temples',
             'name'  => 'Tinnitus',
@@ -70,6 +75,7 @@ return [
         [
             'slot'  => 'cond-6',
             'icon'  => 'head-bolt',
+            'art'   => 'migraines',
             'focus' => 'object-left',   // wide crop: keeps the subject clear of the info card
             'alt'   => 'A person sitting on a sofa holding their head',
             'name'  => 'Migraines',
@@ -79,6 +85,7 @@ return [
         [
             'slot'  => 'cond-7',
             'icon'  => 'loop',
+            'art'   => 'ocd',
             'alt'   => 'Close-up of hands being washed under a running tap',
             'name'  => 'OCD',
             'blurb' => 'Exposure and response prevention, plus TMS for OCD that has not responded to therapy alone.',
@@ -112,14 +119,14 @@ return [
         [
             'name'   => 'Spravato',
             'slot'   => 'treat-4',
-            'alt'    => 'A clinician explaining treatment to a patient in an exam room',
+            'alt'    => 'A person self-administering a nasal spray',
             'detail' => 'In-office esketamine treatment for treatment-resistant depression, monitored start to finish.',
             'chips'  => ['Esketamine', 'In-office'],
         ],
         [
             'name'   => 'Ketamine',
             'slot'   => 'treat-5',
-            'alt'    => 'An intravenous infusion line in a treatment room',
+            'alt'    => 'An intravenous infusion line running into a drip chamber',
             'detail' => 'Infusion therapy for depression, anxiety and chronic pain that hasn’t responded to other care.',
             'chips'  => ['Infusion', 'Depression'],
         ],
@@ -237,9 +244,13 @@ return [
         ['value' => '0',      'label' => 'days of downtime',    'color' => '#ffffff'],
     ],
 
+    // Adapted from the practice's own mission statement: widen access to TMS,
+    // hold the standard of care high, and lead with the FDA-cleared,
+    // non-medicinal option. Written for the page rather than pasted, so it
+    // reads at 32px without corporate padding.
     'focus_paragraphs' => [
-        'We are committed to forward-thinking, personalized psychiatric care for people living with depression, anxiety, postpartum mood changes, PTSD, tinnitus, migraines and OCD.',
-        'We are patient-centered, thoughtful and intentional. Sixty-minute intakes, symptom scores at every visit, and the same clinician each time — a specialized experience coupled with treatment backed by evidence.',
-        'Additionally, we deliver FDA-cleared TMS for treatment-resistant depression and OCD, and stay at the forefront of neuromodulation so medication is never the only answer we have.',
+        'Our mission is to put TMS within reach of more people living with depression — across our clinics and across the country. A treatment this effective should not be difficult to find.',
+        'How care feels matters as much as what it achieves. Our doctors, technicians and office staff are here to make the whole course — from the first phone call to the final session — something you would send a friend to.',
+        'TMS is FDA-cleared, non-medicinal, and the most advanced option we can offer for relief from depressive symptoms. We deliver it with current protocols and equipment, because for many patients it is their best chance of feeling like themselves again.',
     ],
 ];

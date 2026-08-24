@@ -129,15 +129,16 @@
   }
 
   /* Sticky header ---------------------------------------------------------
-     The bar firms up once it is no longer over the hero. Scroll position is
-     read inside a rAF so the handler cannot run more than once a frame. */
+     The bar is legible by default; this only adds the over-the-hero treatment
+     while it is actually on the video. Read inside a rAF so the handler cannot
+     run more than once a frame. */
   var siteHeader = document.querySelector('[data-site-header]');
 
   if (siteHeader && !siteHeader.classList.contains('relative')) {
     var ticking = false;
 
     var syncHeader = function () {
-      siteHeader.classList.toggle('is-stuck', window.scrollY > 80);
+      siteHeader.classList.toggle('is-over-hero', window.scrollY <= 80);
       ticking = false;
     };
 

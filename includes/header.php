@@ -23,7 +23,8 @@ $title = $page_title ? $page_title . ' · ' . $site['name'] : $site['name'] . ' 
 // Use the compiled stylesheet when it exists; fall back to the Play CDN otherwise.
 $compiled_css = is_file(__DIR__ . '/../assets/css/tailwind.css');
 
-$nav_link  = 'text-sm font-semibold text-ink transition-colors hover:text-brand-blue';
+$nav_link  = 'text-sm font-semibold text-ink transition-colors hover:text-brand-blue'
+           . ' group-[.is-over-hero]:text-white/95 group-[.is-over-hero]:hover:text-white';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -55,7 +56,7 @@ $nav_link  = 'text-sm font-semibold text-ink transition-colors hover:text-brand-
 <script src="<?= e(asset('assets/js/tailwind.config.js')) ?>"></script>
 <style type="text/tailwindcss">
   @layer base {
-    h1, h2, h3 { @apply font-serif; }
+    h1, h2, h3 { @apply font-serif font-medium; }
   }
   @layer components {
     .display-mark { @apply font-serif; }
@@ -87,8 +88,6 @@ $nav_link  = 'text-sm font-semibold text-ink transition-colors hover:text-brand-
     [data-review-page].is-off-right { opacity: 0; transform: translateX(30px); }
     [data-review-page].is-entering figure { animation: review-card-in .5s cubic-bezier(.22,.61,.24,1) both; }
     @keyframes review-card-in { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
-    [data-site-header].is-stuck { padding-top: .5rem; padding-bottom: .5rem; }
-    [data-site-header].is-stuck .liquid-glass { min-height: 62px; background-color: rgb(255 255 255 / .88); box-shadow: 0 10px 30px rgba(9,20,28,.14), inset 0 1px 0 rgba(255,255,255,.9); }
     .action-bar { padding-bottom: calc(.75rem + env(safe-area-inset-bottom, 0px)); }
     .review-off { display: none !important; }
     @media (max-width: 1023px) { .cond-tab { order: var(--tab-order, 0); } .cond-panelbox { order: var(--cond-order, 1); margin-top: .25rem; margin-bottom: .75rem; } .cond-tail { order: 999; } }
@@ -102,11 +101,13 @@ $nav_link  = 'text-sm font-semibold text-ink transition-colors hover:text-brand-
 
 <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-white focus:px-5 focus:py-3 focus:text-sm focus:font-extrabold focus:text-brand-blue">Skip to content</a>
 
-<header class="<?= $header_solid ? 'relative bg-night' : 'fixed inset-x-0 top-0' ?> z-50 p-3 transition-[padding] duration-300 sm:p-5" data-site-header>
-  <div class="liquid-glass mx-auto flex min-h-[74px] items-center justify-between gap-6 px-3 py-3 transition-[min-height] duration-300 sm:py-0 sm:pl-7 lg:gap-8">
+<header class="group <?= $header_solid ? 'relative bg-night is-over-hero' : 'fixed inset-x-0 top-0 is-over-hero' ?> z-50 p-3 transition-[padding] duration-300 group-[.is-over-hero]:p-3 sm:p-5" data-site-header>
+  <div class="liquid-glass mx-auto flex min-h-[62px] items-center justify-between gap-6 border-white/70 bg-white/90 px-3 py-3 transition-colors duration-300 group-[.is-over-hero]:min-h-[74px] group-[.is-over-hero]:border-white/25 group-[.is-over-hero]:bg-night/35 sm:py-0 sm:pl-7 lg:gap-8">
 
     <a href="index.php#top" class="flex shrink-0 items-center no-underline">
-      <?= brand_logo($site['name'], 'h-8 w-auto sm:h-9') ?>
+      <?php // White over the hero, full colour once the bar is over content. ?>
+      <span class="hidden group-[.is-over-hero]:block"><?= brand_logo($site['name'], 'h-8 w-auto sm:h-9', true) ?></span>
+      <span class="block group-[.is-over-hero]:hidden"><?= brand_logo($site['name'], 'h-8 w-auto sm:h-9', false, true) ?></span>
     </a>
 
     <nav class="hidden items-center gap-7 lg:flex" aria-label="Primary">
@@ -121,7 +122,7 @@ $nav_link  = 'text-sm font-semibold text-ink transition-colors hover:text-brand-
     </div>
 
     <button type="button"
-            class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-ink/15 bg-white/70 text-ink transition-colors hover:bg-white lg:hidden"
+            class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-ink/15 bg-white/70 text-ink transition-colors group-[.is-over-hero]:border-white/40 group-[.is-over-hero]:bg-white/15 group-[.is-over-hero]:text-white lg:hidden"
             data-menu-toggle
             aria-expanded="false"
             aria-controls="mobile-menu">

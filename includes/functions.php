@@ -296,3 +296,29 @@ if (!function_exists('condition_icon')) {
         );
     }
 }
+
+if (!function_exists('condition_mark')) {
+    /**
+     * The mark beside a condition. Prefers the practice's own artwork in
+     * assets/img/conditions/ (keyed by 'art' in includes/data.php) and falls
+     * back to the drawn line icons in condition_icon() if a file is missing,
+     * so a gap in the set never leaves a tab bare.
+     *
+     * Decorative: the condition is named right beside it.
+     */
+    function condition_mark(array $condition, string $classes = 'h-9 w-9 shrink-0'): string
+    {
+        $art = $condition['art'] ?? '';
+        $file = 'assets/img/conditions/' . $art . '.png';
+
+        if ($art !== '' && is_file(__DIR__ . '/../' . $file)) {
+            return sprintf(
+                '<img src="%s" alt="" aria-hidden="true" width="200" height="200" loading="lazy" decoding="async" class="%s">',
+                e(asset($file)),
+                e($classes)
+            );
+        }
+
+        return condition_icon($condition['icon'] ?? '', $classes);
+    }
+}

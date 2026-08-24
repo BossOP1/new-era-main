@@ -16,7 +16,7 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
          wherever autoplay is refused. Drop in a different file and update the
          two paths below; remove the video and the slot falls back to
          assets/img/hero.jpg on its own. -->
-    <?= video_slot('homepage/hero-video-newEra.mp4', 'homepage/hero-video-poster.jpg', 'hero', 'A woman sitting with her family in a sunlit living room') ?>
+    <?= video_slot('homepage/Website_video.mp4', 'homepage/website-video-poster.jpg', 'hero', 'A group of friends laughing together outdoors') ?>
   </div>
   <div class="pointer-events-none absolute inset-0 bg-hero-veil"></div>
 
@@ -91,7 +91,7 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
     <div data-reveal class="mb-10 text-center">
       <p class="<?= $eyebrow ?> mb-4 text-brand-blue">Choosing care</p>
       <h2 class="m-0 mb-4 text-[32px] leading-[1.06] tracking-[-0.03em] sm:text-[44px]">Therapy, psychiatry, or both?</h2>
-      <p class="m-0 text-[17px] text-ink/60">Most people start with one and add the other when it helps. Here is the plain difference between them.</p>
+      <p class="m-0 text-[17px] font-medium text-ink/70">Most people start with one and add the other when it helps. Here is the plain difference between them.</p>
     </div>
 
     <div class="lg:grid lg:grid-cols-[minmax(160px,0.7fr)_minmax(0,1fr)_minmax(0,1fr)] lg:gap-x-6">
@@ -108,11 +108,11 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
           <div class="flex items-center border-ink/15 px-5 py-5 text-base font-extrabold text-ink lg:border-t lg:px-0 lg:py-6 lg:pr-4"><?= e($row['label']) ?></div>
           <div class="bg-therapy px-5 py-5 sm:px-8 lg:border-t lg:border-brand-blue/20 lg:py-6">
             <span class="mb-1.5 block text-[11px] font-extrabold uppercase tracking-[0.14em] text-brand-blue/70 lg:hidden">Therapy</span>
-            <p class="m-0 text-[15px] leading-relaxed text-brand-blue-dark"><?= e($row['therapy']) ?></p>
+            <p class="m-0 text-[15px] font-medium leading-relaxed text-brand-blue-dark"><?= e($row['therapy']) ?></p>
           </div>
           <div class="bg-psych px-5 py-5 sm:px-8 lg:border-t lg:border-brand-orange/30 lg:py-6">
             <span class="mb-1.5 block text-[11px] font-extrabold uppercase tracking-[0.14em] text-clay/70 lg:hidden">Psychiatry</span>
-            <p class="m-0 text-[15px] leading-relaxed text-clay-deep"><?= e($row['psychiatry']) ?></p>
+            <p class="m-0 text-[15px] font-medium leading-relaxed text-clay-deep"><?= e($row['psychiatry']) ?></p>
           </div>
         </div>
       <?php endforeach; ?>
@@ -138,10 +138,10 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
     <?php // The column keeps its left-aligned text but sits centred in the
           // panel, so the space either side of it matches. ?>
     <div data-reveal class="mx-auto max-w-[960px]">
-      <p class="m-0 mb-11 text-[15px] font-semibold text-white/70">Our focus</p>
+      <p class="m-0 mb-11 text-[15px] font-semibold text-white/70">Our mission</p>
       <div class="flex flex-col gap-10 border-l border-white/35 pl-6 sm:pl-14">
         <?php foreach ($data['focus_paragraphs'] as $paragraph): ?>
-          <p class="m-0 text-pretty text-xl leading-[1.42] tracking-[-0.02em] text-white/90 sm:text-2xl lg:text-[30px]"><?= e($paragraph) ?></p>
+          <p class="m-0 text-pretty font-serif text-[22px] font-medium leading-[1.38] tracking-[-0.015em] text-white sm:text-[26px] lg:text-[32px]"><?= e($paragraph) ?></p>
         <?php endforeach; ?>
         <a href="#book" class="mt-2 inline-flex items-center gap-2.5 self-start rounded-full bg-white px-7 py-4 text-[15px] font-extrabold text-brand-blue transition-colors hover:bg-brand-orange hover:text-white">
           About us <?= arrow_icon(15) ?>
@@ -172,7 +172,7 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
             </div>
           </div>
           <h3 class="m-0 mb-2 text-center text-2xl tracking-[-0.02em] text-brand-blue"><?= e($treatment['name']) ?></h3>
-          <p class="m-0 mb-0 text-center text-[15px] leading-[1.55] text-ink/60"><?= e($treatment['detail']) ?></p>
+          <p class="m-0 mb-0 text-center text-[15px] font-medium leading-[1.55] text-ink/70"><?= e($treatment['detail']) ?></p>
         </div>
       <?php endforeach; ?>
     </div>
@@ -220,7 +220,7 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
       <div class="max-w-[640px]">
         <p class="<?= $eyebrow ?> mb-4 text-brand-green">TMS Therapy</p>
         <h2 class="m-0 mb-4 text-[28px] leading-[1.1] tracking-[-0.03em] text-white sm:text-[38px]">When medication hasn't been enough.</h2>
-        <p class="m-0 text-base leading-relaxed text-white/80">Non-invasive, FDA-cleared magnetic stimulation for depression and OCD. No anesthesia, no sedation — you drive yourself home and go back to your day.</p>
+        <p class="m-0 text-base font-medium leading-relaxed text-white/85">Non-invasive, FDA-cleared magnetic stimulation for depression and OCD. No anesthesia, no sedation — you drive yourself home and go back to your day.</p>
       </div>
 
       <div class="flex flex-wrap items-center justify-between gap-8 border-t border-white/25 pt-7">
@@ -247,7 +247,7 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
       <p class="<?= $eyebrow ?> mb-4 text-brand-blue">Conditions we treat</p>
       <h2 class="m-0 max-w-[20ch] text-[32px] leading-[1.06] tracking-[-0.03em] sm:text-[44px]">Care for the whole range of what you're carrying.</h2>
     </div>
-    <p class="m-0 max-w-[34ch] text-[15px] leading-relaxed text-ink/60">Every plan starts with a full diagnostic assessment — never a fifteen-minute script.</p>
+    <p class="m-0 max-w-[34ch] text-[15px] font-medium leading-relaxed text-ink/70">Every plan starts with a full diagnostic assessment — never a fifteen-minute script.</p>
   </div>
 
   <?php // Below lg the tab column dissolves (display:contents) so the tabs
@@ -263,7 +263,7 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
                 aria-controls="cond-panel-<?= $i ?>"
                 style="--tab-order:<?= $i * 2 ?>"
                 class="cond-tab grid w-full flex-1 cursor-pointer group grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-4 rounded-2xl border-0 border-l-4 border-ink/15 bg-white px-6 py-5 text-left font-sans transition-colors data-[active=true]:border-brand-orange data-[active=true]:bg-psych">
-          <?= brand_glyph('h-7 w-7 shrink-0') ?>
+          <?= condition_mark($condition, 'h-9 w-9 shrink-0') ?>
           <span class="min-w-0 text-lg font-extrabold tracking-[-0.02em] text-ink sm:text-xl"><?= e($condition['name']) ?></span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" class="text-brand-blue transition-transform duration-200 group-hover:translate-x-1"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
         </button>
@@ -288,7 +288,7 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
               <span class="h-1 w-7 bg-brand-sky"></span>
               <h3 class="m-0 text-[26px] tracking-[-0.025em] text-white"><?= e($condition['name']) ?></h3>
             </div>
-            <p class="m-0 mb-[22px] text-[15px] leading-relaxed text-white/80"><?= e($condition['blurb']) ?></p>
+            <p class="m-0 mb-[22px] text-[15px] font-medium leading-relaxed text-white/85"><?= e($condition['blurb']) ?></p>
             <div class="border-t border-white/25 pt-5">
               <p class="m-0 mb-3 text-[13px] font-semibold text-white/70">How we treat it:</p>
               <div class="mb-6 flex flex-wrap gap-2">
@@ -355,7 +355,7 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
   <div class="mx-auto max-w-[1280px] px-5 py-14 sm:px-10 lg:py-[72px]">
     <p class="<?= $eyebrow ?> mb-4 text-brand-blue">Questions</p>
     <h2 class="m-0 mb-3.5 text-[32px] leading-[1.06] tracking-[-0.03em] text-brand-blue-dark sm:text-[44px]">Any questions?</h2>
-    <p class="m-0 mb-10 text-base text-brand-blue">Find trust-worthy answers on everything we treat and how we treat it.</p>
+    <p class="m-0 mb-10 text-base font-medium text-brand-blue">Find trust-worthy answers on everything we treat and how we treat it.</p>
 
     <div class="grid items-start gap-10 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-[72px]">
       <div data-reveal class="relative order-2 h-[280px] overflow-hidden rounded-[20px] bg-night lg:h-[420px]">
@@ -385,7 +385,7 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
                     <span class="group-open:hidden">+</span><span class="hidden group-open:inline">−</span>
                   </span>
                 </summary>
-                <p class="m-0 max-w-[62ch] pb-[26px] pr-0 text-[15px] leading-[1.7] text-brand-blue-dark/75 sm:pr-[60px]"><?= e($faq['a']) ?></p>
+                <p class="m-0 max-w-[62ch] pb-[26px] pr-0 text-[15px] font-medium leading-[1.7] text-brand-blue-dark/80 sm:pr-[60px]"><?= e($faq['a']) ?></p>
               </details>
             <?php endforeach; ?>
           </div>
@@ -401,7 +401,7 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
     <h2 class="m-0 mb-3 text-[28px] leading-[1.1] tracking-[-0.03em] text-ink sm:text-[38px]">
       Ready when you are <em class="font-serif font-normal italic">— and sooner than you think</em>
     </h2>
-    <p class="mx-auto m-0 mb-6 max-w-[52ch] text-base text-ink/70">Most new patients are seen inside a week. We check your benefits first, so you know what a visit costs before you walk in.</p>
+    <p class="mx-auto m-0 mb-6 max-w-[52ch] text-base font-medium text-ink/75">Most new patients are seen inside a week. We check your benefits first, so you know what a visit costs before you walk in.</p>
     <a href="#book" class="inline-flex items-center rounded-full bg-brand-blue px-7 py-4 text-[15px] font-extrabold text-white transition-colors hover:bg-brand-blue-dark">Book a consultation</a>
     <p class="m-0 mt-[18px] text-xs text-ink/55">In crisis? Call or text 988 any time.</p>
   </div>
