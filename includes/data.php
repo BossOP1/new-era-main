@@ -244,13 +244,12 @@ return [
         ['value' => '0',      'label' => 'days of downtime',    'color' => '#ffffff'],
     ],
 
-    // Adapted from the practice's own mission statement: widen access to TMS,
-    // hold the standard of care high, and lead with the FDA-cleared,
-    // non-medicinal option. Written for the page rather than pasted, so it
-    // reads at 32px without corporate padding.
+    // The practice's mission in three short lines — access, the treatment,
+    // the team. One idea each: at 32px, longer than two lines apiece stops
+    // being a statement and becomes a paragraph.
     'focus_paragraphs' => [
-        'Our mission is to put TMS within reach of more people living with depression — across our clinics and across the country. A treatment this effective should not be difficult to find.',
-        'How care feels matters as much as what it achieves. Our doctors, technicians and office staff are here to make the whole course — from the first phone call to the final session — something you would send a friend to.',
-        'TMS is FDA-cleared, non-medicinal, and the most advanced option we can offer for relief from depressive symptoms. We deliver it with current protocols and equipment, because for many patients it is their best chance of feeling like themselves again.',
+        'Our mission is to put TMS within reach of more people living with depression. A treatment this effective should not be hard to find.',
+        'It is FDA-cleared and non-medicinal, and for many patients it is the best chance they have of feeling like themselves again.',
+        'Delivered by doctors, technicians and office staff who make the course something you would send a friend to — from the first phone call to the final session.',
     ],
 ];

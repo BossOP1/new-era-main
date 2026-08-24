@@ -29,7 +29,7 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
          wherever autoplay is refused. Drop in a different file and update the
          two paths below; remove the video and the slot falls back to
          assets/img/hero.jpg on its own. -->
-    <?= video_slot('homepage/Website_video.mp4', 'homepage/website-video-poster.jpg', 'hero', 'A group of friends laughing together outdoors') ?>
+    <?= video_slot('homepage/Create_a_realistic_warm_upli.mp4', 'homepage/hero-poster.jpg', 'hero', 'A group of friends laughing together outdoors') ?>
   </div>
   <div class="pointer-events-none absolute inset-0 bg-hero-veil"></div>
 
@@ -148,14 +148,14 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
 
 <!-- ─── Our focus ────────────────────────────────────────────────────── -->
 <section id="focus" class="px-5 py-3 sm:px-10 sm:py-5">
-  <div class="mx-auto max-w-[1280px] rounded-[28px] bg-brand-blue px-6 py-12 sm:px-12 lg:px-20 lg:py-16">
+  <div class="mx-auto max-w-[1280px] rounded-[28px] bg-brand-blue px-6 py-12 sm:px-10 lg:px-14 lg:py-16">
     <?php // The column keeps its left-aligned text but sits centred in the
           // panel, so the space either side of it matches. ?>
-    <div data-reveal class="mx-auto max-w-[960px]">
+    <div data-reveal class="mx-auto max-w-[1140px]">
       <p class="m-0 mb-11 text-[15px] font-semibold text-white/70">Our mission</p>
       <div class="flex flex-col gap-10 border-l border-white/35 pl-6 sm:pl-14">
         <?php foreach ($data['focus_paragraphs'] as $paragraph): ?>
-          <p class="m-0 text-pretty font-serif text-[22px] font-medium leading-[1.38] tracking-[-0.015em] text-white sm:text-[26px] lg:text-[32px]"><?= e($paragraph) ?></p>
+          <p class="m-0 cursor-default text-pretty font-serif text-[22px] font-medium leading-[1.38] tracking-[-0.015em] text-white/80 transition-colors duration-300 hover:text-[#fbd9b0] sm:text-[26px] lg:text-[32px]"><?= e($paragraph) ?></p>
         <?php endforeach; ?>
         <a href="#book" class="mt-2 inline-flex items-center gap-2.5 self-start rounded-full bg-white px-7 py-4 text-[15px] font-extrabold text-brand-blue transition-colors hover:bg-brand-orange hover:text-white">
           About us <?= arrow_icon(15) ?>
@@ -279,7 +279,7 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
                 aria-controls="cond-panel-<?= $i ?>"
                 style="--tab-order:<?= $i * 2 ?>"
                 class="cond-tab grid w-full flex-1 cursor-pointer group grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-4 rounded-2xl border border-ink/10 bg-surface px-6 py-5 text-left font-sans text-ink transition-colors hover:border-brand-blue/30 hover:bg-sky data-[active=true]:border-transparent data-[active=true]:bg-brand-blue data-[active=true]:text-white">
-          <span class="shrink-0 transition group-data-[active=true]:[filter:brightness(0)_invert(1)]"><?= condition_mark($condition, 'h-9 w-9') ?></span>
+          <span class="shrink-0 transition group-data-[active=true]:[filter:brightness(0)_invert(1)]"><?= condition_mark($condition, 'h-9 w-9 [filter:brightness(0.62)_saturate(1.25)]') ?></span>
           <span class="min-w-0 text-lg font-extrabold tracking-[-0.02em] sm:text-xl"><?= e($condition['name']) ?></span>
           <?php // currentColor, so the arrow turns white with the label when the tab is active. ?>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" class="transition-transform duration-200 group-hover:translate-x-1"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
