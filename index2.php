@@ -99,51 +99,77 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
   </div>
 </section>
 
-<!-- ─── Therapy vs psychiatry ────────────────────────────────────────── -->
-<section class="bg-white px-5 py-14 sm:px-10 lg:py-[72px]">
+<!-- ─── Conditions ───────────────────────────────────────────────────── -->
+<section id="conditions" class="bg-white px-5 py-14 sm:px-10 lg:py-[72px]">
   <div class="mx-auto max-w-[1280px]">
-    <div data-reveal class="mb-10 text-center">
-      <p class="<?= $eyebrow ?> mb-4 text-brand-blue">Choosing care</p>
-      <h2 class="m-0 mb-4 text-[32px] leading-[1.06] tracking-[-0.03em] sm:text-[44px]">Therapy, psychiatry, or both?</h2>
-      <p class="m-0 text-[17px] font-medium text-ink/70">Most people start with one and add the other when it helps. Here is the plain difference between them.</p>
+  <div data-reveal class="mb-9 flex flex-wrap items-end justify-between gap-10 border-b-2 border-ink/15 pb-6">
+    <div>
+      <p class="<?= $eyebrow ?> mb-4 text-brand-blue">Conditions we treat</p>
+      <h2 class="m-0 max-w-[20ch] text-[32px] leading-[1.06] tracking-[-0.03em] sm:text-[44px]">Care for the whole range of what you're carrying.</h2>
+    </div>
+    <p class="m-0 max-w-[34ch] text-[15px] font-medium leading-relaxed text-ink/70">Every plan starts with a full diagnostic assessment — never a fifteen-minute script.</p>
+  </div>
+
+  <?php // Below lg the tab column dissolves (display:contents) so the tabs
+      // and the detail panel become siblings in one flow. The panel then
+      // takes an order that puts it right beneath the selected tab — an
+      // accordion, without a second copy of the content in the markup. ?>
+  <div class="flex flex-col gap-2.5 lg:grid lg:items-stretch lg:gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]" data-conditions>
+    <div class="contents lg:flex lg:flex-col lg:gap-2.5">
+      <?php foreach ($data['conditions'] as $i => $condition): ?>
+        <button type="button"
+                data-cond-tab="<?= $i ?>"
+                data-active="<?= $i === 0 ? 'true' : 'false' ?>"
+                aria-controls="cond-panel-<?= $i ?>"
+                style="--tab-order:<?= $i * 2 ?>"
+                class="cond-tab grid w-full flex-1 cursor-pointer group grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-4 rounded-2xl border border-ink/10 bg-surface px-6 py-5 text-left font-sans text-ink transition-colors hover:border-brand-blue/30 hover:bg-sky data-[active=true]:border-transparent data-[active=true]:bg-brand-blue data-[active=true]:text-white">
+          <span class="shrink-0 transition group-data-[active=true]:[filter:brightness(0)_invert(1)]"><?= condition_mark($condition, 'h-9 w-9 [filter:brightness(0.62)_saturate(1.25)]') ?></span>
+          <span class="min-w-0 text-lg font-extrabold tracking-[-0.02em] sm:text-xl"><?= e($condition['name']) ?></span>
+          <?php // currentColor, so the arrow turns white with the label when the tab is active. ?>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" class="transition-transform duration-200 group-hover:translate-x-1"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+        </button>
+      <?php endforeach; ?>
+      <a href="#book" class="cond-tail mt-6 inline-flex items-center gap-2 text-sm font-extrabold text-brand-blue transition-colors hover:text-brand-blue-dark">
+        See all conditions we treat <?= arrow_icon(15) ?>
+      </a>
     </div>
 
-    <div class="lg:grid lg:grid-cols-[minmax(160px,0.7fr)_minmax(0,1fr)_minmax(0,1fr)] lg:gap-x-6">
-      <div class="hidden lg:block"></div>
-      <div class="hidden rounded-t-[20px] bg-therapy px-8 pb-6 pt-9 lg:block">
-        <h3 class="m-0 text-[28px] tracking-[-0.02em] text-brand-blue-dark">Therapy</h3>
-      </div>
-      <div class="hidden rounded-t-[20px] bg-psych px-8 pb-6 pt-9 lg:block">
-        <h3 class="m-0 text-[28px] tracking-[-0.02em] text-clay">Psychiatry</h3>
-      </div>
-
-      <?php foreach ($data['compare_rows'] as $row): ?>
-        <div class="mb-4 overflow-hidden rounded-2xl border border-ink/10 lg:mb-0 lg:contents">
-          <div class="flex items-center border-ink/15 px-5 py-5 text-base font-extrabold text-ink lg:border-t lg:px-0 lg:py-6 lg:pr-4"><?= e($row['label']) ?></div>
-          <div class="bg-therapy px-5 py-5 sm:px-8 lg:border-t lg:border-brand-blue/20 lg:py-6">
-            <span class="mb-1.5 block text-[11px] font-extrabold uppercase tracking-[0.14em] text-brand-blue/70 lg:hidden">Therapy</span>
-            <p class="m-0 text-[15px] font-medium leading-relaxed text-brand-blue-dark"><?= e($row['therapy']) ?></p>
+    <div class="cond-panelbox relative min-h-[420px] min-w-0 overflow-hidden rounded-[28px] bg-night sm:min-h-[520px] lg:min-h-[620px]">
+      <?php foreach ($data['conditions'] as $i => $condition): ?>
+        <div id="cond-panel-<?= $i ?>"
+             data-cond-panel="<?= $i ?>"
+             data-active="<?= $i === 0 ? 'true' : 'false' ?>"
+             class="invisible absolute inset-0 opacity-0 transition-opacity duration-300 data-[active=true]:visible data-[active=true]:opacity-100">
+          <div class="absolute inset-0">
+            <?= image_slot($condition['slot'], $condition['name'] . ' photo', $condition['alt'], false, $condition['focus'] ?? '') ?>
           </div>
-          <div class="bg-psych px-5 py-5 sm:px-8 lg:border-t lg:border-brand-orange/30 lg:py-6">
-            <span class="mb-1.5 block text-[11px] font-extrabold uppercase tracking-[0.14em] text-clay/70 lg:hidden">Psychiatry</span>
-            <p class="m-0 text-[15px] font-medium leading-relaxed text-clay-deep"><?= e($row['psychiatry']) ?></p>
+          <div class="pointer-events-none absolute inset-0 bg-cond-veil"></div>
+          <div class="absolute left-4 top-4 w-[calc(100%-2rem)] rounded-[20px] bg-night/60 p-6 backdrop-blur-[14px] sm:left-8 sm:top-8 sm:w-[min(400px,calc(100%-64px))] sm:p-[30px]">
+            <div class="mb-3.5 flex items-center gap-2.5">
+              <span class="h-1 w-7 bg-brand-sky"></span>
+              <h3 class="m-0 text-[26px] tracking-[-0.025em] text-white"><?= e($condition['name']) ?></h3>
+            </div>
+            <p class="m-0 mb-[22px] text-[15px] font-medium leading-relaxed text-white/85"><?= e($condition['blurb']) ?></p>
+            <div class="border-t border-white/25 pt-5">
+              <p class="m-0 mb-3 text-[13px] font-semibold text-white/70">How we treat it:</p>
+              <div class="mb-6 flex flex-wrap gap-2">
+                <?php foreach ($condition['chips'] as $chip): ?>
+                  <span class="rounded-full border border-white/40 px-3 py-2 text-[13px] font-semibold text-white"><?= e($chip) ?></span>
+                <?php endforeach; ?>
+              </div>
+              <div class="flex flex-wrap gap-0.5">
+                <a href="#book" class="inline-flex items-center gap-2 rounded-full bg-white px-[18px] py-3.5 text-sm font-extrabold text-ink transition-colors hover:bg-brand-orange hover:text-white">
+                  Get care <?= arrow_icon(15) ?>
+                </a>
+                <a href="#treatments" class="inline-flex items-center gap-2 rounded-full bg-white/15 px-[18px] py-3.5 text-sm font-extrabold text-white transition-colors hover:bg-white/30">Treatments</a>
+              </div>
+            </div>
           </div>
         </div>
       <?php endforeach; ?>
-
-      <div class="hidden lg:block"></div>
-      <div class="rounded-b-[20px] bg-therapy px-5 pb-10 pt-7 sm:px-8">
-        <a href="#book" class="inline-flex items-center gap-2 rounded-full bg-brand-blue px-6 py-3.5 text-sm font-extrabold text-white transition-colors hover:bg-brand-blue-dark">
-          Get started <?= arrow_icon(15) ?>
-        </a>
-      </div>
-      <div class="mt-4 rounded-b-[20px] bg-psych px-5 pb-10 pt-7 sm:px-8 lg:mt-0">
-        <a href="#book" class="inline-flex items-center gap-2 rounded-full bg-brand-orange px-6 py-3.5 text-sm font-extrabold text-white transition-colors hover:bg-brand-orange-dark">
-          Get started <?= arrow_icon(15) ?>
-        </a>
-      </div>
     </div>
   </div>
+</div>
 </section>
 
 <!-- ─── Our focus ────────────────────────────────────────────────────── -->
@@ -173,10 +199,16 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
       <h2 class="m-0 text-[32px] leading-[1.06] tracking-[-0.03em] sm:text-[44px]">A full spectrum of care, under one roof.</h2>
     </div>
 
-    <div class="-mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-pl-5 px-5 pb-3 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:mx-0 sm:grid sm:snap-none sm:grid-cols-2 sm:gap-6 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-3">
+    <div class="-mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-pl-5 px-5 pb-3 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:mx-0 sm:grid sm:snap-none sm:grid-cols-4 sm:gap-6 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-6">
       <?php foreach ($data['treatments'] as $i => $treatment): ?>
         <?php $a = $accents[$i % count($accents)]; ?>
-        <div data-reveal class="lift flex w-[82%] shrink-0 snap-center flex-col rounded-[20px] sm:w-auto sm:shrink border border-white/70 bg-white/70 px-8 pb-8 pt-9 shadow-[0_8px_28px_rgba(9,20,28,0.06)] backdrop-blur-sm">
+        <?php
+              // With five cards: the fourth opens the last desktop row and the
+              // fifth opens the last tablet row, so each is nudged half a
+              // column in to centre what remains.
+              $offset = ($i === 3 ? ' lg:col-start-2' : '') . ($i === 4 ? ' sm:col-start-2 lg:col-start-auto' : '');
+        ?>
+        <div data-reveal class="lift flex w-[82%] shrink-0 snap-center flex-col rounded-[20px] sm:w-auto sm:shrink sm:col-span-2<?= $offset ?> border border-white/70 bg-white/70 px-8 pb-8 pt-9 shadow-[0_8px_28px_rgba(9,20,28,0.06)] backdrop-blur-sm">
           <div class="relative mb-6 min-h-[210px] overflow-hidden rounded-2xl bg-night">
             <?= image_slot($treatment['slot'], $treatment['name'] . ' photo', $treatment['alt'], false, $treatment['focus'] ?? '') ?>
             <div class="pointer-events-none absolute inset-0 bg-card-veil"></div>
@@ -255,77 +287,51 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
   </div>
 </section>
 
-<!-- ─── Conditions ───────────────────────────────────────────────────── -->
-<section id="conditions" class="bg-white px-5 py-14 sm:px-10 lg:py-[72px]">
+<!-- ─── Therapy vs psychiatry ────────────────────────────────────────── -->
+<section class="bg-white px-5 py-14 sm:px-10 lg:py-[72px]">
   <div class="mx-auto max-w-[1280px]">
-  <div data-reveal class="mb-9 flex flex-wrap items-end justify-between gap-10 border-b-2 border-ink/15 pb-6">
-    <div>
-      <p class="<?= $eyebrow ?> mb-4 text-brand-blue">Conditions we treat</p>
-      <h2 class="m-0 max-w-[20ch] text-[32px] leading-[1.06] tracking-[-0.03em] sm:text-[44px]">Care for the whole range of what you're carrying.</h2>
-    </div>
-    <p class="m-0 max-w-[34ch] text-[15px] font-medium leading-relaxed text-ink/70">Every plan starts with a full diagnostic assessment — never a fifteen-minute script.</p>
-  </div>
-
-  <?php // Below lg the tab column dissolves (display:contents) so the tabs
-      // and the detail panel become siblings in one flow. The panel then
-      // takes an order that puts it right beneath the selected tab — an
-      // accordion, without a second copy of the content in the markup. ?>
-  <div class="flex flex-col gap-2.5 lg:grid lg:items-stretch lg:gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]" data-conditions>
-    <div class="contents lg:flex lg:flex-col lg:gap-2.5">
-      <?php foreach ($data['conditions'] as $i => $condition): ?>
-        <button type="button"
-                data-cond-tab="<?= $i ?>"
-                data-active="<?= $i === 0 ? 'true' : 'false' ?>"
-                aria-controls="cond-panel-<?= $i ?>"
-                style="--tab-order:<?= $i * 2 ?>"
-                class="cond-tab grid w-full flex-1 cursor-pointer group grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-4 rounded-2xl border border-ink/10 bg-surface px-6 py-5 text-left font-sans text-ink transition-colors hover:border-brand-blue/30 hover:bg-sky data-[active=true]:border-transparent data-[active=true]:bg-brand-blue data-[active=true]:text-white">
-          <span class="shrink-0 transition group-data-[active=true]:[filter:brightness(0)_invert(1)]"><?= condition_mark($condition, 'h-9 w-9 [filter:brightness(0.62)_saturate(1.25)]') ?></span>
-          <span class="min-w-0 text-lg font-extrabold tracking-[-0.02em] sm:text-xl"><?= e($condition['name']) ?></span>
-          <?php // currentColor, so the arrow turns white with the label when the tab is active. ?>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" class="transition-transform duration-200 group-hover:translate-x-1"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
-        </button>
-      <?php endforeach; ?>
-      <a href="#book" class="cond-tail mt-6 inline-flex items-center gap-2 text-sm font-extrabold text-brand-blue transition-colors hover:text-brand-blue-dark">
-        See all conditions we treat <?= arrow_icon(15) ?>
-      </a>
+    <div data-reveal class="mb-10 text-center">
+      <p class="<?= $eyebrow ?> mb-4 text-brand-blue">Choosing care</p>
+      <h2 class="m-0 mb-4 text-[32px] leading-[1.06] tracking-[-0.03em] sm:text-[44px]">Therapy, psychiatry, or both?</h2>
+      <p class="m-0 text-[17px] font-medium text-ink/70">Most people start with one and add the other when it helps. Here is the plain difference between them.</p>
     </div>
 
-    <div class="cond-panelbox relative min-h-[420px] min-w-0 overflow-hidden rounded-[28px] bg-night sm:min-h-[520px] lg:min-h-[620px]">
-      <?php foreach ($data['conditions'] as $i => $condition): ?>
-        <div id="cond-panel-<?= $i ?>"
-             data-cond-panel="<?= $i ?>"
-             data-active="<?= $i === 0 ? 'true' : 'false' ?>"
-             class="invisible absolute inset-0 opacity-0 transition-opacity duration-300 data-[active=true]:visible data-[active=true]:opacity-100">
-          <div class="absolute inset-0">
-            <?= image_slot($condition['slot'], $condition['name'] . ' photo', $condition['alt'], false, $condition['focus'] ?? '') ?>
+    <div class="lg:grid lg:grid-cols-[minmax(160px,0.7fr)_minmax(0,1fr)_minmax(0,1fr)] lg:gap-x-6">
+      <div class="hidden lg:block"></div>
+      <div class="hidden rounded-t-[20px] bg-therapy px-8 pb-6 pt-9 lg:block">
+        <h3 class="m-0 text-[28px] tracking-[-0.02em] text-brand-blue-dark">Therapy</h3>
+      </div>
+      <div class="hidden rounded-t-[20px] bg-psych px-8 pb-6 pt-9 lg:block">
+        <h3 class="m-0 text-[28px] tracking-[-0.02em] text-clay">Psychiatry</h3>
+      </div>
+
+      <?php foreach ($data['compare_rows'] as $row): ?>
+        <div class="mb-4 overflow-hidden rounded-2xl border border-ink/10 lg:mb-0 lg:contents">
+          <div class="flex items-center border-ink/15 px-5 py-5 text-base font-extrabold text-ink lg:border-t lg:px-0 lg:py-6 lg:pr-4"><?= e($row['label']) ?></div>
+          <div class="bg-therapy px-5 py-5 sm:px-8 lg:border-t lg:border-brand-blue/20 lg:py-6">
+            <span class="mb-1.5 block text-[11px] font-extrabold uppercase tracking-[0.14em] text-brand-blue/70 lg:hidden">Therapy</span>
+            <p class="m-0 text-[15px] font-medium leading-relaxed text-brand-blue-dark"><?= e($row['therapy']) ?></p>
           </div>
-          <div class="pointer-events-none absolute inset-0 bg-cond-veil"></div>
-          <div class="absolute left-4 top-4 w-[calc(100%-2rem)] rounded-[20px] bg-night/60 p-6 backdrop-blur-[14px] sm:left-8 sm:top-8 sm:w-[min(400px,calc(100%-64px))] sm:p-[30px]">
-            <div class="mb-3.5 flex items-center gap-2.5">
-              <span class="h-1 w-7 bg-brand-sky"></span>
-              <h3 class="m-0 text-[26px] tracking-[-0.025em] text-white"><?= e($condition['name']) ?></h3>
-            </div>
-            <p class="m-0 mb-[22px] text-[15px] font-medium leading-relaxed text-white/85"><?= e($condition['blurb']) ?></p>
-            <div class="border-t border-white/25 pt-5">
-              <p class="m-0 mb-3 text-[13px] font-semibold text-white/70">How we treat it:</p>
-              <div class="mb-6 flex flex-wrap gap-2">
-                <?php foreach ($condition['chips'] as $chip): ?>
-                  <span class="rounded-full border border-white/40 px-3 py-2 text-[13px] font-semibold text-white"><?= e($chip) ?></span>
-                <?php endforeach; ?>
-              </div>
-              <div class="flex flex-wrap gap-0.5">
-                <a href="#book" class="inline-flex items-center gap-2 rounded-full bg-white px-[18px] py-3.5 text-sm font-extrabold text-ink transition-colors hover:bg-brand-orange hover:text-white">
-                  Get care <?= arrow_icon(15) ?>
-                </a>
-                <a href="#treatments" class="inline-flex items-center gap-2 rounded-full bg-white/15 px-[18px] py-3.5 text-sm font-extrabold text-white transition-colors hover:bg-white/30">Treatments</a>
-              </div>
-            </div>
+          <div class="bg-psych px-5 py-5 sm:px-8 lg:border-t lg:border-brand-orange/30 lg:py-6">
+            <span class="mb-1.5 block text-[11px] font-extrabold uppercase tracking-[0.14em] text-clay/70 lg:hidden">Psychiatry</span>
+            <p class="m-0 text-[15px] font-medium leading-relaxed text-clay-deep"><?= e($row['psychiatry']) ?></p>
           </div>
         </div>
       <?php endforeach; ?>
+
+      <div class="hidden lg:block"></div>
+      <div class="rounded-b-[20px] bg-therapy px-5 pb-10 pt-7 sm:px-8">
+        <a href="#book" class="inline-flex items-center gap-2 rounded-full bg-brand-blue px-6 py-3.5 text-sm font-extrabold text-white transition-colors hover:bg-brand-blue-dark">
+          Get started <?= arrow_icon(15) ?>
+        </a>
+      </div>
+      <div class="mt-4 rounded-b-[20px] bg-psych px-5 pb-10 pt-7 sm:px-8 lg:mt-0">
+        <a href="#book" class="inline-flex items-center gap-2 rounded-full bg-brand-orange px-6 py-3.5 text-sm font-extrabold text-white transition-colors hover:bg-brand-orange-dark">
+          Get started <?= arrow_icon(15) ?>
+        </a>
+      </div>
     </div>
   </div>
-</div>
 </section>
 
 <!-- ─── Reviews ──────────────────────────────────────────────────────── -->

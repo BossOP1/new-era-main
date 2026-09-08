@@ -5,88 +5,95 @@
  */
 
 return [
-    // Carriers shown in the "In-network with" marquee. Add 'logo' (a file in
-    // assets/img/insurers/) to show the mark instead of the name; 'size' is the
-    // Tailwind height class, tuned per logo so they read as one optical size.
-    // Anything without a logo falls back to its name set in the same style.
+    // The carriers the practice is in network with, and where. Set as plain
+    // names rather than logos — a mixed set of marks at different weights
+    // never reads as one row, and carrier logos carry usage rules of their own.
     'insurers' => [
-        ['name' => 'Aetna',                  'logo' => 'aetna.svg',    'size' => 'h-5'],
-        ['name' => 'Cigna',                  'logo' => 'cigna.svg',    'size' => 'h-10'],
-        ['name' => 'Anthem',                 'logo' => 'anthem.svg',   'size' => 'h-6'],
-        ['name' => 'Highmark',               'logo' => 'highmark.svg', 'size' => 'h-8'],
-        ['name' => 'Moda Health',            'logo' => 'moda.svg',     'size' => 'h-9'],
-        ['name' => 'United Healthcare'],
-        ['name' => 'Blue Cross Blue Shield'],
-        ['name' => 'Medicare'],
-        ['name' => 'Tricare'],
-        ['name' => 'Humana'],
-        ['name' => 'Optum'],
+        ['name' => 'Aetna', 'states' => 'CA & TX',],
+        ['name' => 'Anthem Blue Cross', 'states' => 'CA',],
+        ['name' => 'Baylor Scott & White', 'states' => 'TX'],
+        ['name' => 'Blue Cross Blue Shield of TX', 'states' => 'TX'],
+        ['name' => 'Blue Shield of California', 'states' => 'CA'],
+        ['name' => 'Cigna', 'states' => 'CA & TX',],
+        ['name' => 'Healthnet', 'states' => 'CA & TX'],
+        ['name' => 'Humana', 'states' => 'TX'],
+        ['name' => 'Magellan / MHSA', 'states' => 'CA & TX'],
+        ['name' => 'MHN', 'states' => 'CA & TX'],
+        ['name' => 'Optum', 'states' => 'CA & TX'],
+        ['name' => 'Oscar', 'states' => 'CA & TX'],
+        ['name' => 'Tricare-West', 'states' => 'CA'],
+        ['name' => 'Tricare-East', 'states' => 'TX'],
+        ['name' => 'Triwest CCN', 'states' => 'CA & TX'],
+        ['name' => 'United Healthcare', 'states' => 'CA & TX'],
     ],
 
     'conditions' => [
         [
             'slot'  => 'cond-1',
+            'focus' => 'object-left',   // wide crop keeps the subject clear of the info card
             'icon'  => 'cloud-rain',
             'art'   => 'depression',
-            'alt'   => 'A person sitting on a window sill, looking outside',
+            'alt'   => 'A woman laughing outdoors in warm light',
             'name'  => 'Depression',
             'blurb' => 'Persistent low mood, loss of interest, and the treatment-resistant cases other clinics give up on.',
             'chips' => ['Medication', 'Therapy', 'TMS'],
         ],
         [
             'slot'  => 'cond-2',
+            'focus' => 'object-left',   // wide crop keeps the subject clear of the info card
             'icon'  => 'pulse',
             'art'   => 'anxiety',
-            'focus' => 'object-left',   // wide crop: keeps the subject clear of the info card
-            'alt'   => 'A woman standing outdoors with her eyes closed, breathing slowly',
+            'alt'   => 'A woman laughing on an open road, hair caught by the wind',
             'name'  => 'Anxiety',
             'blurb' => 'Generalised anxiety, panic disorder, social anxiety and the physical symptoms that come with them.',
             'chips' => ['CBT', 'Exposure work', 'Medication'],
         ],
         [
             'slot'  => 'cond-3',
+            'focus' => 'object-left',   // wide crop keeps the subject clear of the info card
             'icon'  => 'parent-child',
             'art'   => 'postpartum',
-            'focus' => 'object-left',   // wide crop: keeps the subject clear of the info card
-            'alt'   => 'A new mother holding her newborn baby',
+            'alt'   => 'A mother holding her smiling baby outdoors',
             'name'  => 'Postpartum',
             'blurb' => 'Postpartum depression and anxiety, treated with options that fit feeding, sleep and a new baby.',
             'chips' => ['Therapy', 'Medication review', 'TMS'],
         ],
         [
             'slot'  => 'cond-4',
+            'focus' => 'object-left',   // wide crop keeps the subject clear of the info card
             'icon'  => 'shield-bolt',
             'art'   => 'ptsd',
-            'alt'   => 'Two people holding hands across a table in support',
+            'alt'   => 'Two people laughing together in a sunlit field',
             'name'  => 'PTSD',
             'blurb' => 'Trauma-focused therapy at your pace, with clinicians trained in EMDR and prolonged exposure.',
             'chips' => ['EMDR', 'Prolonged exposure', 'Medication'],
         ],
         [
             'slot'  => 'cond-5',
+            'focus' => 'object-left',   // wide crop keeps the subject clear of the info card
             'icon'  => 'ear-waves',
             'art'   => 'tinnitus',
-            'focus' => 'object-left',   // wide crop: keeps the subject clear of the info card
-            'alt'   => 'A man pressing his hands to his temples',
+            'alt'   => 'A man laughing, head tilted back',
             'name'  => 'Tinnitus',
             'blurb' => 'Persistent ringing that disrupts sleep and mood — addressed with retraining therapy and TMS protocols.',
             'chips' => ['TMS', 'Sound retraining', 'Sleep support'],
         ],
         [
             'slot'  => 'cond-6',
+            'focus' => 'object-left',   // wide crop keeps the subject clear of the info card
             'icon'  => 'head-bolt',
             'art'   => 'migraines',
-            'focus' => 'object-left',   // wide crop: keeps the subject clear of the info card
-            'alt'   => 'A person sitting on a sofa holding their head',
+            'alt'   => 'A man smiling among trees on a bright day',
             'name'  => 'Migraines',
             'blurb' => 'Chronic migraine care coordinated with your mood and sleep treatment rather than in isolation.',
             'chips' => ['Preventive care', 'Trigger tracking', 'Sleep support'],
         ],
         [
             'slot'  => 'cond-7',
+            'focus' => 'object-left',   // wide crop keeps the subject clear of the info card
             'icon'  => 'loop',
             'art'   => 'ocd',
-            'alt'   => 'Close-up of hands being washed under a running tap',
+            'alt'   => 'A man in an orange jacket smiling',
             'name'  => 'OCD',
             'blurb' => 'Exposure and response prevention, plus TMS for OCD that has not responded to therapy alone.',
             'chips' => ['ERP therapy', 'TMS', 'Medication'],
@@ -117,18 +124,11 @@ return [
             'chips'  => ['Evaluation', 'Med management'],
         ],
         [
-            'name'   => 'Spravato',
+            'name'   => 'Spravato®',
             'slot'   => 'treat-4',
             'alt'    => 'A person self-administering a nasal spray',
-            'detail' => 'In-office esketamine treatment for treatment-resistant depression, monitored start to finish.',
-            'chips'  => ['Esketamine', 'In-office'],
-        ],
-        [
-            'name'   => 'Ketamine',
-            'slot'   => 'treat-5',
-            'alt'    => 'An intravenous infusion line running into a drip chamber',
-            'detail' => 'Infusion therapy for depression, anxiety and chronic pain that hasn’t responded to other care.',
-            'chips'  => ['Infusion', 'Depression'],
+            'detail' => 'In-office esketamine treatment for treatment-resistant depression, monitored start to finish. Offered at our Texas locations only.',
+            'chips'  => ['Esketamine', 'Texas only'],
         ],
         [
             'name'   => 'Therapy',
@@ -155,7 +155,7 @@ return [
         [
             'label'      => 'How the work happens',
             'therapy'    => 'Structured methods with evidence behind them — CBT, DBT, EMDR, ACT — and skills that stay with you afterwards.',
-            'psychiatry' => 'A full diagnostic picture first, then a plan: medication, TMS, Spravato, or none of them if none is warranted.',
+            'psychiatry' => 'A full diagnostic picture first, then a plan: medication, TMS, Spravato®, or none of them if none is warranted.',
         ],
         [
             'label'      => 'Can prescribe',
@@ -180,11 +180,10 @@ return [
         ['quote' => '"TMS gave me back the version of myself my family remembers. A 36-session course felt routine instead of daunting."', 'who' => 'Devon R.'],
         ['quote' => '"They found the ADHD everyone else had been treating as anxiety. That one appointment changed how I work and parent."', 'who' => 'Priya S.'],
         ['quote' => '"Sixty-minute intake, real symptom scores at every visit — the first practice that treated my chart like it mattered."', 'who' => 'Andre K.'],
-        ['quote' => '"Spravato got me out of a depressive episode nothing else had touched. The team monitored every session closely."', 'who' => 'Renee T.'],
+        ['quote' => '"Spravato® got me out of a depressive episode nothing else had touched. The team monitored every session closely."', 'who' => 'Renee T.'],
         ['quote' => '"My therapist and prescriber actually talk to each other. I have never had that before and it changed everything."', 'who' => 'Jordan M.'],
         ['quote' => '"Accelerated TMS fit into one week off work instead of two months of daily visits. Results came just as fast."', 'who' => 'Sam O.'],
         ['quote' => '"Telehealth visits in the evening meant I never had to choose between therapy and my job."', 'who' => 'Layla H.'],
-        ['quote' => '"Ketamine infusions paired with therapy pulled me out of a depression I thought was permanent."', 'who' => 'Chris B.'],
         ['quote' => '"The intake team verified my insurance before I even walked in. No surprise bills, no runaround."', 'who' => 'Talia F.'],
         ['quote' => '"OCD treatment that finally worked — ERP therapy plus TMS when medication alone plateaued."', 'who' => 'Miguel A.'],
         ['quote' => '"Postpartum anxiety hit hard. They saw me within days and built a plan around my baby’s schedule."', 'who' => 'Nina W.'],

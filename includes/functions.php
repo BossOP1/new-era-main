@@ -176,9 +176,8 @@ if (!function_exists('brand_logo')) {
 
 if (!function_exists('insurer_mark')) {
     /**
-     * One entry in the "In-network with" marquee: the carrier's logo when we
-     * have one in assets/img/insurers/, otherwise its name in the same muted
-     * style, so a carrier without artwork still reads as part of the row.
+     * One carrier in the "In-network with" marquee: its name, with the states
+     * it covers underneath.
      *
      * @param array $insurer  Row from $data['insurers'].
      * @param bool  $repeat   True for the duplicated half of the marquee, which
@@ -187,24 +186,14 @@ if (!function_exists('insurer_mark')) {
      */
     function insurer_mark(array $insurer, bool $repeat = false): string
     {
-        $name = $insurer['name'] ?? '';
-        $logo = $insurer['logo'] ?? null;
-        $file = $logo ? __DIR__ . '/../assets/img/insurers/' . $logo : null;
-
-        if ($logo && is_file($file)) {
-            return sprintf(
-                '<img src="%s" alt="%s" %s class="%s w-auto shrink-0 opacity-40">',
-                e(asset('assets/img/insurers/' . $logo)),
-                $repeat ? '' : e($name),
-                $repeat ? 'aria-hidden="true"' : '',
-                e($insurer['size'] ?? 'h-5')
-            );
-        }
-
         return sprintf(
-            '<span class="whitespace-nowrap text-[19px] font-extrabold tracking-[-0.01em] text-ink/40"%s>%s</span>',
+            '<div class="flex shrink-0 flex-col items-center gap-0.5"%s>'
+            . '<span class="whitespace-nowrap text-[17px] font-extrabold tracking-[-0.01em] text-ink/45">%s</span>'
+            . '<span class="whitespace-nowrap text-[10px] font-bold uppercase tracking-[0.16em] text-ink/30">%s</span>'
+            . '</div>',
             $repeat ? ' aria-hidden="true"' : '',
-            e($name)
+            e($insurer['name'] ?? ''),
+            e($insurer['states'] ?? '')
         );
     }
 }
