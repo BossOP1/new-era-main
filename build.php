@@ -26,6 +26,7 @@ $_SERVER['HTTPS']          = 'on';
 // planned can sit here until they are written.
 $pages = [
     'index.php'   => 'index.html',
+    'about.php'   => 'about.html',
     'index2.php'  => 'index2.html',   // vibrant variant
     'privacy.php' => 'privacy.html',   // privacy policy
     'terms.php'   => 'terms.html',     // terms of use
@@ -111,7 +112,7 @@ foreach ($pages as $srcFile => $outFile) {
     // Each page starts from a clean slate: header.php reads $page_title and
     // friends off the global scope, and require_once means includes/init.php
     // only runs for the first page, so leftovers would otherwise carry over.
-    unset($page_title, $page_description, $header_solid);
+    unset($page_title, $page_description, $header_solid, $page_stylesheet);
 
     // Render. Included at global scope on purpose: the pages share their
     // data arrays and helpers across the whole build.

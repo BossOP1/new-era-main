@@ -27,36 +27,36 @@ return [
     // order as the sections appear on the page, and labelled with the words a
     // patient would use rather than internal ones.
     'nav' => [
-        ['label' => 'About',      'href' => '#focus'],
-        ['label' => 'Treatments', 'href' => '#treatments'],
-        ['label' => 'TMS',        'href' => '#tms'],
-        ['label' => 'Conditions', 'href' => '#conditions'],
-        ['label' => 'Reviews',    'href' => '#reviews'],
-        ['label' => 'FAQs',       'href' => '#faq'],
+        ['label' => 'About',      'href' => 'about.php'],
+        ['label' => 'Treatments', 'href' => 'index.php#treatments'],
+        ['label' => 'TMS',        'href' => 'index.php#tms'],
+        ['label' => 'Conditions', 'href' => 'index.php#conditions'],
+        ['label' => 'Reviews',    'href' => 'index.php#reviews'],
+        ['label' => 'FAQs',       'href' => 'index.php#faq'],
     ],
 
     // Footer link columns, rendered in includes/footer.php
     'footer_nav' => [
         'Care' => [
-            ['label' => 'Conditions',  'href' => '#conditions'],
-            ['label' => 'Treatments',  'href' => '#treatments'],
-            ['label' => 'TMS therapy', 'href' => '#tms'],
-            ['label' => 'Our focus',   'href' => '#focus'],
+            ['label' => 'Conditions',  'href' => 'index.php#conditions'],
+            ['label' => 'Treatments',  'href' => 'index.php#treatments'],
+            ['label' => 'TMS therapy', 'href' => 'index.php#tms'],
+            ['label' => 'Our focus',   'href' => 'index.php#focus'],
         ],
         'Patients' => [
-            ['label' => 'Book a visit',   'href' => '#book'],
-            ['label' => 'Insurance',      'href' => '#book'],
-            ['label' => 'FAQs',           'href' => '#faq'],
-            ['label' => 'Patient portal', 'href' => '#book'],
+            ['label' => 'Book a visit',   'href' => 'index.php#book'],
+            ['label' => 'Insurance',      'href' => 'index.php#book'],
+            ['label' => 'FAQs',           'href' => 'index.php#faq'],
+            ['label' => 'Patient portal', 'href' => 'index.php#book'],
         ],
     ],
 
     'legal_nav' => [
-        ['label' => 'Terms & conditions', 'href' => '#top'],
-        ['label' => 'Privacy notice',     'href' => '#top'],
-        ['label' => 'Cookie policy',      'href' => '#top'],
-        ['label' => 'Accessibility',      'href' => '#top'],
-        ['label' => 'Sitemap',            'href' => '#top'],
+        ['label' => 'Terms & conditions', 'href' => 'index.php#top'],
+        ['label' => 'Privacy notice',     'href' => 'index.php#top'],
+        ['label' => 'Cookie policy',      'href' => 'index.php#top'],
+        ['label' => 'Accessibility',      'href' => 'index.php#top'],
+        ['label' => 'Sitemap',            'href' => 'index.php#top'],
     ],
 
     'badges' => ['HIPAA Compliant', 'Licensed Providers'],

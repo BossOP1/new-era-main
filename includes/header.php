@@ -17,6 +17,7 @@ require_once __DIR__ . '/init.php';
 $page_title       = $page_title       ?? null;
 $page_description = $page_description ?? 'Evidence-based psychiatry, therapy and TMS — delivered by clinicians who take the time to know you. In-person and telehealth, most insurance accepted.';
 $header_solid     = $header_solid     ?? false;
+$header_hero_light = $header_hero_light ?? false;
 
 $title = $page_title ? $page_title . ' · ' . $site['name'] : $site['name'] . ' — A new era of mental health care';
 
@@ -24,7 +25,8 @@ $title = $page_title ? $page_title . ' · ' . $site['name'] : $site['name'] . ' 
 $compiled_css = is_file(__DIR__ . '/../assets/css/tailwind.css');
 
 $nav_link  = 'text-sm font-semibold text-ink transition-colors hover:text-brand-blue'
-           . ' group-[.is-over-hero]:text-white/95 group-[.is-over-hero]:hover:text-white';
+           . ' group-[.is-over-hero]:text-white/95 group-[.is-over-hero]:hover:text-white'
+           . ' group-[.is-light-hero]:text-ink group-[.is-light-hero]:hover:text-brand-blue';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,6 +35,9 @@ $nav_link  = 'text-sm font-semibold text-ink transition-colors hover:text-brand-
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?= e($title) ?></title>
 <meta name="description" content="<?= e($page_description) ?>">
+<?php if (!empty($page_stylesheet)): ?>
+<link rel="stylesheet" href="<?= e(asset($page_stylesheet)) ?>">
+<?php endif; ?>
 
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" href="<?= e(asset('favicon.png')) ?>" type="image/png" sizes="96x96">
@@ -101,28 +106,28 @@ $nav_link  = 'text-sm font-semibold text-ink transition-colors hover:text-brand-
 
 <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-white focus:px-5 focus:py-3 focus:text-sm focus:font-extrabold focus:text-brand-blue">Skip to content</a>
 
-<header class="group <?= $header_solid ? 'relative bg-night is-over-hero' : 'fixed inset-x-0 top-0 is-over-hero' ?> z-50 p-3 transition-[padding] duration-300 group-[.is-over-hero]:p-3 sm:p-5" data-site-header>
-  <div class="liquid-glass mx-auto flex min-h-[62px] items-center justify-between gap-6 border-white/70 bg-white/90 px-3 py-3 transition-colors duration-300 group-[.is-over-hero]:min-h-[74px] group-[.is-over-hero]:border-white/25 group-[.is-over-hero]:bg-night/35 sm:py-0 sm:pl-7 lg:gap-8">
+<header class="<?= $page_title === 'About us' ? '!px-6 !pt-6 sm:!px-10 sm:!pt-8 lg:!px-[52px]' : '' ?> group <?= $header_solid ? 'relative bg-night is-over-hero' : ($header_hero_light ? 'fixed inset-x-0 top-0 is-light-hero' : 'fixed inset-x-0 top-0 is-over-hero') ?> z-50 p-3 transition-[padding] duration-300 group-[.is-over-hero]:p-3 group-[.is-light-hero]:p-3 sm:p-5" data-site-header>
+  <div class="<?= $page_title === 'About us' ? 'w-full max-w-[1200px] !gap-4 !shadow-none !backdrop-blur-none !bg-white/95 before:!hidden' : '' ?> liquid-glass mx-auto flex min-h-[62px] items-center justify-between gap-6 border-white/70 bg-white/90 px-3 py-3 transition-colors duration-300 group-[.is-over-hero]:min-h-[74px] group-[.is-over-hero]:border-white/25 group-[.is-over-hero]:bg-night/35 group-[.is-light-hero]:min-h-[74px] group-[.is-light-hero]:border-black/10 group-[.is-light-hero]:bg-white/85 group-[.is-light-hero]:shadow-sm sm:py-0 sm:pl-7 lg:gap-8">
 
     <a href="index.php#top" class="flex shrink-0 items-center no-underline">
-      <?php // White over the hero, full colour once the bar is over content. ?>
-      <span class="hidden group-[.is-over-hero]:block"><?= brand_logo($site['name'], 'h-8 w-auto sm:h-9', true) ?></span>
-      <span class="block group-[.is-over-hero]:hidden"><?= brand_logo($site['name'], 'h-8 w-auto sm:h-9', false, true) ?></span>
+      <?php // White over dark hero, full colour over light hero / content. ?>
+      <span class="hidden group-[.is-over-hero]:block group-[.is-light-hero]:hidden"><?= brand_logo($site['name'], 'h-8 w-auto sm:h-9', true) ?></span>
+      <span class="block group-[.is-over-hero]:hidden group-[.is-light-hero]:block"><?= brand_logo($site['name'], 'h-8 w-auto sm:h-9', false, true) ?></span>
     </a>
 
-    <nav class="hidden items-center gap-7 lg:flex" aria-label="Primary">
+    <nav class="hidden items-center gap-5 <?= $page_title === 'About us' ? 'xl:flex' : 'lg:flex' ?>" aria-label="Primary">
       <?php foreach ($site['nav'] as $item): ?>
         <a href="<?= e($item['href']) ?>" class="<?= $nav_link ?>"><?= e($item['label']) ?></a>
       <?php endforeach; ?>
     </nav>
 
-    <div class="hidden items-center gap-5 lg:flex">
-      <a href="#book" class="<?= $nav_link ?>">Patient login</a>
-      <a href="#book" class="inline-flex items-center gap-2 rounded-full bg-brand-orange px-6 py-[15px] text-sm font-extrabold text-white transition-colors hover:bg-brand-orange-dark">Get started</a>
+    <div class="hidden items-center gap-5 <?= $page_title === 'About us' ? 'xl:flex' : 'lg:flex' ?>">
+      <a href="index.php#book" class="<?= $nav_link ?>">Patient login</a>
+      <a href="index.php#book" class="inline-flex items-center gap-2 rounded-full bg-brand-orange px-6 py-[15px] text-sm font-extrabold text-white transition-colors hover:bg-brand-orange-dark">Get started</a>
     </div>
 
     <button type="button"
-            class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-ink/15 bg-white/70 text-ink transition-colors group-[.is-over-hero]:border-white/40 group-[.is-over-hero]:bg-white/15 group-[.is-over-hero]:text-white lg:hidden"
+            class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-ink/15 bg-white/70 text-ink transition-colors group-[.is-over-hero]:border-white/40 group-[.is-over-hero]:bg-white/15 group-[.is-over-hero]:text-white <?= $page_title === 'About us' ? 'xl:hidden' : 'lg:hidden' ?>"
             data-menu-toggle
             aria-expanded="false"
             aria-controls="mobile-menu">
@@ -131,14 +136,14 @@ $nav_link  = 'text-sm font-semibold text-ink transition-colors hover:text-brand-
     </button>
   </div>
 
-  <nav id="mobile-menu" class="mx-auto mt-2 hidden rounded-[20px] border border-white/60 bg-white/95 p-5 shadow-glass backdrop-blur-[20px] lg:hidden" aria-label="Mobile">
+  <nav id="mobile-menu" class="mx-auto mt-2 hidden rounded-[20px] border border-white/60 bg-white/95 p-5 shadow-glass backdrop-blur-[20px] <?= $page_title === 'About us' ? 'xl:hidden' : 'lg:hidden' ?>" aria-label="Mobile">
     <ul class="flex flex-col gap-1">
       <?php foreach ($site['nav'] as $item): ?>
         <li><a href="<?= e($item['href']) ?>" class="block rounded-xl px-3 py-3 text-base font-bold text-ink transition-colors hover:bg-surface"><?= e($item['label']) ?></a></li>
       <?php endforeach; ?>
-      <li><a href="#book" class="block rounded-xl px-3 py-3 text-base font-bold text-ink transition-colors hover:bg-surface">Patient login</a></li>
+      <li><a href="index.php#book" class="block rounded-xl px-3 py-3 text-base font-bold text-ink transition-colors hover:bg-surface">Patient login</a></li>
     </ul>
-    <a href="#book" class="mt-3 flex items-center justify-center gap-2 rounded-full bg-brand-orange px-6 py-4 text-sm font-extrabold text-white transition-colors hover:bg-brand-orange-dark">Get started</a>
+    <a href="index.php#book" class="mt-3 flex items-center justify-center gap-2 rounded-full bg-brand-orange px-6 py-4 text-sm font-extrabold text-white transition-colors hover:bg-brand-orange-dark">Get started</a>
   </nav>
 </header>
 

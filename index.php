@@ -166,7 +166,7 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
         <?php foreach ($data['focus_paragraphs'] as $paragraph): ?>
           <p class="m-0 cursor-default text-pretty font-serif text-[22px] font-medium leading-[1.38] tracking-[-0.015em] text-white/80 transition-colors duration-300 hover:text-[#fbd9b0] sm:text-[26px] lg:text-[32px]"><?= e($paragraph) ?></p>
         <?php endforeach; ?>
-        <a href="#book" class="mt-2 inline-flex items-center gap-2.5 self-start rounded-full bg-white px-7 py-4 text-[15px] font-extrabold text-brand-blue transition-colors hover:bg-brand-orange hover:text-white">
+        <a href="about.php" class="mt-2 inline-flex items-center gap-2.5 self-start rounded-full bg-white px-7 py-4 text-[15px] font-extrabold text-brand-blue transition-colors hover:bg-brand-orange hover:text-white">
           About us <?= arrow_icon(15) ?>
         </a>
       </div>

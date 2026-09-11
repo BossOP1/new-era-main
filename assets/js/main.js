@@ -136,9 +136,14 @@
 
   if (siteHeader && !siteHeader.classList.contains('relative')) {
     var ticking = false;
+    var isLight = siteHeader.classList.contains('is-light-hero');
 
     var syncHeader = function () {
-      siteHeader.classList.toggle('is-over-hero', window.scrollY <= 80);
+      if (isLight) {
+        siteHeader.classList.toggle('is-light-hero', window.scrollY <= 80);
+      } else {
+        siteHeader.classList.toggle('is-over-hero', window.scrollY <= 80);
+      }
       ticking = false;
     };
 

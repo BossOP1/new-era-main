@@ -22,7 +22,7 @@ $footer_link = 'text-sm text-white/75 transition-colors hover:text-white';
         </div>
         <p class="m-0 max-w-[38ch] text-[15px] leading-[1.65] text-white/60"><?= e($site['tagline']) ?></p>
       </div>
-      <a href="#book" class="inline-flex items-center gap-2.5 whitespace-nowrap rounded-full bg-white px-7 py-4 text-[15px] font-extrabold text-brand-blue transition-colors hover:bg-brand-orange hover:text-white">
+      <a href="index.php#book" class="inline-flex items-center gap-2.5 whitespace-nowrap rounded-full bg-white px-7 py-4 text-[15px] font-extrabold text-brand-blue transition-colors hover:bg-brand-orange hover:text-white">
         Book a consultation <?= arrow_icon(16) ?>
       </a>
     </div>
@@ -85,7 +85,7 @@ $footer_link = 'text-sm text-white/75 transition-colors hover:text-white';
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6.5 3.5h3l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4.5 5.7 2 2 0 0 1 6.5 3.5Z"/></svg>
     Call
   </a>
-  <a href="#book" class="flex flex-1 items-center justify-center rounded-full bg-brand-orange px-5 py-3.5 text-sm font-extrabold text-white">Book a visit</a>
+  <a href="index.php#book" class="flex flex-1 items-center justify-center rounded-full bg-brand-orange px-5 py-3.5 text-sm font-extrabold text-white">Book a visit</a>
 </div>
 
 <script src="<?= e(asset('assets/js/main.js')) ?>" defer></script>
