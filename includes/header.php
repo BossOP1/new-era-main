@@ -10,6 +10,10 @@
  *   $page_title       string  appended to the site name in <title>
  *   $page_description string  meta description
  *   $header_solid     bool    true on pages with no dark hero behind the bar
+ *   $header_inset     bool    true where the hero is a rounded panel in side
+ *                             gutters — the bar becomes a plain white pill
+ *                             sitting inside that panel rather than a full
+ *                             width slab of glass across the top of it
  */
 
 require_once __DIR__ . '/init.php';
@@ -18,6 +22,19 @@ $page_title       = $page_title       ?? null;
 $page_description = $page_description ?? 'Evidence-based psychiatry, therapy and TMS — delivered by clinicians who take the time to know you. In-person and telehealth, most insurance accepted.';
 $header_solid     = $header_solid     ?? false;
 $header_hero_light = $header_hero_light ?? false;
+$header_inset      = $header_inset      ?? false;
+
+// Inside a gutter-framed hero the bar is contained and solid: it lines up with
+// the hero's own content column, and the glass treatment is dropped because
+// there is no photography running underneath it to show through. The wider
+// bar needs more room, so the nav folds into the menu one breakpoint later.
+$inset_header = $header_inset ? '!px-6 !pt-6 sm:!px-10 sm:!pt-8 lg:!px-[52px]' : '';
+$inset_bar    = $header_inset ? 'w-full max-w-[1200px] !gap-4 !shadow-none !backdrop-blur-none !bg-white/95 before:!hidden' : '';
+// Spelled out in full rather than built from a prefix: Tailwind scans these
+// files as plain text, so a class it never sees written out is a class it
+// never compiles.
+$nav_show     = $header_inset ? 'xl:flex'   : 'lg:flex';
+$nav_hide     = $header_inset ? 'xl:hidden' : 'lg:hidden';
 
 $title = $page_title ? $page_title . ' · ' . $site['name'] : $site['name'] . ' — A new era of mental health care';
 
@@ -106,8 +123,8 @@ $nav_link  = 'text-sm font-semibold text-ink transition-colors hover:text-brand-
 
 <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-white focus:px-5 focus:py-3 focus:text-sm focus:font-extrabold focus:text-brand-blue">Skip to content</a>
 
-<header class="<?= $page_title === 'About us' ? '!px-6 !pt-6 sm:!px-10 sm:!pt-8 lg:!px-[52px]' : '' ?> group <?= $header_solid ? 'relative bg-night is-over-hero' : ($header_hero_light ? 'fixed inset-x-0 top-0 is-light-hero' : 'fixed inset-x-0 top-0 is-over-hero') ?> z-50 p-3 transition-[padding] duration-300 group-[.is-over-hero]:p-3 group-[.is-light-hero]:p-3 sm:p-5" data-site-header>
-  <div class="<?= $page_title === 'About us' ? 'w-full max-w-[1200px] !gap-4 !shadow-none !backdrop-blur-none !bg-white/95 before:!hidden' : '' ?> liquid-glass mx-auto flex min-h-[62px] items-center justify-between gap-6 border-white/70 bg-white/90 px-3 py-3 transition-colors duration-300 group-[.is-over-hero]:min-h-[74px] group-[.is-over-hero]:border-white/25 group-[.is-over-hero]:bg-night/35 group-[.is-light-hero]:min-h-[74px] group-[.is-light-hero]:border-black/10 group-[.is-light-hero]:bg-white/85 group-[.is-light-hero]:shadow-sm sm:py-0 sm:pl-7 lg:gap-8">
+<header class="<?= $inset_header ?> group <?= $header_solid ? 'relative bg-night is-over-hero' : ($header_hero_light ? 'fixed inset-x-0 top-0 is-light-hero' : 'fixed inset-x-0 top-0 is-over-hero') ?> z-50 p-3 transition-[padding] duration-300 group-[.is-over-hero]:p-3 group-[.is-light-hero]:p-3 sm:p-5" data-site-header>
+  <div class="<?= $inset_bar ?> liquid-glass mx-auto flex min-h-[62px] items-center justify-between gap-6 border-white/70 bg-white/90 px-3 py-3 transition-colors duration-300 group-[.is-over-hero]:min-h-[74px] group-[.is-over-hero]:border-white/25 group-[.is-over-hero]:bg-night/35 group-[.is-light-hero]:min-h-[74px] group-[.is-light-hero]:border-black/10 group-[.is-light-hero]:bg-white/85 group-[.is-light-hero]:shadow-sm sm:py-0 sm:pl-7 lg:gap-8">
 
     <a href="index.php#top" class="flex shrink-0 items-center no-underline">
       <?php // White over dark hero, full colour over light hero / content. ?>
@@ -115,19 +132,19 @@ $nav_link  = 'text-sm font-semibold text-ink transition-colors hover:text-brand-
       <span class="block group-[.is-over-hero]:hidden group-[.is-light-hero]:block"><?= brand_logo($site['name'], 'h-8 w-auto sm:h-9', false, true) ?></span>
     </a>
 
-    <nav class="hidden items-center gap-5 <?= $page_title === 'About us' ? 'xl:flex' : 'lg:flex' ?>" aria-label="Primary">
+    <nav class="hidden items-center gap-5 <?= $nav_show ?>" aria-label="Primary">
       <?php foreach ($site['nav'] as $item): ?>
         <a href="<?= e($item['href']) ?>" class="<?= $nav_link ?>"><?= e($item['label']) ?></a>
       <?php endforeach; ?>
     </nav>
 
-    <div class="hidden items-center gap-5 <?= $page_title === 'About us' ? 'xl:flex' : 'lg:flex' ?>">
+    <div class="hidden items-center gap-5 <?= $nav_show ?>">
       <a href="index.php#book" class="<?= $nav_link ?>">Patient login</a>
       <a href="index.php#book" class="inline-flex items-center gap-2 rounded-full bg-brand-orange px-6 py-[15px] text-sm font-extrabold text-white transition-colors hover:bg-brand-orange-dark">Get started</a>
     </div>
 
     <button type="button"
-            class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-ink/15 bg-white/70 text-ink transition-colors group-[.is-over-hero]:border-white/40 group-[.is-over-hero]:bg-white/15 group-[.is-over-hero]:text-white <?= $page_title === 'About us' ? 'xl:hidden' : 'lg:hidden' ?>"
+            class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-ink/15 bg-white/70 text-ink transition-colors group-[.is-over-hero]:border-white/40 group-[.is-over-hero]:bg-white/15 group-[.is-over-hero]:text-white <?= $nav_hide ?>"
             data-menu-toggle
             aria-expanded="false"
             aria-controls="mobile-menu">
@@ -136,7 +153,7 @@ $nav_link  = 'text-sm font-semibold text-ink transition-colors hover:text-brand-
     </button>
   </div>
 
-  <nav id="mobile-menu" class="mx-auto mt-2 hidden rounded-[20px] border border-white/60 bg-white/95 p-5 shadow-glass backdrop-blur-[20px] <?= $page_title === 'About us' ? 'xl:hidden' : 'lg:hidden' ?>" aria-label="Mobile">
+  <nav id="mobile-menu" class="mx-auto mt-2 hidden rounded-[20px] border border-white/60 bg-white/95 p-5 shadow-glass backdrop-blur-[20px] <?= $nav_hide ?>" aria-label="Mobile">
     <ul class="flex flex-col gap-1">
       <?php foreach ($site['nav'] as $item): ?>
         <li><a href="<?= e($item['href']) ?>" class="block rounded-xl px-3 py-3 text-base font-bold text-ink transition-colors hover:bg-surface"><?= e($item['label']) ?></a></li>

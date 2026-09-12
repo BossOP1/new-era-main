@@ -25,6 +25,32 @@ a file with the same name into this folder.
 | `tms.jpg`     | images.unsplash.com/photo-1550504630-cc20eca3b23e | Man seated, hands clasped (TMS section) |
 | `faq.jpg`     | images.unsplash.com/photo-1776886099265-6366478b341b | Clinic waiting area (FAQ) |
 
+## Depression page (`depression/`)
+
+| File | Source image | Subject |
+|------|--------------|---------|
+| `depression/hero.jpg`      | images.unsplash.com/photo-1582515572489-c2302b6f989d | Woman on a hillside, head tipped back in late sun (hero) |
+| `depression/risk.jpg`      | images.unsplash.com/photo-1534432189786-f47e376dc8c7 | Low sun through a drawn blind (risk factors band) |
+| `depression/signs.jpg`     | images.unsplash.com/photo-1517669375942-946a1f02d705 | Man by a window, head in hand (symptoms) |
+| `depression/diagnosis.jpg` | images.unsplash.com/photo-1758691463198-dc663b8a64e4 | Clinician writing notes with a patient (diagnosis) |
+| `depression/support.jpg`   | images.unsplash.com/photo-1539541417736-3d44c90da315 | Head resting on a shoulder (supporting a loved one) |
+
+## Condition page heroes (`conditions/`)
+
+Each is cropped to roughly 2.6:1 with the subject in the right third, which is
+the shape the hero panel needs — see `.cond-hero-wash` in `src/input.css`.
+Four were flipped horizontally (`&flip=h`) to move the subject off the side the
+copy sits on.
+
+| File | Source image | Subject |
+|------|--------------|---------|
+| `conditions/anxiety-hero.jpg`    | images.unsplash.com/photo-1534413298607-48ba59e8a06d | Woman in a field at sunset, from behind |
+| `conditions/postpartum-hero.jpg` | images.unsplash.com/photo-1780329941775-3303f3122ce6 | Mother holding her baby at a window (flipped) |
+| `conditions/ptsd-hero.jpg`       | images.unsplash.com/photo-1588696191779-61dde1b83475 | Two people leaning head to head in woodland |
+| `conditions/tinnitus-hero.jpg`   | images.unsplash.com/photo-1641753531933-a38888ca41ad | Man at a window in low amber light |
+| `conditions/migraines-hero.jpg`  | images.unsplash.com/photo-1603136324205-01cdebce04ab | Man looking out of a rain-streaked window (flipped) |
+| `conditions/ocd-hero.jpg`        | images.unsplash.com/photo-1572724727752-c0896e993676 | Man seated at a window in grey light (flipped) |
+
 All files were downloaded pre-cropped to the aspect each slot needs, at q=72.
 Four condition photos (`cond-2`, `cond-3`, `cond-5`, `cond-6`) are cropped wider
 than their container on purpose and carry `'focus' => 'object-left'` in

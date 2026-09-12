@@ -3,6 +3,7 @@
 $page_title = 'About us';
 $page_description = 'Get to know Anew Era Health and our approach to connected, personal mental health care through psychiatry, therapy and TMS.';
 $header_hero_light = true;
+$header_inset      = true;
 require __DIR__ . '/includes/header.php';
 ?>
 <div class="overflow-hidden bg-[#faf8f3] [&_h1]:m-0 [&_h2]:m-0 [&_h3]:m-0 [&_p]:m-0 [&_figure]:m-0 [&_h1]:font-normal [&_h2]:font-normal [&_h1]:tracking-[-0.045em] [&_h2]:tracking-[-0.045em] [&_h1]:leading-[1.06] [&_h2]:leading-[1.06] [&_h2]:text-[clamp(36px,4.1vw,58px)] [&_em]:font-normal [&_h2_em]:text-brand-blue [&_section[id]]:scroll-mt-[110px] [&_a:focus-visible]:outline [&_a:focus-visible]:outline-[3px] [&_a:focus-visible]:outline-brand-orange [&_a:focus-visible]:outline-offset-[5px]">

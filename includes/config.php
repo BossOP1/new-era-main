@@ -29,8 +29,8 @@ return [
     'nav' => [
         ['label' => 'About',      'href' => 'about.php'],
         ['label' => 'Treatments', 'href' => 'index.php#treatments'],
-        ['label' => 'TMS',        'href' => 'index.php#tms'],
-        ['label' => 'Conditions', 'href' => 'index.php#conditions'],
+        ['label' => 'TMS',        'href' => 'tms.php'],
+        ['label' => 'Conditions', 'href' => 'conditions.php'],
         ['label' => 'Reviews',    'href' => 'index.php#reviews'],
         ['label' => 'FAQs',       'href' => 'index.php#faq'],
     ],
@@ -38,9 +38,10 @@ return [
     // Footer link columns, rendered in includes/footer.php
     'footer_nav' => [
         'Care' => [
-            ['label' => 'Conditions',  'href' => 'index.php#conditions'],
+            ['label' => 'Conditions',  'href' => 'conditions.php'],
+            ['label' => 'Depression',  'href' => 'depression.php'],
             ['label' => 'Treatments',  'href' => 'index.php#treatments'],
-            ['label' => 'TMS therapy', 'href' => 'index.php#tms'],
+            ['label' => 'TMS therapy', 'href' => 'tms.php'],
             ['label' => 'Our focus',   'href' => 'index.php#focus'],
         ],
         'Patients' => [

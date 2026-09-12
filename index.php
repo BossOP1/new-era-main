@@ -145,7 +145,7 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
                 <a href="#book" class="inline-flex items-center gap-2 rounded-full bg-white px-[18px] py-3.5 text-sm font-extrabold text-ink transition-colors hover:bg-brand-orange hover:text-white">
                   Get care <?= arrow_icon(15) ?>
                 </a>
-                <a href="#treatments" class="inline-flex items-center gap-2 rounded-full bg-white/15 px-[18px] py-3.5 text-sm font-extrabold text-white transition-colors hover:bg-white/30">Treatments</a>
+                <a href="<?= e($condition['page'] ?? '#treatments') ?>" class="inline-flex items-center gap-2 rounded-full bg-white/15 px-[18px] py-3.5 text-sm font-extrabold text-white transition-colors hover:bg-white/30"><?= isset($condition['page']) ? 'Learn more' : 'Treatments' ?></a>
               </div>
             </div>
           </div>

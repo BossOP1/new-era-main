@@ -28,6 +28,16 @@ $pages = [
     'index.php'   => 'index.html',
     'about.php'   => 'about.html',
     'index2.php'  => 'index2.html',   // vibrant variant
+    'conditions.php' => 'conditions.html', // the conditions index
+    'tms.php'        => 'tms.html',        // the TMS treatment page
+    'depression.php' => 'depression.html', // condition page
+    'depression-short.php' => 'depression-short.html', // short edition, for comparison
+    'anxiety.php'            => 'anxiety.html',            // condition page
+    'postpartum.php'         => 'postpartum.html',         // condition page
+    'ptsd.php'               => 'ptsd.html',               // condition page
+    'tinnitus.php'           => 'tinnitus.html',           // condition page
+    'migraines.php'          => 'migraines.html',          // condition page
+    'ocd.php'                => 'ocd.html',                // condition page
     'privacy.php' => 'privacy.html',   // privacy policy
     'terms.php'   => 'terms.html',     // terms of use
 ];
