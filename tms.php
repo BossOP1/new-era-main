@@ -43,7 +43,7 @@ $em       = 'italic font-normal text-brand-blue';
           <ol class="m-0 flex list-none flex-wrap items-center gap-2 p-0 text-[11px] font-bold uppercase tracking-[0.16em] text-ink/60">
             <li><a href="index.php#top" class="transition-colors hover:text-brand-blue">Home</a></li>
             <li aria-hidden="true" class="opacity-40">/</li>
-            <li><a href="index.php#treatments" class="transition-colors hover:text-brand-blue">Treatments</a></li>
+            <li><a href="treatments.php" class="transition-colors hover:text-brand-blue">Treatments</a></li>
             <li aria-hidden="true" class="opacity-40">/</li>
             <li aria-current="page" class="text-brand-blue">TMS therapy</li>
           </ol>

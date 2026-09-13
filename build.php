@@ -30,6 +30,10 @@ $pages = [
     'index2.php'  => 'index2.html',   // vibrant variant
     'conditions.php' => 'conditions.html', // the conditions index
     'tms.php'        => 'tms.html',        // the TMS treatment page
+    'treatments.php' => 'treatments.html', // the treatments index
+    'psychiatry.php' => 'psychiatry.html', // treatment page
+    'therapy.php'    => 'therapy.html',    // treatment page
+    'spravato.php'   => 'spravato.html',   // treatment page
     'depression.php' => 'depression.html', // condition page
     'depression-short.php' => 'depression-short.html', // short edition, for comparison
     'anxiety.php'            => 'anxiety.html',            // condition page
@@ -122,7 +126,12 @@ foreach ($pages as $srcFile => $outFile) {
     // Each page starts from a clean slate: header.php reads $page_title and
     // friends off the global scope, and require_once means includes/init.php
     // only runs for the first page, so leftovers would otherwise carry over.
-    unset($page_title, $page_description, $header_solid, $page_stylesheet);
+    unset($page_title, $page_description, $header_solid, $page_stylesheet,
+          $header_hero_light, $header_inset, $condition_key, $treatment_key);
+
+    // The nav marks the current page from SCRIPT_NAME, which the PHP server
+    // sets per request. Under the CLI it would say build.php for every page.
+    $_SERVER['SCRIPT_NAME'] = '/' . $srcFile;
 
     // Render. Included at global scope on purpose: the pages share their
     // data arrays and helpers across the whole build.

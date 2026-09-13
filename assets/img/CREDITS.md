@@ -55,3 +55,25 @@ All files were downloaded pre-cropped to the aspect each slot needs, at q=72.
 Four condition photos (`cond-2`, `cond-3`, `cond-5`, `cond-6`) are cropped wider
 than their container on purpose and carry `'focus' => 'object-left'` in
 `includes/data.php`, which shifts the subject clear of the overlaying info card.
+
+## Treatment pages (`treatments/`)
+
+| File | Source image | Subject |
+|------|--------------|---------|
+| `treatments/all-hero.jpg`             | images.unsplash.com/photo-1573495804664-b1c0849525af | Two women in conversation on a sofa (treatments hub hero) |
+| `treatments/psychiatry-hero.jpg`      | images.unsplash.com/photo-1758691461935-202e2ef6b69f | Doctor talking with a patient across a desk |
+| `treatments/psychiatry-doctor.jpg`    | images.unsplash.com/photo-1758691462878-6edc3d3da1be | Clinician listening at her desk |
+| `treatments/psychiatry-notes.jpg`     | images.unsplash.com/photo-1758691461990-03b49d969495 | Clinician writing notes on a clipboard |
+| `treatments/therapy-hero.jpg`         | images.unsplash.com/photo-1714976694525-71eb29a7c500 | Woman talking with a therapist on a sofa |
+| `treatments/therapy-conversation.jpg` | images.unsplash.com/photo-1604881991664-593b31b88488 | Woman holding a mug, talking across a table |
+| `treatments/therapy-adolescent.jpg`   | images.unsplash.com/photo-1714976694867-bc0e012fab70 | Teenager talking with a therapist |
+| `treatments/spravato-hero.jpg`        | images.unsplash.com/photo-1671549845835-224455af2e41 | Woman resting, eyes closed |
+| `treatments/spravato-spray.jpg`       | images.unsplash.com/photo-1576157401730-e73772de4796 | Nasal spray in use (higher-resolution crop of `treat-4.jpg`'s source) |
+
+## TMS page (`tms/`)
+
+`tms/session.jpg` and `tms/chair.jpg` are the practice's own photographs,
+copied from `assets/TMS-exclusive/`. `tms/video-*.jpg` are poster frames for
+Magstim's YouTube films, used only as click-to-play facades and labelled as
+Magstim's on the page.
+

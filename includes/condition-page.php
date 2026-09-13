@@ -156,7 +156,7 @@ $rail['#faq'] = 'FAQs';
       <?php endforeach; ?>
     </div>
 
-    <a href="index.php#treatments" class="mt-6 inline-flex items-center gap-4 border-b border-brand-blue/30 py-2 text-sm font-bold text-brand-blue transition-colors hover:border-brand-blue sm:mt-8">
+    <a href="treatments.php" class="mt-6 inline-flex items-center gap-4 border-b border-brand-blue/30 py-2 text-sm font-bold text-brand-blue transition-colors hover:border-brand-blue sm:mt-8">
       See how we treat it <?= arrow_icon(16) ?>
     </a>
   </div>

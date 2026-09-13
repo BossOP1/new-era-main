@@ -110,6 +110,7 @@ return [
     'treatments' => [
         [
             'name'   => 'TMS',
+            'page'   => 'tms.php',
             'slot'   => 'homepage/tms-new-era-2.jpg',
             'alt'    => 'A patient resting under the Magstim coil during a TMS session',
             'focus'  => 'object-[45%_66%]',   // portrait source — sit the crop on the coil and the patient's face
@@ -118,6 +119,7 @@ return [
         ],
         [
             'name'   => 'Accelerated TMS',
+            'page'   => 'tms.php',
             'slot'   => 'homepage/tms-newera.webp',
             'alt'    => 'A clinician positioning the TMS coil over a patient’s head',
             'detail' => 'A full course compressed into days, not weeks, for patients who need results fast.',
@@ -125,6 +127,7 @@ return [
         ],
         [
             'name'   => 'Psychiatry',
+            'page'   => 'psychiatry.php',
             'slot'   => 'treat-3',
             'alt'    => 'A clinician talking with a patient during a consultation',
             'detail' => 'Diagnostic evaluation and ongoing medication management from a clinician who knows you.',
@@ -132,6 +135,7 @@ return [
         ],
         [
             'name'   => 'Spravato®',
+            'page'   => 'spravato.php',
             'slot'   => 'treat-4',
             'alt'    => 'A person self-administering a nasal spray',
             'detail' => 'In-office esketamine treatment for treatment-resistant depression, monitored start to finish. Offered at our Texas locations only.',
@@ -139,6 +143,7 @@ return [
         ],
         [
             'name'   => 'Therapy',
+            'page'   => 'therapy.php',
             'slot'   => 'treat-6',
             'alt'    => 'Two women talking during a therapy session',
             'detail' => 'CBT, DBT, EMDR and ACT with therapists working alongside your prescriber, never in a silo.',

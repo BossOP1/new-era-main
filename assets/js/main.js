@@ -157,20 +157,204 @@
     syncHeader();
   }
 
+  /* Navigation dropdowns ------------------------------------------------------
+     A mouse opens a menu on hover; a click or tap toggles it; the keyboard gets
+     Enter or Space to toggle, ArrowDown to step into the panel, arrows to move
+     through it and Escape to leave. A short close delay lets the pointer cross
+     from the bar into the panel without the menu snapping shut. The markup
+     reads the state from aria-expanded on the trigger, data-state on the
+     panel, and data-menu-open on the header (which dims the page). */
+  var navHeader = document.querySelector('[data-site-header]');
+  var triggers = document.querySelectorAll('[data-dropdown-trigger]');
+
+  if (navHeader && triggers.length) {
+    var canHover = !!(window.matchMedia
+      && window.matchMedia('(hover: hover) and (pointer: fine)').matches);
+    var openTrigger = null;
+    var closeTimer = null;
+    var hoverOpenedAt = 0;
+
+    var panelFor = function (trigger) {
+      return document.getElementById(trigger.getAttribute('aria-controls'));
+    };
+
+    var setMenu = function (trigger, open) {
+      var panel = panelFor(trigger);
+      trigger.setAttribute('aria-expanded', String(open));
+      if (panel) {
+        panel.dataset.state = open ? 'open' : 'closed';
+      }
+    };
+
+    var openMenu = function (trigger) {
+      clearTimeout(closeTimer);
+      if (openTrigger && openTrigger !== trigger) {
+        setMenu(openTrigger, false);
+      }
+      setMenu(trigger, true);
+      openTrigger = trigger;
+      navHeader.dataset.menuOpen = 'true';
+    };
+
+    var closeMenu = function (returnFocus) {
+      clearTimeout(closeTimer);
+      if (!openTrigger) {
+        return;
+      }
+      var trigger = openTrigger;
+      setMenu(trigger, false);
+      openTrigger = null;
+      navHeader.dataset.menuOpen = 'false';
+      if (returnFocus) {
+        trigger.focus();
+      }
+    };
+
+    var closeSoon = function () {
+      clearTimeout(closeTimer);
+      closeTimer = setTimeout(function () { closeMenu(false); }, 160);
+    };
+
+    var insideOpenMenu = function (node) {
+      if (!openTrigger) {
+        return false;
+      }
+      var panel = panelFor(openTrigger);
+      return openTrigger.contains(node) || (!!panel && panel.contains(node));
+    };
+
+    triggers.forEach(function (trigger) {
+      var panel = panelFor(trigger);
+      if (!panel) {
+        return;
+      }
+
+      if (canHover) {
+        trigger.addEventListener('pointerenter', function () {
+          if (openTrigger !== trigger) {
+            hoverOpenedAt = Date.now();
+          }
+          openMenu(trigger);
+        });
+        trigger.addEventListener('pointerleave', closeSoon);
+        panel.addEventListener('pointerenter', function () { clearTimeout(closeTimer); });
+        panel.addEventListener('pointerleave', closeSoon);
+      }
+
+      trigger.addEventListener('click', function (event) {
+        // Hover has usually opened the menu a moment before the click lands;
+        // that click should not close it again. Keyboard clicks (detail 0)
+        // always toggle.
+        if (openTrigger === trigger && event.detail > 0 && Date.now() - hoverOpenedAt < 600) {
+          return;
+        }
+        if (openTrigger === trigger) {
+          closeMenu(false);
+        } else {
+          openMenu(trigger);
+        }
+      });
+
+      trigger.addEventListener('keydown', function (event) {
+        if (event.key !== 'ArrowDown') {
+          return;
+        }
+        event.preventDefault();
+        openMenu(trigger);
+        var first = panel.querySelector('a');
+        if (!first) {
+          return;
+        }
+        // The panel is visible from the moment its state flips, so focus can
+        // move straight in. If the browser has not applied the style yet, try
+        // once more on the next tick rather than leaving focus on the button.
+        first.focus();
+        if (document.activeElement !== first) {
+          setTimeout(function () { first.focus(); }, 50);
+        }
+      });
+
+      panel.addEventListener('keydown', function (event) {
+        if (event.key !== 'ArrowDown' && event.key !== 'ArrowUp') {
+          return;
+        }
+        event.preventDefault();
+        var links = Array.prototype.slice.call(panel.querySelectorAll('a'));
+        var next = links.indexOf(document.activeElement) + (event.key === 'ArrowDown' ? 1 : -1);
+        if (next < 0) {
+          trigger.focus();
+        } else if (links[next]) {
+          links[next].focus();
+        }
+      });
+
+      // Following a link to an anchor on the same page should not leave the
+      // menu hanging open over the section it scrolled to.
+      panel.addEventListener('click', function (event) {
+        if (event.target.closest('a')) {
+          closeMenu(false);
+        }
+      });
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && openTrigger) {
+        closeMenu(true);
+      }
+    });
+
+    document.addEventListener('pointerdown', function (event) {
+      if (openTrigger && !insideOpenMenu(event.target)) {
+        closeMenu(false);
+      }
+    });
+
+    document.addEventListener('focusin', function (event) {
+      if (openTrigger && !insideOpenMenu(event.target)) {
+        closeMenu(false);
+      }
+    });
+
+    window.addEventListener('resize', function () { closeMenu(false); });
+  }
+
   /* Mobile navigation ---------------------------------------------------- */
   var toggle = document.querySelector('[data-menu-toggle]');
   var menu = document.getElementById('mobile-menu');
 
   if (toggle && menu) {
-    toggle.addEventListener('click', function () {
-      var open = menu.classList.toggle('hidden') === false;
+    var setMobileMenu = function (open) {
+      menu.classList.toggle('hidden', !open);
       toggle.setAttribute('aria-expanded', String(open));
+      // The menu scrolls itself; the page underneath should not move. nav-open
+      // also stands the phone action bar down, since the menu repeats its
+      // buttons (see src/input.css).
+      document.documentElement.classList.toggle('overflow-hidden', open);
+      document.documentElement.classList.toggle('nav-open', open);
+    };
+
+    toggle.addEventListener('click', function () {
+      setMobileMenu(menu.classList.contains('hidden'));
     });
 
     menu.addEventListener('click', function (event) {
       if (event.target.closest('a')) {
-        menu.classList.add('hidden');
-        toggle.setAttribute('aria-expanded', 'false');
+        setMobileMenu(false);
+      }
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && !menu.classList.contains('hidden')) {
+        setMobileMenu(false);
+        toggle.focus();
+      }
+    });
+
+    // Widening past the breakpoint hides the toggle; do not strand the page
+    // with its scroll locked behind a menu that is no longer shown.
+    window.addEventListener('resize', function () {
+      if (!menu.classList.contains('hidden') && window.getComputedStyle(toggle).display === 'none') {
+        setMobileMenu(false);
       }
     });
   }

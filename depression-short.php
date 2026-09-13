@@ -41,7 +41,7 @@ $anchor   = 'scroll-mt-[148px] sm:scroll-mt-[164px]';
     <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10 bg-[url('../img/depression/hero.jpg')] bg-cover bg-[position:22%_center] bg-no-repeat md:bg-[position:center_38%]"></div>
     <?php // The fade covers the copy column, which ends around 44% of the
           // panel, and is gone before the figure at roughly 60%. ?>
-    <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10 bg-[#f4ecdf]/[0.93] md:bg-[linear-gradient(90deg,rgba(244,236,223,0.97)_0%,rgba(244,236,223,0.92)_29%,rgba(244,236,223,0.5)_46%,rgba(244,236,223,0)_62%),linear-gradient(0deg,rgba(244,236,223,0.94)_0%,rgba(244,236,223,0.6)_10%,rgba(244,236,223,0)_20%)]"></div>
+    <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10 bg-[#f4ecdf]/[0.93] md:bg-[linear-gradient(90deg,rgba(244,236,223,0.97)_0%,rgba(244,236,223,0.92)_29%,rgba(244,236,223,0.5)_46%,rgba(244,236,223,0)_62%),linear-gradient(0deg,rgba(244,236,223,0.94)_0%,rgba(244,236,223,0.6)_10%,rgba(244,236,223,0)_20%)] md:bg-transparent"></div>
 
     <div class="mx-auto flex min-h-[300px] max-w-[1160px] items-center lg:min-h-[360px]">
       <div class="max-w-[560px] py-1">
@@ -114,7 +114,7 @@ $anchor   = 'scroll-mt-[148px] sm:scroll-mt-[164px]';
       </p>
     </div>
 
-    <a href="index.php#treatments" class="mt-6 inline-flex items-center gap-4 border-b border-brand-blue/30 py-2 sm:mt-8 text-sm font-bold text-brand-blue transition-colors hover:border-brand-blue">
+    <a href="treatments.php" class="mt-6 inline-flex items-center gap-4 border-b border-brand-blue/30 py-2 sm:mt-8 text-sm font-bold text-brand-blue transition-colors hover:border-brand-blue">
       See how we treat it <?= arrow_icon(16) ?>
     </a>
   </div>

@@ -210,6 +210,32 @@
     }
   }
 
+  /* Navigation ----------------------------------------------------------------
+     The phone menu is shown by removing .hidden, which restarts this animation
+     every time it opens. Desktop dropdowns animate with utilities in the
+     markup instead, because they are toggled by attribute, not by display. */
+  .nav-pop {
+    transform-origin: top center;
+    animation: nav-pop 0.28s cubic-bezier(0.22, 0.61, 0.24, 1) both;
+  }
+
+  /* While the phone menu is open it shows its own call and booking buttons,
+     so the fixed action bar underneath steps out of the way rather than
+     peeking out past the edges of a long menu. */
+  .action-bar {
+    transition: opacity 0.2s ease;
+  }
+
+  .nav-open .action-bar {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  @keyframes nav-pop {
+    from { opacity: 0; transform: translateY(-6px) scale(0.985); }
+    to   { opacity: 1; transform: none; }
+  }
+
   /* Image placeholder shown until a real photo is dropped into assets/img/ */
   .img-slot {
     @apply flex h-full w-full items-center justify-center bg-white/[0.06] p-6 text-center;
@@ -237,6 +263,9 @@
     transition: none;
     transform: none;
     box-shadow: none;
+  }
+  .nav-pop {
+    animation: none;
   }
 }
 
