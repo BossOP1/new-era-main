@@ -51,8 +51,9 @@ return [
             'role'        => 'Chief Medical Officer',
             'group'       => 'leadership',
             'states'      => ['ca', 'tx'],
-            'clinics'     => ['Laguna Hills, CA', 'Cedar Park, TX'],
+            'clinics'     => ['Cedar Park, TX', 'Central Dallas, TX', 'Grapevine, TX', 'Laguna Hills, CA'],
             'photo'       => 'team/terry-v-eagan.jpg',
+            'zocdoc'      => 'https://www.zocdoc.com/doctor/terry-v-eagan-md-416460',
             'video'       => '',
             'bio'         => [
                 'Dr. Terry Eagan brings to Anew Era TMS & Psychiatry an extensive body of professional experience in the field of psychiatry, encompassing both his clinical private practice and multiple Medical Director positions where he provides medical and psychiatric oversight of mental health treatment centers.  Dr. Eagan’s diverse background includes the founding of various institutes that focus on providing specialized and innovative treatment for a variety of psychiatric disorders.',
@@ -83,7 +84,7 @@ return [
             'role'        => 'Psychiatric Nurse Practitioner',
             'group'       => 'psychiatry',
             'states'      => ['tx'],
-            'clinics'     => [],
+            'clinics'     => ['Cedar Park, TX'],
             'photo'       => 'team/evelyn-aki.jpg',
             'video'       => '',
             'bio'         => [
@@ -97,7 +98,7 @@ return [
             'role'        => 'Psychiatric Nurse Practitioner',
             'group'       => 'psychiatry',
             'states'      => ['tx'],
-            'clinics'     => [],
+            'clinics'     => ['Central Austin, TX'],
             'photo'       => 'team/laura-ann-beaufford.jpg',
             'video'       => '',
             'bio'         => [
@@ -113,8 +114,9 @@ return [
             'role'        => 'Psychiatrist',
             'group'       => 'psychiatry',
             'states'      => ['ca'],
-            'clinics'     => [],
+            'clinics'     => ['West Los Angeles, CA'],
             'photo'       => 'team/priti-bhardwaj.jpg',
+            'zocdoc'      => 'https://www.zocdoc.com/doctor/priti-bhardwaj-md-417009',
             'video'       => '',
             'bio'         => [
                 'Dr. Priti Bhardwaj knows how difficult it can be to seek help, but by doing so you’re taking a step closer to where you want to be. Struggles with anxiety, depression, attention, and insecurity interfere with our emotional and physical well-being as well as our ability to connect with others. Her goal with patients and families is to provide a warm, safe, and accepting environment for them to communicate the difficulties and challenges they face and work on finding solutions that nourish them toward becoming the healthiest and best version of themselves. Dr. Priti is a double board-certified General Adult Psychiatrist who is also board certified in Integrative Medicine (ABIM). She will use her knowledge of psychopharmacology, psychotherapy, and holistic approaches to collaborate with you. Each person is seen as an individual and is encouraged to be an active participant in their own treatment.',
@@ -127,7 +129,7 @@ return [
             'role'        => 'Psychiatrist',
             'group'       => 'psychiatry',
             'states'      => ['tx'],
-            'clinics'     => [],
+            'clinics'     => ['Cedar Park, TX'],
             'photo'       => 'team/megha-chadha.jpg',
             'video'       => '',
             'bio'         => [
@@ -142,7 +144,7 @@ return [
             'role'        => 'Psychiatric Nurse Practitioner',
             'group'       => 'psychiatry',
             'states'      => ['tx'],
-            'clinics'     => [],
+            'clinics'     => ['Central Dallas, TX', 'Grapevine, TX'],
             'photo'       => 'team/doris-cudjoe.jpg',
             'video'       => '',
             'bio'         => [
@@ -157,7 +159,7 @@ return [
             'role'        => 'Psychiatric Mental Health Nurse Practitioner',
             'group'       => 'psychiatry',
             'states'      => ['ca'],
-            'clinics'     => [],
+            'clinics'     => ['Orange, CA'],
             'photo'       => 'team/john-anthony-diya.jpg',
             'video'       => 'QC28vVZZe5Y',
             'bio'         => [
@@ -172,7 +174,7 @@ return [
             'role'        => 'Psychiatric Nurse Practitioner',
             'group'       => 'psychiatry',
             'states'      => ['tx'],
-            'clinics'     => [],
+            'clinics'     => ['Cedar Park, TX', 'Central Austin, TX'],
             'photo'       => 'team/velma-hughes.jpg',
             'video'       => '',
             'bio'         => [
@@ -186,7 +188,7 @@ return [
             'role'        => 'Psychiatric Mental Health Nurse Practitioner',
             'group'       => 'psychiatry',
             'states'      => ['ca'],
-            'clinics'     => [],
+            'clinics'     => ['Huntington Beach, CA'],
             'photo'       => 'team/dexter-jones.jpg',
             'video'       => '',
             'bio'         => [
@@ -200,7 +202,7 @@ return [
             'role'        => 'Psychiatric Mental Health Nurse Practitioner',
             'group'       => 'psychiatry',
             'states'      => ['ca'],
-            'clinics'     => [],
+            'clinics'     => ['Torrance, CA'],
             'photo'       => 'team/scarlett-kang.jpg',
             'video'       => '',
             'bio'         => [
@@ -229,7 +231,7 @@ return [
             'role'        => 'Psychiatric Mental Health Nurse Practitioner',
             'group'       => 'psychiatry',
             'states'      => ['ca'],
-            'clinics'     => [],
+            'clinics'     => ['Orange, CA'],
             'photo'       => 'team/stephany-lavigne.jpg',
             'video'       => 'vixYWNnNTtU',
             'bio'         => [
@@ -244,7 +246,7 @@ return [
             'role'        => 'Psychiatric Nurse Practitioner',
             'group'       => 'psychiatry',
             'states'      => ['tx'],
-            'clinics'     => [],
+            'clinics'     => ['Allen, TX'],
             'photo'       => 'team/rhoda-madamombe.jpg',
             'video'       => 'fgiRp3pP7pw',
             'bio'         => [
@@ -277,7 +279,7 @@ return [
             'role'        => 'Psychiatric Mental Health Nurse Practitioner',
             'group'       => 'psychiatry',
             'states'      => ['ca'],
-            'clinics'     => [],
+            'clinics'     => ['Laguna Hills, CA'],
             'photo'       => 'team/tiffany-a-nix.jpg',
             'video'       => '',
             'bio'         => [
@@ -307,7 +309,7 @@ return [
             'role'        => 'Psychiatric Mental Health Nurse Practitioner',
             'group'       => 'psychiatry',
             'states'      => ['ca'],
-            'clinics'     => [],
+            'clinics'     => ['Newport Beach, CA'],
             'photo'       => 'team/thao-palacio.jpg',
             'video'       => '',
             'bio'         => [
@@ -321,13 +323,94 @@ return [
             'role'        => 'Psychiatric Mental Health Nurse Practitioner',
             'group'       => 'psychiatry',
             'states'      => ['ca'],
-            'clinics'     => [],
+            'clinics'     => ['Long Beach, CA'],
             'photo'       => 'team/kammie-pierce.jpg',
             'video'       => '',
             'bio'         => [
                 'Kammie Pierce believes that true greatness begins with achieving equilibrium—when the mind and body are in balance, one can begin to reach their full potential. Her goal as a provider is to help patients to restore that balance, so that they can focus on what truly matters in life. Symptom remission is always a top priority, but her care goes beyond this; she aims to support lasting stability and growth from the inside out.',
                 'Kammie brings experience across a range of clinical settings, including inpatient, outpatient, and residential care. Much of her background as a registered nurse was rooted in inpatient work, which gave her a strong foundation in acute psychiatric care. She has been practicing as a board-certified Psychiatric Mental Health Nurse Practitioner (PMHNP-BC) for approximately two years and remains committed to lifelong learning. Her updated knowledge is something she hopes to continue to share with her clients.',
                 'She is a passionate advocate for underrepresented communities across all cultural, gender, and socioeconomic backgrounds, and strives to create a safe, inclusive environment for all. She earned both her bachelor’s and master’s degrees in nursing from West Coast University. Outside of work, she enjoys hiking, reading, and spending quality time with loved ones.',
+            ],
+        ],
+        // Added from the practice's Huntington Beach page, which lists her as
+        // the psychiatrist at that clinic; she was not in the roster this file
+        // was built from. Name, credentials, role, headshot and ZocDoc profile
+        // are from that page. The training and board certification in the bio
+        // are from her public provider listing — Robert Wood Johnson Medical
+        // School (UMDNJ), 2010, ABPN-certified, California licence A 153551.
+        // Zocdoc itself refuses automated requests, so nothing here was taken
+        // from it beyond the profile link the practice publishes.
+        //
+        // Directories also list her at Torrance, Orange and Newport Beach.
+        // Those are left off until the practice confirms them — tagging a
+        // clinic here is what puts somebody on that clinic's page.
+        // Four clinicians the roster this file was built from did not have,
+        // added from the practice's own location pages along with the
+        // headshots those pages publish. Name, credentials, role and clinic
+        // are from there; no bio has been supplied, so their cards run on the
+        // headshot and the credentials alone.
+        [
+            'slug'        => 'adele-shyntum',
+            'name'        => 'Adele Shyntum',
+            'credentials' => 'MSN, APRN, PMHNP-BC',
+            'role'        => 'Psychiatric Mental Health Nurse Practitioner',
+            'group'       => 'psychiatry',
+            'states'      => ['tx'],
+            'clinics'     => ['Grapevine, TX'],
+            'photo'       => 'team/adele-shyntum.png',
+            'video'       => '',
+            'bio'         => [],
+        ],
+        [
+            'slug'        => 'damilola-fowowe',
+            'name'        => 'Damilola Fowowe',
+            'credentials' => 'MSN, PMHNP-BC',
+            'role'        => 'Psychiatric Mental Health Nurse Practitioner',
+            'group'       => 'psychiatry',
+            'states'      => ['tx'],
+            'clinics'     => ['Cypress, TX'],
+            'photo'       => 'team/damilola-fowowe.jpeg',
+            'video'       => '',
+            'bio'         => [],
+        ],
+        [
+            'slug'        => 'tammy-fluker',
+            'name'        => 'Tammy Fluker',
+            'credentials' => 'PMHNP-BC',
+            'role'        => 'Psychiatric Mental Health Nurse Practitioner',
+            'group'       => 'psychiatry',
+            'states'      => ['tx'],
+            'clinics'     => ['Central Dallas, TX'],
+            'photo'       => 'team/tammy-fluker.png',
+            'video'       => '',
+            'bio'         => [],
+        ],
+        [
+            'slug'        => 'yolanda-acosta-montoya',
+            'name'        => 'Yolanda Acosta Montoya',
+            'credentials' => 'LCSW',
+            'role'        => 'Therapist',
+            'group'       => 'therapy',
+            'states'      => ['ca'],
+            'clinics'     => ['Torrance, CA'],
+            'photo'       => 'team/yolanda-acosta-montoya.webp',
+            'video'       => '',
+            'bio'         => [],
+        ],
+        [
+            'slug'        => 'heather-mak',
+            'name'        => 'Heather Mak',
+            'credentials' => 'MD',
+            'role'        => 'Psychiatrist',
+            'group'       => 'psychiatry',
+            'states'      => ['ca'],
+            'clinics'     => ['Huntington Beach, CA'],
+            'photo'       => 'team/heather-mak.jpg',
+            'video'       => '',
+            'zocdoc'      => 'https://www.zocdoc.com/doctor/heather-k-mak-md-459997',
+            'bio'         => [
+                'Dr Heather Mak is a psychiatrist, board certified in psychiatry by the American Board of Psychiatry and Neurology and licensed to practise in California. She earned her medical degree from Robert Wood Johnson Medical School at the University of Medicine and Dentistry of New Jersey in 2010.',
+                'She treats depression and treatment-resistant depression, anxiety and panic disorder, PTSD and OCD, and works across both sides of the practice — medication management, and TMS including the shorter theta-burst protocols — for patients whose depression has not responded to medication on its own.',
             ],
         ],
         [
@@ -337,8 +420,9 @@ return [
             'role'        => 'Psychiatric Mental Health Nurse Practitioner',
             'group'       => 'psychiatry',
             'states'      => ['ca'],
-            'clinics'     => [],
+            'clinics'     => ['Huntington Beach, CA'],
             'photo'       => 'team/frizette-pua.jpg',
+            'zocdoc'      => 'https://www.zocdoc.com/doctor/frizette-pua-msn-pmhnp-bc-713645',
             'video'       => '',
             'bio'         => [
                 'Frizette Dodson Pua is a Board Certified Psychiatric Mental Health Nurse Practitioner (PMHNP-BC). She earned her Master of Science in Nursing from Walden University. She has extensive experience of diverse healthcare settings, providing comprehensive support to individuals with wide range of mental health conditions. She is dedicated to delivering compassionate, evidence-based mental health care across the life span. With a strong clinical foundation and a collaborative, patient-centered approach, she works closely with interdisciplinary teams to ensure continuity of care and optimize treatment outcomes for individuals with complex mental health needs. Her practice emphasizes safety, respect, cultural humility, and empowering individuals to actively participate in their journey toward sustained wellness. Ms. Pua is deeply committed to reducing barriers to mental health services, enhancing patient education, and advancing initiatives that promote equity, resilience, and recovery within the communities she serves.',
@@ -351,7 +435,7 @@ return [
             'role'        => 'Psychiatric Mental Health Nurse Practitioner',
             'group'       => 'psychiatry',
             'states'      => ['ca'],
-            'clinics'     => [],
+            'clinics'     => ['Long Beach, CA', 'West Los Angeles, CA'],
             'photo'       => 'team/ferdinand-andy-rimando.jpg',
             'video'       => '',
             'bio'         => [
@@ -395,7 +479,7 @@ return [
             'role'        => 'Psychiatric Nurse Practitioner',
             'group'       => 'psychiatry',
             'states'      => ['tx'],
-            'clinics'     => [],
+            'clinics'     => ['Westlake, TX'],
             'photo'       => 'team/yan-shi.jpg',
             'video'       => '',
             'bio'         => [
@@ -411,7 +495,7 @@ return [
             'role'        => 'Psychiatric Nurse Practitioner',
             'group'       => 'psychiatry',
             'states'      => ['tx'],
-            'clinics'     => [],
+            'clinics'     => ['Cedar Park, TX'],
             'photo'       => 'team/bryan-walker.jpg',
             'video'       => '',
             'bio'         => [
@@ -425,7 +509,7 @@ return [
             'role'        => 'Psychiatric Nurse Practitioner',
             'group'       => 'psychiatry',
             'states'      => ['tx'],
-            'clinics'     => [],
+            'clinics'     => ['Central Austin, TX'],
             'photo'       => 'team/erick-willars.jpg',
             'video'       => '',
             'bio'         => [
@@ -440,7 +524,7 @@ return [
             'role'        => 'Psychiatrist',
             'group'       => 'psychiatry',
             'states'      => ['tx'],
-            'clinics'     => [],
+            'clinics'     => ['Central Dallas, TX', 'Grapevine, TX'],
             'photo'       => 'team/xiaoyan-wu.jpg',
             'video'       => '',
             'bio'         => [
@@ -455,7 +539,7 @@ return [
             'role'        => 'Psychiatrist',
             'group'       => 'psychiatry',
             'states'      => ['tx'],
-            'clinics'     => [],
+            'clinics'     => ['Cypress, TX'],
             'photo'       => 'team/huiping-xu.jpg',
             'video'       => '',
             'bio'         => [
@@ -486,7 +570,7 @@ return [
             'role'        => 'Therapist',
             'group'       => 'therapy',
             'states'      => ['ca'],
-            'clinics'     => [],
+            'clinics'     => ['West Los Angeles, CA'],
             'photo'       => 'team/christina-ferrari.jpg',
             'video'       => '',
             'bio'         => [
@@ -502,7 +586,7 @@ return [
             'role'        => 'Therapist',
             'group'       => 'therapy',
             'states'      => ['tx'],
-            'clinics'     => [],
+            'clinics'     => ['Central Austin, TX'],
             'photo'       => 'team/rickie-lanette-fleck.jpg',
             'video'       => '',
             'bio'         => [
@@ -532,7 +616,7 @@ return [
             'role'        => 'Therapist',
             'group'       => 'therapy',
             'states'      => ['ca'],
-            'clinics'     => [],
+            'clinics'     => ['Huntington Beach, CA'],
             'photo'       => 'team/kenneth-gildar.jpg',
             'video'       => '',
             'bio'         => [
@@ -546,7 +630,7 @@ return [
             'role'        => 'Therapist',
             'group'       => 'therapy',
             'states'      => ['ca'],
-            'clinics'     => [],
+            'clinics'     => ['Newport Beach, CA'],
             'photo'       => 'team/john-andrew-hosier.jpg',
             'video'       => '',
             'bio'         => [
@@ -562,7 +646,7 @@ return [
             'role'        => 'Therapist',
             'group'       => 'therapy',
             'states'      => ['ca'],
-            'clinics'     => [],
+            'clinics'     => ['Orange, CA'],
             'photo'       => 'team/tria-ismay.jpg',
             'video'       => '',
             'bio'         => [
@@ -576,7 +660,7 @@ return [
             'role'        => 'Therapist',
             'group'       => 'therapy',
             'states'      => ['ca'],
-            'clinics'     => [],
+            'clinics'     => ['Huntington Beach, CA'],
             'photo'       => 'team/lauren-lopez.jpg',
             'video'       => '',
             'bio'         => [
@@ -593,7 +677,7 @@ return [
             'role'        => 'Therapist',
             'group'       => 'therapy',
             'states'      => ['ca'],
-            'clinics'     => [],
+            'clinics'     => ['Newport Beach, CA'],
             'photo'       => 'team/kimberly-ann-morgan.jpg',
             'video'       => '',
             'bio'         => [
@@ -608,7 +692,7 @@ return [
             'role'        => 'Therapist',
             'group'       => 'therapy',
             'states'      => ['tx'],
-            'clinics'     => [],
+            'clinics'     => ['Westlake, TX'],
             'photo'       => 'team/terry-rauschuber.jpg',
             'video'       => '',
             'bio'         => [
@@ -622,7 +706,7 @@ return [
             'role'        => 'Therapist',
             'group'       => 'therapy',
             'states'      => ['tx'],
-            'clinics'     => [],
+            'clinics'     => ['Cedar Park, TX'],
             'photo'       => 'team/clarissa-sourada.jpg',
             'video'       => '',
             'bio'         => [
@@ -637,7 +721,7 @@ return [
             'role'        => 'Therapist',
             'group'       => 'therapy',
             'states'      => ['ca'],
-            'clinics'     => [],
+            'clinics'     => ['Long Beach, CA'],
             'photo'       => 'team/nicole-watson.jpg',
             'video'       => '',
             'bio'         => [
@@ -651,7 +735,7 @@ return [
             'role'        => 'Therapist',
             'group'       => 'therapy',
             'states'      => ['tx'],
-            'clinics'     => [],
+            'clinics'     => ['Central Dallas, TX'],
             'photo'       => 'team/krystal-michelle-wurm.jpg',
             'video'       => '',
             'bio'         => [
@@ -666,7 +750,7 @@ return [
             'role'        => 'Therapist',
             'group'       => 'therapy',
             'states'      => ['ca'],
-            'clinics'     => [],
+            'clinics'     => ['Laguna Hills, CA'],
             'photo'       => 'team/samantha-rodriguez-zuniga.jpg',
             'video'       => '',
             'bio'         => [

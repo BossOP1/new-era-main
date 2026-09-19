@@ -55,7 +55,7 @@ $rest     = array_slice($all, 1);
         </p>
 
         <div class="mt-6 flex flex-wrap gap-3 sm:mt-8">
-          <a href="#list" class="<?= $btn_blue ?>">See the treatments <?= arrow_icon(16) ?></a>
+          <a href="#list" class="<?= $btn_blue ?>">See the Treatments <?= arrow_icon(16) ?></a>
           <a href="<?= e($site['phone_href']) ?>" class="<?= $btn_line ?>"><?= e($site['phone']) ?></a>
         </div>
 
@@ -97,7 +97,7 @@ $rest     = array_slice($all, 1);
         <?php endforeach; ?>
       </div>
       <span class="mt-6 inline-flex items-center gap-2 text-sm font-extrabold text-brand-blue">
-        Read about TMS <span class="transition-transform duration-200 group-hover:translate-x-1"><?= arrow_icon(15) ?></span>
+        Read About TMS <span class="transition-transform duration-200 group-hover:translate-x-1"><?= arrow_icon(15) ?></span>
       </span>
     </div>
   </a>
@@ -119,7 +119,7 @@ $rest     = array_slice($all, 1);
             <h3 class="m-0 font-serif text-[24px] font-normal leading-[1.15] tracking-[-0.025em] text-brand-blue"><?= e($treatment['name']) ?></h3>
             <p class="m-0 mt-2.5 text-[14px] leading-[1.7] text-[#58616a]"><?= e($treatment['detail']) ?></p>
             <span class="mt-auto inline-flex items-center gap-2 pt-6 text-sm font-extrabold text-brand-blue">
-              Read more <span class="transition-transform duration-200 group-hover:translate-x-1"><?= arrow_icon(15) ?></span>
+              Read More <span class="transition-transform duration-200 group-hover:translate-x-1"><?= arrow_icon(15) ?></span>
             </span>
           </div>
         </a>
@@ -167,12 +167,12 @@ $rest     = array_slice($all, 1);
       <div class="hidden lg:block"></div>
       <div class="rounded-b-[20px] bg-therapy px-5 pb-10 pt-7 sm:px-8">
         <a href="therapy.php" class="inline-flex items-center gap-2 rounded-full bg-brand-blue px-6 py-3.5 text-sm font-extrabold text-white transition-colors hover:bg-brand-blue-dark">
-          About therapy <?= arrow_icon(15) ?>
+          About Therapy <?= arrow_icon(15) ?>
         </a>
       </div>
       <div class="mt-4 rounded-b-[20px] bg-psych px-5 pb-10 pt-7 sm:px-8 lg:mt-0">
         <a href="psychiatry.php" class="inline-flex items-center gap-2 rounded-full bg-brand-orange px-6 py-3.5 text-sm font-extrabold text-white transition-colors hover:bg-brand-orange-dark">
-          About psychiatry <?= arrow_icon(15) ?>
+          About Psychiatry <?= arrow_icon(15) ?>
         </a>
       </div>
     </div>
@@ -182,7 +182,7 @@ $rest     = array_slice($all, 1);
         <p class="m-0 text-[16px] font-extrabold tracking-[-0.01em] text-ink">Still not sure where to start?</p>
         <p class="m-0 mt-1 max-w-[52ch] text-sm leading-relaxed text-ink/65">Start with the PHQ-9. It takes two minutes and gives us somewhere to begin — it is a screening questionnaire, not a diagnosis.</p>
       </div>
-      <a href="index.php#book" class="<?= $btn_blue ?> shrink-0">Take the PHQ-9 <?= arrow_icon(15) ?></a>
+      <a href="phq9.php" class="<?= $btn_blue ?> shrink-0">Take the PHQ-9 <?= arrow_icon(15) ?></a>
     </div>
   </div>
 </section>
@@ -197,7 +197,7 @@ $rest     = array_slice($all, 1);
       New patient appointments are usually available within five business days. We check your benefits first, so you know what a visit costs before you walk in.
     </p>
     <div class="mt-7 flex flex-wrap justify-center gap-3">
-      <a href="index.php#book" class="<?= $btn_blue ?>">Book a consultation <?= arrow_icon(16) ?></a>
+      <a href="index.php#book" class="<?= $btn_blue ?>">Book a Consultation <?= arrow_icon(16) ?></a>
       <a href="<?= e($site['phone_href']) ?>" class="<?= $btn_line ?>">Call <?= e($site['phone']) ?></a>
     </div>
     <p class="m-0 mt-6 text-xs text-ink/55">In crisis? Call or text 988 any time.</p>

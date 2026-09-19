@@ -349,8 +349,16 @@ if (!function_exists('nav_is_current')) {
         if (isset($item['menu'], $menus[$item['menu']])) {
             $menu    = $menus[$item['menu']];
             $hrefs[] = $menu['all']['href'] ?? '';
-            foreach ($menu['items'] as $child) {
+            // A menu holds a flat list of items, or groups with their own
+            // heading and items beneath — the locations menu is the latter.
+            foreach ($menu['items'] ?? [] as $child) {
                 $hrefs[] = $child['href'];
+            }
+            foreach ($menu['groups'] ?? [] as $group) {
+                $hrefs[] = $group['href'] ?? '';
+                foreach ($group['items'] ?? [] as $child) {
+                    $hrefs[] = $child['href'];
+                }
             }
         }
 

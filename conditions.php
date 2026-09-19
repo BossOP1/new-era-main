@@ -8,7 +8,7 @@
  * condition page's related list read — so a condition added there appears
  * here, on the homepage and in six related grids without another edit.
  */
-$page_title        = 'Conditions we treat';
+$page_title        = 'Conditions We Treat';
 $page_description  = 'Depression, anxiety, postpartum depression, PTSD, tinnitus, migraines and OCD — the conditions we treat, and how we treat each one.';
 $header_hero_light = true;
 $header_inset      = true;
@@ -58,7 +58,7 @@ $rest     = array_slice($all, 1);
         </p>
 
         <div class="mt-6 flex flex-wrap gap-3 sm:mt-8">
-          <a href="#list" class="<?= $btn_blue ?>">See the conditions <?= arrow_icon(16) ?></a>
+          <a href="#list" class="<?= $btn_blue ?>">See the Conditions <?= arrow_icon(16) ?></a>
           <a href="<?= e($site['phone_href']) ?>" class="<?= $btn_line ?>"><?= e($site['phone']) ?></a>
         </div>
 
@@ -79,7 +79,7 @@ $rest     = array_slice($all, 1);
 <section id="list" class="<?= $wrap ?> <?= $pad ?> scroll-mt-[110px]">
   <div class="mb-7 sm:mb-9 md:mb-11 md:flex md:items-end md:justify-between md:gap-10">
     <div>
-      <p class="<?= $eyebrow ?>"><?= $dot ?> Conditions we treat</p>
+      <p class="<?= $eyebrow ?>"><?= $dot ?> Conditions We Treat</p>
       <h2 class="<?= $h2 ?>">Seven conditions.<br><em class="italic font-normal text-brand-blue">One assessment.</em></h2>
     </div>
     <p class="m-0 mt-[22px] max-w-[360px] text-base leading-[1.75] text-[#58616a] md:mt-0 md:max-w-[290px]">
@@ -107,7 +107,7 @@ $rest     = array_slice($all, 1);
         <?php endforeach; ?>
       </div>
       <span class="mt-6 inline-flex items-center gap-2 text-sm font-extrabold text-brand-blue">
-        Read about <?= e(strtolower($featured['name'])) ?>
+        Read About <?= e($featured['name']) ?>
         <span class="transition-transform duration-200 group-hover:translate-x-1"><?= arrow_icon(15) ?></span>
       </span>
     </div>
@@ -133,7 +133,7 @@ $rest     = array_slice($all, 1);
               <?php endforeach; ?>
             </div>
             <span class="mt-auto inline-flex items-center gap-2 pt-6 text-sm font-extrabold text-brand-blue">
-              Read more
+              Read More
               <span class="transition-transform duration-200 group-hover:translate-x-1"><?= arrow_icon(15) ?></span>
             </span>
           </div>
@@ -165,7 +165,7 @@ $rest     = array_slice($all, 1);
           It is FDA-cleared for depression and for OCD. For the rest, it rests on trial evidence of varying strength, and we will tell you which is which before you start rather than after.
         </p>
         <a href="tms.php" class="mt-7 inline-flex items-center justify-center gap-[22px] rounded-full bg-white px-[25px] py-[17px] text-sm font-bold text-[#154c69] transition-colors hover:bg-[#e6eddc] sm:mt-8">
-          How TMS works <?= arrow_icon(17) ?>
+          How TMS Works <?= arrow_icon(17) ?>
         </a>
       </div>
     </div>
@@ -237,7 +237,7 @@ $rest     = array_slice($all, 1);
       <p class="m-0 text-[16px] font-extrabold tracking-[-0.01em] text-ink">Not sure which of these is yours?</p>
       <p class="m-0 mt-1 max-w-[52ch] text-sm leading-relaxed text-ink/65">That is what the assessment is for. The PHQ-9 takes two minutes and gives us somewhere to start — it is a screening questionnaire, not a diagnosis.</p>
     </div>
-    <a href="index.php#book" class="<?= $btn_blue ?> shrink-0">Take the PHQ-9 <?= arrow_icon(15) ?></a>
+    <a href="phq9.php" class="<?= $btn_blue ?> shrink-0">Take the PHQ-9 <?= arrow_icon(15) ?></a>
   </div>
 </section>
 
@@ -251,7 +251,7 @@ $rest     = array_slice($all, 1);
       Most new patients are seen within a week. We check your benefits first, so you know what a visit costs before you walk in.
     </p>
     <div class="mt-7 flex flex-wrap justify-center gap-3">
-      <a href="index.php#book" class="<?= $btn_blue ?>">Book a consultation <?= arrow_icon(16) ?></a>
+      <a href="index.php#book" class="<?= $btn_blue ?>">Book a Consultation <?= arrow_icon(16) ?></a>
       <a href="<?= e($site['phone_href']) ?>" class="<?= $btn_line ?>">Call <?= e($site['phone']) ?></a>
     </div>
     <p class="m-0 mt-6 text-xs text-ink/55">In crisis? Call or text 988 any time.</p>

@@ -8,6 +8,15 @@
    faces it can actually find. See assets/fonts/README.md. */
 
 @layer base {
+  /* The hidden attribute has to beat a display utility.
+     Tailwind's .flex / .inline-flex / .grid are author styles and the
+     [hidden] rule is the browser's, so a `hidden` element carrying one of
+     those classes stays visible — which is a silent, easy bug to ship. This
+     makes the attribute mean what it says everywhere. */
+  [hidden] {
+    display: none !important;
+  }
+
   html {
     scroll-behavior: smooth;
   }

@@ -170,7 +170,7 @@ $nav_link  = 'relative inline-flex items-center gap-1.5 whitespace-nowrap rounde
     </nav>
 
     <div class="hidden items-center gap-2 <?= $nav_show ?>">
-      <a href="index.php#book" class="inline-flex items-center gap-2 whitespace-nowrap rounded-full bg-brand-orange px-6 py-[15px] text-sm font-extrabold text-white transition-colors hover:bg-brand-orange-dark">Get started</a>
+      <a href="contact.php" class="inline-flex items-center gap-2 whitespace-nowrap rounded-full bg-brand-orange px-6 py-[15px] text-sm font-extrabold text-white transition-colors hover:bg-brand-orange-dark">Get Started</a>
     </div>
 
     <button type="button"
@@ -200,20 +200,51 @@ $nav_link  = 'relative inline-flex items-center gap-1.5 whitespace-nowrap rounde
         $feature = $menu['feature'] ?? null;
         $all     = $menu['all'] ?? null;
         $columns = $menu['columns'] ?? 2;
+        // Locations is built from regions with clinics under them rather than
+        // a flat list of tiles; everything else still uses 'items'.
+        $groups  = $menu['groups'] ?? null;
         // An odd number of items leaves a hole in the two-column grid, so the
         // "all" link fills it as a tile; otherwise it sits in the footer strip.
         // With no "all" link at all, the strip carries the phone number.
-        $all_as_tile = $all && $columns === 2 && count($menu['items']) % 2 === 1;
+        $all_as_tile = $all && !$groups && $columns === 2 && count($menu['items']) % 2 === 1;
     ?>
     <div id="nav-panel-<?= e($item['menu']) ?>"
          data-dropdown-panel
          data-state="closed"
          class="invisible absolute left-1/2 top-full z-10 hidden w-[min(880px,calc(100vw-32px))] -translate-x-1/2 translate-y-2 pt-3 opacity-0 [transition:opacity_200ms_ease-out,transform_200ms_ease-out,visibility_0s_linear_200ms] data-[state=open]:visible data-[state=open]:translate-y-0 data-[state=open]:opacity-100 data-[state=open]:[transition:opacity_200ms_ease-out,transform_200ms_ease-out,visibility_0s_linear_0s] motion-reduce:transition-none motion-reduce:data-[state=open]:transition-none <?= $nav_show_block ?>">
       <div class="overflow-hidden rounded-[24px] border border-ink/[0.08] bg-white text-left text-ink shadow-[0_28px_80px_rgba(9,20,28,0.20),0_4px_16px_rgba(9,20,28,0.06)]">
-        <div class="grid grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)] gap-2 p-3">
+        <?php // Groups fill the panel: four regions need the width more than a
+              // feature tile does. A flat menu keeps its items-plus-feature split. ?>
+        <div class="grid gap-2 p-3<?= $groups ? '' : ' grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)]' ?>">
 
           <div class="p-2">
             <p class="m-0 mb-2.5 px-3 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink/40"><?= e($menu['eyebrow']) ?></p>
+
+            <?php if ($groups): ?>
+            <?php // One column per region, its clinics listed beneath it. ?>
+            <ul class="m-0 grid list-none grid-cols-2 gap-x-2 gap-y-4 p-0 sm:grid-cols-4">
+              <?php foreach ($groups as $group): ?>
+                <li class="px-3">
+                  <a href="<?= e($group['href']) ?>" class="group/reg inline-flex items-center gap-1.5 text-[14.5px] font-extrabold tracking-[-0.01em] text-ink transition-colors hover:text-brand-blue focus-visible:text-brand-blue focus-visible:outline-none">
+                    <?= e($group['name']) ?>
+                    <span class="-translate-x-1 text-brand-blue opacity-0 transition duration-200 group-hover/reg:translate-x-0 group-hover/reg:opacity-100 group-focus-visible/reg:translate-x-0 group-focus-visible/reg:opacity-100"><?= arrow_icon(12) ?></span>
+                  </a>
+                  <p class="m-0 mt-0.5 text-[11.5px] leading-snug text-ink/45"><?= e($group['desc']) ?></p>
+
+                  <ul class="m-0 mt-2.5 list-none border-t border-ink/[0.07] p-0 pt-1.5">
+                    <?php foreach ($group['items'] as $clinic): ?>
+                      <li>
+                        <a href="<?= e($clinic['href']) ?>" class="block rounded-lg px-2 py-[7px] -mx-2 text-[13px] leading-snug text-ink/65 transition-colors hover:bg-[#f2f6f9] hover:text-brand-blue focus-visible:bg-[#f2f6f9] focus-visible:text-brand-blue focus-visible:outline-none">
+                          <?= e($clinic['label']) ?>
+                        </a>
+                      </li>
+                    <?php endforeach; ?>
+                  </ul>
+                </li>
+              <?php endforeach; ?>
+            </ul>
+
+            <?php else: ?>
             <ul class="m-0 grid list-none <?= $columns === 1 ? 'grid-cols-1' : 'grid-cols-2' ?> gap-1 p-0">
               <?php foreach ($menu['items'] as $child): ?>
                 <?php $here = $child['href'] === $current_page; ?>
@@ -251,9 +282,12 @@ $nav_link  = 'relative inline-flex items-center gap-1.5 whitespace-nowrap rounde
                 </li>
               <?php endif; ?>
             </ul>
+            <?php endif; ?>
           </div>
 
-          <?php if ($feature && $feature['kind'] === 'photo'): ?>
+          <?php if ($groups): ?>
+          <?php // No feature beside a groups menu — the regions have the width. ?>
+          <?php elseif ($feature && $feature['kind'] === 'photo'): ?>
             <a href="<?= e($feature['href']) ?>" class="group/feat relative flex min-h-[220px] flex-col justify-end overflow-hidden rounded-[20px] bg-night p-5 text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange">
               <img src="<?= e(asset('assets/img/' . $feature['image'])) ?>" alt="" aria-hidden="true" loading="lazy" decoding="async" class="absolute inset-0 h-full w-full object-cover object-[42%_45%] transition-transform duration-700 ease-out group-hover/feat:scale-[1.04] motion-reduce:transition-none">
               <span aria-hidden="true" class="absolute inset-0 bg-[linear-gradient(180deg,rgba(9,20,28,0.08)_0%,rgba(9,20,28,0.38)_45%,rgba(9,20,28,0.9)_100%)]"></span>
@@ -320,6 +354,31 @@ $nav_link  = 'relative inline-flex items-center gap-1.5 whitespace-nowrap rounde
               </span>
               <span aria-hidden="true" class="flex h-8 w-8 items-center justify-center rounded-full bg-[#f2f6f9] text-ink/60 transition-transform duration-200 group-open/acc:rotate-180 motion-reduce:transition-none"><?= nav_icon('chevron', 'h-4 w-4') ?></span>
             </summary>
+            <?php if (!empty($menu['groups'])): ?>
+            <?php // Regions as small headings with their clinics under them —
+                  // a second level of accordion inside the first is a lot of
+                  // tapping for fifteen short links. ?>
+            <ul class="m-0 grid list-none gap-4 p-0 pb-3">
+              <?php foreach ($menu['groups'] as $group): ?>
+                <li>
+                  <a href="<?= e($group['href']) ?>" class="flex items-baseline justify-between gap-3 px-3 py-1">
+                    <span class="text-[13px] font-extrabold uppercase tracking-[0.1em] text-ink"><?= e($group['name']) ?></span>
+                    <span class="text-[11.5px] text-ink/45"><?= e($group['desc']) ?></span>
+                  </a>
+                  <ul class="m-0 mt-1 grid list-none grid-cols-2 gap-0.5 p-0">
+                    <?php foreach ($group['items'] as $clinic): ?>
+                      <li>
+                        <a href="<?= e($clinic['href']) ?>" class="block rounded-xl px-3 py-2.5 text-[14.5px] font-bold leading-tight text-ink/75 transition-colors hover:bg-[#f2f6f9] hover:text-brand-blue">
+                          <?= e($clinic['label']) ?>
+                        </a>
+                      </li>
+                    <?php endforeach; ?>
+                  </ul>
+                </li>
+              <?php endforeach; ?>
+            </ul>
+
+            <?php else: ?>
             <ul class="m-0 grid list-none gap-0.5 p-0 pb-3">
               <?php foreach ($menu['items'] as $child): ?>
                 <?php $here = $child['href'] === $current_page; ?>
@@ -345,6 +404,7 @@ $nav_link  = 'relative inline-flex items-center gap-1.5 whitespace-nowrap rounde
                 </li>
               <?php endif; ?>
             </ul>
+            <?php endif; ?>
           </details>
         <?php else: ?>
           <a href="<?= e($item['href']) ?>" class="flex items-center justify-between gap-3 rounded-2xl border-b border-ink/[0.07] px-3 py-3.5 text-[17px] font-extrabold tracking-[-0.01em] text-ink transition-colors hover:text-brand-blue aria-[current=page]:text-brand-blue"<?= $is_current ? ' aria-current="page"' : '' ?>>
@@ -358,9 +418,9 @@ $nav_link  = 'relative inline-flex items-center gap-1.5 whitespace-nowrap rounde
     <div class="mt-1 grid grid-cols-2 gap-2 rounded-[18px] bg-[#faf8f3] p-3">
       <a href="<?= e($site['phone_href']) ?>" class="flex items-center justify-center gap-2 rounded-full border-2 border-brand-blue px-4 py-3.5 text-sm font-extrabold text-brand-blue">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6.5 3.5h3l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4.5 5.7 2 2 0 0 1 6.5 3.5Z"/></svg>
-        Call us
+        Call Us
       </a>
-      <a href="index.php#book" class="flex items-center justify-center rounded-full bg-brand-orange px-4 py-3.5 text-sm font-extrabold text-white transition-colors hover:bg-brand-orange-dark">Get started</a>
+      <a href="contact.php" class="flex items-center justify-center rounded-full bg-brand-orange px-4 py-3.5 text-sm font-extrabold text-white transition-colors hover:bg-brand-orange-dark">Get Started</a>
       <p class="col-span-2 m-0 pt-1 text-center text-[12px] text-ink/50">In crisis? Call or text 988 any time.</p>
     </div>
   </nav>

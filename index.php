@@ -28,12 +28,12 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
     <p class="on-footage mb-9 mt-6 max-w-[54ch] text-base leading-relaxed text-white/85 sm:text-[19px]">Evidence-based psychiatry, therapy and TMS — delivered by clinicians who take the time to know you. In-person and telehealth, most insurance accepted.</p>
 
     <div class="pointer-events-auto flex flex-wrap justify-center gap-3">
-      <a href="#book" class="inline-flex items-center gap-2.5 rounded-full bg-white px-7 py-4 text-[15px] font-extrabold text-brand-blue transition-colors hover:bg-brand-orange hover:text-white">Get started</a>
+      <a href="#book" class="inline-flex items-center gap-2.5 rounded-full bg-white px-7 py-4 text-[15px] font-extrabold text-brand-blue transition-colors hover:bg-brand-orange hover:text-white">Get Started</a>
       <a href="<?= e($site['phone_href']) ?>" class="inline-flex items-center gap-2.5 rounded-full border-2 border-white/55 px-7 py-4 text-[15px] font-extrabold text-white transition-colors hover:bg-white/15"><?= e($site['phone']) ?></a>
     </div>
 
     <a href="#tms" class="pointer-events-auto mt-8 inline-flex items-center gap-2 text-sm font-extrabold text-white transition-colors hover:text-brand-green">
-      Learn about TMS
+      Learn About TMS
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"></path></svg>
     </a>
   </div>
@@ -55,7 +55,7 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
         <?php endfor; ?>
       </div>
     </div>
-    <a href="#book" class="whitespace-nowrap text-[13px] font-extrabold text-brand-blue transition-colors hover:text-brand-blue-dark">Verify my coverage →</a>
+    <a href="#book" class="whitespace-nowrap text-[13px] font-extrabold text-brand-blue transition-colors hover:text-brand-blue-dark">Verify My Coverage →</a>
   </div>
 </section>
 
@@ -89,7 +89,7 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
 <section id="conditions" class="mx-auto max-w-[1280px] px-5 py-14 sm:px-10 lg:py-[72px]">
   <div data-reveal class="mb-9 flex flex-wrap items-end justify-between gap-10 border-b-2 border-ink/15 pb-6">
     <div>
-      <p class="<?= $eyebrow ?> mb-4 text-brand-blue">Conditions we treat</p>
+      <p class="<?= $eyebrow ?> mb-4 text-brand-blue">Conditions We Treat</p>
       <h2 class="m-0 max-w-[20ch] text-[32px] leading-[1.06] tracking-[-0.03em] sm:text-[44px]">Care for the whole range of what you're carrying.</h2>
     </div>
     <p class="m-0 max-w-[34ch] text-[15px] font-medium leading-relaxed text-ink/70">Every plan starts with a full diagnostic assessment — never a fifteen-minute script.</p>
@@ -114,7 +114,7 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
         </button>
       <?php endforeach; ?>
       <a href="#book" class="cond-tail mt-6 inline-flex items-center gap-2 text-sm font-extrabold text-brand-blue transition-colors hover:text-brand-blue-dark">
-        See all conditions we treat <?= arrow_icon(15) ?>
+        See All Conditions We Treat <?= arrow_icon(15) ?>
       </a>
     </div>
 
@@ -143,9 +143,9 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
               </div>
               <div class="flex flex-wrap gap-0.5">
                 <a href="#book" class="inline-flex items-center gap-2 rounded-full bg-white px-[18px] py-3.5 text-sm font-extrabold text-ink transition-colors hover:bg-brand-orange hover:text-white">
-                  Get care <?= arrow_icon(15) ?>
+                  Get Care <?= arrow_icon(15) ?>
                 </a>
-                <a href="<?= e($condition['page'] ?? '#treatments') ?>" class="inline-flex items-center gap-2 rounded-full bg-white/15 px-[18px] py-3.5 text-sm font-extrabold text-white transition-colors hover:bg-white/30"><?= isset($condition['page']) ? 'Learn more' : 'Treatments' ?></a>
+                <a href="<?= e($condition['page'] ?? '#treatments') ?>" class="inline-flex items-center gap-2 rounded-full bg-white/15 px-[18px] py-3.5 text-sm font-extrabold text-white transition-colors hover:bg-white/30"><?= isset($condition['page']) ? 'Learn More' : 'Treatments' ?></a>
               </div>
             </div>
           </div>
@@ -167,7 +167,7 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
           <p class="m-0 cursor-default text-pretty font-serif text-[22px] font-medium leading-[1.38] tracking-[-0.015em] text-white/80 transition-colors duration-300 hover:text-[#fbd9b0] sm:text-[26px] lg:text-[32px]"><?= e($paragraph) ?></p>
         <?php endforeach; ?>
         <a href="about.php" class="mt-2 inline-flex items-center gap-2.5 self-start rounded-full bg-white px-7 py-4 text-[15px] font-extrabold text-brand-blue transition-colors hover:bg-brand-orange hover:text-white">
-          About us <?= arrow_icon(15) ?>
+          About Us <?= arrow_icon(15) ?>
         </a>
       </div>
     </div>
@@ -207,7 +207,7 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
     </div>
 
     <div class="mt-12 text-center">
-      <a href="#book" class="inline-flex items-center rounded-full bg-brand-blue px-7 py-4 text-[15px] font-extrabold text-white transition-colors hover:bg-brand-blue-dark">Get care today</a>
+      <a href="#book" class="inline-flex items-center rounded-full bg-brand-blue px-7 py-4 text-[15px] font-extrabold text-white transition-colors hover:bg-brand-blue-dark">Get Care Today</a>
     </div>
   </div>
 </section>
@@ -231,7 +231,7 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
         <p class="m-0 mt-0.5 text-sm leading-relaxed text-ink/65">The PHQ-9 takes two minutes. It is a screening questionnaire, not a diagnosis — we will go through it with you.</p>
       </div>
     </div>
-    <a href="#book" class="inline-flex shrink-0 items-center gap-2 rounded-full bg-brand-blue px-7 py-4 text-[15px] font-extrabold text-white transition-colors hover:bg-brand-blue-dark">
+    <a href="phq9.php" class="inline-flex shrink-0 items-center gap-2 rounded-full bg-brand-blue px-7 py-4 text-[15px] font-extrabold text-white transition-colors hover:bg-brand-blue-dark">
       Take the PHQ-9 <?= arrow_icon(15) ?>
     </a>
   </div>
@@ -262,7 +262,7 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
           <?php endforeach; ?>
         </div>
         <a href="#book" class="inline-flex items-center gap-2.5 whitespace-nowrap rounded-full bg-white px-7 py-4 text-[15px] font-extrabold text-brand-blue transition-colors hover:bg-brand-orange hover:text-white">
-          See if TMS is right for you <?= arrow_icon(16) ?>
+          See If TMS Is Right for You <?= arrow_icon(16) ?>
         </a>
       </div>
     </div>
@@ -304,12 +304,12 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
       <div class="hidden lg:block"></div>
       <div class="rounded-b-[20px] bg-therapy px-5 pb-10 pt-7 sm:px-8">
         <a href="#book" class="inline-flex items-center gap-2 rounded-full bg-brand-blue px-6 py-3.5 text-sm font-extrabold text-white transition-colors hover:bg-brand-blue-dark">
-          Get started <?= arrow_icon(15) ?>
+          Get Started <?= arrow_icon(15) ?>
         </a>
       </div>
       <div class="mt-4 rounded-b-[20px] bg-psych px-5 pb-10 pt-7 sm:px-8 lg:mt-0">
         <a href="#book" class="inline-flex items-center gap-2 rounded-full bg-brand-orange px-6 py-3.5 text-sm font-extrabold text-white transition-colors hover:bg-brand-orange-dark">
-          Get started <?= arrow_icon(15) ?>
+          Get Started <?= arrow_icon(15) ?>
         </a>
       </div>
     </div>
@@ -351,7 +351,7 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
     <?php endforeach; ?>
 
     <div class="mt-10 text-center">
-      <a href="reviews.php" class="inline-flex items-center rounded-full bg-white px-7 py-4 text-[15px] font-extrabold text-brand-blue transition-colors hover:bg-brand-orange hover:text-white">Read all the reviews</a>
+      <a href="reviews.php" class="inline-flex items-center rounded-full bg-white px-7 py-4 text-[15px] font-extrabold text-brand-blue transition-colors hover:bg-brand-orange hover:text-white">Read All the Reviews</a>
     </div>
   </div>
 </section>
@@ -399,7 +399,7 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
 
         <?php // The homepage carries a sample; faq.php carries the whole set. ?>
         <a href="faq.php" class="mt-9 inline-flex items-center gap-2.5 rounded-full border-2 border-brand-blue-dark/35 bg-transparent px-6 py-3.5 text-[14px] font-extrabold text-brand-blue-dark transition-colors hover:border-brand-blue-dark hover:bg-brand-blue-dark hover:text-white">
-          See all the questions <?= arrow_icon(15) ?>
+          See All the Questions <?= arrow_icon(15) ?>
         </a>
       </div>
     </div>
@@ -413,7 +413,7 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
       Ready when you are <em class="font-serif font-normal italic">— and sooner than you think</em>
     </h2>
     <p class="mx-auto m-0 mb-6 max-w-[52ch] text-base font-medium text-ink/75">Most new patients are seen inside a week. We check your benefits first, so you know what a visit costs before you walk in.</p>
-    <a href="#book" class="inline-flex items-center rounded-full bg-brand-blue px-7 py-4 text-[15px] font-extrabold text-white transition-colors hover:bg-brand-blue-dark">Book a consultation</a>
+    <a href="#book" class="inline-flex items-center rounded-full bg-brand-blue px-7 py-4 text-[15px] font-extrabold text-white transition-colors hover:bg-brand-blue-dark">Book a Consultation</a>
     <p class="m-0 mt-[18px] text-xs text-ink/55">In crisis? Call or text 988 any time.</p>
   </div>
 </section>

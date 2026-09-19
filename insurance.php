@@ -75,12 +75,12 @@ foreach ($insurers as $insurer) {
         </p>
 
         <div class="mt-6 flex flex-wrap gap-3 sm:mt-8">
-          <a href="index.php#book" class="<?= $btn_blue ?>">Check my coverage <?= arrow_icon(16) ?></a>
+          <a href="index.php#book" class="<?= $btn_blue ?>">Check My Coverage <?= arrow_icon(16) ?></a>
           <a href="<?= e($site['phone_href']) ?>" class="<?= $btn_line ?>"><?= e($site['phone']) ?></a>
         </div>
 
         <p class="m-0 mt-5 text-[13px] leading-relaxed text-ink/65 sm:mt-6">
-          Not insured, or would rather not involve your insurer? <a href="#self-pay" class="font-extrabold text-brand-blue underline decoration-brand-blue/30 underline-offset-4 hover:decoration-brand-blue">Paying privately</a> is straightforward.
+          Not insured, or would rather not involve your insurer? <a href="#self-pay" class="font-extrabold text-brand-blue underline decoration-brand-blue/30 underline-offset-4 hover:decoration-brand-blue">Paying Privately</a> is straightforward.
         </p>
       </div>
     </div>
@@ -224,7 +224,7 @@ foreach ($insurers as $insurer) {
     <p class="m-0 mt-6 border-t border-ink/10 pt-5 text-[13.5px] leading-[1.7] text-ink/60">
       Criteria vary between carriers and between plans within a carrier. Tricare covers TMS for
       veterans with major depressive disorder and PTSD.
-      <a href="tms.php" class="font-extrabold text-brand-blue underline underline-offset-4 hover:text-brand-blue-dark">Read about TMS</a>.
+      <a href="tms.php" class="font-extrabold text-brand-blue underline underline-offset-4 hover:text-brand-blue-dark">Read About TMS</a>.
     </p>
   </div>
 </section>
@@ -286,7 +286,7 @@ foreach ($insurers as $insurer) {
       leaves you — before anything is booked.
     </p>
     <div class="flex flex-wrap items-center justify-center gap-3">
-      <a href="index.php#book" class="<?= $btn_blue ?>">Check my coverage <?= arrow_icon(16) ?></a>
+      <a href="index.php#book" class="<?= $btn_blue ?>">Check My Coverage <?= arrow_icon(16) ?></a>
       <a href="<?= e($site['phone_href']) ?>" class="<?= $btn_line ?>"><?= e($site['phone']) ?></a>
     </div>
   </div>

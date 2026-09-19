@@ -26,7 +26,7 @@ $team_faces  = array_slice(array_values(array_filter(
         <p class="!mb-6 text-[11px] font-medium uppercase tracking-[0.18em] text-[#3c5261]">About Anew Era Health</p>
         <h1 class="text-[46px] sm:text-[56px] lg:text-[68px]">Care begins<br>with <em class="text-brand-blue-dark">understanding.</em></h1>
         <p class="!mt-6 max-w-[375px] text-[15px] font-normal leading-[1.8] text-[#334b5a] sm:text-base">We bring psychiatry, therapy and TMS together around what matters most: you, and the life you want to live.</p>
-        <a href="#approach" class="mt-7 inline-flex items-center gap-8 rounded-full bg-[#203e35] px-6 py-3.5 text-[13px] font-semibold text-white transition-colors hover:bg-[#315448] motion-reduce:transition-none">Our approach <?= arrow_icon(16) ?></a>
+        <a href="#approach" class="mt-7 inline-flex items-center gap-8 rounded-full bg-[#203e35] px-6 py-3.5 text-[13px] font-semibold text-white transition-colors hover:bg-[#315448] motion-reduce:transition-none">Our Approach <?= arrow_icon(16) ?></a>
       </div>
 
     </div>
@@ -37,7 +37,7 @@ $team_faces  = array_slice(array_values(array_filter(
   </section>
   </div>
 
-  <div class="border-b border-ink/15 [&>div]:flex [&>div]:flex-col [&>div]:items-start [&>div]:justify-between [&>div]:gap-3 [&>div]:py-[23px] md:[&>div]:flex-row md:[&>div]:items-center md:[&>div]:gap-6 md:[&>div]:py-[27px] [&_p]:font-serif [&_p]:text-[22px] md:[&_p]:text-2xl [&_em]:text-[#527363] [&_a]:flex [&_a]:items-center [&_a]:gap-4 [&_a]:text-xs [&_a]:font-bold md:[&_a]:gap-8 [&_a_span]:text-2xl [&_a_span]:text-brand-blue"><div class="mx-auto max-w-[1280px] px-[22px] md:px-7 lg:px-10"><p>Rooted in science. <em>Centered on you.</em></p><a href="#care">Explore our approach <span aria-hidden="true">↘</span></a></div></div>
+  <div class="border-b border-ink/15 [&>div]:flex [&>div]:flex-col [&>div]:items-start [&>div]:justify-between [&>div]:gap-3 [&>div]:py-[23px] md:[&>div]:flex-row md:[&>div]:items-center md:[&>div]:gap-6 md:[&>div]:py-[27px] [&_p]:font-serif [&_p]:text-[22px] md:[&_p]:text-2xl [&_em]:text-[#527363] [&_a]:flex [&_a]:items-center [&_a]:gap-4 [&_a]:text-xs [&_a]:font-bold md:[&_a]:gap-8 [&_a_span]:text-2xl [&_a_span]:text-brand-blue"><div class="mx-auto max-w-[1280px] px-[22px] md:px-7 lg:px-10"><p>Rooted in science. <em>Centered on you.</em></p><a href="#care">Explore Our Approach <span aria-hidden="true">↘</span></a></div></div>
 
   <section class="py-[60px] md:py-[76px] lg:py-[104px] mx-auto max-w-[1280px] px-[22px] md:px-7 lg:px-10 grid gap-[34px] md:grid-cols-2 md:gap-[45px] lg:gap-[80px] items-center" id="approach">
     <div>
@@ -59,7 +59,7 @@ $team_faces  = array_slice(array_values(array_filter(
         </p>
       </div>
       <a class="mt-8 inline-flex items-center gap-4 border-b border-brand-blue/30 py-2 text-[14px] font-bold text-brand-blue transition-colors hover:border-brand-blue" href="index.php#treatments">
-        Discover the ways we can help <?= arrow_icon(16) ?>
+        Discover the Ways We Can Help <?= arrow_icon(16) ?>
       </a>
     </div>
 
@@ -101,7 +101,7 @@ $team_faces  = array_slice(array_values(array_filter(
   </section>
 
   <section class="mx-auto max-w-[1280px] px-[22px] md:px-7 lg:px-10 py-[60px] md:py-[76px] lg:py-[104px] grid gap-4 !pb-0 md:grid-cols-2 md:gap-[22px]">
-    <div class="relative overflow-hidden rounded-3xl bg-[#0e537c] px-7 py-[38px] text-white lg:px-[45px] lg:py-14 [&>p]:relative [&>p]:z-10 [&>h2]:relative [&>h2]:z-10 [&_h2_em]:!text-[#cde3de] [&>p:not(:first-child)]:mt-7 [&>p:not(:first-child)]:max-w-[365px] [&>p:not(:first-child)]:text-base [&>p:not(:first-child)]:leading-[1.8] [&>p:not(:first-child)]:text-[#e1e9ee] [&>a]:relative [&>a]:z-10 [&>a]:mt-8"><p class="!mb-5 flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-[0.17em] md:!mb-[26px] [&>span]:h-[7px] [&>span]:w-[7px] [&>span]:rounded-full [&>span]:bg-[#b0ce87]">Our mission</p><h2>Make room for<br><em>what’s possible.</em></h2><p>Our mission is to put TMS within reach of more people living with depression, as part of a wider commitment to personal, connected mental health care.</p><a class="inline-flex items-center justify-center gap-[22px] rounded-full px-[25px] py-[17px] text-sm font-bold transition-colors motion-reduce:transition-none bg-white text-[#154c69] hover:bg-[#e6eddc]" href="index.php#tms">Explore TMS therapy <?= arrow_icon(17) ?></a><div class="absolute -bottom-[100px] -right-[220px] h-[370px] w-[370px] rounded-full border border-white/10 shadow-[0_0_0_40px_#ffffff06,0_0_0_80px_#ffffff04]" aria-hidden="true"></div></div>
+    <div class="relative overflow-hidden rounded-3xl bg-[#0e537c] px-7 py-[38px] text-white lg:px-[45px] lg:py-14 [&>p]:relative [&>p]:z-10 [&>h2]:relative [&>h2]:z-10 [&_h2_em]:!text-[#cde3de] [&>p:not(:first-child)]:mt-7 [&>p:not(:first-child)]:max-w-[365px] [&>p:not(:first-child)]:text-base [&>p:not(:first-child)]:leading-[1.8] [&>p:not(:first-child)]:text-[#e1e9ee] [&>a]:relative [&>a]:z-10 [&>a]:mt-8"><p class="!mb-5 flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-[0.17em] md:!mb-[26px] [&>span]:h-[7px] [&>span]:w-[7px] [&>span]:rounded-full [&>span]:bg-[#b0ce87]">Our mission</p><h2>Make room for<br><em>what’s possible.</em></h2><p>Our mission is to put TMS within reach of more people living with depression, as part of a wider commitment to personal, connected mental health care.</p><a class="inline-flex items-center justify-center gap-[22px] rounded-full px-[25px] py-[17px] text-sm font-bold transition-colors motion-reduce:transition-none bg-white text-[#154c69] hover:bg-[#e6eddc]" href="index.php#tms">Explore TMS Therapy <?= arrow_icon(17) ?></a><div class="absolute -bottom-[100px] -right-[220px] h-[370px] w-[370px] rounded-full border border-white/10 shadow-[0_0_0_40px_#ffffff06,0_0_0_80px_#ffffff04]" aria-hidden="true"></div></div>
     <figure class="relative min-h-[380px] overflow-hidden rounded-3xl md:min-h-[460px] lg:min-h-[490px] after:absolute after:inset-x-0 after:bottom-0 after:top-1/2 after:bg-[linear-gradient(transparent,#122a35b3)] after:content-[''] [&_figcaption]:absolute [&_figcaption]:bottom-7 [&_figcaption]:left-[30px] [&_figcaption]:right-[30px] [&_figcaption]:z-10 [&_figcaption]:font-serif [&_figcaption]:text-[26px] [&_figcaption]:italic [&_figcaption]:text-white"><?= image_slot('homepage/results-joy.jpg', '', 'A father and daughter sharing a laugh outdoors') ?><figcaption>For the moments that make life yours.</figcaption></figure>
   </section>
 
@@ -242,7 +242,7 @@ $team_faces  = array_slice(array_values(array_filter(
         Explore your care options and take a first step that feels right for you.
       </p>
       <a href="index.php#book" class="inline-flex items-center gap-2.5 rounded-full bg-brand-blue px-8 py-4 text-[15px] font-extrabold text-white shadow-md shadow-brand-blue/20 transition-all hover:bg-brand-blue-dark hover:shadow-lg hover:-translate-y-0.5">
-        Book a consultation <?= arrow_icon(16) ?>
+        Book a Consultation <?= arrow_icon(16) ?>
       </a>
     </div>
   </section>

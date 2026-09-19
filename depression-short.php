@@ -64,7 +64,7 @@ $anchor   = 'scroll-mt-[148px] sm:scroll-mt-[164px]';
         </p>
 
         <div class="mt-6 flex flex-wrap gap-3 sm:mt-8">
-          <a href="#book" class="<?= $btn_blue ?>">Book a consultation <?= arrow_icon(16) ?></a>
+          <a href="#book" class="<?= $btn_blue ?>">Book a Consultation <?= arrow_icon(16) ?></a>
           <a href="<?= e($site['phone_href']) ?>" class="<?= $btn_line ?>"><?= e($site['phone']) ?></a>
         </div>
 
@@ -115,7 +115,7 @@ $anchor   = 'scroll-mt-[148px] sm:scroll-mt-[164px]';
     </div>
 
     <a href="treatments.php" class="mt-6 inline-flex items-center gap-4 border-b border-brand-blue/30 py-2 sm:mt-8 text-sm font-bold text-brand-blue transition-colors hover:border-brand-blue">
-      See how we treat it <?= arrow_icon(16) ?>
+      See How We Treat It <?= arrow_icon(16) ?>
     </a>
   </div>
 
@@ -188,7 +188,7 @@ $anchor   = 'scroll-mt-[148px] sm:scroll-mt-[164px]';
           <p class="m-0 text-[16px] font-extrabold tracking-[-0.01em] text-ink">Put a number on it in two minutes.</p>
           <p class="m-0 mt-1 max-w-[44ch] text-sm leading-relaxed text-ink/65">The PHQ-9 is a screening questionnaire, not a diagnosis — we go through the result with you.</p>
         </div>
-        <a href="index.php#book" class="<?= $btn_blue ?> shrink-0">Take the PHQ-9 <?= arrow_icon(15) ?></a>
+        <a href="phq9.php" class="<?= $btn_blue ?> shrink-0">Take the PHQ-9 <?= arrow_icon(15) ?></a>
       </div>
     </div>
   </div>
@@ -274,7 +274,7 @@ $anchor   = 'scroll-mt-[148px] sm:scroll-mt-[164px]';
         </p>
 
         <a href="index.php#book" class="mt-7 inline-flex items-center justify-center gap-[22px] rounded-full bg-white px-[25px] py-[17px] sm:mt-8 text-sm font-bold text-[#154c69] transition-colors hover:bg-[#e6eddc]">
-          See if TMS is right for you <?= arrow_icon(17) ?>
+          See If TMS Is Right for You <?= arrow_icon(17) ?>
         </a>
       </div>
     </div>
@@ -472,7 +472,7 @@ foreach ($data['conditions'] as $condition) {
           We know how hard appointments are to fit into a week that is already full. After the first visit, a TMS session generally runs fifteen to twenty minutes — short enough for a lunch break, with nothing to recover from afterwards.
         </p>
         <div class="mt-6 flex flex-wrap gap-3 sm:mt-8">
-          <a href="index.php#book" class="<?= $btn_blue ?>">Book a consultation <?= arrow_icon(16) ?></a>
+          <a href="index.php#book" class="<?= $btn_blue ?>">Book a Consultation <?= arrow_icon(16) ?></a>
           <a href="<?= e($site['phone_href']) ?>" class="<?= $btn_line ?>">Call <?= e($site['phone']) ?></a>
         </div>
         <p class="m-0 mt-6 text-xs text-ink/55">In crisis? Call or text 988 any time.</p>

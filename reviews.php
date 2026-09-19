@@ -119,8 +119,8 @@ foreach (array_slice($reviews, $first_page) as $r) {
         </p>
 
         <div class="mt-6 flex flex-wrap gap-3 sm:mt-8">
-          <a href="#all" class="<?= $btn_blue ?>">Read the reviews <?= arrow_icon(16) ?></a>
-          <a href="index.php#book" class="<?= $btn_line ?>">Book a consultation</a>
+          <a href="#all" class="<?= $btn_blue ?>">Read the Reviews <?= arrow_icon(16) ?></a>
+          <a href="index.php#book" class="<?= $btn_line ?>">Book a Consultation</a>
         </div>
 
         <div class="mt-6 flex items-center gap-3 sm:mt-7">
@@ -274,18 +274,18 @@ foreach (array_slice($reviews, $first_page) as $r) {
         // left alone, so most cards carry no button at all.
         $long = mb_strlen($r['text']) > 360;
       ?>
-<li data-review-card data-region="<?= e($locations[$r['clinic']]['state']) ?>" data-clinic="<?= e($r['clinic']) ?>" data-topics="<?= e(implode(' ', $r['topics'])) ?>"<?= $i >= $first_page ? ' hidden' : '' ?>><figure class="rv-card"><div class="rv-head"><span class="rv-stars" role="img" aria-label="Rated 5 out of 5">★★★★★</span><span class="rv-source"><?= e($r['source']) ?></span></div><blockquote class="rv-quote"><span<?= $long ? ' data-review-text class="line-clamp-6"' : '' ?>><?= e($r['text']) ?></span><?php if ($long): ?><button type="button" data-review-expand class="rv-expand">Read more</button><?php endif; ?></blockquote><figcaption class="rv-foot"><span aria-hidden="true" class="rv-avatar"><?= e($r['initials']) ?></span><span class="min-w-0"><span class="rv-name"><?= e($r['name']) ?></span><span class="rv-place"><?= e($r['city']) ?> &middot; <?= e($r['when']) ?></span></span></figcaption></figure></li>
+<li data-review-card data-region="<?= e($locations[$r['clinic']]['state']) ?>" data-clinic="<?= e($r['clinic']) ?>" data-topics="<?= e(implode(' ', $r['topics'])) ?>"<?= $i >= $first_page ? ' hidden' : '' ?>><figure class="rv-card"><div class="rv-head"><span class="rv-stars" role="img" aria-label="Rated 5 out of 5">★★★★★</span><span class="rv-source"><?= e($r['source']) ?></span></div><blockquote class="rv-quote"><span<?= $long ? ' data-review-text class="line-clamp-6"' : '' ?>><?= e($r['text']) ?></span><?php if ($long): ?><button type="button" data-review-expand class="rv-expand">Read More</button><?php endif; ?></blockquote><figcaption class="rv-foot"><span aria-hidden="true" class="rv-avatar"><?= e($r['initials']) ?></span><span class="min-w-0"><span class="rv-name"><?= e($r['name']) ?></span><span class="rv-place"><?= e($r['city']) ?> &middot; <?= e($r['when']) ?></span></span></figcaption></figure></li>
     <?php endforeach; ?>
   </ul>
 
   <p data-review-empty hidden class="m-0 rounded-[24px] border border-dashed border-ink/20 bg-white px-6 py-14 text-center text-base leading-[1.75] text-ink/60">
     No reviews match that yet.
-    <button type="button" data-review-reset class="mt-3 block w-full text-sm font-extrabold text-brand-blue underline underline-offset-4">Clear the filters</button>
+    <button type="button" data-review-reset class="mt-3 block w-full text-sm font-extrabold text-brand-blue underline underline-offset-4">Clear the Filters</button>
   </p>
 
   <div class="mt-8 text-center">
     <button type="button" data-review-more class="<?= $btn_blue ?> cursor-pointer">
-      Show <?= e((string) $page_step) ?> more <?= arrow_icon(16) ?>
+      Show <?= e((string) $page_step) ?> More <?= arrow_icon(16) ?>
     </button>
   </div>
 </section>
@@ -324,7 +324,7 @@ foreach (array_slice($reviews, $first_page) as $r) {
       Most new patients are seen within a week, and we check your insurance before your first visit.
     </p>
     <div class="flex flex-wrap items-center justify-center gap-3">
-      <a href="index.php#book" class="<?= $btn_blue ?>">Book a consultation <?= arrow_icon(16) ?></a>
+      <a href="index.php#book" class="<?= $btn_blue ?>">Book a Consultation <?= arrow_icon(16) ?></a>
       <a href="<?= e($site['phone_href']) ?>" class="<?= $btn_line ?>"><?= e($site['phone']) ?></a>
     </div>
   </div>
@@ -510,7 +510,7 @@ $schema = [
     var text = button.parentElement.querySelector('[data-review-text]');
     if (!text) return;
     var open = text.classList.toggle('line-clamp-6');
-    button.textContent = open ? 'Read more' : 'Show less';
+    button.textContent = open ? 'Read More' : 'Show Less';
   });
 
   /* ---- The clinic cards below the grid -------------------------------- */

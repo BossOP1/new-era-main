@@ -35,8 +35,10 @@ return [
         ['label' => 'Treatments',    'href' => 'treatments.php', 'menu' => 'treatments'],
         ['label' => 'Conditions',    'href' => 'conditions.php', 'menu' => 'conditions', 'also' => ['depression-short.php']],
         ['label' => 'Resources',     'href' => 'faq.php',        'menu' => 'resources'],
-        // Placeholder until the locations page exists.
-        ['label' => 'Our locations', 'href' => 'index.php#top'],
+        // No locations page yet, so the item is a menu rather than a link —
+        // the dropdown is what does the work. Give it an href once the hub
+        // page exists and the top-level item will start marking current.
+        ['label' => 'Our Locations', 'href' => 'index.php#top', 'menu' => 'locations'],
     ],
 
     // Dropdown contents. 'icon' names a line icon in nav_icon(); 'art' names
@@ -47,13 +49,15 @@ return [
     'menus' => [
         'treatments' => [
             'eyebrow' => 'How we treat',
-            'all'     => ['label' => 'All treatments', 'href' => 'treatments.php'],
+            'all'     => ['label' => 'All Treatments', 'href' => 'treatments.php'],
             'note'    => 'In person and by telehealth. Most insurance accepted.',
             'items'   => [
                 ['label' => 'TMS therapy', 'href' => 'tms.php',        'desc' => 'Magnetic stimulation, no medication', 'icon' => 'coil'],
                 ['label' => 'Psychiatry',  'href' => 'psychiatry.php', 'desc' => 'Evaluation and medication management', 'icon' => 'stethoscope'],
                 ['label' => 'Therapy',     'href' => 'therapy.php',    'desc' => 'CBT, DBT, EMDR and ACT',             'icon' => 'chat'],
+                ['label' => 'Telepsychiatry', 'href' => 'telepsychiatry.php', 'desc' => 'The same care, by secure video',      'icon' => 'chat'],
                 ['label' => 'Spravato®',   'href' => 'spravato.php',   'desc' => 'Esketamine nasal spray, Texas only',  'icon' => 'spray'],
+                ['label' => 'Our TMS system', 'href' => 'magstim-horizon.php', 'desc' => 'The Magstim Horizon® we treat on', 'icon' => 'grid'],
             ],
             'feature' => [
                 'kind'    => 'photo',
@@ -67,7 +71,7 @@ return [
         ],
         'conditions' => [
             'eyebrow' => 'What we treat',
-            'all'     => ['label' => 'All conditions', 'href' => 'conditions.php'],
+            'all'     => ['label' => 'All Conditions', 'href' => 'conditions.php'],
             'note'    => 'Every plan starts with a full diagnostic assessment.',
             'items'   => [
                 ['label' => 'Depression', 'href' => 'depression.php', 'desc' => 'Including treatment-resistant',  'art' => 'depression'],
@@ -80,18 +84,77 @@ return [
             ],
             'feature' => [
                 'kind'    => 'prompt',
-                'href'    => 'index.php#book',
+                'href'    => 'phq9.php',
                 'eyebrow' => 'Not sure where you fit?',
                 'title'   => 'Take the PHQ-9',
                 'copy'    => 'Two minutes, and a place to start. It is a screening questionnaire, not a diagnosis.',
-                'cta'     => 'Start the questionnaire',
+                'cta'     => 'Start the Questionnaire',
             ],
         ],
+        // Locations is the one menu built from groups rather than a flat list
+        // of tiles: four regions, each with its clinics under it. See the
+        // 'groups' branch in includes/header.php.
+        //
+        // ⚠ Every href below points at the team page filtered to that region,
+        // because no per-location pages exist yet. They are real, relevant
+        // destinations in the meantime — who you would be seen by there — and
+        // become locations/<clinic>.php the moment those are written.
+        'locations' => [
+            'eyebrow' => 'Where to find us',
+            'note'    => 'Fifteen clinics across California and Texas. Call and we will find your nearest.',
+            'groups'  => [
+                [
+                    'name'  => 'California',
+                    'href'  => 'team.php#ca',
+                    'desc'  => 'Orange County & Greater LA',
+                    'items' => [
+                        ['label' => 'Newport Beach',     'href' => 'newport-beach.php'],
+                        ['label' => 'Huntington Beach',  'href' => 'huntington-beach.php'],
+                        ['label' => 'Laguna Hills',      'href' => 'laguna-hills.php'],
+                        ['label' => 'Orange',            'href' => 'orange.php'],
+                        ['label' => 'Long Beach',        'href' => 'long-beach.php'],
+                        ['label' => 'Torrance',          'href' => 'torrance.php'],
+                        ['label' => 'West Los Angeles',  'href' => 'west-los-angeles.php'],
+                    ],
+                ],
+                [
+                    'name'  => 'Austin',
+                    'href'  => 'team.php#tx',
+                    'desc'  => 'Austin & the Hill Country',
+                    'items' => [
+                        ['label' => 'Central Austin',    'href' => 'central-austin.php'],
+                        ['label' => 'Cedar Park',        'href' => 'cedar-park.php'],
+                        ['label' => 'Westlake',          'href' => 'westlake.php'],
+                    ],
+                ],
+                [
+                    'name'  => 'Dallas',
+                    'href'  => 'team.php#tx',
+                    'desc'  => 'Dallas & Fort Worth',
+                    'items' => [
+                        ['label' => 'Central Dallas',    'href' => 'central-dallas.php'],
+                        ['label' => 'Allen',             'href' => 'allen.php'],
+                        ['label' => 'Grapevine',         'href' => 'grapevine.php'],
+                    ],
+                ],
+                [
+                    'name'  => 'Houston',
+                    'href'  => 'team.php#tx',
+                    'desc'  => 'North and west of the city',
+                    'items' => [
+                        ['label' => 'Cypress',           'href' => 'cypress.php'],
+                        ['label' => 'The Woodlands',     'href' => 'the-woodlands.php'],
+                    ],
+                ],
+            ],
+        ],
+
         'resources' => [
             'eyebrow' => 'Learn more',
             'note'    => 'Questions about care, cost or insurance? Call us.',
             'columns' => 1,
             'items'   => [
+                ['label' => 'PHQ-9 self-check', 'href' => 'phq9.php',  'desc' => 'Nine questions, scored in your browser',  'icon' => 'clipboard'],
                 // Blogs is a placeholder until the blog exists.
                 ['label' => 'Blogs',   'href' => 'index.php#top',     'desc' => 'Articles on mental health and treatment', 'icon' => 'article'],
                 ['label' => 'Insurance', 'href' => 'insurance.php',   'desc' => 'Carriers, coverage and what you will owe', 'icon' => 'shield'],
@@ -105,7 +168,7 @@ return [
                 'eyebrow' => 'Still have questions?',
                 'title'   => 'Talk to our team',
                 'copy'    => 'Most new patients are seen inside a week, and we check your benefits first.',
-                'cta'     => 'Book a consultation',
+                'cta'     => 'Book a Consultation',
             ],
         ],
     ],
@@ -120,20 +183,24 @@ return [
             ['label' => 'Our focus',   'href' => 'index.php#focus'],
         ],
         'Patients' => [
-            ['label' => 'Book a visit',   'href' => 'index.php#book'],
+            ['label' => 'Book a Visit',   'href' => 'index.php#book'],
             ['label' => 'Meet our team',  'href' => 'team.php'],
             ['label' => 'Reviews',        'href' => 'reviews.php'],
             ['label' => 'Insurance',      'href' => 'insurance.php'],
             ['label' => 'FAQs',           'href' => 'faq.php'],
+            ['label' => 'Contact us',     'href' => 'contact.php'],
         ],
     ],
 
+    // Cookie policy and Sitemap were placeholders for pages that do not exist;
+    // this site sets no cookies of its own, and what a cookie policy would
+    // have said now sits inside the privacy policy. Add them back when there
+    // is something to point at.
     'legal_nav' => [
-        ['label' => 'Terms & conditions', 'href' => 'index.php#top'],
-        ['label' => 'Privacy notice',     'href' => 'index.php#top'],
-        ['label' => 'Cookie policy',      'href' => 'index.php#top'],
-        ['label' => 'Accessibility',      'href' => 'index.php#top'],
-        ['label' => 'Sitemap',            'href' => 'index.php#top'],
+        ['label' => 'Privacy policy',     'href' => 'privacy.php'],
+        ['label' => 'HIPAA notice',       'href' => 'hipaa.php'],
+        ['label' => 'Terms of use',       'href' => 'terms.php'],
+        ['label' => 'Accessibility',      'href' => 'accessibility.php'],
     ],
 
     'badges' => ['HIPAA Compliant', 'Licensed Providers'],

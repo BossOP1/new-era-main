@@ -102,7 +102,7 @@ $haystack = static function (array $p) use ($locations): string {
         </p>
 
         <div class="mt-6 flex flex-wrap gap-3 sm:mt-8">
-          <a href="#roster" class="<?= $btn_blue ?>">Browse the team <?= arrow_icon(16) ?></a>
+          <a href="#roster" class="<?= $btn_blue ?>">Browse the Team <?= arrow_icon(16) ?></a>
           <a href="<?= e($site['phone_href']) ?>" class="<?= $btn_line ?>"><?= e($site['phone']) ?></a>
         </div>
 
@@ -307,7 +307,7 @@ $haystack = static function (array $p) use ($locations): string {
               </p>
             <?php endif; ?>
             <span class="mt-auto inline-flex items-center gap-2 pt-5 text-[13px] font-extrabold text-brand-blue">
-              Read bio <span class="transition-transform duration-200 group-hover:translate-x-1"><?= arrow_icon(13) ?></span>
+              Read Bio <span class="transition-transform duration-200 group-hover:translate-x-1"><?= arrow_icon(13) ?></span>
             </span>
           </div>
         </button>
@@ -331,7 +331,7 @@ $haystack = static function (array $p) use ($locations): string {
 
   <p data-team-empty hidden class="m-0 rounded-[24px] border border-dashed border-ink/20 bg-white px-6 py-14 text-center text-base leading-[1.75] text-ink/60">
     No one matches that yet.<br>
-    <button type="button" data-team-reset class="mt-3 inline-flex items-center gap-2 text-sm font-extrabold text-brand-blue underline underline-offset-4">Clear the filters</button>
+    <button type="button" data-team-reset class="mt-3 inline-flex items-center gap-2 text-sm font-extrabold text-brand-blue underline underline-offset-4">Clear the Filters</button>
   </p>
 </section>
 
@@ -379,7 +379,7 @@ $haystack = static function (array $p) use ($locations): string {
     </p>
     <div class="flex flex-wrap items-center justify-center gap-3">
       <a href="index.php#book" class="inline-flex items-center gap-2.5 rounded-full bg-brand-blue px-8 py-4 text-[15px] font-extrabold text-white shadow-md shadow-brand-blue/20 transition-all hover:-translate-y-0.5 hover:bg-brand-blue-dark hover:shadow-lg">
-        Book a consultation <?= arrow_icon(16) ?>
+        Book a Consultation <?= arrow_icon(16) ?>
       </a>
       <a href="<?= e($site['phone_href']) ?>" class="<?= $btn_line ?>"><?= e($site['phone']) ?></a>
     </div>
@@ -451,7 +451,7 @@ $haystack = static function (array $p) use ($locations): string {
           <span data-bio-position class="ml-2 text-[12px] font-semibold text-ink/45"></span>
         </div>
         <a href="index.php#book" data-bio-book class="inline-flex items-center gap-2 rounded-full bg-brand-blue px-5 py-2.5 text-[13.5px] font-extrabold text-white transition-colors hover:bg-brand-blue-dark">
-          Book a consultation <?= arrow_icon(14) ?>
+          Book a Consultation <?= arrow_icon(14) ?>
         </a>
       </div>
     </div>

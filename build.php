@@ -30,13 +30,33 @@ $pages = [
     'team.php'    => 'team.html',   // the meet-our-team roster
     'index2.php'  => 'index2.html',   // vibrant variant
     'faq.php'        => 'faq.html',         // the full FAQ
+    'contact.php'    => 'contact.html',     // the contact form
+    'phq9.php'       => 'phq9.html',        // the PHQ-9 screening questionnaire
     'insurance.php'  => 'insurance.html',   // carriers, coverage and cost
+    // The clinic pages, all built from includes/location-page.php.
+    'huntington-beach.php'      => 'huntington-beach.html',
+    'newport-beach.php'         => 'newport-beach.html',
+    'laguna-hills.php'          => 'laguna-hills.html',
+    'orange.php'                => 'orange.html',
+    'torrance.php'              => 'torrance.html',
+    'long-beach.php'            => 'long-beach.html',
+    'west-los-angeles.php'      => 'west-los-angeles.html',
+    'central-austin.php'        => 'central-austin.html',
+    'cedar-park.php'            => 'cedar-park.html',
+    'westlake.php'              => 'westlake.html',
+    'central-dallas.php'        => 'central-dallas.html',
+    'allen.php'                 => 'allen.html',
+    'grapevine.php'             => 'grapevine.html',
+    'cypress.php'               => 'cypress.html',
+    'the-woodlands.php'         => 'the-woodlands.html',
     'reviews.php'    => 'reviews.html',     // every five-star patient review
     'conditions.php' => 'conditions.html', // the conditions index
     'tms.php'        => 'tms.html',        // the TMS treatment page
+    'magstim-horizon.php' => 'magstim-horizon.html', // the equipment behind it
     'treatments.php' => 'treatments.html', // the treatments index
     'psychiatry.php' => 'psychiatry.html', // treatment page
     'therapy.php'    => 'therapy.html',    // treatment page
+    'telepsychiatry.php' => 'telepsychiatry.html', // treatment page
     'spravato.php'   => 'spravato.html',   // treatment page
     'depression.php' => 'depression.html', // condition page
     'depression-short.php' => 'depression-short.html', // short edition, for comparison
@@ -46,8 +66,11 @@ $pages = [
     'tinnitus.php'           => 'tinnitus.html',           // condition page
     'migraines.php'          => 'migraines.html',          // condition page
     'ocd.php'                => 'ocd.html',                // condition page
-    'privacy.php' => 'privacy.html',   // privacy policy
-    'terms.php'   => 'terms.html',     // terms of use
+    // The legal documents, all built from includes/legal-page.php.
+    'privacy.php'       => 'privacy.html',
+    'hipaa.php'         => 'hipaa.html',
+    'terms.php'         => 'terms.html',
+    'accessibility.php' => 'accessibility.html',
 ];
 
 // Folders copied wholesale into dist/.
@@ -196,7 +219,7 @@ foreach ($rootFiles as $file) {
 $missing = [];
 foreach (glob('dist/*.html') as $page) {
     $html = file_get_contents($page);
-    preg_match_all('/(?:src|href)="(?!https?:|tel:|mailto:|#|data:)([^"]+)"/i', $html, $m);
+    preg_match_all('/(?:src|href)="(?!https?:|tel:|sms:|mailto:|#|data:)([^"]+)"/i', $html, $m);
     foreach (array_unique($m[1]) as $ref) {
         $path = 'dist/' . rawurldecode(ltrim(strtok($ref, '?#'), '/'));
         if (!file_exists($path)) {

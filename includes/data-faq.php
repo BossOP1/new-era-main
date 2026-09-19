@@ -41,7 +41,7 @@ return [
                 'A full diagnostic assessment rather than a fifteen-minute script. We go through your history, your physical health, your sleep and your current symptoms, and you leave the same day with a written plan.',
                 'It runs about an hour. Nothing is prescribed in the first ten minutes, and if medication is not the right answer for you, the evaluation is where you find that out.',
             ],
-            'link' => ['What psychiatry involves', 'psychiatry.php'],
+            'link' => ['What Psychiatry Involves', 'psychiatry.php'],
         ],
         [
             'q' => 'How soon can I be seen?',
@@ -62,12 +62,12 @@ return [
         [
             'q' => 'How do I actually book?',
             'a' => 'Call us, or use the booking form and we will call you back. Either way the intake team takes your details, checks your insurance and offers you times before anything is confirmed.',
-            'link' => ['Book a consultation', 'index.php#book'],
+            'link' => ['Book a Consultation', 'index.php#book'],
         ],
         [
             'q' => 'Can I choose which clinician I see?',
             'a' => 'Yes. You can read the team, pick someone, and ask for them by name when you book. Availability varies by clinic, so the intake team will tell you honestly whether that means waiting an extra week.',
-            'link' => ['Meet the team', 'team.php'],
+            'link' => ['Meet the Team', 'team.php'],
         ],
         [
             'q' => 'What if it is not a fit?',
@@ -104,7 +104,7 @@ return [
                 'For treatment-resistant depression, usually — most plans cover a course once two or more antidepressants have been tried and have not worked. Tricare covers TMS for veterans with major depressive disorder and PTSD.',
                 'Criteria vary between carriers and between plans inside the same carrier, so we verify yours and handle the prior authorisation before you commit to anything.',
             ],
-            'link' => ['TMS cost and coverage', 'tms.php'],
+            'link' => ['TMS Cost and Coverage', 'tms.php'],
         ],
         [
             'q' => 'What is prior authorisation, and who does it?',
@@ -150,7 +150,7 @@ return [
         [
             'q' => 'What is TMS?',
             'a' => 'Transcranial magnetic stimulation. A coil held against your head delivers magnetic pulses to a region of the brain involved in mood regulation. It is FDA-cleared, drug-free and non-invasive, you are awake throughout, and you drive yourself home afterwards.',
-            'link' => ['How TMS works', 'tms.php'],
+            'link' => ['How TMS Works', 'tms.php'],
         ],
         [
             'q' => 'Does TMS hurt?',
@@ -198,7 +198,7 @@ return [
         [
             'q' => 'What does TMS treat besides depression?',
             'a' => 'It is FDA-cleared for major depressive disorder and for OCD, and it is used for several other conditions where the evidence is at different stages. What is cleared and what is promising are not the same thing, and the condition pages say which is which.',
-            'link' => ['Conditions we treat', 'conditions.php'],
+            'link' => ['Conditions We Treat', 'conditions.php'],
         ],
         [
             'q' => 'What is accelerated TMS?',
@@ -216,12 +216,12 @@ return [
         [
             'q' => 'Do I have to take medication?',
             'a' => 'No. Medication is one option among several, not the default. Plenty of people do well with therapy alone, or with TMS, and we will say so plainly rather than reaching for a prescription.',
-            'link' => ['What psychiatry covers', 'psychiatry.php'],
+            'link' => ['What Psychiatry Covers', 'psychiatry.php'],
         ],
         [
             'q' => 'Who will I actually see — a psychiatrist or a nurse practitioner?',
             'a' => 'Both are on the team, and both are licensed to diagnose and to prescribe. Which one you see depends on availability and on what you need. The team page says who is who, including credentials.',
-            'link' => ['Meet the team', 'team.php'],
+            'link' => ['Meet the Team', 'team.php'],
         ],
         [
             'q' => 'How long before a medication works?',
@@ -271,7 +271,7 @@ return [
         [
             'q' => 'What kinds of therapy do you offer?',
             'a' => 'CBT, DBT, EMDR and ACT, matched to the problem rather than to whatever the therapist prefers. If what you need is something we do not offer, we will say so and point you somewhere that does.',
-            'link' => ['About our therapy', 'therapy.php'],
+            'link' => ['About Our Therapy', 'therapy.php'],
         ],
         [
             'q' => 'How often would I come, and for how long?',
@@ -337,7 +337,7 @@ return [
                 'Spravato® carries a boxed warning, the FDA’s most prominent kind. It covers sedation and dissociation — sleepiness and a feeling of detachment from yourself — along with the potential for abuse and misuse, and the need to watch for suicidal thoughts and behaviours.',
                 'This is why it is only given in certified clinics, under supervision, with monitoring afterwards. The full safety picture is on the Spravato® page, and your clinician will go through it with you before you agree to anything.',
             ],
-            'link' => ['The safety facts', 'spravato.php'],
+            'link' => ['The Safety Facts', 'spravato.php'],
         ],
         [
             'q' => 'Is it the same as a ketamine infusion?',
@@ -350,7 +350,7 @@ return [
         [
             'q' => 'Where can I get it?',
             'a' => 'At our Texas clinics. It is not offered at the California locations.',
-            'link' => ['Our locations', 'index.php#top'],
+            'link' => ['Our Locations', 'index.php#top'],
         ],
         [
             'q' => 'How often would I come in?',
@@ -372,7 +372,7 @@ return [
         [
             'q' => 'What conditions do you treat?',
             'a' => 'Depression, including treatment-resistant depression, anxiety, postpartum depression and anxiety, PTSD, OCD, tinnitus and migraine, alongside the conditions that arrive with them. Each has a page setting out how we treat it.',
-            'link' => ['Conditions we treat', 'conditions.php'],
+            'link' => ['Conditions We Treat', 'conditions.php'],
         ],
         [
             'q' => 'What counts as treatment-resistant depression?',
@@ -450,7 +450,7 @@ return [
         [
             'q' => 'Where are your clinics?',
             'a' => 'Fifteen: seven across Orange County and greater Los Angeles, and eight across Austin, Dallas and Houston. Telehealth covers the states we are licensed in.',
-            'link' => ['Meet the team by location', 'team.php'],
+            'link' => ['Meet the Team by Location', 'team.php'],
         ],
     ],
 ],

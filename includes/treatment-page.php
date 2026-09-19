@@ -379,7 +379,7 @@ $others = array_values(array_filter(
       <h2 class="<?= $h2 ?>">Often combined.<br><em class="<?= $em ?>">One team.</em></h2>
     </div>
     <a href="treatments.php" class="flex items-center gap-4 pb-2 text-xs font-bold text-ink transition-colors hover:text-brand-blue md:gap-8">
-      All treatments <span aria-hidden="true" class="text-2xl text-brand-blue">&#8600;</span>
+      All Treatments <span aria-hidden="true" class="text-2xl text-brand-blue">&#8600;</span>
     </a>
   </div>
 
@@ -394,7 +394,7 @@ $others = array_values(array_filter(
             <?php endforeach; ?>
           </div>
           <span class="mt-auto inline-flex items-center gap-2 pt-6 text-sm font-extrabold text-brand-blue">
-            Read more <span class="transition-transform duration-200 group-hover:translate-x-1"><?= arrow_icon(15) ?></span>
+            Read More <span class="transition-transform duration-200 group-hover:translate-x-1"><?= arrow_icon(15) ?></span>
           </span>
         </a>
       </li>
@@ -410,7 +410,7 @@ $others = array_values(array_filter(
     </h2>
     <p class="mx-auto m-0 mt-5 max-w-[56ch] text-[15px] leading-[1.75] text-ink/75 sm:text-base sm:leading-[1.8]"><?= e($t['cta']['copy']) ?></p>
     <div class="mt-7 flex flex-wrap justify-center gap-3">
-      <a href="index.php#book" class="<?= $btn_blue ?>">Book a consultation <?= arrow_icon(16) ?></a>
+      <a href="index.php#book" class="<?= $btn_blue ?>">Book a Consultation <?= arrow_icon(16) ?></a>
       <a href="<?= e($site['phone_href']) ?>" class="<?= $btn_line ?>">Call <?= e($site['phone']) ?></a>
     </div>
     <p class="m-0 mt-6 text-xs text-ink/55">In crisis? Call or text 988 any time.</p>

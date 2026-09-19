@@ -58,12 +58,12 @@ $em       = 'italic font-normal text-brand-blue';
         </p>
 
         <div class="mt-6 flex flex-wrap gap-3 sm:mt-8">
-          <a href="#book" class="<?= $btn_blue ?>">See if TMS is right for you <?= arrow_icon(16) ?></a>
+          <a href="#book" class="<?= $btn_blue ?>">See If TMS Is Right for You <?= arrow_icon(16) ?></a>
           <a href="<?= e($site['phone_href']) ?>" class="<?= $btn_line ?>"><?= e($site['phone']) ?></a>
         </div>
 
         <p class="m-0 mt-5 text-[13px] leading-relaxed text-ink/65 sm:mt-6">
-          Most plans cover TMS once two medications have been tried. <a href="#cost" class="font-extrabold text-brand-blue underline decoration-brand-blue/30 underline-offset-4 hover:decoration-brand-blue">What it costs</a>.
+          Most plans cover TMS once two medications have been tried. <a href="#cost" class="font-extrabold text-brand-blue underline decoration-brand-blue/30 underline-offset-4 hover:decoration-brand-blue">What It Costs</a>.
         </p>
       </div>
     </div>
@@ -131,7 +131,7 @@ $em       = 'italic font-normal text-brand-blue';
     </p>
 
     <a href="#how" class="mt-6 inline-flex items-center gap-4 border-b border-brand-blue/30 py-2 text-sm font-bold text-brand-blue transition-colors hover:border-brand-blue sm:mt-7">
-      How it works on the brain <?= arrow_icon(16) ?>
+      How It Works on the Brain <?= arrow_icon(16) ?>
     </a>
   </div>
 
@@ -357,7 +357,7 @@ $em       = 'italic font-normal text-brand-blue';
           Several sessions a day across a short block rather than one a day for weeks. It suits people who cannot take six weeks out, and people who need the change sooner than that. It is not right for everyone, and the assessment is where we work out whether it is right for you.
         </p>
         <a href="index.php#book" class="mt-7 inline-flex items-center gap-2.5 rounded-full bg-white px-7 py-4 text-[15px] font-extrabold text-brand-blue transition-colors hover:bg-brand-orange hover:text-white">
-          Ask about accelerated TMS <?= arrow_icon(16) ?>
+          Ask About Accelerated TMS <?= arrow_icon(16) ?>
         </a>
       </div>
     </div>
@@ -436,7 +436,7 @@ $em       = 'italic font-normal text-brand-blue';
             </div>
           <?php endforeach; ?>
         </div>
-        <a href="index.php#book" class="<?= $btn_blue ?> mt-7 w-full justify-center sm:w-auto">Verify my coverage <?= arrow_icon(16) ?></a>
+        <a href="index.php#book" class="<?= $btn_blue ?> mt-7 w-full justify-center sm:w-auto">Verify My Coverage <?= arrow_icon(16) ?></a>
       </div>
     </div>
 
@@ -509,7 +509,7 @@ $em       = 'italic font-normal text-brand-blue';
           It starts with an assessment, not a commitment. We check whether you are a candidate, verify your benefits, and tell you honestly if something else would serve you better.
         </p>
         <div class="mt-6 flex flex-wrap gap-3 sm:mt-8">
-          <a href="index.php#book" class="<?= $btn_blue ?>">Book a consultation <?= arrow_icon(16) ?></a>
+          <a href="index.php#book" class="<?= $btn_blue ?>">Book a Consultation <?= arrow_icon(16) ?></a>
           <a href="<?= e($site['phone_href']) ?>" class="<?= $btn_line ?>">Call <?= e($site['phone']) ?></a>
         </div>
         <p class="m-0 mt-6 text-xs text-ink/55">In crisis? Call or text 988 any time.</p>

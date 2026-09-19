@@ -109,7 +109,7 @@ return [
         'lines'   => ['Thirty minutes', 'a day.'],
         'accent'  => 'a day.',
         'quote'   => 'The pulses stimulate the prefrontal cortex, helping the brain form new pathways — the process known as neuroplasticity.',
-        'quote_source' => 'How TMS works',
+        'quote_source' => 'How TMS Works',
         'copy'    => 'If medication and therapy have not settled your anxiety, transcranial magnetic stimulation is the next thing worth trying. It is non-invasive, needs no sedation, and you drive yourself home afterwards.',
         'photo'   => 'homepage/tms-new-era.webp',
         'photo_alt' => 'A patient in the TMS chair while a clinician talks her through the session',

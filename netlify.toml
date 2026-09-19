@@ -36,3 +36,13 @@
   from = "/terms"
   to = "/terms.html"
   status = 200
+
+[[redirects]]
+  from = "/hipaa"
+  to = "/hipaa.html"
+  status = 200
+
+[[redirects]]
+  from = "/accessibility"
+  to = "/accessibility.html"
+  status = 200

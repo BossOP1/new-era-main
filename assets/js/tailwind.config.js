@@ -56,6 +56,14 @@ const anewEraTailwindConfig = {
           'radial-gradient(ellipse 68% 52% at 50% 44%, rgba(9,20,28,0.34) 0%, rgba(9,20,28,0.12) 66%, transparent 100%), radial-gradient(circle at 90% 84%, rgba(9,20,28,0.42) 0%, rgba(9,20,28,0.16) 42%, transparent 70%), linear-gradient(180deg, rgba(20,20,20,0.2) 0%, rgba(15,20,25,0.26) 45%, rgba(10,15,20,0.52) 100%), radial-gradient(circle at 15% 90%, rgba(232,146,47,0.16), transparent 55%), radial-gradient(circle at 85% 5%, rgba(134,190,82,0.12), transparent 50%)',
         'cond-veil':
           'linear-gradient(100deg, rgba(9,20,28,0.7) 0%, rgba(9,20,28,0.35) 55%, rgba(9,20,28,0.1) 100%)',
+        // Location heroes: the photograph is of a real place and should keep
+        // its colour, so the darkness is concentrated behind the copy column
+        // rather than spread over the whole frame. Two layers in one class —
+        // the side gradient that carries the type, and a light top-and-tail
+        // so the nav and the strapline row have something to sit on.
+        'place-veil':
+          'linear-gradient(100deg, rgba(9,20,28,0.88) 0%, rgba(9,20,28,0.74) 34%, rgba(9,20,28,0.28) 62%, rgba(9,20,28,0.05) 100%),'
+          + ' linear-gradient(180deg, rgba(9,20,28,0.30) 0%, rgba(9,20,28,0) 30%, rgba(9,20,28,0.52) 100%)',
         'card-veil':
           'linear-gradient(0deg, rgba(9,20,28,0.45) 0%, rgba(9,20,28,0) 55%)',
         'tms-veil':

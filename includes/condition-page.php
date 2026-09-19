@@ -117,7 +117,7 @@ $rail['#faq'] = 'FAQs';
         <p class="m-0 mt-5 max-w-[46ch] text-[15px] leading-[1.75] text-ink/75 sm:mt-6 sm:text-base"><?= e($c['hero']['lede']) ?></p>
 
         <div class="mt-6 flex flex-wrap gap-3 sm:mt-8">
-          <a href="#book" class="<?= $btn_blue ?>">Book a consultation <?= arrow_icon(16) ?></a>
+          <a href="#book" class="<?= $btn_blue ?>">Book a Consultation <?= arrow_icon(16) ?></a>
           <a href="<?= e($site['phone_href']) ?>" class="<?= $btn_line ?>"><?= e($site['phone']) ?></a>
         </div>
 
@@ -157,7 +157,7 @@ $rail['#faq'] = 'FAQs';
     </div>
 
     <a href="treatments.php" class="mt-6 inline-flex items-center gap-4 border-b border-brand-blue/30 py-2 text-sm font-bold text-brand-blue transition-colors hover:border-brand-blue sm:mt-8">
-      See how we treat it <?= arrow_icon(16) ?>
+      See How We Treat It <?= arrow_icon(16) ?>
     </a>
   </div>
 
@@ -226,7 +226,7 @@ $rail['#faq'] = 'FAQs';
           <p class="m-0 text-[16px] font-extrabold tracking-[-0.01em] text-ink">Not sure how you are really doing?</p>
           <p class="m-0 mt-1 max-w-[44ch] text-sm leading-relaxed text-ink/65">The PHQ-9 takes two minutes. It is a screening questionnaire, not a diagnosis, and we go through the result with you.</p>
         </div>
-        <a href="index.php#book" class="<?= $btn_blue ?> shrink-0">Take the PHQ-9 <?= arrow_icon(15) ?></a>
+        <a href="phq9.php" class="<?= $btn_blue ?> shrink-0">Take the PHQ-9 <?= arrow_icon(15) ?></a>
       </div>
     </div>
   </div>
@@ -283,7 +283,7 @@ $rail['#faq'] = 'FAQs';
         <p class="m-0 mt-6 max-w-[42ch] text-[15px] leading-[1.75] text-[#dbe6ee] sm:mt-7 sm:leading-[1.8]"><?= e($c['tms']['copy']) ?></p>
 
         <a href="index.php#book" class="mt-7 inline-flex items-center justify-center gap-[22px] rounded-full bg-white px-[25px] py-[17px] text-sm font-bold text-[#154c69] transition-colors hover:bg-[#e6eddc] sm:mt-8">
-          See if TMS is right for you <?= arrow_icon(17) ?>
+          See If TMS Is Right for You <?= arrow_icon(17) ?>
         </a>
       </div>
     </div>
@@ -469,7 +469,7 @@ $related = array_values(array_filter(
           We know how hard appointments are to fit into a week that is already full. After the first visit, a TMS session generally runs fifteen to thirty minutes, with nothing to recover from afterwards.
         </p>
         <div class="mt-6 flex flex-wrap gap-3 sm:mt-8">
-          <a href="index.php#book" class="<?= $btn_blue ?>">Book a consultation <?= arrow_icon(16) ?></a>
+          <a href="index.php#book" class="<?= $btn_blue ?>">Book a Consultation <?= arrow_icon(16) ?></a>
           <a href="<?= e($site['phone_href']) ?>" class="<?= $btn_line ?>">Call <?= e($site['phone']) ?></a>
         </div>
         <p class="m-0 mt-6 text-xs text-ink/55">In crisis? Call or text 988 any time.</p>
