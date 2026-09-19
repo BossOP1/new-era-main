@@ -34,7 +34,7 @@ return [
         ['label' => 'Meet our team', 'href' => 'team.php'],
         ['label' => 'Treatments',    'href' => 'treatments.php', 'menu' => 'treatments'],
         ['label' => 'Conditions',    'href' => 'conditions.php', 'menu' => 'conditions', 'also' => ['depression-short.php']],
-        ['label' => 'Resources',     'href' => 'index.php#faq',  'menu' => 'resources'],
+        ['label' => 'Resources',     'href' => 'faq.php',        'menu' => 'resources'],
         // Placeholder until the locations page exists.
         ['label' => 'Our locations', 'href' => 'index.php#top'],
     ],
@@ -94,8 +94,9 @@ return [
             'items'   => [
                 // Blogs is a placeholder until the blog exists.
                 ['label' => 'Blogs',   'href' => 'index.php#top',     'desc' => 'Articles on mental health and treatment', 'icon' => 'article'],
-                ['label' => 'Reviews', 'href' => 'index.php#reviews', 'desc' => 'What patients say about their care',      'icon' => 'star'],
-                ['label' => 'FAQs',    'href' => 'index.php#faq',     'desc' => 'Insurance, first visits and treatment',   'icon' => 'question'],
+                ['label' => 'Insurance', 'href' => 'insurance.php',   'desc' => 'Carriers, coverage and what you will owe', 'icon' => 'shield'],
+                ['label' => 'Reviews', 'href' => 'reviews.php',        'desc' => 'What patients say about their care',      'icon' => 'star'],
+                ['label' => 'FAQs',    'href' => 'faq.php',           'desc' => 'Insurance, first visits and treatment',   'icon' => 'question'],
             ],
             'feature' => [
                 'kind'    => 'prompt',
@@ -121,8 +122,9 @@ return [
         'Patients' => [
             ['label' => 'Book a visit',   'href' => 'index.php#book'],
             ['label' => 'Meet our team',  'href' => 'team.php'],
-            ['label' => 'Insurance',      'href' => 'index.php#book'],
-            ['label' => 'FAQs',           'href' => 'index.php#faq'],
+            ['label' => 'Reviews',        'href' => 'reviews.php'],
+            ['label' => 'Insurance',      'href' => 'insurance.php'],
+            ['label' => 'FAQs',           'href' => 'faq.php'],
         ],
     ],
 

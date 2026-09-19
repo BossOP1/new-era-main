@@ -403,11 +403,10 @@ $em       = 'italic font-normal text-brand-blue';
         </p>
 
         <ol class="m-0 mt-6 list-none p-0">
-          <?php foreach ([
-            'A qualifying diagnosis, so the treatment is medically necessary',
-            'Antidepressants tried, without an adequate response',
-            'Some course of psychotherapy already undertaken',
-          ] as $i => $criterion): ?>
+          <?php // The criteria live in includes/data-insurance.php, which
+                // insurance.php prints too, so the two pages cannot drift apart.
+                $tms_criteria = (require __DIR__ . '/includes/data-insurance.php')['tms_criteria'];
+                foreach ($tms_criteria as $i => $criterion): ?>
             <li class="flex items-start gap-4 border-b border-ink/12 py-4">
               <span aria-hidden="true" class="w-6 shrink-0 font-serif text-[15px] text-brand-blue/70"><?= sprintf('%02d', $i + 1) ?></span>
               <span class="text-[15px] font-medium leading-[1.6] text-ink"><?= e($criterion) ?></span>

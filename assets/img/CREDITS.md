@@ -77,3 +77,17 @@ copied from `assets/TMS-exclusive/`. `tms/video-*.jpg` are poster frames for
 Magstim's YouTube films, used only as click-to-play facades and labelled as
 Magstim's on the page.
 
+## Hub page heroes (`reviews/`, `faq/`, `insurance/`)
+
+Downloaded at 2400x920, the same crop the treatment page heroes use, so the
+wash in `.cond-hero-photo` has the shape it expects.
+
+| File | Source image | Subject |
+|------|--------------|---------|
+| `reviews/hero.jpg` | images.unsplash.com/photo-1511988617509-a57c8a288659 | Four friends laughing in golden-hour light (reviews hero) |
+| `faq/hero.jpg`     | images.unsplash.com/photo-1776886099265-6366478b341b | Clinic waiting area, wide crop (FAQ hero) |
+| `insurance/hero.jpg` | images.unsplash.com/photo-1768225709733-18c9f264bc5f | Calm waiting lounge with seating and plants (insurance hero) |
+
+`faq/hero.jpg` is the same photograph as `faq.jpg` in the folder above, taken
+again at hero width — `faq.jpg` is a 1000x840 crop and stays where it is, used
+as the inline FAQ photo on the treatment pages.

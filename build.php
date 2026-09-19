@@ -29,6 +29,9 @@ $pages = [
     'about.php'   => 'about.html',
     'team.php'    => 'team.html',   // the meet-our-team roster
     'index2.php'  => 'index2.html',   // vibrant variant
+    'faq.php'        => 'faq.html',         // the full FAQ
+    'insurance.php'  => 'insurance.html',   // carriers, coverage and cost
+    'reviews.php'    => 'reviews.html',     // every five-star patient review
     'conditions.php' => 'conditions.html', // the conditions index
     'tms.php'        => 'tms.html',        // the TMS treatment page
     'treatments.php' => 'treatments.html', // the treatments index
@@ -51,6 +54,13 @@ $pages = [
 // assets/ holds photos, insurance logos, the Magstim device shot, the clinic
 // photo, the neurons hero and both logo variants.
 $assetDirs = ['assets'];
+
+// Source data that lives under assets/ for convenience but must never be
+// served. assets/reviews_list/ holds the raw review export: full reviewer
+// names, the odd email address, and columns for a minor's name and age. The
+// site publishes what tools/build_reviews.py distils out of it, never the
+// spreadsheet itself. Paths are relative to the project root.
+$noPublish = ['assets/reviews_list'];
 
 // Single files copied into dist/ when present.
 $rootFiles = [
@@ -75,9 +85,9 @@ function removeDir(string $dir): void
     rmdir($dir);
 }
 
-function copyDir(string $src, string $dst): int
+function copyDir(string $src, string $dst, array $skip = []): int
 {
-    if (!is_dir($src)) {
+    if (!is_dir($src) || in_array($src, $skip, true)) {
         return 0;
     }
     if (!is_dir($dst)) {
@@ -91,7 +101,9 @@ function copyDir(string $src, string $dst): int
         $srcPath = "$src/$file";
         $dstPath = "$dst/$file";
         if (is_dir($srcPath)) {
-            $count += copyDir($srcPath, $dstPath);
+            $count += copyDir($srcPath, $dstPath, $skip);
+        } elseif (in_array($srcPath, $skip, true)) {
+            continue;
         } elseif (copy($srcPath, $dstPath)) {
             $count++;
         }
@@ -161,8 +173,14 @@ foreach ($pages as $srcFile => $outFile) {
 /* ---- Copy the static files ---------------------------------------- */
 
 foreach ($assetDirs as $dir) {
-    $n = copyDir($dir, 'dist/' . $dir);
+    $n = copyDir($dir, 'dist/' . $dir, $noPublish);
     echo "Copied:  $dir/ ($n files)\n";
+}
+
+foreach ($noPublish as $path) {
+    if (file_exists($path)) {
+        echo "Held back: $path/ (source data, not for the public site)\n";
+    }
 }
 
 foreach ($rootFiles as $file) {

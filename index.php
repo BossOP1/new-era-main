@@ -351,7 +351,7 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
     <?php endforeach; ?>
 
     <div class="mt-10 text-center">
-      <a href="#book" class="inline-flex items-center rounded-full bg-white px-7 py-4 text-[15px] font-extrabold text-brand-blue transition-colors hover:bg-brand-orange hover:text-white">More success stories</a>
+      <a href="reviews.php" class="inline-flex items-center rounded-full bg-white px-7 py-4 text-[15px] font-extrabold text-brand-blue transition-colors hover:bg-brand-orange hover:text-white">Read all the reviews</a>
     </div>
   </div>
 </section>
@@ -396,6 +396,11 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
             <?php endforeach; ?>
           </div>
         <?php endforeach; ?>
+
+        <?php // The homepage carries a sample; faq.php carries the whole set. ?>
+        <a href="faq.php" class="mt-9 inline-flex items-center gap-2.5 rounded-full border-2 border-brand-blue-dark/35 bg-transparent px-6 py-3.5 text-[14px] font-extrabold text-brand-blue-dark transition-colors hover:border-brand-blue-dark hover:bg-brand-blue-dark hover:text-white">
+          See all the questions <?= arrow_icon(15) ?>
+        </a>
       </div>
     </div>
   </div>

@@ -152,6 +152,49 @@
     display: none !important;
   }
 
+  /* Review cards -------------------------------------------------------------
+     reviews.php prints the same card 900-odd times, so the shape lives here
+     instead of as a utility string repeated in every one of them — the same
+     reason .lift and .chip-glass are components. The card is still Tailwind,
+     just spelled once. Anything a single card varies, like the line clamp the
+     Read more button toggles, stays a utility in the markup. */
+  .rv-card {
+    @apply m-0 flex h-full flex-col rounded-[22px] border border-[#e3e7ea] bg-white px-6 py-6 transition-colors sm:px-7 sm:py-7;
+  }
+  .rv-card:hover {
+    @apply border-brand-blue/35;
+  }
+  .rv-head {
+    @apply flex items-center justify-between gap-3;
+  }
+  .rv-stars {
+    @apply text-[13px] leading-none tracking-[0.12em] text-brand-orange;
+  }
+  .rv-source {
+    @apply text-[11px] font-bold uppercase tracking-[0.12em] text-ink/35;
+  }
+  .rv-quote {
+    @apply m-0 mt-3.5 grow text-[14.5px] leading-[1.7] text-ink/85;
+  }
+  .rv-expand {
+    @apply mt-1.5 block cursor-pointer border-0 bg-transparent p-0 text-[13px] font-extrabold text-brand-blue underline underline-offset-4;
+  }
+  .rv-expand:hover {
+    @apply text-brand-blue-dark;
+  }
+  .rv-foot {
+    @apply mt-5 flex items-center gap-3 border-t border-ink/10 pt-4;
+  }
+  .rv-avatar {
+    @apply flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-mist text-[12px] font-extrabold text-brand-blue;
+  }
+  .rv-name {
+    @apply block truncate text-[13.5px] font-extrabold text-ink;
+  }
+  .rv-place {
+    @apply block truncate text-[12px] font-semibold text-ink/50;
+  }
+
   /* Conditions on mobile ------------------------------------------------------
      Tabs and panel share one flow, ordered so the panel lands under whichever
      tab is selected. --cond-order is set by main.js on selection; the default
@@ -171,12 +214,13 @@
     }
   }
 
-  /* Condition hero ------------------------------------------------------------
+  /* Photo hero ----------------------------------------------------------------
      The photograph and the wash over it are the same construction on every
-     condition page, but the colour changes per condition. Tailwind scans these
-     files as plain text, so a class built from a PHP variable is a class that
-     never gets compiled — the colour therefore arrives as a custom property
-     set inline on the section, and these rules read it. */
+     condition page, and on the reviews and FAQ heroes, but the colour changes
+     per page. Tailwind scans these files as plain text, so a class built from
+     a PHP variable is a class that never gets compiled — the colour therefore
+     arrives as a custom property set inline on the section, and these rules
+     read it. Named for the condition pages, which had it first. */
   .cond-hero-photo {
     background-size: cover;
     background-repeat: no-repeat;

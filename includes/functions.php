@@ -304,6 +304,8 @@ if (!function_exists('nav_icon')) {
             'clipboard'   => '<path d="M9 4.5H7.5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-12a2 2 0 0 0-2-2H15"/><path d="M9.6 3h4.8a.6.6 0 0 1 .6.6v1.8a.6.6 0 0 1-.6.6H9.6a.6.6 0 0 1-.6-.6V3.6a.6.6 0 0 1 .6-.6Z"/><path d="m9 13 1.8 1.8L15 10.6"/>',
             'article'     => '<rect x="4.2" y="3.2" width="15.6" height="17.6" rx="2.4"/><path d="M8 8h8M8 12h8M8 16h4.6"/>',
             'star'        => '<path d="m12 3.4 2.6 5.3 5.8.84-4.2 4.1 1 5.8L12 16.7l-5.2 2.74 1-5.8-4.2-4.1 5.8-.84L12 3.4Z"/>',
+            // Insurance: a shield with the tick a benefits check ends in.
+            'shield'      => '<path d="M12 3.2 5 6v5.4c0 4.4 2.9 7.7 7 9.4 4.1-1.7 7-5 7-9.4V6l-7-2.8Z"/><path d="m9.1 11.9 2.1 2.1 3.7-3.9"/>',
             'question'    => '<circle cx="12" cy="12" r="8.8"/><path d="M9.5 9.3a2.6 2.6 0 0 1 5.05.87c0 1.75-2.55 2.3-2.55 3.8"/><path d="M12 17.2h.01"/>',
             'chevron'     => '<path d="m6 9 6 6 6-6"/>',
         ];
