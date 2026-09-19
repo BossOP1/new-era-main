@@ -31,7 +31,7 @@ return [
     'nav' => [
         ['label' => 'Home',          'href' => 'index.php'],
         ['label' => 'About',         'href' => 'about.php'],
-        ['label' => 'Meet our team', 'href' => 'about.php#team'],
+        ['label' => 'Meet our team', 'href' => 'team.php'],
         ['label' => 'Treatments',    'href' => 'treatments.php', 'menu' => 'treatments'],
         ['label' => 'Conditions',    'href' => 'conditions.php', 'menu' => 'conditions', 'also' => ['depression-short.php']],
         ['label' => 'Resources',     'href' => 'index.php#faq',  'menu' => 'resources'],
@@ -120,6 +120,7 @@ return [
         ],
         'Patients' => [
             ['label' => 'Book a visit',   'href' => 'index.php#book'],
+            ['label' => 'Meet our team',  'href' => 'team.php'],
             ['label' => 'Insurance',      'href' => 'index.php#book'],
             ['label' => 'FAQs',           'href' => 'index.php#faq'],
         ],

@@ -27,6 +27,7 @@ $_SERVER['HTTPS']          = 'on';
 $pages = [
     'index.php'   => 'index.html',
     'about.php'   => 'about.html',
+    'team.php'    => 'team.html',   // the meet-our-team roster
     'index2.php'  => 'index2.html',   // vibrant variant
     'conditions.php' => 'conditions.html', // the conditions index
     'tms.php'        => 'tms.html',        // the TMS treatment page

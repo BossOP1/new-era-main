@@ -5,6 +5,15 @@ $page_description = 'Get to know Anew Era Health and our approach to connected, 
 $header_hero_light = true;
 $header_inset      = true;
 require __DIR__ . '/includes/header.php';
+
+// The roster lives on team.php. Read it here only to tease it accurately:
+// a count that cannot drift, and a few of the faces it holds.
+$team        = require __DIR__ . '/includes/data-team.php';
+$team_count  = count($team['people']);
+$team_faces  = array_slice(array_values(array_filter(
+    $team['people'],
+    static fn (array $p): bool => $p['photo'] !== ''
+)), 0, 7);
 ?>
 <div class="overflow-hidden bg-[#faf8f3] [&_h1]:m-0 [&_h2]:m-0 [&_h3]:m-0 [&_p]:m-0 [&_figure]:m-0 [&_h1]:font-normal [&_h2]:font-normal [&_h1]:tracking-[-0.045em] [&_h2]:tracking-[-0.045em] [&_h1]:leading-[1.06] [&_h2]:leading-[1.06] [&_h2]:text-[clamp(36px,4.1vw,58px)] [&_em]:font-normal [&_h2_em]:text-brand-blue [&_section[id]]:scroll-mt-[110px] [&_a:focus-visible]:outline [&_a:focus-visible]:outline-[3px] [&_a:focus-visible]:outline-brand-orange [&_a:focus-visible]:outline-offset-[5px]">
   <!-- Side gutters frame the compact hero. -->
@@ -128,6 +137,20 @@ require __DIR__ . '/includes/header.php';
             </div>
           </div>
           <?php endforeach; ?>
+        </div>
+
+        <!-- The roster itself lives on team.php; this is the door to it. -->
+        <div class="mt-8 flex flex-wrap items-center gap-x-5 gap-y-4 border-t border-ink/12 pt-7">
+          <div aria-hidden="true" class="flex items-center">
+            <?php foreach ($team_faces as $face): ?>
+              <span class="-ml-3 h-11 w-11 shrink-0 overflow-hidden rounded-full border-2 border-white bg-[#e7f1fa] shadow-[0_3px_10px_rgba(20,32,43,0.12)] first:ml-0">
+                <img src="<?= e(asset('assets/img/' . $face['photo'])) ?>" alt="" width="44" height="44" loading="lazy" decoding="async" class="h-full w-full object-cover object-[center_12%]">
+              </span>
+            <?php endforeach; ?>
+          </div>
+          <a class="inline-flex items-center gap-3 border-b border-brand-blue/30 py-2 text-[14px] font-bold text-brand-blue transition-colors hover:border-brand-blue" href="team.php">
+            Meet all <?= e((string) $team_count) ?> clinicians <?= arrow_icon(16) ?>
+          </a>
         </div>
       </div>
 
