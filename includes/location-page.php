@@ -135,7 +135,8 @@ $initials = static function (string $name): string {
     </div>
 
     <div class="mx-auto mt-6 flex max-w-[1160px] flex-wrap items-center justify-between gap-3 border-t border-white/30 pt-4 text-[11px] text-white/85 sm:mt-8">
-      <span><?= e(count($people)) ?> clinicians at this clinic &middot; In person and by telehealth</span>
+      <?php // Allen has one, so the noun cannot be hard-coded plural. ?>
+      <span><?= e(count($people)) ?> clinician<?= count($people) === 1 ? '' : 's' ?> at this clinic &middot; In person and by telehealth</span>
       <span>Serving <?= e(implode(', ', array_slice($loc['serves'], 0, 4))) ?> and nearby</span>
     </div>
   </section>
@@ -223,7 +224,8 @@ $initials = static function (string $name): string {
     <ul class="m-0 grid list-none gap-3 p-0 sm:grid-cols-2 md:gap-4 lg:grid-cols-3">
       <?php foreach ($block['people'] as $p): ?>
         <?php $has_zocdoc = !empty($p['zocdoc']); ?>
-        <li data-reveal class="flex h-full flex-col overflow-hidden rounded-[24px] border border-[#e3e7ea] bg-white">
+        <li data-reveal
+            class="group/p relative flex h-full flex-col overflow-hidden rounded-[24px] border border-[#e3e7ea] bg-white transition-colors hover:border-brand-blue/35">
           <div class="flex items-center gap-4 p-6 pb-5 sm:p-7 sm:pb-5">
             <?php if ($p['photo'] !== '' && is_file(__DIR__ . '/../assets/img/' . $p['photo'])): ?>
               <img src="<?= e(asset('assets/img/' . $p['photo'])) ?>" alt="<?= e($p['name']) ?>" width="200" height="250" loading="lazy" decoding="async"
@@ -247,16 +249,23 @@ $initials = static function (string $name): string {
           <div class="mt-auto flex flex-wrap items-center gap-x-4 gap-y-2 px-6 pb-6 pt-5 sm:px-7 sm:pb-7">
             <?php if ($has_zocdoc): ?>
               <a href="<?= e($p['zocdoc']) ?>" target="_blank" rel="noopener"
-                 class="inline-flex items-center gap-2 rounded-full bg-brand-blue px-5 py-2.5 text-[13px] font-extrabold text-white transition-colors hover:bg-brand-blue-dark">
+                 class="relative z-10 inline-flex items-center gap-2 rounded-full bg-brand-blue px-5 py-2.5 text-[13px] font-extrabold text-white transition-colors hover:bg-brand-blue-dark">
                 Book on Zocdoc
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
               </a>
             <?php else: ?>
-              <a href="index.php#book" class="inline-flex items-center gap-2 rounded-full bg-brand-blue px-5 py-2.5 text-[13px] font-extrabold text-white transition-colors hover:bg-brand-blue-dark">
+              <a href="index.php#book" class="relative z-10 inline-flex items-center gap-2 rounded-full bg-brand-blue px-5 py-2.5 text-[13px] font-extrabold text-white transition-colors hover:bg-brand-blue-dark">
                 Request an Appointment <?= arrow_icon(12) ?>
               </a>
             <?php endif; ?>
-            <a href="team.php#<?= e($p['slug']) ?>" class="text-[13px] font-extrabold text-brand-blue underline underline-offset-4 hover:text-brand-blue-dark">Full Bio</a>
+            <?php /* Stretched over the whole card, so the card is clickable and
+                     the Book button — which sits above it — still is not. The
+                     clinician's own page replaced the bio dialog this card
+                     used to open. */ ?>
+            <a href="<?= e($p['slug']) ?>.php"
+               class="text-[13px] font-extrabold text-brand-blue underline underline-offset-4 before:absolute before:inset-0 before:content-[''] hover:text-brand-blue-dark">
+              Full Bio
+            </a>
           </div>
         </li>
       <?php endforeach; ?>
@@ -315,6 +324,91 @@ $initials = static function (string $name): string {
     </div>
   <?php endif; ?>
 </section>
+
+<?php
+  /* ─── Reviews for this clinic ───────────────────────────────────────────
+     includes/data-reviews.php keys every review to the clinic that received
+     it, and those keys are the location keys, so this needs no mapping.
+
+     The Woodlands is the newest clinic and has none of its own yet. Rather
+     than drop the section and leave that one page with no patient voice, it
+     falls back to the rest of its state — every card prints the city it came
+     from, so nothing is passed off as local that is not.
+
+     No aggregateRating in the schema on purpose: the export is five-star
+     reviews only, so a rating built from it would read as 5.0 out of every
+     review the practice has ever had, which is not what these are. */
+  $rv_all    = require __DIR__ . '/data-reviews.php';
+  $rv_here   = array_values(array_filter($rv_all['reviews'],
+      static fn (array $r): bool => $r['clinic'] === $location_key));
+  $rv_local  = count($rv_here) >= 3;
+
+  if (!$rv_local) {
+      $rv_here = array_values(array_filter($rv_all['reviews'],
+          static fn (array $r): bool => ($rv_all['locations'][$r['clinic']]['state'] ?? '') === $loc['state']));
+  }
+
+  /* Six cards, newest first, preferring reviews long enough to say something
+     and short enough to sit in a card without a Read more button. Falls back
+     to whatever there is if the band is too thin. */
+  $rv_band = array_values(array_filter($rv_here,
+      static fn (array $r): bool => mb_strlen($r['text']) >= 110 && mb_strlen($r['text']) <= 440));
+  $rv_show = array_slice($rv_band ?: $rv_here, 0, 6);
+  $rv_count = $rv_local ? ($rv_all['locations'][$location_key]['count'] ?? count($rv_here)) : count($rv_here);
+?>
+<?php if ($rv_show): ?>
+<!-- ─── Reviews ──────────────────────────────────────────────────────── -->
+<section id="reviews" class="<?= $wrap ?> scroll-mt-[110px] pb-10 sm:pb-[60px] md:pb-[76px]">
+  <div class="mb-7 sm:mb-9 md:flex md:items-end md:justify-between md:gap-10">
+    <div>
+      <p class="<?= $eyebrow ?>"><?= $dot ?> What patients say</p>
+      <h2 class="<?= $h2 ?>">
+        <?php if ($rv_local): ?>
+          <?= e(number_format($rv_count)) ?> five-star reviews<br><em class="italic font-normal text-brand-blue">from <?= e($loc['name']) ?>.</em>
+        <?php else: ?>
+          Five-star reviews<br><em class="italic font-normal text-brand-blue">from across <?= e($loc['state_name']) ?>.</em>
+        <?php endif; ?>
+      </h2>
+    </div>
+    <p class="m-0 mt-[22px] max-w-[380px] text-base leading-[1.75] text-[#58616a] md:mt-0 md:max-w-[330px]">
+      <?php if ($rv_local): ?>
+        Left on Google, ZocDoc and Healthgrades by people treated at this clinic. We publish them unedited.
+      <?php else: ?>
+        <?= e($loc['name']) ?> is one of our newest clinics and is still gathering its own. These are from the
+        rest of <?= e($loc['state_name']) ?> — each card says where it came from.
+      <?php endif; ?>
+    </p>
+  </div>
+
+  <ul class="m-0 grid list-none items-start gap-3 p-0 sm:grid-cols-2 md:gap-4 lg:grid-cols-3">
+    <?php foreach ($rv_show as $r): ?>
+      <li data-reveal>
+        <figure class="rv-card">
+          <div class="rv-head">
+            <span class="rv-stars" role="img" aria-label="Rated 5 out of 5">★★★★★</span>
+            <span class="rv-source"><?= e($r['source']) ?></span>
+          </div>
+          <blockquote class="rv-quote"><?= e($r['text']) ?></blockquote>
+          <figcaption class="rv-foot">
+            <span aria-hidden="true" class="rv-avatar"><?= e($r['initials']) ?></span>
+            <span class="min-w-0">
+              <span class="rv-name"><?= e($r['name']) ?></span>
+              <span class="rv-place"><?= e($r['city']) ?> &middot; <?= e($r['when']) ?></span>
+            </span>
+          </figcaption>
+        </figure>
+      </li>
+    <?php endforeach; ?>
+  </ul>
+
+  <p class="m-0 mt-6 text-[13.5px] leading-[1.7] text-ink/60">
+    <a href="reviews.php<?= $rv_local ? '?clinic=' . e($location_key) : '' ?>#all" class="font-extrabold text-brand-blue underline underline-offset-4 hover:text-brand-blue-dark">
+      <?php if ($rv_local): ?>Read All <?= e(number_format($rv_count)) ?> <?= e($loc['name']) ?> Reviews<?php else: ?>Read All <?= e(number_format(count($rv_all['reviews']))) ?> Reviews<?php endif; ?>
+    </a>
+    &middot; <?= e(number_format($rv_all['meta']['five_star'])) ?> five-star reviews across the practice since <?= e($rv_all['meta']['first_year']) ?>.
+  </p>
+</section>
+<?php endif; ?>
 
 <!-- ─── Getting here ─────────────────────────────────────────────────── -->
 <section class="<?= $wrap ?> pb-10 sm:pb-[60px] md:pb-[76px]">
@@ -432,5 +526,7 @@ $schema = [
 ];
 ?>
 <script type="application/ld+json"><?= json_encode($schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?></script>
+
+
 
 <?php require __DIR__ . '/footer.php'; ?>

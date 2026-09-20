@@ -531,6 +531,23 @@ $schema = [
     });
   });
 
+  /* ---- Landing here from a location page ------------------------------
+     A clinic page links in as reviews.php?clinic=<key>, so the reader arrives
+     on that clinic's reviews rather than all nine hundred. Unknown or missing
+     keys just leave the default alone. */
+  (function () {
+    var want = (location.search.match(/[?&]clinic=([a-z0-9-]+)/) || [])[1];
+    if (!want || !clinic) return;
+    var option = clinic.querySelector('option[value="' + want + '"]');
+    if (!option) return;
+
+    state.clinic = want;
+    clinic.value = want;
+    root.querySelectorAll('[data-filter-region]').forEach(function (t) {
+      t.setAttribute('aria-selected', String(t.dataset.filterRegion === 'all'));
+    });
+  }());
+
   apply();
 }());
 </script>

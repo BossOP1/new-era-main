@@ -8,6 +8,11 @@
  * shorter than 40 characters are left out (they carry a rating but nothing
  * to read), as are exact duplicates and anything the export flagged as spam.
  *
+ * Three WebMD entries from Nov 2022 that the export had not flagged were
+ * removed by hand: they were not reviews but adverts for controlled-substance
+ * sales. Re-check for those after any regeneration; the counts above are the
+ * published set, with 'five_star' reduced to match.
+ *
  * Reviewers keep their first name and last initial, the convention the rest
  * of the site uses. Each review carries:
  *   clinic   key into 'locations' below — the site that received it
@@ -19,8 +24,8 @@
 
 return [
     'meta'      => [
-        'five_star'  => 1417,
-        'shown'      => 946,
+        'five_star'  => 1414,
+        'shown'      => 943,
         'clinics'    => 14,
         'sources'    => [
             'Google'       => 918,
@@ -82,7 +87,7 @@ return [
         'central-austin'   => [
             'label' => 'Central Austin',
             'state' => 'tx',
-            'count' => 112,
+            'count' => 109,
         ],
         'central-dallas'   => [
             'label' => 'Central Dallas',
@@ -116,7 +121,7 @@ return [
         ],
         'psychiatry' => [
             'label' => 'Psychiatry & meds',
-            'count' => 193,
+            'count' => 191,
         ],
         'results'    => [
             'label' => 'How it went',
@@ -8427,17 +8432,6 @@ If you\'re looking for a sign to try this treatment - this is your sign!! I was 
             'text'     => 'We always feel welcome. Glad we found Dr Bishop.',
         ],
         [
-            'name'     => 'Anonymous',
-            'initials' => 'A',
-            'clinic'   => 'central-austin',
-            'city'     => 'Central Austin, TX',
-            'source'   => 'WebMD',
-            'date'     => '2022-11-18',
-            'when'     => 'Nov 2022',
-            'topics'   => ['psychiatry'],
-            'text'     => 'For all your Benzo & Opioids here, if you cant have a refill easily, :C,T,WA: 775------773------5306',
-        ],
-        [
             'name'     => 'Ciara W.',
             'initials' => 'CW',
             'clinic'   => 'cedar-park',
@@ -8458,28 +8452,6 @@ If you\'re looking for a sign to try this treatment - this is your sign!! I was 
             'when'     => 'Nov 2022',
             'topics'   => ['tms'],
             'text'     => 'I have finally reached the end of my TMS treatment. This was my second round doing it and I have had a wonderful experience. I was so excited to have Kaitlin as my technician again. She has helped me so much on my journey to healing and hope. Also, she has such a bubbly, friendly, and caring personality which radiates such good vibes and happiness. She was like my personal life coach and it made me feel so happy every time I saw her for treatment. She truly knows how difficult it could be for someone going through difficult times and she tries to help you as best as she can with her knowledge and experience in mental health and psychology. Also, I had Galilea the other TMS technician a few times throughout my treatment as well. She is so friendly, relaxed, and helpful and I really connected with her as well. I will truly miss them both so much, and I know that I have made them so proud with taking the necessary steps towards taking care of my mental health and all the tools I learned along the way.',
-        ],
-        [
-            'name'     => 'Anonymous',
-            'initials' => 'A',
-            'clinic'   => 'central-austin',
-            'city'     => 'Central Austin, TX',
-            'source'   => 'WebMD',
-            'date'     => '2022-11-13',
-            'when'     => 'Nov 2022',
-            'topics'   => ['psychiatry'],
-            'text'     => 'Are you having difficulties getting a "refill", Xanax, Oxycodone, Tramadol, Adderall & More here, Wickr/Kik: peterking2014',
-        ],
-        [
-            'name'     => 'Anonymous',
-            'initials' => 'A',
-            'clinic'   => 'central-austin',
-            'city'     => 'Central Austin, TX',
-            'source'   => 'WebMD',
-            'date'     => '2022-11-13',
-            'when'     => 'Nov 2022',
-            'topics'   => [],
-            'text'     => 'Xanax, Oxycodone Vicodin, Adderall & More here, Wickr/Kik: peterking2014',
         ],
         [
             'name'     => 'carolyn',

@@ -347,8 +347,8 @@ return [
         // Four clinicians the roster this file was built from did not have,
         // added from the practice's own location pages along with the
         // headshots those pages publish. Name, credentials, role and clinic
-        // are from there; no bio has been supplied, so their cards run on the
-        // headshot and the credentials alone.
+        // are from there, and the bios from each one's own profile page on
+        // that site.
         [
             'slug'        => 'adele-shyntum',
             'name'        => 'Adele Shyntum',
@@ -359,7 +359,11 @@ return [
             'clinics'     => ['Grapevine, TX'],
             'photo'       => 'team/adele-shyntum.png',
             'video'       => '',
-            'bio'         => [],
+            'bio'         => [
+                'Adele Shyntum is a board-certified psychiatric nurse practitioner with a Master’s in Psychiatric and Mental Health Nursing from The University of Texas at Arlington. She has several years of experience working with adults with mental health illnesses.',
+                'Adele utilizes compassionate, client-centered, and evidence-based approaches to treat patients with different mental health conditions. She specializes in ADHD, anxiety, depression, bipolar disorder, and PTSD.',
+                'Her main goals for her patients include reducing symptoms of anxiety and depression, improving overall well-being, and promoting personal growth and resilience.',
+            ],
         ],
         [
             'slug'        => 'damilola-fowowe',
@@ -371,7 +375,11 @@ return [
             'clinics'     => ['Cypress, TX'],
             'photo'       => 'team/damilola-fowowe.jpeg',
             'video'       => '',
-            'bio'         => [],
+            'bio'         => [
+                'Damilola Fowowe is a board-certified Psychiatric Mental Health Nurse Practitioner. She received her Bachelor of Science in Nursing with honors from the University of Texas at Arlington and graduated with a Master of Science in Nursing — Psychiatric Mental Health Nurse Practitioner from the University of Texas Health Science Center in Houston.',
+                'She has over eight years of nursing experience and is very passionate about patient care. Damilola believes in promoting holistic care and not limiting interventions to improve mental health conditions. She coordinates individualized care plans while using evidence-based guidelines.',
+                'Committed to achieving the best possible patient outcome, she builds rapport, listens, and addresses all patient concerns. Damilola is a self-care fanatic who roots for all forms of self-care activities. Her hobbies include traveling, working out, and trying new restaurants.',
+            ],
         ],
         [
             'slug'        => 'tammy-fluker',
@@ -383,7 +391,11 @@ return [
             'clinics'     => ['Central Dallas, TX'],
             'photo'       => 'team/tammy-fluker.png',
             'video'       => '',
-            'bio'         => [],
+            'bio'         => [
+                'Tammy is a dedicated and compassionate Psychiatric Mental Health Nurse Practitioner with over 20 years of nursing experience. A proud veteran and committed Christian, she brings a unique blend of clinical expertise, discipline and faith-based compassion to her practice. Her extensive background spans various areas of nursing, with a deep focus on mental health care for individuals across the lifespan.',
+                'Driven by a mission to provide holistic, patient-centered care, Tammy integrates evidence-based practice with a nurturing, respectful approach. Her military service instilled a strong sense of duty, resilience, and empathy — qualities that guide her in supporting patients through life’s most challenging moments. Whether working with individuals facing anxiety, depression, PTSD, or other mental health conditions, she is known for her ability to create a safe, nonjudgmental space for healing and recovery.',
+                'Tammy is passionate about empowering her patients with knowledge, tools and spiritual support to promote mental wellness and personal growth. In all that she does, she remains grounded in her faith and committed to her calling to serve others through mental health advocacy and compassionate care.',
+            ],
         ],
         [
             'slug'        => 'yolanda-acosta-montoya',
@@ -395,7 +407,12 @@ return [
             'clinics'     => ['Torrance, CA'],
             'photo'       => 'team/yolanda-acosta-montoya.webp',
             'video'       => '',
-            'bio'         => [],
+            'bio'         => [
+                'Yolanda Acosta, LCSW, is a bilingual and culturally responsive clinical social worker with experience providing psychotherapy to adolescents, adults, and older adults from diverse backgrounds. Her clinical work is grounded in trauma-informed care and emphasizes creating a safe, collaborative, and compassionate therapeutic environment where clients can process difficult experiences while building insight, resilience, and meaningful change.',
+                'Her clinical experience incorporates a range of evidence-based and evidence-informed practices, including EMDR, CBT, TF-CBT, ACT, MI, and SFBT. She integrates these approaches according to each client’s presenting concerns, developmental needs, cultural background, readiness for treatment, and individualized goals.',
+                'She has particular experience integrating EMDR and trauma-focused interventions into her work with clients who have experienced complex and longstanding trauma. Her approach recognizes the impact that family systems, culture, and broader social environments can have on mental health and recovery (person-in-environment framework).',
+                'As a clinician, Yolanda values the therapeutic relationship as an essential part of the healing process. Her approach balances warmth and empathy with clinical structure, assessment, and evidence-based interventions. She strives to help clients better understand their experiences, recognize their strengths, develop effective coping skills, and move forward with greater confidence and autonomy.',
+            ],
         ],
         [
             'slug'        => 'heather-mak',
@@ -544,23 +561,6 @@ return [
             'video'       => '',
             'bio'         => [
                 'Dr. Huiping Xu is a board-certified physician who specializes in holistic treatment philosophies. Dr. Xu received a master’s degree in neuroscience with a focus on learning and memory mechanisms, development and regeneration of the central nervous system. She then completed her psychiatry residency at McGovern Medical School at UT Health Science Center. Dr. Xu founded Wholehealth PLLC in 2015 to offer individualized and personalized care to patients. In 2018 Dr. Xu was awarded Top Psychiatrist in Houston, TX by the Patient Reviews for Top Doctors. She previously served as Assistant Professor of Baylor College of Medicine, prior to joining Anew Era TMS & Psychiatry in 2025.',
-            ],
-        ],
-        [
-            'slug'        => 'yolanda-acosta',
-            'name'        => 'Yolanda Acosta',
-            'credentials' => 'LCSW',
-            'role'        => 'Therapist',
-            'group'       => 'therapy',
-            'states'      => ['ca'],
-            'clinics'     => [],
-            'photo'       => 'team/yolanda-acosta.jpg',
-            'video'       => '',
-            'bio'         => [
-                'Yolanda Acosta, LCSW, is a bilingual and culturally responsive clinical social worker with experience providing psychotherapy to adolescents, adults, and older adults from diverse backgrounds. Her clinical work is grounded in trauma-informed care and emphasizes creating a safe, collaborative, and compassionate therapeutic environment where clients can process difficult experiences while building insight, resilience, and meaningful change.',
-                'Her clinical experience incorporates a range of evidence-based and evidence-informed practices, including EMDR, CBT, TF-CBT, ACT, MI, and SFBT. She integrates these approaches according to each client’s presenting concerns, developmental needs, cultural background, readiness for treatment, and individualized goals.',
-                'She has particular experience integrating EMDR and trauma-focused interventions into her work with clients who have experienced complex and longstanding trauma. Her approach recognizes the impact that family systems, culture, and broader social environments can have on mental health and recovery (person-in-environment framework).',
-                'As a clinician, Yolanda values the therapeutic relationship as an essential part of the healing process. Her approach balances warmth and empathy with clinical structure, assessment, and evidence-based interventions. She strives to help clients better understand their experiences, recognize their strengths, develop effective coping skills, and move forward with greater confidence and autonomy.',
             ],
         ],
         [

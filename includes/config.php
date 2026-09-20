@@ -9,12 +9,25 @@ return [
     'name'        => 'Anew Era Health',
     'brand'       => ['Anew', 'Era'],           // split so the two halves can be coloured
     'tagline'     => 'Psychiatry, therapy and TMS for adults and adolescents. In-person and telehealth.',
-    'phone'       => '(555) 000-0000',
-    'phone_href'  => 'tel:+15550000000',
-    'email'       => 'hello@anewera.com',
-    'address'     => ['1200 Harbor Street', 'Suite 210'],
-    'rating'      => '★ 4.9 · 380+ reviews',
-    'legal'       => 'Copyright © Anew Era Health. All rights reserved. Anew Era is a trading name of Anew Era Health, PLLC. Registered office 1200 Harbor Street, Suite 210. Licensed to provide psychiatric care, therapy and TMS services in the states listed at booking.',
+    // The appointment helpline the practice publishes site-wide. Individual
+    // clinics have their own lines in includes/data-locations.php, and those
+    // are what the clinic and clinician pages print.
+    'phone'       => '(888) 503-1549',
+    'phone_href'  => 'tel:+18885031549',
+
+    // No single head office to print: the practice is fifteen clinics, and the
+    // footer's own directory lists them. This is the admission window every
+    // one of them keeps — each clinic's address, phone and hours are in
+    // includes/data-locations.php.
+    'hours'       => ['Admissions 6:00am – 6:00pm', 'Monday to Friday'],
+
+    // Kept in step with the 'meta' block in includes/data-reviews.php, which
+    // is regenerated from the practice's review export — update both together.
+    // Deliberately a count and not an average: the export is five-star reviews
+    // only, so any average computed from it would overstate the real one.
+    'rating'      => '★ 1,414 five-star reviews',
+
+    'legal'       => 'Copyright © Anew Era Health. All rights reserved. Anew Era is a trading name of Anew Era Health, PLLC. Licensed to provide psychiatric care, therapy and TMS services in the states listed at booking.',
 
     'colors' => [
         'blue'   => '#0f639b',
@@ -38,7 +51,7 @@ return [
         // No locations page yet, so the item is a menu rather than a link —
         // the dropdown is what does the work. Give it an href once the hub
         // page exists and the top-level item will start marking current.
-        ['label' => 'Our Locations', 'href' => 'index.php#top', 'menu' => 'locations'],
+        ['label' => 'Our locations', 'href' => 'index.php#top', 'menu' => 'locations'],
     ],
 
     // Dropdown contents. 'icon' names a line icon in nav_icon(); 'art' names
@@ -181,6 +194,12 @@ return [
             ['label' => 'Treatments',  'href' => 'treatments.php'],
             ['label' => 'TMS therapy', 'href' => 'tms.php'],
             ['label' => 'Our focus',   'href' => 'index.php#focus'],
+        ],
+        // Careers sits on Discovery Behavioral Health's site, not ours, so the
+        // entry carries 'external' and the footer opens it in a new tab.
+        'Practice' => [
+            ['label' => 'About us', 'href' => 'about.php'],
+            ['label' => 'Careers',  'href' => 'https://discoverybehavioralhealth.com/careers/jobs/?location=Anew+Era+TMS', 'external' => true],
         ],
         'Patients' => [
             ['label' => 'Book a Visit',   'href' => 'index.php#book'],

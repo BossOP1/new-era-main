@@ -186,19 +186,26 @@ return [
         ],
     ],
 
-    // Shown six at a time; the arrows page through in groups of six.
+    // Real five-star reviews, picked from includes/data-reviews.php for length
+    // so they sit evenly in the carousel — twelve clinics, both states, and a
+    // spread of TMS, psychiatry and therapy. Light copy-editing only, for
+    // punctuation and the practice's own name; reviews.php and the location
+    // pages print the full set verbatim.
+    // Shown six at a time; the arrows page through in groups of six, so this
+    // stays a multiple of six or the last page comes up short.
     'reviews' => [
-        ['quote' => '"The first psychiatrist who read my chart before walking in. Six months later I am off two medications and doing better than I was on four."', 'who' => 'Marisa L.'],
-        ['quote' => '"TMS gave me back the version of myself my family remembers. A 36-session course felt routine instead of daunting."', 'who' => 'Devon R.'],
-        ['quote' => '"They found the ADHD everyone else had been treating as anxiety. That one appointment changed how I work and parent."', 'who' => 'Priya S.'],
-        ['quote' => '"Sixty-minute intake, real symptom scores at every visit — the first practice that treated my chart like it mattered."', 'who' => 'Andre K.'],
-        ['quote' => '"Spravato® got me out of a depressive episode nothing else had touched. The team monitored every session closely."', 'who' => 'Renee T.'],
-        ['quote' => '"My therapist and prescriber actually talk to each other. I have never had that before and it changed everything."', 'who' => 'Jordan M.'],
-        ['quote' => '"Accelerated TMS fit into one week off work instead of two months of daily visits. Results came just as fast."', 'who' => 'Sam O.'],
-        ['quote' => '"Telehealth visits in the evening meant I never had to choose between therapy and my job."', 'who' => 'Layla H.'],
-        ['quote' => '"The intake team verified my insurance before I even walked in. No surprise bills, no runaround."', 'who' => 'Talia F.'],
-        ['quote' => '"OCD treatment that finally worked — ERP therapy plus TMS when medication alone plateaued."', 'who' => 'Miguel A.'],
-        ['quote' => '"Postpartum anxiety hit hard. They saw me within days and built a plan around my baby’s schedule."', 'who' => 'Nina W.'],
+        ['quote' => '“Tiffany Nix takes the time to listen thoroughly and gives excellent feedback. She has helped me manage my depression for over four years.”', 'who' => 'Nancy W. · Laguna Hills'],
+        ['quote' => '“Great program — significantly helps sleep quantity and quality, now up to 8 hrs. Plus mood stimulation and elevation. Very positive effect.”', 'who' => 'John M. · Huntington Beach'],
+        ['quote' => '“I have been with the practice for a few years. Everything has been great from scheduling to the providers to office staff. Highly recommend.”', 'who' => 'Aimee G. · Cedar Park'],
+        ['quote' => '“Anyone who suffers with anxiety/depression needs to come here. Every single staff member is amazing. This place has saved my life.”', 'who' => 'Sara R. · Torrance'],
+        ['quote' => '“Laura Beaufford always takes great care of me, and the staff is accommodating. In and out, and if I prefer, Zoom is available.”', 'who' => 'Frank D. · Central Austin'],
+        ['quote' => '“Doris is so easy to talk to. I am not ever embarrassed to say how I feel. She is wonderful.”', 'who' => 'Shauna H. · Central Dallas'],
+        ['quote' => '“My NP John gave me really good guidance on how to have the most comprehensive and effective care plan to address my depression.”', 'who' => 'Nancy S. · Orange'],
+        ['quote' => '“Very professional and caring team. Naydelin, Armani and Juliet were great and made my treatment very smooth.”', 'who' => 'Michael C. · Grapevine'],
+        ['quote' => '“I had my intake appointment today. It was a wonderful experience and felt like it was in a good spot. 10/10 would recommend.”', 'who' => 'Rosario R. · Long Beach'],
+        ['quote' => '“I have been blessed with my journey I have had with the team at Anew Era. Care is competent and compassionate. Highly recommend.”', 'who' => 'Mollie Z. · Westlake'],
+        ['quote' => '“Very nice and professional office, from the front desk to the psychiatrist to the TMS technician. Highly recommend it.”', 'who' => 'Josh Z. · Allen'],
+        ['quote' => '“Very comfortable atmosphere and warm greetings. I feel very comfortable with the therapist.”', 'who' => 'LaDonna D. · Cypress'],
     ],
 
     'faq_categories' => [
