@@ -29,7 +29,7 @@ $footer_link = 'text-sm text-white/75 transition-colors hover:text-white';
           <span class="h-1 w-[26px] bg-brand-orange"></span>
           <span class="h-1 w-[26px] bg-brand-green"></span>
         </div>
-        <a href="index.php#book" class="mt-6 inline-flex items-center gap-2.5 whitespace-nowrap rounded-full bg-white px-6 py-3.5 text-[14.5px] font-extrabold text-brand-blue transition-colors hover:bg-brand-orange hover:text-white">
+        <a href="contact.php" class="mt-6 inline-flex items-center gap-2.5 whitespace-nowrap rounded-full bg-white px-6 py-3.5 text-[14.5px] font-extrabold text-brand-blue transition-colors hover:bg-brand-orange hover:text-white">
           Book a Consultation <?= arrow_icon(15) ?>
         </a>
       </div>
@@ -122,9 +122,55 @@ $footer_link = 'text-sm text-white/75 transition-colors hover:text-white';
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6.5 3.5h3l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4.5 5.7 2 2 0 0 1 6.5 3.5Z"/></svg>
     Call
   </a>
-  <a href="index.php#book" class="flex flex-1 items-center justify-center rounded-full bg-brand-orange px-5 py-3.5 text-sm font-extrabold text-white">Book a Visit</a>
+  <a href="contact.php" class="flex flex-1 items-center justify-center rounded-full bg-brand-orange px-5 py-3.5 text-sm font-extrabold text-white">Book a Visit</a>
 </div>
 
+<script>
+(function () {
+  var acsbScript = document.createElement('script');
+  var acsbHost = document.querySelector('head') || document.body;
+  acsbScript.src = 'https://acsbapp.com/apps/app/dist/js/app.js';
+  acsbScript.async = true;
+  acsbScript.onload = function () {
+    acsbJS.init({
+      statementLink: 'accessibility.html',
+      footerHtml: '',
+      hideMobile: false,
+      hideTrigger: false,
+      disableBgProcess: false,
+      language: 'en',
+      position: 'left',
+      leadColor: '#787878',
+      triggerColor: '#dddddd',
+      triggerRadius: '50%',
+      triggerPositionX: 'left',
+      triggerPositionY: 'bottom',
+      triggerIcon: 'people',
+      triggerSize: 'small',
+      triggerOffsetX: 20,
+      triggerOffsetY: 20,
+      mobile: {
+        triggerSize: 'small',
+        triggerPositionX: 'left',
+        triggerPositionY: 'bottom',
+        triggerOffsetX: 10,
+        triggerOffsetY: 0,
+        triggerRadius: '50%'
+      }
+    });
+  };
+  acsbHost.appendChild(acsbScript);
+})();
+</script>
+<script>
+(function () {
+  var talkFurther = document.createElement('script');
+  talkFurther.type = 'text/javascript';
+  talkFurther.src = 'https://js.talkfurther.com/talkfurther_init.min.js';
+  talkFurther.async = true;
+  document.head.appendChild(talkFurther);
+})();
+</script>
 <script src="<?= e(asset('assets/js/main.js')) ?>" defer></script>
 </body>
 </html>

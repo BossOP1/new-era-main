@@ -248,11 +248,11 @@ return [
         'heading_rest'   => ' you can see in the numbers',
         'photo'          => 'homepage/results-joy.jpg',
         'photo_alt'      => 'A father and his daughter laughing together outdoors in autumn light',
-        'stats' => [
-            ['value' => '83%', 'label' => 'of new patients are seen within a week of their first call'],
-            ['value' => '95%', 'label' => 'stay with the clinician they started with'],
-            ['value' => '26%', 'label' => 'average fall in symptom scores by week eight'],
-            ['value' => '84%', 'label' => 'of patients who begin a TMS course finish it'],
+            'stats' => [
+                ['value' => '60%', 'label' => 'average reduction in depression symptom scores by week eight'],
+                ['value' => '50%', 'label' => 'average reduction in anxiety symptom scores by week eight'],
+                ['value' => '93%', 'label' => 'of patients who begin a TMS course finish their treatment'],
+                ['value' => '91%', 'label' => 'of patients attend all appointments booked over the course of a year and continue care'],
         ],
     ],
 
