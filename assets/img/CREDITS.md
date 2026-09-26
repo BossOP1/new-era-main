@@ -18,7 +18,6 @@ a file with the same name into this folder.
 | `cond-7.jpg`  | images.unsplash.com/photo-1584744646898-40ff0404e767 | Washing hands (OCD) |
 | `treat-1.jpg` | images.unsplash.com/photo-1711409645921-ef3db0501f96 | Brain render (TMS) |
 | `treat-2.jpg` | images.unsplash.com/photo-1738707060236-42d641096f96 | Clinicians reviewing brain scans (Accelerated TMS) |
-| `treat-3.jpg` | images.unsplash.com/photo-1631217868264-e5b90bb7e133 | Clinician and patient (Psychiatry) |
 | `treat-4.jpg` | images.unsplash.com/photo-1576157401730-e73772de4796 | Nasal spray in use (Spravato) |
 | `treat-5.jpg` | images.unsplash.com/photo-1516575901726-efcb7a9895a0 | Infusion drip chamber (Ketamine) |
 | `treat-6.jpg` | images.unsplash.com/photo-1714976694810-85add1a29c96 | Therapy session (Therapy) |
@@ -64,6 +63,7 @@ than their container on purpose and carry `'focus' => 'object-left'` in
 | `treatments/psychiatry-hero.jpg`      | images.unsplash.com/photo-1758691461935-202e2ef6b69f | Doctor talking with a patient across a desk |
 | `treatments/psychiatry-doctor.jpg`    | images.unsplash.com/photo-1758691462878-6edc3d3da1be | Clinician listening at her desk |
 | `treatments/psychiatry-notes.jpg`     | images.unsplash.com/photo-1758691461990-03b49d969495 | Clinician writing notes on a clipboard |
+| `treatments/psychiatry-consult.jpg`  | images.unsplash.com/photo-1758273240360-76b908e7582a | Patient talking with a clinician taking notes (Psychiatry card, medication panel, About) |
 | `treatments/therapy-hero.jpg`         | images.unsplash.com/photo-1714976694525-71eb29a7c500 | Woman talking with a therapist on a sofa |
 | `treatments/telepsychiatry-hero.jpg`    | images.unsplash.com/photo-1651659802603-20a83aadb13b | Woman at a laptop in a bright kitchen, flipped (`&flip=h`) so she sits clear of the copy column |
 | `treatments/telepsychiatry-session.jpg` | images.unsplash.com/photo-1648737119422-2680a7e39089 | Woman talking to someone on a laptop screen |

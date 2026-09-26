@@ -167,7 +167,6 @@ return [
             'note'    => 'Questions about care, cost or insurance? Call us.',
             'columns' => 1,
             'items'   => [
-                ['label' => 'PHQ-9 self-check', 'href' => 'phq9.php',  'desc' => 'Nine questions, scored in your browser',  'icon' => 'clipboard'],
                 // Blogs is a placeholder until the blog exists.
                 ['label' => 'Blogs',   'href' => 'index.php#top',     'desc' => 'Articles on mental health and treatment', 'icon' => 'article'],
                 ['label' => 'Insurance', 'href' => 'insurance.php',   'desc' => 'Carriers, coverage and what you will owe', 'icon' => 'shield'],

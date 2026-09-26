@@ -126,7 +126,7 @@ return [
             'eyebrow' => 'Medication management',
             'heading' => 'Prescribing is the start of the work, not the end of it.',
             'copy'    => 'Antidepressants, mood stabilisers, anti-anxiety medication and stimulants all behave differently in different people. Your clinician chooses with your history in mind, checks in while it takes effect, and changes course when it is not working rather than waiting you out.',
-            'photo'   => 'treat-3',
+            'photo'   => 'treatments/psychiatry-consult.jpg',
             'photo_alt' => 'A clinician talking with a patient during a consultation',
             'cta'     => 'Book an Evaluation',
         ],

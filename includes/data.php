@@ -128,7 +128,7 @@ return [
         [
             'name'   => 'Psychiatry',
             'page'   => 'psychiatry.php',
-            'slot'   => 'treat-3',
+            'slot'   => 'treatments/psychiatry-consult.jpg',
             'alt'    => 'A clinician talking with a patient during a consultation',
             'detail' => 'Diagnostic evaluation and ongoing medication management from a clinician who knows you.',
             'chips'  => ['Evaluation', 'Med management'],
