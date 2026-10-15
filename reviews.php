@@ -548,6 +548,19 @@ $schema = [
     });
   }());
 
+  /* The TMS page links in as reviews.php?topic=tms the same way, landing on
+     that topic's chip. */
+  (function () {
+    var want = (location.search.match(/[?&]topic=([a-z0-9-]+)/) || [])[1];
+    var chip = want && root.querySelector('[data-filter-topic="' + want + '"]');
+    if (!chip) return;
+
+    state.topic = want;
+    root.querySelectorAll('[data-filter-topic]').forEach(function (c) {
+      c.setAttribute('aria-pressed', String(c === chip));
+    });
+  }());
+
   apply();
 }());
 </script>

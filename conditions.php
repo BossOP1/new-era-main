@@ -9,7 +9,7 @@
  * here, on the homepage and in six related grids without another edit.
  */
 $page_title        = 'Conditions We Treat';
-$page_description  = 'Depression, anxiety, postpartum depression, PTSD, tinnitus, migraines and OCD — the conditions we treat, and how we treat each one.';
+$page_description  = 'Depression, anxiety, postpartum depression, PTSD, migraines and OCD — the conditions we treat, and how we treat each one.';
 $header_hero_light = true;
 $header_inset      = true;
 require __DIR__ . '/includes/header.php';

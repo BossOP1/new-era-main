@@ -308,6 +308,20 @@ $em       = 'italic font-normal text-brand-blue';
   </div>
 </section>
 
+<!-- ─── Reviews ──────────────────────────────────────────────────────────
+     TMS reviews from our own patients, in the homepage's reviews block. Sits
+     right after the Magstim films, whose people are not ours, so the page
+     answers "and here is what ours say". -->
+<?php
+$rs_reviews = $data['treatment_reviews']['tms'];
+$rs_eyebrow = 'TMS reviews';
+$rs_heading = 'From our TMS patients.';
+$rs_link    = 'reviews.php?topic=tms';
+$rs_link_label = 'Read All TMS Reviews';
+$rs_anchor  = $anchor;
+require __DIR__ . '/includes/reviews-section.php';
+?>
+
 <!-- ─── 04 · What it treats ──────────────────────────────────────────── -->
 <section id="treats" class="<?= $wrap ?> <?= $pad ?> <?= $anchor ?>">
   <div class="mb-7 sm:mb-9 md:mb-11 md:flex md:items-end md:justify-between md:gap-10">

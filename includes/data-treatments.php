@@ -253,7 +253,7 @@ return [
         'eyebrow' => '04 / What it treats',
         'lines'   => ['Useful for', 'all of them.'],
         'accent'  => 'all of them.',
-        'intro'   => 'Therapy has a role in every condition we treat, from depression and anxiety to the distress that comes with tinnitus and chronic migraine.',
+        'intro'   => 'Therapy has a role in every condition we treat, from depression and anxiety to the toll of living with chronic migraine.',
         'flag'    => [],
         'flag_label' => '',
     ],

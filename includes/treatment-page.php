@@ -267,6 +267,24 @@ $others = array_values(array_filter(
   </div>
 </section>
 
+<?php
+/* ─── Reviews ───────────────────────────────────────────────────────────
+   Our own patients on this treatment, from $data['treatment_reviews']. A
+   treatment with no reviews that mention it (Spravato, so far) shows none
+   rather than borrowing someone else's. */
+$rs_by_key = [
+    'psychiatry'     => ['Psychiatry reviews',     'From our psychiatry patients.', 'reviews.php?topic=psychiatry', 'Read All Psychiatry Reviews'],
+    'therapy'        => ['Therapy reviews',        'From our therapy clients.',     'reviews.php?topic=therapy',    'Read All Therapy Reviews'],
+    'telepsychiatry' => ['Telepsychiatry reviews', 'From our telehealth patients.', 'reviews.php',                  'Read All the Reviews'],
+];
+if (!empty($data['treatment_reviews'][$treatment_key]) && isset($rs_by_key[$treatment_key])) {
+    [$rs_eyebrow, $rs_heading, $rs_link, $rs_link_label] = $rs_by_key[$treatment_key];
+    $rs_reviews = $data['treatment_reviews'][$treatment_key];
+    $rs_anchor  = $anchor;
+    require __DIR__ . '/reviews-section.php';
+}
+?>
+
 <?php if ($t['treats']): ?>
 <!-- ─── 04 · What it treats ──────────────────────────────────────────── -->
 <section id="treats" class="<?= $anchor ?> bg-[#efeee8]">

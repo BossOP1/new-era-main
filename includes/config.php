@@ -92,7 +92,6 @@ return [
                 ['label' => 'Postpartum', 'href' => 'postpartum.php', 'desc' => 'Options that fit feeding',       'art' => 'postpartum'],
                 ['label' => 'PTSD',       'href' => 'ptsd.php',       'desc' => 'Trauma-focused care',            'art' => 'ptsd'],
                 ['label' => 'OCD',        'href' => 'ocd.php',        'desc' => 'ERP therapy and TMS',            'art' => 'ocd'],
-                ['label' => 'Tinnitus',   'href' => 'tinnitus.php',   'desc' => 'When the ringing won’t stop',    'art' => 'tinnitus'],
                 ['label' => 'Migraines',  'href' => 'migraines.php',  'desc' => 'Coordinated with mood and sleep', 'art' => 'migraines'],
             ],
             'feature' => [

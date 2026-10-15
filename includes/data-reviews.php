@@ -25,10 +25,10 @@
 return [
     'meta'      => [
         'five_star'  => 1414,
-        'shown'      => 943,
+        'shown'      => 942,
         'clinics'    => 14,
         'sources'    => [
-            'Google'       => 918,
+            'Google'       => 917,
             'ZocDoc'       => 20,
             'Healthgrades' => 5,
             'WebMD'        => 3,
@@ -47,7 +47,7 @@ return [
         'laguna-hills'     => [
             'label' => 'Laguna Hills',
             'state' => 'ca',
-            'count' => 77,
+            'count' => 76,
         ],
         'long-beach'       => [
             'label' => 'Long Beach',
@@ -113,7 +113,7 @@ return [
     'topics'    => [
         'tms'        => [
             'label' => 'TMS therapy',
-            'count' => 292,
+            'count' => 291,
         ],
         'therapy'    => [
             'label' => 'Therapy',
@@ -129,7 +129,7 @@ return [
         ],
         'team'       => [
             'label' => 'The team',
-            'count' => 369,
+            'count' => 368,
         ],
     ],
     'reviews'   => [
@@ -6203,17 +6203,6 @@ Thank you for everything! <3
             'topics'   => ['tms', 'psychiatry', 'team'],
             'text'     => 'Anew Era TMS & Psychiatry treats me w respect and compassion.The staff are knowledgeable about the various treatments options available. My TMS technician is supportive. She has my comfort in mind throughout the sessions. The Anew Era ‘s treatments and therapy help me in so many ways.
 Also, with flexible appointment times, they make self-care easy to work into my life. My provider, Rhoda Madamombe, listens to my concerns, creating a trusting, caring, and safe space where I am comfortable asking for help.',
-        ],
-        [
-            'name'     => 'Taalon',
-            'initials' => 'T',
-            'clinic'   => 'laguna-hills',
-            'city'     => 'Laguna Hills, CA',
-            'source'   => 'Google',
-            'date'     => '2024-05-31',
-            'when'     => 'May 2024',
-            'topics'   => ['tms', 'team'],
-            'text'     => 'I received TMS treatment at the Laguna Hills A New Era office for extreme tinnitus and it helped immensely. I noticed a difference in the volume of the tinnitus after just the first session. It has been about a month since I completed the therapy and the effects have lasted. I always hear the tinnitus but on average it has been reduced around 40%, up to 80% at times. I feel like I can function again. Depression surrounding my situation also greatly improved as a secondary effect. Thank you so much to the whole team. Everyone was very friendly, knowledgeable, and hard working. Denise was an absolute rockstar and worked with me to make sure the treatment was as effective as possible. Thank you also to Mia, Jenn, Romi, and thank you Jenna for your positivity!',
         ],
         [
             'name'     => 'My-Han V.',

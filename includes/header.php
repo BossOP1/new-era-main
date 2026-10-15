@@ -36,7 +36,7 @@ $inset_bar    = $header_inset ? 'w-full max-w-[1200px] !gap-4 !shadow-none !back
 $nav_show     = 'xl:flex';
 $nav_hide     = 'xl:hidden';
 
-$title = $page_title ? $page_title . ' · ' . $site['name'] : $site['name'] . ' — A new era of mental health care';
+$title = $page_title ? $page_title . ' · ' . $site['name'] : $site['name'] . ' — Anew Era of mental health care';
 
 // Use the compiled stylesheet when it exists; fall back to the Play CDN otherwise.
 $compiled_css = is_file(__DIR__ . '/../assets/css/tailwind.css');
@@ -170,8 +170,13 @@ $nav_link  = 'relative inline-flex items-center gap-1.5 whitespace-nowrap rounde
     </nav>
 
     <div class="hidden items-center gap-2 <?= $nav_show ?>">
-      <a href="contact.php" class="inline-flex items-center gap-2 whitespace-nowrap rounded-full bg-brand-orange px-6 py-[15px] text-sm font-extrabold text-white transition-colors hover:bg-brand-orange-dark">Get Started</a>
+      <a href="contact.php?interest=tms" class="inline-flex items-center gap-2 whitespace-nowrap rounded-full bg-brand-orange px-6 py-[15px] text-sm font-extrabold text-white transition-colors hover:bg-brand-orange-dark">Book a Free TMS Consultation</a>
     </div>
+
+    <?php // Below xl the bar is just logo and burger, so the offer gets a pill of
+          // its own. Phones are too narrow for it; the bottom action bar carries
+          // the same offer there (includes/footer.php). ?>
+    <a href="contact.php?interest=tms" class="ml-auto -mr-3 hidden items-center whitespace-nowrap rounded-full bg-brand-orange px-5 py-2.5 text-sm font-extrabold text-white transition-colors hover:bg-brand-orange-dark sm:inline-flex <?= $nav_hide ?>">Book a Free TMS Consultation</a>
 
     <button type="button"
             class="group/burger inline-flex h-11 w-11 items-center justify-center rounded-full border border-ink/15 bg-white/70 text-ink transition-colors group-[.is-over-hero]:border-white/40 group-[.is-over-hero]:bg-white/15 group-[.is-over-hero]:text-white <?= $nav_hide ?>"
@@ -416,11 +421,12 @@ $nav_link  = 'relative inline-flex items-center gap-1.5 whitespace-nowrap rounde
     </div>
 
     <div class="mt-1 grid grid-cols-2 gap-2 rounded-[18px] bg-[#faf8f3] p-3">
+      <a href="contact.php?interest=tms" class="col-span-2 flex items-center justify-center rounded-full bg-brand-orange px-4 py-3.5 text-sm font-extrabold text-white transition-colors hover:bg-brand-orange-dark">Book a Free TMS Consultation</a>
       <a href="<?= e($site['phone_href']) ?>" class="flex items-center justify-center gap-2 rounded-full border-2 border-brand-blue px-4 py-3.5 text-sm font-extrabold text-brand-blue">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6.5 3.5h3l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4.5 5.7 2 2 0 0 1 6.5 3.5Z"/></svg>
         Call Us
       </a>
-      <a href="contact.php" class="flex items-center justify-center rounded-full bg-brand-orange px-4 py-3.5 text-sm font-extrabold text-white transition-colors hover:bg-brand-orange-dark">Get Started</a>
+      <a href="contact.php" class="flex items-center justify-center rounded-full border-2 border-brand-orange px-4 py-3.5 text-sm font-extrabold text-brand-orange transition-colors hover:bg-brand-orange hover:text-white">Get Started</a>
       <p class="col-span-2 m-0 pt-1 text-center text-[12px] text-ink/50">In crisis? Call or text 988 any time.</p>
     </div>
   </nav>

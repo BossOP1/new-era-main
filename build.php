@@ -111,7 +111,6 @@ $pages = [
     'anxiety.php'            => 'anxiety.html',            // condition page
     'postpartum.php'         => 'postpartum.html',         // condition page
     'ptsd.php'               => 'ptsd.html',               // condition page
-    'tinnitus.php'           => 'tinnitus.html',           // condition page
     'migraines.php'          => 'migraines.html',          // condition page
     'ocd.php'                => 'ocd.html',                // condition page
     // The legal documents, all built from includes/legal-page.php.
@@ -228,11 +227,14 @@ foreach ($pages as $srcFile => $outFile) {
         exit(1);
     }
 
-    // Internal .php links become .html for the static host. Anything with a
-    // scheme (tel:, mailto:, https://) has no .php in it, so it is untouched.
+    // Internal .php links become extensionless URLs for the static host:
+    // Netlify serves /about from about.html, so the address bar never shows
+    // .html. index.php becomes the site root. Anything with a scheme (tel:,
+    // mailto:, https://) has no .php in it, so it is untouched.
+    $html = preg_replace('/(["\'])(?:\.\/)?index\.php(?=["\'#?])/', '$1/', $html);
     $html = str_replace(
         ['.php"', ".php'", '.php#', '.php?'],
-        ['.html"', ".html'", '.html#', '.html?'],
+        ['"', "'", '#', '?'],
         $html
     );
 
@@ -270,6 +272,12 @@ foreach (glob('dist/*.html') as $page) {
     preg_match_all('/(?:src|href)="(?!https?:|tel:|sms:|mailto:|#|data:)([^"]+)"/i', $html, $m);
     foreach (array_unique($m[1]) as $ref) {
         $path = 'dist/' . rawurldecode(ltrim(strtok($ref, '?#'), '/'));
+        // Page links carry no extension; the host serves them from .html.
+        if (str_ends_with($path, '/')) {
+            $path .= 'index.html';
+        } elseif (pathinfo($path, PATHINFO_EXTENSION) === '') {
+            $path .= '.html';
+        }
         if (!file_exists($path)) {
             $missing[] = basename($page) . ' -> ' . $ref;
         }

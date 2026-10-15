@@ -132,9 +132,11 @@ $haystack = static function (array $p) use ($locations): string {
 
 <?php /* ─── Face marquee ──────────────────────────────────────────────────
      The whole roster, drifting past. Decorative and hidden from assistive
-     tech: it repeats the grid below. Pauses on hover and for reduced motion. */ ?>
+     tech: it repeats the grid below. Pauses on hover and for reduced motion.
+     Slower than the insurer strips (90s, not 34s): a full roster at their pace
+     reads as a blur of faces. */ ?>
 <div aria-hidden="true" class="marquee-mask overflow-hidden bg-white py-6 sm:py-8">
-  <div class="flex w-max gap-3 animate-marquee hover:[animation-play-state:paused] motion-reduce:animate-none sm:gap-4">
+  <div class="flex w-max gap-3 animate-marquee [animation-duration:90s] hover:[animation-play-state:paused] motion-reduce:animate-none sm:gap-4">
     <?php for ($pass = 0; $pass < 2; $pass++): ?>
       <?php foreach ($portraits as $p): ?>
         <span class="block h-[76px] w-[76px] shrink-0 overflow-hidden rounded-full border-2 border-white bg-[#e7f1fa] shadow-[0_6px_16px_rgba(20,32,43,0.1)] sm:h-[92px] sm:w-[92px]">

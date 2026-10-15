@@ -73,17 +73,6 @@ return [
             'chips' => ['EMDR', 'Prolonged exposure', 'Medication'],
         ],
         [
-            'slot'  => 'cond-5',
-            'focus' => 'object-left',   // wide crop keeps the subject clear of the info card
-            'icon'  => 'ear-waves',
-            'art'   => 'tinnitus',
-            'page'  => 'tinnitus.php',
-            'alt'   => 'A man laughing, head tilted back',
-            'name'  => 'Tinnitus',
-            'blurb' => 'Persistent ringing that disrupts sleep and mood — addressed with retraining therapy and TMS protocols.',
-            'chips' => ['TMS', 'Sound retraining', 'Sleep support'],
-        ],
-        [
             'slot'  => 'cond-6',
             'focus' => 'object-left',   // wide crop keeps the subject clear of the info card
             'icon'  => 'head-bolt',
@@ -206,6 +195,57 @@ return [
         ['quote' => '“I have been blessed with my journey I have had with the team at Anew Era. Care is competent and compassionate. Highly recommend.”', 'who' => 'Mollie Z. · Westlake'],
         ['quote' => '“Very nice and professional office, from the front desk to the psychiatrist to the TMS technician. Highly recommend it.”', 'who' => 'Josh Z. · Allen'],
         ['quote' => '“Very comfortable atmosphere and warm greetings. I feel very comfortable with the therapist.”', 'who' => 'LaDonna D. · Cypress'],
+    ],
+
+    // Treatment page reviews, keyed by treatment: five-star reviews from
+    // includes/data-reviews.php, quoted as written (line breaks joined, emoji
+    // dropped). Reviews naming clinicians no longer on the team are left out.
+    // Pages render them through includes/reviews-section.php.
+    'treatment_reviews' => [
+        'tms' => [
+            ['quote' => '“The staff was super friendly and super flexible!! After the whole treatment I saw significant improvements in my mood and motivation. 10/10 recommend AnnewEra TMS for people who have treatment resistant depression”', 'who' => 'Kallie C. · Cypress'],
+            ['quote' => '“After struggling with depression for so many years, I had forgotten how happy life was supposed to be. I would highly recommend Anew Era TMS to anyone who suffers from depression.”', 'who' => 'Terry C. · Laguna Hills'],
+            ['quote' => '“The TMS procedure was life changing and my quality of life has gone up significantly. The staff was patient and kind. My technician Alex was particularly helpful and pleasant to talk and work with.”', 'who' => 'juan L. · Central Austin'],
+            ['quote' => '“My TMS treatment was great! I have experienced so much improvement and benefits from this fantastic treatment. Also, my TMS technician Cel was wonderful. 10/10 would recommend!”', 'who' => 'Trey K. · Cedar Park'],
+            ['quote' => '“Everyone at Anew Era is so nice and helpful. TMS also helped much with my depression. I want to give specific shout outs to Naydelin, Juilet, and Armani for being so wonderful for every session.”', 'who' => 'Crimson L. · Grapevine'],
+            ['quote' => '“Anew Era has been a life saver for me. I have been thru the TMS treatment which was life changing. Rhoda is amazing and has been so helpful for me.”', 'who' => 'Becky J. · Allen'],
+            ['quote' => '“This was a great treatment center. My TMS techs Sandy and Juliet were so kind. If you need TMS get it here!”', 'who' => 'Lauren A. · Torrance'],
+            ['quote' => '“This is my second round of TMS with A new. Erika is awesome, as is everyone with ANew. I am grateful to have this treatment as an option for my depression.”', 'who' => 'C H. · Long Beach'],
+            ['quote' => '“I’m doing my 2nd round of TMS with Anew Era in West LA. Once again they surpassed my expectations staff are all friendly and efficient. They even ensured that my insurance was accepted and pre-approved before my 1st appointment.”', 'who' => 'Jules V. · West Los Angeles'],
+            ['quote' => '“I just had my first session of TMS this morning and it was a great experience. Jen was my tech and she did a great job of explaining everything to me and making me feel comfortable. I’m looking forward to the rest of the sessions.”', 'who' => 'Cody T. · Newport Beach'],
+            ['quote' => '“Brie and Lisa are so knowledgeable about the services provided at Anew Era, and both provide a comfortable and healing atmosphere. TMS has been life changing and I couldn’t recommend this practice enough!”', 'who' => 'Molly · Westlake'],
+            ['quote' => '“TMS has been awesome. Armani and everyone have been super accommodating. A very welcoming environment and treatment is surprisingly effective.”', 'who' => 'Adam D. · Central Dallas'],
+        ],
+        'psychiatry' => [
+            ['quote' => '“I really really like my psychiatrist. She’s really nice. She’s super smart. I have my meds all the time. I never have an issue so thank you and I really appreciate her.”', 'who' => 'Elizabeth B. · Laguna Hills'],
+            ['quote' => '“Dr Cudjoe is exceptional - she is very kind & caring and ensures I have the meds I need for my condition. She always makes me feel like I am a priority.”', 'who' => 'Jamie P. · Central Dallas'],
+            ['quote' => '“Love my Doctor, Dr. Diya. He\'s always friendly and happy to hear I\'m doing so well! He is attentive and caring. Mental health is always so important and my life is so much better on the right medications. Thank you Doctor Diya!”', 'who' => 'Carol C. · Orange'],
+            ['quote' => '“The staff is always friendly, and they really take into consideration my thoughts on medications. I stated I would like to start coming off meds soon and there was no hesitation or pushback. They truly care about their patients.”', 'who' => 'April C. · Allen'],
+            ['quote' => '“Very good psychiatrist. Really listens and helpful when it comes to my questions about my mental health”', 'who' => 'Michael B. · Huntington Beach'],
+            ['quote' => '“I am very greatful that my Psychiatrist Tiffany has taken the time to listen to me and with her positive attitude assured me she is there to assist in all my issues. Thank you again. God bless you all for your hard work.”', 'who' => 'Patricia G. · Newport Beach'],
+            ['quote' => '“Had a wonderful first experience here and felt like I was actually listened to for the first time in a LONG TIME. After trying psychiatrist after psychiatrist, I will be returning here. So thankful for you guys!”', 'who' => 'Jamie · Westlake'],
+            ['quote' => '“A New Era has been a huge help for me, especially during what I can call the hardest season of my life. Both the NP helping me regulate meds and Rickie with therapy have been an absolute Godsend!!”', 'who' => 'Carlos F. · Central Austin'],
+            ['quote' => '“Amazing doctor has helped me through over 2 years of mental health issues, highly recommended. Does a great job of hearing your issues and regulating medications!”', 'who' => 'Hank G. · Orange'],
+            ['quote' => '“This is a good psychiatrist office. I was able to get an appointment quickly. The Nurse-Practicioner listened well and was very helpful. I will return.”', 'who' => 'scott G. · Laguna Hills'],
+            ['quote' => '“Really nice, professional Psychiatrist who has been willing to adjust my meds to my needs.Quite pleased with Dr. Diya\'s excellence and professionalism.”', 'who' => 'Adrienne M. · Orange'],
+            ['quote' => '“Overall a pleasant experience with Dr. Madamombe. She communicated really well, and was helpful & patient in giving information/ diagnosis that was clear to prescribe medication with understanding of its effects.”', 'who' => 'Anonymous · Allen'],
+        ],
+        'therapy' => [
+            ['quote' => '“I love my therapist! Amazing professional and a great person. I’m always looking forward to the next session and have already started noticing progress after only a few months. So happy I was recommended to this place!”', 'who' => 'Mihaela P. · Westlake'],
+            ['quote' => '“My new Therapist Lauren Lopez is wonderful . She made me feel comfortable to express myself and was empathetic to what I was telling her. I feel she is the best fit for me . I’m looking forward to more sessions . Thanks”', 'who' => 'Teresita C. · Huntington Beach'],
+            ['quote' => '“I enjoy my therapist. Her name is Kimberly Morgan. She is highly skilled and provide great feedback. She is the best!”', 'who' => 'Erika E. · Long Beach'],
+            ['quote' => '“I definitely recommend to be seen with any of these professionals. The staff is excellent and the therapist are outstanding . It has helped me tremendously and I appreciate all of the staff and their efforts to help me”', 'who' => 'Theresa Q. · Orange'],
+            ['quote' => '“I felt heard and understood and the therapist was very thorough it explains things in a way that are clear and concise, compassionate, and she is a very knowledgeable.”', 'who' => 'Cmarie · Long Beach'],
+            ['quote' => '“They were incredibly helpful with finding my therapist and working with my insurance”', 'who' => 'Lauren W. · Central Austin'],
+        ],
+        'telepsychiatry' => [
+            ['quote' => '“I am so thankful I found Anew Era TMS & Psychiatry when I needed them the most. I have always felt welcome and comfortable with all interactions I’ve had here. It’s so nice having the flexibility to decide if I’d like meet in person or via telehealth for my appointments. Highly recommend John Diya, he is very understanding, helpful, and easy to talk to.”', 'who' => 'MariLee B. · Orange'],
+            ['quote' => '“I work FT and it’s hard for me to set up appointments in the day. Anew Era staff always make it super easy, remind me about the appointments, and even emailed me when I missed it completely getting stuck on a work call and I was able to jump on quickly by zoom or have the option to meet in person! Definitely would recommend!”', 'who' => 'Jessica P. · Long Beach'],
+            ['quote' => '“So easy to take great care of your mental health, scheduling is totally stress free, online appts make is stress free as well. I thought I was going to lose my mind when my last psychiatrist dropped me because I kept missing appts. I found ANEW the next day and this was truly a blessing. The providers take excellent care of me, I feel comfortable talking to them, Rx refills are immediate. Very happy patient here!!!”', 'who' => 'Wendy D. · Central Austin'],
+            ['quote' => '“The Telehealth visit s are very convenient and thorough. The medical practitioners are very good”', 'who' => 'Bill B. · Westlake'],
+            ['quote' => '“I saw a psychiatric nurse practitioner today and everything went well. Great location and I have an option to see her remotely. I am happy with my experience today.”', 'who' => 'K M. · Torrance'],
+            ['quote' => '“Excellent medication management. Friendly doctors and staff. Love the virtual therapy sessions.”', 'who' => 'Donna S. · Cypress'],
+        ],
     ],
 
     'faq_categories' => [
@@ -488,6 +528,6 @@ return [
 
         // Also treated with TMS. Keys match the 'art' values in 'conditions'
         // above, so condition_mark() finds the same artwork.
-        'related' => ['anxiety', 'migraines', 'ocd', 'ptsd', 'postpartum', 'tinnitus'],
+        'related' => ['anxiety', 'migraines', 'ocd', 'ptsd', 'postpartum'],
     ],
 ];

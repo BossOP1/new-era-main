@@ -371,7 +371,7 @@ return [
         ],
         [
             'q' => 'What conditions do you treat?',
-            'a' => 'Depression, including treatment-resistant depression, anxiety, postpartum depression and anxiety, PTSD, OCD, tinnitus and migraine, alongside the conditions that arrive with them. Each has a page setting out how we treat it.',
+            'a' => 'Depression, including treatment-resistant depression, anxiety, postpartum depression and anxiety, PTSD, OCD and migraine, alongside the conditions that arrive with them. Each has a page setting out how we treat it.',
             'link' => ['Conditions We Treat', 'conditions.php'],
         ],
         [

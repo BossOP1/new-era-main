@@ -13,7 +13,6 @@ a file with the same name into this folder.
 | `cond-2.jpg`  | images.unsplash.com/photo-1746049942512-b8d8a5742059 | Woman breathing outdoors (Anxiety) |
 | `cond-3.jpg`  | images.unsplash.com/photo-1583710457367-47de0ea21fef | Mother and newborn (Postpartum) |
 | `cond-4.jpg`  | images.unsplash.com/photo-1604881991720-f91add269bed | Hands held in support (PTSD) |
-| `cond-5.jpg`  | images.unsplash.com/photo-1714646183974-099d000b6a84 | Hands at temples (Tinnitus) |
 | `cond-6.jpg`  | images.unsplash.com/photo-1493836512294-502baa1986e2 | Head in hands (Migraines) |
 | `cond-7.jpg`  | images.unsplash.com/photo-1584744646898-40ff0404e767 | Washing hands (OCD) |
 | `treat-1.jpg` | images.unsplash.com/photo-1711409645921-ef3db0501f96 | Brain render (TMS) |
@@ -46,7 +45,6 @@ copy sits on.
 | `conditions/anxiety-hero.jpg`    | images.unsplash.com/photo-1534413298607-48ba59e8a06d | Woman in a field at sunset, from behind |
 | `conditions/postpartum-hero.jpg` | images.unsplash.com/photo-1780329941775-3303f3122ce6 | Mother holding her baby at a window (flipped) |
 | `conditions/ptsd-hero.jpg`       | images.unsplash.com/photo-1588696191779-61dde1b83475 | Two people leaning head to head in woodland |
-| `conditions/tinnitus-hero.jpg`   | images.unsplash.com/photo-1641753531933-a38888ca41ad | Man at a window in low amber light |
 | `conditions/migraines-hero.jpg`  | images.unsplash.com/photo-1603136324205-01cdebce04ab | Man looking out of a rain-streaked window (flipped) |
 | `conditions/ocd-hero.jpg`        | images.unsplash.com/photo-1572724727752-c0896e993676 | Man seated at a window in grey light (flipped) |
 

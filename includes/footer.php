@@ -122,7 +122,7 @@ $footer_link = 'text-sm text-white/75 transition-colors hover:text-white';
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6.5 3.5h3l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4.5 5.7 2 2 0 0 1 6.5 3.5Z"/></svg>
     Call
   </a>
-  <a href="contact.php" class="flex flex-1 items-center justify-center rounded-full bg-brand-orange px-5 py-3.5 text-sm font-extrabold text-white">Book a Visit</a>
+  <a href="contact.php?interest=tms" class="flex flex-1 items-center justify-center whitespace-nowrap rounded-full bg-brand-orange px-5 py-3.5 text-sm font-extrabold text-white">Free TMS Consultation</a>
 </div>
 
 <script>
@@ -133,7 +133,7 @@ $footer_link = 'text-sm text-white/75 transition-colors hover:text-white';
   acsbScript.async = true;
   acsbScript.onload = function () {
     acsbJS.init({
-      statementLink: 'accessibility.html',
+      statementLink: 'accessibility.php',
       footerHtml: '',
       hideMobile: false,
       hideTrigger: false,

@@ -23,7 +23,7 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
   <div class="pointer-events-none relative z-10 flex flex-1 flex-col items-center justify-center px-6 py-16 text-center sm:px-10 lg:py-24">
     <p class="on-footage m-0 mb-6 text-[13px] font-extrabold uppercase tracking-[0.16em] text-white/75">In-network with most major plans</p>
 
-    <h1 class="on-footage m-0 max-w-[17ch] text-balance text-[40px] leading-[1.04] tracking-[-0.035em] text-white sm:text-[56px] lg:text-[74px]">A new era of mental health care.</h1>
+    <h1 class="on-footage m-0 max-w-[17ch] text-balance text-[40px] leading-[1.04] tracking-[-0.035em] text-white sm:text-[56px] lg:text-[74px]">Anew Era of mental health care.</h1>
 
     <p class="on-footage mb-9 mt-6 max-w-[54ch] text-base leading-relaxed text-white/85 sm:text-[19px]">Evidence-based psychiatry, therapy and TMS — delivered by clinicians who take the time to know you. In-person and telehealth, most insurance accepted.</p>
 
@@ -413,7 +413,7 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
       Ready when you are <em class="font-serif font-normal italic">— and sooner than you think</em>
     </h2>
     <p class="mx-auto m-0 mb-6 max-w-[52ch] text-base font-medium text-ink/75">Most new patients are seen inside a week. We check your benefits first, so you know what a visit costs before you walk in.</p>
-    <a href="contact.php" class="inline-flex items-center rounded-full bg-brand-blue px-7 py-4 text-[15px] font-extrabold text-white transition-colors hover:bg-brand-blue-dark">Book a Consultation</a>
+    <a href="contact.php" class="inline-flex items-center rounded-full bg-brand-blue px-7 py-4 text-[15px] font-extrabold text-white transition-colors hover:bg-brand-blue-dark">Book a Free Consultation</a>
     <p class="m-0 mt-[18px] text-xs text-ink/55">In crisis? Call or text 988 any time.</p>
   </div>
 </section>

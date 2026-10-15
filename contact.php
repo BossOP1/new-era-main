@@ -153,7 +153,7 @@ $next_steps = [
       <?php /* Netlify Forms: the hidden form-name is what pairs a submission with
                this form, and the honeypot field below is hidden from people. */ ?>
       <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="parent-middle-name"
-            action="/contact.html?sent=1" class="mt-8 grid gap-5 sm:grid-cols-2">
+            action="/contact?sent=1" class="mt-8 grid gap-5 sm:grid-cols-2">
         <input type="hidden" name="form-name" value="contact">
         <p class="hidden">
           <label>Leave this blank if you are human: <input name="parent-middle-name" tabindex="-1" autocomplete="off"></label>
@@ -331,6 +331,11 @@ $next_steps = [
    revealed here rather than rendered server-side. Nothing else on the form
    needs JavaScript — it posts and works without this. */
 (function () {
+  // ?interest=tms (the header's free-consultation button) preselects TMS.
+  if (/[?&]interest=tms\b/.test(location.search)) {
+    var interest = document.getElementById('interest');
+    if (interest) { interest.value = 'TMS therapy'; }
+  }
   if (!/[?&]sent=1\b/.test(location.search)) { return; }
   var panel = document.querySelector('[data-sent]');
   if (!panel) { return; }
