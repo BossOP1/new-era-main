@@ -306,9 +306,9 @@ return [
     // the team. One idea each: at 32px, longer than two lines apiece stops
     // being a statement and becomes a paragraph.
     'focus_paragraphs' => [
-        'Our mission is to put TMS within reach of more people living with depression. A treatment this effective should not be hard to find.',
-        'It is FDA-cleared and non-medicinal, and for many patients it is the best chance they have of feeling like themselves again.',
-        'Delivered by doctors, technicians and office staff who make the course something you would send a friend to — from the first phone call to the final session.',
+        'Our mission is to put TMS within reach of more people living with depression. Effective treatment shouldn’t be hard to find.',
+        'TMS is FDA-cleared and non-medication-based, offering eligible patients another treatment option for depression.',
+        'Our doctors, technicians, and office staff are here to make the treatment experience feel supportive and straightforward, from the first phone call through the final session.',
     ],
     /* ------------------------------------------------------------------ *
      * Depression — copy for depression.php.
