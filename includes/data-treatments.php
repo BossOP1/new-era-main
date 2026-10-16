@@ -580,5 +580,147 @@ return [
     ],
 ],
 
+/* ── Adolescent care ───────────────────────────────────────────────────
+   Not a separate treatment so much as who it is for: psychiatry and therapy
+   for patients aged 13 and up. Every fact here is one the site already
+   states elsewhere — 13+, family sessions, school counselors with consent,
+   a parent joining part of a telehealth visit, and the FAQ's account of
+   what parents are told. Keep them in step if any of those change.
+     · No claim is made about TMS for under-18s. Clearance for adolescents
+       depends on the device, and the practice treats on Magstim; the
+       'honest' panel sends that question to the phone call instead.
+     · Spravato's label is adults only, so it says so.
+     · 'treats' is null: the conditions grid lists every condition, and
+       postpartum and migraines would read oddly here. The options cards
+       cover what we see in teenagers instead.                          */
+'adolescent' => [
+    'name'  => 'Adolescent Care',
+    'page'  => 'adolescent.php',
+    'title' => 'Adolescent & Teen Mental Health Care',
+    'meta'  => 'Psychiatry and therapy for teenagers aged 13 and up, in person and by telehealth across California and Texas. Family sessions, school coordination with consent, and a clear agreement on what parents are told.',
+
+    'hero' => [
+        'lines'  => ['Care for teens.', 'Room for parents.'],
+        'accent' => 'Room for parents.',
+        'lede'   => 'Psychiatry and therapy for young people from 13, with family sessions built in and a clear agreement, from the first visit, about what is shared with you and what stays between your teenager and their clinician.',
+        'image'  => 'adolescent/hero.jpg',
+        'panel'  => '#ece9e4',
+        'wash'   => '236 233 228',
+        'cta'    => 'Book an Evaluation',
+        'note'   => 'Ages 13 and up. In person and by telehealth.',
+        'meta_left'  => 'In-network with most major plans.',
+        'meta_right' => 'Psychiatry / Therapy / Family sessions',
+    ],
+
+    'what' => [
+        'lines'  => ['Teenagers are not', 'small adults.'],
+        'accent' => 'small adults.',
+        'serif'  => 'Adolescent care is psychiatry and therapy shaped around a young person: their own voice in the room, and a family that is part of the plan without running it.',
+        'paras'  => [
+            'The teenage years bring their own pressures — school, friendships, sleep, phones, a body and a brain still changing — and the signs of depression or anxiety can look like moodiness or a bad term. A proper assessment is how you tell the difference.',
+            'Your teenager sees the same psychiatrists, nurse practitioners and therapists our adult patients do, in the same practice. Their therapist and their prescriber read the same notes, so you are not left carrying messages between two offices.',
+        ],
+        'facts' => [
+            ['Ages 13+',        'Adolescents and adults'],
+            ['Family sessions', 'A standard part of care'],
+            ['School',          'Coordinated, with consent'],
+            ['Telehealth',      'Or in person, your choice'],
+        ],
+        'note'      => 'Safety is always shared with parents. Beyond that, your teenager’s clinician sets out at the start what you will be told — and the rules vary by state, so they will explain how they apply to you.',
+        'link'      => ['How the First Visit Works', '#process'],
+        'photo'     => 'adolescent/session.jpg',
+        'photo_alt' => 'A teenage girl on a sofa talking to a counsellor',
+        'focus'     => 'object-[50%_35%]',
+        'caption'   => 'Their hour, in their words.',
+    ],
+
+    'band' => [
+        'value'  => '13+',
+        'rest'   => 'is the age we start seeing patients, with family sessions as a standard part of care.',
+        'note'   => 'With consent, we coordinate with school counselors.',
+        'source' => 'Who we see',
+    ],
+
+    'options' => [
+        'rail'   => 'What we see',
+        'eyebrow'=> '02 / What we help with',
+        'lines'  => ['What brings', 'teenagers to us.'],
+        'accent' => 'teenagers to us.',
+        'intro'  => 'You do not need a diagnosis to book. Most families call because something has changed and they cannot tell what it is.',
+        'items'  => [
+            ['Depression',      'More than a bad mood: withdrawal, sleeping too much or too little, losing interest in things that used to matter.', 'Low mood'],
+            ['Anxiety',         'Worry that gets in the way of school or friendships, panic attacks, or avoiding places and people.', 'Panic · Social'],
+            ['ADHD',            'Trouble with focus, organisation and impulsivity, assessed properly rather than guessed at from a school report.', 'Attention'],
+            ['Trauma and PTSD', 'Trauma-focused therapy at a pace the young person sets, with family support alongside.', 'Trauma'],
+            ['OCD',             'Intrusive thoughts and rituals, treated with exposure and response prevention.', 'ERP'],
+            ['Bipolar disorder','Mood that swings between lows and highs, diagnosed carefully and managed with your teenager and you.', 'Mood'],
+        ],
+    ],
+
+    'process' => [
+        'rail'   => 'How it works',
+        'eyebrow'=> '03 / How it works',
+        'lines'  => ['Together, and', 'one to one.'],
+        'accent' => 'one to one.',
+        'intro'  => 'A parent or guardian makes the arrangements. From there, the plan is built with your teenager rather than around them.',
+        'photo'     => 'adolescent/telehealth.jpg',
+        'photo_alt' => 'A teenager smiling and waving during a video call',
+        'focus'     => 'object-[55%_30%]',
+        'caption'   => 'In person or by video.',
+        'steps' => [
+            ['A call from you',          'A parent or guardian books the first appointment. We verify your insurance benefits first, so you know the cost before anything starts.'],
+            ['The first visit',          'A full assessment rather than a fifteen-minute script. Part of it is with you in the room and part is with your teenager alone, and the clinician explains up front what is shared and what is not.'],
+            ['A written plan',           'Therapy, medication, or both — explained to your teenager and to you, with the reasons, before anything begins.'],
+            ['Ongoing care',             'Therapy is usually weekly to begin with, with family sessions along the way. Progress is reviewed monthly and the plan changes if it is not working.'],
+            ['School, with your consent','Where it helps, we coordinate with your teenager’s school counselor. Nothing is shared with the school without consent.'],
+        ],
+        'facts' => [
+            ['13+',     'ages we see',      '#0f639b'],
+            ['Weekly',  'therapy to begin', '#e8922f'],
+            ['Monthly', 'progress reviews', '#5f8f38'],
+        ],
+    ],
+
+    'treats' => null,
+
+    'panels' => [
+        'feature' => [
+            'eyebrow' => 'Parents, kept in the loop',
+            'heading' => 'Enough to support them. Not a transcript.',
+            'copy'    => 'Adolescent care works because the young person can speak freely. So you are told what you need to help — and anything about safety, always — while what they say in the room stays theirs.',
+            'photo'   => 'adolescent/teens.jpg',
+            'photo_alt' => 'Two teenage boys laughing together at a table outdoors',
+            'cta'     => 'Book an Evaluation',
+        ],
+        'honest' => [
+            'eyebrow' => 'What parents ask',
+            'heading' => 'The plain',
+            'accent'  => 'answers.',
+            'intro'   => 'The questions families ask most often before a first visit.',
+            'items'   => [
+                ['Privacy is part of the treatment', 'Teenagers say more when they know where it goes. The clinician sets out the rules at the first visit, and safety is always shared with you.', 'bg-brand-blue'],
+                ['Medication is not the default', 'Many teenagers do well with therapy alone. When medication is considered, the reasons and the likely side effects are explained to both of you, and it is followed up.', 'bg-brand-orange'],
+                ['Some treatments are adults only', 'Spravato® is approved for adults only. If you are wondering about TMS, ask us on the call and we will tell you plainly whether it applies.', 'bg-brand-green'],
+            ],
+            'note' => 'If your teenager is in crisis or talking about suicide, call or text 988 any time, or go to the nearest emergency room.',
+        ],
+    ],
+
+    'faqs' => [
+        ['What ages do you see?', 'We see patients aged 13 and up. Adolescent care includes family sessions and, with consent, coordination with school counselors.'],
+        ['My child is a teenager. What will I be told?', 'Enough to support them, not a transcript. Adolescent care works because the young person can speak freely, so clinicians set out at the start what will be shared with you and what will not — with safety always being shared. The rules also vary by state, and your clinician will tell you how they apply.'],
+        ['Do I need to come to every appointment?', 'A parent or guardian makes the arrangements and joins for part of the first visit. After that it depends on the plan: some sessions are one to one, and family sessions bring you in on purpose.'],
+        ['Can my teenager be seen by telehealth?', 'Yes, from 13. A parent or guardian joins for part of the appointment, and your clinician will set out at the start what is shared with you and what stays between them and your child.'],
+        ['Will you talk to my teenager’s school?', 'Only with consent. Where it helps, we coordinate with the school counselor, so support at school and support here point the same way.'],
+        ['Does insurance cover it?', 'We accept most major insurance plans and verify your benefits before the first appointment, so you know what a visit costs before you commit to anything.'],
+    ],
+
+    'cta' => [
+        'lines'  => ['Start with', 'one phone call.'],
+        'accent' => 'one phone call.',
+        'copy'   => 'A parent or guardian books the first appointment. New patients are usually seen within five business days, in person or by telehealth.',
+    ],
+],
+
 
 ];

@@ -246,6 +246,16 @@ return [
             ['quote' => '“I saw a psychiatric nurse practitioner today and everything went well. Great location and I have an option to see her remotely. I am happy with my experience today.”', 'who' => 'K M. · Torrance'],
             ['quote' => '“Excellent medication management. Friendly doctors and staff. Love the virtual therapy sessions.”', 'who' => 'Donna S. · Cypress'],
         ],
+        // Parents writing about their son's or daughter's care. The reviews
+        // do not give the child's age, so the section calls them parents'
+        // reviews rather than claiming every one is about a teenager.
+        'adolescent' => [
+            ['quote' => '“I’m vary great full that I have found Anew Era to help my son! They really take the time to talk to him and help him to move forward with his treatment thanks to Savanna for dealing with my Calling her every time we need some thing whether it be a refill on his medications or just keeping the Drs up to-date on how he’s doing! He really feels comfortable with the doctor”', 'who' => 'Cynthia M. · Newport Beach'],
+            ['quote' => '“My daughter was seen today by Emily who was so nice and listened to everything she said. Dr. Kudjoe was absolutely wonderful. I’d definitely be recommend them to my friends and family.”', 'who' => 'Joyce T. · Grapevine'],
+            ['quote' => '“I am so pleased with the staff and The way they do things here. I had a problem and they were always aware of my needs as well as the needs of my daughter. I like the fact that they take time to listen and even more took the time to follow up to see if everything worked as planned planned. I am hopeful that things will work out in the future but even more pleased that this team is on board.”', 'who' => 'Mark · Central Austin'],
+            ['quote' => '“As always rhoda is the best. I’ve been going too her for over 2 years . And now my son she has helped him tremdously. Caring, Loving And has A heart of gold....”', 'who' => 'Amanda S. · Allen'],
+            ['quote' => '“Siti was wonderfully attentive and knowledgeable. I look forward to seeing more improvements with my daughter’s depression.”', 'who' => 'Andrea J. · Grapevine'],
+        ],
     ],
 
     'faq_categories' => [

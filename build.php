@@ -105,6 +105,7 @@ $pages = [
     'psychiatry.php' => 'psychiatry.html', // treatment page
     'therapy.php'    => 'therapy.html',    // treatment page
     'telepsychiatry.php' => 'telepsychiatry.html', // treatment page
+    'adolescent.php' => 'adolescent.html', // treatment page — ages 13 and up
     'spravato.php'   => 'spravato.html',   // treatment page
     'depression.php' => 'depression.html', // condition page
     'depression-short.php' => 'depression-short.html', // short edition, for comparison

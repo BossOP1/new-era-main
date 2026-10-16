@@ -150,3 +150,16 @@ and are embedded as click-to-play facades exactly as tms.php does it — the pos
 is local and nothing reaches YouTube until a visitor presses play. Both posters
 are Magstim's own designed thumbnails, so they carry Magstim's branding and their
 own play graphic; that is left as-is rather than cropped.
+
+## Adolescent care page (`adolescent/`)
+
+All four are Unsplash License (free), checked on each photo's page. The hero is
+cropped from the left 80% of the frame with `&rect=` so the subject sits right
+of the copy column, which is where the hero wash clears.
+
+| File | Source image | Subject |
+|------|--------------|---------|
+| `adolescent/hero.jpg`       | images.unsplash.com/photo-1484318521211-7dd50a7cb29c | Teenage girl at a window, chin on her hand (hero) |
+| `adolescent/session.jpg`    | images.unsplash.com/photo-1758273240331-745ccab011a2 | Teenage girl on a sofa talking to a counsellor, portrait crop |
+| `adolescent/telehealth.jpg` | images.unsplash.com/photo-1758521541324-d304c5303fe5 | Teenager smiling and waving on a video call, portrait crop |
+| `adolescent/teens.jpg`      | images.unsplash.com/photo-1696919161666-2ea301ead734 | Two teenage boys laughing at a table outdoors (feature panel) |

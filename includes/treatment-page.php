@@ -276,6 +276,7 @@ $rs_by_key = [
     'psychiatry'     => ['Psychiatry reviews',     'From our psychiatry patients.', 'reviews.php?topic=psychiatry', 'Read All Psychiatry Reviews'],
     'therapy'        => ['Therapy reviews',        'From our therapy clients.',     'reviews.php?topic=therapy',    'Read All Therapy Reviews'],
     'telepsychiatry' => ['Telepsychiatry reviews', 'From our telehealth patients.', 'reviews.php',                  'Read All the Reviews'],
+    'adolescent'     => ['Parent reviews',         'From parents of our patients.', 'reviews.php',                  'Read All the Reviews'],
 ];
 if (!empty($data['treatment_reviews'][$treatment_key]) && isset($rs_by_key[$treatment_key])) {
     [$rs_eyebrow, $rs_heading, $rs_link, $rs_link_label] = $rs_by_key[$treatment_key];

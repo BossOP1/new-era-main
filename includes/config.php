@@ -69,6 +69,7 @@ return [
                 ['label' => 'Psychiatry',  'href' => 'psychiatry.php', 'desc' => 'Evaluation and medication management', 'icon' => 'stethoscope'],
                 ['label' => 'Therapy',     'href' => 'therapy.php',    'desc' => 'CBT, DBT, EMDR and ACT',             'icon' => 'chat'],
                 ['label' => 'Telepsychiatry', 'href' => 'telepsychiatry.php', 'desc' => 'The same care, by secure video',      'icon' => 'chat'],
+                ['label' => 'Adolescent care', 'href' => 'adolescent.php', 'desc' => 'Psychiatry and therapy from 13',      'icon' => 'parent-child'],
                 ['label' => 'Spravato®',   'href' => 'spravato.php',   'desc' => 'Esketamine nasal spray, Texas only',  'icon' => 'spray'],
                 ['label' => 'Our TMS system', 'href' => 'magstim-horizon.php', 'desc' => 'The Magstim Horizon® we treat on', 'icon' => 'grid'],
             ],
