@@ -11,6 +11,20 @@ if (!function_exists('e')) {
     }
 }
 
+if (!function_exists('mb_strlen')) {
+    function mb_strlen(?string $string, ?string $encoding = null): int
+    {
+        return strlen((string) $string);
+    }
+}
+
+if (!function_exists('mb_substr')) {
+    function mb_substr(?string $string, int $start, ?int $length = null, ?string $encoding = null): string
+    {
+        return $length === null ? substr((string) $string, $start) : substr((string) $string, $start, $length);
+    }
+}
+
 if (!function_exists('asset')) {
     /** Build a URL for a file in assets/, cache-busted by its modification time. */
     function asset(string $path): string

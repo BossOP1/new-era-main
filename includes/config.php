@@ -167,8 +167,7 @@ return [
             'note'    => 'Questions about care, cost or insurance? Call us.',
             'columns' => 1,
             'items'   => [
-                // Blogs is a placeholder until the blog exists.
-                ['label' => 'Blogs',   'href' => 'index.php#top',     'desc' => 'Articles on mental health and treatment', 'icon' => 'article'],
+                ['label' => 'Blogs',   'href' => 'blogs.php',         'desc' => 'Articles on mental health and treatment', 'icon' => 'article'],
                 ['label' => 'Insurance', 'href' => 'insurance.php',   'desc' => 'Carriers, coverage and what you will owe', 'icon' => 'shield'],
                 ['label' => 'Reviews', 'href' => 'reviews.php',        'desc' => 'What patients say about their care',      'icon' => 'star'],
                 ['label' => 'FAQs',    'href' => 'faq.php',           'desc' => 'Insurance, first visits and treatment',   'icon' => 'question'],
@@ -206,6 +205,7 @@ return [
             ['label' => 'Reviews',        'href' => 'reviews.php'],
             ['label' => 'Insurance',      'href' => 'insurance.php'],
             ['label' => 'FAQs',           'href' => 'faq.php'],
+            ['label' => 'Blog & Articles', 'href' => 'blogs.php'],
             ['label' => 'Contact us',     'href' => 'contact.php'],
         ],
     ],
