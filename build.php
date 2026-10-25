@@ -98,18 +98,6 @@ $pages = [
 
     'reviews.php'    => 'reviews.html',     // every five-star patient review
     'blogs.php'      => 'blogs.html',       // the blog articles index
-    'how-to-prevent-postpartum-depression.php' => 'how-to-prevent-postpartum-depression.html', // Postpartum prevention blog
-    'how-long-do-migraines-last.php' => 'how-long-do-migraines-last.html', // Migraines duration blog
-    'is-depression-a-disability.php' => 'is-depression-a-disability.html', // Depression disability blog
-    'can-tms-cause-anxiety.php' => 'can-tms-cause-anxiety.html', // Can TMS cause anxiety blog
-    'how-long-can-postpartum-anxiety-last.php' => 'how-long-can-postpartum-anxiety-last.html', // Postpartum anxiety blog
-    'does-ocd-get-worse-with-age.php' => 'does-ocd-get-worse-with-age.html', // OCD aging blog
-    'who-is-eligible-for-tms-therapy.php' => 'who-is-eligible-for-tms-therapy.html', // TMS eligibility blog
-    'is-tms-therapy-legitimate.php' => 'is-tms-therapy-legitimate.html', // TMS legitimacy guide blog
-    'is-adhd-a-disability.php' => 'is-adhd-a-disability.html', // ADHD disability blog
-    'cost-of-tms-therapy-without-insurance.php' => 'cost-of-tms-therapy-without-insurance.html', // TMS cost without insurance blog
-    'does-tricare-cover-tms-therapy.php' => 'does-tricare-cover-tms-therapy.html', // TRICARE TMS coverage blog
-    'how-long-does-tms-take-to-work.php' => 'how-long-does-tms-take-to-work.html', // TMS timeline blog
     'conditions.php' => 'conditions.html', // the conditions index
     'tms.php'        => 'tms.html',        // the TMS treatment page
     'magstim-horizon.php' => 'magstim-horizon.html', // the equipment behind it
@@ -132,6 +120,16 @@ $pages = [
     'terms.php'         => 'terms.html',
     'accessibility.php' => 'accessibility.html',
 ];
+
+// Automatically register all published blog posts from includes/data-blogs.php
+$blogs_for_build = require __DIR__ . '/includes/data-blogs.php';
+foreach ($blogs_for_build as $b) {
+    if (!empty($b['href'])) {
+        $outFile = str_replace('.php', '.html', $b['href']);
+        $pages[$b['href']] = $outFile;
+    }
+}
+
 
 // Folders copied wholesale into dist/.
 // assets/ holds photos, insurance logos, the Magstim device shot, the clinic

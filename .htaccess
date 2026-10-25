@@ -34,7 +34,7 @@ RewriteRule ^careers/?$ https://discoverybehavioralhealth.com/careers/jobs/?loca
 RewriteRule ^laura-ann-beaufford(\.html)?/?$ /team [R=301,L,NC]
 
 # Home and general
-RewriteRule ^blog/?$ / [R=301,L,NC]
+RewriteRule ^blog/?$ /blogs [R=301,L,NC]
 RewriteRule ^covid-19/?$ /faq [R=301,L,NC]
 RewriteRule ^unsubscribe/?$ / [R=301,L,NC]
 RewriteRule ^newsletter/?$ / [R=301,L,NC]

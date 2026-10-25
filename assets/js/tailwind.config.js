@@ -4,7 +4,7 @@
  *   2. the Tailwind CLI (`npm run build:css`) for a production stylesheet
  */
 const anewEraTailwindConfig = {
-  content: ['./*.php', './includes/**/*.php', './assets/js/**/*.js'],
+  content: ['./*.php', './includes/**/*.php', './includes/posts/*.html', './assets/js/**/*.js'],
   theme: {
     extend: {
       colors: {
