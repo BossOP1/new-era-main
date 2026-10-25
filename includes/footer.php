@@ -15,6 +15,23 @@ $footer_link = 'text-sm text-white/75 transition-colors hover:text-white';
 <footer class="bg-night bg-footer-glow text-white">
   <div class="mx-auto max-w-[1280px] px-5 py-14 sm:px-10 lg:py-16">
 
+    <?php /* Site search. The site is static, so this searches
+             search-index.json, which build.php writes from every rendered
+             page's title, description and headings. Hidden until main.js
+             wires it up: without JS there is nothing to search with. */ ?>
+    <div data-site-search hidden class="mb-12 border-b border-white/12 pb-10">
+      <form role="search" class="relative max-w-[640px]" autocomplete="off">
+        <label for="site-search" class="m-0 mb-3 block text-[11px] font-extrabold uppercase tracking-[0.14em] text-white/40">Search the site</label>
+        <div class="relative">
+          <svg class="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-white/45" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input id="site-search" type="search" placeholder="Try “Magstim”, “Spravato”, a clinic or a clinician" aria-controls="site-search-results" aria-describedby="site-search-status"
+                 class="w-full rounded-full border border-white/20 bg-white/[0.07] py-3.5 pl-11 pr-5 text-[15px] text-white placeholder:text-white/40 focus:border-white/50 focus:bg-white/[0.11] focus:outline-none">
+        </div>
+        <p id="site-search-status" class="sr-only" aria-live="polite"></p>
+        <ul id="site-search-results" class="m-0 mt-3 hidden list-none overflow-hidden rounded-2xl border border-white/12 bg-white/[0.04] p-0"></ul>
+      </form>
+    </div>
+
     <?php /* Brand, the three link columns and Visit share one grid. They used
              to be a masthead band plus a four-column grid holding five
              children, so Visit wrapped onto a row of its own and left three

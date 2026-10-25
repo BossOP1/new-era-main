@@ -25,10 +25,10 @@
 return [
     'meta'      => [
         'five_star'  => 1414,
-        'shown'      => 942,
+        'shown'      => 937,
         'clinics'    => 14,
         'sources'    => [
-            'Google'       => 917,
+            'Google'       => 912,
             'ZocDoc'       => 20,
             'Healthgrades' => 5,
             'WebMD'        => 3,
@@ -87,7 +87,7 @@ return [
         'central-austin'   => [
             'label' => 'Central Austin',
             'state' => 'tx',
-            'count' => 109,
+            'count' => 104,
         ],
         'central-dallas'   => [
             'label' => 'Central Dallas',
@@ -113,7 +113,7 @@ return [
     'topics'    => [
         'tms'        => [
             'label' => 'TMS therapy',
-            'count' => 291,
+            'count' => 290,
         ],
         'therapy'    => [
             'label' => 'Therapy',
@@ -121,7 +121,7 @@ return [
         ],
         'psychiatry' => [
             'label' => 'Psychiatry & meds',
-            'count' => 191,
+            'count' => 190,
         ],
         'results'    => [
             'label' => 'How it went',
@@ -129,7 +129,7 @@ return [
         ],
         'team'       => [
             'label' => 'The team',
-            'count' => 368,
+            'count' => 367,
         ],
     ],
     'reviews'   => [
@@ -176,17 +176,6 @@ return [
             'when'     => 'Sep 2026',
             'topics'   => ['team'],
             'text'     => 'Been coming here for a couple of years now, absolutely love the people and staff is kind and helpful',
-        ],
-        [
-            'name'     => 'Frank D.',
-            'initials' => 'FD',
-            'clinic'   => 'central-austin',
-            'city'     => 'Central Austin, TX',
-            'source'   => 'Google',
-            'date'     => '2026-09-02',
-            'when'     => 'Sep 2026',
-            'topics'   => ['team'],
-            'text'     => 'Laura Beaufford always takes great care of me, and the staff is accommodating! In and out and if I prefer Zoom is available',
         ],
         [
             'name'     => 'Adi B.',
@@ -309,17 +298,6 @@ About completed my third session of TMS with A New Era. They are the best I’ve
             'when'     => 'Aug 2026',
             'topics'   => [],
             'text'     => 'Tiffany Nix takes the time to listen thoroughly and gives excellent feedback. She has helped me manage my depression for over four years.',
-        ],
-        [
-            'name'     => 'Martha G.',
-            'initials' => 'MG',
-            'clinic'   => 'central-austin',
-            'city'     => 'Central Austin, TX',
-            'source'   => 'Google',
-            'date'     => '2026-08-26',
-            'when'     => 'Aug 2026',
-            'topics'   => [],
-            'text'     => 'Laura was kind and asked all the questions she needed to ask.',
         ],
         [
             'name'     => 'Grace K.',
@@ -746,17 +724,6 @@ Looking forward to continuing seeing results for my treatment resistant depressi
             'when'     => 'Aug 2026',
             'topics'   => ['tms', 'psychiatry'],
             'text'     => 'TMS treatment was a wonderful addition to my medication. I finally feel more "with it". The technicians Naydelin, Juliet, and Armani were great and knowledgeable. I felt accepted and understood. If you are considering trying TMS I recommend you do it',
-        ],
-        [
-            'name'     => 'Shannon C.',
-            'initials' => 'SC',
-            'clinic'   => 'central-austin',
-            'city'     => 'Central Austin, TX',
-            'source'   => 'Google',
-            'date'     => '2026-08-04',
-            'when'     => 'Aug 2026',
-            'topics'   => ['psychiatry'],
-            'text'     => 'I feel that I am heard and understood in my treatment. I\'ve tried a variety of medications and finally found a plan that works for me and my health. Laura Beaufford takes her time to carefully assess my case and diagnoses to create a specific treatment plan for me that is working. Finding a doctor that cares about what they are doing is important. Thankful to be treated as a person and not just another patient.',
         ],
         [
             'name'     => 'Brenda G.',
@@ -2214,17 +2181,6 @@ I\'ve continued to return for more rTMS treatments as needed and I have been tre
 Warning: if you are struggling and forget or can’t make an appointment, even an emergency, the office will charge you $75 no exceptions. It’s brutal when you are having an episode and reception is not understanding. I understand the importance of my provider’s time and the money they are losing but I think it’s not very kind of the practice. I will still have another appointment, they will still get the money from it, and when you are struggling financially it hits hard. That does not take away my praise of my psychiatrist and I still rate the practice 5 stars, it’s just a warning for anyone reading.',
         ],
         [
-            'name'     => 'Catherine W.',
-            'initials' => 'CW',
-            'clinic'   => 'central-austin',
-            'city'     => 'Central Austin, TX',
-            'source'   => 'Google',
-            'date'     => '2026-01-22',
-            'when'     => 'Jan 2026',
-            'topics'   => [],
-            'text'     => 'Thank you Laura for always having a smile, listening, and believing in me.',
-        ],
-        [
             'name'     => 'Rosario R.',
             'initials' => 'RR',
             'clinic'   => 'long-beach',
@@ -2742,17 +2698,6 @@ Love her!!',
             'when'     => 'Oct 2025',
             'topics'   => ['therapy'],
             'text'     => 'John Anthony Chua is beyond excellent. He has given me more insight and understanding of myself in the short time that we had our Zoom meeting than any therapist I have ever been to. I appreciate his knowledge and understanding. He made everything about my treatment and my feelings make sense. I am so grateful for him!',
-        ],
-        [
-            'name'     => 'Madeline R.',
-            'initials' => 'MR',
-            'clinic'   => 'central-austin',
-            'city'     => 'Central Austin, TX',
-            'source'   => 'Google',
-            'date'     => '2025-10-24',
-            'when'     => 'Oct 2025',
-            'topics'   => ['tms'],
-            'text'     => 'Laura Beaufford has been such a blessing in my mental health journey. She brings an incredible balance of professionalism and heart — she truly cares. Laura’s compassion shines through in every session, and her ability to make you feel safe and supported while also being proactive and knowledgeable is remarkable. She listens deeply, remembers details, and tailors care with genuine thoughtfulness. It’s clear she’s passionate about helping her patients heal and thrive. I always leave our sessions feeling lighter, understood, and hopeful. Anew Era TMS is exceptional because of clinicians like her.',
         ],
         [
             'name'     => 'Adam',

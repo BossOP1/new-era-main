@@ -11,12 +11,13 @@
  * practice's own page for each clinic. Neighbouring cities are geography.
  *
  * ⚠ Three things to check before these go live:
- *   · 'treatments' lists TMS, psychiatry and therapy everywhere. The
- *     practice's own pages also list Spravato® and an intensive outpatient
- *     programme at some clinics — but spravato.php and data-treatments.php on
- *     this site both say Spravato® is Texas-only, and there is no IOP content
- *     anywhere. Rather than contradict the rest of the site, every clinic
- *     lists the three. Settle which is right and update whichever is wrong.
+ *   · 'treatments' lists TMS, psychiatry and therapy everywhere, plus
+ *     "Adult Esketamine" (Spravato®) at the three Austin-area and three
+ *     Dallas-area clinics, as the practice confirmed in October 2026. The
+ *     Houston-area clinics (Cypress, The Woodlands) were not part of that
+ *     instruction, so they list the three; confirm whether they offer it too.
+ *     The practice's own pages also mention an intensive outpatient programme
+ *     at some clinics, but there is no IOP content anywhere on this site.
  *   · 'getting_here' says where the clinic is and to arrive early. It does
  *     NOT describe parking or transit — that is local knowledge nobody here
  *     has, and inventing it would send people to the wrong car park. Add a
@@ -54,8 +55,7 @@ return [
 
     'hours' => [
         ['days' => 'Monday – Friday', 'time' => '6:00am – 6:00pm'],
-        ['days' => 'Saturday',        'time' => 'Closed'],
-        ['days' => 'Sunday',          'time' => 'Closed'],
+        ['days' => 'Saturday – Sunday', 'time' => 'Closed'],
     ],
     'hours_note' => 'TMS patients are seen outside these hours where a course needs it — ask when your schedule is set.',
 
@@ -81,13 +81,13 @@ return [
 
     'faqs' => [
         ['q' => 'Do I need a referral to be seen here?',
-         'a' => 'Not from us. Most plans let you book psychiatry directly, though a few HMO products still require one from your primary care doctor. We check that when we verify your benefits.'],
+         'a' => ' Most plans let you book psychiatry directly, though a few HMO products still require one from your primary care doctor. We check that when we verify your benefits.'],
         ['q' => 'How soon can I get an appointment in Huntington Beach?',
          'a' => 'New patient consultations are usually available within five business days, and same-week telehealth slots often open up. Say so when you call if things are urgent.'],
         ['q' => 'Can I be seen by video instead of coming in?',
          'a' => 'Yes, for psychiatry and therapy, anywhere in California. TMS is an in-clinic treatment and has to happen at the Center Avenue suite.'],
         ['q' => 'Is TMS available at this clinic?',
-         'a' => 'Yes. A course is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorisation first.'],
+         'a' => 'Yes. A course is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorization first.'],
     ],
 ],
 
@@ -115,8 +115,7 @@ return [
 
     'hours' => [
         ['days' => 'Monday – Friday', 'time' => '6:00am – 6:00pm'],
-        ['days' => 'Saturday',        'time' => 'Closed'],
-        ['days' => 'Sunday',          'time' => 'Closed'],
+        ['days' => 'Saturday – Sunday', 'time' => 'Closed'],
     ],
     'hours_note' => 'TMS patients are seen outside these hours where a course needs it — ask when your schedule is set.',
 
@@ -142,13 +141,13 @@ return [
 
     'faqs' => [
         ['q' => 'Do I need a referral to be seen here?',
-         'a' => 'Not from us. Most plans let you book psychiatry directly, though a few HMO products still require one from your primary care doctor. We check that when we verify your benefits.'],
+         'a' => ' Most plans let you book psychiatry directly, though a few HMO products still require one from your primary care doctor. We check that when we verify your benefits.'],
         ['q' => 'How soon can I get an appointment in Newport Beach?',
          'a' => 'New patient consultations are usually available within five business days, and same-week telehealth slots often open up. Say so when you call if things are urgent.'],
         ['q' => 'Can I be seen by video instead of coming in?',
          'a' => 'Yes, for psychiatry and therapy, anywhere in California. TMS is an in-clinic treatment and has to happen at the Quail Street suite.'],
         ['q' => 'Is TMS available at this clinic?',
-         'a' => 'Yes. A course is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorisation first.'],
+         'a' => 'Yes. A course is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorization first.'],
     ],
 ],
 
@@ -176,8 +175,7 @@ return [
 
     'hours' => [
         ['days' => 'Monday – Friday', 'time' => '6:00am – 6:00pm'],
-        ['days' => 'Saturday',        'time' => 'Closed'],
-        ['days' => 'Sunday',          'time' => 'Closed'],
+        ['days' => 'Saturday – Sunday', 'time' => 'Closed'],
     ],
     'hours_note' => 'TMS patients are seen outside these hours where a course needs it — ask when your schedule is set.',
 
@@ -203,13 +201,13 @@ return [
 
     'faqs' => [
         ['q' => 'Do I need a referral to be seen here?',
-         'a' => 'Not from us. Most plans let you book psychiatry directly, though a few HMO products still require one from your primary care doctor. We check that when we verify your benefits.'],
+         'a' => ' Most plans let you book psychiatry directly, though a few HMO products still require one from your primary care doctor. We check that when we verify your benefits.'],
         ['q' => 'How soon can I get an appointment in Laguna Hills?',
          'a' => 'New patient consultations are usually available within five business days, and same-week telehealth slots often open up. Say so when you call if things are urgent.'],
         ['q' => 'Can I be seen by video instead of coming in?',
          'a' => 'Yes, for psychiatry and therapy, anywhere in California. TMS is an in-clinic treatment and has to happen at the Calle De La Magdalena suite.'],
         ['q' => 'Is TMS available at this clinic?',
-         'a' => 'Yes. A course is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorisation first.'],
+         'a' => 'Yes. A course is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorization first.'],
     ],
 ],
 
@@ -237,8 +235,7 @@ return [
 
     'hours' => [
         ['days' => 'Monday – Friday', 'time' => '6:00am – 6:00pm'],
-        ['days' => 'Saturday',        'time' => 'Closed'],
-        ['days' => 'Sunday',          'time' => 'Closed'],
+        ['days' => 'Saturday – Sunday', 'time' => 'Closed'],
     ],
     'hours_note' => 'TMS patients are seen outside these hours where a course needs it — ask when your schedule is set.',
 
@@ -264,13 +261,13 @@ return [
 
     'faqs' => [
         ['q' => 'Do I need a referral to be seen here?',
-         'a' => 'Not from us. Most plans let you book psychiatry directly, though a few HMO products still require one from your primary care doctor. We check that when we verify your benefits.'],
+         'a' => ' Most plans let you book psychiatry directly, though a few HMO products still require one from your primary care doctor. We check that when we verify your benefits.'],
         ['q' => 'How soon can I get an appointment in Orange?',
          'a' => 'New patient consultations are usually available within five business days, and same-week telehealth slots often open up. Say so when you call if things are urgent.'],
         ['q' => 'Can I be seen by video instead of coming in?',
          'a' => 'Yes, for psychiatry and therapy, anywhere in California. TMS is an in-clinic treatment and has to happen at the West Chapman Avenue suite.'],
         ['q' => 'Is TMS available at this clinic?',
-         'a' => 'Yes. A course is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorisation first.'],
+         'a' => 'Yes. A course is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorization first.'],
     ],
 ],
 
@@ -298,8 +295,7 @@ return [
 
     'hours' => [
         ['days' => 'Monday – Friday', 'time' => '6:00am – 6:00pm'],
-        ['days' => 'Saturday',        'time' => 'Closed'],
-        ['days' => 'Sunday',          'time' => 'Closed'],
+        ['days' => 'Saturday – Sunday', 'time' => 'Closed'],
     ],
     'hours_note' => 'TMS patients are seen outside these hours where a course needs it — ask when your schedule is set.',
 
@@ -325,13 +321,13 @@ return [
 
     'faqs' => [
         ['q' => 'Do I need a referral to be seen here?',
-         'a' => 'Not from us. Most plans let you book psychiatry directly, though a few HMO products still require one from your primary care doctor. We check that when we verify your benefits.'],
+         'a' => ' Most plans let you book psychiatry directly, though a few HMO products still require one from your primary care doctor. We check that when we verify your benefits.'],
         ['q' => 'How soon can I get an appointment in Torrance?',
          'a' => 'New patient consultations are usually available within five business days, and same-week telehealth slots often open up. Say so when you call if things are urgent.'],
         ['q' => 'Can I be seen by video instead of coming in?',
          'a' => 'Yes, for psychiatry and therapy, anywhere in California. TMS is an in-clinic treatment and has to happen at the West Carson Street suite.'],
         ['q' => 'Is TMS available at this clinic?',
-         'a' => 'Yes. A course is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorisation first.'],
+         'a' => 'Yes. A course is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorization first.'],
     ],
 ],
 
@@ -359,8 +355,7 @@ return [
 
     'hours' => [
         ['days' => 'Monday – Friday', 'time' => '6:00am – 6:00pm'],
-        ['days' => 'Saturday',        'time' => 'Closed'],
-        ['days' => 'Sunday',          'time' => 'Closed'],
+        ['days' => 'Saturday – Sunday', 'time' => 'Closed'],
     ],
     'hours_note' => 'TMS patients are seen outside these hours where a course needs it — ask when your schedule is set.',
 
@@ -386,13 +381,13 @@ return [
 
     'faqs' => [
         ['q' => 'Do I need a referral to be seen here?',
-         'a' => 'Not from us. Most plans let you book psychiatry directly, though a few HMO products still require one from your primary care doctor. We check that when we verify your benefits.'],
+         'a' => ' Most plans let you book psychiatry directly, though a few HMO products still require one from your primary care doctor. We check that when we verify your benefits.'],
         ['q' => 'How soon can I get an appointment in Long Beach?',
          'a' => 'New patient consultations are usually available within five business days, and same-week telehealth slots often open up. Say so when you call if things are urgent.'],
         ['q' => 'Can I be seen by video instead of coming in?',
          'a' => 'Yes, for psychiatry and therapy, anywhere in California. TMS is an in-clinic treatment and has to happen at the Oceangate suite.'],
         ['q' => 'Is TMS available at this clinic?',
-         'a' => 'Yes. A course is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorisation first.'],
+         'a' => 'Yes. A course is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorization first.'],
     ],
 ],
 
@@ -420,8 +415,7 @@ return [
 
     'hours' => [
         ['days' => 'Monday – Friday', 'time' => '6:00am – 6:00pm'],
-        ['days' => 'Saturday',        'time' => 'Closed'],
-        ['days' => 'Sunday',          'time' => 'Closed'],
+        ['days' => 'Saturday – Sunday', 'time' => 'Closed'],
     ],
     'hours_note' => 'TMS patients are seen outside these hours where a course needs it — ask when your schedule is set.',
 
@@ -447,13 +441,13 @@ return [
 
     'faqs' => [
         ['q' => 'Do I need a referral to be seen here?',
-         'a' => 'Not from us. Most plans let you book psychiatry directly, though a few HMO products still require one from your primary care doctor. We check that when we verify your benefits.'],
+         'a' => ' Most plans let you book psychiatry directly, though a few HMO products still require one from your primary care doctor. We check that when we verify your benefits.'],
         ['q' => 'How soon can I get an appointment in West Los Angeles?',
          'a' => 'New patient consultations are usually available within five business days, and same-week telehealth slots often open up. Say so when you call if things are urgent.'],
         ['q' => 'Can I be seen by video instead of coming in?',
          'a' => 'Yes, for psychiatry and therapy, anywhere in California. TMS is an in-clinic treatment and has to happen at the Santa Monica Boulevard suite.'],
         ['q' => 'Is TMS available at this clinic?',
-         'a' => 'Yes. A course is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorisation first.'],
+         'a' => 'Yes. A course is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorization first.'],
     ],
 ],
 
@@ -464,31 +458,30 @@ return [
     'region'     => 'Austin',
     'page'       => 'central-austin.php',
     'h1'         => 'Psychiatry and TMS in',
-    'meta'       => 'Psychiatry, therapy and TMS in Central Austin, TX — 8140 N Mopac Expy, Building 3, Suite 150. Meet the clinicians, see what we treat, and book with the one who fits.',
+    'meta'       => 'Psychiatry, therapy and TMS in Central Austin, TX — 8140 N MoPac Expy, Building 3, Suite 150. Meet the clinicians, see what we treat, and book with the one who fits.',
     'lede'       => 'Psychiatry, therapy and TMS off North MoPac, a few minutes from the Arboretum. Most major plans accepted, and we check your benefits before your first visit.',
     'street_name'=> 'North MoPac',
 
     'address'   => [
         'building' => '',
-        'street'   => '8140 N Mopac Expy, Building 3, Suite 150',
+        'street'   => '8140 N MoPac Expy, Building 3, Suite 150',
         'city'     => 'Austin',
         'region'   => 'TX',
         'postcode' => '78759',
     ],
     'phone'      => '(737) 363-4731',
     'phone_href' => 'tel:+17373634731',
-    'maps'       => 'https://www.google.com/maps/dir/?api=1&destination=Anew%20Era%20TMS%20%26%20Psychiatry%2C%208140%20N%20Mopac%20Expy%2C%20Building%203%2C%20Suite%20150%2C%20Austin%2C%20TX%2078759',
+    'maps'       => 'https://www.google.com/maps/dir/?api=1&destination=Anew%20Era%20TMS%20%26%20Psychiatry%2C%208140%20N%20MoPac%20Expy%2C%20Building%203%2C%20Suite%20150%2C%20Austin%2C%20TX%2078759',
 
     'hours' => [
         ['days' => 'Monday – Friday', 'time' => '6:00am – 6:00pm'],
-        ['days' => 'Saturday',        'time' => 'Closed'],
-        ['days' => 'Sunday',          'time' => 'Closed'],
+        ['days' => 'Saturday – Sunday', 'time' => 'Closed'],
     ],
     'hours_note' => 'TMS patients are seen outside these hours where a course needs it — ask when your schedule is set.',
 
     'getting_here' => [
         ['name' => 'Where it is',
-         'copy' => '8140 N Mopac Expy, Building 3, Suite 150, in Austin.'],
+         'copy' => '8140 N MoPac Expy, Building 3, Suite 150, in Austin.'],
         ['name' => 'Before your first visit',
          'copy' => 'Signposting inside a medical building is never as obvious as it looks on the way in. Give yourself a few extra minutes to find the suite rather than arriving at a run.'],
     ],
@@ -504,17 +497,19 @@ return [
              'copy' => 'A full diagnostic evaluation, then medication management if that is the right tool.'],
             ['name' => 'Therapy',     'page' => 'therapy.php',    'icon' => 'chat',
              'copy' => 'CBT, DBT, EMDR and ACT, in person at the clinic or by telehealth across the state.'],
+            ['name' => 'Adult Esketamine', 'page' => 'spravato.php', 'icon' => 'spray',
+             'copy' => 'Spravato® (esketamine) nasal spray for adults with treatment-resistant depression, taken here under supervision.'],
         ],
 
     'faqs' => [
         ['q' => 'Do I need a referral to be seen here?',
-         'a' => 'Not from us. Most plans let you book psychiatry directly, though a few HMO products still require one from your primary care doctor. We check that when we verify your benefits.'],
+         'a' => ' Most plans let you book psychiatry directly, though a few HMO products still require one from your primary care doctor. We check that when we verify your benefits.'],
         ['q' => 'How soon can I get an appointment in Central Austin?',
          'a' => 'New patient consultations are usually available within five business days, and same-week telehealth slots often open up. Say so when you call if things are urgent.'],
         ['q' => 'Can I be seen by video instead of coming in?',
          'a' => 'Yes, for psychiatry and therapy, anywhere in Texas. TMS is an in-clinic treatment and has to happen at the North MoPac suite.'],
         ['q' => 'Is TMS available at this clinic?',
-         'a' => 'Yes. A course is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorisation first.'],
+         'a' => 'Yes. A course is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorization first.'],
     ],
 ],
 
@@ -542,8 +537,7 @@ return [
 
     'hours' => [
         ['days' => 'Monday – Friday', 'time' => '6:00am – 6:00pm'],
-        ['days' => 'Saturday',        'time' => 'Closed'],
-        ['days' => 'Sunday',          'time' => 'Closed'],
+        ['days' => 'Saturday – Sunday', 'time' => 'Closed'],
     ],
     'hours_note' => 'TMS patients are seen outside these hours where a course needs it — ask when your schedule is set.',
 
@@ -565,17 +559,19 @@ return [
              'copy' => 'A full diagnostic evaluation, then medication management if that is the right tool.'],
             ['name' => 'Therapy',     'page' => 'therapy.php',    'icon' => 'chat',
              'copy' => 'CBT, DBT, EMDR and ACT, in person at the clinic or by telehealth across the state.'],
+            ['name' => 'Adult Esketamine', 'page' => 'spravato.php', 'icon' => 'spray',
+             'copy' => 'Spravato® (esketamine) nasal spray for adults with treatment-resistant depression, taken here under supervision.'],
         ],
 
     'faqs' => [
         ['q' => 'Do I need a referral to be seen here?',
-         'a' => 'Not from us. Most plans let you book psychiatry directly, though a few HMO products still require one from your primary care doctor. We check that when we verify your benefits.'],
+         'a' => ' Most plans let you book psychiatry directly, though a few HMO products still require one from your primary care doctor. We check that when we verify your benefits.'],
         ['q' => 'How soon can I get an appointment in Cedar Park?',
          'a' => 'New patient consultations are usually available within five business days, and same-week telehealth slots often open up. Say so when you call if things are urgent.'],
         ['q' => 'Can I be seen by video instead of coming in?',
          'a' => 'Yes, for psychiatry and therapy, anywhere in Texas. TMS is an in-clinic treatment and has to happen at the Cottonwood Creek Trail suite.'],
         ['q' => 'Is TMS available at this clinic?',
-         'a' => 'Yes. A course is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorisation first.'],
+         'a' => 'Yes. A course is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorization first.'],
     ],
 ],
 
@@ -603,8 +599,7 @@ return [
 
     'hours' => [
         ['days' => 'Monday – Friday', 'time' => '6:00am – 6:00pm'],
-        ['days' => 'Saturday',        'time' => 'Closed'],
-        ['days' => 'Sunday',          'time' => 'Closed'],
+        ['days' => 'Saturday – Sunday', 'time' => 'Closed'],
     ],
     'hours_note' => 'TMS patients are seen outside these hours where a course needs it — ask when your schedule is set.',
 
@@ -626,17 +621,19 @@ return [
              'copy' => 'A full diagnostic evaluation, then medication management if that is the right tool.'],
             ['name' => 'Therapy',     'page' => 'therapy.php',    'icon' => 'chat',
              'copy' => 'CBT, DBT, EMDR and ACT, in person at the clinic or by telehealth across the state.'],
+            ['name' => 'Adult Esketamine', 'page' => 'spravato.php', 'icon' => 'spray',
+             'copy' => 'Spravato® (esketamine) nasal spray for adults with treatment-resistant depression, taken here under supervision.'],
         ],
 
     'faqs' => [
         ['q' => 'Do I need a referral to be seen here?',
-         'a' => 'Not from us. Most plans let you book psychiatry directly, though a few HMO products still require one from your primary care doctor. We check that when we verify your benefits.'],
+         'a' => ' Most plans let you book psychiatry directly, though a few HMO products still require one from your primary care doctor. We check that when we verify your benefits.'],
         ['q' => 'How soon can I get an appointment in Westlake?',
          'a' => 'New patient consultations are usually available within five business days, and same-week telehealth slots often open up. Say so when you call if things are urgent.'],
         ['q' => 'Can I be seen by video instead of coming in?',
          'a' => 'Yes, for psychiatry and therapy, anywhere in Texas. TMS is an in-clinic treatment and has to happen at the Capital of Texas Highway suite.'],
         ['q' => 'Is TMS available at this clinic?',
-         'a' => 'Yes. A course is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorisation first.'],
+         'a' => 'Yes. A course is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorization first.'],
     ],
 ],
 
@@ -662,10 +659,12 @@ return [
     'phone_href' => 'tel:+14699626984',
     'maps'       => 'https://www.google.com/maps/dir/?api=1&destination=Anew%20Era%20TMS%20%26%20Psychiatry%2C%2017480%20Dallas%20Pkwy%20Ste%20101%2C%20Dallas%2C%20TX%2075287',
 
+    // The client asked for these hours to be shown in Pacific Time (Oct 2026).
+    'timezone' => 'pt',
+
     'hours' => [
         ['days' => 'Monday – Friday', 'time' => '6:00am – 6:00pm'],
-        ['days' => 'Saturday',        'time' => 'Closed'],
-        ['days' => 'Sunday',          'time' => 'Closed'],
+        ['days' => 'Saturday – Sunday', 'time' => 'Closed'],
     ],
     'hours_note' => 'TMS patients are seen outside these hours where a course needs it — ask when your schedule is set.',
 
@@ -687,17 +686,19 @@ return [
              'copy' => 'A full diagnostic evaluation, then medication management if that is the right tool.'],
             ['name' => 'Therapy',     'page' => 'therapy.php',    'icon' => 'chat',
              'copy' => 'CBT, DBT, EMDR and ACT, in person at the clinic or by telehealth across the state.'],
+            ['name' => 'Adult Esketamine', 'page' => 'spravato.php', 'icon' => 'spray',
+             'copy' => 'Spravato® (esketamine) nasal spray for adults with treatment-resistant depression, taken here under supervision.'],
         ],
 
     'faqs' => [
         ['q' => 'Do I need a referral to be seen here?',
-         'a' => 'Not from us. Most plans let you book psychiatry directly, though a few HMO products still require one from your primary care doctor. We check that when we verify your benefits.'],
+         'a' => ' Most plans let you book psychiatry directly, though a few HMO products still require one from your primary care doctor. We check that when we verify your benefits.'],
         ['q' => 'How soon can I get an appointment in Central Dallas?',
          'a' => 'New patient consultations are usually available within five business days, and same-week telehealth slots often open up. Say so when you call if things are urgent.'],
         ['q' => 'Can I be seen by video instead of coming in?',
          'a' => 'Yes, for psychiatry and therapy, anywhere in Texas. TMS is an in-clinic treatment and has to happen at the Dallas Parkway suite.'],
         ['q' => 'Is TMS available at this clinic?',
-         'a' => 'Yes. A course is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorisation first.'],
+         'a' => 'Yes. A course of treatment is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorization first.'],
     ],
 ],
 
@@ -725,8 +726,7 @@ return [
 
     'hours' => [
         ['days' => 'Monday – Friday', 'time' => '6:00am – 6:00pm'],
-        ['days' => 'Saturday',        'time' => 'Closed'],
-        ['days' => 'Sunday',          'time' => 'Closed'],
+        ['days' => 'Saturday – Sunday', 'time' => 'Closed'],
     ],
     'hours_note' => 'TMS patients are seen outside these hours where a course needs it — ask when your schedule is set.',
 
@@ -748,17 +748,19 @@ return [
              'copy' => 'A full diagnostic evaluation, then medication management if that is the right tool.'],
             ['name' => 'Therapy',     'page' => 'therapy.php',    'icon' => 'chat',
              'copy' => 'CBT, DBT, EMDR and ACT, in person at the clinic or by telehealth across the state.'],
+            ['name' => 'Adult Esketamine', 'page' => 'spravato.php', 'icon' => 'spray',
+             'copy' => 'Spravato® (esketamine) nasal spray for adults with treatment-resistant depression, taken here under supervision.'],
         ],
 
     'faqs' => [
         ['q' => 'Do I need a referral to be seen here?',
-         'a' => 'Not from us. Most plans let you book psychiatry directly, though a few HMO products still require one from your primary care doctor. We check that when we verify your benefits.'],
+         'a' => ' Most plans let you book psychiatry directly, though a few HMO products still require one from your primary care doctor. We check that when we verify your benefits.'],
         ['q' => 'How soon can I get an appointment in Allen?',
          'a' => 'New patient consultations are usually available within five business days, and same-week telehealth slots often open up. Say so when you call if things are urgent.'],
         ['q' => 'Can I be seen by video instead of coming in?',
          'a' => 'Yes, for psychiatry and therapy, anywhere in Texas. TMS is an in-clinic treatment and has to happen at the Raintree Circle suite.'],
         ['q' => 'Is TMS available at this clinic?',
-         'a' => 'Yes. A course is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorisation first.'],
+         'a' => 'Yes. A course of treatment is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorization first.'],
     ],
 ],
 
@@ -786,8 +788,7 @@ return [
 
     'hours' => [
         ['days' => 'Monday – Friday', 'time' => '6:00am – 6:00pm'],
-        ['days' => 'Saturday',        'time' => 'Closed'],
-        ['days' => 'Sunday',          'time' => 'Closed'],
+        ['days' => 'Saturday – Sunday', 'time' => 'Closed'],
     ],
     'hours_note' => 'TMS patients are seen outside these hours where a course needs it — ask when your schedule is set.',
 
@@ -809,17 +810,19 @@ return [
              'copy' => 'A full diagnostic evaluation, then medication management if that is the right tool.'],
             ['name' => 'Therapy',     'page' => 'therapy.php',    'icon' => 'chat',
              'copy' => 'CBT, DBT, EMDR and ACT, in person at the clinic or by telehealth across the state.'],
+            ['name' => 'Adult Esketamine', 'page' => 'spravato.php', 'icon' => 'spray',
+             'copy' => 'Spravato® (esketamine) nasal spray for adults with treatment-resistant depression, taken here under supervision.'],
         ],
 
     'faqs' => [
         ['q' => 'Do I need a referral to be seen here?',
-         'a' => 'Not from us. Most plans let you book psychiatry directly, though a few HMO products still require one from your primary care doctor. We check that when we verify your benefits.'],
+         'a' => ' Most plans let you book psychiatry directly, though a few HMO products still require one from your primary care doctor. We check that when we verify your benefits.'],
         ['q' => 'How soon can I get an appointment in Grapevine?',
          'a' => 'New patient consultations are usually available within five business days, and same-week telehealth slots often open up. Say so when you call if things are urgent.'],
         ['q' => 'Can I be seen by video instead of coming in?',
          'a' => 'Yes, for psychiatry and therapy, anywhere in Texas. TMS is an in-clinic treatment and has to happen at the Lancaster Drive suite.'],
         ['q' => 'Is TMS available at this clinic?',
-         'a' => 'Yes. A course is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorisation first.'],
+         'a' => 'Yes. A course of treatment is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorization first.'],
     ],
 ],
 
@@ -847,8 +850,7 @@ return [
 
     'hours' => [
         ['days' => 'Monday – Friday', 'time' => '6:00am – 6:00pm'],
-        ['days' => 'Saturday',        'time' => 'Closed'],
-        ['days' => 'Sunday',          'time' => 'Closed'],
+        ['days' => 'Saturday – Sunday', 'time' => 'Closed'],
     ],
     'hours_note' => 'TMS patients are seen outside these hours where a course needs it — ask when your schedule is set.',
 
@@ -874,13 +876,13 @@ return [
 
     'faqs' => [
         ['q' => 'Do I need a referral to be seen here?',
-         'a' => 'Not from us. Most plans let you book psychiatry directly, though a few HMO products still require one from your primary care doctor. We check that when we verify your benefits.'],
+         'a' => 'Most plans let you book psychiatry directly, though a few HMO products still require one from your primary care doctor. We check that when we verify your benefits.'],
         ['q' => 'How soon can I get an appointment in Cypress?',
          'a' => 'New patient consultations are usually available within five business days, and same-week telehealth slots often open up. Say so when you call if things are urgent.'],
         ['q' => 'Can I be seen by video instead of coming in?',
          'a' => 'Yes, for psychiatry and therapy, anywhere in Texas. TMS is an in-clinic treatment and has to happen at the Northwest Freeway suite.'],
         ['q' => 'Is TMS available at this clinic?',
-         'a' => 'Yes. A course is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorisation first.'],
+         'a' => 'Yes. A course of treatment is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorization first.'],
     ],
 ],
 
@@ -908,8 +910,7 @@ return [
 
     'hours' => [
         ['days' => 'Monday – Friday', 'time' => '6:00am – 6:00pm'],
-        ['days' => 'Saturday',        'time' => 'Closed'],
-        ['days' => 'Sunday',          'time' => 'Closed'],
+        ['days' => 'Saturday – Sunday', 'time' => 'Closed'],
     ],
     'hours_note' => 'TMS patients are seen outside these hours where a course needs it — ask when your schedule is set.',
 
@@ -935,13 +936,13 @@ return [
 
     'faqs' => [
         ['q' => 'Do I need a referral to be seen here?',
-         'a' => 'Not from us. Most plans let you book psychiatry directly, though a few HMO products still require one from your primary care doctor. We check that when we verify your benefits.'],
+         'a' => ' Most plans let you book psychiatry directly, though a few HMO products still require one from your primary care doctor. We check that when we verify your benefits.'],
         ['q' => 'How soon can I get an appointment in The Woodlands?',
          'a' => 'New patient consultations are usually available within five business days, and same-week telehealth slots often open up. Say so when you call if things are urgent.'],
         ['q' => 'Can I be seen by video instead of coming in?',
          'a' => 'Yes, for psychiatry and therapy, anywhere in Texas. TMS is an in-clinic treatment and has to happen at the Woodstead Court suite.'],
         ['q' => 'Is TMS available at this clinic?',
-         'a' => 'Yes. A course is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorisation first.'],
+         'a' => 'Yes. A course is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorization first.'],
     ],
 ],
 

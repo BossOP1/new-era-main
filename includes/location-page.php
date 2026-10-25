@@ -158,13 +158,20 @@ $initials = static function (string $name): string {
       </a>
     </div>
 
+    <?php // Hours carry a time zone: Pacific for California, Central for Texas,
+          // taken from 'state'. A clinic whose hours are set in another zone
+          // names it in its own 'timezone' ('pt' or 'ct') — Central Dallas does. ?>
+    <?php
+    $tz_key = $loc['timezone'] ?? ['ca' => 'pt', 'tx' => 'ct'][$loc['state']] ?? '';
+    [$tz_short, $tz_long] = ['pt' => ['PT', 'Pacific Time'], 'ct' => ['CT', 'Central Time']][$tz_key] ?? ['', ''];
+    ?>
     <div data-reveal class="rounded-[22px] border border-[#e3e7ea] bg-white p-7">
-      <p class="m-0 text-[11px] font-bold uppercase tracking-[0.16em] text-ink/45">Hours</p>
+      <p class="m-0 text-[11px] font-bold uppercase tracking-[0.16em] text-ink/45">Hours<?= $tz_long !== '' ? ' · ' . e($tz_long) : '' ?></p>
       <dl class="m-0 mt-3">
         <?php foreach ($loc['hours'] as $row): ?>
           <div class="flex items-baseline justify-between gap-4 border-b border-ink/[0.07] py-2 last:border-b-0">
             <dt class="m-0 text-[14px] text-ink/70"><?= e($row['days']) ?></dt>
-            <dd class="m-0 text-[14px] font-extrabold text-ink"><?= e($row['time']) ?></dd>
+            <dd class="m-0 text-[14px] font-extrabold text-ink"><?= e($row['time']) ?><?php if ($tz_short !== '' && $row['time'] !== 'Closed'): ?> <abbr title="<?= e($tz_long) ?>" class="no-underline"><?= e($tz_short) ?></abbr><?php endif; ?></dd>
           </div>
         <?php endforeach; ?>
       </dl>
@@ -192,7 +199,7 @@ $initials = static function (string $name): string {
       <p class="<?= $eyebrow ?>"><?= $dot ?> Who you would see</p>
       <h2 class="<?= $h2 ?>">The clinicians at<br><em class="italic font-normal text-brand-blue"><?= e($loc['name']) ?>.</em></h2>
     </div>
-    <p class="m-0 mt-[22px] max-w-[380px] text-base leading-[1.75] text-[#58616a] md:mt-0 md:max-w-[330px]">
+    <p class="m-0 mt-[22px] max-w-[380px] text-base leading-[1.75] text-[#58616a] md:mt-0 md:max-w-[330px] lg:max-w-[500px]">
       <?php
         // Allen has one prescriber and no therapist; "and 0 therapists" is
         // technically true and reads like a fault, so the clause drops out.
@@ -286,7 +293,10 @@ $initials = static function (string $name): string {
     <h2 class="<?= $h2 ?>"><?= e(count($loc['treatments'])) ?> treatments,<br><em class="italic font-normal text-brand-blue">under one roof.</em></h2>
   </div>
 
-  <ul class="m-0 grid list-none gap-3 p-0 md:grid-cols-3 md:gap-4">
+  <?php // Three cards sit in a row; the Texas clinics with a fourth (esketamine)
+        // go two by two on a tablet and four across on a desktop, so no card
+        // is left alone on a line. Full class names so Tailwind finds them. ?>
+  <ul class="m-0 grid list-none gap-3 p-0 md:gap-4 <?= count($loc['treatments']) === 4 ? 'md:grid-cols-2 lg:grid-cols-4' : 'md:grid-cols-3' ?>">
     <?php foreach ($loc['treatments'] as $t): ?>
       <li>
         <a href="<?= e($t['page']) ?>" data-reveal class="lift group flex h-full flex-col rounded-[24px] border border-[#e3e7ea] bg-white p-7 transition-colors hover:border-brand-blue/35 sm:p-8">
@@ -370,12 +380,11 @@ $initials = static function (string $name): string {
         <?php endif; ?>
       </h2>
     </div>
-    <p class="m-0 mt-[22px] max-w-[380px] text-base leading-[1.75] text-[#58616a] md:mt-0 md:max-w-[330px]">
+    <p class="m-0 mt-[22px] max-w-[380px] text-base leading-[1.75] text-[#58616a] md:mt-0 md:max-w-[330px] lg:max-w-[500px]">
       <?php if ($rv_local): ?>
         Left on Google, ZocDoc and Healthgrades by people treated at this clinic. We publish them unedited.
       <?php else: ?>
-        <?= e($loc['name']) ?> is one of our newest clinics and is still gathering its own. These are from the
-        rest of <?= e($loc['state_name']) ?> — each card says where it came from.
+        <?= e($loc['name']) ?> is new, so these come from our other <?= e($loc['state_name']) ?> clinics. Each card says which.
       <?php endif; ?>
     </p>
   </div>
@@ -417,7 +426,7 @@ $initials = static function (string $name): string {
       <p class="<?= $eyebrow ?>"><?= $dot ?> Finding us</p>
       <h2 class="<?= $h2 ?>">Getting to<br><em class="italic font-normal text-brand-blue"><?= e($loc['street_name']) ?>.</em></h2>
     </div>
-    <p class="m-0 mt-[22px] max-w-[380px] text-base leading-[1.75] text-[#58616a] md:mt-0 md:max-w-[330px]">
+    <p class="m-0 mt-[22px] max-w-[380px] text-base leading-[1.75] text-[#58616a] md:mt-0 md:max-w-[330px] lg:max-w-[500px]">
       We also see patients from <?= e(implode(', ', array_slice($loc['serves'], 0, -1))) ?> and <?= e(end($loc['serves'])) ?>.
     </p>
   </div>

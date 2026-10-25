@@ -393,7 +393,7 @@ $treatments = require __DIR__ . '/data-treatments.php';
       <p class="<?= $eyebrow ?>"><?= $dot ?> <?= e($also) ?></p>
       <h2 class="<?= $h2 ?>">Other clinicians<br><em class="italic font-normal text-brand-blue">you could see.</em></h2>
     </div>
-    <p class="m-0 mt-[22px] max-w-[380px] text-base leading-[1.75] text-[#58616a] md:mt-0 md:max-w-[330px]">
+    <p class="m-0 mt-[22px] max-w-[380px] text-base leading-[1.75] text-[#58616a] md:mt-0 md:max-w-[330px] lg:max-w-[500px]">
       You can change clinician later at no cost, so the first choice does not have to be the final one.
     </p>
   </div>

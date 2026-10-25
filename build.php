@@ -54,7 +54,6 @@ $pages = [
     // location pages link to these instead of opening a bio dialog.
     'terry-v-eagan.php'               => 'terry-v-eagan.html',
     'evelyn-aki.php'                  => 'evelyn-aki.html',
-    'laura-ann-beaufford.php'         => 'laura-ann-beaufford.html',
     'priti-bhardwaj.php'              => 'priti-bhardwaj.html',
     'megha-chadha.php'                => 'megha-chadha.html',
     'doris-cudjoe.php'                => 'doris-cudjoe.html',
@@ -118,7 +117,7 @@ $pages = [
     'psychiatry.php' => 'psychiatry.html', // treatment page
     'therapy.php'    => 'therapy.html',    // treatment page
     'telepsychiatry.php' => 'telepsychiatry.html', // treatment page
-    'adolescent.php' => 'adolescent.html', // treatment page — ages 13 and up
+    'adolescent.php' => 'adolescent.html', // treatment page — ages 15 and up
     'spravato.php'   => 'spravato.html',   // treatment page
     'depression.php' => 'depression.html', // condition page
     'depression-short.php' => 'depression-short.html', // short edition, for comparison
@@ -150,6 +149,7 @@ $noPublish = ['assets/reviews_list'];
 $rootFiles = [
     'favicon.ico', 'favicon.png', 'apple-touch-icon.png', 'robots.txt', 'sitemap.xml',
     '_redirects', '_headers',
+    '.htaccess',   // Apache (cPanel): old-site 301s and clean URLs
 ];
 
 /* ------------------------------------------------------------------ */
@@ -195,28 +195,61 @@ function copyDir(string $src, string $dst, array $skip = []): int
     return $count;
 }
 
+// `php build.php --index-only` renders every page but writes nothing: it
+// prints the site-search index as JSON, with links to the .php pages. That
+// is what search-index.php serves to the footer search under `php -S`, where
+// dist/ — and so dist/search-index.json — is not what is being browsed.
+$indexOnly = in_array('--index-only', $argv ?? [], true);
+
 /* ---- Start from a clean dist/ ------------------------------------- */
 
-removeDir('dist');
-mkdir('dist', 0755, true);
+if (!$indexOnly) {
+    removeDir('dist');
+    mkdir('dist', 0755, true);
+}
 
 /* ---- Render the pages --------------------------------------------- */
 
 $built = 0;
 $skipped = [];
 
+// The footer's site search reads dist/search-index.json: one entry per page,
+// taken from the page as rendered — its <title>, meta description and h1/h2
+// headings — so the index can never disagree with what the page says.
+// Comparison variants are left out; nobody should land on them from search.
+$searchIndex = [];
+$notSearchable = ['index2.php', 'depression-short.php'];
+
+$searchEntry = static function (string $html, string $url): ?array {
+    $text = static fn (string $s): string => trim(preg_replace('/\s+/u', ' ',
+        html_entity_decode(strip_tags(preg_replace('~<br\s*/?>~i', ' ', $s)), ENT_QUOTES | ENT_HTML5, 'UTF-8')));
+
+    if (!preg_match('~<title>(.*?)</title>~s', $html, $m)) {
+        return null;
+    }
+    $title = preg_replace('/\s+·\s+Anew Era Health$/u', '', $text($m[1]));
+    $desc  = preg_match('~<meta name="description" content="([^"]*)"~', $html, $m) ? $text($m[1]) : '';
+
+    preg_match_all('~<h[12]\b[^>]*>(.*?)</h[12]>~s', $html, $m);
+    $heads = implode(' · ', array_unique(array_filter(array_map($text, $m[1]))));
+
+    return ['url' => $url, 'title' => $title, 'desc' => $desc, 'heads' => mb_substr($heads, 0, 700)];
+};
+
 foreach ($pages as $srcFile => $outFile) {
 
     if (!file_exists($srcFile)) {
         $skipped[] = $srcFile;
-        echo "Skipped: $srcFile (not created yet)\n";
+        if (!$indexOnly) {
+            echo "Skipped: $srcFile (not created yet)\n";
+        }
         continue;
     }
 
     $destPath = 'dist/' . $outFile;
     $destDir  = dirname($destPath);
 
-    if (!is_dir($destDir)) {
+    if (!$indexOnly && !is_dir($destDir)) {
         mkdir($destDir, 0755, true);
     }
 
@@ -252,10 +285,34 @@ foreach ($pages as $srcFile => $outFile) {
         $html
     );
 
+    if (!in_array($srcFile, $notSearchable, true)) {
+        $url = $indexOnly
+            ? $srcFile
+            : ($outFile === 'index.html' ? '/' : preg_replace('/\.html$/', '', $outFile));
+        $entry = $searchEntry($html, $url);
+        if ($entry !== null) {
+            $searchIndex[] = $entry;
+        }
+    }
+
+    if ($indexOnly) {
+        continue;
+    }
+
     file_put_contents($destPath, $html);
     $built++;
     echo "Built:   $outFile (" . number_format(strlen($html) / 1024, 1) . " KB)\n";
 }
+
+$searchJson = json_encode($searchIndex, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+
+if ($indexOnly) {
+    echo $searchJson;
+    exit(0);
+}
+
+file_put_contents('dist/search-index.json', $searchJson);
+echo 'Indexed: ' . count($searchIndex) . " pages for site search\n";
 
 /* ---- Copy the static files ---------------------------------------- */
 

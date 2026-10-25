@@ -132,7 +132,7 @@ $page_of = static fn (string $k): string => ($k === 'hipaa' ? 'hipaa' : $k) . '.
             <ul class="m-0 mt-4 list-none p-0">
               <?php foreach ($section['list'] as $line): ?>
                 <li class="flex items-start gap-3 py-1.5 text-[15px] leading-[1.75] text-[#58616a]">
-                  <span aria-hidden="true" class="mt-[10px] h-1.5 w-1.5 shrink-0 rounded-full bg-brand-blue/45"></span>
+                  <span aria-hidden="true" class="mt-[10px] h-1.5 w-1.5 shrink-0 rounded-full bg-[#b0ce87]"></span>
                   <span><?= e($line) ?></span>
                 </li>
               <?php endforeach; ?>
@@ -140,7 +140,9 @@ $page_of = static fn (string $k): string => ($k === 'hipaa' ? 'hipaa' : $k) . '.
           <?php endif; ?>
 
           <?php if (!empty($section['note'])): ?>
-            <p class="m-0 mt-5 rounded-[16px] bg-mist px-5 py-4 text-[14px] leading-[1.7] text-ink/75"><?= e($section['note']) ?></p>
+            <?php // White on the cream page, like the site's other cards, with the
+                  // eyebrow green as an accent — the pale blue fought the tan. ?>
+            <p class="m-0 mt-5 rounded-[16px] border border-[#e7e1d4] border-l-[3px] border-l-[#b0ce87] bg-white px-5 py-4 text-[14px] leading-[1.7] text-ink/75"><?= e($section['note']) ?></p>
           <?php endif; ?>
         </section>
       <?php endforeach; ?>

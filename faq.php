@@ -3,10 +3,9 @@
  * Anew Era Health — frequently asked questions.
  *
  * Eighty-odd questions from includes/data-faq.php, rendered server-side in
- * eight categories with a sticky rail beside them. A text search filters the
- * lot in the browser and opens whatever it matched, which is the only thing
- * on the page that needs JavaScript — without it every question and every
- * answer is still there, open to a reader and to a search engine.
+ * eight categories with a sticky rail beside them. Every question and answer
+ * is in the page as served, open to a reader and to a search engine; the
+ * site-wide search in the footer covers finding things across pages.
  *
  * Every question carries an id built from its text, so a single answer can be
  * linked to directly. Arriving on one opens it and scrolls to it.
@@ -26,8 +25,6 @@ $dot      = '<span class="h-[7px] w-[7px] shrink-0 rounded-full bg-[#b0ce87]" ar
 $h2       = 'm-0 font-serif font-normal leading-[1.08] tracking-[-0.035em] text-ink text-[clamp(33px,3.9vw,52px)]';
 $btn_blue = 'inline-flex items-center gap-2.5 rounded-full bg-brand-blue px-7 py-4 text-[15px] font-extrabold text-white transition-colors hover:bg-brand-blue-dark';
 $btn_line = 'inline-flex items-center gap-2.5 rounded-full border-2 border-ink/20 bg-white/85 px-7 py-[14px] text-[15px] font-extrabold text-ink backdrop-blur-sm transition-colors hover:border-ink/45 hover:bg-white';
-
-$total = array_sum(array_map(static fn (array $c): int => count($c['faqs']), $faq));
 
 /**
  * A stable id for a question, so one answer can be linked to on its own.
@@ -83,18 +80,6 @@ foreach ($faq as $key => $category) {
           The questions<br>people actually<br><em class="not-italic text-brand-blue">ask us.</em>
         </h1>
 
-        <p class="m-0 mt-5 max-w-[50ch] text-[15px] leading-[1.75] text-ink/75 sm:mt-6 sm:text-base">
-          <?= e((string) $total) ?> of them, answered plainly — including the ones about cost, side effects and
-          what happens if it does not work. Search, or pick a subject.
-        </p>
-
-        <div class="relative mt-6 max-w-[440px] sm:mt-7">
-          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="pointer-events-none absolute left-5 top-1/2 -translate-y-1/2 text-ink/40"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
-          <label for="faq-search" class="sr-only">Search the questions</label>
-          <input id="faq-search" type="search" autocomplete="off" placeholder="Search — insurance, TMS, side effects…"
-                 class="w-full rounded-full border border-ink/12 bg-white py-4 pl-[52px] pr-4 text-[15px] text-ink shadow-sm placeholder:text-ink/40 focus:border-brand-blue focus:outline-none focus:ring-2 focus:ring-brand-blue/20">
-        </div>
-
         <p class="m-0 mt-5 text-[13px] leading-relaxed text-ink/65 sm:mt-6">
           In crisis right now? Call or text <a href="tel:988" class="font-extrabold text-brand-blue underline decoration-brand-blue/30 underline-offset-4 hover:decoration-brand-blue">988</a>, any time.
         </p>
@@ -102,8 +87,8 @@ foreach ($faq as $key => $category) {
     </div>
 
     <div class="mx-auto mt-6 flex max-w-[1160px] flex-wrap items-center justify-between gap-3 border-t border-ink/20 pt-4 text-[11px] text-ink/65 sm:mt-8">
-      <span>Can’t find it? Call us on <?= e($site['phone']) ?> and ask.</span>
-      <span>Adults and adolescents from 13 <span aria-hidden="true" class="px-2">/</span> In person and by telehealth</span>
+      <span>Have a question that isn’t listed? Call us at <a href="<?= e($site['phone_href']) ?>" class="font-extrabold text-brand-blue underline decoration-brand-blue/30 underline-offset-4 hover:decoration-brand-blue"><?= e($site['phone']) ?></a>.</span>
+      <span>Adults and adolescents from 15 <span aria-hidden="true" class="px-2">/</span> In person and by telehealth</span>
     </div>
   </section>
 </div>
@@ -138,8 +123,6 @@ foreach ($faq as $key => $category) {
     </nav>
 
     <div>
-      <p data-faq-count aria-live="polite" hidden class="m-0 mb-5 text-[13px] font-semibold text-ink/55"></p>
-
       <?php foreach ($faq as $key => $category): ?>
         <section id="cat-<?= e($key) ?>" data-faq-section="<?= e($key) ?>" class="mb-10 scroll-mt-[104px] last:mb-0 sm:mb-14">
           <div class="mb-4 flex items-start gap-3 sm:mb-5">
@@ -175,11 +158,6 @@ foreach ($faq as $key => $category) {
           </div>
         </section>
       <?php endforeach; ?>
-
-      <p data-faq-empty hidden class="m-0 rounded-[20px] border border-dashed border-ink/20 bg-white px-6 py-14 text-center text-base leading-[1.75] text-ink/60">
-        Nothing matches that.
-        <span class="mt-1 block text-[14px]">Call us on <a href="<?= e($site['phone_href']) ?>" class="font-extrabold text-brand-blue underline underline-offset-4"><?= e($site['phone']) ?></a> and ask — somebody will know.</span>
-      </p>
     </div>
   </div>
 </section>
@@ -189,10 +167,10 @@ foreach ($faq as $key => $category) {
   <div data-reveal class="relative flex flex-col items-center justify-center gap-5 rounded-[28px] bg-cream bg-cta-glow px-6 py-10 text-center sm:gap-6 sm:px-12 sm:py-14">
     <?= brand_glyph('h-16 w-auto') ?>
     <h2 class="m-0 max-w-[20ch] font-serif text-[30px] font-normal leading-[1.08] tracking-[-0.035em] text-ink sm:text-[42px]">
-      Ask us the one that isn’t here.
+      Didn’t find your answer? Ask us.
     </h2>
     <p class="m-0 max-w-[54ch] text-[15px] leading-[1.75] text-ink/70">
-      Most new patients are seen within a week, and we check your insurance before your first visit.
+      Call or book a consultation and our team will answer any question about treatment, cost or insurance. Most new patients are seen within a week.
     </p>
     <div class="flex flex-wrap items-center justify-center gap-3">
       <a href="index.php#book" class="<?= $btn_blue ?>">Book a Consultation <?= arrow_icon(16) ?></a>
@@ -229,74 +207,11 @@ $schema = [
 <script type="application/ld+json"><?= json_encode($schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?></script>
 
 <script>
-/* FAQ — search, and linking to a single answer.
-   Every question is already rendered; this only hides, shows and opens. */
+/* FAQ — linking to a single answer. Every question is already rendered;
+   this only opens one and scrolls to it. */
 (function () {
-  var search = document.getElementById('faq-search');
-  var items  = Array.prototype.slice.call(document.querySelectorAll('[data-faq-item]'));
+  var items = Array.prototype.slice.call(document.querySelectorAll('[data-faq-item]'));
   if (!items.length) return;
-
-  var sections = Array.prototype.slice.call(document.querySelectorAll('[data-faq-section]'));
-  var counter  = document.querySelector('[data-faq-count]');
-  var empty    = document.querySelector('[data-faq-empty]');
-
-  /* Question and answer text, read once, so typing does not walk the DOM.
-     The category's own heading goes in too: someone searching "insurance"
-     means the insurance questions, including the ones that say "covered" or
-     "your plan" and never use the word. */
-  var haystacks = items.map(function (item) {
-    var section = item.closest('[data-faq-section]');
-    var heading = section ? section.querySelector('h2').textContent + ' ' : '';
-    return (heading + item.textContent).replace(/\s+/g, ' ').toLowerCase();
-  });
-
-  var AUTO_OPEN_UPTO = 5;
-
-  function apply(query) {
-    var q = query.trim().toLowerCase();
-    var hits = items.map(function (_, i) {
-      return q === '' || haystacks[i].indexOf(q) !== -1;
-    });
-    var matched = hits.filter(Boolean).length;
-
-    /* A search matches on the answer as often as on the question, so a short
-       result set opens to show why. A broad one — a whole category — stays
-       closed, because thirteen open answers is a wall, not a result. */
-    var autoOpen = q !== '' && matched <= AUTO_OPEN_UPTO;
-
-    items.forEach(function (item, i) {
-      item.hidden = !hits[i];
-      if (q !== '') item.open = autoOpen && hits[i];
-    });
-
-    // A category with nothing left in it goes too, heading and all.
-    sections.forEach(function (section) {
-      var any = section.querySelectorAll('[data-faq-item]:not([hidden])').length;
-      section.hidden = any === 0;
-    });
-
-    if (empty) empty.hidden = matched !== 0;
-    if (counter) {
-      counter.hidden = q === '';
-      counter.textContent = matched === 1
-        ? '1 question matches “' + query.trim() + '”'
-        : matched.toLocaleString() + ' questions match “' + query.trim() + '”';
-    }
-  }
-
-  if (search) {
-    var t;
-    search.addEventListener('input', function () {
-      clearTimeout(t);
-      t = setTimeout(function () { apply(search.value); }, 140);
-    });
-    // Escape clears, which is what the browser's own clear button does too.
-    search.addEventListener('keydown', function (event) {
-      if (event.key === 'Escape') { search.value = ''; apply(''); }
-    });
-  }
-
-  /* ---- One answer, linked to directly -------------------------------- */
 
   function openFromHash() {
     var id = (location.hash || '').replace('#', '');

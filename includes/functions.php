@@ -166,8 +166,11 @@ if (!function_exists('brand_logo')) {
      * The Anew Era lockup — glyph, wordmark and strapline in one image.
      *
      * Two transparent PNGs live in assets/img/logo/: the full-colour file for
-     * light backgrounds, and a variant with the wordmark reversed to white for
-     * the night-coloured footer. The glyph keeps its brand colours in both.
+     * light backgrounds, and the reversed logo — the whole lockup in white,
+     * glyph included — for dark ones. Brand rules allow only those two: no
+     * mixed variant (white wordmark with a coloured glyph or an orange "Era").
+     * new-era-logo-reversed.png is the full-colour file with every palette
+     * colour set to white, so its shapes and edges are identical.
      *
      * @param string $alt     Alt text — the site name on the header, '' where a
      *                        nearby heading already names the practice.
@@ -176,7 +179,7 @@ if (!function_exists('brand_logo')) {
      */
     function brand_logo(string $alt, string $classes = 'h-10 w-auto', bool $on_dark = false, bool $decorative = false): string
     {
-        $file = 'assets/img/logo/new-era-final-logo' . ($on_dark ? '-white' : '') . '.png';
+        $file = 'assets/img/logo/' . ($on_dark ? 'new-era-logo-reversed.png' : 'new-era-final-logo.png');
 
         return sprintf(
             '<img src="%s" alt="%s"%s width="721" height="214" decoding="async" class="%s">',

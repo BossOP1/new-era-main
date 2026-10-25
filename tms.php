@@ -341,7 +341,7 @@ require __DIR__ . '/includes/reviews-section.php';
         <a href="<?= e($condition['page']) ?>" class="lift group flex h-full items-center gap-3 rounded-2xl border border-[#e3e7ea] bg-white px-4 py-4 transition-colors hover:border-brand-blue/35 sm:gap-4 sm:px-6 sm:py-5">
           <?= condition_mark($condition, 'h-7 w-7 shrink-0 [filter:brightness(0.62)_saturate(1.25)] sm:h-9 sm:w-9') ?>
           <span class="min-w-0 flex-1">
-            <span class="block text-[14px] font-extrabold tracking-[-0.02em] text-ink sm:text-[17px]"><?= e($condition['name']) ?></span>
+            <span class="block text-[14px] font-extrabold tracking-[-0.02em] text-ink sm:text-[17px]"><?= e($condition['full'] ?? $condition['name']) ?></span>
             <?php if ($cleared): ?>
               <span class="mt-0.5 block text-[10px] font-bold uppercase tracking-[0.14em] text-brand-green-dark">FDA-cleared</span>
             <?php endif; ?>

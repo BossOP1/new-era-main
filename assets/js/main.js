@@ -540,4 +540,161 @@
       });
     });
   }
+
+  /* Site search ----------------------------------------------------------
+     The footer box searches search-index.json, written by build.php from
+     every page's title, description and headings. The index is fetched the
+     first time the box is focused, so pages that never use it never load it.
+     Every word typed has to appear somewhere on a page; a match in the title
+     outranks one in a heading, which outranks one in the description. */
+  var search = document.querySelector('[data-site-search]');
+
+  if (search && window.fetch) {
+    var input = search.querySelector('input');
+    var list = search.querySelector('#site-search-results');
+    var status = search.querySelector('#site-search-status');
+    var pages = null;
+    var loading = null;
+
+    // Lower case, no accents, no ® or ™, so "magstim horizon" finds
+    // "Magstim Horizon® 3.0".
+    var fold = function (s) {
+      return (s || '').toLowerCase().normalize('NFD')
+        .replace(/[̀-ͯ]/g, '').replace(/[®™]/g, '');
+    };
+
+    // The built site has search-index.json beside the pages. A local
+    // `php -S` preview has no such file and answers with the homepage
+    // instead, so anything that is not a JSON list counts as missing and the
+    // preview-only search-index.php is tried next. If neither loads, the box
+    // says search is unavailable rather than claiming nothing matched.
+    var fetchIndex = function (url) {
+      return fetch(url, { headers: { Accept: 'application/json' } })
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (rows) { return Array.isArray(rows) && rows.length ? rows : null; })
+        .catch(function () { return null; });
+    };
+
+    var load = function () {
+      if (!loading) {
+        loading = fetchIndex('search-index.json')
+          .then(function (rows) { return rows || fetchIndex('search-index.php'); })
+          .then(function (rows) {
+            if (!rows) {
+              pages = [];
+              pages.unavailable = true;
+              return;
+            }
+            pages = rows.map(function (p) {
+              return { url: p.url, title: p.title, desc: p.desc,
+                       t: fold(p.title), h: fold(p.heads), d: fold(p.desc) };
+            });
+          });
+      }
+      return loading;
+    };
+
+    var score = function (page, terms, whole) {
+      var total = page.t.indexOf(whole) !== -1 ? 20 : 0;
+      for (var i = 0; i < terms.length; i++) {
+        var w = terms[i];
+        var s = 0;
+        if (page.t.indexOf(w) !== -1) {
+          s = new RegExp('(^|[^a-z0-9])' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).test(page.t) ? 15 : 10;
+        } else if (page.h.indexOf(w) !== -1) {
+          s = 3;
+        } else if (page.d.indexOf(w) !== -1) {
+          s = 2;
+        }
+        if (!s) {
+          return 0;
+        }
+        total += s;
+      }
+      return total;
+    };
+
+    var render = function () {
+      var whole = fold(input.value).trim();
+      var terms = whole.split(/\s+/).filter(Boolean);
+      list.innerHTML = '';
+
+      if (!terms.length || !pages) {
+        list.classList.add('hidden');
+        status.textContent = '';
+        return;
+      }
+
+      var hits = pages
+        .map(function (p) { return { p: p, s: score(p, terms, whole) }; })
+        .filter(function (x) { return x.s > 0; })
+        .sort(function (a, b) { return b.s - a.s || a.p.title.length - b.p.title.length; })
+        .slice(0, 8);
+
+      if (!hits.length) {
+        var none = document.createElement('li');
+        none.className = 'px-5 py-4 text-sm text-white/60';
+        none.textContent = pages.unavailable
+          ? 'Search isn’t available right now. Please use the menu above, or call us.'
+          : 'No pages match “' + input.value.trim() + '”. Try a shorter word, or call us.';
+        list.appendChild(none);
+      }
+
+      hits.forEach(function (hit) {
+        var li = document.createElement('li');
+        li.className = 'border-b border-white/10 last:border-0';
+        var a = document.createElement('a');
+        a.href = hit.p.url;
+        a.className = 'block px-5 py-3.5 transition-colors hover:bg-white/[0.08] focus:bg-white/[0.08] focus:outline-none';
+        var t = document.createElement('span');
+        t.className = 'block text-[15px] font-bold text-white';
+        t.textContent = hit.p.title;
+        var d = document.createElement('span');
+        d.className = 'mt-0.5 block truncate text-[13px] text-white/55';
+        d.textContent = hit.p.desc;
+        a.appendChild(t);
+        a.appendChild(d);
+        li.appendChild(a);
+        list.appendChild(li);
+      });
+
+      list.classList.remove('hidden');
+      status.textContent = hits.length
+        ? hits.length + (hits.length === 1 ? ' page found' : ' pages found')
+        : 'No pages found';
+    };
+
+    search.hidden = false;
+
+    input.addEventListener('focus', function () { load().then(render); });
+    input.addEventListener('input', function () { load().then(render); });
+
+    // Enter opens the top result; the arrow keys walk the list.
+    search.querySelector('form').addEventListener('submit', function (event) {
+      event.preventDefault();
+      load().then(function () {
+        render();
+        var first = list.querySelector('a');
+        if (first) {
+          window.location.href = first.href;
+        }
+      });
+    });
+
+    search.addEventListener('keydown', function (event) {
+      var links = Array.prototype.slice.call(list.querySelectorAll('a'));
+      var at = links.indexOf(document.activeElement);
+      if (event.key === 'ArrowDown' && links.length) {
+        event.preventDefault();
+        links[Math.min(at + 1, links.length - 1)].focus();
+      } else if (event.key === 'ArrowUp' && at !== -1) {
+        event.preventDefault();
+        (at === 0 ? input : links[at - 1]).focus();
+      } else if (event.key === 'Escape') {
+        input.value = '';
+        render();
+        input.focus();
+      }
+    });
+  }
 })();

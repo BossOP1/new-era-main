@@ -58,6 +58,7 @@ return [
             'page'  => 'postpartum.php',
             'alt'   => 'A mother holding her smiling baby outdoors',
             'name'  => 'Postpartum',
+            'full'  => 'Postpartum depression',   // the longer name the "What it treats" grids use
             'blurb' => 'Postpartum depression and anxiety, treated with options that fit feeding, sleep and a new baby.',
             'chips' => ['Therapy', 'Medication review', 'TMS'],
         ],
@@ -187,7 +188,6 @@ return [
         ['quote' => '“Great program — significantly helps sleep quantity and quality, now up to 8 hrs. Plus mood stimulation and elevation. Very positive effect.”', 'who' => 'John M. · Huntington Beach'],
         ['quote' => '“I have been with the practice for a few years. Everything has been great from scheduling to the providers to office staff. Highly recommend.”', 'who' => 'Aimee G. · Cedar Park'],
         ['quote' => '“Anyone who suffers with anxiety/depression needs to come here. Every single staff member is amazing. This place has saved my life.”', 'who' => 'Sara R. · Torrance'],
-        ['quote' => '“Laura Beaufford always takes great care of me, and the staff is accommodating. In and out, and if I prefer, Zoom is available.”', 'who' => 'Frank D. · Central Austin'],
         ['quote' => '“Doris is so easy to talk to. I am not ever embarrassed to say how I feel. She is wonderful.”', 'who' => 'Shauna H. · Central Dallas'],
         ['quote' => '“My NP John gave me really good guidance on how to have the most comprehensive and effective care plan to address my depression.”', 'who' => 'Nancy S. · Orange'],
         ['quote' => '“Very professional and caring team. Naydelin, Armani and Juliet were great and made my treatment very smooth.”', 'who' => 'Michael C. · Grapevine'],
@@ -265,7 +265,7 @@ return [
                 ['q' => 'What happens at my first visit?', 'a' => 'A sixty-minute diagnostic intake covering history, physical health, sleep and current symptoms, ending with a written plan you leave with the same day.'],
                 ['q' => 'Do I have to take medication?', 'a' => 'No. Medication is one option among several. Many patients do well with therapy alone, or with TMS, and we will say so plainly rather than defaulting to a prescription.'],
                 ['q' => 'How long does treatment take?', 'a' => 'It depends on the plan — a TMS course runs about six weeks, therapy is ongoing and reviewed monthly, medication changes are checked every two to four weeks at first.'],
-                ['q' => 'Do you see adolescents?', 'a' => 'We see patients aged 13 and up. Adolescent care includes family sessions and, with consent, coordination with school counselors.'],
+                ['q' => 'Do you see adolescents?', 'a' => 'We see patients aged 15 and up. Adolescent care includes family sessions and, with consent, coordination with school counselors.'],
             ],
         ],
         [

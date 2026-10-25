@@ -377,10 +377,11 @@ return [
         [
             'q' => 'What counts as treatment-resistant depression?',
             'a' => 'Depression that has not responded to antidepressants. The Cleveland Clinic marks the diagnosis from the point where at least two different antidepressants have failed to improve symptoms. It is common, it is not a dead end, and it is the group TMS was cleared for.',
+            'link' => ['More on Treatment-Resistant Depression', 'depression.php#tms'],
         ],
         [
             'q' => 'Do you see adolescents?',
-            'a' => 'We see patients aged 13 and up. Adolescent care includes family sessions and, with consent, coordination with school counselors.',
+            'a' => 'We see patients aged 15 and up. Adolescent care includes family sessions and, with consent, coordination with school counselors.',
         ],
         [
             'q' => 'I am not sure anything is really wrong. Should I still come?',

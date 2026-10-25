@@ -92,22 +92,6 @@ return [
             ],
         ],
         [
-            'slug'        => 'laura-ann-beaufford',
-            'name'        => 'Laura Ann Beaufford',
-            'credentials' => '',
-            'role'        => 'Psychiatric Nurse Practitioner',
-            'group'       => 'psychiatry',
-            'states'      => ['tx'],
-            'clinics'     => ['Central Austin, TX'],
-            'photo'       => 'team/laura-ann-beaufford.jpg',
-            'video'       => '',
-            'bio'         => [
-                'Laura was born in Waco, Texas and raised in Irving with three older half-brothers. After losing a brother to severe mental illness and police violence, she was inspired to pursue a career where she could make a real difference. She returned to college at age 41, earned her BSN from the University of Texas at Arlington in 2009, and worked in various nursing roles, including cardiac care, hospice, and case management.',
-                'Laura later earned her MSN from Walden University and became a Psychiatric Mental Health Nurse Practitioner. She found her true calling in helping others heal through compassionate and informed mental health care.',
-                'She currently provides care to adults 18 and older, offering inclusive, nonjudgmental support for all, including LGBTQ+ clients. Laura combines clinical expertise with empathy to create a safe space for healing and growth.',
-            ],
-        ],
-        [
             'slug'        => 'priti-bhardwaj',
             'name'        => 'Priti Bhardwaj',
             'credentials' => 'MD',

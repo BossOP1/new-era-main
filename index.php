@@ -323,7 +323,7 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
     <div class="mb-8 flex items-center justify-between gap-6">
       <div>
         <p class="<?= $eyebrow ?> mb-4 text-brand-green">Reviews</p>
-        <h2 class="m-0 text-[28px] leading-[1.1] tracking-[-0.02em] text-white sm:text-4xl">In their words.</h2>
+        <h2 class="m-0 text-[28px] leading-[1.1] tracking-[-0.02em] text-white sm:text-4xl">What our patients are saying.</h2>
           <div class="mt-3 flex items-center gap-2.5">
             <span class="text-[15px] leading-none tracking-[0.12em] text-brand-orange" aria-hidden="true">★★★★★</span>
             <span class="text-sm font-semibold text-white/70"><?= e(ltrim($site['rating'], '★ ')) ?></span>
@@ -360,7 +360,7 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
 <section id="faq" class="bg-mist">
   <div class="mx-auto max-w-[1280px] px-5 py-14 sm:px-10 lg:py-[72px]">
     <p class="<?= $eyebrow ?> mb-4 text-brand-blue">Questions</p>
-    <h2 class="m-0 mb-3.5 text-[32px] leading-[1.06] tracking-[-0.03em] text-brand-blue-dark sm:text-[44px]">Any questions?</h2>
+    <h2 class="m-0 mb-3.5 text-[32px] leading-[1.06] tracking-[-0.03em] text-brand-blue-dark sm:text-[44px]">Frequently asked questions</h2>
     <p class="m-0 mb-10 text-base font-medium text-brand-blue">Find trust-worthy answers on everything we treat and how we treat it.</p>
 
     <div class="grid items-start gap-10 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-[72px]">
@@ -410,9 +410,9 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
 <section id="book" class="mx-auto max-w-[1280px] px-5 py-3 sm:px-10 sm:py-8">
   <div data-reveal class="relative overflow-hidden rounded-[28px] bg-cream bg-cta-glow px-6 py-12 text-center sm:px-16 lg:py-[52px]">
     <h2 class="m-0 mb-3 text-[28px] leading-[1.1] tracking-[-0.03em] text-ink sm:text-[38px]">
-      Ready when you are <em class="font-serif font-normal italic">— and sooner than you think</em>
+      Anew Era is ready when you are<em class="font-serif font-normal italic">— and sooner than you think</em>
     </h2>
-    <p class="mx-auto m-0 mb-6 max-w-[52ch] text-base font-medium text-ink/75">Most new patients are seen inside a week. We check your benefits first, so you know what a visit costs before you walk in.</p>
+    <p class="mx-auto m-0 mb-6 max-w-[52ch] text-base font-medium text-ink/75">Most new patients are seen within a week. We check your benefits first, so you know what a visit costs before you walk in.</p>
     <a href="contact.php" class="inline-flex items-center rounded-full bg-brand-blue px-7 py-4 text-[15px] font-extrabold text-white transition-colors hover:bg-brand-blue-dark">Book a Free Consultation</a>
     <p class="m-0 mt-[18px] text-xs text-ink/55">In crisis? Call or text 988 any time.</p>
   </div>

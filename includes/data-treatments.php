@@ -40,7 +40,7 @@ return [
         'panel'  => '#e9eef1',
         'wash'   => '233 238 241',
         'cta'    => 'Book an Evaluation',
-        'note'   => 'Adults and adolescents from 13. In person and by telehealth.',
+        'note'   => 'Adults and adolescents from 15. In person and by telehealth.',
         'meta_left'  => 'In-network with most major plans.',
         'meta_right' => 'Evaluation / Medication management / Testing',
     ],
@@ -50,7 +50,7 @@ return [
         'accent' => 'of mental health.',
         'serif'  => 'Our psychiatric clinicians are psychiatrists and psychiatric nurse practitioners — licensed to diagnose, and to prescribe when medication is the right tool.',
         'paras'  => [
-            'Psychiatry deals with the diagnosis and treatment of mental health conditions: depression, anxiety, OCD, PTSD, bipolar disorder and more. Where a therapist works through thoughts and behaviour, a psychiatric clinician also looks at the physical side — your medical history, other prescriptions, sleep, and anything that might be imitating a mental health condition.',
+            'Psychiatry deals with the diagnosis and treatment of mental health conditions: depression, anxiety, OCD, PTSD, bipolar disorder and more. Where a therapist works through thoughts and behavior, a psychiatric clinician also looks at the physical side — your medical history, other prescriptions, sleep, and anything that might be imitating a mental health condition.',
             'Medication is one option among several, not the default. Plenty of people do well with therapy alone or with TMS, and we will say so plainly rather than reaching for a prescription.',
         ],
         'facts' => [
@@ -108,7 +108,7 @@ return [
         'facts' => [
             ['60 min',  'first visit',              '#e8922f'],
             ['2–4 wks', 'between early follow-ups', '#5f8f38'],
-            ['13+',     'ages we see',              '#0f639b'],
+            ['15+',     'ages we see',              '#0f639b'],
         ],
     ],
 
@@ -149,7 +149,7 @@ return [
         ['Do I have to take medication?', 'No. Medication is one option among several. Many patients do well with therapy alone, or with TMS, and we will say so plainly rather than defaulting to a prescription.'],
         ['What happens at my first visit?', 'A sixty-minute diagnostic assessment covering your history, physical health, sleep and current symptoms. You leave the same day with a written plan.'],
         ['Can I be seen by telehealth?', 'Yes. Evaluations and follow-ups can both be done by video, and some people mix the two. A few medications carry rules about in-person visits, and we will tell you if one of them applies to you.'],
-        ['Do you see teenagers?', 'We see patients aged 13 and up. Adolescent care includes family sessions and, with consent, coordination with school counselors.'],
+        ['Do you see teenagers?', 'We see patients aged 15 and up. Adolescent care includes family sessions and, with consent, coordination with school counselors.'],
         ['Will my insurance cover it?', 'Psychiatric evaluation and medication management are covered by most major commercial plans, as well as Medicare and Tricare. We verify your benefits before your first appointment.'],
     ],
 
@@ -174,8 +174,8 @@ return [
         'image'  => 'treatments/therapy-hero.jpg',
         'panel'  => '#ece8e3',
         'wash'   => '236 232 227',
-        'cta'    => 'Book a First Session',
-        'note'   => 'In person and by telehealth. Ages 13 and up.',
+        'cta'    => 'Book Your First Session',
+        'note'   => 'In person and by telehealth. Ages 15 and up.',
         'meta_left'  => 'Therapists working alongside your prescriber.',
         'meta_right' => 'CBT / DBT / EMDR / ACT',
     ],
@@ -203,7 +203,7 @@ return [
     ],
 
     'band' => [
-        'value'  => '13+',
+        'value'  => '15+',
         'rest'   => 'is the age we start seeing patients, with family sessions for adolescents.',
         'note'   => 'With consent, we coordinate with school counselors.',
         'source' => 'Who we see',
@@ -216,12 +216,12 @@ return [
         'accent' => 'Matched to you.',
         'intro'  => 'These are the approaches our therapists use most. You do not need to choose one — that part is our job.',
         'items'  => [
-            ['Cognitive behavioural therapy', 'Identifies distorted thought patterns and the behaviours they drive, then practises reshaping both. The most studied therapy there is.', 'CBT'],
-            ['Dialectical behaviour therapy', 'Emotion regulation, distress tolerance, mindfulness and interpersonal skills, for feelings that seem unmanageable.', 'DBT'],
+            ['Cognitive behavioral therapy (CBT)', 'Identifies distorted thought patterns and the behaviors they drive, then practises reshaping both. The most studied therapy there is.', 'CBT'],
+            ['Dialectical behavior therapy (DBT)', 'Emotion regulation, distress tolerance, mindfulness and interpersonal skills, for feelings that seem unmanageable.', 'DBT'],
             ['EMDR',                          'Eye movement desensitisation and reprocessing: guided bilateral stimulation that helps the brain reprocess traumatic memories.', 'Trauma'],
-            ['Exposure-based therapy',        'Exposure and response prevention for OCD, and prolonged exposure for PTSD — facing what you avoid, gradually, until it loses its grip.', 'ERP · PE'],
-            ['Acceptance and commitment',     'Making room for difficult thoughts rather than fighting them, and acting on what matters to you anyway.', 'ACT'],
-            ['Psychodynamic therapy',         'Longer-term, in-depth work on how earlier experiences shape what is happening now.', 'In depth'],
+            ['Exposure-based therapy (ERP)',        'Exposure and response prevention for OCD, and prolonged exposure for PTSD — facing what you avoid, gradually, until it loses its grip.', 'ERP · PE'],
+            ['Acceptance and commitment (ACT)',     'Making room for difficult thoughts rather than fighting them, and acting on what matters to you anyway.', 'ACT'],
+            ['Psychodynamic therapy (PDT)',         'Longer-term, in-depth work on how earlier experiences shape what is happening now.', 'In depth'],
         ],
     ],
 
@@ -230,13 +230,13 @@ return [
         'eyebrow'=> '03 / What therapy is like',
         'lines'  => ['A conversation', 'with a structure.'],
         'accent' => 'with a structure.',
-        'intro'  => 'Most people come weekly to begin with. Progress is reviewed monthly, and the plan changes if it is not working.',
+        'intro'  => 'Initially, Most people come weekly to begin with. Progress is reviewed monthly, and the plan changes if it is not working.',
         'photo'     => 'treatments/therapy-adolescent.jpg',
         'photo_alt' => 'A teenager talking with a therapist on a sofa',
         'focus'     => 'object-[62%_40%]',
-        'caption'   => 'Ages 13 and up.',
+        'caption'   => 'Ages 15 and up.',
         'steps' => [
-            ['A first session',      'Mostly listening: what brought you here, what you want to change, and what has and has not helped before.'],
+            ['Your first session',      'Mostly listening: what brought you here, what you want to change, and what has and has not helped before.'],
             ['Choosing an approach', 'Your therapist proposes a method and explains it. If it does not feel right, you say so.'],
             ['The work',             'Sessions have a focus. Many approaches include something to practise between them, because that is where much of the change happens.'],
             ['Reviewing progress',   'Each month you look at what has shifted, using simple measures as well as impressions, and adjust the plan.'],
@@ -245,7 +245,7 @@ return [
         'facts' => [
             ['Weekly',  'to begin with',    '#e8922f'],
             ['Monthly', 'progress reviews', '#5f8f38'],
-            ['13+',     'ages we see',      '#0f639b'],
+            ['15+',     'ages we see',      '#0f639b'],
         ],
     ],
 
@@ -273,20 +273,23 @@ return [
             'accent'  => 'actually work.',
             'intro'   => 'The research is consistent on this: the relationship matters as much as the method.',
             'items'   => [
-                ['Fit matters', 'Feeling understood by your therapist is one of the strongest predictors of progress. If it is not there, switch — we will match you with someone new.', 'bg-brand-blue'],
-                ['It can feel harder first', 'Early sessions can feel slow, or even heavier, because you are talking about difficult things. That usually eases.', 'bg-brand-orange'],
-                ['Between sessions counts', 'What you practise between appointments is where much of the change happens.', 'bg-brand-green'],
+                ['Fit matters', 'Feeling understood by your therapist is one of the strongest predictors of progress. If it\'s not working, switch — we will match you with someone new.', 'bg-brand-blue'],
+                ['It can feel harder at first', 'Early sessions can feel slow, or even heavier, because you are talking about difficult things. That usually eases.', 'bg-brand-orange'],
+                ['Between sessions counts', 'What you practice between appointments is where much of the change happens.', 'bg-brand-green'],
             ],
             'note' => 'Therapy is not crisis care. If you are in crisis, call or text 988 any time.',
         ],
     ],
 
+    // Shown under the FAQ heading; pages without one keep the template's line.
+    'faq_intro' => 'Have more questions? Just give us a call — we are happy to talk through anything before you book.',
+
     'faqs' => [
-        ['Do I need therapy or psychiatry?', 'Therapy treats through conversation and structured techniques. Psychiatry adds diagnosis and medication. Many people start with one and add the other when it helps, and the first appointment is where we work out which.'],
+        ['Do I need therapy?', 'Therapy treats through conversation and structured techniques. Psychiatry adds diagnosis and medication. Many people start with one and add the other when it helps, and the first appointment is where we work out which.'],
         ['How long will I be in therapy?', 'It depends on what you are working on. Some focused approaches run for a set number of sessions; others are open-ended. Progress is reviewed monthly, so the length is a decision you make together.'],
         ['Can I switch therapists if it is not a fit?', 'Yes, any time. Our intake team will match you with someone new at no extra cost and no awkward conversation required.'],
         ['Is telehealth therapy as good as in person?', 'For most people and most approaches the research says yes. Some prefer the room, some prefer their own sofa, and you can change your mind.'],
-        ['Do you see teenagers?', 'We see patients aged 13 and up. Adolescent care includes family sessions and, with consent, coordination with school counselors.'],
+        ['Do you see teenagers?', 'We see patients aged 15 and up. Adolescent care includes family sessions and, with consent, coordination with school counselors.'],
         ['Does insurance cover therapy?', 'Most major commercial plans cover therapy, as do Medicare and Tricare. We verify your benefits before your first appointment, so you know what a session costs.'],
     ],
 
@@ -354,7 +357,7 @@ return [
         'intro'  => 'Spravato® is approved for two specific situations, and a psychiatric evaluation decides whether you fit either of them.',
         'items'  => [
             ['Treatment-resistant depression', 'Depression that has not improved after at least two antidepressants. Spravato® can be used on its own or alongside an oral antidepressant.', 'Adults'],
-            ['Depression with suicidal thoughts', 'Depressive symptoms in adults with major depressive disorder and acute suicidal thoughts or behaviour, used alongside an oral antidepressant.', 'Adults'],
+            ['Depression with suicidal thoughts', 'Depressive symptoms in adults with major depressive disorder and acute suicidal thoughts or behavior, used alongside an oral antidepressant.', 'Adults'],
             ['Not suitable for', 'Anyone with aneurysmal vascular disease, an arteriovenous malformation, a history of bleeding in the brain, or an allergy to esketamine or ketamine. Not recommended in pregnancy.', 'Screened for'],
         ],
     ],
@@ -413,7 +416,7 @@ return [
 
     'faqs' => [
         ['Is Spravato® the same as a ketamine infusion?', 'No. Spravato® contains esketamine, a close relative of ketamine, and it is a nasal spray rather than an IV drip. It is FDA-approved for depression and given only in certified clinics under a federal safety programme.'],
-        ['Who can have it?', 'Adults with depression that has not responded to at least two antidepressants, or adults with major depressive disorder and acute suicidal thoughts or behaviour alongside an oral antidepressant. A full psychiatric evaluation comes first, including screening for the conditions that rule it out.'],
+        ['Who can have it?', 'Adults with depression that has not responded to at least two antidepressants, or adults with major depressive disorder and acute suicidal thoughts or behavior alongside an oral antidepressant. A full psychiatric evaluation comes first, including screening for the conditions that rule it out.'],
         ['What are the common side effects?', 'Feeling disconnected from yourself or your surroundings, dizziness, nausea, sleepiness or low energy, anxiety, and a rise in blood pressure. Most settle within the monitoring period, which is what the two hours are for.'],
         ['Why can’t I drive afterwards?', 'Esketamine affects attention, judgement and reaction time. You must not drive or operate machinery until the next day, after a restful sleep — even if you feel fine.'],
         ['How long is a course?', 'Twice a week for the first four weeks, then once a week for weeks five to eight. After that, sessions are weekly or every two weeks, set at the least frequent schedule that keeps you well.'],
@@ -455,7 +458,7 @@ return [
         'panel'  => '#e9eef1',
         'wash'   => '233 238 241',
         'cta'    => 'Book a Video Visit',
-        'note'   => 'Adults and adolescents from 13. California and Texas.',
+        'note'   => 'Adults and adolescents from 15. California and Texas.',
         'meta_left'  => 'In-network with most major plans.',
         'meta_right' => 'Evaluation / Medication management / Therapy',
     ],
@@ -570,7 +573,7 @@ return [
         ['Can I get a prescription by video?',
          'Yes for most medication, sent to the pharmacy you nominate. Controlled medication is governed by separate federal rules that have changed more than once, so your clinician will tell you what currently applies to you.'],
         ['Can my teenager be seen this way?',
-         'Yes, from 13. A parent or guardian joins for part of the appointment, and your clinician will set out at the start what is shared with you and what stays between them and your child.'],
+         'Yes, from 15. A parent or guardian joins for part of the appointment, and your clinician will set out at the start what is shared with you and what stays between them and your child.'],
     ],
 
     'cta' => [
@@ -582,8 +585,8 @@ return [
 
 /* ── Adolescent care ───────────────────────────────────────────────────
    Not a separate treatment so much as who it is for: psychiatry and therapy
-   for patients aged 13 and up. Every fact here is one the site already
-   states elsewhere — 13+, family sessions, school counselors with consent,
+   for patients aged 15 and up. Every fact here is one the site already
+   states elsewhere — 15+, family sessions, school counselors with consent,
    a parent joining part of a telehealth visit, and the FAQ's account of
    what parents are told. Keep them in step if any of those change.
      · No claim is made about TMS for under-18s. Clearance for adolescents
@@ -597,17 +600,17 @@ return [
     'name'  => 'Adolescent Care',
     'page'  => 'adolescent.php',
     'title' => 'Adolescent & Teen Mental Health Care',
-    'meta'  => 'Psychiatry and therapy for teenagers aged 13 and up, in person and by telehealth across California and Texas. Family sessions, school coordination with consent, and a clear agreement on what parents are told.',
+    'meta'  => 'Psychiatry and therapy for teenagers aged 15 and up, in person and by telehealth across California and Texas. Family sessions, school coordination with consent, and a clear agreement on what parents are told.',
 
     'hero' => [
         'lines'  => ['Care for teens.', 'Room for parents.'],
         'accent' => 'Room for parents.',
-        'lede'   => 'Psychiatry and therapy for young people from 13, with family sessions built in and a clear agreement, from the first visit, about what is shared with you and what stays between your teenager and their clinician.',
+        'lede'   => 'Psychiatry and therapy for young people from 15, with family sessions built in and a clear agreement, from the first visit, about what is shared with you and what stays between your teenager and their clinician.',
         'image'  => 'adolescent/hero.jpg',
         'panel'  => '#ece9e4',
         'wash'   => '236 233 228',
         'cta'    => 'Book an Evaluation',
-        'note'   => 'Ages 13 and up. In person and by telehealth.',
+        'note'   => 'Ages 15 and up. In person and by telehealth.',
         'meta_left'  => 'In-network with most major plans.',
         'meta_right' => 'Psychiatry / Therapy / Family sessions',
     ],
@@ -621,7 +624,7 @@ return [
             'Your teenager sees the same psychiatrists, nurse practitioners and therapists our adult patients do, in the same practice. Their therapist and their prescriber read the same notes, so you are not left carrying messages between two offices.',
         ],
         'facts' => [
-            ['Ages 13+',        'Adolescents and adults'],
+            ['Ages 15+',        'Adolescents and adults'],
             ['Family sessions', 'A standard part of care'],
             ['School',          'Coordinated, with consent'],
             ['Telehealth',      'Or in person, your choice'],
@@ -635,7 +638,7 @@ return [
     ],
 
     'band' => [
-        'value'  => '13+',
+        'value'  => '15+',
         'rest'   => 'is the age we start seeing patients, with family sessions as a standard part of care.',
         'note'   => 'With consent, we coordinate with school counselors.',
         'source' => 'Who we see',
@@ -675,7 +678,7 @@ return [
             ['School, with your consent','Where it helps, we coordinate with your teenager’s school counselor. Nothing is shared with the school without consent.'],
         ],
         'facts' => [
-            ['13+',     'ages we see',      '#0f639b'],
+            ['15+',     'ages we see',      '#0f639b'],
             ['Weekly',  'therapy to begin', '#e8922f'],
             ['Monthly', 'progress reviews', '#5f8f38'],
         ],
@@ -707,10 +710,10 @@ return [
     ],
 
     'faqs' => [
-        ['What ages do you see?', 'We see patients aged 13 and up. Adolescent care includes family sessions and, with consent, coordination with school counselors.'],
+        ['What ages do you see?', 'We see patients aged 15 and up. Adolescent care includes family sessions and, with consent, coordination with school counselors.'],
         ['My child is a teenager. What will I be told?', 'Enough to support them, not a transcript. Adolescent care works because the young person can speak freely, so clinicians set out at the start what will be shared with you and what will not — with safety always being shared. The rules also vary by state, and your clinician will tell you how they apply.'],
         ['Do I need to come to every appointment?', 'A parent or guardian makes the arrangements and joins for part of the first visit. After that it depends on the plan: some sessions are one to one, and family sessions bring you in on purpose.'],
-        ['Can my teenager be seen by telehealth?', 'Yes, from 13. A parent or guardian joins for part of the appointment, and your clinician will set out at the start what is shared with you and what stays between them and your child.'],
+        ['Can my teenager be seen by telehealth?', 'Yes, from 15. A parent or guardian joins for part of the appointment, and your clinician will set out at the start what is shared with you and what stays between them and your child.'],
         ['Will you talk to my teenager’s school?', 'Only with consent. Where it helps, we coordinate with the school counselor, so support at school and support here point the same way.'],
         ['Does insurance cover it?', 'We accept most major insurance plans and verify your benefits before the first appointment, so you know what a visit costs before you commit to anything.'],
     ],

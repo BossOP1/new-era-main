@@ -59,7 +59,7 @@ $indications = [
     ['name' => 'Anxious depression',
      'who'  => 'Decreasing anxiety symptoms in adults with MDD and comorbid anxiety.'],
     ['name' => 'Adolescent depression',
-     'who'  => 'Ages 15 to 21. We see patients from 13, but this indication starts at 15.'],
+     'who'  => 'Ages 15 to 21 — the same age we start seeing patients.'],
 ];
 
 // The four things the navigation holds steady, from Magstim's description.
@@ -89,10 +89,12 @@ $in_the_chair = [
   <section id="top"
            class="relative isolate overflow-hidden rounded-[20px] px-5 pb-7 pt-[108px] text-white sm:px-8 sm:pb-10 sm:pt-[126px] lg:px-12 lg:pt-[136px]"
            style="background-color: #0d1a21">
-    <?php // Magstim's photograph, flipped so the patient sits clear of the copy
-          // column — the same move the condition heroes make. The veil puts the
-          // darkness behind the type rather than over the whole frame. ?>
-    <div aria-hidden="true" class="cond-hero-photo pointer-events-none absolute inset-0 -z-10 scale-x-[-1]" style="background-image:url('<?= e(asset('assets/img/magstim/technology.jpg')) ?>')"></div>
+    <?php // The practice's own photograph: a patient in the chair under the coil,
+          // talking with her technician. Not flipped — the pair already sit right
+          // of centre, clear of the copy, and flipping would mirror the poster on
+          // the wall. The veil puts the darkness behind the type rather than over
+          // the whole frame. ?>
+    <div aria-hidden="true" class="cond-hero-photo pointer-events-none absolute inset-0 -z-10" style="background-image:url('<?= e(asset('assets/img/homepage/tms-new-era.webp')) ?>')"></div>
     <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10 bg-place-veil"></div>
 
     <div class="mx-auto flex min-h-[300px] max-w-[1160px] items-center lg:min-h-[350px]">
@@ -130,7 +132,7 @@ $in_the_chair = [
     </div>
 
     <div class="mx-auto mt-6 flex max-w-[1160px] flex-wrap items-center justify-between gap-3 border-t border-white/30 pt-4 text-[11px] text-white/85 sm:mt-8">
-      <span>Horizon<sup>&reg;</sup>, StimGuide<sup>&reg;</sup> and the photography on this page are Magstim's.</span>
+      <span>Horizon<sup>&reg;</sup>, StimGuide<sup>&reg;</sup> and the product photography on this page are Magstim's.</span>
       <span>Specifications as published by Magstim</span>
     </div>
   </section>

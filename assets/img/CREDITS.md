@@ -108,9 +108,9 @@ itself, and the subject column below says which. None of them is the office.
 | `locations/huntington-beach.jpg` | images.unsplash.com/photo-1696527318911-696788beb6f9 | Huntington Beach pier, surf and the downtown strip |
 | `locations/newport-beach.jpg` | images.unsplash.com/photo-1648730502418-52dd6ca19a9c | Newport Harbor, boats at their moorings |
 | `locations/laguna-hills.jpg` | images.unsplash.com/photo-1727377202873-dc3971539b39 | The south Orange County coast from the hills above Laguna |
-| `locations/orange.jpg` | images.unsplash.com/photo-1647893923196-b4df742477a4 | An Orange County street lined with palms |
-| `locations/torrance.jpg` | images.unsplash.com/photo-1739386541057-6f344bd25ffe | South Bay beach and palms under cloud |
-| `locations/long-beach.jpg` | images.unsplash.com/photo-1740795095618-a2b15bfce243 | Long Beach waterfront from the water |
+| `locations/orange.jpg` | images.unsplash.com/photo-1760773767342-7d981cc2350b | Palms against a golden-hour sun over a hillside neighbourhood; no coastline in frame |
+| `locations/torrance.jpg` | images.unsplash.com/photo-1588631911096-448d8f1f770d | Torrance Beach on a sunny day: surf, sand and the Palos Verdes bluff |
+| `locations/long-beach.jpg` | images.unsplash.com/photo-1740795095417-aa7a2d283ba9 | Downtown Long Beach from the air: the towers and the Villa Riviera beside the beach and the ocean |
 | `locations/west-los-angeles.jpg` | images.unsplash.com/photo-1648315300616-0eb7db8b8468 | A palm-lined west Los Angeles boulevard |
 | `locations/central-austin.jpg` | images.unsplash.com/photo-1551223456-a0988518e562 | The Austin skyline over Lady Bird Lake |
 | `locations/cedar-park.jpg` | images.unsplash.com/photo-1563131645-ac2001aff716 | Austin by day, north of the river |
@@ -141,7 +141,7 @@ watermark, which is left on deliberately.
 | `magstim/connect.jpg`         | magstim.com/app/uploads/2024/05/Magstim-TMS-Magstim-Connect-1.jpg | Magstim Connect software |
 | `magstim/stimulator.jpg`      | magstim.com/app/uploads/2024/05/Magstim-TMS-Stimulator.jpg | The Horizon stimulator unit (unused so far) |
 | `magstim/coils.jpg`           | magstim.com/app/uploads/2024/05/Magstim-TMS-Coils-1.jpg | Treatment coil close-up (unused so far) |
-| `magstim/technology.jpg`      | magstim.com/app/uploads/2024/04/Magstim-TMS-Technology.jpg | Patient in the chair as the coil is positioned (page hero, flipped in CSS) |
+| `magstim/technology.jpg`      | magstim.com/app/uploads/2024/04/Magstim-TMS-Technology.jpg | Patient in the chair as the coil is positioned (unused since the page hero switched to the practice's own homepage/tms-new-era.webp) |
 | `magstim/video-horizon-stimguide.jpg` | i.ytimg.com/vi/NRnDHaiaRFA/maxresdefault.jpg | Poster frame for Magstim's Horizon 3.0 film |
 | `magstim/video-tish-story.jpg`        | i.ytimg.com/vi/937QadE0j1U/maxresdefault.jpg | Poster frame for Magstim's TMS Stories: Tish |
 

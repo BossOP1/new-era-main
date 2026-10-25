@@ -305,7 +305,7 @@ if (!empty($data['treatment_reviews'][$treatment_key]) && isset($rs_by_key[$trea
           <a href="<?= e($condition['page'] ?? 'conditions.php') ?>" class="lift group flex h-full items-center gap-3 rounded-2xl border border-[#e3e7ea] bg-white px-4 py-4 transition-colors hover:border-brand-blue/35 sm:gap-4 sm:px-6 sm:py-5">
             <?= condition_mark($condition, 'h-7 w-7 shrink-0 [filter:brightness(0.62)_saturate(1.25)] sm:h-9 sm:w-9') ?>
             <span class="min-w-0 flex-1">
-              <span class="block text-[14px] font-extrabold tracking-[-0.02em] text-ink sm:text-[17px]"><?= e($condition['name']) ?></span>
+              <span class="block text-[14px] font-extrabold tracking-[-0.02em] text-ink sm:text-[17px]"><?= e($condition['full'] ?? $condition['name']) ?></span>
               <?php if ($flagged): ?>
                 <span class="mt-0.5 block text-[10px] font-bold uppercase tracking-[0.14em] text-brand-green-dark"><?= e($t['treats']['flag_label']) ?></span>
               <?php endif; ?>
@@ -367,7 +367,7 @@ if (!empty($data['treatment_reviews'][$treatment_key]) && isset($rs_by_key[$trea
       <div>
         <p class="m-0 mb-5 flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-[0.17em] text-brand-blue/70 md:mb-[26px]"><?= $dot ?> Questions</p>
         <h2 class="m-0 font-serif font-normal leading-[1.08] tracking-[-0.035em] text-brand-blue-dark text-[clamp(33px,3.9vw,52px)]"><?= e($t['name']) ?>,<br><em class="italic font-normal text-brand-blue">answered plainly.</em></h2>
-        <p class="m-0 mt-6 max-w-[34ch] text-base leading-[1.8] text-brand-blue">Still stuck on something? Ask us on the call — there is no question we have not heard before.</p>
+        <p class="m-0 mt-6 max-w-[34ch] text-base leading-[1.8] text-brand-blue"><?= e($t['faq_intro'] ?? 'Still stuck on something? Ask us on the call — there is no question we have not heard before.') ?></p>
         <a href="<?= e($site['phone_href']) ?>" class="mt-6 inline-flex items-center gap-4 border-b border-brand-blue/30 py-2 text-sm font-bold text-brand-blue transition-colors hover:border-brand-blue sm:mt-7">
           <?= e($site['phone']) ?> <?= arrow_icon(16) ?>
         </a>

@@ -56,6 +56,13 @@ MIN_LEN = 40
 # visitors at care we do not offer, so it is left out.
 DROPPED = r'\btinnitus\b'
 
+# Clinicians who have left the practice: (pattern, clinic slug). A review that
+# names one would send patients looking for someone they cannot book. The
+# clinic narrows a first-name-only match to the reviews that mean them.
+DEPARTED = [
+    (r'\blaura\b', 'central-austin'),   # Laura Ann Beaufford, left Nov 6, 2026
+]
+
 # The export's listing names, mapped onto the clinics the site already knows
 # (includes/data-team.php). Provider-prefixed listings are that clinician's own
 # Google page for the same address, so they fold into the clinic.
@@ -189,6 +196,9 @@ for r in five:
     low = text.lower()
     if re.search(DROPPED, low):
         skipped['dropped condition'] += 1
+        continue
+    if any(slug == clinic and re.search(pat, low) for pat, clinic in DEPARTED):
+        skipped['departed clinician'] += 1
         continue
     topics = [k for k, _, pat in TOPICS if re.search(pat, low)]
 

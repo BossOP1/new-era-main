@@ -110,7 +110,7 @@ return [
         [
             'heading' => 'Children',
             'paras' => [
-                'This website is not directed at children under 13, and we do not knowingly collect information from them through it. We do treat adolescents from 13, but those arrangements are made by a parent or guardian, not through a form.',
+                'This website is not directed at children under 13, and we do not knowingly collect information from them through it. We do treat adolescents from 15, but those arrangements are made by a parent or guardian, not through a form.',
             ],
         ],
         [
