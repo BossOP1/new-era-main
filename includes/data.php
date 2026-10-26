@@ -47,7 +47,7 @@ return [
             'page'  => 'anxiety.php',
             'alt'   => 'A woman laughing on an open road, hair caught by the wind',
             'name'  => 'Anxiety',
-            'blurb' => 'Generalised anxiety, panic disorder, social anxiety and the physical symptoms that come with them.',
+            'blurb' => 'Generalized anxiety, panic disorder, social anxiety and the physical symptoms that come with them.',
             'chips' => ['CBT', 'Exposure work', 'Medication'],
         ],
         [

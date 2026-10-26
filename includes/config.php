@@ -45,8 +45,10 @@ return [
         ['label' => 'Home',          'href' => 'index.php'],
         ['label' => 'About',         'href' => 'about.php'],
         ['label' => 'Meet our team', 'href' => 'team.php'],
-        ['label' => 'Treatments',    'href' => 'treatments.php', 'menu' => 'treatments'],
-        ['label' => 'Conditions',    'href' => 'conditions.php', 'menu' => 'conditions', 'also' => ['depression-short.php']],
+        // 'link' => true: with a mouse, clicking the label goes to its hub page
+        // (hover already opens the menu). Touch and keyboard still toggle it.
+        ['label' => 'Treatments',    'href' => 'treatments.php', 'menu' => 'treatments', 'link' => true],
+        ['label' => 'Conditions',    'href' => 'conditions.php', 'menu' => 'conditions', 'link' => true, 'also' => ['depression-short.php']],
         ['label' => 'Resources',     'href' => 'faq.php',        'menu' => 'resources'],
         // No locations page yet, so the item is a menu rather than a link —
         // the dropdown is what does the work. Give it an href once the hub

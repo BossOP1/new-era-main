@@ -28,6 +28,18 @@ $btn_line = 'inline-flex items-center gap-2.5 rounded-full border-2 border-ink/2
 $all      = $data['conditions'];
 $featured = $all[0];
 $rest     = array_slice($all, 1);
+
+// How many conditions the page lists, in words, so the copy cannot drift from
+// the grid when one is added.
+$count_words = [5 => 'five', 6 => 'six', 7 => 'seven', 8 => 'eight', 9 => 'nine', 10 => 'ten'];
+$count_word  = $count_words[count($all)] ?? (string) count($all);
+
+// Card copy reworded for this page only; the homepage selector keeps the
+// shared blurbs from data.php.
+$blurb_here = [
+    'Postpartum' => 'Postpartum depression, treated with options that fit feeding, sleep and a new baby.',
+    'PTSD'       => 'Trauma-informed therapy at your pace, with clinicians trained in EMDR and prolonged exposure.',
+];
 ?>
 <div class="bg-[#faf8f3] [&_a:focus-visible]:outline [&_a:focus-visible]:outline-[3px] [&_a:focus-visible]:outline-brand-orange [&_a:focus-visible]:outline-offset-[5px]">
 
@@ -49,12 +61,14 @@ $rest     = array_slice($all, 1);
           </ol>
         </nav>
 
-        <h1 class="m-0 font-serif font-normal leading-[1.05] tracking-[-0.04em] text-ink text-[40px] sm:text-[54px] lg:text-[62px]">
-          Care for the whole<br>range of what<br>you’re <em class="not-italic text-brand-blue">carrying.</em>
+        <?php // A two-sentence headline, so it is set a size down from the other
+              // heroes to keep it to four lines. ?>
+        <h1 class="m-0 max-w-[600px] font-serif font-normal leading-[1.05] tracking-[-0.04em] text-ink text-[36px] sm:text-[46px] lg:text-[52px]">
+          Mental health disorders<br>are treatable.<br><em class="not-italic text-brand-blue">Here are the conditions<br>we treat.</em>
         </h1>
 
         <p class="m-0 mt-5 max-w-[46ch] text-[15px] leading-[1.75] text-ink/75 sm:mt-6 sm:text-base">
-          Seven conditions, one team, and a full diagnostic assessment before anybody writes anything down. Start with whichever of these sounds most like your week.
+          Struggling with depression, anxiety, and more can feel hopeless. It isn’t. Here are <?= e($count_word) ?> of the conditions we treat.
         </p>
 
         <div class="mt-6 flex flex-wrap gap-3 sm:mt-8">
@@ -80,10 +94,10 @@ $rest     = array_slice($all, 1);
   <div class="mb-7 sm:mb-9 md:mb-11 md:flex md:items-end md:justify-between md:gap-10">
     <div>
       <p class="<?= $eyebrow ?>"><?= $dot ?> Conditions We Treat</p>
-      <h2 class="<?= $h2 ?>">Seven conditions.<br><em class="italic font-normal text-brand-blue">One assessment.</em></h2>
+      <h2 class="<?= $h2 ?>"><?= e(ucfirst($count_word)) ?> conditions.<br><em class="italic font-normal text-brand-blue">One assessment.</em></h2>
     </div>
     <p class="m-0 mt-[22px] max-w-[360px] text-base leading-[1.75] text-[#58616a] md:mt-0 md:max-w-[290px]">
-      Every plan starts with a full diagnostic assessment, never a fifteen-minute script.
+      Every plan starts with a full diagnostic assessment, which helps us help you.
     </p>
   </div>
 
@@ -126,7 +140,7 @@ $rest     = array_slice($all, 1);
           </div>
           <div class="flex flex-1 flex-col p-6 sm:p-7">
             <h3 class="m-0 font-serif text-[24px] font-normal leading-[1.15] tracking-[-0.025em] text-ink"><?= e($condition['name']) ?></h3>
-            <p class="m-0 mt-2.5 text-[14px] leading-[1.7] text-[#58616a]"><?= e($condition['blurb']) ?></p>
+            <p class="m-0 mt-2.5 text-[14px] leading-[1.7] text-[#58616a]"><?= e($blurb_here[$condition['name']] ?? $condition['blurb']) ?></p>
             <div class="mt-4 flex flex-wrap gap-1.5">
               <?php foreach ($condition['chips'] as $chip): ?>
                 <span class="rounded-full border border-ink/15 px-2.5 py-1 text-[11px] font-bold text-ink/60"><?= e($chip) ?></span>
@@ -143,7 +157,7 @@ $rest     = array_slice($all, 1);
   </ul>
 
   <p class="m-0 mt-8 max-w-[68ch] text-sm leading-[1.85] text-[#6c7680]">
-    Not seeing yours? These are the conditions we treat most, not the only ones we see. Call and describe what is going on, and we will tell you honestly whether we are the right people.
+    Not seeing what you’re looking for? The conditions listed here represent some of the most common reasons people seek care with us, but they’re far from the only ones. Reach out and share what’s going on, and we’ll help determine whether we can provide the support you’re looking for.
   </p>
 </section>
 
@@ -156,13 +170,13 @@ $rest     = array_slice($all, 1);
       <div class="relative">
         <p class="m-0 mb-5 flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-[0.17em] text-white/60 md:mb-[26px]"><?= $dot ?> Why one treatment recurs</p>
         <h2 class="m-0 font-serif font-normal leading-[1.08] tracking-[-0.035em] text-white text-[clamp(30px,3.4vw,44px)]">
-          Seven conditions.<br><em class="italic font-normal text-[#cde3de]">One piece of biology.</em>
+          <?= e(ucfirst($count_word)) ?> conditions.<br><em class="italic font-normal text-[#cde3de]">One evidence-based treatment.</em>
         </h2>
         <p class="m-0 mt-6 max-w-[44ch] text-[15px] leading-[1.75] text-[#dbe6ee] sm:mt-7 sm:leading-[1.8]">
-          TMS appears on all seven of these pages, and that is not a sales tactic. Each of these conditions involves circuits in the prefrontal cortex that have gone underactive or over-excitable, and magnetic stimulation is how you reach them without a drug.
+          If TMS seems to appear throughout these pages, there’s a good reason. Many mental health conditions involve disruptions in the brain networks responsible for mood, focus, and emotional regulation. TMS works by stimulating these circuits directly, offering a non-medication approach to treatment.
         </p>
         <p class="m-0 mt-4 max-w-[44ch] text-[15px] leading-[1.75] text-[#dbe6ee] sm:leading-[1.8]">
-          It is FDA-cleared for depression and for OCD. For the rest, it rests on trial evidence of varying strength, and we will tell you which is which before you start rather than after.
+          It is FDA-cleared for depression and for OCD. For the rest, it rests on trial evidence of varying strength, and we will tell you which is which before you start.
         </p>
         <a href="tms.php" class="mt-7 inline-flex items-center justify-center gap-[22px] rounded-full bg-white px-[25px] py-[17px] text-sm font-bold text-[#154c69] transition-colors hover:bg-[#e6eddc] sm:mt-8">
           How TMS Works <?= arrow_icon(17) ?>
@@ -186,7 +200,7 @@ $rest     = array_slice($all, 1);
         <div class="mt-6 grid grid-cols-3 gap-3 border-t border-white/25 pt-6 sm:mt-8 sm:flex sm:flex-wrap sm:gap-12 sm:pt-7">
           <?php foreach ([
             ['value' => '2',  'label' => 'conditions FDA-cleared', 'color' => '#e8922f'],
-            ['value' => '7',  'label' => 'conditions treated here', 'color' => '#86be52'],
+            ['value' => (string) count($all), 'label' => 'conditions treated here', 'color' => '#86be52'],
             ['value' => '0',  'label' => 'days of recovery time',   'color' => '#ffffff'],
           ] as $fact): ?>
             <div>

@@ -242,6 +242,12 @@
       }
 
       trigger.addEventListener('click', function (event) {
+        // A hub item (data-href) goes to its page on a mouse click — hover has
+        // already shown the menu. Touch and keyboard (detail 0) still toggle.
+        if (trigger.dataset.href && canHover && event.detail > 0) {
+          window.location.href = trigger.dataset.href;
+          return;
+        }
         // Hover has usually opened the menu a moment before the click lands;
         // that click should not close it again. Keyboard clicks (detail 0)
         // always toggle.

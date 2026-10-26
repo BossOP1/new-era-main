@@ -157,7 +157,7 @@ $nav_link  = 'relative inline-flex items-center gap-1.5 whitespace-nowrap rounde
         <?php if (isset($item['menu'], $menus[$item['menu']])): ?>
           <button type="button"
                   class="group/dd <?= $nav_link ?>"
-                  data-dropdown-trigger
+                  data-dropdown-trigger<?= !empty($item['link']) ? ' data-href="' . e($item['href']) . '"' : '' ?>
                   data-current="<?= $is_current ? 'true' : 'false' ?>"
                   aria-expanded="false"
                   aria-haspopup="true"
