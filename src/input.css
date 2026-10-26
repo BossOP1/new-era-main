@@ -241,8 +241,15 @@
   }
 
   @media (min-width: 768px) {
+    /* A page can reframe its photograph through --cond-photo-size and
+       --cond-photo-pos, set inline beside --cond-wash — PTSD scales its photo
+       down from the top so the heads clear the floor wash, and fades the
+       photo's new bottom edge out with --cond-photo-mask. */
     .cond-hero-photo {
-      background-position: center 38%;
+      background-size: var(--cond-photo-size, cover);
+      background-position: var(--cond-photo-pos, center 38%);
+      -webkit-mask-image: var(--cond-photo-mask, none);
+      mask-image: var(--cond-photo-mask, none);
     }
 
     /* Two washes: the left-to-right fade that clears the copy column, and a

@@ -292,30 +292,33 @@ return [
 
     'hero' => [
         'keyword' => 'PTSD Treatment',
-        'lines' => ['The danger passed.', 'Your body never', 'got the message.'],
+        'lines' => ['The danger is over.', 'Your body never', 'got the message.'],
         'accent' => 'got the message.',
-        'lede'  => 'Post-traumatic stress disorder follows witnessing or living through something terrifying, and then being unable to leave it behind. More than three million Americans carry it. It responds to treatment.',
+        'lede'  => 'Post-traumatic stress disorder (PTSD) can develop after witnessing or living through something terrifying. More than three million Americans live with the symptoms of PTSD. However, this trauma disorder responds well to treatment.',
         'image' => 'conditions/ptsd-hero.jpg',
         'alt'   => 'A person standing at a window in early light',
         'panel' => '#ece7e0',
         'wash'  => '236 231 224',
+        'photo_size' => 'auto 84%',
+        'photo_pos'  => '75% top',
+        'photo_mask' => 'linear-gradient(180deg, #000 58%, transparent 84%)',
     ],
 
     'what' => [
         'eyebrow' => '01 / What it is',
-        'lines'   => ['Three clusters.', 'One condition.'],
+        'lines'   => ['Four clusters.', 'One condition.'],
         'accent'  => 'One condition.',
-        'serif'   => 'PTSD is built from three groups of symptoms: re-experiencing, avoidance and hyper-arousal.',
+        'serif'   => 'PTSD is built from four groups of symptoms: re-experiencing, avoidance, negative shifts in thinking and mood, and hyper-arousal.',
         'paras'   => [
-            'Most people are resilient. Given time they process what happened and carry on. In PTSD the trauma stays live — returning through nightmares, flashbacks and triggers — and it can hold someone in fear, dread and depression for years.',
+            'Most people are resilient. Given time, they process what happened and move on. In PTSD the trauma stays live — returning through nightmares, flashbacks and triggers — and it can hold someone in fear, dread and depression for years.',
             'It follows combat, assault, serious accidents, sudden bereavement, a frightening diagnosis. What it does not follow is any failure of character on the part of the person carrying it.',
         ],
-        'signs_title' => 'The three clusters',
+        'signs_title' => 'The four clusters',
         'signs' => [
             'Re-experiencing: memories, nightmares, flashbacks',
             'Avoidance: of people, places and conversations',
+            'Negative thinking and mood: guilt, shame, detachment',
             'Hyper-arousal: startling easily, anger, insomnia',
-            'Negative shifts in thinking and mood',
         ],
         'signs_note' => 'Symptoms running longer than three months, with real distress and disruption to ordinary life, are what a clinician is listening for.',
     ],
@@ -353,24 +356,24 @@ return [
         'accent'  => 'Then, no way out.',
         'intro'   => 'PTSD is brought on by experiencing or witnessing something terrifying. These are the events we see most often behind it.',
         'items' => [
-            ['name' => 'Combat stress',      'copy' => 'Service members and veterans carry a markedly higher share of the diagnosis.', 'tag' => 'Service'],
-            ['name' => 'Violent assault',    'copy' => 'Physical or sexual assault, and the long aftermath of not being believed.', 'tag' => 'Assault'],
-            ['name' => 'Accidents',          'copy' => 'A serious collision or crash, whether you were driving, riding or watching.', 'tag' => 'Accident'],
-            ['name' => 'Sudden loss',        'copy' => 'The unexpected death of someone close, or a frightening medical diagnosis.', 'tag' => 'Loss'],
+            ['name' => 'Combat stress',      'copy' => 'Service members and veterans carry a markedly higher share of the diagnosis.'],
+            ['name' => 'Violent assault',    'copy' => 'Physical or sexual assault, and the long aftermath of not being believed.'],
+            ['name' => 'Accidents',          'copy' => 'A serious collision or crash, whether you were driving, riding or watching.'],
+            ['name' => 'Sudden loss',        'copy' => 'The unexpected death of someone close, or a frightening medical diagnosis.'],
         ],
     ],
 
     'tms' => [
         'eyebrow' => '04 / When medication hasn’t worked',
-        'lines'   => ['When the drugs', 'made it worse.'],
-        'accent'  => 'made it worse.',
+        'lines'   => ['When medication', 'makes it worse.'],
+        'accent'  => 'makes it worse.',
         'quote'   => 'A recent study found TMS effective in improving symptoms among participants with major depressive disorder and co-occurring PTSD.',
         'quote_source' => 'Biological Psychiatry, 2018',
-        'copy'    => 'Standard treatment pairs antidepressants with psychotherapy, and with EMDR or exposure work it helps many people. For a large share it does not, and the medication brings side effects that make things worse. TMS is the alternative.',
+        'copy'    => 'Standard treatment pairs antidepressants with psychotherapy, and with EMDR or exposure work it helps many people. For some, it does not, and medication side effects can make things worse. TMS offers an alternative.',
         'photo'   => 'homepage/tms-new-era-2.jpg',
         'photo_alt' => 'A patient resting under the coil during a TMS session',
         'photo_focus' => 'object-[45%_50%]',
-        'heading' => 'Magnetic fields that reset how the circuit fires.',
+        'heading' => 'TMS uses magnetic fields to reset how the circuit fires.',
         'sub'     => 'Pulses created by MRI-like technology pass through the scalp and stimulate neurons in regions that have gone underactive. You sit fully alert, reading or listening to something, for about forty minutes.',
         'benefits' => [
             ['name' => 'No sedation',        'copy' => 'You stay awake and alert, which removes a source of risk.'],
@@ -392,6 +395,7 @@ return [
             'Left alone, the cycle of re-experiencing tends to intensify rather than ease. Avoidance grows to fill more of a life, depression and anxiety arrive alongside, and sleep stops doing its job.',
             'Trauma-focused care works, and it works at your pace. Nobody is going to make you recount anything before you are ready.',
         ],
+        'paras_plain' => true,
         'gains' => [
             'Process what happened at a pace you set',
             'Get the startle response and the sleep back',
@@ -399,6 +403,8 @@ return [
             'Move towards a life the trauma isn’t running',
         ],
     ],
+
+    'related_noun' => 'conditions',
 
     'faqs' => [
         ['q' => 'Do I have to talk about the trauma?', 'a' => 'Not to begin with, and not before you are ready. Trauma-focused therapy works at your pace, and treatments such as TMS do not require you to recount anything at all.'],

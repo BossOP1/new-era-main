@@ -94,7 +94,7 @@ $rail['#faq'] = 'FAQs';
 <div class="bg-white px-3 pt-3 sm:px-5 sm:pt-5 lg:px-8">
   <section id="top"
            class="relative isolate overflow-hidden rounded-[20px] px-5 pb-7 pt-[108px] text-ink sm:px-8 sm:pb-10 sm:pt-[126px] lg:px-12 lg:pt-[136px]"
-           style="--cond-wash: <?= e($c['hero']['wash']) ?>; background-color: <?= e($c['hero']['panel']) ?>">
+           style="--cond-wash: <?= e($c['hero']['wash']) ?>; background-color: <?= e($c['hero']['panel']) ?><?php if (!empty($c['hero']['photo_size'])): ?>; --cond-photo-size: <?= e($c['hero']['photo_size']) ?><?php endif; ?><?php if (!empty($c['hero']['photo_pos'])): ?>; --cond-photo-pos: <?= e($c['hero']['photo_pos']) ?><?php endif; ?><?php if (!empty($c['hero']['photo_mask'])): ?>; --cond-photo-mask: <?= e($c['hero']['photo_mask']) ?><?php endif; ?>">
     <div aria-hidden="true" class="cond-hero-photo pointer-events-none absolute inset-0 -z-10" style="background-image:url('<?= e(asset('assets/img/' . $c['hero']['image'])) ?>')"></div>
     <div aria-hidden="true" class="cond-hero-wash pointer-events-none absolute inset-0 -z-10"></div>
 
@@ -260,7 +260,9 @@ $rail['#faq'] = 'FAQs';
           </div>
           <h3 class="m-0 mb-3.5 font-serif text-[24px] font-normal leading-[1.15] tracking-[-0.03em] text-ink lg:text-[26px]"><?= e($item['name']) ?></h3>
           <p class="m-0 text-sm leading-[1.8] text-[#58616a]"><?= e($item['copy']) ?></p>
-          <span class="mt-6 border-t border-ink/15 pt-4 text-[10px] font-bold uppercase tracking-[0.15em] text-ink/55 md:mt-auto"><?= e($item['tag']) ?></span>
+          <?php if (!empty($item['tag'])): ?>
+            <span class="mt-6 border-t border-ink/15 pt-4 text-[10px] font-bold uppercase tracking-[0.15em] text-ink/55 md:mt-auto"><?= e($item['tag']) ?></span>
+          <?php endif; ?>
         </article>
       <?php endforeach; ?>
     </div>
@@ -371,7 +373,9 @@ $rail['#faq'] = 'FAQs';
       <p class="<?= $eyebrow ?>"><?= $dot ?> If it goes untreated</p>
       <h2 class="<?= $h2 ?>"><?= $headline($c['untreated']['lines'], $c['untreated']['accent'], $em_section) ?></h2>
       <?php foreach ($c['untreated']['paras'] as $i => $para): ?>
-        <p class="<?= $i === 0 ? 'm-0 mt-6 max-w-[44ch] text-base leading-[1.85] text-[#58616a]' : 'm-0 mt-4 max-w-[40ch] font-serif text-[20px] leading-[1.5] text-[#24333c] md:text-[22px]' ?>"><?= e($para) ?></p>
+        <?php // paras_plain sets every paragraph in the body style rather than
+              // following the first with a larger serif line. ?>
+        <p class="<?= $i === 0 || !empty($c['untreated']['paras_plain']) ? 'm-0 mt-6 max-w-[44ch] text-base leading-[1.85] text-[#58616a]' : 'm-0 mt-4 max-w-[40ch] font-serif text-[20px] leading-[1.5] text-[#24333c] md:text-[22px]' ?>"><?= e($para) ?></p>
       <?php endforeach; ?>
     </div>
 
@@ -443,7 +447,7 @@ $related = array_values(array_filter(
   <div class="mb-7 flex flex-wrap items-end justify-between gap-6 border-b-2 border-ink/15 pb-5 sm:mb-9 sm:gap-8 sm:pb-6">
     <div>
       <p class="<?= $eyebrow ?>"><?= $dot ?> Beyond <?= e(strtolower($c['name'])) ?></p>
-      <h2 class="<?= $h2 ?>">We also treat these<br><em class="<?= $em_section ?>">with TMS.</em></h2>
+      <h2 class="<?= $h2 ?>">We also treat these<?= !empty($c['related_noun']) ? ' ' . e($c['related_noun']) : '' ?><br><em class="<?= $em_section ?>">with TMS.</em></h2>
     </div>
     <a href="conditions.php" class="flex items-center gap-4 pb-2 text-xs font-bold text-ink transition-colors hover:text-brand-blue md:gap-8">
       All conditions we treat <span aria-hidden="true" class="text-2xl text-brand-blue">&#8600;</span>
