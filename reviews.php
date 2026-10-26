@@ -13,7 +13,7 @@
  * all ratings — a number this data cannot support.
  */
 $page_title        = 'Patient reviews';
-$page_description  = 'Real five-star reviews from patients at Anew Era Health, across fourteen clinics in California and Texas. Filter by location and treatment, and read what people say about TMS, psychiatry and therapy.';
+$page_description  = 'Real five-star reviews from patients at Anew Era Health, across our clinics in California and Texas. Filter by location and treatment, and read what people say about TMS, psychiatry and therapy.';
 $header_hero_light = true;
 $header_inset      = true;
 require __DIR__ . '/includes/header.php';
@@ -48,6 +48,17 @@ foreach ($locations as $loc) {
 
 $total = count($reviews);
 $years = (int) $meta['last_year'] - (int) $meta['first_year'];
+
+// The count is shown rounded down to the hundred ("1,400+") so the copy stays
+// true between exports without anyone editing a number by hand.
+$five_star_floor = number_format((int) floor($meta['five_star'] / 100) * 100);
+
+// Every clinic the practice runs, not just the ones the export has reviews
+// for — The Woodlands has none yet.
+$clinic_total = count(require __DIR__ . '/includes/data-locations.php');
+
+// Alphabetical, for the clinic filter and the By clinic cards.
+uasort($locations, static fn (array $a, array $b): int => strcmp($a['label'], $b['label']));
 
 /**
  * The five gold stars, as one label rather than five characters an assistive
@@ -110,12 +121,12 @@ foreach (array_slice($reviews, $first_page) as $r) {
         </nav>
 
         <h1 class="m-0 font-serif font-normal leading-[1.05] tracking-[-0.04em] text-ink text-[40px] sm:text-[54px] lg:text-[62px]">
-          <?= e(number_format($meta['five_star'])) ?> people<br>left five<br><em class="not-italic text-brand-blue">stars.</em>
+          <em class="not-italic text-brand-blue">Five-star rating</em><br>from more than<br><?= e($five_star_floor) ?> people.
         </h1>
 
         <p class="m-0 mt-5 max-w-[48ch] text-[15px] leading-[1.75] text-ink/75 sm:mt-6 sm:text-base">
-          Every one of them is below, unedited, from <?= e((string) $meta['clinics']) ?> clinics across California and Texas.
-          Filter by the one nearest you, or by the treatment you are weighing up.
+          The reviews come from all our clinics throughout California and Texas. See the reviews from clinics
+          closest to you as you determine if Anew Era is right for you.
         </p>
 
         <div class="mt-6 flex flex-wrap gap-3 sm:mt-8">
@@ -126,14 +137,14 @@ foreach (array_slice($reviews, $first_page) as $r) {
         <div class="mt-6 flex items-center gap-3 sm:mt-7">
           <?= $stars('text-[17px] text-brand-orange') ?>
           <span class="text-[13.5px] font-semibold text-ink/70">
-            <?= e(number_format($meta['five_star'])) ?> five-star reviews &middot; <?= e($meta['first_year']) ?>–<?= e($meta['last_year']) ?>
+            <?= e($five_star_floor) ?>+ five-star ratings &middot; <?= e($meta['first_year']) ?>–<?= e($meta['last_year']) ?>
           </span>
         </div>
       </div>
     </div>
 
     <div class="mx-auto mt-6 flex max-w-[1160px] flex-wrap items-center justify-between gap-3 border-t border-ink/20 pt-4 text-[11px] text-ink/65 sm:mt-8">
-      <span>Collected on <?= e(implode(', ', array_keys($meta['sources']))) ?>. Nothing here was written by us.</span>
+      <span>Collected on <?= e(implode(', ', array_keys($meta['sources']))) ?>.</span>
       <span>Last review <?= e($meta['updated']) ?></span>
     </div>
   </section>
@@ -144,10 +155,10 @@ foreach (array_slice($reviews, $first_page) as $r) {
   <ul class="m-0 grid list-none gap-3 p-0 sm:grid-cols-2 md:gap-4 lg:grid-cols-4">
     <?php
       $figures = [
-          [number_format($meta['five_star']), 'Five-star reviews', 'Across Google, ZocDoc, Healthgrades and WebMD.'],
-          [(string) $meta['clinics'],          'Clinics reviewed',  'Seven in California, seven in Texas.'],
-          [$years . ' years',                  'Of feedback',       'The first landed in ' . $meta['first_year'] . ', the latest in ' . $meta['updated'] . '.'],
-          [number_format($total),              'Published here',    'The rest carry a rating but no written review.'],
+          [$five_star_floor . '+',    'Five-star ratings', 'Across Google, ZocDoc, Healthgrades and WebMD.'],
+          [(string) $clinic_total,    'Clinics',           'Throughout California and Texas.'],
+          [$years . ' years',         'Of feedback',       'The first landed in ' . $meta['first_year'] . ', the latest in ' . $meta['updated'] . '.'],
+          ['940+',                    'Patient reviews',   'Real patient stories.'],
       ];
       foreach ($figures as [$figure, $label, $note]):
     ?>
@@ -167,7 +178,7 @@ foreach (array_slice($reviews, $first_page) as $r) {
     <div class="mb-8">
       <p class="<?= $eyebrow_light ?>"><?= $dot ?> In their words</p>
       <h2 class="m-0 font-serif text-[28px] font-normal leading-[1.1] tracking-[-0.03em] text-white sm:text-4xl">
-        Three of them, at length.
+        Real patients, real stories.
       </h2>
     </div>
 
@@ -196,8 +207,8 @@ foreach (array_slice($reviews, $first_page) as $r) {
 <!-- ─── Every review ─────────────────────────────────────────────────── -->
 <section id="all" class="<?= $wrap ?> scroll-mt-[150px] pb-10 pt-8 sm:pb-[60px] sm:pt-[60px] md:pb-[76px]">
   <div class="mb-6 sm:mb-8">
-    <p class="<?= $eyebrow ?>"><?= $dot ?> All <?= e(number_format($total)) ?> reviews</p>
-    <h2 class="<?= $h2 ?>">Find the ones<br><em class="italic font-normal text-brand-blue">that sound like you.</em></h2>
+    <p class="<?= $eyebrow ?>"><?= $dot ?> Anew Era reviews</p>
+    <h2 class="<?= $h2 ?>">Get inspired by<br><em class="italic font-normal text-brand-blue">what our patients have said.</em></h2>
   </div>
 
   <?php // Sticky only where it is one short row. Stacked on a phone the toolbar
@@ -294,7 +305,7 @@ foreach (array_slice($reviews, $first_page) as $r) {
 <section class="<?= $wrap ?> pb-12 sm:pb-[70px]">
   <div class="mb-6 sm:mb-8">
     <p class="<?= $eyebrow ?>"><?= $dot ?> By clinic</p>
-    <h2 class="<?= $h2 ?>">Reviews from<br><em class="italic font-normal text-brand-blue">your clinic.</em></h2>
+    <h2 class="<?= $h2 ?>">Reviews from<br><em class="italic font-normal text-brand-blue">Anew Era clinics.</em></h2>
   </div>
 
   <ul class="m-0 grid list-none gap-2.5 p-0 sm:grid-cols-2 md:gap-3 lg:grid-cols-4">
@@ -315,10 +326,10 @@ foreach (array_slice($reviews, $first_page) as $r) {
 
 <!-- ─── Book ─────────────────────────────────────────────────────────── -->
 <section class="<?= $wrap ?> pb-12 sm:pb-[80px]">
-  <div data-reveal class="relative flex flex-col items-center justify-center gap-5 rounded-[28px] bg-cream bg-cta-glow px-6 py-10 text-center sm:gap-6 sm:px-12 sm:py-14">
+  <div data-reveal class="relative flex flex-col items-center justify-center gap-5 rounded-[28px] bg-cream bg-aurora px-6 py-10 text-center sm:gap-6 sm:px-12 sm:py-14">
     <?= brand_glyph('h-16 w-auto') ?>
     <h2 class="m-0 max-w-[18ch] font-serif text-[30px] font-normal leading-[1.08] tracking-[-0.035em] text-ink sm:text-[42px]">
-      Write the next one.
+      Their story could be your story, too.
     </h2>
     <p class="m-0 max-w-[52ch] text-[15px] leading-[1.75] text-ink/70">
       Most new patients are seen within a week, and we check your insurance before your first visit.
