@@ -203,7 +203,9 @@ $rail['#faq'] = 'FAQs';
       <div class="relative h-[200px] overflow-hidden rounded-[20px] sm:h-[420px] md:h-[500px]">
         <?= image_slot($c['symptoms']['photo'], $c['name'] . ' photo', $c['symptoms']['photo_alt']) ?>
         <div aria-hidden="true" class="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent"></div>
-        <figcaption class="absolute inset-x-5 bottom-5 font-serif text-[21px] leading-[1.25] text-white sm:text-[23px]"><?= e($c['symptoms']['caption']) ?></figcaption>
+        <?php if (!empty($c['symptoms']['caption'])): ?>
+          <figcaption class="absolute inset-x-5 bottom-5 font-serif text-[21px] leading-[1.25] text-white sm:text-[23px]"><?= e($c['symptoms']['caption']) ?></figcaption>
+        <?php endif; ?>
       </div>
     </figure>
 
@@ -358,7 +360,8 @@ $rail['#faq'] = 'FAQs';
         </div>
         <div class="flex flex-1 flex-col p-6 sm:p-7">
           <h3 class="m-0 mb-2.5 font-serif text-[24px] font-normal tracking-[-0.02em] text-brand-blue"><?= e($treatment['name']) ?></h3>
-          <p class="m-0 text-[15px] font-medium leading-[1.6] text-ink/70"><?= e($treatment['detail']) ?></p>
+          <?php // treatment_detail lets one page reword a card without changing it everywhere. ?>
+          <p class="m-0 text-[15px] font-medium leading-[1.6] text-ink/70"><?= e($c['treatment_detail'][$treatment['name']] ?? $treatment['detail']) ?></p>
         </div>
       </article>
     <?php endforeach; ?>

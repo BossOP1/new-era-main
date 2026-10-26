@@ -30,14 +30,14 @@ return [
 'anxiety' => [
     'name'  => 'Anxiety',
     'art'   => 'anxiety',
-    'title' => 'Anxiety',
+    'title' => 'Anxiety Treatment in California & Texas',
     'meta'  => 'Anxiety that will not switch off is treatable. Understand the symptoms, what drives it, and how TMS helps when medication and therapy have not been enough.',
 
     'hero' => [
         'keyword' => 'Anxiety Treatment',
         'lines' => ['Anxiety isn’t nerves.', 'It’s a body that', 'won’t stand down.'],
         'accent' => 'won’t stand down.',
-        'lede'  => 'Worry and fear are ordinary responses to a hard day. When the response outlasts the thing that caused it, and arrives with no cause at all, that is an anxiety disorder — and it answers to treatment.',
+        'lede'  => 'Worry and fear are ordinary responses to a hard day. When the response outlasts the thing that caused it, and arrives with no cause at all, that is an anxiety disorder — and it’s treatable.',
         'image' => 'conditions/anxiety-hero.jpg',
         'alt'   => 'A woman standing outdoors in soft daylight, eyes closed',
         'panel' => '#f2e9dc',
@@ -48,9 +48,9 @@ return [
         'eyebrow' => '01 / What it is',
         'lines'   => ['Fear without', 'a reason.'],
         'accent'  => 'a reason.',
-        'serif'   => 'Anxiety is a normal emotion. An anxiety disorder is what happens when it stops being proportionate to anything.',
+        'serif'   => 'Anxiety is a normal emotion. An anxiety disorder is what happens when it becomes constant in your life.',
         'paras'   => [
-            'Most people feel anxious before a presentation or a procedure. Sometimes that is useful. It becomes a disorder when the feeling is constant and grinding, arrives without a trigger, and starts deciding what you will and will not do.',
+            'Most people feel anxiety before a presentation or an operation. Sometimes, anxiety is even useful. However, it becomes a disorder when anxiety doesn’t stop.',
             'Left alone it puts real strain on the body, and it has a habit of narrowing a life one avoided situation at a time. It is also one of the most treatable conditions in psychiatry.',
         ],
         'signs_title' => 'Emotional symptoms',
@@ -60,7 +60,7 @@ return [
             'Trouble concentrating',
             'Intrusive or obsessive thoughts',
         ],
-        'signs_note' => 'Recognising yourself here is not a diagnosis. Only a clinician can make one, and that is a conversation rather than a test you pass or fail.',
+        'signs_note' => 'Recognizing yourself here is not a diagnosis. Only a clinician can make one, and that is a conversation rather than a test you pass or fail.',
     ],
 
     'stat' => [
@@ -72,12 +72,12 @@ return [
 
     'symptoms' => [
         'eyebrow' => '02 / Signs and symptoms',
-        'lines'   => ['Anxiety shows up', 'in the body too.'],
-        'accent'  => 'in the body too.',
-        'intro'   => 'The physical symptoms are often what sends someone to a doctor first, and they are frequently mistaken for a heart problem.',
-        'photo'   => 'cond-2',
-        'photo_alt' => 'A woman breathing deliberately, outdoors',
-        'caption' => 'Not in your head. In your chest, too.',
+        'lines'   => ['Anxiety also affects', 'you physically.'],
+        'accent'  => 'you physically.',
+        'intro'   => 'The physical symptoms of anxiety are often what send people to a doctor. They can be easily mistaken for a serious problem.',
+        'photo'   => 'treatments/spravato-hero.jpg',
+        'photo_alt' => 'A woman with her eyes closed, breathing calmly',
+        'caption' => '',
         'list' => [
             'A rapid or pounding heartbeat',
             'Shortness of breath, or hyperventilating',
@@ -96,12 +96,12 @@ return [
         'accent'  => 'Six conditions.',
         'intro'   => 'Anxiety disorders are a family rather than a single diagnosis. Which one you have decides what is worth trying first.',
         'items' => [
-            ['name' => 'Generalised anxiety', 'copy' => 'Constant, unfocused worry that attaches itself to whatever is nearest.', 'tag' => 'GAD'],
+            ['name' => 'Generalized anxiety', 'copy' => 'Constant, unfocused worry that attaches itself to whatever is nearest.', 'tag' => 'GAD'],
             ['name' => 'Panic disorder',      'copy' => 'Sudden surges of fear with full physical symptoms, and the fear of the next one.', 'tag' => 'Panic attacks'],
             ['name' => 'Social anxiety',      'copy' => 'Intense fear of being watched or judged, strong enough to reshape a week.', 'tag' => 'Social'],
             ['name' => 'Phobias',             'copy' => 'Fear fixed on a specific object or situation, out of proportion to the risk.', 'tag' => 'Specific'],
             ['name' => 'Obsessive-compulsive disorder', 'copy' => 'Intrusive thoughts and the rituals that form to quiet them.', 'tag' => 'OCD'],
-            ['name' => 'Anxious depression',  'copy' => 'Anxiety and low mood together, each one feeding the other.', 'tag' => 'MADD'],
+            ['name' => 'Anxious depression',  'copy' => 'Anxiety and low mood together, each one feeding the other.', 'tag' => 'Mixed anxiety and depression'],
         ],
     ],
 
@@ -111,12 +111,12 @@ return [
         'accent'  => 'a day.',
         'quote'   => 'The pulses stimulate the prefrontal cortex, helping the brain form new pathways — the process known as neuroplasticity.',
         'quote_source' => 'How TMS Works',
-        'copy'    => 'If medication and therapy have not settled your anxiety, transcranial magnetic stimulation is the next thing worth trying. It is non-invasive, needs no sedation, and you drive yourself home afterwards.',
+        'copy'    => 'If medication and therapy have not settled your anxiety, transcranial magnetic stimulation is the next thing worth trying. It is non-invasive, needs no sedation, and you drive yourself home afterward.',
         'photo'   => 'homepage/tms-new-era.webp',
         'photo_alt' => 'A patient in the TMS chair while a clinician talks her through the session',
         'photo_focus' => 'object-[70%_35%]',
         'heading' => 'Magnetic pulses, aimed at the part of the brain that sets your mood.',
-        'sub'     => 'The prefrontal cortex governs emotion, personality and decision-making. TMS wakes up cells there that have gone quiet, and the symptoms follow.',
+        'sub'     => 'The prefrontal cortex governs emotion, personality and decision-making. TMS wakes up cells, which helps relieve symptoms.',
         'benefits' => [
             ['name' => 'Drug-free',            'copy' => 'No medication, so none of the side effects that come with one.'],
             ['name' => 'Non-invasive',         'copy' => 'No anesthesia and no sedation. You stay awake throughout.'],
@@ -131,26 +131,30 @@ return [
     ],
 
     'untreated' => [
-        'lines' => ['It intensifies,', 'not the reverse.'],
-        'accent' => 'not the reverse.',
+        'lines' => ['Left untreated,', 'anxiety always gets worse.'],
+        'accent' => 'anxiety always gets worse.',
         'paras' => [
-            'Untreated anxiety tends to spread. Symptoms become more disruptive, concentration and memory suffer, and depression often arrives alongside it. Some people reach for substances to take the edge off, which adds a second problem to the first.',
-            'The encouraging part is that anxiety responds well to treatment — better than most conditions we see.',
+            'Untreated anxiety tends to spiral. Symptoms become more disruptive, concentration and memory suffer, and depression often arrives alongside it. Some people reach for substances to take the edge off, which adds a second problem to the first.',
+            'Here’s the good news: Anxiety responds well to treatment — and we’ve seen it happen.',
         ],
         'gains' => [
             'Understand what is actually driving it',
             'Build strategies that hold up under pressure',
             'Get real insight into your own patterns',
-            'Move towards a life that feels lighter',
+            'Move toward a life that feels lighter',
         ],
+    ],
+
+    'treatment_detail' => [
+        'Therapy' => 'CBT, DBT, EMDR and ACT from therapists working alongside your prescriber, never in a silo.',
     ],
 
     'faqs' => [
         ['q' => 'What happens at my first visit?', 'a' => 'A full diagnostic assessment rather than a fifteen-minute script. We go through your history, your physical health, your sleep and your current symptoms, and you leave the same day with a written plan.'],
         ['q' => 'How is anxiety diagnosed?', 'a' => 'Only by a medical professional, through both a psychological and a physical assessment. Expect questions about your overall health and any prescriptions, how long you have felt this way, what is going on in your life, and behaviors such as substance use. Questionnaires usually come into it too.'],
-        ['q' => 'Is TMS approved for anxiety?', 'a' => 'TMS is FDA-cleared for major depressive disorder and for OCD. For generalised anxiety it is used on the evidence for anxious depression and related presentations, and we will be straight with you about what that means for your case and your coverage before you start.'],
+        ['q' => 'Is TMS approved for anxiety?', 'a' => 'TMS is FDA-cleared for major depressive disorder and for OCD. For generalized anxiety it is used on the evidence for anxious depression and related presentations, and we will be straight with you about what that means for your case and your coverage before you start.'],
         ['q' => 'Does TMS hurt?', 'a' => 'No anesthesia or sedation is involved and you stay awake throughout. Most people describe a tapping sensation on the scalp. Some get mild scalp discomfort or a headache early on, which typically settles.'],
-        ['q' => 'Will my insurance cover it?', 'a' => 'Coverage for TMS is strongest where depression is part of the picture. We verify your benefits and handle the prior authorisation before you commit to anything, so you know where you stand first.'],
+        ['q' => 'Will my insurance cover it?', 'a' => 'We verify your benefits and handle the prior authorization before you commit to anything, so you know where you stand first.'],
         ['q' => 'What if I am not covered?', 'a' => 'We publish self-pay rates rather than quoting them case by case, and we can walk you through a payment plan before you agree to a course.'],
     ],
 ],
