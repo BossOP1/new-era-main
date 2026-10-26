@@ -121,7 +121,7 @@ $initials = static function (string $name): string {
 
         <div class="mt-6 flex flex-wrap gap-3 sm:mt-8">
           <a href="#clinicians" class="<?= $btn_blue ?>">Meet the Clinicians <?= arrow_icon(16) ?></a>
-          <a href="<?= e($loc['maps']) ?>" target="_blank" rel="noopener" class="inline-flex items-center gap-2.5 rounded-full border-2 border-white/45 bg-white/10 px-7 py-[14px] text-[15px] font-extrabold text-white backdrop-blur-sm transition-colors hover:border-white/80 hover:bg-white/20">
+          <a href="<?= e($loc['maps']) ?>" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 rounded-full border-2 border-white/45 bg-white/10 px-7 py-[14px] text-[15px] font-extrabold text-white backdrop-blur-sm transition-colors hover:border-white/80 hover:bg-white/20">
             Get Directions
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
           </a>
@@ -153,7 +153,7 @@ $initials = static function (string $name): string {
         <?= e($addr['street']) ?><br>
         <?= e($addr['city']) ?>, <?= e($addr['region']) ?> <?= e($addr['postcode']) ?>
       </address>
-      <a href="<?= e($loc['maps']) ?>" target="_blank" rel="noopener" class="mt-4 inline-flex items-center gap-2 text-[13.5px] font-extrabold text-brand-blue underline underline-offset-4 hover:text-brand-blue-dark">
+      <a href="<?= e($loc['maps']) ?>" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center gap-2 text-[13.5px] font-extrabold text-brand-blue underline underline-offset-4 hover:text-brand-blue-dark">
         Get Directions <?= arrow_icon(13) ?>
       </a>
     </div>
@@ -311,6 +311,11 @@ $initials = static function (string $name): string {
       </li>
     <?php endforeach; ?>
   </ul>
+
+  <?php // 'treatments_note' explains a treatment this clinic does not offer. ?>
+  <?php if (!empty($loc['treatments_note'])): ?>
+    <p class="m-0 mt-4 rounded-2xl border border-brand-blue/20 bg-mist px-5 py-4 text-[14px] leading-[1.7] text-brand-blue-dark"><?= e($loc['treatments_note']) ?></p>
+  <?php endif; ?>
 
   <?php if ($conditions): ?>
     <div data-reveal class="mt-3 rounded-[24px] border border-[#e3e7ea] bg-white p-7 sm:p-9 md:mt-4">

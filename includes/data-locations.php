@@ -916,7 +916,7 @@ return [
 
     'getting_here' => [
         ['name' => 'Where it is',
-         'copy' => '1733 Woodstead Ct, Suite 102, in The Woodlands.'],
+         'copy' => '1733 Woodstead Ct, Suite 102, The Woodlands, TX 77380.'],
         ['name' => 'Before your first visit',
          'copy' => 'Signposting inside a medical building is never as obvious as it looks on the way in. Give yourself a few extra minutes to find the suite rather than arriving at a run.'],
     ],
@@ -933,6 +933,8 @@ return [
             ['name' => 'Therapy',     'page' => 'therapy.php',    'icon' => 'chat',
              'copy' => 'CBT, DBT, EMDR and ACT, in person at the clinic or by telehealth across the state.'],
         ],
+
+    'treatments_note' => 'Spravato® (esketamine) is not offered at The Woodlands. It is available at our Austin and Dallas-area clinics: Central Austin, Cedar Park, Westlake, Central Dallas, Allen and Grapevine.',
 
     'faqs' => [
         ['q' => 'Do I need a referral to be seen here?',

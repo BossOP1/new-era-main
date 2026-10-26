@@ -320,14 +320,20 @@ return [
     'hero' => [
         'lines'  => ['When two', 'antidepressants', 'haven’t worked.'],
         'accent' => 'haven’t worked.',
-        'lede'   => 'Spravato® is esketamine, an FDA-approved nasal spray for treatment-resistant depression. You take it yourself in our clinic, under a clinician’s supervision, and stay with us for at least two hours afterwards.',
-        'image'  => 'treatments/spravato-hero.jpg',
+        'lede'   => 'Spravato® (esketamine) is an FDA-approved nasal spray for treatment-resistant depression. You take it yourself in our clinic, under a clinician’s supervision, and stay with us for at least two hours afterward.',
+        // A whole person at rest rather than a close-up of a face, shown at
+        // full height on the right from the tablet up (mirrored from the blog
+        // original so she sits clear of the copy).
+        'image'  => 'treatments/spravato-hero-rest.jpg',
+        'photo_size' => 'auto 100%',
+        'photo_pos'  => '100% 50%',
+        'photo_mask' => 'linear-gradient(90deg, transparent 34%, #000 56%)',
         'panel'  => '#eceef0',
         'wash'   => '236 238 240',
         'cta'    => 'Ask About Spravato®',
         'note'   => 'Offered at our Texas locations only.',
         'meta_left'  => 'FDA-approved for treatment-resistant depression.',
-        'meta_right' => 'Texas locations only',
+        'meta_right' => '',
     ],
 
     'what' => [
@@ -336,7 +342,7 @@ return [
         'serif'  => 'Spravato® contains esketamine, a close chemical relative of ketamine, delivered as a nasal spray rather than through a drip.',
         'paras'  => [
             'It works differently from standard antidepressants. Rather than acting mainly on serotonin, esketamine blocks the NMDA receptor, part of the brain’s glutamate system. That different mechanism is why it can help people whose depression has not responded to the usual medications.',
-            'Because it can cause sedation and a feeling of detachment, it is only given in certified clinics, under supervision, with monitoring afterwards. It is never sent home with you.',
+            'Because it can cause sedation and a feeling of detachment, it is only given in certified clinics, under supervision, with monitoring afterward. It is never sent home with you.',
         ],
         'facts' => [
             ['FDA-approved', 'For treatment-resistant depression'],
@@ -346,17 +352,18 @@ return [
         ],
         'note'      => 'Spravato® is a Schedule III controlled medication, prescribed only after a full psychiatric evaluation.',
         'link'      => ['What a Treatment Day Involves', '#process'],
-        'photo'     => 'treatments/spravato-spray.jpg',
-        'photo_alt' => 'A person using a nasal spray',
-        'focus'     => 'object-[50%_40%]',
+        'photo'     => 'treatments/spravato-self.png',
+        'photo_alt' => 'A woman holding a nasal spray to give herself a dose',
+        'focus'     => 'object-[55%_45%]',
         'caption'   => 'Self-given, never unsupervised.',
     ],
 
     'band' => [
         'value'  => '2 hours',
-        'rest'   => 'minimum monitoring after every dose, in the clinic, before you can leave.',
+        'rest'   => 'of monitoring in our clinic after every dose, before you head home.',
         'note'   => 'Required for every patient at every session.',
         'source' => 'FDA label',
+        'static' => true,
     ],
 
     'options' => [
@@ -368,32 +375,33 @@ return [
         'items'  => [
             ['Treatment-resistant depression', 'Depression that has not improved after at least two antidepressants. Spravato® can be used on its own or alongside an oral antidepressant.', 'Adults'],
             ['Depression with suicidal thoughts', 'Depressive symptoms in adults with major depressive disorder and acute suicidal thoughts or behavior, used alongside an oral antidepressant.', 'Adults'],
-            ['Not suitable for', 'Anyone with aneurysmal vascular disease, an arteriovenous malformation, a history of bleeding in the brain, or an allergy to esketamine or ketamine. Not recommended in pregnancy.', 'Screened for'],
+            ['Not suitable for', 'Anyone with aneurysmal vascular disease, an arteriovenous malformation, a history of bleeding in the brain, or an allergy to esketamine or ketamine. Not recommended in pregnancy.', 'Safety screening'],
         ],
     ],
 
     'process' => [
         'rail'   => 'Treatment day',
         'eyebrow'=> '03 / A treatment day',
-        'lines'  => ['Two hours with us.', 'Then a lift home.'],
-        'accent' => 'Then a lift home.',
-        'intro'  => 'Treatment runs twice a week for the first month, then less often. Every session follows the same routine.',
+        'lines'  => ['Two hours with us.', 'Then someone drives you home.'],
+        'accent' => 'Then someone drives you home.',
+        'intro'  => 'Treatment runs twice a week for weeks one to four, then once a week for weeks five to eight. After that, sessions are weekly or every two weeks, depending on how you respond. Every session follows the same routine.',
         'photo'     => 'homepage/home-ambience-nera.webp',
         'photo_alt' => 'A quiet treatment room with a reclining chair, a side table and monitoring equipment',
         'focus'     => 'object-[40%_60%]',
         'caption'   => 'Two quiet hours.',
         'steps' => [
-            ['Blood pressure first',   'Esketamine can raise blood pressure, so it is checked before every dose. If it is too high, the session waits.'],
-            ['You take the spray',     'You give yourself the dose, one device at a time with a short rest between, while a clinician watches and guides you.'],
-            ['You rest',               'Most people sit back in a reclining chair. Feeling detached, dizzy or sleepy is common, and it passes.'],
-            ['We monitor you',         'A clinician stays with you for at least two hours and checks your blood pressure again before you are cleared to go.'],
-            ['Someone drives you home','You must not drive or operate machinery until the next day, after a restful sleep. Arrange your lift before you come.'],
+            ['First, we take your blood pressure', 'Esketamine can raise blood pressure, so we check it before every dose. If it is elevated, treatment waits until it comes down.'],
+            ['Self-administration',    'You administer the nasal spray yourself, one device at a time with a short rest between each, under direct clinical supervision.'],
+            ['Rest',                   'You rest in a reclining chair. Feeling detached, dizzy or drowsy is common, and it typically passes.'],
+            ['Monitoring period',      'A clinician monitors you for at least two hours and rechecks your blood pressure before you are cleared to leave.'],
+            ['Arrange your ride home', 'You may not drive or operate machinery until the next day, after a restful sleep. Please arrange a ride home before your appointment.'],
         ],
         'facts' => [
             ['2×',    'a week, weeks 1–4', '#e8922f'],
             ['1×',    'a week, weeks 5–8', '#5f8f38'],
             ['2 hrs', 'minimum monitoring', '#0f639b'],
         ],
+        'facts_static' => true,
     ],
 
     // Deliberately no grid of conditions: Spravato is approved for depression
@@ -403,8 +411,8 @@ return [
     'panels' => [
         'feature' => [
             'eyebrow' => 'Texas locations only',
-            'heading' => 'Only in certified clinics, and only at ours in Texas.',
-            'copy'    => 'Spravato® is distributed under a federal safety programme that restricts it to certified healthcare settings. We offer it at our Texas locations. If you are in California, TMS is often the next step for treatment-resistant depression, and we can talk it through with you.',
+            'heading' => 'Available only at certified clinics, including our Texas locations.',
+            'copy'    => 'Spravato® is distributed under a federal safety program that restricts it to certified healthcare settings. We offer it at our Texas locations. If you are in California, TMS is often the next step for treatment-resistant depression, and we can talk it through with you.',
             'photo'   => 'faq.jpg',
             'photo_alt' => 'A bright clinic room with chairs arranged around a low table',
             'cta'     => 'Ask About Spravato®',
@@ -412,12 +420,12 @@ return [
         'honest' => [
             'eyebrow' => 'Safety',
             'heading' => 'The safety facts,',
-            'accent'  => 'in plain words.',
+            'accent'  => 'explained clearly.',
             'intro'   => 'Spravato® carries a boxed warning, the FDA’s most prominent kind. This is what it covers.',
             'items'   => [
                 ['Sedation and dissociation', 'Sleepiness, and feeling detached from yourself or your surroundings, are common after a dose. It is why you stay with us for at least two hours.', 'bg-brand-orange'],
                 ['Breathing and blood pressure', 'Slowed breathing has been reported, and blood pressure can rise. Both are watched during every session.', 'bg-[#c05621]'],
-                ['Abuse and misuse', 'Esketamine can be misused, which is why it is only ever given in the clinic and never sent home.', 'bg-brand-blue'],
+                ['Abuse and misuse', 'Esketamine can be misused, which is why it is only given in the clinic.', 'bg-brand-blue'],
                 ['Suicidal thoughts', 'Antidepressants can increase suicidal thoughts in some younger adults. Tell us straight away if your mood worsens or new thoughts of suicide appear.', 'bg-brand-green'],
             ],
             'note' => 'Spravato® does not replace emergency care. If you are thinking about suicide right now, call or text 988, or go to your nearest emergency room.',
@@ -425,13 +433,13 @@ return [
     ],
 
     'faqs' => [
-        ['Is Spravato® the same as a ketamine infusion?', 'No. Spravato® contains esketamine, a close relative of ketamine, and it is a nasal spray rather than an IV drip. It is FDA-approved for depression and given only in certified clinics under a federal safety programme.'],
+        ['Is Spravato® the same as a ketamine infusion?', 'No. Spravato® contains esketamine, a close relative of ketamine, and it is a nasal spray rather than an IV drip. It is FDA-approved for depression and given only in certified clinics under a federal safety program.'],
         ['Who can have it?', 'Adults with depression that has not responded to at least two antidepressants, or adults with major depressive disorder and acute suicidal thoughts or behavior alongside an oral antidepressant. A full psychiatric evaluation comes first, including screening for the conditions that rule it out.'],
         ['What are the common side effects?', 'Feeling disconnected from yourself or your surroundings, dizziness, nausea, sleepiness or low energy, anxiety, and a rise in blood pressure. Most settle within the monitoring period, which is what the two hours are for.'],
-        ['Why can’t I drive afterwards?', 'Esketamine affects attention, judgement and reaction time. You must not drive or operate machinery until the next day, after a restful sleep — even if you feel fine.'],
+        ['Why can’t I drive afterward?', 'Esketamine affects attention, judgment and reaction time. You must not drive or operate machinery until the next day, after a restful sleep — even if you feel fine.'],
         ['How long is a course?', 'Twice a week for the first four weeks, then once a week for weeks five to eight. After that, sessions are weekly or every two weeks, set at the least frequent schedule that keeps you well.'],
         ['Is it available in California?', 'Not at Anew Era. We offer Spravato® at our Texas locations only. In California, TMS is often the next step for treatment-resistant depression, and we can talk it through with you.'],
-        ['Does insurance cover it?', 'Many plans cover Spravato® for treatment-resistant depression, usually with prior authorisation. We verify your benefits and handle the paperwork before your first session.'],
+        ['Does insurance cover it?', 'Many plans cover Spravato® for treatment-resistant depression, usually with prior authorization. We verify your benefits and handle the paperwork before your first session.'],
     ],
 
     'cta' => [

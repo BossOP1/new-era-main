@@ -28,7 +28,11 @@ $header_inset      = $header_inset      ?? false;
 // the hero's own content column, and the glass treatment is dropped because
 // there is no photography running underneath it to show through.
 $inset_header = $header_inset ? '!px-6 !pt-6 sm:!px-10 sm:!pt-8 lg:!px-[52px]' : '';
-$inset_bar    = $header_inset ? 'w-full max-w-[1200px] !gap-4 !shadow-none !backdrop-blur-none !bg-white/95 before:!hidden' : '';
+$inset_bar    = $header_inset ? 'w-full max-w-[1200px] !gap-3 !shadow-none !backdrop-blur-none !bg-white/95 before:!hidden' : '';
+// The inset bar is capped at 1200px, which the logo, seven links and the offer
+// only just fill — at the old spacing the button ran into the bar's right
+// edge. These trim the link and button padding on inset pages so it sits
+// inside the bar with the same margin as the homepage.
 // Seven top-level items do not fit beside the logo and button at lg, on either
 // bar, so the nav folds into the menu below xl everywhere. Spelled out in full
 // rather than built from a prefix: Tailwind scans these files as plain text,
@@ -49,7 +53,7 @@ $menus        = $site['menus'] ?? [];
 
 // Top-level items are pills: a soft fill on hover and while their dropdown is
 // open, and a small orange dot under whichever item covers the current page.
-$nav_link  = 'relative inline-flex items-center gap-1.5 whitespace-nowrap rounded-full px-3.5 py-2.5 text-sm font-semibold text-ink transition-colors hover:bg-ink/[0.05] hover:text-brand-blue'
+$nav_link  = 'relative inline-flex items-center gap-1.5 whitespace-nowrap rounded-full ' . ($header_inset ? 'px-3' : 'px-3.5') . ' py-2.5 text-sm font-semibold text-ink transition-colors hover:bg-ink/[0.05] hover:text-brand-blue'
            . ' aria-expanded:bg-ink/[0.05] aria-expanded:text-brand-blue'
            . ' group-[.is-over-hero]:text-white/95 group-[.is-over-hero]:hover:bg-white/10 group-[.is-over-hero]:hover:text-white group-[.is-over-hero]:aria-expanded:bg-white/15 group-[.is-over-hero]:aria-expanded:text-white'
            . ' group-[.is-light-hero]:text-ink group-[.is-light-hero]:hover:bg-ink/[0.05] group-[.is-light-hero]:hover:text-brand-blue'
@@ -170,7 +174,7 @@ $nav_link  = 'relative inline-flex items-center gap-1.5 whitespace-nowrap rounde
     </nav>
 
     <div class="hidden items-center gap-2 <?= $nav_show ?>">
-      <a href="contact.php?interest=tms" class="inline-flex items-center gap-2 whitespace-nowrap rounded-full bg-brand-orange px-6 py-[15px] text-sm font-extrabold text-white transition-colors hover:bg-brand-orange-dark">Book a Free TMS Consultation</a>
+      <a href="contact.php?interest=tms" class="inline-flex items-center gap-2 whitespace-nowrap rounded-full bg-brand-orange <?= $header_inset ? 'px-5' : 'px-6' ?> py-[15px] text-sm font-extrabold text-white transition-colors hover:bg-brand-orange-dark">Book a Free TMS Consultation</a>
     </div>
 
     <?php // Below xl the bar is just logo and burger, so the offer gets a pill of
