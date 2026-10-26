@@ -123,7 +123,7 @@ $rail['#faq'] = 'FAQs';
         <p class="m-0 mt-5 max-w-[46ch] text-[15px] leading-[1.75] text-ink/75 sm:mt-6 sm:text-base"><?= e($c['hero']['lede']) ?></p>
 
         <div class="mt-6 flex flex-wrap gap-3 sm:mt-8">
-          <a href="#book" class="<?= $btn_blue ?>">Book a Consultation <?= arrow_icon(16) ?></a>
+          <a href="contact.php" class="<?= $btn_blue ?>">Book a Consultation <?= arrow_icon(16) ?></a>
           <a href="<?= e($site['phone_href']) ?>" class="<?= $btn_line ?>"><?= e($site['phone']) ?></a>
         </div>
 
@@ -292,7 +292,7 @@ $rail['#faq'] = 'FAQs';
 
         <p class="m-0 mt-6 max-w-[42ch] text-[15px] leading-[1.75] text-[#dbe6ee] sm:mt-7 sm:leading-[1.8]"><?= e($c['tms']['copy']) ?></p>
 
-        <a href="index.php#book" class="mt-7 inline-flex items-center justify-center gap-[22px] rounded-full bg-white px-[25px] py-[17px] text-sm font-bold text-[#154c69] transition-colors hover:bg-[#e6eddc] sm:mt-8">
+        <a href="contact.php" class="mt-7 inline-flex items-center justify-center gap-[22px] rounded-full bg-white px-[25px] py-[17px] text-sm font-bold text-[#154c69] transition-colors hover:bg-[#e6eddc] sm:mt-8">
           See If TMS Is Right for You <?= arrow_icon(17) ?>
         </a>
       </div>
@@ -482,7 +482,7 @@ $related = array_values(array_filter(
           We know how hard appointments are to fit into a week that is already full. After the first visit, a TMS session generally runs fifteen to thirty minutes, with nothing to recover from afterwards.
         </p>
         <div class="mt-6 flex flex-wrap gap-3 sm:mt-8">
-          <a href="index.php#book" class="<?= $btn_blue ?>">Book a Consultation <?= arrow_icon(16) ?></a>
+          <a href="contact.php" class="<?= $btn_blue ?>">Book a Consultation <?= arrow_icon(16) ?></a>
           <a href="<?= e($site['phone_href']) ?>" class="<?= $btn_line ?>">Call <?= e($site['phone']) ?></a>
         </div>
         <p class="m-0 mt-6 text-xs text-ink/55">In crisis? Call or text 988 any time.</p>

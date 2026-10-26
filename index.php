@@ -23,9 +23,9 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
   <div class="pointer-events-none relative z-10 flex flex-1 flex-col items-center justify-center px-6 py-16 text-center sm:px-10 lg:py-24">
     <p class="on-footage m-0 mb-6 text-[13px] font-extrabold uppercase tracking-[0.16em] text-white/75">In-network with most major plans</p>
 
-    <h1 class="on-footage m-0 max-w-[17ch] text-balance text-[40px] leading-[1.04] tracking-[-0.035em] text-white sm:text-[56px] lg:text-[74px]">Anew Era of mental health care.</h1>
+    <h1 class="on-footage m-0 max-w-[17ch] text-balance text-[40px] leading-[1.04] tracking-[-0.035em] text-white sm:text-[56px] lg:text-[74px]">Mental health care that puts you first.</h1>
 
-    <p class="on-footage mb-9 mt-6 max-w-[54ch] text-base leading-relaxed text-white/85 sm:text-[19px]">Evidence-based psychiatry, therapy and TMS — delivered by clinicians who take the time to know you. In-person and telehealth, most insurance accepted.</p>
+    <p class="on-footage mb-9 mt-6 max-w-[54ch] text-base leading-relaxed text-white/85 sm:text-[19px]">Evidence-based psychiatry, therapy and transcranial magnetic stimulation (TMS), delivered by clinicians who take the time to know you. In-person and telehealth available. Most insurance accepted.</p>
 
     <div class="pointer-events-auto flex flex-wrap justify-center gap-3">
       <a href="contact.php" class="inline-flex items-center gap-2.5 rounded-full bg-white px-7 py-4 text-[15px] font-extrabold text-brand-blue transition-colors hover:bg-brand-orange hover:text-white">Get Started</a>
@@ -76,7 +76,7 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
       <div class="grid grid-cols-2 gap-3 sm:gap-6">
         <?php foreach ($results['stats'] as $stat): ?>
           <div data-reveal class="lift flex min-h-[168px] flex-col justify-center rounded-[20px] border border-ink/30 px-5 py-6 sm:px-7 sm:py-8 sm:min-h-[220px]">
-            <p class="display-mark m-0 text-[40px] font-medium leading-none tracking-[-0.02em] text-ink sm:text-[76px]" data-count="<?= e($stat['value']) ?>"><?= e($stat['value']) ?></p>
+            <p class="display-mark m-0 text-[40px] font-medium leading-none tracking-[-0.02em] text-brand-blue sm:text-[76px]" data-count="<?= e($stat['value']) ?>"><?= e($stat['value']) ?></p>
             <p class="m-0 mt-4 text-[15px] font-medium leading-7 text-ink/80"><?= e($stat['label']) ?></p>
           </div>
         <?php endforeach; ?>
@@ -133,7 +133,7 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
               <span class="h-1 w-7 bg-brand-sky"></span>
               <h3 class="m-0 text-[26px] tracking-[-0.025em] text-white"><?= e($condition['name']) ?></h3>
             </div>
-            <p class="m-0 mb-[22px] text-[15px] font-medium leading-relaxed text-white/85"><?= e($condition['blurb']) ?></p>
+            <p class="m-0 mb-[22px] text-[15px] font-medium leading-relaxed text-white/85"><?= e($condition['home_blurb'] ?? $condition['blurb']) ?></p>
             <div class="border-t border-white/25 pt-5">
               <p class="m-0 mb-3 text-[13px] font-semibold text-white/70">How we treat it:</p>
               <div class="mb-6 flex flex-wrap gap-2">
@@ -141,7 +141,7 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
                   <span class="rounded-full border border-white/40 px-3 py-2 text-[13px] font-semibold text-white"><?= e($chip) ?></span>
                 <?php endforeach; ?>
               </div>
-              <div class="flex flex-wrap gap-0.5">
+              <div class="flex flex-wrap gap-2.5">
                 <a href="contact.php" class="inline-flex items-center gap-2 rounded-full bg-white px-[18px] py-3.5 text-sm font-extrabold text-ink transition-colors hover:bg-brand-orange hover:text-white">
                   Get Care <?= arrow_icon(15) ?>
                 </a>
@@ -217,7 +217,7 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
       // as the closing CTA, at a fraction of the height, so it reads as a nudge
       // rather than another section. ?>
 <section class="mx-auto max-w-[1280px] px-5 py-3 sm:px-10 sm:py-5">
-  <div data-reveal class="flex flex-col items-center gap-4 rounded-[28px] border border-ink/10 bg-cream bg-aurora px-6 py-5 text-center sm:flex-row sm:justify-between sm:gap-8 sm:px-10 sm:text-left">
+  <div data-reveal class="flex flex-col items-center gap-4 rounded-[28px] border border-brand-blue/15 bg-mist px-6 py-5 text-center sm:flex-row sm:justify-between sm:gap-8 sm:px-10 sm:text-left">
     <div class="flex items-center gap-4">
       <span class="hidden h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand-blue/10 text-brand-blue sm:flex">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -227,8 +227,8 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
         </svg>
       </span>
       <div>
-        <p class="m-0 text-[17px] font-extrabold tracking-[-0.01em] text-ink">Not sure how you are really doing?</p>
-        <p class="m-0 mt-0.5 text-sm leading-relaxed text-ink/65">The PHQ-9 takes two minutes. It is a screening questionnaire, not a diagnosis — we will go through it with you.</p>
+        <p class="m-0 text-[17px] font-extrabold tracking-[-0.01em] text-brand-blue-dark">Not sure how you’re feeling?</p>
+        <p class="m-0 mt-0.5 text-sm leading-relaxed text-brand-blue-dark/80">The PHQ-9 is a two-minute questionnaire that screens for depression. It isn’t a diagnosis, and we’ll review your results with you.</p>
       </div>
     </div>
     <a href="phq9.php" class="inline-flex shrink-0 items-center gap-2 rounded-full bg-brand-blue px-7 py-4 text-[15px] font-extrabold text-white transition-colors hover:bg-brand-blue-dark">
@@ -365,7 +365,7 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
 
     <div class="grid items-start gap-10 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-[72px]">
       <div data-reveal class="relative order-2 h-[280px] overflow-hidden rounded-[20px] bg-night lg:h-[420px]">
-        <?= image_slot('homepage/home-ambience-nera.webp', 'Drop a supporting photo', 'A quiet Anew Era treatment room, with a reclining chair and a clinician’s desk') ?>
+        <?= image_slot('homepage/anew-era-reception-web.jpg', 'Drop a supporting photo', 'The reception desk at an Anew Era clinic, with the Anew Era TMS & Psychiatry sign on the wall', false, 'object-[60%_40%]') ?>
       </div>
 
       <div data-faq class="order-1">
@@ -408,13 +408,13 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
 
 <!-- ─── Booking CTA ──────────────────────────────────────────────────── -->
 <section id="book" class="mx-auto max-w-[1280px] px-5 py-3 sm:px-10 sm:py-8">
-  <div data-reveal class="relative overflow-hidden rounded-[28px] bg-cream bg-cta-glow px-6 py-12 text-center sm:px-16 lg:py-[52px]">
+  <div data-reveal class="relative overflow-hidden rounded-[28px] bg-cream bg-aurora px-6 py-12 text-center sm:px-16 lg:py-[52px]">
     <h2 class="m-0 mb-3 text-[28px] leading-[1.1] tracking-[-0.03em] text-ink sm:text-[38px]">
       Anew Era is ready when you are<em class="font-serif font-normal italic">— and sooner than you think</em>
     </h2>
     <p class="mx-auto m-0 mb-6 max-w-[52ch] text-base font-medium text-ink/75">Most new patients are seen within a week. We check your benefits first, so you know what a visit costs before you walk in.</p>
     <a href="contact.php" class="inline-flex items-center rounded-full bg-brand-blue px-7 py-4 text-[15px] font-extrabold text-white transition-colors hover:bg-brand-blue-dark">Book a Free Consultation</a>
-    <p class="m-0 mt-[18px] text-xs text-ink/55">In crisis? Call or text 988 any time.</p>
+    <p class="m-0 mt-[18px] text-xs text-ink/55">In crisis? Call or text <a href="tel:988" class="font-extrabold text-brand-blue underline underline-offset-4 hover:text-brand-blue-dark">988</a> any time.</p>
   </div>
 </section>
 

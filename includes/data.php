@@ -37,6 +37,9 @@ return [
             'name'  => 'Depression',
             'page'  => 'depression.php',   // has a condition page of its own
             'blurb' => 'Persistent low mood, loss of interest, and the treatment-resistant cases other clinics give up on.',
+            // The homepage selector already lists how each one is treated, so
+            // its copy names the symptoms instead.
+            'home_blurb' => 'Low mood, loss of interest and low energy that last for weeks, including depression that has not responded to medication.',
             'chips' => ['Medication', 'Therapy', 'TMS'],
         ],
         [
@@ -48,6 +51,7 @@ return [
             'alt'   => 'A woman laughing on an open road, hair caught by the wind',
             'name'  => 'Anxiety',
             'blurb' => 'Generalized anxiety, panic disorder, social anxiety and the physical symptoms that come with them.',
+            'home_blurb' => 'Worry that will not switch off, panic attacks, fear in social situations, and physical symptoms like a racing heart.',
             'chips' => ['CBT', 'Exposure work', 'Medication'],
         ],
         [
@@ -60,6 +64,7 @@ return [
             'name'  => 'Postpartum',
             'full'  => 'Postpartum depression',   // the longer name the "What it treats" grids use
             'blurb' => 'Postpartum depression and anxiety, treated with options that fit feeding, sleep and a new baby.',
+            'home_blurb' => 'Sadness, anxiety or difficulty bonding with your baby that lasts beyond the first couple of weeks after birth.',
             'chips' => ['Therapy', 'Medication review', 'TMS'],
         ],
         [
@@ -71,6 +76,7 @@ return [
             'alt'   => 'Two people laughing together in a sunlit field',
             'name'  => 'PTSD',
             'blurb' => 'Trauma-focused therapy at your pace, with clinicians trained in EMDR and prolonged exposure.',
+            'home_blurb' => 'Flashbacks, nightmares, avoidance and feeling constantly on edge after a traumatic event.',
             'chips' => ['EMDR', 'Prolonged exposure', 'Medication'],
         ],
         [
@@ -82,6 +88,7 @@ return [
             'alt'   => 'A man smiling among trees on a bright day',
             'name'  => 'Migraines',
             'blurb' => 'Chronic migraine care coordinated with your mood and sleep treatment rather than in isolation.',
+            'home_blurb' => 'Recurring, disabling headaches, often with nausea and sensitivity to light and sound.',
             'chips' => ['Preventive care', 'Trigger tracking', 'Sleep support'],
         ],
         [
@@ -93,6 +100,7 @@ return [
             'alt'   => 'A man in an orange jacket smiling',
             'name'  => 'OCD',
             'blurb' => 'Exposure and response prevention, plus TMS for OCD that has not responded to therapy alone.',
+            'home_blurb' => 'Intrusive, unwanted thoughts and the repeated rituals used to quiet them.',
             'chips' => ['ERP therapy', 'TMS', 'Medication'],
         ],
     ],
@@ -118,8 +126,8 @@ return [
         [
             'name'   => 'Psychiatry',
             'page'   => 'psychiatry.php',
-            'slot'   => 'treatments/psychiatry-consult.jpg',
-            'alt'    => 'A clinician talking with a patient during a consultation',
+            'slot'   => 'treatments/psychiatry-clinician.jpg',
+            'alt'    => 'A psychiatric clinician at her desk with patient notes',
             'detail' => 'Diagnostic evaluation and ongoing medication management from a clinician who knows you.',
             'chips'  => ['Evaluation', 'Med management'],
         ],
@@ -128,7 +136,7 @@ return [
             'page'   => 'spravato.php',
             'slot'   => 'treat-4',
             'alt'    => 'A person self-administering a nasal spray',
-            'detail' => 'In-office esketamine treatment for treatment-resistant depression, monitored start to finish. Offered at our Texas locations only.',
+            'detail' => 'In-office esketamine treatment for treatment-resistant depression, monitored from start to finish. Offered at our Texas locations only.',
             'chips'  => ['Esketamine', 'Texas only'],
         ],
         [
@@ -136,7 +144,7 @@ return [
             'page'   => 'therapy.php',
             'slot'   => 'treat-6',
             'alt'    => 'Two women talking during a therapy session',
-            'detail' => 'CBT, DBT, EMDR and ACT with therapists working alongside your prescriber, never in a silo.',
+            'detail' => 'CBT, DBT, EMDR and ACT with therapists working alongside your provider, never in a silo.',
             'chips'  => ['CBT', 'EMDR'],
         ],
     ],
@@ -145,9 +153,9 @@ return [
     // sales sheet — including the row where the answer is simply "no".
     'compare_rows' => [
         [
-            'label'      => 'In one line',
+            'label'      => 'Quick summary',
             'therapy'    => 'Talking work. You and a therapist unpack what is happening and build ways through it.',
-            'psychiatry' => 'Medical work. A prescriber looks at what is driving the symptoms and treats it directly.',
+            'psychiatry' => 'Medical work. A psychiatric provider looks at what is driving the symptoms and treats it directly.',
         ],
         [
             'label'      => 'Who you sit with',
@@ -156,7 +164,7 @@ return [
         ],
         [
             'label'      => 'How the work happens',
-            'therapy'    => 'Structured methods with evidence behind them — CBT, DBT, EMDR, ACT — and skills that stay with you afterwards.',
+            'therapy'    => 'Evidence-based therapies — CBT, DBT, EMDR, ACT — and skills that stay with you after treatment.',
             'psychiatry' => 'A full diagnostic picture first, then a plan: medication, TMS, Spravato®, or none of them if none is warranted.',
         ],
         [
@@ -165,14 +173,14 @@ return [
             'psychiatry' => 'Yes.',
         ],
         [
-            'label'      => 'What the rhythm looks like',
-            'therapy'    => 'An hour at a time, weekly or every other week, reviewed monthly for as long as it earns its place.',
-            'psychiatry' => 'A sixty-minute evaluation, then shorter check-ins every two to four weeks until things settle.',
+            'label'      => 'Amount of time in treatment',
+            'therapy'    => 'An hour at a time, weekly or every other week, reviewed monthly.',
+            'psychiatry' => 'A sixty-minute evaluation, then shorter check-ins every two to four weeks.',
         ],
         [
-            'label'      => 'You will know it is working when',
-            'therapy'    => 'The week feels more manageable, and you are using outside the room what you practiced in it.',
-            'psychiatry' => 'Your symptom scores move, side effects stay tolerable, and the plan still makes sense to you.',
+            'label'      => 'How to know treatment is working',
+            'therapy'    => 'Your condition feels more manageable and you are regularly practicing the skills that you’ve learned.',
+            'psychiatry' => 'Your symptoms improve, side effects are minimal or non-existent, and the plan still makes sense for you.',
         ],
     ],
 
@@ -262,9 +270,9 @@ return [
         [
             'name' => 'What to expect',
             'faqs' => [
-                ['q' => 'What happens at my first visit?', 'a' => 'A sixty-minute diagnostic intake covering history, physical health, sleep and current symptoms, ending with a written plan you leave with the same day.'],
+                ['q' => 'What happens at my first visit?', 'a' => 'Your first visit is a sixty-minute diagnostic intake covering your history, physical health, sleep and current symptoms. You leave the same day with a written plan.'],
                 ['q' => 'Do I have to take medication?', 'a' => 'No. Medication is one option among several. Many patients do well with therapy alone, or with TMS, and we will say so plainly rather than defaulting to a prescription.'],
-                ['q' => 'How long does treatment take?', 'a' => 'It depends on the plan — a TMS course runs about six weeks, therapy is ongoing and reviewed monthly, medication changes are checked every two to four weeks at first.'],
+                ['q' => 'How long does treatment take?', 'a' => 'It depends on the plan — a TMS course runs about six weeks, therapy is ongoing and reviewed monthly, and medication changes are checked every two to four weeks at first.'],
                 ['q' => 'Do you see adolescents?', 'a' => 'We see patients aged 15 and up. Adolescent care includes family sessions and, with consent, coordination with school counselors.'],
             ],
         ],
@@ -273,13 +281,13 @@ return [
             'faqs' => [
                 ['q' => 'How soon can I be seen?', 'a' => 'New patient consultations are usually available within five business days, and same-week telehealth slots often open up.'],
                 ['q' => 'What do I need for my first appointment?', 'a' => 'A photo ID, your insurance card, and a list of current medications. We send intake forms ahead of time so the visit itself is all conversation.'],
-                ['q' => 'Can I switch clinicians if it is not a fit?', 'a' => 'Yes, any time. Our intake team will match you with someone new at no extra cost and no awkward conversation required.'],
+                ['q' => 'Can I switch clinicians if it is not the right fit?', 'a' => 'Yes, any time. Our intake team will match you with someone new at no extra cost.'],
             ],
         ],
         [
             'name' => 'Insurance',
             'faqs' => [
-                ['q' => 'Do you take my insurance?', 'a' => 'We are in-network with most major commercial plans as well as Medicare and Tricare. We verify your benefits before your first appointment.'],
+                ['q' => 'Do you take my insurance?', 'a' => 'We are in-network with most major commercial plans as well as Medicare (except in Austin) and Tricare. We verify your benefits before your first appointment.'],
                 ['q' => 'Is TMS covered by insurance?', 'a' => 'For treatment-resistant depression, yes — most plans cover TMS once you have tried two or more medications. We handle the prior authorization for you.'],
                 ['q' => 'What if I am not covered?', 'a' => 'We offer transparent self-pay rates and can walk you through a payment plan before you commit to anything.'],
             ],

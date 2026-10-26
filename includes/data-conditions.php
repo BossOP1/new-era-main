@@ -146,7 +146,7 @@ return [
     ],
 
     'treatment_detail' => [
-        'Therapy' => 'CBT, DBT, EMDR and ACT from therapists working alongside your prescriber, never in a silo.',
+        'Therapy' => 'CBT, DBT, EMDR and ACT from therapists working alongside your provider, never in a silo.',
     ],
 
     'faqs' => [

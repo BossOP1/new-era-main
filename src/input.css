@@ -223,6 +223,18 @@
     }
   }
 
+  /* Call tracking ---------------------------------------------------------------
+     The tracking script swaps each phone number for a <gu-sc><gu-sc-dial>
+     element of its own. Left alone it renders in the browser's default black
+     text, which disappears on the dark hero; inheriting keeps the number in
+     whatever colour and weight the button around it sets. */
+  gu-sc,
+  gu-sc-dial {
+    color: inherit !important;
+    font: inherit !important;
+    text-decoration: inherit !important;
+  }
+
   /* Photo hero ----------------------------------------------------------------
      The photograph and the wash over it are the same construction on every
      condition page, and on the reviews and FAQ heroes, but the colour changes

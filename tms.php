@@ -58,7 +58,7 @@ $em       = 'italic font-normal text-brand-blue';
         </p>
 
         <div class="mt-6 flex flex-wrap gap-3 sm:mt-8">
-          <a href="#book" class="<?= $btn_blue ?>">See If TMS Is Right for You <?= arrow_icon(16) ?></a>
+          <a href="contact.php" class="<?= $btn_blue ?>">See If TMS Is Right for You <?= arrow_icon(16) ?></a>
           <a href="<?= e($site['phone_href']) ?>" class="<?= $btn_line ?>"><?= e($site['phone']) ?></a>
         </div>
 

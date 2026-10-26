@@ -120,7 +120,7 @@ $in_the_chair = [
         </p>
 
         <div class="mt-6 flex flex-wrap gap-3 sm:mt-8">
-          <a href="index.php#book" class="<?= $btn_blue ?>">Book a Consultation <?= arrow_icon(16) ?></a>
+          <a href="contact.php" class="<?= $btn_blue ?>">Book a Consultation <?= arrow_icon(16) ?></a>
           <a href="#watch" class="inline-flex items-center gap-2.5 rounded-full border-2 border-white/45 bg-white/10 px-7 py-[14px] text-[15px] font-extrabold text-white backdrop-blur-sm transition-colors hover:border-white/80 hover:bg-white/20">Watch It Explained</a>
         </div>
 
@@ -357,7 +357,7 @@ $in_the_chair = [
       intimidating once they have sat next to it.
     </p>
     <div class="flex flex-wrap items-center justify-center gap-3">
-      <a href="index.php#book" class="<?= $btn_blue ?>">Book a Consultation <?= arrow_icon(16) ?></a>
+      <a href="contact.php" class="<?= $btn_blue ?>">Book a Consultation <?= arrow_icon(16) ?></a>
       <a href="<?= e($site['phone_href']) ?>" class="<?= $btn_line ?>"><?= e($site['phone']) ?></a>
     </div>
   </div>

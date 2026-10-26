@@ -380,7 +380,7 @@ $haystack = static function (array $p) use ($locations): string {
       Book with a name from this page, or let us match you. Either way, we check your benefits before your first visit.
     </p>
     <div class="flex flex-wrap items-center justify-center gap-3">
-      <a href="index.php#book" class="inline-flex items-center gap-2.5 rounded-full bg-brand-blue px-8 py-4 text-[15px] font-extrabold text-white shadow-md shadow-brand-blue/20 transition-all hover:-translate-y-0.5 hover:bg-brand-blue-dark hover:shadow-lg">
+      <a href="contact.php" class="inline-flex items-center gap-2.5 rounded-full bg-brand-blue px-8 py-4 text-[15px] font-extrabold text-white shadow-md shadow-brand-blue/20 transition-all hover:-translate-y-0.5 hover:bg-brand-blue-dark hover:shadow-lg">
         Book a Consultation <?= arrow_icon(16) ?>
       </a>
       <a href="<?= e($site['phone_href']) ?>" class="<?= $btn_line ?>"><?= e($site['phone']) ?></a>
@@ -452,7 +452,7 @@ $haystack = static function (array $p) use ($locations): string {
           </button>
           <span data-bio-position class="ml-2 text-[12px] font-semibold text-ink/45"></span>
         </div>
-        <a href="index.php#book" data-bio-book class="inline-flex items-center gap-2 rounded-full bg-brand-blue px-5 py-2.5 text-[13.5px] font-extrabold text-white transition-colors hover:bg-brand-blue-dark">
+        <a href="contact.php" data-bio-book class="inline-flex items-center gap-2 rounded-full bg-brand-blue px-5 py-2.5 text-[13.5px] font-extrabold text-white transition-colors hover:bg-brand-blue-dark">
           Book a Consultation <?= arrow_icon(14) ?>
         </a>
       </div>

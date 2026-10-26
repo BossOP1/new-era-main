@@ -177,7 +177,7 @@ return [
             'feature' => [
                 'kind'    => 'prompt',
                 'icon'    => 'chat',
-                'href'    => 'index.php#book',
+                'href'    => 'contact.php',
                 'eyebrow' => 'Still have questions?',
                 'title'   => 'Talk to our team',
                 'copy'    => 'Most new patients are seen inside a week, and we check your benefits first.',

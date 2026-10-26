@@ -173,7 +173,7 @@ foreach ($faq as $key => $category) {
       Call or book a consultation and our team will answer any question about treatment, cost or insurance. Most new patients are seen within a week.
     </p>
     <div class="flex flex-wrap items-center justify-center gap-3">
-      <a href="index.php#book" class="<?= $btn_blue ?>">Book a Consultation <?= arrow_icon(16) ?></a>
+      <a href="contact.php" class="<?= $btn_blue ?>">Book a Consultation <?= arrow_icon(16) ?></a>
       <a href="<?= e($site['phone_href']) ?>" class="<?= $btn_line ?>"><?= e($site['phone']) ?></a>
     </div>
   </div>

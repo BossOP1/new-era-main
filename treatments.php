@@ -197,7 +197,7 @@ $rest     = array_slice($all, 1);
       New patient appointments are usually available within five business days. We check your benefits first, so you know what a visit costs before you walk in.
     </p>
     <div class="mt-7 flex flex-wrap justify-center gap-3">
-      <a href="index.php#book" class="<?= $btn_blue ?>">Book a Consultation <?= arrow_icon(16) ?></a>
+      <a href="contact.php" class="<?= $btn_blue ?>">Book a Consultation <?= arrow_icon(16) ?></a>
       <a href="<?= e($site['phone_href']) ?>" class="<?= $btn_line ?>">Call <?= e($site['phone']) ?></a>
     </div>
     <p class="m-0 mt-6 text-xs text-ink/55">In crisis? Call or text 988 any time.</p>

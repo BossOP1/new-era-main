@@ -174,7 +174,7 @@ $treatments = require __DIR__ . '/data-treatments.php';
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
               </a>
             <?php else: ?>
-              <a href="index.php#book" class="<?= $btn_blue ?>">Request an Appointment <?= arrow_icon(16) ?></a>
+              <a href="contact.php" class="<?= $btn_blue ?>">Request an Appointment <?= arrow_icon(16) ?></a>
             <?php endif; ?>
             <a href="<?= e($phone_href) ?>" class="inline-flex items-center gap-2.5 rounded-full border-2 border-white/45 bg-white/10 px-7 py-[14px] text-[15px] font-extrabold text-white backdrop-blur-sm transition-colors hover:border-white/80 hover:bg-white/20">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6.5 3.5h3l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4.5 5.7 2 2 0 0 1 6.5 3.5Z"/></svg>
@@ -457,7 +457,7 @@ $treatments = require __DIR__ . '/data-treatments.php';
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
           </a>
         <?php else: ?>
-          <a href="index.php#book"
+          <a href="contact.php"
              class="inline-flex items-center justify-center gap-2.5 rounded-full bg-white px-7 py-4 text-[15px] font-extrabold text-brand-blue transition-colors hover:bg-brand-orange hover:text-white">
             Request an Appointment <?= arrow_icon(16) ?>
           </a>

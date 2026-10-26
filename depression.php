@@ -65,7 +65,7 @@ $anchor   = 'scroll-mt-[148px] sm:scroll-mt-[164px]';
         </p>
 
         <div class="mt-6 flex flex-wrap gap-3 sm:mt-8">
-          <a href="#book" class="<?= $btn_blue ?>">Book Your Consultation <?= arrow_icon(16) ?></a>
+          <a href="contact.php" class="<?= $btn_blue ?>">Book Your Consultation <?= arrow_icon(16) ?></a>
           <a href="<?= e($site['phone_href']) ?>" class="<?= $btn_line ?>"><?= e($site['phone']) ?></a>
         </div>
 
@@ -369,7 +369,7 @@ $anchor   = 'scroll-mt-[148px] sm:scroll-mt-[164px]';
           For a great many people, antidepressants and psychotherapy do not do the job. If you have worked through several medications and courses of therapy without relief, this is probably the conversation you have been missing — and it is the point at which TMS becomes the obvious next thing to try.
         </p>
 
-        <a href="index.php#book" class="mt-7 inline-flex items-center justify-center gap-[22px] rounded-full bg-white px-[25px] py-[17px] sm:mt-8 text-sm font-bold text-[#154c69] transition-colors hover:bg-[#e6eddc]">
+        <a href="contact.php" class="mt-7 inline-flex items-center justify-center gap-[22px] rounded-full bg-white px-[25px] py-[17px] sm:mt-8 text-sm font-bold text-[#154c69] transition-colors hover:bg-[#e6eddc]">
           See If TMS Is Right for You <?= arrow_icon(17) ?>
         </a>
       </div>
@@ -606,7 +606,7 @@ foreach ($data['conditions'] as $condition) {
           We know how hard appointments are to fit into a week that is already full. After the first visit, a TMS session generally runs fifteen to twenty minutes — short enough for a lunch break, with nothing to recover from afterward.
         </p>
         <div class="mt-6 flex flex-wrap gap-3 sm:mt-8">
-          <a href="index.php#book" class="<?= $btn_blue ?>">Book a Consultation <?= arrow_icon(16) ?></a>
+          <a href="contact.php" class="<?= $btn_blue ?>">Book a Consultation <?= arrow_icon(16) ?></a>
           <a href="<?= e($site['phone_href']) ?>" class="<?= $btn_line ?>">Call <?= e($site['phone']) ?></a>
         </div>
         <p class="m-0 mt-6 text-xs text-ink/55">In crisis? Call or text 988 any time.</p>

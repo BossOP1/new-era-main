@@ -261,7 +261,7 @@ $initials = static function (string $name): string {
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
               </a>
             <?php else: ?>
-              <a href="index.php#book" class="relative z-10 inline-flex items-center gap-2 rounded-full bg-brand-blue px-5 py-2.5 text-[13px] font-extrabold text-white transition-colors hover:bg-brand-blue-dark">
+              <a href="contact.php" class="relative z-10 inline-flex items-center gap-2 rounded-full bg-brand-blue px-5 py-2.5 text-[13px] font-extrabold text-white transition-colors hover:bg-brand-blue-dark">
                 Request an Appointment <?= arrow_icon(12) ?>
               </a>
             <?php endif; ?>
@@ -496,7 +496,7 @@ $initials = static function (string $name): string {
       Most new patients are seen within a week, and we check your insurance before your first visit.
     </p>
     <div class="flex flex-wrap items-center justify-center gap-3">
-      <a href="index.php#book" class="<?= $btn_blue ?>">Book a Consultation <?= arrow_icon(16) ?></a>
+      <a href="contact.php" class="<?= $btn_blue ?>">Book a Consultation <?= arrow_icon(16) ?></a>
       <a href="<?= e($loc['phone_href']) ?>" class="<?= $btn_line ?>"><?= e($loc['phone']) ?></a>
     </div>
     <p class="m-0 text-[12px] text-ink/55">In crisis? Call or text 988 any time.</p>

@@ -131,7 +131,7 @@ foreach (array_slice($reviews, $first_page) as $r) {
 
         <div class="mt-6 flex flex-wrap gap-3 sm:mt-8">
           <a href="#all" class="<?= $btn_blue ?>">Read the Reviews <?= arrow_icon(16) ?></a>
-          <a href="index.php#book" class="<?= $btn_line ?>">Book a Consultation</a>
+          <a href="contact.php" class="<?= $btn_line ?>">Book a Consultation</a>
         </div>
 
         <div class="mt-6 flex items-center gap-3 sm:mt-7">
@@ -335,7 +335,7 @@ foreach (array_slice($reviews, $first_page) as $r) {
       Most new patients are seen within a week, and we check your insurance before your first visit.
     </p>
     <div class="flex flex-wrap items-center justify-center gap-3">
-      <a href="index.php#book" class="<?= $btn_blue ?>">Book a Consultation <?= arrow_icon(16) ?></a>
+      <a href="contact.php" class="<?= $btn_blue ?>">Book a Consultation <?= arrow_icon(16) ?></a>
       <a href="<?= e($site['phone_href']) ?>" class="<?= $btn_line ?>"><?= e($site['phone']) ?></a>
     </div>
   </div>

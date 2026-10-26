@@ -62,7 +62,7 @@ return [
         [
             'q' => 'How do I actually book?',
             'a' => 'Call us, or use the booking form and we will call you back. Either way the intake team takes your details, checks your insurance and offers you times before anything is confirmed.',
-            'link' => ['Book a Consultation', 'index.php#book'],
+            'link' => ['Book a Consultation', 'contact.php'],
         ],
         [
             'q' => 'Can I choose which clinician I see?',
