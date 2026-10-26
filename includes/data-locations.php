@@ -38,20 +38,20 @@ return [
     'region'     => 'Orange County',
     'page'       => 'huntington-beach.php',
     'h1'         => 'Psychiatry and TMS in',
-    'meta'       => 'Psychiatry, therapy and TMS in Huntington Beach, CA — Bella Terra Medical Building, 7677 Center Ave #405. Meet the clinicians, see what we treat, and book with the one who fits.',
+    'meta'       => 'Psychiatry, therapy and TMS in Huntington Beach, CA — Bella Terra Medical Building, 7677 Center Ave, Suite 405. Meet the clinicians, see what we treat, and book with the one who fits.',
     'lede'       => 'Psychiatry, therapy and TMS in the Bella Terra Medical Building, a few minutes inland from the pier. Most major plans accepted, and we check your benefits before your first visit.',
     'street_name'=> 'Center Avenue',
 
     'address'   => [
         'building' => 'Bella Terra Medical Building',
-        'street'   => '7677 Center Ave #405',
+        'street'   => '7677 Center Ave, Suite 405',
         'city'     => 'Huntington Beach',
         'region'   => 'CA',
         'postcode' => '92647',
     ],
     'phone'      => '(866) 826-2061',
     'phone_href' => 'tel:+18668262061',
-    'maps'       => 'https://www.google.com/maps/dir/?api=1&destination=Anew%20Era%20TMS%20%26%20Psychiatry%2C%207677%20Center%20Ave%20%23405%2C%20Huntington%20Beach%2C%20CA%2092647',
+    'maps'       => 'https://www.google.com/maps/dir/?api=1&destination=Anew%20Era%20TMS%20%26%20Psychiatry%2C%207677%20Center%20Ave%2C%20Suite%20405%2C%20Huntington%20Beach%2C%20CA%2092647',
 
     'hours' => [
         ['days' => 'Monday – Friday', 'time' => '6:00am – 6:00pm'],
@@ -61,7 +61,7 @@ return [
 
     'getting_here' => [
         ['name' => 'Where it is',
-         'copy' => 'Bella Terra Medical Building, 7677 Center Ave #405, in Huntington Beach.'],
+         'copy' => 'Bella Terra Medical Building, 7677 Center Ave, Suite 405, in Huntington Beach.'],
         ['name' => 'Before your first visit',
          'copy' => 'Signposting inside a medical building is never as obvious as it looks on the way in. Give yourself a few extra minutes to find the suite rather than arriving at a run.'],
     ],
@@ -87,7 +87,7 @@ return [
         ['q' => 'Can I be seen by video instead of coming in?',
          'a' => 'Yes, for psychiatry and therapy, anywhere in California. TMS is an in-clinic treatment and has to happen at the Center Avenue suite.'],
         ['q' => 'Is TMS available at this clinic?',
-         'a' => 'Yes. A course is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorization first.'],
+         'a' => 'Yes. A course of treatment is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorization first.'],
     ],
 ],
 
@@ -147,7 +147,7 @@ return [
         ['q' => 'Can I be seen by video instead of coming in?',
          'a' => 'Yes, for psychiatry and therapy, anywhere in California. TMS is an in-clinic treatment and has to happen at the Quail Street suite.'],
         ['q' => 'Is TMS available at this clinic?',
-         'a' => 'Yes. A course is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorization first.'],
+         'a' => 'Yes. A course of treatment is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorization first.'],
     ],
 ],
 
@@ -158,20 +158,20 @@ return [
     'region'     => 'Orange County',
     'page'       => 'laguna-hills.php',
     'h1'         => 'Psychiatry and TMS in',
-    'meta'       => 'Psychiatry, therapy and TMS in Laguna Hills, CA — Saddleback Valley Medical Center, 23961 Calle De La Magdalena Ste 420. Meet the clinicians, see what we treat, and book with the one who fits.',
+    'meta'       => 'Psychiatry, therapy and TMS in Laguna Hills, CA — Saddleback Valley Medical Center, 23961 Calle De La Magdalena, Suite 420. Meet the clinicians, see what we treat, and book with the one who fits.',
     'lede'       => 'Psychiatry, therapy and TMS at Saddleback Valley Medical Center, off the 5 at La Paz. Most major plans accepted, and we check your benefits before your first visit.',
     'street_name'=> 'Calle De La Magdalena',
 
     'address'   => [
         'building' => 'Saddleback Valley Medical Center',
-        'street'   => '23961 Calle De La Magdalena Ste 420',
+        'street'   => '23961 Calle De La Magdalena, Suite 420',
         'city'     => 'Laguna Hills',
         'region'   => 'CA',
         'postcode' => '92653',
     ],
     'phone'      => '(866) 826-2061',
     'phone_href' => 'tel:+18668262061',
-    'maps'       => 'https://www.google.com/maps/dir/?api=1&destination=Anew%20Era%20TMS%20%26%20Psychiatry%2C%2023961%20Calle%20De%20La%20Magdalena%20Ste%20420%2C%20Laguna%20Hills%2C%20CA%2092653',
+    'maps'       => 'https://www.google.com/maps/dir/?api=1&destination=Anew%20Era%20TMS%20%26%20Psychiatry%2C%2023961%20Calle%20De%20La%20Magdalena%2C%20Suite%20420%2C%20Laguna%20Hills%2C%20CA%2092653',
 
     'hours' => [
         ['days' => 'Monday – Friday', 'time' => '6:00am – 6:00pm'],
@@ -181,7 +181,7 @@ return [
 
     'getting_here' => [
         ['name' => 'Where it is',
-         'copy' => 'Saddleback Valley Medical Center, 23961 Calle De La Magdalena Ste 420, in Laguna Hills.'],
+         'copy' => 'Saddleback Valley Medical Center, 23961 Calle De La Magdalena, Suite 420, in Laguna Hills.'],
         ['name' => 'Before your first visit',
          'copy' => 'Signposting inside a medical building is never as obvious as it looks on the way in. Give yourself a few extra minutes to find the suite rather than arriving at a run.'],
     ],
@@ -207,7 +207,7 @@ return [
         ['q' => 'Can I be seen by video instead of coming in?',
          'a' => 'Yes, for psychiatry and therapy, anywhere in California. TMS is an in-clinic treatment and has to happen at the Calle De La Magdalena suite.'],
         ['q' => 'Is TMS available at this clinic?',
-         'a' => 'Yes. A course is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorization first.'],
+         'a' => 'Yes. A course of treatmentis usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorization first.'],
     ],
 ],
 
@@ -218,20 +218,20 @@ return [
     'region'     => 'Orange County',
     'page'       => 'orange.php',
     'h1'         => 'Psychiatry and TMS in',
-    'meta'       => 'Psychiatry, therapy and TMS in Orange, CA — 2050 W Chapman Ave Suite #201. Meet the clinicians, see what we treat, and book with the one who fits.',
+    'meta'       => 'Psychiatry, therapy and TMS in Orange, CA — 2050 W Chapman Ave, Suite 201. Meet the clinicians, see what we treat, and book with the one who fits.',
     'lede'       => 'Psychiatry, therapy and TMS on West Chapman Avenue, close to the hospital district and Old Towne. Most major plans accepted, and we check your benefits before your first visit.',
     'street_name'=> 'West Chapman Avenue',
 
     'address'   => [
         'building' => '',
-        'street'   => '2050 W Chapman Ave Suite #201',
+        'street'   => '2050 W Chapman Ave, Suite 201',
         'city'     => 'Orange',
         'region'   => 'CA',
         'postcode' => '92868',
     ],
     'phone'      => '(866) 826-2061',
     'phone_href' => 'tel:+18668262061',
-    'maps'       => 'https://www.google.com/maps/dir/?api=1&destination=Anew%20Era%20TMS%20%26%20Psychiatry%2C%202050%20W%20Chapman%20Ave%20Suite%20%23201%2C%20Orange%2C%20CA%2092868',
+    'maps'       => 'https://www.google.com/maps/dir/?api=1&destination=Anew%20Era%20TMS%20%26%20Psychiatry%2C%202050%20W%20Chapman%20Ave%2C%20Suite%20201%2C%20Orange%2C%20CA%2092868',
 
     'hours' => [
         ['days' => 'Monday – Friday', 'time' => '6:00am – 6:00pm'],
@@ -241,7 +241,7 @@ return [
 
     'getting_here' => [
         ['name' => 'Where it is',
-         'copy' => '2050 W Chapman Ave Suite #201, in Orange.'],
+         'copy' => '2050 W Chapman Ave, Suite 201, in Orange.'],
         ['name' => 'Before your first visit',
          'copy' => 'Signposting inside a medical building is never as obvious as it looks on the way in. Give yourself a few extra minutes to find the suite rather than arriving at a run.'],
     ],
@@ -267,7 +267,7 @@ return [
         ['q' => 'Can I be seen by video instead of coming in?',
          'a' => 'Yes, for psychiatry and therapy, anywhere in California. TMS is an in-clinic treatment and has to happen at the West Chapman Avenue suite.'],
         ['q' => 'Is TMS available at this clinic?',
-         'a' => 'Yes. A course is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorization first.'],
+         'a' => 'Yes. A course of treatment is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorization first.'],
     ],
 ],
 
@@ -278,20 +278,20 @@ return [
     'region'     => 'South Bay',
     'page'       => 'torrance.php',
     'h1'         => 'Psychiatry and TMS in',
-    'meta'       => 'Psychiatry, therapy and TMS in Torrance, CA — 3848 W Carson St #103. Meet the clinicians, see what we treat, and book with the one who fits.',
+    'meta'       => 'Psychiatry, therapy and TMS in Torrance, CA — 3848 W Carson St, Suite 103. Meet the clinicians, see what we treat, and book with the one who fits.',
     'lede'       => 'Psychiatry, therapy and TMS on West Carson Street, in the middle of the South Bay. Most major plans accepted, and we check your benefits before your first visit.',
     'street_name'=> 'West Carson Street',
 
     'address'   => [
         'building' => '',
-        'street'   => '3848 W Carson St #103',
+        'street'   => '3848 W Carson St, Suite 103',
         'city'     => 'Torrance',
         'region'   => 'CA',
         'postcode' => '90503',
     ],
     'phone'      => '(866) 826-2061',
     'phone_href' => 'tel:+18668262061',
-    'maps'       => 'https://www.google.com/maps/dir/?api=1&destination=Anew%20Era%20TMS%20%26%20Psychiatry%2C%203848%20W%20Carson%20St%20%23103%2C%20Torrance%2C%20CA%2090503',
+    'maps'       => 'https://www.google.com/maps/dir/?api=1&destination=Anew%20Era%20TMS%20%26%20Psychiatry%2C%203848%20W%20Carson%20St%2C%20Suite%20103%2C%20Torrance%2C%20CA%2090503',
 
     'hours' => [
         ['days' => 'Monday – Friday', 'time' => '6:00am – 6:00pm'],
@@ -301,7 +301,7 @@ return [
 
     'getting_here' => [
         ['name' => 'Where it is',
-         'copy' => '3848 W Carson St #103, in Torrance.'],
+         'copy' => '3848 W Carson St, Suite 103, in Torrance.'],
         ['name' => 'Before your first visit',
          'copy' => 'Signposting inside a medical building is never as obvious as it looks on the way in. Give yourself a few extra minutes to find the suite rather than arriving at a run.'],
     ],
@@ -327,7 +327,7 @@ return [
         ['q' => 'Can I be seen by video instead of coming in?',
          'a' => 'Yes, for psychiatry and therapy, anywhere in California. TMS is an in-clinic treatment and has to happen at the West Carson Street suite.'],
         ['q' => 'Is TMS available at this clinic?',
-         'a' => 'Yes. A course is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorization first.'],
+         'a' => 'Yes. A course of treatment is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorization first.'],
     ],
 ],
 
@@ -387,7 +387,7 @@ return [
         ['q' => 'Can I be seen by video instead of coming in?',
          'a' => 'Yes, for psychiatry and therapy, anywhere in California. TMS is an in-clinic treatment and has to happen at the Oceangate suite.'],
         ['q' => 'Is TMS available at this clinic?',
-         'a' => 'Yes. A course is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorization first.'],
+         'a' => 'Yes. A course of treatment is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorization first.'],
     ],
 ],
 
@@ -447,7 +447,7 @@ return [
         ['q' => 'Can I be seen by video instead of coming in?',
          'a' => 'Yes, for psychiatry and therapy, anywhere in California. TMS is an in-clinic treatment and has to happen at the Santa Monica Boulevard suite.'],
         ['q' => 'Is TMS available at this clinic?',
-         'a' => 'Yes. A course is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorization first.'],
+         'a' => 'Yes. A course of treatment is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorization first.'],
     ],
 ],
 
@@ -509,7 +509,7 @@ return [
         ['q' => 'Can I be seen by video instead of coming in?',
          'a' => 'Yes, for psychiatry and therapy, anywhere in Texas. TMS is an in-clinic treatment and has to happen at the North MoPac suite.'],
         ['q' => 'Is TMS available at this clinic?',
-         'a' => 'Yes. A course is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorization first.'],
+         'a' => 'Yes. A course of treatment is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorization first.'],
     ],
 ],
 
@@ -520,20 +520,20 @@ return [
     'region'     => 'Austin',
     'page'       => 'cedar-park.php',
     'h1'         => 'Psychiatry and TMS in',
-    'meta'       => 'Psychiatry, therapy and TMS in Cedar Park, TX — 1210 Cottonwood Creek Trail #230. Meet the clinicians, see what we treat, and book with the one who fits.',
+    'meta'       => 'Psychiatry, therapy and TMS in Cedar Park, TX — 1210 Cottonwood Creek Trail, Suite 230. Meet the clinicians, see what we treat, and book with the one who fits.',
     'lede'       => 'Psychiatry, therapy and TMS on Cottonwood Creek Trail, north of Austin off the 183A. Most major plans accepted, and we check your benefits before your first visit.',
     'street_name'=> 'Cottonwood Creek Trail',
 
     'address'   => [
         'building' => '',
-        'street'   => '1210 Cottonwood Creek Trail #230',
+        'street'   => '1210 Cottonwood Creek Trail, Suite 230',
         'city'     => 'Cedar Park',
         'region'   => 'TX',
-        'postcode' => '78613',
+        'postcode' => '78613-2688',
     ],
     'phone'      => '(737) 363-4732',
     'phone_href' => 'tel:+17373634732',
-    'maps'       => 'https://www.google.com/maps/dir/?api=1&destination=Anew%20Era%20TMS%20%26%20Psychiatry%2C%201210%20Cottonwood%20Creek%20Trail%20%23230%2C%20Cedar%20Park%2C%20TX%2078613',
+    'maps'       => 'https://www.google.com/maps/dir/?api=1&destination=Anew%20Era%20TMS%20%26%20Psychiatry%2C%201210%20Cottonwood%20Creek%20Trail%2C%20Suite%20230%2C%20Cedar%20Park%2C%20TX%2078613-2688',
 
     'hours' => [
         ['days' => 'Monday – Friday', 'time' => '6:00am – 6:00pm'],
@@ -543,7 +543,7 @@ return [
 
     'getting_here' => [
         ['name' => 'Where it is',
-         'copy' => '1210 Cottonwood Creek Trail #230, in Cedar Park.'],
+         'copy' => '1210 Cottonwood Creek Trail, Suite 230, in Cedar Park.'],
         ['name' => 'Before your first visit',
          'copy' => 'Signposting inside a medical building is never as obvious as it looks on the way in. Give yourself a few extra minutes to find the suite rather than arriving at a run.'],
     ],
@@ -571,7 +571,7 @@ return [
         ['q' => 'Can I be seen by video instead of coming in?',
          'a' => 'Yes, for psychiatry and therapy, anywhere in Texas. TMS is an in-clinic treatment and has to happen at the Cottonwood Creek Trail suite.'],
         ['q' => 'Is TMS available at this clinic?',
-         'a' => 'Yes. A course is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorization first.'],
+         'a' => 'Yes. A course of treatment is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorization first.'],
     ],
 ],
 
@@ -582,20 +582,20 @@ return [
     'region'     => 'Austin',
     'page'       => 'westlake.php',
     'h1'         => 'Psychiatry and TMS in',
-    'meta'       => 'Psychiatry, therapy and TMS in Westlake, TX — 1715 S Capital of Texas Hwy, Ste 205. Meet the clinicians, see what we treat, and book with the one who fits.',
+    'meta'       => 'Psychiatry, therapy and TMS in Westlake, TX — 1715 S Capital of Texas Hwy, Suite 205. Meet the clinicians, see what we treat, and book with the one who fits.',
     'lede'       => 'Psychiatry, therapy and TMS on Capital of Texas Highway, in the hills west of downtown Austin. Most major plans accepted, and we check your benefits before your first visit.',
     'street_name'=> 'Capital of Texas Highway',
 
     'address'   => [
         'building' => '',
-        'street'   => '1715 S Capital of Texas Hwy, Ste 205',
+        'street'   => '1715 S Capital of Texas Hwy, Suite 205',
         'city'     => 'Austin',
         'region'   => 'TX',
         'postcode' => '78746',
     ],
     'phone'      => '(830) 825-6847',
     'phone_href' => 'tel:+18308256847',
-    'maps'       => 'https://www.google.com/maps/dir/?api=1&destination=Anew%20Era%20TMS%20%26%20Psychiatry%2C%201715%20S%20Capital%20of%20Texas%20Hwy%2C%20Ste%20205%2C%20Austin%2C%20TX%2078746',
+    'maps'       => 'https://www.google.com/maps/dir/?api=1&destination=Anew%20Era%20TMS%20%26%20Psychiatry%2C%201715%20S%20Capital%20of%20Texas%20Hwy%2C%20Suite%20205%2C%20Austin%2C%20TX%2078746',
 
     'hours' => [
         ['days' => 'Monday – Friday', 'time' => '6:00am – 6:00pm'],
@@ -605,7 +605,7 @@ return [
 
     'getting_here' => [
         ['name' => 'Where it is',
-         'copy' => '1715 S Capital of Texas Hwy, Ste 205, in Austin.'],
+         'copy' => '1715 S Capital of Texas Hwy, Suite 205, in Austin.'],
         ['name' => 'Before your first visit',
          'copy' => 'Signposting inside a medical building is never as obvious as it looks on the way in. Give yourself a few extra minutes to find the suite rather than arriving at a run.'],
     ],
@@ -633,7 +633,7 @@ return [
         ['q' => 'Can I be seen by video instead of coming in?',
          'a' => 'Yes, for psychiatry and therapy, anywhere in Texas. TMS is an in-clinic treatment and has to happen at the Capital of Texas Highway suite.'],
         ['q' => 'Is TMS available at this clinic?',
-         'a' => 'Yes. A course is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorization first.'],
+         'a' => 'Yes. A course of treatment is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorization first.'],
     ],
 ],
 
@@ -644,20 +644,20 @@ return [
     'region'     => 'Dallas',
     'page'       => 'central-dallas.php',
     'h1'         => 'Psychiatry and TMS in',
-    'meta'       => 'Psychiatry, therapy and TMS in Central Dallas, TX — 17480 Dallas Pkwy Ste 101. Meet the clinicians, see what we treat, and book with the one who fits.',
+    'meta'       => 'Psychiatry, therapy and TMS in Central Dallas, TX — 17480 Dallas Pkwy, Suite 101. Meet the clinicians, see what we treat, and book with the one who fits.',
     'lede'       => 'Psychiatry, therapy and TMS on Dallas Parkway, up the Tollway at the Plano line. Most major plans accepted, and we check your benefits before your first visit.',
     'street_name'=> 'Dallas Parkway',
 
     'address'   => [
         'building' => '',
-        'street'   => '17480 Dallas Pkwy Ste 101',
+        'street'   => '17480 Dallas Pkwy, Suite 101',
         'city'     => 'Dallas',
         'region'   => 'TX',
         'postcode' => '75287',
     ],
     'phone'      => '(469) 962-6984',
     'phone_href' => 'tel:+14699626984',
-    'maps'       => 'https://www.google.com/maps/dir/?api=1&destination=Anew%20Era%20TMS%20%26%20Psychiatry%2C%2017480%20Dallas%20Pkwy%20Ste%20101%2C%20Dallas%2C%20TX%2075287',
+    'maps'       => 'https://www.google.com/maps/dir/?api=1&destination=Anew%20Era%20TMS%20%26%20Psychiatry%2C%2017480%20Dallas%20Pkwy%2C%20Suite%20101%2C%20Dallas%2C%20TX%2075287',
 
     // The client asked for these hours to be shown in Pacific Time (Oct 2026).
     'timezone' => 'pt',
@@ -670,7 +670,7 @@ return [
 
     'getting_here' => [
         ['name' => 'Where it is',
-         'copy' => '17480 Dallas Pkwy Ste 101, in Dallas.'],
+         'copy' => '17480 Dallas Pkwy, Suite 101, in Dallas.'],
         ['name' => 'Before your first visit',
          'copy' => 'Signposting inside a medical building is never as obvious as it looks on the way in. Give yourself a few extra minutes to find the suite rather than arriving at a run.'],
     ],
@@ -771,20 +771,20 @@ return [
     'region'     => 'Dallas',
     'page'       => 'grapevine.php',
     'h1'         => 'Psychiatry and TMS in',
-    'meta'       => 'Psychiatry, therapy and TMS in Grapevine, TX — 1643 Lancaster Dr Suite 201. Meet the clinicians, see what we treat, and book with the one who fits.',
+    'meta'       => 'Psychiatry, therapy and TMS in Grapevine, TX — 1643 Lancaster Dr, Suite 201. Meet the clinicians, see what we treat, and book with the one who fits.',
     'lede'       => 'Psychiatry, therapy and TMS on Lancaster Drive, minutes from DFW and Southlake. Most major plans accepted, and we check your benefits before your first visit.',
     'street_name'=> 'Lancaster Drive',
 
     'address'   => [
         'building' => '',
-        'street'   => '1643 Lancaster Dr Suite 201',
+        'street'   => '1643 Lancaster Dr, Suite 201',
         'city'     => 'Grapevine',
         'region'   => 'TX',
         'postcode' => '76051',
     ],
     'phone'      => '(866) 826-2061',
     'phone_href' => 'tel:+18668262061',
-    'maps'       => 'https://www.google.com/maps/dir/?api=1&destination=Anew%20Era%20TMS%20%26%20Psychiatry%2C%201643%20Lancaster%20Dr%20Suite%20201%2C%20Grapevine%2C%20TX%2076051',
+    'maps'       => 'https://www.google.com/maps/dir/?api=1&destination=Anew%20Era%20TMS%20%26%20Psychiatry%2C%201643%20Lancaster%20Dr%2C%20Suite%20201%2C%20Grapevine%2C%20TX%2076051',
 
     'hours' => [
         ['days' => 'Monday – Friday', 'time' => '6:00am – 6:00pm'],
@@ -794,7 +794,7 @@ return [
 
     'getting_here' => [
         ['name' => 'Where it is',
-         'copy' => '1643 Lancaster Dr Suite 201, in Grapevine.'],
+         'copy' => '1643 Lancaster Dr, Suite 201, in Grapevine.'],
         ['name' => 'Before your first visit',
          'copy' => 'Signposting inside a medical building is never as obvious as it looks on the way in. Give yourself a few extra minutes to find the suite rather than arriving at a run.'],
     ],
@@ -833,20 +833,20 @@ return [
     'region'     => 'Houston',
     'page'       => 'cypress.php',
     'h1'         => 'Psychiatry and TMS in',
-    'meta'       => 'Psychiatry, therapy and TMS in Cypress, TX — 27700 Northwest Fwy #340. Meet the clinicians, see what we treat, and book with the one who fits.',
+    'meta'       => 'Psychiatry, therapy and TMS in Cypress, TX — 27700 Northwest Fwy, Suite 340. Meet the clinicians, see what we treat, and book with the one who fits.',
     'lede'       => 'Psychiatry, therapy and TMS on the Northwest Freeway, serving north-west Houston. Most major plans accepted, and we check your benefits before your first visit.',
     'street_name'=> 'Northwest Freeway',
 
     'address'   => [
         'building' => '',
-        'street'   => '27700 Northwest Fwy #340',
+        'street'   => '27700 Northwest Fwy, Suite 340',
         'city'     => 'Cypress',
         'region'   => 'TX',
         'postcode' => '77433',
     ],
     'phone'      => '(346) 741-7961',
     'phone_href' => 'tel:+13467417961',
-    'maps'       => 'https://www.google.com/maps/dir/?api=1&destination=Anew%20Era%20TMS%20%26%20Psychiatry%2C%2027700%20Northwest%20Fwy%20%23340%2C%20Cypress%2C%20TX%2077433',
+    'maps'       => 'https://www.google.com/maps/dir/?api=1&destination=Anew%20Era%20TMS%20%26%20Psychiatry%2C%2027700%20Northwest%20Fwy%2C%20Suite%20340%2C%20Cypress%2C%20TX%2077433',
 
     'hours' => [
         ['days' => 'Monday – Friday', 'time' => '6:00am – 6:00pm'],
@@ -856,7 +856,7 @@ return [
 
     'getting_here' => [
         ['name' => 'Where it is',
-         'copy' => '27700 Northwest Fwy #340, in Cypress.'],
+         'copy' => '27700 Northwest Fwy, Suite 340, in Cypress.'],
         ['name' => 'Before your first visit',
          'copy' => 'Signposting inside a medical building is never as obvious as it looks on the way in. Give yourself a few extra minutes to find the suite rather than arriving at a run.'],
     ],
@@ -893,20 +893,20 @@ return [
     'region'     => 'Houston',
     'page'       => 'the-woodlands.php',
     'h1'         => 'Psychiatry and TMS in',
-    'meta'       => 'Psychiatry, therapy and TMS in The Woodlands, TX — 1733 Woodstead Ct #102. Meet the clinicians, see what we treat, and book with the one who fits.',
+    'meta'       => 'Psychiatry, therapy and TMS in The Woodlands, TX — 1733 Woodstead Ct, Suite 102. Meet the clinicians, see what we treat, and book with the one who fits.',
     'lede'       => 'Psychiatry, therapy and TMS on Woodstead Court, in the middle of The Woodlands. Most major plans accepted, and we check your benefits before your first visit.',
     'street_name'=> 'Woodstead Court',
 
     'address'   => [
         'building' => '',
-        'street'   => '1733 Woodstead Ct #102',
+        'street'   => '1733 Woodstead Ct, Suite 102',
         'city'     => 'The Woodlands',
         'region'   => 'TX',
         'postcode' => '77380',
     ],
     'phone'      => '(281) 206-4678',
     'phone_href' => 'tel:+12812064678',
-    'maps'       => 'https://www.google.com/maps/dir/?api=1&destination=Anew%20Era%20TMS%20%26%20Psychiatry%2C%201733%20Woodstead%20Ct%20%23102%2C%20The%20Woodlands%2C%20TX%2077380',
+    'maps'       => 'https://www.google.com/maps/dir/?api=1&destination=Anew%20Era%20TMS%20%26%20Psychiatry%2C%201733%20Woodstead%20Ct%2C%20Suite%20102%2C%20The%20Woodlands%2C%20TX%2077380',
 
     'hours' => [
         ['days' => 'Monday – Friday', 'time' => '6:00am – 6:00pm'],
@@ -916,7 +916,7 @@ return [
 
     'getting_here' => [
         ['name' => 'Where it is',
-         'copy' => '1733 Woodstead Ct #102, in The Woodlands.'],
+         'copy' => '1733 Woodstead Ct, Suite 102, in The Woodlands.'],
         ['name' => 'Before your first visit',
          'copy' => 'Signposting inside a medical building is never as obvious as it looks on the way in. Give yourself a few extra minutes to find the suite rather than arriving at a run.'],
     ],
@@ -942,7 +942,7 @@ return [
         ['q' => 'Can I be seen by video instead of coming in?',
          'a' => 'Yes, for psychiatry and therapy, anywhere in Texas. TMS is an in-clinic treatment and has to happen at the Woodstead Court suite.'],
         ['q' => 'Is TMS available at this clinic?',
-         'a' => 'Yes. A course is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorization first.'],
+         'a' => 'Yes. A course of treatment is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorization first.'],
     ],
 ],
 

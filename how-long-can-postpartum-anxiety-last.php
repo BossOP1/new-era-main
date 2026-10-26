@@ -427,7 +427,7 @@ $btn_line = 'inline-flex items-center gap-2.5 rounded-full border-2 border-ink/2
     </p>
 
     <p class="<?= $p_class ?>">
-      Located at <strong>1733 Woodstead Ct #102, The Woodlands, TX 77380</strong>, our clinic offers comprehensive psychiatric evaluations, medication management, individual counseling, and non-invasive TMS therapy. Our clinical team works closely with new parents to create a gentle, evidence-based plan tailored to your recovery.
+      Located at <strong>1733 Woodstead Ct, Suite 102, The Woodlands, TX 77380</strong>, our clinic offers comprehensive psychiatric evaluations, medication management, individual counseling, and non-invasive TMS therapy. Our clinical team works closely with new parents to create a gentle, evidence-based plan tailored to your recovery.
     </p>
 
     <!-- Crisis Helpline Notice -->

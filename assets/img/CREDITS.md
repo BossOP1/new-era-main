@@ -57,7 +57,7 @@ than their container on purpose and carry `'focus' => 'object-left'` in
 
 | File | Source image | Subject |
 |------|--------------|---------|
-| `treatments/all-hero.jpg`             | images.unsplash.com/photo-1573495804664-b1c0849525af | Two women in conversation on a sofa (treatments hub hero) |
+| `treatments/all-hero.jpg`             | images.unsplash.com/photo-1758691462863-9e1b8a863140 | Clinician at her desk listening to a patient (treatments hub hero) |
 | `treatments/psychiatry-hero.jpg`      | images.unsplash.com/photo-1758691461935-202e2ef6b69f | Doctor talking with a patient across a desk |
 | `treatments/psychiatry-doctor.jpg`    | images.unsplash.com/photo-1758691462878-6edc3d3da1be | Clinician listening at her desk |
 | `treatments/psychiatry-notes.jpg`     | images.unsplash.com/photo-1758691461990-03b49d969495 | Clinician writing notes on a clipboard |
@@ -113,7 +113,7 @@ itself, and the subject column below says which. None of them is the office.
 | `locations/long-beach.jpg` | images.unsplash.com/photo-1740795095417-aa7a2d283ba9 | Downtown Long Beach from the air: the towers and the Villa Riviera beside the beach and the ocean |
 | `locations/west-los-angeles.jpg` | images.unsplash.com/photo-1648315300616-0eb7db8b8468 | A palm-lined west Los Angeles boulevard |
 | `locations/central-austin.jpg` | images.unsplash.com/photo-1551223456-a0988518e562 | The Austin skyline over Lady Bird Lake |
-| `locations/cedar-park.jpg` | images.unsplash.com/photo-1563131645-ac2001aff716 | Austin by day, north of the river |
+| `locations/cedar-park.jpg` | images.unsplash.com/photo-1563131645-ac2001aff716 | The Austin skyline by day, cropped above the graffiti-painted rail bridge in the original |
 | `locations/westlake.jpg` | images.unsplash.com/photo-1599011906870-ad398945a708 | Water, trees and buildings west of downtown Austin |
 | `locations/central-dallas.jpg` | images.unsplash.com/photo-1621904878414-d4ca4756bd7e | The Dallas skyline under open sky |
 | `locations/allen.jpg` | images.unsplash.com/photo-1631662760570-8f7b52d09fdc | A north Dallas skyline with a water tower |

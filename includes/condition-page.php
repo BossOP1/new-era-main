@@ -110,7 +110,13 @@ $rail['#faq'] = 'FAQs';
           </ol>
         </nav>
 
+        <?php // The H1 opens with the page's primary keyword ("Anxiety Treatment"),
+              // set as a small label, then the tagline — one heading for search
+              // engines, the same big serif line for readers. ?>
         <h1 class="m-0 font-serif font-normal leading-[1.05] tracking-[-0.04em] text-ink text-[40px] sm:text-[54px] lg:text-[62px]">
+          <?php if (!empty($c['hero']['keyword'])): ?>
+            <span class="mb-3 block font-sans text-[14px] font-extrabold uppercase leading-[1.3] tracking-[0.12em] text-brand-blue sm:mb-4 sm:text-[15px]"><?= e($c['hero']['keyword']) ?></span>
+          <?php endif; ?>
           <?= $headline($c['hero']['lines'], $c['hero']['accent'], 'not-italic text-brand-blue') ?>
         </h1>
 
@@ -241,7 +247,7 @@ $rail['#faq'] = 'FAQs';
         <p class="<?= $eyebrow ?>"><?= $dot ?> <?= e($c['groups']['eyebrow']) ?></p>
         <h2 class="<?= $h2 ?>"><?= $headline($c['groups']['lines'], $c['groups']['accent'], $em_section) ?></h2>
       </div>
-      <p class="m-0 mt-[22px] max-w-[360px] text-base leading-[1.75] text-[#58616a] md:mt-0 md:max-w-[290px]"><?= e($c['groups']['intro']) ?></p>
+      <p class="m-0 mt-[22px] max-w-[360px] text-base leading-[1.75] text-[#58616a] md:mt-0 md:max-w-[290px] lg:max-w-[460px]"><?= e($c['groups']['intro']) ?></p>
     </div>
 
     <?php // Below sm these become a swipe rail rather than a tall stack. ?>
@@ -331,7 +337,7 @@ $rail['#faq'] = 'FAQs';
       <p class="<?= $eyebrow ?>"><?= $dot ?> Your options here</p>
       <h2 class="<?= $h2 ?>">Five routes out.<br><em class="<?= $em_section ?>">One plan.</em></h2>
     </div>
-    <p class="m-0 mt-[22px] max-w-[360px] text-base leading-[1.75] text-[#58616a] md:mt-0 md:max-w-[290px]">
+    <p class="m-0 mt-[22px] max-w-[360px] text-base leading-[1.75] text-[#58616a] md:mt-0 md:max-w-[290px] lg:max-w-[460px]">
       Everything below is delivered by one team, so your prescriber and your therapist are reading the same notes.
     </p>
   </div>

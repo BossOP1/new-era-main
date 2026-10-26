@@ -75,10 +75,10 @@ $rest     = array_slice($all, 1);
   <div class="mb-7 sm:mb-9 md:mb-11 md:flex md:items-end md:justify-between md:gap-10">
     <div>
       <p class="<?= $eyebrow ?>"><?= $dot ?> What we offer</p>
-      <h2 class="<?= $h2 ?>">Five routes out.<br><em class="italic font-normal text-brand-blue">One team.</em></h2>
+      <h2 class="<?= $h2 ?>">Every treatment we offer.<br><em class="italic font-normal text-brand-blue">One care team.</em></h2>
     </div>
     <p class="m-0 mt-[22px] max-w-[360px] text-base leading-[1.75] text-[#58616a] md:mt-0 md:max-w-[300px]">
-      Most plans use more than one of these. Because your clinicians share notes, adding one is a conversation, not a referral.
+      Many patients combine more than one. Your clinicians share notes, so adding a treatment takes a conversation, not a new referral.
     </p>
   </div>
 
@@ -191,7 +191,7 @@ $rest     = array_slice($all, 1);
 <section id="book" class="px-3 py-3 pb-8 sm:px-5 sm:py-5 sm:pb-12 lg:px-8">
   <div class="relative isolate overflow-hidden rounded-[28px] bg-cream bg-aurora px-5 py-9 text-center sm:px-12 sm:py-14">
     <h2 class="m-0 mx-auto max-w-[22ch] font-serif font-normal leading-[1.08] tracking-[-0.035em] text-ink text-[clamp(30px,3.4vw,44px)]">
-      One assessment,<br><em class="italic font-normal text-brand-blue">then the right treatment.</em>
+      One assessment,<br><em class="italic font-normal text-brand-blue">then, the right treatment.</em>
     </h2>
     <p class="mx-auto m-0 mt-5 max-w-[54ch] text-[15px] leading-[1.75] text-ink/75 sm:text-base sm:leading-[1.8]">
       New patient appointments are usually available within five business days. We check your benefits first, so you know what a visit costs before you walk in.

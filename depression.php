@@ -56,6 +56,7 @@ $anchor   = 'scroll-mt-[148px] sm:scroll-mt-[164px]';
         </nav>
 
         <h1 class="m-0 font-serif font-normal leading-[1.05] tracking-[-0.04em] text-ink text-[40px] sm:text-[54px] lg:text-[62px]">
+          <span class="mb-3 block font-sans text-[14px] font-extrabold uppercase leading-[1.3] tracking-[0.12em] text-brand-blue sm:mb-4 sm:text-[15px]">Depression Treatment</span>
           Depression isn’t<br>a bad mood.<br>Depression <em class="not-italic text-brand-blue">lasts.</em>
         </h1>
 

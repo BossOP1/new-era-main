@@ -34,6 +34,7 @@ return [
     'meta'  => 'Anxiety that will not switch off is treatable. Understand the symptoms, what drives it, and how TMS helps when medication and therapy have not been enough.',
 
     'hero' => [
+        'keyword' => 'Anxiety Treatment',
         'lines' => ['Anxiety isn’t nerves.', 'It’s a body that', 'won’t stand down.'],
         'accent' => 'won’t stand down.',
         'lede'  => 'Worry and fear are ordinary responses to a hard day. When the response outlasts the thing that caused it, and arrives with no cause at all, that is an anxiety disorder — and it answers to treatment.',
@@ -146,7 +147,7 @@ return [
 
     'faqs' => [
         ['q' => 'What happens at my first visit?', 'a' => 'A full diagnostic assessment rather than a fifteen-minute script. We go through your history, your physical health, your sleep and your current symptoms, and you leave the same day with a written plan.'],
-        ['q' => 'How is anxiety diagnosed?', 'a' => 'Only by a medical professional, through both a psychological and a physical assessment. Expect questions about your overall health and any prescriptions, how long you have felt this way, what is going on in your life, and behaviours such as substance use. Questionnaires usually come into it too.'],
+        ['q' => 'How is anxiety diagnosed?', 'a' => 'Only by a medical professional, through both a psychological and a physical assessment. Expect questions about your overall health and any prescriptions, how long you have felt this way, what is going on in your life, and behaviors such as substance use. Questionnaires usually come into it too.'],
         ['q' => 'Is TMS approved for anxiety?', 'a' => 'TMS is FDA-cleared for major depressive disorder and for OCD. For generalised anxiety it is used on the evidence for anxious depression and related presentations, and we will be straight with you about what that means for your case and your coverage before you start.'],
         ['q' => 'Does TMS hurt?', 'a' => 'No anesthesia or sedation is involved and you stay awake throughout. Most people describe a tapping sensation on the scalp. Some get mild scalp discomfort or a headache early on, which typically settles.'],
         ['q' => 'Will my insurance cover it?', 'a' => 'Coverage for TMS is strongest where depression is part of the picture. We verify your benefits and handle the prior authorisation before you commit to anything, so you know where you stand first.'],
@@ -162,9 +163,10 @@ return [
     'meta'  => 'Postpartum depression is not the baby blues, and it is not a character flaw. Understand the symptoms and how TMS treats it without medication reaching your breast milk.',
 
     'hero' => [
+        'keyword' => 'Postpartum Depression Treatment',
         'lines' => ['This isn’t the', 'baby blues.', 'And it isn’t your fault.'],
         'accent' => 'And it isn’t your fault.',
-        'lede'  => 'Postpartum depression is a serious, common and treatable mood disorder. It can start weeks after delivery, during pregnancy, or as late as a year after birth — and it responds to treatment that does not reach your milk.',
+        'lede'  => 'Postpartum depression is a serious, common and treatable mood disorder. It can start weeks after delivery, during pregnancy, or as late as a year after birth — and it responds to to treatment that\'s drug-free.',
         'image' => 'conditions/postpartum-hero.jpg',
         'alt'   => 'A mother holding her newborn in soft window light',
         'panel' => '#f1e8e2',
@@ -175,7 +177,7 @@ return [
         'eyebrow' => '01 / What it is',
         'lines'   => ['Not a weakness.', 'A condition.'],
         'accent'  => 'A condition.',
-        'serif'   => 'Postpartum depression involves lasting anxiety and sadness, more intense and far longer than the baby blues.',
+        'serif'   => 'Postpartum depression involves lasting anxiety and sadness, more intense and far longer than the so-called baby blues.',
         'paras'   => [
             'Every new mother endures sleep deprivation, exhaustion and frayed nerves. Crying jags are common and they pass. Postpartum depression is what it is called when those feelings persist, or deepen, rather than lifting.',
             'It is driven by hormonal, social and emotional factors working together. It is not a character flaw, it is not a failure of love for your baby, and treating it is not something you have to earn.',
@@ -215,7 +217,7 @@ return [
             'Severe anxiety or panic attacks',
             'Intrusive thoughts of harming yourself or your baby',
         ],
-        'note' => 'Thoughts of harming yourself or your baby need same-day help. Call or text 988, or call us. There is a rarer and more serious form, postpartum psychosis, that requires immediate treatment.',
+        'note' => 'Thoughts of harming yourself or your baby requires emergency care. Call or text 988, or call us. There is a rarer and more serious form, postpartum psychosis, that requires immediate treatment.',
     ],
 
     'groups' => [
@@ -225,9 +227,9 @@ return [
         'intro'   => 'As with other mental health conditions, there is no one cause. These are the factors that raise the risk.',
         'items' => [
             ['name' => 'Hormonal change', 'copy' => 'The chemical shift after giving birth is abrupt, and for some women it is enough on its own.', 'tag' => 'Biological'],
-            ['name' => 'Stress',          'copy' => 'A baby who is hard to comfort, who sleeps irregularly, or who has special needs raises the load considerably.', 'tag' => 'Circumstance'],
+            ['name' => 'Stress',          'copy' => 'A baby who is hard to comfort, who sleeps irregularly, or who has special needs can increase stress levels.', 'tag' => 'Circumstance'],
             ['name' => 'Isolation',       'copy' => 'Financial hardship, bereavement, family difficulty and a thin support network all feed it.', 'tag' => 'Environment'],
-            ['name' => 'Paternal PPD',    'copy' => 'Fathers develop it too, most often when young, already depressed, or under financial strain.', 'tag' => 'Fathers'],
+            ['name' => 'Paternal PPD',    'copy' => 'Fathers can also develop PPD, most often when young, already depressed, or under financial strain.', 'tag' => 'Fathers'],
         ],
     ],
 
@@ -257,11 +259,11 @@ return [
     ],
 
     'untreated' => [
-        'lines' => ['It doesn’t', 'wait you out.'],
-        'accent' => 'wait you out.',
+        'lines' => ['It rarely passes', 'on its own.'],
+        'accent' => 'on its own.',
         'paras' => [
             'The NIH reports that some women are still describing high levels of depression three years after giving birth. Untreated, it raises the risk of substance use and self-harm, and it affects bonding — which in turn shows up in a baby’s attachment, temperament and early development.',
-            'None of that is an argument for guilt. It is an argument for treating it now, while it is at its most treatable.',
+            'None of that means you\'re guilty. It is an argument for treating it now, while it is at its most treatable.',
         ],
         'gains' => [
             'Understand what is driving how you feel',
@@ -289,6 +291,7 @@ return [
     'meta'  => 'Post-traumatic stress disorder is treatable. Understand the symptom clusters, how it is diagnosed, and how TMS helps when medication and therapy have not been enough.',
 
     'hero' => [
+        'keyword' => 'PTSD Treatment',
         'lines' => ['The danger passed.', 'Your body never', 'got the message.'],
         'accent' => 'got the message.',
         'lede'  => 'Post-traumatic stress disorder follows witnessing or living through something terrifying, and then being unable to leave it behind. More than three million Americans carry it. It responds to treatment.',
@@ -346,8 +349,8 @@ return [
 
     'groups' => [
         'eyebrow' => '03 / Where it comes from',
-        'lines'   => ['A startling event.', 'Then no way out.'],
-        'accent'  => 'Then no way out.',
+        'lines'   => ['A traumatic event', 'that doesn’t end.', 'Then, no way out.'],
+        'accent'  => 'Then, no way out.',
         'intro'   => 'PTSD is brought on by experiencing or witnessing something terrifying. These are the events we see most often behind it.',
         'items' => [
             ['name' => 'Combat stress',      'copy' => 'Service members and veterans carry a markedly higher share of the diagnosis.', 'tag' => 'Service'],
@@ -386,7 +389,7 @@ return [
         'lines' => ['Trauma doesn’t', 'fade on schedule.'],
         'accent' => 'fade on schedule.',
         'paras' => [
-            'Left alone, the cycle of re-experiencing tends to entrench rather than ease. Avoidance grows to fill more of a life, depression and anxiety arrive alongside, and sleep stops doing its job.',
+            'Left alone, the cycle of re-experiencing tends to intensify rather than ease. Avoidance grows to fill more of a life, depression and anxiety arrive alongside, and sleep stops doing its job.',
             'Trauma-focused care works, and it works at your pace. Nobody is going to make you recount anything before you are ready.',
         ],
         'gains' => [
@@ -398,7 +401,7 @@ return [
     ],
 
     'faqs' => [
-        ['q' => 'Do I have to talk about the trauma?', 'a' => 'Not to begin, and not before you are ready. Trauma-focused therapy works at your pace, and treatments such as TMS do not require you to recount anything at all.'],
+        ['q' => 'Do I have to talk about the trauma?', 'a' => 'Not to begin with, and not before you are ready. Trauma-focused therapy works at your pace, and treatments such as TMS do not require you to recount anything at all.'],
         ['q' => 'What is a TMS session like?', 'a' => 'You sit comfortably, fully alert. A coil is positioned on your scalp and you feel a light tapping. Most people read, watch something or listen to music or a podcast. Sessions run about forty minutes, Monday to Friday, for four to six weeks.'],
         ['q' => 'Does TMS work for PTSD?', 'a' => 'The evidence is strongest where depression and PTSD occur together, and that is a common pairing. One study found TMS significantly reduced total PTSD scores across the symptom clusters as well as co-occurring depression and anxiety. We will be straight with you about what the evidence supports in your case.'],
         ['q' => 'Do you treat veterans?', 'a' => 'Yes. We are in-network with Tricare in both states and with Triwest CCN. We verify your benefits before your first appointment.'],
@@ -415,9 +418,10 @@ return [
     'meta'  => 'Chronic migraine costs days you do not get back. Understand the types, what preventive medication asks of you, and how TMS offers a drug-free alternative.',
 
     'hero' => [
+        'keyword' => 'Migraine Treatment',
         'lines' => ['It isn’t a headache.', 'It’s days you', 'don’t get back.'],
         'accent' => 'don’t get back.',
-        'lede'  => 'Migraine is one of the most prevalent nervous system conditions in the world, and its incidence is rising. When preventive medication has not worked, or its side effects are worse than the attacks, TMS is a drug-free alternative.',
+        'lede'  => 'Migraines is one of the most prevalent nervous system conditions in the world, and its incidence is rising. When preventive medication has not worked, or its side effects are worse than the attacks, TMS is a drug-free alternative.',
         'image' => 'conditions/migraines-hero.jpg',
         'alt'   => 'A person resting in a darkened room',
         'panel' => '#e7ebee',
@@ -426,12 +430,12 @@ return [
 
     'what' => [
         'eyebrow' => '01 / What it is',
-        'lines'   => ['Not one condition.', 'Four of them.'],
-        'accent'  => 'Four of them.',
-        'serif'   => 'Migraine can sideline someone for days, and recurrent attacks dismantle a working week.',
+        'lines'   => ['More than a bad headache.', 'A neurological condition.'],
+        'accent'  => 'A neurological condition.',
+        'serif'   => 'Migraines can sideline someone for days, and recurrent attacks dismantle a working week.',
         'paras'   => [
             'There are several forms: migraine with aura, migraine without aura, episodic migraine and chronic migraine. Symptoms include intense throbbing pain in a specific area of the head, nausea, and sensitivity to light and sound — and they can persist for several days.',
-            'Migraine sends a great many people to the emergency room. It also travels with mood and sleep, which is why we treat it alongside them rather than in isolation.',
+            'Migraine sends a great many people to the emergency room. It also affects your mood and sleep, which is why we treat it alongside them rather than in isolation.',
         ],
         'signs_title' => 'What an attack involves',
         'signs' => [
@@ -440,7 +444,7 @@ return [
             'Sensitivity to light and sound',
             'Symptoms persisting for up to several days',
         ],
-        'signs_note' => 'Attacks that recur often enough to disrupt work, school or ordinary obligations are worth a proper assessment rather than another packet of painkillers.',
+        'signs_note' => 'Attacks that recur often enough to disrupt work, school or ordinary obligations are worth a proper assessment rather than painkillers.',
     ],
 
     'stat' => [
@@ -454,10 +458,10 @@ return [
         'eyebrow' => '02 / What medication asks of you',
         'lines'   => ['The side effects', 'people stop for.'],
         'accent'  => 'people stop for.',
-        'intro'   => 'Preventive drugs are the usual first answer: antidepressants, antiepileptics, blood pressure medication. Even when they help somewhat, this is the list that makes people give up on them.',
+        'intro'   => 'Preventive drugs are the usual first answer, including antidepressants, antiepileptics, blood pressure medication. Even when they help somewhat, this is the list that makes people give up on them.',
         'photo'   => 'cond-6',
         'photo_alt' => 'A person with their head in their hands',
-        'caption' => 'A packet of painkillers is not a plan.',
+        'caption' => 'More painkillers isn\'t the best plan.',
         'list' => [
             'Weight gain',
             'Sexual dysfunction',
@@ -472,8 +476,8 @@ return [
 
     'groups' => [
         'eyebrow' => '03 / The four forms',
-        'lines'   => ['Which one you', 'have matters.'],
-        'accent'  => 'have matters.',
+        'lines'   => ['Four types of migraine.', 'Each treated differently.'],
+        'accent'  => 'Each treated differently.',
         'intro'   => 'Naming the form is what turns a running battle with painkillers into a plan.',
         'items' => [
             ['name' => 'With aura',   'copy' => 'Visual or sensory warning signs arrive before the pain does.', 'tag' => 'Classic'],
@@ -494,7 +498,7 @@ return [
         'photo_alt' => 'A patient in the TMS chair while a clinician talks her through the session',
         'photo_focus' => 'object-[70%_35%]',
         'heading' => 'Magnetic pulses through a coil, aimed at the cortex.',
-        'sub'     => 'The induced current stimulates neurons that have gone sluggish, rebalancing the chemistry behind cortical spreading depression. In other cases it reduces cortical hyper-excitability. Either way, fewer migraines.',
+        'sub'     => 'TMS works by influencing the brain activity involved in migraine development. In some cases, it helps activate underperforming neural pathways; in others, it helps calm overly active ones. The result for many people is a reduction in migraine frequency and severity.',
         'benefits' => [
             ['name' => 'Drug-free',           'copy' => 'None of the side effects that stop people taking preventives.'],
             ['name' => 'No sedation',         'copy' => 'You stay awake, and resume normal activity immediately.'],
@@ -515,7 +519,7 @@ return [
         ['q' => 'What does the evidence actually show?', 'a' => 'A 2017 meta-analysis in the Journal of Headache and Pain pooled five trials covering 313 patients and found TMS effective in treating migraine. In a separate study of 132 patients starting from about nine migraine days a month, participants reported 2.75 fewer days a month after treatment.'],
         ['q' => 'What is a session like?', 'a' => 'About forty minutes, no sedation, and you resume normal activities immediately afterwards. A full course usually runs four to six weeks.'],
         ['q' => 'Do I have to stop my current medication?', 'a' => 'Not as a condition of starting. Any change to what you are taking is a decision made with your prescriber, and TMS does not require you to come off anything first.'],
-        ['q' => 'Why is a psychiatry practice treating migraine?', 'a' => 'Because migraine travels with mood and sleep, and treating it in isolation from them tends not to hold. We coordinate the migraine care with the rest rather than running it in a separate lane.'],
+        ['q' => 'Why is a psychiatry practice treating migraine?', 'a' => 'Migraine affects mood and sleep; treating migraine by itself tends not to be as effective. We coordinate the migraine care with the rest rather than running it in a separate lane.'],
         ['q' => 'Will my insurance cover it?', 'a' => 'Coverage for TMS is strongest where depression is part of the picture. We verify your benefits and handle the prior authorisation before you commit to anything, so there are no surprises.'],
     ],
 ],
@@ -528,6 +532,7 @@ return [
     'meta'  => 'Obsessive-compulsive disorder is treatable, and TMS is FDA-cleared for it. Understand obsessions, compulsions, and what to do when therapy alone has not been enough.',
 
     'hero' => [
+        'keyword' => 'OCD Treatment',
         'lines' => ['You know the thought', 'makes no sense.', 'It still wins.'],
         'accent' => 'It still wins.',
         'lede'  => 'Checking the door a fifth time. Washing until your hands crack. OCD traps you in a cycle that logic does not touch — and it leaves people embarrassed, ashamed and quiet about it. It is also one of the conditions TMS is cleared to treat.',
@@ -541,9 +546,9 @@ return [
         'eyebrow' => '01 / What it is',
         'lines'   => ['Obsessions in.', 'Compulsions out.'],
         'accent'  => 'Compulsions out.',
-        'serif'   => 'Unwanted, intrusive thoughts create intense stress. The repetitive behaviours that quiet them are what make it a disorder.',
+        'serif'   => 'Unwanted, intrusive thoughts create intense stress. The repetitive behaviors that quiet them are what make it a disorder.',
         'paras'   => [
-            'Obsessions tend to follow a theme: a fear of dirt or contamination, an extreme need for order, intrusive thoughts of harm. Compulsions are the irrational behaviours that relieve the stress those thoughts produce — and the relief never lasts, which is what keeps the loop turning.',
+            'Obsessions tend to follow a theme: a fear of dirt or contamination, an extreme need for order, intrusive thoughts of harm. Compulsions are the irrational behaviors that relieve the stress those thoughts produce — and the relief never lasts, which is what keeps the loop turning.',
             'OCD belongs to the family of anxiety disorders. It responds well to treatment, and it responds best when someone finally says it out loud.',
         ],
         'signs_title' => 'Common obsessions',
@@ -567,10 +572,10 @@ return [
         'eyebrow' => '02 / Signs and symptoms',
         'lines'   => ['The compulsions', 'that follow.'],
         'accent'  => 'that follow.',
-        'intro'   => 'Compulsions are repetitive behaviours that exist to reduce the anxiety an obsession creates. These are the ones we see most.',
+        'intro'   => 'Compulsions are repetitive behaviors that exist to reduce the anxiety an obsession creates. These are the ones we see most.',
         'photo'   => 'cond-7',
         'photo_alt' => 'Hands being washed under running water',
-        'caption' => 'The relief never lasts. That is the point.',
+        'caption' => 'Left untreated, the relief never lasts.',
         'list' => [
             'Repetitive cleaning and washing',
             'Hand washing that damages your hands',
@@ -584,13 +589,13 @@ return [
     ],
 
     'groups' => [
-        'eyebrow' => '03 / What raises the risk',
-        'lines'   => ['Anyone can', 'develop it.'],
-        'accent'  => 'develop it.',
-        'intro'   => 'Age, gender and income barely move the odds. These four do.',
+        'eyebrow' => '03 / What are the risk factors?',
+        'lines'   => ['Anyone can', 'develop OCD.'],
+        'accent'  => 'develop OCD.',
+        'intro'   => 'Age, gender and income barely move the odds. These four reasons do:',
         'items' => [
             ['name' => 'Biology',        'copy' => 'Imbalances in the neurotransmitters that carry signals between nerve cells, and differences in brain structure.', 'tag' => 'Neurochemistry'],
-            ['name' => 'Personality',    'copy' => 'Perfectionist, pessimistic and anxious traits all raise the likelihood.', 'tag' => 'Temperament'],
+            ['name' => 'Personality',    'copy' => 'Perfectionist, pessimistic and anxious personality traits all raise the likelihood.', 'tag' => 'Temperament'],
             ['name' => 'Family history', 'copy' => 'No single gene has been found, but parents or close relatives with OCD are a contributing factor.', 'tag' => 'Genetics'],
             ['name' => 'Stress and trauma', 'copy' => 'Major stress, violence or illness can trigger it, especially in someone already at risk.', 'tag' => 'Trigger'],
         ],
@@ -598,8 +603,8 @@ return [
 
     'tms' => [
         'eyebrow' => '04 / FDA-cleared for OCD',
-        'lines'   => ['Where therapy', 'alone hasn’t held.'],
-        'accent'  => 'alone hasn’t held.',
+        'lines'   => ['Where therapy', 'alone hasn’t worked.'],
+        'accent'  => 'alone hasn’t worked.',
         'quote'   => 'TMS uses magnetic fields to carefully target specific areas of the brain. Stimulating the areas affected by OCD helps reduce symptoms.',
         'quote_source' => 'International OCD Foundation',
         'copy'    => 'Exposure and response prevention is the therapy that works for OCD, and we deliver it. When it is not enough on its own, TMS is cleared specifically for this condition — not borrowed from another indication.',
@@ -609,8 +614,8 @@ return [
         'heading' => 'Pulses that help the brain build a different pathway.',
         'sub'     => 'An electromagnet placed against the scalp delivers targeted pulses, engaging neuroplasticity — the brain’s capacity to form new, healthier pathways rather than running the old loop.',
         'benefits' => [
-            ['name' => 'Cleared for OCD',     'copy' => 'Not extrapolated from another condition. Cleared for this one.'],
-            ['name' => 'Gentler than SSRIs',  'copy' => 'Side effects are generally far milder than the drugs.'],
+            ['name' => 'Cleared for OCD',     'copy' => 'TMS has been shown to be effective for OCD.'],
+            ['name' => 'Gentler than SSRIs',  'copy' => 'TMS side effects are generally far milder than the drugs.'],
             ['name' => 'No anesthesia',       'copy' => 'No surgery and no sedation. Sessions fit a lunch break.'],
             ['name' => 'Mood, energy, sleep', 'copy' => 'Improvement is reported across all three, not symptoms alone.'],
         ],
@@ -626,10 +631,10 @@ return [
         'accent' => 'It doesn’t loosen.',
         'paras' => [
             'Untreated, obsessions become more intrusive and more frequent, and compulsions can end up occupying most of someone’s waking hours. Sleep, work and relationships all narrow around them, and the shame that comes with it is a large part of why people wait years to ask.',
-            'OCD responds well to treatment. The waiting is the expensive part.',
+            'OCD responds well to treatment.',
         ],
         'gains' => [
-            'Explore the roots of it safely',
+            'Explore the roots of your OCD safely.',
             'Identify your triggers instead of dodging them',
             'Break the obsession-and-compulsion cycle',
             'Live in a life you are running, not OCD',
@@ -637,7 +642,7 @@ return [
     ],
 
     'faqs' => [
-        ['q' => 'Is TMS approved for OCD?', 'a' => 'Yes. OCD is one of the two conditions TMS is FDA-cleared to treat, alongside major depressive disorder. That matters for the evidence base and it usually matters for your coverage too.'],
+        ['q' => 'Is TMS approved for OCD?', 'a' => 'Yes. OCD is one of the two conditions TMS is FDA-cleared to treat, alongside major depressive disorder.'],
         ['q' => 'What is ERP therapy?', 'a' => 'Exposure and response prevention. You work towards the situations that trigger an obsession while deliberately not performing the compulsion, so the anxiety is allowed to fall on its own. It is the therapy with the strongest evidence in OCD, and our therapists are trained in it.'],
         ['q' => 'Do I need therapy as well as TMS?', 'a' => 'Usually the combination is what works best. ERP teaches your brain a different response, and TMS makes that learning easier to hold. Your prescriber and therapist are in the same practice, reading the same notes.'],
         ['q' => 'Does TMS hurt?', 'a' => 'No. There is no surgery and no anesthesia. Some people report mild scalp discomfort or a headache, generally far less troublesome than the side effects of SSRIs.'],

@@ -605,7 +605,7 @@ return [
     'hero' => [
         'lines'  => ['Care for teens.', 'Room for parents.'],
         'accent' => 'Room for parents.',
-        'lede'   => 'Psychiatry and therapy for young people from 15, with family sessions built in and a clear agreement, from the first visit, about what is shared with you and what stays between your teenager and their clinician.',
+        'lede'   => 'Get psychiatry and therapy for young people from age 15, with family sessions built in and a clear agreement, from the first visit, about what is shared with you and what stays between your teenager and their clinician.',
         'image'  => 'adolescent/hero.jpg',
         'panel'  => '#ece9e4',
         'wash'   => '236 233 228',
