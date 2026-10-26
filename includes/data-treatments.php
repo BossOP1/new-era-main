@@ -172,13 +172,13 @@ return [
 'therapy' => [
     'name'  => 'Therapy',
     'page'  => 'therapy.php',
-    'title' => 'Therapy',
+    'title' => 'Therapy & Counseling in California & Texas',
     'meta'  => 'Evidence-based therapy — CBT, DBT, EMDR, ACT and exposure work — with therapists who work alongside your prescriber. What each approach is for, and what a session is like.',
 
     'hero' => [
-        'lines'  => ['Talking helps.', 'The right kind', 'helps more.'],
-        'accent' => 'helps more.',
-        'lede'   => 'Therapy is the part of care where you do the work, with someone trained to make it work. We use approaches with peer-reviewed evidence behind them, and match the approach to what you are dealing with.',
+        'lines'  => ['Therapy that fits', 'what you’re going through.'],
+        'accent' => 'what you’re going through.',
+        'lede'   => 'Therapy is a conversation with a trained professional, where you safely explore your experiences and behaviors. We use approaches with peer-reviewed evidence behind them, and match the approach to what you are dealing with.',
         'image'  => 'treatments/therapy-hero.jpg',
         'panel'  => '#ece8e3',
         'wash'   => '236 232 227',
@@ -211,10 +211,11 @@ return [
     ],
 
     'band' => [
-        'value'  => '15+',
-        'rest'   => 'is the age we start seeing patients, with family sessions for adolescents.',
+        'value'  => 'Ages 15 and up:',
+        'rest'   => 'we see adults and adolescents, with family sessions for teens.',
         'note'   => 'With consent, we coordinate with school counselors.',
         'source' => 'Who we see',
+        'static' => true,
     ],
 
     'options' => [
@@ -222,11 +223,11 @@ return [
         'eyebrow'=> '02 / The approaches',
         'lines'  => ['Six methods.', 'Matched to you.'],
         'accent' => 'Matched to you.',
-        'intro'  => 'These are the approaches our therapists use most. You do not need to choose one — that part is our job.',
+        'intro'  => 'These are the approaches our therapists use most. You don’t need to pick one; your therapist will recommend the right fit for you.',
         'items'  => [
-            ['Cognitive behavioral therapy (CBT)', 'Identifies distorted thought patterns and the behaviors they drive, then practises reshaping both. The most studied therapy there is.', 'CBT'],
+            ['Cognitive behavioral therapy (CBT)', 'Identifies distorted thought patterns and the behaviors they drive, then practices reshaping both. The most studied therapy there is.', 'CBT'],
             ['Dialectical behavior therapy (DBT)', 'Emotion regulation, distress tolerance, mindfulness and interpersonal skills, for feelings that seem unmanageable.', 'DBT'],
-            ['EMDR',                          'Eye movement desensitisation and reprocessing: guided bilateral stimulation that helps the brain reprocess traumatic memories.', 'Trauma'],
+            ['EMDR',                          'Eye movement desensitization and reprocessing: guided bilateral stimulation that helps the brain reprocess traumatic memories.', 'Trauma'],
             ['Exposure-based therapy (ERP)',        'Exposure and response prevention for OCD, and prolonged exposure for PTSD — facing what you avoid, gradually, until it loses its grip.', 'ERP · PE'],
             ['Acceptance and commitment (ACT)',     'Making room for difficult thoughts rather than fighting them, and acting on what matters to you anyway.', 'ACT'],
             ['Psychodynamic therapy (PDT)',         'Longer-term, in-depth work on how earlier experiences shape what is happening now.', 'In depth'],
@@ -238,7 +239,7 @@ return [
         'eyebrow'=> '03 / What therapy is like',
         'lines'  => ['A conversation', 'with a structure.'],
         'accent' => 'with a structure.',
-        'intro'  => 'Initially, Most people come weekly to begin with. Progress is reviewed monthly, and the plan changes if it is not working.',
+        'intro'  => 'Most people come weekly to begin with. Progress is reviewed monthly, and the plan changes if it is not working.',
         'photo'     => 'treatments/therapy-adolescent.jpg',
         'photo_alt' => 'A teenager talking with a therapist on a sofa',
         'focus'     => 'object-[62%_40%]',
@@ -246,7 +247,7 @@ return [
         'steps' => [
             ['Your first session',      'Mostly listening: what brought you here, what you want to change, and what has and has not helped before.'],
             ['Choosing an approach', 'Your therapist proposes a method and explains it. If it does not feel right, you say so.'],
-            ['The work',             'Sessions have a focus. Many approaches include something to practise between them, because that is where much of the change happens.'],
+            ['The work',             'Sessions have a focus. Many approaches include something to practice between them, because that is where much of the change happens.'],
             ['Reviewing progress',   'Each month you look at what has shifted, using simple measures as well as impressions, and adjust the plan.'],
             ['Adding or finishing',  'Some people add medication or TMS along the way. Others finish once their goals are met, with the door left open.'],
         ],
@@ -255,6 +256,7 @@ return [
             ['Monthly', 'progress reviews', '#5f8f38'],
             ['15+',     'ages we see',      '#0f639b'],
         ],
+        'facts_static' => true,
     ],
 
     'treats' => [
@@ -270,10 +272,10 @@ return [
         'feature' => [
             'eyebrow' => 'Therapy and prescribing, together',
             'heading' => 'Your therapist and your prescriber read the same notes.',
-            'copy'    => 'Many people see a therapist in one place and a prescriber in another, and end up as the go-between. Here they work in the same practice, so a change in one part of your care is known to the other the same week.',
+            'copy'    => 'Many people see a therapist in one place and a prescriber in another, and end up spending time moving between the two. Here they work in the same practice, so a change in one part of your care is known to the other the same week.',
             'photo'   => 'treat-6',
             'photo_alt' => 'Two women talking during a therapy session',
-            'cta'     => 'Book a First Session',
+            'cta'     => 'Book Your First Session',
         ],
         'honest' => [
             'eyebrow' => 'Finding the right fit',

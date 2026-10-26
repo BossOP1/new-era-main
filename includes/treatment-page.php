@@ -271,7 +271,8 @@ $others = array_values(array_filter(
       <div class="mt-7 grid grid-cols-3 gap-3 rounded-[24px] border border-ink/10 bg-white px-5 py-5 sm:gap-6 sm:px-8">
         <?php foreach ($t['process']['facts'] as [$value, $label, $colour]): ?>
           <div>
-            <p class="display-mark m-0 text-[22px] font-extrabold tracking-[-0.03em] sm:text-[30px]" style="color:<?= e($colour) ?>" data-count="<?= e($value) ?>"><?= e($value) ?></p>
+            <?php // 'facts_static' => true prints the figures without the count-up. ?>
+            <p class="display-mark m-0 text-[22px] font-extrabold tracking-[-0.03em] sm:text-[30px]" style="color:<?= e($colour) ?>"<?= empty($t['process']['facts_static']) ? ' data-count="' . e($value) . '"' : '' ?>><?= e($value) ?></p>
             <p class="m-0 mt-1 text-[12px] leading-[1.35] text-ink/60 sm:text-[13px]"><?= e($label) ?></p>
           </div>
         <?php endforeach; ?>
