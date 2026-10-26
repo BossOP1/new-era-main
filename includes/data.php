@@ -395,8 +395,8 @@ return [
                 'name'    => 'Major depressive disorder',
                 'short'   => 'MDD',
                 'copy'    => 'Persistent sadness, loss of interest in activities and appetite changes, lasting two weeks or longer.',
-                'slot'    => 'cond-1',
-                'alt'     => 'A woman laughing outdoors in warm light',
+                'slot'    => 'cond-7',
+                'alt'     => 'A woman smiling softly in an open field',
                 'caption' => 'The most common form, and highly treatable.',
             ],
             [
@@ -431,13 +431,13 @@ return [
         'diagnosis_steps' => [
             [
                 'number' => '01',
-                'name'   => 'A conversation, first',
-                'copy'   => 'A clinical interview about your daily life, your behaviour and substance use, the feelings you have been having, and how long they have been going on.',
+                'name'   => 'First, a conversation',
+                'copy'   => 'A clinical interview about your daily life, your behavior and substance use, the feelings you have been having, and how long they have been going on.',
             ],
             [
                 'number' => '02',
                 'name'   => 'Questionnaires',
-                'copy'   => 'Standardised screens such as the PHQ-9 put a number on what you describe, so change can be tracked rather than guessed at.',
+                'copy'   => 'Standardized screens such as the PHQ-9 put a number on what you describe, so change can be tracked rather than guessed at.',
             ],
             [
                 'number' => '03',
@@ -474,7 +474,7 @@ return [
             'Understand what is actually driving how you feel',
             'Build tools that hold up on the harder days',
             'Get real insight into yourself along the way',
-            'Move towards a life that feels like yours again',
+            'Move toward a life that feels like yours again',
         ],
 
         'faqs' => [
@@ -484,7 +484,7 @@ return [
             ],
             [
                 'q' => 'How is depression diagnosed?',
-                'a' => 'Through both a psychological and a physical assessment, and only by a medical professional. Expect a clinical interview, one or more questionnaires, and questions about your physical health — sometimes a blood test, because conditions such as thyroid disorders produce symptoms that look a great deal like depression.',
+                'a' => 'Depression is diagnosed through both a psychological and a physical assessment, and only by a medical professional. Expect a clinical interview, one or more questionnaires, and questions about your physical health — sometimes a blood test, because conditions such as thyroid disorders produce symptoms that look a great deal like depression.',
             ],
             [
                 'q' => 'What counts as treatment-resistant depression?',
@@ -496,11 +496,11 @@ return [
             ],
             [
                 'q' => 'How long does a course of TMS take?',
-                'a' => 'A session runs roughly 30 to 40 minutes, and a full course spans four to six weeks. There is no recovery time afterwards — patients drive themselves home and go back to their day. Accelerated protocols compress the same course into days for people who need it faster.',
+                'a' => 'A session runs roughly 30 to 40 minutes, and a full course spans four to six weeks. There is no recovery time afterward — patients drive themselves home and go back to their day. Accelerated protocols compress the same course into days for people who need it faster.',
             ],
             [
                 'q' => 'Will my insurance cover TMS for depression?',
-                'a' => 'For treatment-resistant depression, most plans do once two or more medications have been tried. We verify your benefits and handle the prior authorisation before you commit to anything.',
+                'a' => 'For treatment-resistant depression, most plans do once two or more medications have been tried. We verify your benefits and handle the prior authorization before you commit to anything.',
             ],
         ],
 

@@ -8,7 +8,7 @@
  * from index.php (stat rows, chips, the native-details accordion, the closing
  * booking panel). Copy lives in includes/data.php under 'depression'.
  */
-$page_title       = 'Depression';
+$page_title       = 'Depression Treatment';
 $page_description = 'Depression that lasts is treatable. Understand the signs, the types, how it is diagnosed, and how TMS helps when antidepressants have not — from Anew Era Health.';
 $header_hero_light = true;
 $header_inset      = true;   // the bar sits inside the gutter-framed hero
@@ -61,11 +61,11 @@ $anchor   = 'scroll-mt-[148px] sm:scroll-mt-[164px]';
         </h1>
 
         <p class="m-0 mt-5 max-w-[46ch] text-[15px] leading-[1.75] text-[#463c2f] sm:mt-6 sm:text-base">
-          It belongs to a family of conditions called mood disorders, and it runs from short episodes of low mood to forms that settle in and reshape a life. Wherever yours sits on that range, it is treatable — including the treatment-resistant kind.
+          As a mood disorder, depression can range from occasional episodes of sadness and hopelessness to a chronic condition that affects nearly every aspect of life. Whatever form it takes, recovery is possible, and many treatment options exist, even when previous approaches haven’t worked.
         </p>
 
         <div class="mt-6 flex flex-wrap gap-3 sm:mt-8">
-          <a href="#book" class="<?= $btn_blue ?>">Book a Consultation <?= arrow_icon(16) ?></a>
+          <a href="#book" class="<?= $btn_blue ?>">Book Your Consultation <?= arrow_icon(16) ?></a>
           <a href="<?= e($site['phone_href']) ?>" class="<?= $btn_line ?>"><?= e($site['phone']) ?></a>
         </div>
 
@@ -134,7 +134,7 @@ $anchor   = 'scroll-mt-[148px] sm:scroll-mt-[164px]';
       <?php endforeach; ?>
     </ul>
     <p class="m-0 mt-5 border-t border-ink/10 pt-4 text-[13px] leading-[1.65] text-[#6c7680] sm:mt-6 sm:pt-5">
-      Recognising yourself in this list is not a diagnosis. Only a clinician can make one — and that is a conversation, not a test you pass or fail.
+      Recognizing yourself in this list is not a diagnosis. Only a clinician can make one — and that is a conversation, not a test you pass or fail.
     </p>
   </aside>
 </section>
@@ -149,7 +149,7 @@ $anchor   = 'scroll-mt-[148px] sm:scroll-mt-[164px]';
         <div>
           <p class="m-0 mb-5 flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-[0.17em] text-white/60 md:mb-[26px]"><?= $dot ?> How common it is</p>
           <h2 class="m-0 font-serif font-normal leading-[1.08] tracking-[-0.035em] text-white text-[clamp(30px,3.6vw,46px)]">
-            You are in far more<br><em class="italic font-normal text-[#cde3de]">company than it feels.</em>
+            You are not<br><em class="italic font-normal text-[#cde3de]">alone in this.</em>
           </h2>
         </div>
         <p class="m-0 mt-5 max-w-[34ch] text-[15px] leading-[1.8] text-[#dbe6ee] md:mt-0">
@@ -179,7 +179,7 @@ $anchor   = 'scroll-mt-[148px] sm:scroll-mt-[164px]';
 <section id="risk" class="<?= $anchor ?> px-3 py-3 sm:px-5 sm:py-5 lg:px-8">
   <div class="relative isolate overflow-hidden rounded-[28px] bg-night">
     <div class="absolute inset-0">
-      <?= image_slot('depression/risk.jpg', 'Window light photo', 'Late daylight coming through a window behind a drawn blind') ?>
+      <?= image_slot('hero.jpg', 'Group photo', 'Adults of different ages sitting together on a couch') ?>
     </div>
     <div aria-hidden="true" class="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(9,20,28,0.52)_0%,rgba(9,20,28,0.72)_42%,rgba(9,20,28,0.92)_100%)]"></div>
     <div aria-hidden="true" class="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(9,20,28,0.62)_0%,rgba(9,20,28,0.30)_46%,rgba(9,20,28,0.10)_100%)]"></div>
@@ -316,10 +316,10 @@ $anchor   = 'scroll-mt-[148px] sm:scroll-mt-[164px]';
     <div class="mb-7 sm:mb-9 md:mb-11 md:flex md:items-end md:justify-between md:gap-10">
       <div>
         <p class="<?= $eyebrow ?>"><?= $dot ?> 05 / How it is diagnosed</p>
-        <h2 class="<?= $h2 ?>">Physical and psychological.<br><em class="italic font-normal text-brand-blue">Both, every time.</em></h2>
+        <h2 class="<?= $h2 ?>">Diagnosis: A physical and<br>psychological process.<br><em class="italic font-normal text-brand-blue">Every time.</em></h2>
       </div>
       <p class="m-0 mt-[22px] max-w-[360px] text-base leading-[1.75] text-[#58616a] md:mt-0 md:max-w-[290px]">
-        It can feel invasive. It is what lets a clinician tell your depression apart from everything that imitates it.
+        A thorough assessment lets your clinician tell depression apart from other conditions that can look like it.
       </p>
     </div>
 
@@ -329,7 +329,7 @@ $anchor   = 'scroll-mt-[148px] sm:scroll-mt-[164px]';
       <?= image_slot('depression/diagnosis.jpg', 'Consultation photo', 'A clinician writing notes while talking with a patient across a desk') ?>
       <div aria-hidden="true" class="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(9,20,28,0.78)_0%,rgba(9,20,28,0.34)_48%,rgba(9,20,28,0.06)_100%)]"></div>
       <figcaption class="absolute bottom-5 left-5 max-w-[26ch] font-serif text-[20px] leading-[1.25] text-white sm:bottom-7 sm:left-9 sm:max-w-[30ch] sm:text-[26px]">
-        Only a medical professional can make the <em class="not-italic text-[#cde3de]">diagnosis.</em>
+        Only a medical professional can make <em class="not-italic text-[#cde3de]">a diagnosis.</em>
       </figcaption>
     </figure>
 
@@ -355,7 +355,7 @@ $anchor   = 'scroll-mt-[148px] sm:scroll-mt-[164px]';
       <div class="relative">
         <p class="m-0 mb-5 flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-[0.17em] text-white/60 md:mb-[26px]"><?= $dot ?> 06 / Treatment-resistant depression</p>
         <h2 class="m-0 font-serif font-normal leading-[1.08] tracking-[-0.035em] text-white text-[clamp(30px,3.4vw,44px)]">
-          Two medications in,<br><em class="italic font-normal text-[#cde3de]">still nothing.</em>
+          When medications<br><em class="italic font-normal text-[#cde3de]">don’t work.</em>
         </h2>
 
         <blockquote class="m-0 mt-6 border-l border-white/30 pl-5 sm:mt-8 sm:pl-6">
@@ -460,7 +460,7 @@ $anchor   = 'scroll-mt-[148px] sm:scroll-mt-[164px]';
           <?= image_slot('depression/support.jpg', 'Support photo', 'One person resting their head on another’s shoulder') ?>
           <div aria-hidden="true" class="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent"></div>
           <figcaption class="absolute inset-x-5 bottom-5 font-serif text-[21px] leading-[1.25] text-white sm:text-[23px]">
-            Staying is most of it.
+            Being there matters most.
           </figcaption>
         </div>
       </figure>
@@ -493,7 +493,7 @@ $anchor   = 'scroll-mt-[148px] sm:scroll-mt-[164px]';
   <div class="grid items-stretch gap-4 md:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] md:gap-[22px]">
     <div class="flex flex-col justify-center py-2">
       <p class="<?= $eyebrow ?>"><?= $dot ?> If it goes untreated</p>
-      <h2 class="<?= $h2 ?>">It gets harder,<br><em class="italic font-normal text-brand-blue">not easier.</em></h2>
+      <h2 class="<?= $h2 ?>">Left untreated,<br><em class="italic font-normal text-brand-blue">depression gets harder.</em></h2>
       <p class="m-0 mt-6 max-w-[44ch] text-base leading-[1.85] text-[#58616a]">
         People describe the same thing: the world gets smaller, the energy stays low, and ordinary tasks start to feel like too much. Untreated depression can also feed coping patterns that cost more than they give back.
       </p>
@@ -521,7 +521,7 @@ $anchor   = 'scroll-mt-[148px] sm:scroll-mt-[164px]';
           <?php endforeach; ?>
         </ul>
         <p class="m-0 mt-5 text-[13px] leading-[1.7] text-white/70">
-          And the part that matters most: the first step towards that can be taken today.
+          And the part that matters most: the first step toward that can be taken today.
         </p>
       </div>
     </div>
@@ -603,7 +603,7 @@ foreach ($data['conditions'] as $condition) {
           Find relief from depression<br><em class="italic font-normal text-brand-blue">that hasn’t budged.</em>
         </h2>
         <p class="m-0 mt-4 max-w-[50ch] text-[15px] leading-[1.75] text-ink/75 sm:mt-5 sm:text-base sm:leading-[1.8]">
-          We know how hard appointments are to fit into a week that is already full. After the first visit, a TMS session generally runs fifteen to twenty minutes — short enough for a lunch break, with nothing to recover from afterwards.
+          We know how hard appointments are to fit into a week that is already full. After the first visit, a TMS session generally runs fifteen to twenty minutes — short enough for a lunch break, with nothing to recover from afterward.
         </p>
         <div class="mt-6 flex flex-wrap gap-3 sm:mt-8">
           <a href="index.php#book" class="<?= $btn_blue ?>">Book a Consultation <?= arrow_icon(16) ?></a>
