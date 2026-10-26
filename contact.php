@@ -30,6 +30,9 @@ require __DIR__ . '/includes/header.php';
 
 $locations = require __DIR__ . '/includes/data-locations.php';
 
+// Alphabetical within each state, for the clinic list and the form's dropdown.
+uasort($locations, static fn (array $a, array $b): int => strcmp($a['name'], $b['name']));
+
 // The admissions line every clinic page publishes. Kept here rather than in
 // config.php because config's number is still a placeholder.
 $admissions      = '(866) 826-2061';
@@ -50,12 +53,12 @@ $req   = '<span aria-hidden="true" class="text-brand-orange">*</span>';
 $interests = ['Psychiatry and medication', 'Therapy', 'TMS therapy', 'Spravato® (Texas only)', 'Not sure yet'];
 
 $next_steps = [
-    ['name' => 'We call you back',      'copy' => 'Usually the same working day. If you would rather we emailed, say so in the message.'],
-    ['name' => 'We check your benefits','copy' => 'Before your first appointment, not after it — so you know what a visit costs before you walk in.'],
+    ['name' => 'We call you back',      'copy' => 'We usually call back the same working day. If you would rather we email, please say so in the message.'],
+    ['name' => 'We check your benefits','copy' => 'We check your benefits before your first appointment, so you know what a visit costs before you walk in.'],
     ['name' => 'We offer you times',    'copy' => 'New patient consultations are usually available within five business days.'],
 ];
 ?>
-<div class="bg-[#faf8f3] [&_a:focus-visible]:outline [&_a:focus-visible]:outline-[3px] [&_a:focus-visible]:outline-brand-orange [&_a:focus-visible]:outline-offset-[5px]">
+<div class="bg-white [&_a:focus-visible]:outline [&_a:focus-visible]:outline-[3px] [&_a:focus-visible]:outline-brand-orange [&_a:focus-visible]:outline-offset-[5px]">
 
 <!-- ─── Hero ─────────────────────────────────────────────────────────── -->
 <div class="bg-white px-3 pt-3 sm:px-5 sm:pt-5 lg:px-8">
@@ -77,12 +80,12 @@ $next_steps = [
         </nav>
 
         <h1 class="on-footage m-0 font-serif font-normal leading-[1.05] tracking-[-0.04em] text-white text-[36px] sm:text-[52px] lg:text-[58px]">
-          Talk to<br class="hidden sm:inline"> <em class="not-italic text-brand-sky">someone.</em>
+          Get in touch<br class="hidden sm:inline"> <em class="not-italic text-brand-sky">with Anew Era.</em>
         </h1>
 
         <p class="m-0 mt-5 max-w-[48ch] text-[15px] leading-[1.75] text-white/80 sm:mt-6 sm:text-base">
-          Call and a person answers. Or send the form below and we will call you back, usually the
-          same working day — with your insurance already checked.
+          Call one of our caring representatives or fill out the form. We will help you book an
+          appointment, find the right treatment and verify your insurance.
         </p>
 
         <div class="mt-6 flex flex-wrap gap-3 sm:mt-8">
@@ -96,7 +99,7 @@ $next_steps = [
     </div>
 
     <div class="mx-auto mt-6 flex max-w-[1160px] flex-wrap items-center justify-between gap-3 border-t border-white/30 pt-4 text-[11px] text-white/85 sm:mt-8">
-      <span>Admissions 6:00am – 6:00pm, Monday to Friday</span>
+      <span>Admissions 6 a.m. – 6 p.m. Pacific (8 a.m. – 8 p.m. Central), Monday through Friday</span>
       <span><?= e(count($locations)) ?> clinics across California and Texas</span>
     </div>
   </section>
@@ -108,7 +111,6 @@ $next_steps = [
     <div>
       <p class="m-0 text-[11px] font-bold uppercase tracking-[0.16em] text-clay">If this is urgent</p>
       <p class="m-0 mt-2 max-w-[70ch] text-[15px] leading-[1.7] text-ink/80">
-        We are an outpatient practice, not a crisis service, and nobody watches this form out of hours.
         If you are in crisis, call or text <strong>988</strong> — the Suicide and Crisis Lifeline, any
         time. If someone is in immediate danger, call <strong>911</strong>.
       </p>
@@ -124,7 +126,8 @@ $next_steps = [
 <section id="message" class="<?= $wrap ?> scroll-mt-[110px] py-10 sm:py-14 md:py-[76px]">
   <div class="lg:grid lg:grid-cols-[minmax(0,1.25fr)_minmax(0,0.75fr)] lg:gap-14 xl:gap-20">
 
-    <div>
+    <?php // The form sits in its own panel so it reads apart from the page. ?>
+    <div class="rounded-[28px] border border-[#e3e7ea] bg-[#faf8f3] p-6 shadow-[0_20px_50px_rgba(20,32,43,0.06)] sm:p-9 lg:p-11">
       <?php // Netlify returns to this page with ?sent=1; the page is static HTML
             // by then, so the acknowledgement is revealed in the browser. ?>
       <?php // The wrapper carries no display utility: a Tailwind `flex` class
@@ -207,13 +210,13 @@ $next_steps = [
           <input id="insurer" name="insurer" type="text" placeholder="Aetna, Blue Cross, Tricare — or leave blank" class="<?= $field ?>">
           <p class="m-0 mt-1.5 text-[12.5px] leading-[1.6] text-ink/55">
             Tell us and we can check your benefits before we call you back.
-            <a href="insurance.php" class="font-extrabold text-brand-blue underline underline-offset-4">See Who We Are In-Network With</a>.
+            <a href="insurance.php" target="_blank" rel="noopener" class="font-extrabold text-brand-blue underline underline-offset-4">See Who We Are In-Network With</a>.
           </p>
         </div>
 
         <div class="sm:col-span-2">
           <label for="message" class="<?= $label ?>">Anything else</label>
-          <textarea id="message" name="message" rows="4" class="<?= $field ?> resize-y" placeholder="When you are free to talk, who you would like to see, what you have already tried."></textarea>
+          <textarea id="message" name="message" rows="4" class="<?= $field ?> resize-y" placeholder="When you are available to speak by phone, which provider you would like to see, and/or what treatments you have tried in the past."></textarea>
           <p class="m-0 mt-1.5 text-[12.5px] leading-[1.6] text-ink/55">
             Please keep medical detail out of this box. A web form is not a secure channel — save it
             for the call or your first appointment.
@@ -223,7 +226,7 @@ $next_steps = [
         <div class="sm:col-span-2">
           <label class="flex cursor-pointer items-start gap-3 text-[13.5px] leading-[1.6] text-ink/75">
             <input type="checkbox" name="consent" required class="mt-0.5 h-[18px] w-[18px] shrink-0 cursor-pointer rounded border-ink/30 text-brand-blue focus:ring-brand-blue/30">
-            <span>I am happy for Anew Era Health to contact me about my enquiry by phone or email. <?= $req ?></span>
+            <span>I am happy for Anew Era Health to contact me about my inquiry by phone or email. <?= $req ?></span>
           </label>
         </div>
 
@@ -246,8 +249,8 @@ $next_steps = [
           <p class="m-0 text-[11px] font-bold uppercase tracking-[0.16em] text-brand-green">Call us</p>
           <a href="<?= e($admissions_href) ?>" class="mt-3 block font-serif text-[30px] leading-none tracking-[-0.02em] text-white transition-colors hover:text-brand-sky sm:text-[34px]"><?= e($admissions) ?></a>
           <p class="m-0 mt-3 text-[13.5px] leading-[1.65] text-white/70">
-            Admissions, 6:00am – 6:00pm Monday to Friday. Every clinic also has its own front desk —
-            the numbers are below.
+            Admissions is available 6 a.m. – 6 p.m. Pacific (8 a.m. – 8 p.m. Central), Monday through
+            Friday. Every clinic also has its own front desk — the numbers are below.
           </p>
         </div>
 
@@ -267,7 +270,7 @@ $next_steps = [
         </div>
 
         <div class="mt-3 rounded-[22px] border border-[#e3e7ea] bg-white p-7">
-          <p class="m-0 text-[11px] font-bold uppercase tracking-[0.16em] text-ink/45">Other enquiries</p>
+          <p class="m-0 text-[11px] font-bold uppercase tracking-[0.16em] text-ink/45">Other inquiries</p>
           <dl class="m-0 mt-4">
             <div class="border-b border-ink/[0.07] pb-3.5">
               <dt class="m-0 text-[14px] font-extrabold text-ink">Medical records</dt>
@@ -276,7 +279,7 @@ $next_steps = [
             <div class="pt-3.5">
               <dt class="m-0 text-[14px] font-extrabold text-ink">Already a patient?</dt>
               <dd class="m-0 mt-1 text-[13px] leading-[1.6] text-[#58616a]">
-                Call your clinic directly rather than this line — they have your chart in front of them.
+                Call your clinic directly rather than this line.
               </dd>
             </div>
           </dl>
@@ -290,8 +293,8 @@ $next_steps = [
 <section id="clinics" class="<?= $wrap ?> scroll-mt-[110px] pb-10 sm:pb-[60px] md:pb-[76px]">
   <div class="mb-7 sm:mb-9 md:flex md:items-end md:justify-between md:gap-10">
     <div>
-      <p class="<?= $eyebrow ?>"><?= $dot ?> Every clinic</p>
-      <h2 class="<?= $h2 ?>">Or call the one<br><em class="italic font-normal text-brand-blue">nearest you.</em></h2>
+      <p class="<?= $eyebrow ?>"><?= $dot ?> <?= e((string) count($locations)) ?> clinics to serve you</p>
+      <h2 class="<?= $h2 ?>">Get in touch with an<br><em class="italic font-normal text-brand-blue">Anew Era clinic near you.</em></h2>
     </div>
     <p class="m-0 mt-[22px] max-w-[380px] text-base leading-[1.75] text-[#58616a] md:mt-0 md:max-w-[330px]">
       Several clinics share the admissions line; the rest have their own front desk. Either way you

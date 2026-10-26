@@ -88,8 +88,6 @@ $footer_link = 'text-sm text-white/75 transition-colors hover:text-white';
     <div id="footer-clinics" class="mt-12 scroll-mt-[110px] border-t border-white/12 pt-9">
       <div class="mb-6 flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1.5">
         <p class="m-0 text-[11px] font-extrabold uppercase tracking-[0.14em] text-white/40">Our clinics</p>
-        <?php // On a phone it takes its own line; squeezed beside the label it clipped. ?>
-        <p class="m-0 w-full text-[13px] leading-[1.5] text-white/40 sm:w-auto sm:max-w-[46ch] sm:text-right"><?= e($site['menus']['locations']['note']) ?></p>
       </div>
 
       <div class="grid grid-cols-2 gap-x-8 gap-y-7 sm:grid-cols-3 lg:grid-cols-4">
@@ -121,13 +119,8 @@ $footer_link = 'text-sm text-white/75 transition-colors hover:text-white';
       </div>
     </div>
 
-    <?php /* Brand sign-off. Decorative — the same logo is announced at the top
-             of the footer — so it is sized to close the page, not to fill it. */ ?>
-    <div class="mt-11 flex justify-center">
-      <?= brand_logo($site['name'], 'w-[min(52vw,340px)] select-none opacity-90', true, true) ?>
-    </div>
-
-    <p class="m-0 mt-9 max-w-[900px] text-[11.5px] leading-[1.65] text-white/30"><?= e($site['legal']) ?></p>
+    <?php // One line from the desktop up; it wraps on narrower screens. ?>
+    <p class="m-0 mt-9 text-[11.5px] leading-[1.65] text-white/30"><?= e($site['legal']) ?></p>
   </div>
 </footer>
 

@@ -19,7 +19,7 @@ return [
     // footer's own directory lists them. This is the admission window every
     // one of them keeps — each clinic's address, phone and hours are in
     // includes/data-locations.php.
-    'hours'       => ['Admissions 6:00am – 6:00pm', 'Monday to Friday'],
+    'hours'       => ['Admissions, Monday–Friday', '6 a.m. – 6 p.m. Pacific', '8 a.m. – 8 p.m. Central'],
 
     // Kept in step with the 'meta' block in includes/data-reviews.php, which
     // is regenerated from the practice's review export — update both together.
@@ -121,11 +121,11 @@ return [
                     'href'  => 'team.php#ca',
                     'desc'  => 'Orange County & Greater LA',
                     'items' => [
-                        ['label' => 'Newport Beach',     'href' => 'newport-beach.php'],
                         ['label' => 'Huntington Beach',  'href' => 'huntington-beach.php'],
                         ['label' => 'Laguna Hills',      'href' => 'laguna-hills.php'],
-                        ['label' => 'Orange',            'href' => 'orange.php'],
                         ['label' => 'Long Beach',        'href' => 'long-beach.php'],
+                        ['label' => 'Newport Beach',     'href' => 'newport-beach.php'],
+                        ['label' => 'Orange',            'href' => 'orange.php'],
                         ['label' => 'Torrance',          'href' => 'torrance.php'],
                         ['label' => 'West Los Angeles',  'href' => 'west-los-angeles.php'],
                     ],
@@ -135,8 +135,8 @@ return [
                     'href'  => 'team.php#tx',
                     'desc'  => 'Austin & the Hill Country',
                     'items' => [
-                        ['label' => 'Central Austin',    'href' => 'central-austin.php'],
                         ['label' => 'Cedar Park',        'href' => 'cedar-park.php'],
+                        ['label' => 'Central Austin',    'href' => 'central-austin.php'],
                         ['label' => 'Westlake',          'href' => 'westlake.php'],
                     ],
                 ],
@@ -145,8 +145,8 @@ return [
                     'href'  => 'team.php#tx',
                     'desc'  => 'Dallas & Fort Worth',
                     'items' => [
-                        ['label' => 'Central Dallas',    'href' => 'central-dallas.php'],
                         ['label' => 'Allen',             'href' => 'allen.php'],
+                        ['label' => 'Central Dallas',    'href' => 'central-dallas.php'],
                         ['label' => 'Grapevine',         'href' => 'grapevine.php'],
                     ],
                 ],
@@ -200,7 +200,7 @@ return [
             ['label' => 'Careers',  'href' => 'https://discoverybehavioralhealth.com/careers/jobs/?location=Anew+Era+TMS', 'external' => true],
         ],
         'Patients' => [
-            ['label' => 'Book a Visit',   'href' => 'index.php#book'],
+            ['label' => 'Book a visit',   'href' => 'contact.php'],
             ['label' => 'Meet our team',  'href' => 'team.php'],
             ['label' => 'Reviews',        'href' => 'reviews.php'],
             ['label' => 'Insurance',      'href' => 'insurance.php'],
