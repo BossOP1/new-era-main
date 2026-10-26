@@ -11,7 +11,7 @@
  * so plainly — see the note above it.
  */
 $page_title        = 'TMS therapy';
-$page_description  = 'Transcranial magnetic stimulation is FDA-cleared, drug-free and non-invasive. What it is, how a session works, what it treats, and what it costs.';
+$page_description  = 'Transcranial magnetic stimulation (TMS) is FDA-cleared, drug-free and non-invasive. What it is, how a session works, what it treats, and what it costs.';
 $header_hero_light = true;
 $header_inset      = true;
 require __DIR__ . '/includes/header.php';
@@ -24,7 +24,7 @@ $h2       = 'm-0 font-serif font-normal leading-[1.08] tracking-[-0.035em] text-
 $lede     = 'm-0 text-[15px] leading-[1.7] text-[#58616a] sm:text-base sm:leading-[1.85]';
 $btn_blue = 'inline-flex items-center gap-2.5 rounded-full bg-brand-blue px-7 py-4 text-[15px] font-extrabold text-white transition-colors hover:bg-brand-blue-dark';
 $btn_line = 'inline-flex items-center gap-2.5 rounded-full border-2 border-ink/20 bg-white/85 px-7 py-[14px] text-[15px] font-extrabold text-ink backdrop-blur-sm transition-colors hover:border-ink/45 hover:bg-white';
-$anchor   = 'scroll-mt-[148px] sm:scroll-mt-[164px]';
+$anchor   = 'scroll-mt-[148px]';
 $em       = 'italic font-normal text-brand-blue';
 ?>
 <div class="bg-[#faf8f3] [&_a:focus-visible]:outline [&_a:focus-visible]:outline-[3px] [&_a:focus-visible]:outline-brand-orange [&_a:focus-visible]:outline-offset-[5px]">
@@ -54,7 +54,7 @@ $em       = 'italic font-normal text-brand-blue';
         </h1>
 
         <p class="m-0 mt-5 max-w-[46ch] text-[15px] leading-[1.75] text-ink/75 sm:mt-6 sm:text-base">
-          Transcranial magnetic stimulation is FDA-cleared, non-invasive and drug-free. You sit in a chair fully awake for about half an hour, then drive yourself home and get on with your day.
+          Transcranial magnetic stimulation (TMS) is FDA-cleared, non-invasive and drug-free. You sit in a chair fully awake for about half an hour, then drive yourself home and get on with your day.
         </p>
 
         <div class="mt-6 flex flex-wrap gap-3 sm:mt-8">
@@ -76,7 +76,9 @@ $em       = 'italic font-normal text-brand-blue';
 </div>
 
 <!-- ─── Section rail ─────────────────────────────────────────────────── -->
-<nav aria-label="On this page" class="sticky top-[98px] z-30 border-b border-ink/10 bg-[#faf8f3]/92 backdrop-blur-md sm:top-[114px]">
+<?php // Sticks flush under the header bar, which ends at 94px once the page
+      // scrolls at every width, so no strip of page shows between the two. ?>
+<nav aria-label="On this page" class="sticky top-[94px] z-30 border-b border-ink/10 bg-[#faf8f3]/92 backdrop-blur-md">
   <div class="<?= $wrap ?> flex items-center gap-1 overflow-x-auto py-2.5 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
     <?php foreach ([
       '#what'    => 'What it is',
@@ -106,28 +108,27 @@ $em       = 'italic font-normal text-brand-blue';
         The pulses are the same class of magnetic field an MRI scanner uses. They pass painlessly through the skull and induce a small electrical current in the tissue underneath, which stimulates nerve cells that have gone underactive. Nothing is implanted, nothing is swallowed, and you are awake for all of it.
       </p>
       <p class="<?= $lede ?>">
-        It is worth saying plainly what TMS is not, because people arrive braced for something else. It is not electroconvulsive therapy. There is no seizure, no general anesthetic, and no memory loss associated with it.
+        TMS is not electroconvulsive therapy. There is no seizure, no general anesthetic, and no risk of memory loss associated with TMS treatment.
       </p>
     </div>
 
-    <?php // The four facts that used to sit in a card on the right, compressed
-          // into a strip so the photograph can have that side. ?>
-    <dl class="m-0 mt-7 grid grid-cols-2 gap-x-5 gap-y-4 rounded-[20px] border border-[#e3e7ea] bg-white px-6 py-5 sm:mt-8 sm:gap-x-8 sm:gap-y-5 sm:px-7 sm:py-6">
+    <?php // The four facts, as a checked list in a card beside the copy. ?>
+    <ul class="m-0 mt-7 list-none space-y-3 rounded-[20px] border border-[#e3e7ea] bg-white px-6 py-5 sm:mt-8 sm:space-y-3.5 sm:px-7 sm:py-6">
       <?php foreach ([
-        ['FDA-cleared',   'Depression 2008, OCD 2018'],
-        ['Outpatient',    'No hospital stay'],
-        ['No anesthesia', 'Awake, and you drive home'],
-        ['Drug-free',     'Nothing in your bloodstream'],
+        ['FDA-cleared',   'For depression in 2008 and OCD in 2018.'],
+        ['Outpatient',    'No hospital stay.'],
+        ['No anesthesia', 'You are awake during treatments and can drive yourself to and from appointments.'],
+        ['Drug-free',     'Nothing in your bloodstream.'],
       ] as [$term, $def]): ?>
-        <div>
-          <dt class="m-0 text-[14px] font-extrabold leading-[1.3] tracking-[-0.01em] text-ink"><?= e($term) ?></dt>
-          <dd class="m-0 mt-1 text-[12px] leading-[1.45] text-[#6c7680]"><?= e($def) ?></dd>
-        </div>
+        <li class="flex items-start gap-3">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#5f8f38" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="mt-[3px] shrink-0"><path d="m5 12.5 4.5 4.5L19 7"/></svg>
+          <span class="text-[14px] leading-[1.55] text-[#58616a]"><strong class="font-extrabold text-ink"><?= e($term) ?>.</strong> <?= e($def) ?></span>
+        </li>
       <?php endforeach; ?>
-    </dl>
+    </ul>
 
     <p class="m-0 mt-4 max-w-[60ch] text-[13px] leading-[1.7] text-[#6c7680]">
-      Whether TMS is right for you is a clinical judgement, not a form. The assessment is where that gets decided.
+      Whether TMS is right for you is a clinical judgment, not a form. Your assessment is where your provider will decide if TMS is right for you.
     </p>
 
     <a href="#how" class="mt-6 inline-flex items-center gap-4 border-b border-brand-blue/30 py-2 text-sm font-bold text-brand-blue transition-colors hover:border-brand-blue sm:mt-7">
@@ -151,11 +152,10 @@ $em       = 'italic font-normal text-brand-blue';
   <div class="relative isolate flex flex-col gap-3 overflow-hidden rounded-[24px] bg-[#0e537c] px-6 py-7 text-white sm:flex-row sm:items-center sm:justify-between sm:gap-10 sm:px-10 sm:py-8">
     <div aria-hidden="true" class="pointer-events-none absolute -right-[150px] -top-[120px] h-[300px] w-[300px] rounded-full border border-white/10 shadow-[0_0_0_36px_#ffffff06]"></div>
     <p class="relative m-0 max-w-[32ch] font-serif text-[21px] leading-[1.3] tracking-[-0.02em] sm:text-[26px]">
-      More than <em class="not-italic text-[#cde3de]" data-count="1 million">1 million</em> TMS treatments have been delivered in the United States.
+      More than <em class="not-italic text-brand-orange" data-count="1 million">1 million</em> TMS treatments have been performed in the United States.
     </p>
     <p class="relative m-0 shrink-0 text-[13px] leading-[1.6] text-white/70 sm:max-w-[26ch] sm:text-right">
-      It has been in routine clinical use for well over a decade.
-      <span class="mt-1 block text-[10px] font-bold uppercase tracking-[0.15em] text-[#8fc7e8]">Industry figure</span>
+      TMS has been in routine clinical use for well over a decade.
     </p>
   </div>
 </section>
@@ -169,7 +169,7 @@ $em       = 'italic font-normal text-brand-blue';
         <h2 class="<?= $h2 ?>">Waking up a circuit<br><em class="<?= $em ?>">that has gone quiet.</em></h2>
       </div>
       <p class="m-0 mt-[22px] max-w-[360px] text-base leading-[1.75] text-[#58616a] md:mt-0 md:max-w-[290px]">
-        Depression is not only a feeling. It has a measurable signature in how parts of the brain fire.
+        Depression is not only a feeling. Brain scans show it changes how certain parts of the brain fire.
       </p>
     </div>
 
@@ -183,9 +183,9 @@ $em       = 'italic font-normal text-brand-blue';
 
     <ol class="-mx-[22px] m-0 flex snap-x snap-mandatory list-none gap-3 overflow-x-auto scroll-pl-[22px] px-[22px] pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:mx-0 md:grid md:snap-none md:grid-cols-3 md:gap-[22px] md:overflow-visible md:px-0 md:pb-0">
       <?php foreach ([
-        ['01', 'Find the spot', 'Your first session is mapping. We locate the motor threshold — the power level at which a pulse makes your thumb twitch — and use it to set your dose. It is specific to you, and it is why the first visit runs longer.'],
-        ['02', 'Deliver the pulses', 'The coil sits over the left dorsolateral prefrontal cortex. Pulses arrive in short trains with rests between them. You hear a click and feel a tapping on the scalp.'],
-        ['03', 'Let it accumulate', 'One session does very little. The effect is built by repetition across four to six weeks, as the circuit strengthens through neuroplasticity — the brain forming new pathways.'],
+        ['01', 'Find the spot', 'Your first session is mapping. We locate the motor threshold — the power level at which a pulse makes your thumb twitch — and use it to set your dose. Your dose settings are specific to you. Note that your first visit may run longer than a routine TMS appointment to ensure all preparatory mappings are accurate.'],
+        ['02', 'Deliver the pulses', 'The coil sits over the left dorsolateral prefrontal cortex. Pulses arrive in short train sequences with rests between them. You hear a click and feel a tapping on the scalp.'],
+        ['03', 'Let it accumulate', 'One session does very little. The effect is built by repetition across four to six weeks, as the circuit strengthens through neuroplasticity, which is how the brain forms new pathways.'],
       ] as [$n, $name, $copy]): ?>
         <li data-reveal class="relative flex w-[80%] shrink-0 snap-center flex-col rounded-[20px] border-t-2 border-brand-blue/25 bg-[#faf8f3] p-6 md:w-auto md:shrink md:p-[30px]">
           <span class="display-mark m-0 text-[34px] font-medium leading-none tracking-[-0.03em] text-brand-blue/35"><?= e($n) ?></span>
@@ -206,25 +206,25 @@ $em       = 'italic font-normal text-brand-blue';
         <?= image_slot('tms/chair.jpg', 'TMS treatment chair', 'A patient sitting in the TMS chair holding a television remote, with a technician beside her', false, 'object-[50%_30%]') ?>
         <div aria-hidden="true" class="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent"></div>
         <figcaption class="absolute inset-x-5 bottom-5 font-serif text-[21px] leading-[1.25] text-white sm:text-[23px]">
-          Most people watch something.
+          Most patients stream a show or movie during treatment.
         </figcaption>
       </div>
     </figure>
 
     <div>
       <p class="<?= $eyebrow ?>"><?= $dot ?> 03 / A session, start to finish</p>
-      <h2 class="<?= $h2 ?>">Thirty-odd minutes.<br><em class="<?= $em ?>">Then your day.</em></h2>
+      <h2 class="<?= $h2 ?>">A short visit.<br><em class="<?= $em ?>">Then back to your day.</em></h2>
       <p class="m-0 mt-6 max-w-[46ch] text-base leading-[1.8] text-[#58616a]">
-        Sessions run Monday to Friday for four to six weeks. The first one is longer because it includes mapping. After that the routine is the same every time.
+        Sessions run Monday to Friday for four to six weeks. The first session is longer because it includes mapping. After that the routine is the same every time.
       </p>
 
       <ol class="m-0 mt-6 list-none p-0 sm:mt-7">
         <?php foreach ([
-          ['You arrive', 'No preparation, no fasting, nothing to stop taking. Come as you are, on your way to or from work.'],
-          ['You settle in', 'You sit in a reclining chair, fully clothed and fully awake. Earplugs go in, because the coil clicks.'],
-          ['The coil is positioned', 'A technician places it against your scalp using the coordinates from your mapping session, and checks them each time.'],
-          ['The pulses run', 'Trains of pulses with rests between them. You feel a tapping. People read, watch something, or listen to a podcast.'],
-          ['You leave', 'No recovery period. You drive yourself home, back to work, or wherever you were going.'],
+          ['You arrive', 'There is no preparation or fasting, and you can keep taking your usual medications.'],
+          ['You settle in', 'You sit in a reclining chair, fully clothed and fully awake. We give you earplugs to wear, because the coil makes a loud clicking sound with each pulse.'],
+          ['The coil is positioned', 'A technician places the coil against your scalp using the coordinates from your brain mapping session, and checks the placement is correct each time.'],
+          ['The pulses run', 'A train sequence of pulses, with rests between them. You feel a tapping. Patients read, stream a program, or listen to a podcast.'],
+          ['You leave', 'There is no recovery period, and you can drive yourself.'],
         ] as $i => [$name, $copy]): ?>
           <li class="flex items-start gap-5 border-b border-ink/12 py-4 last:border-0 sm:py-5">
             <span aria-hidden="true" class="display-mark mt-0.5 w-6 shrink-0 text-[15px] text-brand-blue/60"><?= sprintf('%02d', $i + 1) ?></span>
@@ -269,13 +269,13 @@ $em       = 'italic font-normal text-brand-blue';
         <h2 class="<?= $h2 ?>">See it explained,<br><em class="<?= $em ?>">and see it work.</em></h2>
       </div>
       <p class="m-0 mt-[22px] max-w-[400px] text-base leading-[1.75] text-[#58616a] md:mt-0 md:max-w-[320px]">
-        Two short films made by Magstim, who build the system we treat on. The people in them are their patients rather than ours.
+        Two short videos from Magstim, the company that makes our TMS equipment. The people featured are Magstim patients, not Anew Era patients.
       </p>
     </div>
 
     <div class="grid gap-4 md:grid-cols-2 md:gap-[22px]">
       <?php foreach ([
-        ['IyIEqO2Juig', 'what-is-tms',     'What Is TMS?',      'A two-minute explainer on what the treatment does and why.'],
+        ['IyIEqO2Juig', 'what-is-tms',     'What Is TMS?',      'A two-minute explanation of what the treatment does and why.'],
         ['2WD-ObEHhSg', 'changing-lives',  'TMS Changing Lives','Magstim patients describing what the course did for them.'],
       ] as [$id, $slug, $title, $blurb]): ?>
         <figure class="m-0 overflow-hidden rounded-[24px] border border-[#e3e7ea] bg-[#faf8f3]">
@@ -302,9 +302,6 @@ $em       = 'italic font-normal text-brand-blue';
       <?php endforeach; ?>
     </div>
 
-    <p class="m-0 mt-6 text-[13px] leading-[1.7] text-[#6c7680]">
-      Playing a film loads it from YouTube, which sets its own cookies. Nothing is requested from them until you press play.
-    </p>
   </div>
 </section>
 
@@ -327,10 +324,10 @@ require __DIR__ . '/includes/reviews-section.php';
   <div class="mb-7 sm:mb-9 md:mb-11 md:flex md:items-end md:justify-between md:gap-10">
     <div>
       <p class="<?= $eyebrow ?>"><?= $dot ?> 04 / What it treats</p>
-      <h2 class="<?= $h2 ?>">Cleared for two.<br><em class="<?= $em ?>">Used for more.</em></h2>
+      <h2 class="<?= $h2 ?>">FDA-cleared for two.<br><em class="<?= $em ?>">Researched for more.</em></h2>
     </div>
     <p class="m-0 mt-[22px] max-w-[400px] text-base leading-[1.75] text-[#58616a] md:mt-0 md:max-w-[320px]">
-      TMS is FDA-cleared for depression and for OCD. Everywhere else it rests on trial evidence of varying strength, and we will tell you which is which.
+      TMS is FDA-cleared for depression and OCD. For other conditions, a provider may recommend it based on clinical research, and we will tell you where the evidence stands.
     </p>
   </div>
 
@@ -370,7 +367,7 @@ require __DIR__ . '/includes/reviews-section.php';
         <p class="m-0 max-w-[48ch] text-[15px] font-medium leading-[1.7] text-white/85">
           Several sessions a day across a short block rather than one a day for weeks. It suits people who cannot take six weeks out, and people who need the change sooner than that. It is not right for everyone, and the assessment is where we work out whether it is right for you.
         </p>
-        <a href="index.php#book" class="mt-7 inline-flex items-center gap-2.5 rounded-full bg-white px-7 py-4 text-[15px] font-extrabold text-brand-blue transition-colors hover:bg-brand-orange hover:text-white">
+        <a href="contact.php" class="mt-7 inline-flex items-center gap-2.5 rounded-full bg-white px-7 py-4 text-[15px] font-extrabold text-brand-blue transition-colors hover:bg-brand-orange hover:text-white">
           Ask About Accelerated TMS <?= arrow_icon(16) ?>
         </a>
       </div>
@@ -438,8 +435,8 @@ require __DIR__ . '/includes/reviews-section.php';
         <div class="mt-5 space-y-5 sm:mt-6">
           <?php foreach ([
             ['We verify your benefits', 'Before your first appointment, not after it. You will know what your plan covers and what it leaves you.'],
-            ['We handle prior authorisation', 'The paperwork that gates TMS coverage is ours to do, and we do it.'],
-            ['We quote self-pay up front', 'If you are not covered, or you would rather not involve your insurer, we will give you the total for a course before you commit. Private pay also avoids the delays that authorisation can add.'],
+            ['We handle prior authorization', 'The paperwork that gates TMS coverage is ours to do, and we do it.'],
+            ['We quote self-pay up front', 'If you are not covered, or you would rather not involve your insurer, we will give you the total for a course before you commit. Private pay also avoids the delays that authorization can add.'],
           ] as [$name, $copy]): ?>
             <div class="flex items-start gap-3.5">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5f8f38" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="mt-1 shrink-0"><path d="m5 12.5 4.5 4.5L19 7"/></svg>
@@ -450,7 +447,7 @@ require __DIR__ . '/includes/reviews-section.php';
             </div>
           <?php endforeach; ?>
         </div>
-        <a href="index.php#book" class="<?= $btn_blue ?> mt-7 w-full justify-center sm:w-auto">Verify My Coverage <?= arrow_icon(16) ?></a>
+        <a href="insurance.php" class="<?= $btn_blue ?> mt-7 w-full justify-center sm:w-auto">Verify My Coverage <?= arrow_icon(16) ?></a>
       </div>
     </div>
 
@@ -523,7 +520,7 @@ require __DIR__ . '/includes/reviews-section.php';
           It starts with an assessment, not a commitment. We check whether you are a candidate, verify your benefits, and tell you honestly if something else would serve you better.
         </p>
         <div class="mt-6 flex flex-wrap gap-3 sm:mt-8">
-          <a href="index.php#book" class="<?= $btn_blue ?>">Book a Consultation <?= arrow_icon(16) ?></a>
+          <a href="contact.php" class="<?= $btn_blue ?>">Book a Consultation <?= arrow_icon(16) ?></a>
           <a href="<?= e($site['phone_href']) ?>" class="<?= $btn_line ?>">Call <?= e($site['phone']) ?></a>
         </div>
         <p class="m-0 mt-6 text-xs text-ink/55">In crisis? Call or text 988 any time.</p>
