@@ -451,10 +451,16 @@ return [
     'meta'  => 'Psychiatry and therapy by secure video, anywhere in California or Texas. The same clinicians, the same hour, the same plan — without the drive. Most insurance accepted.',
 
     'hero' => [
-        'lines'  => ['Care that reaches', 'you where you are.'],
-        'accent' => 'you where you are.',
-        'lede'   => 'Telepsychiatry is the same care delivered by secure video: a full evaluation, medication management and therapy, with the clinician you would have seen in the room. It is not a chatbot and it is not a different standard.',
-        'image'  => 'treatments/telepsychiatry-hero.jpg',
+        'lines'  => ['Care that reaches you', 'where you are.'],
+        'accent' => 'where you are.',
+        'lede'   => 'Telepsychiatry is the same care delivered by secure video: a full evaluation, medication management and therapy, with the clinician you would have seen in person. No chatbot; same standards.',
+        // A portrait photo, so from the tablet up it is shown at full height on
+        // the right rather than stretched across the panel, and its left edge
+        // fades into the wash. See .cond-hero-photo in src/input.css.
+        'image'  => 'treatments/telepsychiatry-home.jpg',
+        'photo_size' => 'auto 100%',
+        'photo_pos'  => '100% 30%',
+        'photo_mask' => 'linear-gradient(90deg, transparent 50%, #000 66%)',
         'panel'  => '#e9eef1',
         'wash'   => '233 238 241',
         'cta'    => 'Book a Video Visit',
@@ -468,7 +474,7 @@ return [
         'accent' => 'a shorter journey.',
         'serif'  => 'A video visit is a real appointment with a real clinician — the same sixty-minute evaluation, the same prescriber, the same notes in the same chart.',
         'paras'  => [
-            'What changes is the travelling. No drive across the county, no parking, no sitting in a waiting room with your coat on. For a lot of people that is the difference between keeping an appointment every fortnight and quietly giving up on it — particularly people who are depressed, which is a condition that makes leaving the house harder.',
+            'What changes is the traveling. No drive across the county, no parking, no sitting in a waiting room with your coat on. For a lot of people that is the difference between keeping an appointment every two weeks and quietly giving up on it — particularly people who are depressed, which is a condition that makes leaving the house harder.',
             'What does not change is the care. Your clinician sees you on video, asks the same questions, tracks the same symptom scores, and writes to the same pharmacy. If something is better done in person, they will say so and we will book you into a clinic.',
         ],
         'facts' => [
@@ -477,7 +483,7 @@ return [
             ['Therapy',    'CBT, DBT, EMDR and ACT'],
             ['Where',      'California and Texas'],
         ],
-        'note'      => 'Telehealth is not a lesser version of the appointment. It is the appointment, on a screen.',
+        'note'      => 'Telehealth is not a lesser appointment. It is the same appointment, only on a screen.',
         'link'      => ['How a Video Visit Works', '#process'],
         'photo'     => 'treatments/telepsychiatry-session.jpg',
         'photo_alt' => 'A woman talking with a clinician on a laptop screen at home',
@@ -488,21 +494,22 @@ return [
     'band' => [
         'value'  => '60 min',
         'rest'   => 'for a first video visit — the same full diagnostic assessment we do in the room.',
-        'note'   => 'You leave it with a written plan, the same day.',
+        'note'   => 'You leave your appointment with a written plan, the same day.',
         'source' => 'Our intake',
+        'static' => true,
     ],
 
     'options' => [
         'rail'    => 'What you can do',
         'eyebrow' => '02 / What works by video',
-        'lines'   => ['Most of it,', 'as it turns out.'],
-        'accent'  => 'as it turns out.',
-        'intro'   => 'Not everything belongs on a screen, and the page says which below. This is the part that works as well remotely as it does in a room.',
+        'lines'   => ['The same care, in the', 'comfort of your home.'],
+        'accent'  => 'comfort of your home.',
+        'intro'   => 'Most of our care works just as well by video as it does in person. These are the services you can have from home.',
         'items'   => [
-            ['Psychiatric evaluation', 'The full diagnostic assessment — history, physical health, sleep, current symptoms — ending in a diagnosis and a written plan.', 'Start here'],
-            ['Medication management', 'Starting, changing, reviewing and stopping. Prescriptions go to the pharmacy you nominate, including mail order.', 'Most follow-ups'],
-            ['Therapy', 'CBT, DBT, EMDR and ACT, weekly or fortnightly. The evidence for therapy delivered by video is good.', 'Weekly or fortnightly'],
-            ['Check-ins between visits', 'The short reviews that catch a side effect early, which are exactly the ones people skip when they involve a drive.', 'Two to four weeks'],
+            ['Psychiatric evaluation', 'The full diagnostic assessment — history, physical health, sleep, current symptoms — ending in a diagnosis and a written plan.', 'Your first visit', ['psychiatry.php', 'About Psychiatry']],
+            ['Medication management', 'Starting, changing, reviewing and stopping. Prescriptions go to the pharmacy you nominate, including mail order.', 'Most follow-ups', ['psychiatry.php', 'About Psychiatry']],
+            ['Therapy', 'CBT, DBT, EMDR and ACT, weekly or every two weeks. The evidence for therapy delivered by video is good.', 'Weekly or every two weeks', ['therapy.php', 'About Therapy']],
+            ['Check-ins between visits', 'Check-ins stop small setbacks from becoming major ones and help the hard work you’re doing last for a lifetime.', 'Two to four weeks'],
         ],
     ],
 
@@ -511,16 +518,16 @@ return [
         'eyebrow' => '03 / A video visit, start to finish',
         'lines'   => ['Four steps,', 'and no waiting room.'],
         'accent'  => 'and no waiting room.',
-        'intro'   => 'The parts that are different from an in-person visit are mostly at the beginning, and they take about five minutes.',
-        'photo'     => 'treatments/telepsychiatry-home.jpg',
-        'photo_alt' => 'A woman laughing with a cup of tea during a video call at home',
-        'focus'     => 'object-[50%_30%]',
+        'intro'   => 'Getting set up for a video visit takes about five minutes. Here is what to expect.',
+        'photo'     => 'treatments/telepsychiatry-hero.jpg',
+        'photo_alt' => 'A woman on a video call at her laptop at home',
+        'focus'     => 'object-[78%_50%]',
         'caption'   => 'Wherever you are actually comfortable.',
         'steps' => [
             ['Before the day', 'Intake forms by email, and we verify your benefits so you know what the visit costs beforehand. You will need a device with a camera, and somewhere you can speak freely.'],
             ['Joining', 'A link arrives by email or text. No app to install and no account to make — you open the link at your appointment time.'],
             ['The visit', 'The same hour with the same clinician. You will be asked to confirm where you are physically located, which is a licensing requirement rather than a formality.'],
-            ['Afterwards', 'Your written plan and any prescription go out the same day, to you and to the pharmacy you nominate.'],
+            ['Afterward', 'Your written plan and any prescription go out the same day, to you and to the pharmacy you nominate.'],
         ],
         'facts' => [
             ['60 min', 'first visit',        '#e8922f'],
@@ -531,9 +538,9 @@ return [
 
     'treats' => [
         'eyebrow' => '04 / What it treats',
-        'lines'   => ['The same conditions', 'we see in the room.'],
-        'accent'  => 'we see in the room.',
-        'intro'   => 'Telepsychiatry is a way of delivering care, not a narrower kind of it. Where a condition needs something that has to happen in a clinic, we will say so and book it.',
+        'lines'   => ['The same conditions', 'we see in person.'],
+        'accent'  => 'we see in person.',
+        'intro'   => 'Telepsychiatry is a new way of delivering care. If you need something addressed in person, we’ll help you make that happen.',
         'flag'    => [],
         'flag_label' => '',
     ],
@@ -541,10 +548,10 @@ return [
     'panels' => [
         'feature' => [
             'eyebrow'   => 'Who it suits',
-            'heading'   => 'The appointment you would otherwise have cancelled.',
+            'heading'   => 'Flexible treatment when and where you need it.',
             'copy'      => 'People who work shifts, people without a car, parents who cannot get childcare for an hour, students away at college, anyone whose nearest clinic is an hour away — and anyone for whom getting out of the house is part of what they are being treated for.',
             'photo'     => 'treat-7',
-            'photo_alt' => 'Hands gesturing towards a clinician on a laptop screen',
+            'photo_alt' => 'Hands gesturing toward a clinician on a laptop screen',
             'cta'       => 'Book a Video Visit',
         ],
         'honest' => [
@@ -553,9 +560,9 @@ return [
             'accent'  => 'cannot do.',
             'intro'   => 'Three limits worth knowing before you book, rather than after.',
             'items'   => [
-                ['Some treatments need a room', 'TMS and Spravato® are delivered in a clinic and cannot happen remotely. Your evaluation and your follow-ups can still be by video; the treatment itself cannot.', 'bg-brand-blue'],
+                ['Some treatments need in-person care', 'TMS and Spravato® are delivered in a clinic and cannot happen remotely. Your evaluation and your follow-ups can still be by video; the treatment itself cannot.', 'bg-brand-blue'],
                 ['Where you are matters', 'Our clinicians are licensed in California and Texas, and you have to be physically in one of those states at the time of your appointment. Not where you live — where you are sitting.', 'bg-brand-green'],
-                ['Some prescriptions have extra rules', 'Prescribing controlled medication remotely is governed federally and the rules have changed several times. Your clinician will tell you what applies to you and whether an in-person visit is needed first.', 'bg-brand-orange'],
+                ['Some prescriptions have extra rules', 'Prescribing controlled medication remotely is governed federally, and regulations have changed several times. Your clinician will tell you what applies to you and whether an in-person visit is needed first.', 'bg-brand-orange'],
             ],
             'note' => 'Telehealth is also not a crisis service. If you are in crisis, call or text 988 — any time.',
         ],
@@ -563,22 +570,22 @@ return [
 
     'faqs' => [
         ['Is a video appointment as good as being in the room?',
-         'For psychiatric evaluation, medication management and most therapy, the evidence says it holds up well. Where it does not — and there are cases, particularly some first assessments — your clinician will say so and bring you into a clinic.'],
+         'For psychiatric evaluation, medication management and most therapy, the evidence says it holds up well. Where it does not — and there are cases, particularly some first assessments — your clinician will say so and bring you into one of our clinics.'],
         ['Do I need to download anything?',
          'No. A link arrives by email or text and you open it at your appointment time. You need a device with a camera and a reasonable connection, and somewhere you can talk without being overheard.'],
         ['Can I be seen if I am travelling?',
          'Only if you are physically in California or Texas at the time. That is a licensing rule rather than ours — a clinician can only treat where they are licensed, and the state you are sitting in is the one that counts.'],
         ['Will my insurance cover a video visit?',
-         'Usually, and often on the same terms as an in-person one. Plans differ, so we verify your benefits before your first appointment and tell you what it leaves you.'],
+         'Usually, and often on the same terms as an in-person session. Plans differ, so we verify your benefits before your first appointment and tell you what it leaves you.'],
         ['Can I get a prescription by video?',
-         'Yes for most medication, sent to the pharmacy you nominate. Controlled medication is governed by separate federal rules that have changed more than once, so your clinician will tell you what currently applies to you.'],
+         'Yes. We can prescribe most medications by video, and have them sent to the pharmacy of your choice.'],
         ['Can my teenager be seen this way?',
          'Yes, from 15. A parent or guardian joins for part of the appointment, and your clinician will set out at the start what is shared with you and what stays between them and your child.'],
     ],
 
     'cta' => [
-        'lines'  => ['Start from', 'your own front room.'],
-        'accent' => 'your own front room.',
+        'lines'  => ['Start from', 'the comfort of home.'],
+        'accent' => 'the comfort of home.',
         'copy'   => 'Most new patients are seen within a week, and we check your insurance before the first visit. If it turns out you are better seen in person, we will tell you and book it.',
     ],
 ],

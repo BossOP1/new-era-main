@@ -97,7 +97,7 @@ $others = array_values(array_filter(
 <div class="bg-white px-3 pt-3 sm:px-5 sm:pt-5 lg:px-8">
   <section id="top"
            class="relative isolate overflow-hidden rounded-[20px] px-5 pb-7 pt-[108px] text-ink sm:px-8 sm:pb-10 sm:pt-[126px] lg:px-12 lg:pt-[136px]"
-           style="--cond-wash: <?= e($t['hero']['wash']) ?>; background-color: <?= e($t['hero']['panel']) ?>">
+           style="--cond-wash: <?= e($t['hero']['wash']) ?>; background-color: <?= e($t['hero']['panel']) ?><?php foreach (['photo_size' => 'size', 'photo_pos' => 'pos', 'photo_mask' => 'mask'] as $key => $var): ?><?php if (!empty($t['hero'][$key])): ?>; --cond-photo-<?= $var ?>: <?= e($t['hero'][$key]) ?><?php endif; ?><?php endforeach; ?>">
     <div aria-hidden="true" class="cond-hero-photo pointer-events-none absolute inset-0 -z-10" style="background-image:url('<?= e(asset('assets/img/' . $t['hero']['image'])) ?>')"></div>
     <div aria-hidden="true" class="cond-hero-wash pointer-events-none absolute inset-0 -z-10"></div>
 
@@ -187,7 +187,8 @@ $others = array_values(array_filter(
   <div class="relative isolate flex flex-col gap-3 overflow-hidden rounded-[24px] bg-[#0e537c] px-6 py-7 text-white sm:flex-row sm:items-center sm:justify-between sm:gap-10 sm:px-10 sm:py-8">
     <div aria-hidden="true" class="pointer-events-none absolute -right-[150px] -top-[120px] h-[300px] w-[300px] rounded-full border border-white/10 shadow-[0_0_0_36px_#ffffff06]"></div>
     <p class="relative m-0 max-w-[34ch] font-serif text-[21px] leading-[1.3] tracking-[-0.02em] sm:text-[26px]">
-      <em class="not-italic text-[#cde3de]" data-count="<?= e($t['band']['value']) ?>"><?= e($t['band']['value']) ?></em> <?= e($t['band']['rest']) ?>
+      <?php // 'static' => true skips the count-up and prints the figure as it is. ?>
+      <em class="not-italic text-[#cde3de]"<?= empty($t['band']['static']) ? ' data-count="' . e($t['band']['value']) . '"' : '' ?>><?= e($t['band']['value']) ?></em> <?= e($t['band']['rest']) ?>
     </p>
     <p class="relative m-0 shrink-0 text-[13px] leading-[1.6] text-white/70 sm:max-w-[26ch] sm:text-right">
       <?= e($t['band']['note']) ?>
@@ -210,15 +211,20 @@ $others = array_values(array_filter(
 
     <?php // Below sm these become a swipe rail rather than a tall stack. ?>
     <div class="-mx-[22px] flex snap-x snap-mandatory gap-3 overflow-x-auto scroll-pl-[22px] px-[22px] pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:mx-0 sm:grid sm:snap-none sm:overflow-visible sm:px-0 sm:pb-0 lg:gap-3.5 <?= $option_cols[count($t['options']['items'])] ?? 'sm:grid-cols-2' ?>">
-      <?php foreach ($t['options']['items'] as $i => [$name, $copy, $tag]): ?>
+      <?php foreach ($t['options']['items'] as $i => $item): ?>
+        <?php // An optional fourth entry, [href, label], links the card to its treatment page. ?>
+        <?php [$name, $copy, $tag] = $item; $card_link = $item[3] ?? null; ?>
         <article data-reveal class="flex w-[80%] shrink-0 snap-center flex-col rounded-[20px] bg-[#faf8f3] p-6 sm:w-auto sm:shrink lg:p-7">
           <div class="mb-7 flex items-center justify-between text-[11px] text-[#6c756f] md:mb-9">
             <span><?= sprintf('%02d', $i + 1) ?></span>
             <span aria-hidden="true" class="h-[9px] w-[9px] rounded-full bg-brand-blue/70"></span>
           </div>
           <h3 class="m-0 mb-3.5 font-serif text-[24px] font-normal leading-[1.15] tracking-[-0.03em] text-ink lg:text-[26px]"><?= e($name) ?></h3>
-          <p class="m-0 text-sm leading-[1.8] text-[#58616a]"><?= e($copy) ?></p>
-          <span class="mt-6 border-t border-ink/15 pt-4 text-[10px] font-bold uppercase tracking-[0.15em] text-ink/55 md:mt-auto"><?= e($tag) ?></span>
+          <p class="m-0 mb-6 text-sm leading-[1.8] text-[#58616a]"><?= e($copy) ?></p>
+          <?php if ($card_link): ?>
+            <a href="<?= e($card_link[0]) ?>" class="-mt-2 mb-6 inline-flex items-center gap-2 self-start text-sm font-extrabold text-brand-blue transition-colors hover:text-brand-blue-dark"><?= e($card_link[1]) ?> <?= arrow_icon(15) ?></a>
+          <?php endif; ?>
+          <span class="border-t border-ink/15 pt-4 text-[10px] font-bold uppercase tracking-[0.15em] text-ink/55 md:mt-auto"><?= e($tag) ?></span>
         </article>
       <?php endforeach; ?>
     </div>
