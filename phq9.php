@@ -332,7 +332,7 @@ $bands = [
 
 <!-- ─── Book ─────────────────────────────────────────────────────────── -->
 <section class="<?= $wrap ?> py-12 sm:py-[80px]">
-  <div data-reveal class="relative flex flex-col items-center justify-center gap-5 rounded-[28px] bg-cream bg-cta-glow px-6 py-10 text-center sm:gap-6 sm:px-12 sm:py-14">
+  <div data-reveal class="relative flex flex-col items-center justify-center gap-5 rounded-[28px] bg-cream bg-aurora px-6 py-10 text-center sm:gap-6 sm:px-12 sm:py-14">
     <?= brand_glyph('h-16 w-auto') ?>
     <h2 class="m-0 max-w-[22ch] font-serif text-[30px] font-normal leading-[1.08] tracking-[-0.035em] text-ink sm:text-[42px]">
       Whatever the number said.

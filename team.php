@@ -372,7 +372,7 @@ $haystack = static function (array $p) use ($locations): string {
 
 <!-- ─── Booking CTA ──────────────────────────────────────────────────── -->
 <section id="book" class="mx-auto max-w-[1280px] px-5 py-8 sm:px-10 sm:py-12">
-  <div data-reveal class="relative flex flex-col items-center justify-center gap-5 rounded-[28px] bg-cream bg-cta-glow px-6 py-10 text-center sm:gap-6 sm:px-12 sm:py-14">
+  <div data-reveal class="relative flex flex-col items-center justify-center gap-5 rounded-[28px] bg-cream bg-aurora px-6 py-10 text-center sm:gap-6 sm:px-12 sm:py-14">
     <h2 class="m-0 font-serif text-[30px] font-normal leading-[1.1] tracking-[-0.03em] text-ink sm:text-[40px]">
       Ready when you are.
     </h2>
