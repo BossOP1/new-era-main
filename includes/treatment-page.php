@@ -120,7 +120,7 @@ $others = array_values(array_filter(
         <p class="m-0 mt-5 max-w-[46ch] text-[15px] leading-[1.75] text-ink/75 sm:mt-6 sm:text-base"><?= e($t['hero']['lede']) ?></p>
 
         <div class="mt-6 flex flex-wrap gap-3 sm:mt-8">
-          <a href="#book" class="<?= $btn_blue ?>"><?= e($t['hero']['cta']) ?> <?= arrow_icon(16) ?></a>
+          <a href="contact.php" class="<?= $btn_blue ?>"><?= e($t['hero']['cta']) ?> <?= arrow_icon(16) ?></a>
           <a href="<?= e($site['phone_href']) ?>" class="<?= $btn_line ?>"><?= e($site['phone']) ?></a>
         </div>
 
@@ -139,7 +139,8 @@ $others = array_values(array_filter(
 <nav aria-label="On this page" class="sticky top-[98px] z-30 border-b border-ink/10 bg-[#faf8f3]/92 backdrop-blur-md sm:top-[114px]">
   <div class="<?= $wrap ?> flex items-center gap-1 overflow-x-auto py-2.5 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
     <?php foreach ($rail as $href => $label): ?>
-      <a href="<?= e($href) ?>" class="whitespace-nowrap rounded-full px-3.5 py-2 text-[13px] font-bold text-ink/65 transition-colors hover:bg-white hover:text-brand-blue"><?= e($label) ?></a>
+      <?php // 'rail_pills' draws each link as an outlined pill, so it reads as clickable. ?>
+      <a href="<?= e($href) ?>" class="whitespace-nowrap rounded-full px-3.5 py-2 text-[13px] font-bold transition-colors <?= !empty($t['rail_pills']) ? 'border border-brand-blue/25 bg-white text-brand-blue hover:border-brand-blue hover:bg-mist' : 'text-ink/65 hover:bg-white hover:text-brand-blue' ?>"><?= e($label) ?></a>
     <?php endforeach; ?>
   </div>
 </nav>
@@ -152,8 +153,10 @@ $others = array_values(array_filter(
 
     <div class="mt-5 space-y-3.5 sm:mt-6 sm:space-y-4 md:mt-7">
       <p class="m-0 font-serif text-[19px] leading-[1.45] text-[#24333c] sm:text-[20px] sm:leading-[1.5] md:text-[22px]"><?= e($t['what']['serif']) ?></p>
+      <?php // A paragraph given as ['html' => …] is trusted markup from the data
+            // file, used where the copy links to other pages. ?>
       <?php foreach ($t['what']['paras'] as $para): ?>
-        <p class="<?= $lede ?>"><?= e($para) ?></p>
+        <p class="<?= $lede ?>"><?= is_array($para) ? $para['html'] : e($para) ?></p>
       <?php endforeach; ?>
     </div>
 
@@ -177,7 +180,9 @@ $others = array_values(array_filter(
     <div class="relative h-[260px] overflow-hidden rounded-[20px] bg-night sm:h-[460px] md:h-[580px]">
       <?= image_slot($t['what']['photo'], $t['name'] . ' photo', $t['what']['photo_alt'], false, $t['what']['focus']) ?>
       <div aria-hidden="true" class="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent"></div>
-      <figcaption class="absolute inset-x-5 bottom-5 font-serif text-[21px] leading-[1.25] text-white sm:text-[23px]"><?= e($t['what']['caption']) ?></figcaption>
+      <?php if (!empty($t['what']['caption'])): ?>
+        <figcaption class="absolute inset-x-5 bottom-5 font-serif text-[21px] leading-[1.25] text-white sm:text-[23px]"><?= e($t['what']['caption']) ?></figcaption>
+      <?php endif; ?>
     </div>
   </figure>
 </section>
@@ -192,7 +197,9 @@ $others = array_values(array_filter(
     </p>
     <p class="relative m-0 shrink-0 text-[13px] leading-[1.6] text-white/70 sm:max-w-[26ch] sm:text-right">
       <?= e($t['band']['note']) ?>
-      <span class="mt-1 block text-[10px] font-bold uppercase tracking-[0.15em] text-[#8fc7e8]"><?= e($t['band']['source']) ?></span>
+      <?php if (!empty($t['band']['source'])): ?>
+        <span class="mt-1 block text-[10px] font-bold uppercase tracking-[0.15em] text-[#8fc7e8]"><?= e($t['band']['source']) ?></span>
+      <?php endif; ?>
     </p>
   </div>
 </section>
@@ -286,6 +293,7 @@ $rs_by_key = [
 ];
 if (!empty($data['treatment_reviews'][$treatment_key]) && isset($rs_by_key[$treatment_key])) {
     [$rs_eyebrow, $rs_heading, $rs_link, $rs_link_label] = $rs_by_key[$treatment_key];
+    $rs_heading = $t['reviews_heading'] ?? $rs_heading;
     $rs_reviews = $data['treatment_reviews'][$treatment_key];
     $rs_anchor  = $anchor;
     require __DIR__ . '/reviews-section.php';
@@ -339,7 +347,7 @@ if (!empty($data['treatment_reviews'][$treatment_key]) && isset($rs_by_key[$trea
         <p class="m-0 mb-4 text-[11px] font-bold uppercase tracking-[0.17em] text-brand-green"><?= e($feature['eyebrow']) ?></p>
         <h3 class="m-0 mb-4 font-serif text-[27px] font-normal leading-[1.1] tracking-[-0.03em] text-white sm:text-[32px]"><?= e($feature['heading']) ?></h3>
         <p class="m-0 max-w-[48ch] text-[15px] font-medium leading-[1.7] text-white/85"><?= e($feature['copy']) ?></p>
-        <a href="#book" class="mt-7 inline-flex items-center gap-2.5 rounded-full bg-white px-7 py-4 text-[15px] font-extrabold text-brand-blue transition-colors hover:bg-brand-orange hover:text-white">
+        <a href="contact.php" class="mt-7 inline-flex items-center gap-2.5 rounded-full bg-white px-7 py-4 text-[15px] font-extrabold text-brand-blue transition-colors hover:bg-brand-orange hover:text-white">
           <?= e($feature['cta']) ?> <?= arrow_icon(16) ?>
         </a>
       </div>
@@ -401,7 +409,8 @@ if (!empty($data['treatment_reviews'][$treatment_key]) && isset($rs_by_key[$trea
   <div class="mb-7 flex flex-wrap items-end justify-between gap-6 border-b-2 border-ink/15 pb-5 sm:mb-9 sm:gap-8 sm:pb-6">
     <div>
       <p class="<?= $eyebrow ?>"><?= $dot ?> Other treatments</p>
-      <h2 class="<?= $h2 ?>">Often combined.<br><em class="<?= $em ?>">One team.</em></h2>
+      <?php [$combined_line, $combined_accent] = $t['combined_heading'] ?? ['Often combined.', 'One team.']; ?>
+      <h2 class="<?= $h2 ?>"><?= e($combined_line) ?><?php if ($combined_accent !== ''): ?><br><em class="<?= $em ?>"><?= e($combined_accent) ?></em><?php endif; ?></h2>
     </div>
     <a href="treatments.php" class="flex items-center gap-4 pb-2 text-xs font-bold text-ink transition-colors hover:text-brand-blue md:gap-8">
       All Treatments <span aria-hidden="true" class="text-2xl text-brand-blue">&#8600;</span>
@@ -435,7 +444,7 @@ if (!empty($data['treatment_reviews'][$treatment_key]) && isset($rs_by_key[$trea
     </h2>
     <p class="mx-auto m-0 mt-5 max-w-[56ch] text-[15px] leading-[1.75] text-ink/75 sm:text-base sm:leading-[1.8]"><?= e($t['cta']['copy']) ?></p>
     <div class="mt-7 flex flex-wrap justify-center gap-3">
-      <a href="index.php#book" class="<?= $btn_blue ?>">Book a Consultation <?= arrow_icon(16) ?></a>
+      <a href="contact.php" class="<?= $btn_blue ?>">Book a Consultation <?= arrow_icon(16) ?></a>
       <a href="<?= e($site['phone_href']) ?>" class="<?= $btn_line ?>">Call <?= e($site['phone']) ?></a>
     </div>
     <p class="m-0 mt-6 text-xs text-ink/55">In crisis? Call or text 988 any time.</p>
