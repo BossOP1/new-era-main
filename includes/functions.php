@@ -316,6 +316,8 @@ if (!function_exists('nav_icon')) {
             'coil'        => '<circle cx="8.3" cy="14.2" r="4.3"/><circle cx="15.7" cy="14.2" r="4.3"/><path d="M8.6 5.6a6.4 6.4 0 0 1 6.8 0"/><path d="M6.4 2.9a10.3 10.3 0 0 1 11.2 0"/>',
             'stethoscope' => '<path d="M5 3.2v5.1a4.6 4.6 0 0 0 9.2 0V3.2"/><path d="M9.6 12.9v2.6a4.3 4.3 0 0 0 8.6 0v-1.9"/><circle cx="18.2" cy="11.6" r="2"/>',
             'chat'        => '<path d="M4.3 4.8h9.4a2.3 2.3 0 0 1 2.3 2.3v4.4a2.3 2.3 0 0 1-2.3 2.3H9.2L5.8 16.6v-2.8H4.3A2.3 2.3 0 0 1 2 11.5V7.1a2.3 2.3 0 0 1 2.3-2.3Z"/><path d="M18.3 8.6h.7a2.3 2.3 0 0 1 2.3 2.3v4.2a2.3 2.3 0 0 1-2.3 2.3h-.9v2.5l-3-2.5h-3.1a2.3 2.3 0 0 1-2-1.2"/>',
+            // Adolescent care: an adult and a shorter, younger figure beside them.
+            'parent-child'=> '<circle cx="8.6" cy="6.4" r="2.9"/><path d="M3.2 20.4v-1.5a5.4 5.4 0 0 1 10.8 0v1.5"/><circle cx="17.4" cy="10.3" r="2.2"/><path d="M15.2 15.2a3.9 3.9 0 0 1 5.9 3.4v1.8"/>',
             'spray'       => '<path d="M11 2.6h2l.7 4H10.3l.7-4Z"/><path d="M8.8 6.6h6.4v2.6H8.8z"/><rect x="7.4" y="9.2" width="9.2" height="12.2" rx="2.6"/><path d="M7.6 3.6 6 2.7M16.4 3.6l1.6-.9"/>',
             'grid'        => '<rect x="3.5" y="3.5" width="7" height="7" rx="1.8"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.8"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.8"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.8"/>',
             'clipboard'   => '<path d="M9 4.5H7.5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-12a2 2 0 0 0-2-2H15"/><path d="M9.6 3h4.8a.6.6 0 0 1 .6.6v1.8a.6.6 0 0 1-.6.6H9.6a.6.6 0 0 1-.6-.6V3.6a.6.6 0 0 1 .6-.6Z"/><path d="m9 13 1.8 1.8L15 10.6"/>',

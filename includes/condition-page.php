@@ -476,7 +476,7 @@ $related = array_values(array_filter(
     <div class="mx-auto grid max-w-[1160px] items-center gap-7 sm:gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-16">
       <div>
         <h2 class="m-0 font-serif font-normal leading-[1.08] tracking-[-0.035em] text-ink text-[clamp(30px,3.4vw,44px)]">
-          Take your life back<br><em class="<?= $em_section ?>">from <?= e(strtolower($c['name'])) ?>.</em>
+          Anew Era is ready<br><em class="italic font-normal text-brand-blue">when you are.</em>
         </h2>
         <p class="m-0 mt-4 max-w-[50ch] text-[15px] leading-[1.75] text-ink/75 sm:mt-5 sm:text-base sm:leading-[1.8]">
           We know how hard appointments are to fit into a week that is already full. After the first visit, a TMS session generally runs fifteen to thirty minutes, with nothing to recover from afterwards.

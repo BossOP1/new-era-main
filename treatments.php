@@ -191,7 +191,7 @@ $rest     = array_slice($all, 1);
 <section id="book" class="px-3 py-3 pb-8 sm:px-5 sm:py-5 sm:pb-12 lg:px-8">
   <div class="relative isolate overflow-hidden rounded-[28px] bg-cream bg-aurora px-5 py-9 text-center sm:px-12 sm:py-14">
     <h2 class="m-0 mx-auto max-w-[22ch] font-serif font-normal leading-[1.08] tracking-[-0.035em] text-ink text-[clamp(30px,3.4vw,44px)]">
-      One assessment,<br><em class="italic font-normal text-brand-blue">then, the right treatment.</em>
+      Anew Era is ready<br><em class="italic font-normal text-brand-blue">when you are.</em>
     </h2>
     <p class="mx-auto m-0 mt-5 max-w-[54ch] text-[15px] leading-[1.75] text-ink/75 sm:text-base sm:leading-[1.8]">
       New patient appointments are usually available within five business days. We check your benefits first, so you know what a visit costs before you walk in.

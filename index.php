@@ -410,7 +410,7 @@ $eyebrow    = 'm-0 text-xs font-extrabold uppercase tracking-[0.16em]';
 <section id="book" class="mx-auto max-w-[1280px] px-5 py-3 sm:px-10 sm:py-8">
   <div data-reveal class="relative overflow-hidden rounded-[28px] bg-cream bg-aurora px-6 py-12 text-center sm:px-16 lg:py-[52px]">
     <h2 class="m-0 mb-3 text-[28px] leading-[1.1] tracking-[-0.03em] text-ink sm:text-[38px]">
-      Anew Era is ready when you are<em class="font-serif font-normal italic">— and sooner than you think</em>
+      Anew Era is ready<br><em class="italic font-normal text-brand-blue">when you are.</em>
     </h2>
     <p class="mx-auto m-0 mb-6 max-w-[52ch] text-base font-medium text-ink/75">Most new patients are seen within a week. We check your benefits first, so you know what a visit costs before you walk in.</p>
     <a href="contact.php" class="inline-flex items-center rounded-full bg-brand-blue px-7 py-4 text-[15px] font-extrabold text-white transition-colors hover:bg-brand-blue-dark">Book a Free Consultation</a>

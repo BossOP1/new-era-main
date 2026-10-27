@@ -514,7 +514,7 @@ require __DIR__ . '/includes/reviews-section.php';
     <div class="mx-auto grid max-w-[1160px] items-center gap-7 sm:gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-16">
       <div>
         <h2 class="m-0 font-serif font-normal leading-[1.08] tracking-[-0.035em] text-ink text-[clamp(30px,3.4vw,44px)]">
-          Find out whether<br><em class="<?= $em ?>">TMS is for you.</em>
+          Anew Era is ready<br><em class="italic font-normal text-brand-blue">when you are.</em>
         </h2>
         <p class="m-0 mt-4 max-w-[50ch] text-[15px] leading-[1.75] text-ink/75 sm:mt-5 sm:text-base sm:leading-[1.8]">
           It starts with an assessment, not a commitment. We check whether you are a candidate, verify your benefits, and tell you honestly if something else would serve you better.

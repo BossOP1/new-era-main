@@ -350,7 +350,7 @@ $in_the_chair = [
   <div data-reveal class="relative flex flex-col items-center justify-center gap-5 rounded-[28px] bg-cream bg-aurora px-6 py-10 text-center sm:gap-6 sm:px-12 sm:py-14">
     <?= brand_glyph('h-16 w-auto') ?>
     <h2 class="m-0 max-w-[20ch] font-serif text-[30px] font-normal leading-[1.08] tracking-[-0.035em] text-ink sm:text-[42px]">
-      See it for yourself.
+      Anew Era is ready when you are.
     </h2>
     <p class="m-0 max-w-[54ch] text-[15px] leading-[1.75] text-ink/70">
       Ask to see the room at your consultation. Most people find the machine a good deal less
