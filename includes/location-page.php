@@ -59,6 +59,12 @@ $conditions = array_values(array_filter(
 ));
 
 $addr      = $loc['address'];
+
+// This clinic's Zocdoc booking page: the California practice for every CA
+// clinic, the metro's practice in Texas. Empty if none is set.
+$loc_zocdoc = $loc['zocdoc'] ?? ($loc['state'] === 'ca'
+    ? ($site['zocdoc_regions']['ca'] ?? '')
+    : ($site['zocdoc_regions'][$loc['region']] ?? ''));
 $addr_line = $addr['street'] . ', ' . $addr['city'] . ', ' . $addr['region'] . ' ' . $addr['postcode'];
 
 // Shared spacing and type, lifted from team.php so the hub pages match.
@@ -134,7 +140,7 @@ $initials = static function (string $name): string {
       </div>
     </div>
 
-    <div class="mx-auto mt-6 flex max-w-[1160px] flex-wrap items-center justify-between gap-3 border-t border-white/30 pt-4 text-[11px] text-white/85 sm:mt-8">
+    <div class="mx-auto mt-6 flex max-w-[1160px] flex-wrap items-center justify-between gap-3 border-t border-white/30 pt-4 text-[13px] text-white/85 sm:mt-8">
       <?php // Allen has one, so the noun cannot be hard-coded plural. ?>
       <span><?= e(count($people)) ?> clinician<?= count($people) === 1 ? '' : 's' ?> at this clinic &middot; In person and by telehealth</span>
       <span>Serving <?= e(implode(', ', array_slice($loc['serves'], 0, 4))) ?> and nearby</span>
@@ -182,7 +188,13 @@ $initials = static function (string $name): string {
       <p class="m-0 text-[11px] font-bold uppercase tracking-[0.16em] text-brand-green">Book</p>
       <p class="m-0 mt-3 font-serif text-[22px] font-normal leading-[1.25] tracking-[-0.02em]">Most new patients are seen within a week.</p>
       <p class="m-0 mt-2.5 text-[13.5px] leading-[1.65] text-white/70">We check your insurance before your first visit, so you know what it costs before you walk in.</p>
-      <div class="mt-auto pt-5">
+      <div class="mt-auto flex flex-wrap gap-2.5 pt-5">
+        <?php if ($loc_zocdoc !== ''): ?>
+          <a href="<?= e($loc_zocdoc) ?>" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full bg-brand-orange px-6 py-3.5 text-[14px] font-extrabold text-white transition-colors hover:bg-brand-orange-dark">
+            Book Online
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </a>
+        <?php endif; ?>
         <a href="<?= e($loc['phone_href']) ?>" class="inline-flex items-center gap-2.5 rounded-full bg-white px-6 py-3.5 text-[14px] font-extrabold text-brand-blue transition-colors hover:bg-brand-orange hover:text-white">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6.5 3.5h3l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4.5 5.7 2 2 0 0 1 6.5 3.5Z"/></svg>
           <?= e($loc['phone']) ?>
@@ -230,7 +242,8 @@ $initials = static function (string $name): string {
 
     <ul class="m-0 grid list-none gap-3 p-0 sm:grid-cols-2 md:gap-4 lg:grid-cols-3">
       <?php foreach ($block['people'] as $p): ?>
-        <?php $has_zocdoc = !empty($p['zocdoc']); ?>
+        <?php $p_zocdoc   = $p['zocdoc_by_state'][$loc['state']] ?? ($p['zocdoc'] ?? '');
+              $has_zocdoc = $p_zocdoc !== ''; ?>
         <li data-reveal
             class="group/p relative flex h-full flex-col overflow-hidden rounded-[24px] border border-[#e3e7ea] bg-white transition-colors hover:border-brand-blue/35">
           <div class="flex items-center gap-4 p-6 pb-5 sm:p-7 sm:pb-5">
@@ -255,7 +268,7 @@ $initials = static function (string $name): string {
 
           <div class="mt-auto flex flex-wrap items-center gap-x-4 gap-y-2 px-6 pb-6 pt-5 sm:px-7 sm:pb-7">
             <?php if ($has_zocdoc): ?>
-              <a href="<?= e($p['zocdoc']) ?>" target="_blank" rel="noopener"
+              <a href="<?= e($p_zocdoc) ?>" target="_blank" rel="noopener"
                  class="relative z-10 inline-flex items-center gap-2 rounded-full bg-brand-blue px-5 py-2.5 text-[13px] font-extrabold text-white transition-colors hover:bg-brand-blue-dark">
                 Book on Zocdoc
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
@@ -496,7 +509,11 @@ $initials = static function (string $name): string {
       Most new patients are seen within a week, and we check your insurance before your first visit.
     </p>
     <div class="flex flex-wrap items-center justify-center gap-3">
-      <a href="contact.php" class="<?= $btn_blue ?>">Book a Consultation <?= arrow_icon(16) ?></a>
+      <?php if ($loc_zocdoc !== ''): ?>
+        <a href="<?= e($loc_zocdoc) ?>" target="_blank" rel="noopener" class="<?= $btn_blue ?>">Book Online <?= arrow_icon(16) ?></a>
+      <?php else: ?>
+        <a href="contact.php" class="<?= $btn_blue ?>">Book a Consultation <?= arrow_icon(16) ?></a>
+      <?php endif; ?>
       <a href="<?= e($loc['phone_href']) ?>" class="<?= $btn_line ?>"><?= e($loc['phone']) ?></a>
     </div>
     <p class="m-0 text-[12px] text-ink/55">In crisis? Call or text 988 any time.</p>
@@ -535,7 +552,7 @@ $schema = [
         'name'           => $p['name'],
         'honorificSuffix'=> $p['credentials'] ?: null,
         'jobTitle'       => $p['role'],
-        'sameAs'         => $p['zocdoc'] ?? null,
+        'sameAs'         => ($p['zocdoc_by_state'][$loc['state']] ?? $p['zocdoc'] ?? null) ?: null,
     ]), $people),
 ];
 ?>

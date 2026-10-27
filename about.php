@@ -30,7 +30,7 @@ $team_faces  = array_slice(array_values(array_filter(
     </div>
     <?php // On its own at the right, where the photo sits behind it, so it is
           // set on a white pill to keep its contrast. ?>
-    <div class="mx-auto mt-8 flex max-w-[1160px] flex-wrap items-center justify-end gap-3 border-t border-[#203e35]/15 pt-4 text-[12px] font-semibold text-ink">
+    <div class="mx-auto mt-8 flex max-w-[1160px] flex-wrap items-center justify-end gap-3 border-t border-[#203e35]/15 pt-4 text-[13px] font-semibold text-ink">
       <span class="rounded-full bg-white/90 px-4 py-1.5 shadow-sm [&_a]:transition-colors [&_a:hover]:text-brand-blue"><a href="psychiatry.php">Psychiatry</a> <span aria-hidden="true" class="px-2">/</span> <a href="therapy.php">Therapy</a> <span aria-hidden="true" class="px-2">/</span> <a href="tms.php">TMS</a></span>
     </div>
   </section>

@@ -117,7 +117,7 @@ $bands = [
       </div>
     </div>
 
-    <div class="mx-auto mt-6 flex max-w-[1160px] flex-wrap items-center justify-between gap-3 border-t border-white/30 pt-4 text-[11px] text-white/85 sm:mt-8">
+    <div class="mx-auto mt-6 flex max-w-[1160px] flex-wrap items-center justify-between gap-3 border-t border-white/30 pt-4 text-[13px] text-white/85 sm:mt-8">
       <span>Scored in your browser. Nothing is sent anywhere, and we do not see your answers.</span>
       <span>No sign-up, no email required</span>
     </div>

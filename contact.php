@@ -98,7 +98,7 @@ $next_steps = [
       </div>
     </div>
 
-    <div class="mx-auto mt-6 flex max-w-[1160px] flex-wrap items-center justify-between gap-3 border-t border-white/30 pt-4 text-[11px] text-white/85 sm:mt-8">
+    <div class="mx-auto mt-6 flex max-w-[1160px] flex-wrap items-center justify-between gap-3 border-t border-white/30 pt-4 text-[13px] text-white/85 sm:mt-8">
       <span>Admissions 6 a.m. – 6 p.m. Pacific (8 a.m. – 8 p.m. Central), Monday through Friday</span>
       <span><?= e(count($locations)) ?> clinics across California and Texas</span>
     </div>

@@ -86,7 +86,7 @@ foreach ($faq as $key => $category) {
       </div>
     </div>
 
-    <div class="mx-auto mt-6 flex max-w-[1160px] flex-wrap items-center justify-between gap-3 border-t border-ink/20 pt-4 text-[11px] text-ink/65 sm:mt-8">
+    <div class="mx-auto mt-6 flex max-w-[1160px] flex-wrap items-center justify-between gap-3 border-t border-ink/20 pt-4 text-[13px] text-ink/65 sm:mt-8">
       <span>Have a question that isn’t listed? Call us at <a href="<?= e($site['phone_href']) ?>" class="font-extrabold text-brand-blue underline decoration-brand-blue/30 underline-offset-4 hover:decoration-brand-blue"><?= e($site['phone']) ?></a>.</span>
       <span>Adults and adolescents from 15 <span aria-hidden="true" class="px-2">/</span> In person and by telehealth</span>
     </div>

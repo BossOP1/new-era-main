@@ -131,7 +131,7 @@ $in_the_chair = [
       </div>
     </div>
 
-    <div class="mx-auto mt-6 flex max-w-[1160px] flex-wrap items-center justify-between gap-3 border-t border-white/30 pt-4 text-[11px] text-white/85 sm:mt-8">
+    <div class="mx-auto mt-6 flex max-w-[1160px] flex-wrap items-center justify-between gap-3 border-t border-white/30 pt-4 text-[13px] text-white/85 sm:mt-8">
       <span>Horizon<sup>&reg;</sup>, StimGuide<sup>&reg;</sup> and the product photography on this page are Magstim's.</span>
       <span>Specifications as published by Magstim</span>
     </div>

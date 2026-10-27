@@ -75,7 +75,7 @@ $anchor   = 'scroll-mt-[148px] sm:scroll-mt-[164px]';
       </div>
     </div>
 
-    <div class="mx-auto mt-6 flex max-w-[1160px] flex-wrap items-center justify-between gap-3 border-t border-[#5c5142]/20 pt-4 text-[11px] text-[#5c5142] sm:mt-8">
+    <div class="mx-auto mt-6 flex max-w-[1160px] flex-wrap items-center justify-between gap-3 border-t border-[#5c5142]/20 pt-4 text-[13px] text-[#5c5142] sm:mt-8">
       <span>In-network with most major plans. FDA-cleared TMS.</span>
       <span>Medication <span aria-hidden="true" class="px-2">/</span> Therapy <span aria-hidden="true" class="px-2">/</span> TMS <span aria-hidden="true" class="px-2">/</span> Spravato<sup>®</sup></span>
     </div>

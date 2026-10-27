@@ -68,7 +68,7 @@ $em       = 'italic font-normal text-brand-blue';
       </div>
     </div>
 
-    <div class="mx-auto mt-6 flex max-w-[1160px] flex-wrap items-center justify-between gap-3 border-t border-ink/20 pt-4 text-[11px] text-ink/65 sm:mt-8">
+    <div class="mx-auto mt-6 flex max-w-[1160px] flex-wrap items-center justify-between gap-3 border-t border-ink/20 pt-4 text-[13px] text-ink/65 sm:mt-8">
       <span>FDA-cleared for depression and OCD. In-network with most major plans.</span>
       <span>Delivered on Magstim equipment</span>
     </div>

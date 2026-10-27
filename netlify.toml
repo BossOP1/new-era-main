@@ -46,3 +46,40 @@
   from = "/accessibility"
   to = "/accessibility.html"
   status = 200
+
+# Clinicians who have left the practice: their old pages go to the team page.
+[[redirects]]
+  from = "/terry-v-eagan"
+  to = "/team"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/terry-v-eagan.html"
+  to = "/team"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/evelyn-aki"
+  to = "/team"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/evelyn-aki.html"
+  to = "/team"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/erick-willars"
+  to = "/team"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/erick-willars.html"
+  to = "/team"
+  status = 301
+  force = true

@@ -25,7 +25,7 @@
 return [
     'meta'      => [
         'five_star'  => 1414,
-        'shown'      => 937,
+        'shown'      => 934,
         'clinics'    => 14,
         'sources'    => [
             'Google'       => 912,
@@ -82,12 +82,12 @@ return [
         'cedar-park'       => [
             'label' => 'Cedar Park',
             'state' => 'tx',
-            'count' => 138,
+            'count' => 136,
         ],
         'central-austin'   => [
             'label' => 'Central Austin',
             'state' => 'tx',
-            'count' => 104,
+            'count' => 103,
         ],
         'central-dallas'   => [
             'label' => 'Central Dallas',
@@ -121,7 +121,7 @@ return [
         ],
         'psychiatry' => [
             'label' => 'Psychiatry & meds',
-            'count' => 190,
+            'count' => 189,
         ],
         'results'    => [
             'label' => 'How it went',
@@ -129,7 +129,7 @@ return [
         ],
         'team'       => [
             'label' => 'The team',
-            'count' => 367,
+            'count' => 366,
         ],
     ],
     'reviews'   => [
@@ -522,17 +522,6 @@ Dakota is amazing with details & information.',
             'when'     => 'Aug 2026',
             'topics'   => [],
             'text'     => 'I love Anew Era they have been so amazing for the last 8 years and have continued to be so. While I\'ve seen a few providers over the years they are always professional and caring!',
-        ],
-        [
-            'name'     => 'Aurora B.',
-            'initials' => 'AB',
-            'clinic'   => 'cedar-park',
-            'city'     => 'Cedar Park, TX',
-            'source'   => 'Google',
-            'date'     => '2026-08-13',
-            'when'     => 'Aug 2026',
-            'topics'   => ['team'],
-            'text'     => 'Aki Evelyn, is a great doctor and very welcoming. She listens and actually helps me with everything. And the staff at this place is amazing and very friendly, they talk and make sure everything is settled and are all over very caring. I also feel they care for there patients with the upmost care and respect each and every one.',
         ],
         [
             'name'     => 'Sara P.',
@@ -1106,17 +1095,6 @@ Brian is very insightful and demonstrates a very caring demeanor.',
             'when'     => 'Jun 2026',
             'topics'   => ['team'],
             'text'     => 'Even though I\'m going through a difficult time mentally your staff has been supportive and helping me find solution to my illness',
-        ],
-        [
-            'name'     => 'Diane F.',
-            'initials' => 'DF',
-            'clinic'   => 'cedar-park',
-            'city'     => 'Cedar Park, TX',
-            'source'   => 'Google',
-            'date'     => '2026-06-15',
-            'when'     => 'Jun 2026',
-            'topics'   => [],
-            'text'     => 'Nurse Evelyn Aki has a very caring heart about your mental welfare & will do what she can to direct you properly. She\'s priceless.',
         ],
         [
             'name'     => 'Crimson L.',
@@ -3008,17 +2986,6 @@ Her friendly personality creates such a positive and welcoming environment that 
             'when'     => 'Sep 2025',
             'topics'   => ['psychiatry', 'team'],
             'text'     => 'I can\'t say enough good things about Anew Area Psychiatry. The entire staff is very friendly and professional, making every visit a comfortable experience. They are always on schedule, which I really appreciate. This practice has truly helped me on a personal level, and I highly recommend them to anyone seeking support.',
-        ],
-        [
-            'name'     => 'Jc R.',
-            'initials' => 'JR',
-            'clinic'   => 'central-austin',
-            'city'     => 'Central Austin, TX',
-            'source'   => 'Google',
-            'date'     => '2025-08-28',
-            'when'     => 'Aug 2025',
-            'topics'   => ['psychiatry'],
-            'text'     => 'I recently met Eric Willars, a new addition to the psychiatry team. He displayed a high level of professionalism, and his knowledge and experience were evident in his explanations regarding the optimal adjustments to my medication management. Kudos to Dr. Ha for bringing Mr. Willars on board!',
         ],
         [
             'name'     => 'Erica Y.',

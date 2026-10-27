@@ -21,6 +21,17 @@ return [
     // includes/data-locations.php.
     'hours'       => ['Admissions, Monday–Friday', '6 a.m. – 6 p.m. Pacific', '8 a.m. – 8 p.m. Central'],
 
+    // Zocdoc white-label booking, by region — from assets/booking-links/
+    // (PPS Division sheet, "Regional White Label Links"). California books
+    // through one practice; Texas through one per metro, keyed by the
+    // 'region' each clinic carries in includes/data-locations.php.
+    'zocdoc_regions' => [
+        'ca'      => 'https://www.zocdoc.com/wl/aneweratmscalifornia/search',
+        'Austin'  => 'https://www.zocdoc.com/practice/anew-era-tms-and-psychiatry-of-austin-66249',
+        'Dallas'  => 'https://www.zocdoc.com/wl/aneweratmsdallas/search',
+        'Houston' => 'https://www.zocdoc.com/wl/aneweratmshouston/search',
+    ],
+
     // Kept in step with the 'meta' block in includes/data-reviews.php, which
     // is regenerated from the practice's review export — update both together.
     // Deliberately a count and not an average: the export is five-star reviews

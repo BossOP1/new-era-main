@@ -12,6 +12,15 @@
  *                falls back to the region chip. Fill these in and the location
  *                pages can list their own team without touching team.php.
  *   video        a YouTube id for the short introduction, where one exists
+ *   circle       optional: how to frame the photo in the round thumbnails
+ *                (team.php marquee and region cards), where the default
+ *                top-weighted crop misses the face
+ *   zocdoc       the clinician's Zocdoc white-label booking link, from
+ *                assets/booking-links/ (PPS Division sheet). zocdoc_by_state
+ *                overrides it per region for someone booked through two
+ *                practices. No link means no "Book" button of
+ *                their own; the pages fall back to the regional link or the
+ *                contact form.
  */
 
 return [
@@ -30,9 +39,9 @@ return [
             'label'   => 'Texas',
             'short'   => 'TX',
             'region'  => 'Austin, Dallas & Houston',
-            'blurb'   => 'Eight clinics across three metros, offering TMS, psychiatry, therapy and Spravato® under one roof.',
+            'blurb'   => 'Eight clinics across three metros, offering TMS, psychiatry, therapy and Spravato®.',
             'clinics' => ['Central Austin', 'Cedar Park', 'Westlake', 'Central Dallas', 'Allen', 'Grapevine', 'Cypress', 'The Woodlands'],
-            'theme'   => 'bg-[#203e35]',
+            'theme'   => 'bg-brand-green-dark',
         ],
     ],
 
@@ -44,23 +53,6 @@ return [
     ],
 
     'people' => [
-        [
-            'slug'        => 'terry-v-eagan',
-            'name'        => 'Terry V. Eagan',
-            'credentials' => 'MD',
-            'role'        => 'Chief Medical Officer',
-            'group'       => 'leadership',
-            'states'      => ['ca', 'tx'],
-            'clinics'     => ['Cedar Park, TX', 'Central Dallas, TX', 'Grapevine, TX', 'Laguna Hills, CA'],
-            'photo'       => 'team/terry-v-eagan.jpg',
-            'zocdoc'      => 'https://www.zocdoc.com/doctor/terry-v-eagan-md-416460',
-            'video'       => '',
-            'bio'         => [
-                'Dr. Terry Eagan brings to Anew Era TMS & Psychiatry an extensive body of professional experience in the field of psychiatry, encompassing both his clinical private practice and multiple Medical Director positions where he provides medical and psychiatric oversight of mental health treatment centers.  Dr. Eagan’s diverse background includes the founding of various institutes that focus on providing specialized and innovative treatment for a variety of psychiatric disorders.',
-                'Dr. Eagan received his medical degree from the University of Tennessee College of Medicine, and completed an internship and residency at the Departments of Psychiatry and the Behavioral Sciences at USC.  Dr. Eagan provided clinical oversight over multiple clinical trials, served as a medical consultant to a variety of television shows, and is the author of multiple books in his field.',
-                'Dr. Eagan’s diverse professional experience in treating depression, anxiety disorders, dual diagnoses, eating disorders, and more makes his contributions as Chief Medical Director of AnewEra TMS highly efficacious in improving client’s overall quality of life.',
-            ],
-        ],
         [
             'slug'        => 'allison-duggan',
             'name'        => 'Allison Duggan',
@@ -78,20 +70,6 @@ return [
             ],
         ],
         [
-            'slug'        => 'evelyn-aki',
-            'name'        => 'Evelyn Aki',
-            'credentials' => '',
-            'role'        => 'Psychiatric Nurse Practitioner',
-            'group'       => 'psychiatry',
-            'states'      => ['tx'],
-            'clinics'     => ['Cedar Park, TX'],
-            'photo'       => 'team/evelyn-aki.jpg',
-            'video'       => '',
-            'bio'         => [
-                'Evelyn is a board-certified psychiatric nurse practitioner who has over a decade of experience in providing mental health care. She is dedicated to providing compassionate care to individuals and their families struggling with mental health concerns, helping them navigate their mental health journey, and providing personalized care that addresses the unique needs of each client. Empowered with advanced knowledge and skills from a prestigious institution, Evelyn is committed to delivering evidence-based practices and offering solutions that are whole person centered. She believes in empowering individuals with knowledge and skills that promote lasting mental and physical wellness. Her practice emphasizes collaboration, health promotion education, psychoeducation, and empowerment, ensuring that clients are active participants in their treatment journey. Beyond clinical practice, Evelyn is passionate about shaping the future of healthcare through education. She has served in the preceptor role for other Nurse Practitioners which allows her to inspire and mentor the next generation of nursing professionals. She also enjoys learning about other cultures through travel and engagement to promote cultural competence.',
-            ],
-        ],
-        [
             'slug'        => 'priti-bhardwaj',
             'name'        => 'Priti Bhardwaj',
             'credentials' => 'MD',
@@ -100,7 +78,7 @@ return [
             'states'      => ['ca'],
             'clinics'     => ['West Los Angeles, CA'],
             'photo'       => 'team/priti-bhardwaj.jpg',
-            'zocdoc'      => 'https://www.zocdoc.com/doctor/priti-bhardwaj-md-417009',
+            'zocdoc'      => 'https://www.zocdoc.com/wl/aneweratmscalifornia/doctor/priti-bhardwaj-md-417009?isNewPatient=false',
             'video'       => '',
             'bio'         => [
                 'Dr. Priti Bhardwaj knows how difficult it can be to seek help, but by doing so you’re taking a step closer to where you want to be. Struggles with anxiety, depression, attention, and insecurity interfere with our emotional and physical well-being as well as our ability to connect with others. Her goal with patients and families is to provide a warm, safe, and accepting environment for them to communicate the difficulties and challenges they face and work on finding solutions that nourish them toward becoming the healthiest and best version of themselves. Dr. Priti is a double board-certified General Adult Psychiatrist who is also board certified in Integrative Medicine (ABIM). She will use her knowledge of psychopharmacology, psychotherapy, and holistic approaches to collaborate with you. Each person is seen as an individual and is encouraged to be an active participant in their own treatment.',
@@ -115,6 +93,7 @@ return [
             'states'      => ['tx'],
             'clinics'     => ['Cedar Park, TX'],
             'photo'       => 'team/megha-chadha.jpg',
+            'zocdoc'      => 'https://www.zocdoc.com/practice/anew-era-tms-and-psychiatry-of-austin-66249',
             'video'       => '',
             'bio'         => [
                 'Dr. Megha Chadha is a board-certified psychiatrist dedicated to providing compassionate, evidence-based mental health care. She specializes in the treatment of mood disorders, including treatment-resistant depression, postpartum mental health conditions, ADHD, OCD, PTSD, and anxiety disorders.',
@@ -130,6 +109,7 @@ return [
             'states'      => ['tx'],
             'clinics'     => ['Central Dallas, TX', 'Grapevine, TX'],
             'photo'       => 'team/doris-cudjoe.jpg',
+            'zocdoc'      => 'https://www.zocdoc.com/wl/aneweratmsdallas/doctor/doris-cudjoe-msn-pmhnp-bc-360005?isNewPatient=false',
             'video'       => '',
             'bio'         => [
                 'Doris Cudjoe is a board-certified Psychiatric Mental Health Nurse Practitioner. She has over 12 years of critical care and psychiatric nursing experience and has worked for non-profit organizations as well as the federal government. She received a Bachelor of Arts in Philosophy from the University of Ghana, a Bachelor of Science in Nursing, and a Master of Science in Nursing from the University of Texas. Doris treats every patient as the unique individual they are. She is compassionate in her care and she pays attention to detail.',
@@ -145,6 +125,7 @@ return [
             'states'      => ['ca'],
             'clinics'     => ['Orange, CA'],
             'photo'       => 'team/john-anthony-diya.jpg',
+            'zocdoc'      => 'https://www.zocdoc.com/wl/aneweratmscalifornia/doctor/john-anthony-chua-diya-msn-fnp-pmhnp-bc-289230?isNewPatient=false',
             'video'       => 'QC28vVZZe5Y',
             'bio'         => [
                 'John Anthony Diya is a board-certified Psychiatric Mental Health NP, certified by the American Nurses Credentialing Center.',
@@ -160,6 +141,7 @@ return [
             'states'      => ['tx'],
             'clinics'     => ['Cedar Park, TX', 'Central Austin, TX'],
             'photo'       => 'team/velma-hughes.jpg',
+            'zocdoc'      => 'https://www.zocdoc.com/wl/aneweratmsaustin/doctor/velma-hughes-aprn-pmhnp-bc-dnp-822007?exp_pps_default_new_patient=true&isNewPatient=false',
             'video'       => '',
             'bio'         => [
                 'As a board-certified Family Psychiatric Mental Health Nurse Practitioner (PMHNP-BC), she provides compassionate, evidence-based care through a holistic, person-centered approach. She specializes in diagnosing and treating mental health conditions, developing individualized treatment plans, and prescribing medication when appropriate. She is passionate about helping patients achieve healing by addressing the mind, body, and soul in a supportive, judgment-free environment. She has a special interest in women’s mental health across the lifespan, including adolescence, pregnancy, postpartum, and menopause. Drawing from her personal experience with postpartum depression and anxiety, she offers genuine empathy, understanding, and hope to every patient she serves.',
@@ -174,6 +156,7 @@ return [
             'states'      => ['ca'],
             'clinics'     => ['Huntington Beach, CA'],
             'photo'       => 'team/dexter-jones.jpg',
+            'zocdoc'      => 'https://www.zocdoc.com/wl/aneweratmscalifornia/doctor/dexter-jones-msn-pmhnp-bc-517707?isNewPatient=false',
             'video'       => '',
             'bio'         => [
                 'Dexter has more than 16 years of dedicated experience in the medical field, including three years as a Board-Certified Psychiatric Nurse Practitioner in California. Throughout his career, he has cultivated a strong foundation in primary psychiatric care, including acute, inpatient, and outpatient mental health. His many years of experience has equipped him with the knowledge and skills to deliver comprehensive mental healthcare to patients of diverse backgrounds and needs. Dexter uses a combination of medication management and supportive therapy to work towards the goals of decreasing suffering and improving quality of life.',
@@ -188,6 +171,7 @@ return [
             'states'      => ['ca'],
             'clinics'     => ['Torrance, CA'],
             'photo'       => 'team/scarlett-kang.jpg',
+            'zocdoc'      => 'https://www.zocdoc.com/wl/aneweratmscalifornia/doctor/scarlett-s-kang-msn-aprn-647683?exp_pps_default_new_patient=true&isNewPatient=false',
             'video'       => '',
             'bio'         => [
                 'Ms. Scarlett S. Kang is a skilled adult psychiatric and mental health nurse practitioner. She practices at Anew Era TMS & Psychiatry in Torrance, CA. She offers both in-person and virtual care. Ms. Kang earned her master’s degree in nursing from Wilkes University. With her background in advanced mental health practice, she focuses on helping individuals navigate challenges that affect emotional and overall well-being. Ms. Kang provides thoughtful psychiatric care that integrates modern treatment approaches, supporting patients in finding stability and improved quality of life.',
@@ -202,6 +186,7 @@ return [
             'states'      => ['ca'],
             'clinics'     => ['Laguna Hills, CA'],
             'photo'       => 'team/swarna-kommireddy.jpg',
+            'zocdoc'      => 'https://www.zocdoc.com/wl/aneweratmscalifornia/search',
             'video'       => '',
             'bio'         => [
                 'Swarna Kommireddy is a board certified Psychiatric Mental Health Nurse Practitioner dedicated to providing compassionate, evidence based, and individualized mental health care. She focuses on building trusting therapeutic relationships while respecting each patient’s unique needs, experiences, and treatment goals.',
@@ -217,6 +202,7 @@ return [
             'states'      => ['ca'],
             'clinics'     => ['Orange, CA'],
             'photo'       => 'team/stephany-lavigne.jpg',
+            'zocdoc'      => 'https://www.zocdoc.com/wl/aneweratmscalifornia/doctor/stephany-duma-manurung-lavigne-dnp-aprn-pmhnp-bc-323736?isNewPatient=false',
             'video'       => 'vixYWNnNTtU',
             'bio'         => [
                 'Stephany Lavigne, DNP is a board-certified Psychiatric Mental Health Nurse Practitioner. She received her Master of Science in Nursing from the University of South Alabama Cum Laude. She has over 7 years of experience working in mental health at the California State Hospital system, outpatient setting, and at the Veterans Affairs hospital. Her approach to treatment is one that is client-centered driven by the ethos of beneficence and her goal is to increase access to mental health care in underserved areas.',
@@ -232,6 +218,7 @@ return [
             'states'      => ['tx'],
             'clinics'     => ['Allen, TX'],
             'photo'       => 'team/rhoda-madamombe.jpg',
+            'zocdoc'      => 'https://www.zocdoc.com/wl/aneweratmsdallas/doctor/rhoda-madamombe-msn-pmhnp-bc-360003?isNewPatient=false',
             'video'       => 'fgiRp3pP7pw',
             'bio'         => [
                 'Rhoda Madamombe is a board-certified Psychiatric Mental Health Nurse Practitioner (MSN, PMHNP-BC) and a member of the American Psychiatric Association. She graduated from Wilkes University and has been in the field of psychiatry for the past 17 years.',
@@ -248,6 +235,8 @@ return [
             'states'      => ['tx'],
             'clinics'     => [],
             'photo'       => 'team/randal-mcintyre.jpg',
+            'circle'      => 'object-[60%_28%] scale-[1.1]',
+            'zocdoc'      => 'https://www.zocdoc.com/wl/aneweratmsaustin/doctor/randall-w-mcintyre-md-321058?isNewPatient=false',
             'video'       => '',
             'bio'         => [
                 'Dr. Randal McIntyre has been practicing Child, Adolescent, and Adult Psychiatry in the Austin area for over thirty years. He was raised in Midland, Texas. He holds a BA in biology from The University of Texas – Austin, and an MD from The University of Texas Medical School – Houston. He did his internship in Family Practice at Southwestern Medical School in Dallas. Subsequently, he completed residences in General and Child Psychiatry at UTHCSC-Houston.',
@@ -265,6 +254,7 @@ return [
             'states'      => ['ca'],
             'clinics'     => ['Laguna Hills, CA'],
             'photo'       => 'team/tiffany-a-nix.jpg',
+            'zocdoc'      => 'https://www.zocdoc.com/wl/aneweratmscalifornia/doctor/tiffany-ann-nix-msn-pmhnp-bc-299211?isNewPatient=false',
             'video'       => '',
             'bio'         => [
                 'Tiffany Nix is a Southern California-born native. A licensed and board-certified Psychiatric Mental Health Nurse practitioner across the lifespan. Graduating from Cal State University of Long Beach. Tiffany believes in creating a safe, honest, and therapeutic relationship with her clients. At Anew Era, Tiffany Nix specializes in adult treatment including but not limited to anxiety, depression, Bipolar, and dual diagnosis, and is certified in Transcranial Magnetic Stimulation treatment.',
@@ -281,6 +271,7 @@ return [
             'states'      => ['tx'],
             'clinics'     => ['Cypress, TX', 'The Woodlands, TX'],
             'photo'       => 'team/abidemi-oladele.jpg',
+            'zocdoc'      => 'https://www.zocdoc.com/wl/aneweratmshouston/doctor/abidemi-oladele-msn-pmhnp-bc-516297?isNewPatient=false',
             'video'       => '',
             'bio'         => [
                 'Ms. Abidemi Oladele is a compassionate adult psychiatric and mental health nurse practitioner. Welcoming patients of all communities in Cypress, TX, she offers her services at Anew Era TMS & Psychiatry of Houston. She also takes virtual appointments. As part of her formal education and training, Ms. Oladele earned her master’s degree in nursing from Northern Kentucky University. Following a patient-centered approach during therapy, Ms. Oladele ensures each patient receives focused attention and feels comfortable sharing their struggles. She formulates realistic solutions, keeping their unique needs and preferences at the forefront.',
@@ -295,6 +286,7 @@ return [
             'states'      => ['ca'],
             'clinics'     => ['Newport Beach, CA'],
             'photo'       => 'team/thao-palacio.jpg',
+            'zocdoc'      => 'https://www.zocdoc.com/wl/aneweratmscalifornia/doctor/thao-palacio-pmhnp-bc-dnp-811831?isNewPatient=false&exp_pps_default_new_patient=true',
             'video'       => '',
             'bio'         => [
                 'Ms. Thao Palacio is a board-certified adult psychiatric and mental health nurse practitioner at Anew Era TMS & Psychiatry in Newport Beach, CA. She cares for adolescents and adults seeking support with a variety of mental health needs, with expertise in psychiatric evaluation, medication management, psychopharmacology, and supportive therapy.',
@@ -309,6 +301,7 @@ return [
             'states'      => ['ca'],
             'clinics'     => ['Long Beach, CA'],
             'photo'       => 'team/kammie-pierce.jpg',
+            'zocdoc'      => 'https://www.zocdoc.com/wl/aneweratmscalifornia/doctor/kammie-pierce-aprn-614847?isNewPatient=false',
             'video'       => '',
             'bio'         => [
                 'Kammie Pierce believes that true greatness begins with achieving equilibrium—when the mind and body are in balance, one can begin to reach their full potential. Her goal as a provider is to help patients to restore that balance, so that they can focus on what truly matters in life. Symptom remission is always a top priority, but her care goes beyond this; she aims to support lasting stability and growth from the inside out.',
@@ -342,6 +335,7 @@ return [
             'states'      => ['tx'],
             'clinics'     => ['Grapevine, TX'],
             'photo'       => 'team/adele-shyntum.png',
+            'zocdoc'      => 'https://www.zocdoc.com/wl/aneweratmsdallas/doctor/adele-shyntum-aprn-rn-np-647230?isNewPatient=false&exp_pps_default_new_patient=true',
             'video'       => '',
             'bio'         => [
                 'Adele Shyntum is a board-certified psychiatric nurse practitioner with a Master’s in Psychiatric and Mental Health Nursing from The University of Texas at Arlington. She has several years of experience working with adults with mental health illnesses.',
@@ -358,6 +352,7 @@ return [
             'states'      => ['tx'],
             'clinics'     => ['Cypress, TX'],
             'photo'       => 'team/damilola-fowowe.jpeg',
+            'zocdoc'      => 'https://www.zocdoc.com/wl/aneweratmshouston/doctor/damilola-fowowe-msn-pmhnp-bc-471424?isNewPatient=false',
             'video'       => '',
             'bio'         => [
                 'Damilola Fowowe is a board-certified Psychiatric Mental Health Nurse Practitioner. She received her Bachelor of Science in Nursing with honors from the University of Texas at Arlington and graduated with a Master of Science in Nursing — Psychiatric Mental Health Nurse Practitioner from the University of Texas Health Science Center in Houston.',
@@ -374,6 +369,7 @@ return [
             'states'      => ['tx'],
             'clinics'     => ['Central Dallas, TX'],
             'photo'       => 'team/tammy-fluker.png',
+            'zocdoc'      => 'https://www.zocdoc.com/wl/aneweratmsdallas/doctor/tammy-fluker-aprn-rn-np-649182?isNewPatient=false&exp_pps_default_new_patient=true',
             'video'       => '',
             'bio'         => [
                 'Tammy is a dedicated and compassionate Psychiatric Mental Health Nurse Practitioner with over 20 years of nursing experience. A proud veteran and committed Christian, she brings a unique blend of clinical expertise, discipline and faith-based compassion to her practice. Her extensive background spans various areas of nursing, with a deep focus on mental health care for individuals across the lifespan.',
@@ -407,6 +403,7 @@ return [
             'states'      => ['ca'],
             'clinics'     => ['Huntington Beach, CA'],
             'photo'       => 'team/heather-mak.jpg',
+            'zocdoc'      => 'https://www.zocdoc.com/wl/aneweratmscalifornia/doctor/heather-k-mak-md-459997?isNewPatient=false',
             'video'       => '',
             'zocdoc'      => 'https://www.zocdoc.com/doctor/heather-k-mak-md-459997',
             'bio'         => [
@@ -423,7 +420,7 @@ return [
             'states'      => ['ca'],
             'clinics'     => ['Huntington Beach, CA'],
             'photo'       => 'team/frizette-pua.jpg',
-            'zocdoc'      => 'https://www.zocdoc.com/doctor/frizette-pua-msn-pmhnp-bc-713645',
+            'zocdoc'      => 'https://www.zocdoc.com/wl/aneweratmscalifornia/doctor/frizette-pua-msn-pmhnp-bc-713645?isNewPatient=false&exp_pps_default_new_patient=true',
             'video'       => '',
             'bio'         => [
                 'Frizette Dodson Pua is a Board Certified Psychiatric Mental Health Nurse Practitioner (PMHNP-BC). She earned her Master of Science in Nursing from Walden University. She has extensive experience of diverse healthcare settings, providing comprehensive support to individuals with wide range of mental health conditions. She is dedicated to delivering compassionate, evidence-based mental health care across the life span. With a strong clinical foundation and a collaborative, patient-centered approach, she works closely with interdisciplinary teams to ensure continuity of care and optimize treatment outcomes for individuals with complex mental health needs. Her practice emphasizes safety, respect, cultural humility, and empowering individuals to actively participate in their journey toward sustained wellness. Ms. Pua is deeply committed to reducing barriers to mental health services, enhancing patient education, and advancing initiatives that promote equity, resilience, and recovery within the communities she serves.',
@@ -438,6 +435,7 @@ return [
             'states'      => ['ca'],
             'clinics'     => ['Long Beach, CA', 'West Los Angeles, CA'],
             'photo'       => 'team/ferdinand-andy-rimando.jpg',
+            'zocdoc'      => 'https://www.zocdoc.com/wl/aneweratmscalifornia/doctor/ferdinand-andy-rimando-msn-pmhnp-bc-466529?isNewPatient=false',
             'video'       => '',
             'bio'         => [
                 'Ferdinand Andy Rimando, a Psychiatric Nurse Practitioner at Anew Era California since 2024, has an impressive 20-year journey in healthcare reflecting a diverse and accomplished career. His expertise spans various specialties, including sleep medicine, critical care, anesthesia, post-anesthesia care, psychiatry, and mental health.',
@@ -454,6 +452,7 @@ return [
             'states'      => ['ca'],
             'clinics'     => ['Torrance, CA'],
             'photo'       => 'team/diane-rodriguez.jpg',
+            'zocdoc'      => 'https://www.zocdoc.com/wl/aneweratmscalifornia/doctor/diane-rodriguez-aprn-pmhnp-bc-824403?exp_pps_default_new_patient=true&isNewPatient=false',
             'video'       => '',
             'bio'         => [
                 'Diane Rodriguez, PMHNP-BC, is an ANCC board-certified Psychiatric Mental Health Nurse Practitioner who is passionate about helping individuals feel heard, understood, and supported throughout their mental health journey. She works with individuals experiencing concerns such as depression, anxiety, ADHD, trauma-related symptoms, bipolar disorder, and sleep difficulties. Diane believes that mental health care should be collaborative and individualized, with treatment guided by each person’s unique experiences, needs, and goals.',
@@ -468,6 +467,7 @@ return [
             'states'      => ['tx'],
             'clinics'     => ['The Woodlands, TX'],
             'photo'       => 'team/sherri-sarumi.jpg',
+            'zocdoc'      => 'https://www.zocdoc.com/wl/aneweratmshouston/doctor/sherri-sarumi-aprn-dnp-pmhnp-bc-827096?LocIdent=420021&reason_visit=-1&insuranceCarrier=-1&insurancePlan=-1&dr_specialty=405&isNewPatient=true',
             'video'       => '',
             'bio'         => [
                 'Sherri Sarumi, DNP, APRN, PMHNP-BC, is a board-certified Psychiatric Mental Health Nurse Practitioner with experience providing compassionate, evidence-based psychiatric care to adults across outpatient and substance use treatment settings. She is committed to delivering patient-centered care through comprehensive psychiatric evaluations, medication management, and individualized treatment planning  that promotes long-term mental wellness and recovery.',
@@ -482,6 +482,7 @@ return [
             'states'      => ['tx'],
             'clinics'     => ['Westlake, TX'],
             'photo'       => 'team/yan-shi.jpg',
+            'zocdoc'      => 'https://www.zocdoc.com/wl/aneweratmsaustin/doctor/yan-shi-pmhnp-bc-aprn-msn-804932?LocIdent=275965&reason_visit=-1&insuranceCarrier=-1&insurancePlan=-1&dr_specialty=405&isNewPatient=true',
             'video'       => '',
             'bio'         => [
                 'Yan Shi is a licensed Psychiatric-Mental Health Nurse Practitioner in Texas dedicated to providing compassionate, evidence-based mental health care. He earned his Master of Science in Nursing from the University of Texas at Arlington and began his medical education and clinical training in China before earning a PhD in Immunology from Peking Union Medical College.',
@@ -498,24 +499,10 @@ return [
             'states'      => ['tx'],
             'clinics'     => ['Cedar Park, TX'],
             'photo'       => 'team/bryan-walker.jpg',
+            'zocdoc'      => 'https://www.zocdoc.com/wl/aneweratmsaustin/doctor/bryan-r-walker-msn-pmhnp-bc-435367?isNewPatient=false',
             'video'       => '',
             'bio'         => [
                 'Bryan Walker is an Advanced Practice Registered Nurse (APRN) and is board-certified in psychiatry and mental health (PMHNP-BC). As an advanced practice nurse, Bryan is committed to providing holistic, patient-centered, and evidenced-based care. He believes strongly in an integrated model of care and works in partnership with clients, other healthcare providers, and psychotherapists to achieve the best outcomes. Bryan keeps up with the latest research by attending conferences and improving psychotherapy skills with continued training. He completed his MSN at Eastern Kentucky University in Richmond, Kentucky. Bryan has also been a registered nurse since 1984 and has worked in a wide variety of health care settings (emergency, trauma, intensive care, home health, telephone triage, rehabilitation, hospice and palliative care, psychiatry). His diverse background augments his practice of psychiatry and mental health care.  Prior to entering private practice, Bryan worked full time at Cedar Crest Hospital and Residential Treatment Center. As a PMHNP, Bryan can assess, diagnose, and treat patients with psychiatric disorders including the prescription of medications and administration of psychotherapy. PMHNP’s provide a full range of psychiatric and mental health services.',
-            ],
-        ],
-        [
-            'slug'        => 'erick-willars',
-            'name'        => 'Erick Willars',
-            'credentials' => '',
-            'role'        => 'Psychiatric Nurse Practitioner',
-            'group'       => 'psychiatry',
-            'states'      => ['tx'],
-            'clinics'     => ['Central Austin, TX'],
-            'photo'       => 'team/erick-willars.jpg',
-            'video'       => '',
-            'bio'         => [
-                'Erick is a psychiatric nurse practitioner who is here to support individuals on their mental health journey with compassion and care. Erick specializes in treating anxiety, depression, trauma and ADHD through personalized, evidence-based approaches. His goal is to create a space where patients feel truly heard and understood, working collaboratively to find the tools and treatments that work best for each person—one step at a time.',
-                'Erick believes that every person’s mental health journey is unique. With that in mind, he works closely with patients to develop treatment plans tailored to each individual’s needs and goals. His approach blends evidence-based practices with medication management when appropriate, always emphasizing a holistic view of well-being. Erick’s therapeutic style is supportive and empathetic, encouraging patients to move at their own pace while working toward sustainable, positive change.',
             ],
         ],
         [
@@ -527,6 +514,7 @@ return [
             'states'      => ['tx'],
             'clinics'     => ['Central Dallas, TX', 'Grapevine, TX'],
             'photo'       => 'team/xiaoyan-wu.jpg',
+            'zocdoc'      => 'https://www.zocdoc.com/wl/aneweratmsdallas/doctor/xiaoyan-wu-md-464067?isNewPatient=false',
             'video'       => '',
             'bio'         => [
                 'Dr. Wu initially graduated from a leading medical school in China and subsequently completed her psychiatric residency training program at Texas Tech University Medical School. During this time, Dr. Wu was elected as a chief psychiatric resident and received the honor of “Resident of the Year” twice.',
@@ -542,6 +530,8 @@ return [
             'states'      => ['tx'],
             'clinics'     => ['Cypress, TX'],
             'photo'       => 'team/huiping-xu.jpg',
+            'circle'      => 'object-[center_42%] scale-[1.25]',
+            'zocdoc'      => 'https://www.zocdoc.com/wl/aneweratmshouston/doctor/huiping-xu-md-582673?isNewPatient=false',
             'video'       => '',
             'bio'         => [
                 'Dr. Huiping Xu is a board-certified physician who specializes in holistic treatment philosophies. Dr. Xu received a master’s degree in neuroscience with a focus on learning and memory mechanisms, development and regeneration of the central nervous system. She then completed her psychiatry residency at McGovern Medical School at UT Health Science Center. Dr. Xu founded Wholehealth PLLC in 2015 to offer individualized and personalized care to patients. In 2018 Dr. Xu was awarded Top Psychiatrist in Houston, TX by the Patient Reviews for Top Doctors. She previously served as Assistant Professor of Baylor College of Medicine, prior to joining Anew Era TMS & Psychiatry in 2025.',
@@ -646,6 +636,7 @@ return [
             'states'      => ['ca'],
             'clinics'     => ['Huntington Beach, CA'],
             'photo'       => 'team/lauren-lopez.jpg',
+            'circle'      => 'object-[center_28%]',
             'video'       => '',
             'bio'         => [
                 'Lauren Lopez is an Associate Marriage and Family therapist (AMFT) who graduated with a master’s degree in clinical psychology from Pepperdine University and who received a bachelor’s degree in psychology at the University of La Verne.',
@@ -721,6 +712,7 @@ return [
             'states'      => ['tx'],
             'clinics'     => ['Central Dallas, TX'],
             'photo'       => 'team/krystal-michelle-wurm.jpg',
+            'circle'      => 'object-[52%_50%] scale-[1.45]',
             'video'       => '',
             'bio'         => [
                 'Krystal Wurm approaches therapy as a collaborative partnership, empowering clients to be the ultimate decision-makers in their own lives while helping them identify opportunities and overcome obstacles. She provides a nonjudgmental, supportive space where clients can speak openly and feel heard.',
@@ -736,6 +728,7 @@ return [
             'states'      => ['ca'],
             'clinics'     => ['Laguna Hills, CA'],
             'photo'       => 'team/samantha-rodriguez-zuniga.jpg',
+            'circle'      => 'object-[center_24%]',
             'video'       => '',
             'bio'         => [
                 'Sam Rodriguez Zuniga is an Associate Marriage and Family Therapist (AMFT #150259) who earned a Master of Science degree in Counseling Psychology from Mount Saint Mary’s University. Her therapeutic style is humanistic and integrative which combines different therapeutic approaches to fit the needs of each unique individual. Her modalities include CBT/DBT/ACT/SFBT, Family Systems, and more. She has worked with adults dealing with depression, anxiety, grief, interpersonal conflict, family/relationship conflict, and life transitions. Her collaborative journey with clients honors and explores their past, personal experiences while also addressing current needs. Above all, she helps clients as they strive to become the best version of themselves.',

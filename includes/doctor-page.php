@@ -14,9 +14,9 @@
  * this page picks it up — the clinic panel, the schema and the colleagues
  * list all follow from it, without this file being touched.
  *
- * One page per clinician, not one per clinician-and-clinic: Terry Eagan works
- * at four sites and four near-identical pages would compete with each other
- * in search. The clinic panel lists all four and links to each location page.
+ * One page per clinician, not one per clinician-and-clinic: a clinician who
+ * works at four sites would otherwise get four near-identical pages competing
+ * with each other in search. The clinic panel lists all four and links to each location page.
  *
  * Booking: where a clinician has a verified ZocDoc profile the buttons link
  * to it. Where there is not one, they fall back to the clinic's phone number
@@ -184,7 +184,7 @@ $treatments = require __DIR__ . '/data-treatments.php';
         </div>
       </div>
 
-      <div class="mt-8 flex flex-wrap items-center justify-between gap-3 border-t border-white/30 pt-4 text-[11px] text-white/85">
+      <div class="mt-8 flex flex-wrap items-center justify-between gap-3 border-t border-white/30 pt-4 text-[13px] text-white/85">
         <span><?= e($is_therapist ? 'Therapy' : 'Psychiatry and medication management') ?> &middot; In person and by telehealth</span>
         <?php if ($city_list): ?>
           <span><?= e(count($city_list)) ?> clinic<?= count($city_list) === 1 ? '' : 's' ?> &middot; <?= e(implode(', ', $city_list)) ?></span>

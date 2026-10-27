@@ -52,8 +52,6 @@ $pages = [
     // The clinician pages, all built from includes/doctor-page.php. One per
     // clinician who is tagged with a clinic in includes/data-team.php — the
     // location pages link to these instead of opening a bio dialog.
-    'terry-v-eagan.php'               => 'terry-v-eagan.html',
-    'evelyn-aki.php'                  => 'evelyn-aki.html',
     'priti-bhardwaj.php'              => 'priti-bhardwaj.html',
     'megha-chadha.php'                => 'megha-chadha.html',
     'doris-cudjoe.php'                => 'doris-cudjoe.html',
@@ -79,7 +77,6 @@ $pages = [
     'sherri-sarumi.php'               => 'sherri-sarumi.html',
     'yan-shi.php'                     => 'yan-shi.html',
     'bryan-walker.php'                => 'bryan-walker.html',
-    'erick-willars.php'               => 'erick-willars.html',
     'xiaoyan-wu.php'                  => 'xiaoyan-wu.html',
     'huiping-xu.php'                  => 'huiping-xu.html',
     'christina-ferrari.php'           => 'christina-ferrari.html',

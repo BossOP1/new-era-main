@@ -86,7 +86,7 @@ foreach ($insurers as $insurer) {
       </div>
     </div>
 
-    <div class="mx-auto mt-6 flex max-w-[1160px] flex-wrap items-center justify-between gap-3 border-t border-ink/20 pt-4 text-[11px] text-ink/65 sm:mt-8">
+    <div class="mx-auto mt-6 flex max-w-[1160px] flex-wrap items-center justify-between gap-3 border-t border-ink/20 pt-4 text-[13px] text-ink/65 sm:mt-8">
       <span>Benefits verified before your first visit. Prior authorization handled by us.</span>
       <span>Psychiatry <span aria-hidden="true" class="px-2">/</span> Therapy <span aria-hidden="true" class="px-2">/</span> TMS <span aria-hidden="true" class="px-2">/</span> Spravato<sup>&reg;</sup></span>
     </div>

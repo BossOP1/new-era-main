@@ -66,7 +66,7 @@ $btn_line = 'inline-flex items-center gap-2.5 rounded-full border-2 border-ink/2
       </div>
     </div>
 
-    <div class="mx-auto mt-6 flex max-w-[1160px] flex-wrap items-center justify-between gap-3 border-t border-ink/20 pt-4 text-[11px] text-ink/65 sm:mt-8">
+    <div class="mx-auto mt-6 flex max-w-[1160px] flex-wrap items-center justify-between gap-3 border-t border-ink/20 pt-4 text-[13px] text-ink/65 sm:mt-8">
       <span>Written and clinically reviewed by Anew Era mental health professionals.</span>
       <span>TMS Therapy <span aria-hidden="true" class="px-2">/</span> Insurance Guides <span aria-hidden="true" class="px-2">/</span> Psychiatry</span>
     </div>

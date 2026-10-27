@@ -143,7 +143,7 @@ foreach (array_slice($reviews, $first_page) as $r) {
       </div>
     </div>
 
-    <div class="mx-auto mt-6 flex max-w-[1160px] flex-wrap items-center justify-between gap-3 border-t border-ink/20 pt-4 text-[11px] text-ink/65 sm:mt-8">
+    <div class="mx-auto mt-6 flex max-w-[1160px] flex-wrap items-center justify-between gap-3 border-t border-ink/20 pt-4 text-[13px] text-ink/65 sm:mt-8">
       <span>Collected on <?= e(implode(', ', array_keys($meta['sources']))) ?>.</span>
       <span>Last review <?= e($meta['updated']) ?></span>
     </div>

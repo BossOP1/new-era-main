@@ -45,7 +45,13 @@ $total   = count($people);
 $clinics = array_sum(array_map(static fn (array $l): int => count($l['clinics']), $locations));
 
 // The hero marquee shows the faces we actually have photographs of.
-$portraits = array_values(array_filter($people, static fn (array $p): bool => $p['photo'] !== ''));
+// Clinicians only: leadership who do not see patients stay out of it.
+$portraits = array_values(array_filter($people, static fn (array $p): bool =>
+    $p['photo'] !== '' && ($p['group'] !== 'leadership' || !empty($p['zocdoc']))));
+
+// The round thumbnails' crop: a per-person 'circle' frame where the default
+// misses the face (data-team.php).
+$circle = static fn (array $p): string => $p['circle'] ?? 'object-[center_12%]';
 
 /**
  * Initials, for the handful of people whose headshot has not been supplied.
@@ -98,7 +104,7 @@ $haystack = static function (array $p) use ($locations): string {
         </h1>
 
         <p class="m-0 mt-5 max-w-[48ch] text-[15px] leading-[1.75] text-ink/75 sm:mt-6 sm:text-base">
-          Psychiatrists, nurse practitioners and therapists across California and Texas. Find the clinician who fits, read how they work, and book with them directly.
+          Get connected to psychiatrists, nurse practitioners and therapists in California and Texas. Find the right help and book an appointment directly.
         </p>
 
         <div class="mt-6 flex flex-wrap gap-3 sm:mt-8">
@@ -123,9 +129,8 @@ $haystack = static function (array $p) use ($locations): string {
 
     </div>
 
-    <div class="mx-auto mt-6 flex max-w-[1160px] flex-wrap items-center justify-between gap-3 border-t border-ink/20 pt-4 text-[11px] text-ink/65 sm:mt-8">
+    <div class="mx-auto mt-6 flex max-w-[1160px] flex-wrap items-center justify-between gap-3 border-t border-ink/20 pt-4 text-[13px] text-ink/65 sm:mt-8">
       <span>In person and by telehealth. Most insurance accepted.</span>
-      <span>California <span aria-hidden="true" class="px-2">/</span> Texas</span>
     </div>
   </section>
 </div>
@@ -136,11 +141,11 @@ $haystack = static function (array $p) use ($locations): string {
      Slower than the insurer strips (90s, not 34s): a full roster at their pace
      reads as a blur of faces. */ ?>
 <div aria-hidden="true" class="marquee-mask overflow-hidden bg-white py-6 sm:py-8">
-  <div class="flex w-max gap-3 animate-marquee [animation-duration:90s] hover:[animation-play-state:paused] motion-reduce:animate-none sm:gap-4">
+  <div class="flex w-max gap-3 animate-marquee [animation-duration:150s] hover:[animation-play-state:paused] motion-reduce:animate-none sm:gap-4">
     <?php for ($pass = 0; $pass < 2; $pass++): ?>
       <?php foreach ($portraits as $p): ?>
         <span class="block h-[76px] w-[76px] shrink-0 overflow-hidden rounded-full border-2 border-white bg-[#e7f1fa] shadow-[0_6px_16px_rgba(20,32,43,0.1)] sm:h-[92px] sm:w-[92px]">
-          <img src="<?= e(asset('assets/img/' . $p['photo'])) ?>" alt="" width="92" height="92" loading="lazy" decoding="async" class="h-full w-full object-cover object-[center_12%] grayscale-[35%] transition duration-500 hover:grayscale-0 hover:scale-105 motion-reduce:transition-none">
+          <img src="<?= e(asset('assets/img/' . $p['photo'])) ?>" alt="" width="92" height="92" loading="lazy" decoding="async" class="h-full w-full object-cover <?= e($circle($p)) ?> grayscale-[35%] transition duration-500 hover:grayscale-0 motion-reduce:transition-none">
         </span>
       <?php endforeach; ?>
     <?php endfor; ?>
@@ -151,11 +156,11 @@ $haystack = static function (array $p) use ($locations): string {
 <section class="<?= $wrap ?> pb-2 pt-10 sm:pb-4 sm:pt-[60px] md:pt-[76px]">
   <div class="mb-7 sm:mb-9 md:flex md:items-end md:justify-between md:gap-10">
     <div>
-      <p class="<?= $eyebrow ?>"><?= $dot ?> Two regions</p>
-      <h2 class="<?= $h2 ?>">Same standard.<br><em class="italic font-normal text-brand-blue">Two states.</em></h2>
+      <p class="<?= $eyebrow ?>"><?= $dot ?> Where we practice</p>
+      <h2 class="<?= $h2 ?>">Two states.<br><em class="italic font-normal text-brand-blue">Same standard of care.</em></h2>
     </div>
     <p class="m-0 mt-[22px] max-w-[360px] text-base leading-[1.75] text-[#58616a] md:mt-0 md:max-w-[320px]">
-      Our California and Texas teams share one set of protocols and one approach to care. Pick a region to see the clinicians near you.
+      Our teams share one set of protocols and one approach to care. Pick a state to see the clinicians near you.
     </p>
   </div>
 
@@ -189,7 +194,7 @@ $haystack = static function (array $p) use ($locations): string {
           <div aria-hidden="true" class="relative z-10 mt-6 flex items-center">
             <?php foreach ($faces as $face): ?>
               <span class="-ml-3 h-12 w-12 shrink-0 overflow-hidden rounded-full border-2 border-white/85 bg-[#e7f1fa] first:ml-0">
-                <img src="<?= e(asset('assets/img/' . $face['photo'])) ?>" alt="" width="48" height="48" loading="lazy" decoding="async" class="h-full w-full object-cover object-[center_12%]">
+                <img src="<?= e(asset('assets/img/' . $face['photo'])) ?>" alt="" width="48" height="48" loading="lazy" decoding="async" class="h-full w-full object-cover <?= e($circle($face)) ?>">
               </span>
             <?php endforeach; ?>
             <?php if ($count_state[$key] > count($faces)): ?>
@@ -198,7 +203,8 @@ $haystack = static function (array $p) use ($locations): string {
           </div>
 
           <p class="relative z-10 m-0 mt-6 border-t border-white/15 pt-4 text-[12.5px] leading-[1.9] text-white/50">
-            <?= e(implode(' · ', $loc['clinics'])) ?>
+            <?php $sorted = $loc['clinics']; sort($sorted); ?>
+            <?= e(implode(' · ', $sorted)) ?>
           </p>
 
           <span class="relative z-10 mt-auto inline-flex items-center gap-2 pt-6 text-sm font-extrabold text-white">
@@ -342,8 +348,8 @@ $haystack = static function (array $p) use ($locations): string {
   <div class="<?= $wrap ?> <?= $pad ?>">
     <div class="mb-7 sm:mb-9 md:mb-11 md:flex md:items-end md:justify-between md:gap-10">
       <div>
-        <p class="<?= $eyebrow ?>"><?= $dot ?> Not sure who to see</p>
-        <h2 class="<?= $h2 ?>">You don't have to<br><em class="italic font-normal text-brand-blue">pick first.</em></h2>
+        <p class="<?= $eyebrow ?>"><?= $dot ?> Get Matched with a Clinician</p>
+        <h2 class="<?= $h2 ?>">We can help you find<br><em class="italic font-normal text-brand-blue">the right expert.</em></h2>
       </div>
       <p class="m-0 mt-[22px] max-w-[360px] text-base leading-[1.75] text-[#58616a] md:mt-0 md:max-w-[300px]">
         Most people start with an assessment and we match them from there. Choosing a name yourself is welcome, not required.
@@ -353,17 +359,15 @@ $haystack = static function (array $p) use ($locations): string {
     <ol class="m-0 grid list-none gap-4 p-0 md:grid-cols-3 md:gap-3.5 lg:gap-[22px]">
       <?php foreach ([
         ['01', 'Tell us what is going on.', 'A short call covers your symptoms, what you have already tried and what your insurance will cover.', 'Call'],
-        ['02', 'We match you to a clinician.', 'Usually a psychiatric provider, a therapist, or both — chosen on fit, location and how soon they can see you.', 'Match'],
-        ['03', 'Meet them, then decide.', 'If the fit is not right after the first session, say so. Moving to a different clinician is a conversation, not a referral.', 'Meet'],
+        ['02', 'We match you to a clinician.', 'We match you with a psychiatric provider, a therapist, or both, based on fit, location and how soon they can see you.', 'Match'],
+        ['03', 'Meet them, then decide.', 'If the fit is not right after the first session, please let us know. Moving to a different clinician is easy.', 'Meet'],
       ] as [$number, $heading, $copy, $word]): ?>
         <li data-reveal class="flex flex-col rounded-[20px] bg-[#faf8f3] p-7 md:p-[25px] lg:p-[30px]">
-          <div class="mb-[25px] flex items-center justify-between text-[11px] text-[#6c756f] md:mb-[42px]">
+          <div class="mb-[25px] text-[11px] text-[#6c756f] md:mb-[42px]">
             <span><?= e($number) ?></span>
-            <span aria-hidden="true" class="text-[34px] font-normal leading-none text-brand-blue"><?= $number === '01' ? '◎' : ($number === '02' ? '↗' : '⊕') ?></span>
           </div>
           <h3 class="m-0 mb-[18px] font-serif text-[27px] font-normal leading-[1.15] tracking-[-0.03em] text-ink md:text-[25px] lg:text-[28px]"><?= e($heading) ?></h3>
           <p class="m-0 text-sm leading-[1.85] text-[#58616a]"><?= e($copy) ?></p>
-          <span class="mt-[25px] border-t border-ink/15 pt-5 text-[10px] font-bold uppercase tracking-[0.15em] md:mt-8"><?= e($word) ?></span>
         </li>
       <?php endforeach; ?>
     </ol>
@@ -374,10 +378,10 @@ $haystack = static function (array $p) use ($locations): string {
 <section id="book" class="mx-auto max-w-[1280px] px-5 py-8 sm:px-10 sm:py-12">
   <div data-reveal class="relative flex flex-col items-center justify-center gap-5 rounded-[28px] bg-cream bg-aurora px-6 py-10 text-center sm:gap-6 sm:px-12 sm:py-14">
     <h2 class="m-0 font-serif text-[30px] font-normal leading-[1.1] tracking-[-0.03em] text-ink sm:text-[40px]">
-      Ready when you are.
+      Anew Era is ready when you are.
     </h2>
     <p class="m-0 max-w-[50ch] text-base font-medium leading-relaxed text-ink/75 sm:text-[17px]">
-      Book with a name from this page, or let us match you. Either way, we check your benefits before your first visit.
+      Book one of our dedicated clinicians or let us match you. Either way, we check your benefits before your first visit.
     </p>
     <div class="flex flex-wrap items-center justify-center gap-3">
       <a href="contact.php" class="inline-flex items-center gap-2.5 rounded-full bg-brand-blue px-8 py-4 text-[15px] font-extrabold text-white shadow-md shadow-brand-blue/20 transition-all hover:-translate-y-0.5 hover:bg-brand-blue-dark hover:shadow-lg">
@@ -483,6 +487,10 @@ $haystack = static function (array $p) use ($locations): string {
           'video'  => $p['video'],
           'states' => array_map(static fn (string $s): string => $locations[$s]['label'] ?? $s, $p['states']),
           'clinics'=> $p['clinics'],
+          // Their own Zocdoc link, if they have one. Leadership without one
+          // (not seeing patients) gets no booking button at all.
+          'book'   => $p['zocdoc'] ?? '',
+          'bookable' => !empty($p['zocdoc']) || $p['group'] !== 'leadership',
       ];
   }, $people), JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?>;
 
@@ -676,8 +684,22 @@ $haystack = static function (array $p) use ($locations): string {
     }
     body.scrollTop = 0;
 
+    // Their Zocdoc page in a new tab where they have one; otherwise the
+    // contact form, so the intake team can book them. Leadership who do not
+    // see patients get no button.
     var book = dialog.querySelector('[data-bio-book]');
-    book.textContent = 'Book with ' + p.name.split(/\s+/)[0] + ' ';
+    // style, not the hidden attribute: the link's inline-flex class would win.
+    book.style.display = p.bookable ? '' : 'none';
+    if (p.book) {
+      book.href = p.book;
+      book.target = '_blank';
+      book.rel = 'noopener';
+    } else {
+      book.href = 'contact.php';
+      book.removeAttribute('target');
+      book.removeAttribute('rel');
+    }
+    book.textContent = p.book ? 'Book with ' + p.name.split(/\s+/)[0] + ' ' : 'Request an Appointment ';
     book.appendChild(document.createRange().createContextualFragment(
       '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>'
     ));

@@ -61,6 +61,11 @@ DROPPED = r'\btinnitus\b'
 # clinic narrows a first-name-only match to the reviews that mean them.
 DEPARTED = [
     (r'\blaura\b', 'central-austin'),   # Laura Ann Beaufford, left Nov 6, 2026
+    # Leaving per the October 2026 team review. A clinic of None matches a
+    # review from any clinic — these surnames are distinctive enough.
+    (r'\baki\b', None),                 # Evelyn Aki
+    (r'\bwill?ars\b', None),            # Erick Willars
+    (r'\beagan\b', None),               # Dr. Terry Eagan
 ]
 
 # The export's listing names, mapped onto the clinics the site already knows
@@ -197,7 +202,7 @@ for r in five:
     if re.search(DROPPED, low):
         skipped['dropped condition'] += 1
         continue
-    if any(slug == clinic and re.search(pat, low) for pat, clinic in DEPARTED):
+    if any(clinic in (None, slug) and re.search(pat, low) for pat, clinic in DEPARTED):
         skipped['departed clinician'] += 1
         continue
     topics = [k for k, _, pat in TOPICS if re.search(pat, low)]
