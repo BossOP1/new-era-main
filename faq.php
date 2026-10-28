@@ -11,7 +11,7 @@
  * linked to directly. Arriving on one opens it and scrolls to it.
  */
 $page_title        = 'Frequently asked questions';
-$page_description  = 'Answers on first visits, insurance and prior authorisation, TMS, psychiatry, therapy and Spravato® — from the team at Anew Era Health. Eighty-one questions, answered plainly.';
+$page_description  = 'Answers on first visits, insurance and prior authorization, TMS, psychiatry, therapy and Spravato® — from the team at Anew Era Health. Eighty-one questions, answered plainly.';
 $header_hero_light = true;
 $header_inset      = true;
 require __DIR__ . '/includes/header.php';
