@@ -249,10 +249,20 @@ return [
     'state_name' => 'California',
     'region'     => 'Orange County',
     'page'       => 'orange.php',
-    'h1'         => 'Psychiatry and TMS in',
+    'h1'         => 'TMS therapy and more in',
     'meta'       => 'Psychiatry, therapy and TMS in Orange, CA — 2050 W Chapman Ave, Suite 201. Meet the clinicians, see what we treat, and book with the one who fits.',
-    'lede'       => 'Psychiatry, therapy and TMS on West Chapman Avenue, close to the hospital district and Old Towne. Most major plans accepted, and we check your benefits before your first visit.',
+    'lede'       => 'We provide TMS therapy and other services at our office on West Chapman Avenue. We’ll help you navigate the insurance process.',
     'street_name'=> 'West Chapman Avenue',
+
+    'copy' => [
+        'nearby_communities' => true,
+        'team_eyebrow'       => 'Meet our team',
+        'team_lead'          => 'Our team at',
+        'team_place'         => 'Anew Era Orange',
+        'reviews_plain'      => true,
+        'reviews_from'       => 'our clients',
+        'reviews_tail'       => 'Serving people since 2016.',
+    ],
 
     'address'   => [
         'building' => '',
@@ -294,7 +304,7 @@ return [
     'faqs' => [
         ['q' => 'Do I need a referral to be seen here?',
          'a' => ' Most plans let you book psychiatry directly, though a few HMO products still require one from your primary care doctor. We check that when we verify your benefits.'],
-        ['q' => 'How soon can I get an appointment in Orange?',
+        ['q' => 'How soon can I get an appointment?',
          'a' => 'New patient consultations are usually available within five business days, and same-week telehealth slots often open up. Say so when you call if things are urgent.'],
         ['q' => 'Can I be seen by video instead of coming in?',
          'a' => 'Yes, for psychiatry and therapy, anywhere in California. TMS is an in-clinic treatment and has to happen at the West Chapman Avenue suite.'],

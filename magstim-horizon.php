@@ -53,33 +53,33 @@ $shot = static function (string $file, string $alt, string $classes = 'aspect-[1
 // own clearance announcement — see the note at the top of this file.
 $indications = [
     ['name' => 'Major depressive disorder',
-     'who'  => 'Adults who have not responded to prior antidepressant medication.'],
+     'who'  => 'A low mood or loss of interest that lasts for weeks and gets in the way of daily life. Cleared for adults who have not responded to antidepressant medication.'],
     ['name' => 'Obsessive-compulsive disorder',
-     'who'  => 'Adults, as an adjunct — alongside other treatment rather than instead of it.'],
+     'who'  => 'Unwanted, recurring thoughts (obsessions) and repeated behaviors (compulsions) that are hard to control. Cleared for adults, alongside other treatment.'],
     ['name' => 'Anxious depression',
-     'who'  => 'Decreasing anxiety symptoms in adults with MDD and comorbid anxiety.'],
+     'who'  => 'Depression that comes with significant anxiety, such as constant worry, restlessness or tension. Cleared to reduce anxiety symptoms in adults with depression.'],
     ['name' => 'Adolescent depression',
-     'who'  => 'Ages 15 to 21 — the same age we start seeing patients.'],
+     'who'  => 'Major depression in teenagers and young adults. Cleared for ages 15 to 21.'],
 ];
 
 // The four things the navigation holds steady, from Magstim's description.
 $parameters = [
-    ['name' => 'Contact',     'copy' => 'That the coil is actually against your head, not hovering a few millimetres off it.'],
-    ['name' => 'XY location', 'copy' => 'The spot on the scalp, found at your first session and returned to at every one after.'],
-    ['name' => 'Tilt',        'copy' => 'The angle the coil sits at against the curve of your head.'],
-    ['name' => 'Rotation',    'copy' => 'Which way round the coil is, which changes the direction of the field.'],
+    ['name' => 'Contact',     'copy' => 'The coil rests directly against your head.'],
+    ['name' => 'XY location', 'copy' => 'The coil returns to the same spot on your scalp, found at your first session.'],
+    ['name' => 'Tilt',        'copy' => 'The coil sits at the right angle against the curve of your head.'],
+    ['name' => 'Rotation',    'copy' => 'The coil is turned the same way every time, so the magnetic field points in the right direction.'],
 ];
 
 // What the hardware choices mean once you are in the chair.
 $in_the_chair = [
-    ['name' => 'Air-cooled, so the day keeps moving',
-     'copy' => 'The coil is cooled as it works, with the cooling adjusting to the coil and the room. In practice that is what lets a clinic run appointments back to back instead of waiting for equipment to cool between them.'],
-    ['name' => 'No pulse decay',
-     'copy' => 'Magstim states the system holds its output steady rather than weakening across a session, so the last pulses of a treatment are the same as the first.'],
-    ['name' => 'Your dose, measured first',
+    ['name' => 'Air-cooled coils',
+     'copy' => 'The coil is cooled as it works, with the cooling adjusting to the coil and the room.'],
+    ['name' => 'Steady pulses, start to finish',
+     'copy' => 'From the first session, the system keeps every pulse at the same strength, so the last pulses of your treatment are as strong as the first.'],
+    ['name' => 'Measuring your motor threshold',
      'copy' => 'Before a course starts, your motor threshold is measured — the power level at which a pulse over the motor cortex produces a small movement in your hand. Your treatment is set from that, not from an average.'],
-    ['name' => 'One coil, four indications',
-     'copy' => 'Magstim describes the Horizon as the only TMS system covering its four cleared indications with a single treatment coil, which means no coil change if your plan changes.'],
+    ['name' => 'One coil, four conditions',
+     'copy' => 'Magstim describes the Horizon as the only TMS system covering its four cleared conditions with a single treatment coil, which means no coil change if your plan changes.'],
 ];
 ?>
 <div class="bg-[#faf8f3] [&_a:focus-visible]:outline [&_a:focus-visible]:outline-[3px] [&_a:focus-visible]:outline-brand-orange [&_a:focus-visible]:outline-offset-[5px]">
@@ -110,13 +110,13 @@ $in_the_chair = [
         </nav>
 
         <h1 class="on-footage m-0 font-serif font-normal leading-[1.05] tracking-[-0.04em] text-white text-[34px] sm:text-[50px] lg:text-[56px]">
-          The machine we<br class="hidden sm:inline"> treat you <em class="not-italic text-brand-sky">on.</em>
+          Get to know our<br class="hidden sm:inline"> <em class="not-italic text-brand-sky">TMS machine.</em>
         </h1>
 
         <p class="m-0 mt-5 max-w-[50ch] text-[15px] leading-[1.75] text-white/80 sm:mt-6 sm:text-base">
-          The Magstim Horizon<sup>&reg;</sup> 3.0 with StimGuide<sup>&reg;</sup> PRO. It is the navigated version of
-          the system — the coil is tracked by camera, so the spot found at your first session is the
-          spot treated at every session after it.
+          We treat on the Magstim Horizon<sup>&reg;</sup> 3.0 with StimGuide<sup>&reg;</sup> PRO. A camera tracks
+          the treatment coil, so the exact area of your brain targeted at your first session is the same
+          area treated at every session after it.
         </p>
 
         <div class="mt-6 flex flex-wrap gap-3 sm:mt-8">
@@ -124,10 +124,6 @@ $in_the_chair = [
           <a href="#watch" class="inline-flex items-center gap-2.5 rounded-full border-2 border-white/45 bg-white/10 px-7 py-[14px] text-[15px] font-extrabold text-white backdrop-blur-sm transition-colors hover:border-white/80 hover:bg-white/20">Watch It Explained</a>
         </div>
 
-        <p class="m-0 mt-5 text-[13px] leading-relaxed text-white/75 sm:mt-6">
-          FDA-cleared for four indications. Cleared is not the same as approved, and neither is a
-          promise it will work for you — <a href="#cleared" class="font-extrabold text-brand-sky underline decoration-brand-sky/40 underline-offset-4 hover:decoration-brand-sky">what that means</a>.
-        </p>
       </div>
     </div>
 
@@ -145,18 +141,18 @@ $in_the_chair = [
       <p class="<?= $eyebrow ?>"><?= $dot ?> What it is</p>
       <h2 class="<?= $h2 ?>">A TMS system,<br><em class="italic font-normal text-brand-blue">and a camera.</em></h2>
       <p class="m-0 mt-6 max-w-[52ch] text-base leading-[1.8] text-[#58616a]">
-        A TMS system is three things in a room: a chair you sit in, a coil held against your head, and
-        a stimulator that drives it. The Horizon<sup>&reg;</sup> 3.0 is Magstim's clinical model, and
-        StimGuide<sup>&reg;</sup> PRO is the navigation built into it — a camera that watches where the
-        coil is and tells the technician when it is in the right place.
+        A TMS system has three main parts: a comfortable chair, a treatment coil that rests against your
+        head, and a stimulator that powers the coil. The Horizon<sup>&reg;</sup> 3.0 is Magstim's clinical
+        TMS system, and StimGuide<sup>&reg;</sup> PRO is its built-in navigation: a camera that tracks the
+        coil and shows your technician when it is in exactly the right position.
       </p>
       <p class="m-0 mt-4 max-w-[52ch] text-base leading-[1.8] text-[#58616a]">
-        That is the whole of the difference, and it is not a small one. A course of TMS is around
-        thirty sessions. Hitting the same square centimetre thirty times in a row is a harder problem
-        than it sounds, and it is the problem the camera exists to solve.
+        A course of TMS is around thirty sessions. The navigation helps your technician place the coil
+        over the same small area, about a square centimeter, at every one of them, so each session
+        picks up exactly where the last one left off.
       </p>
       <p class="m-0 mt-6 text-[13.5px] leading-[1.7] text-ink/60">
-        Magstim cleared the Horizon 3.0 with StimGuide PRO with the FDA on 30 January 2024.
+        Magstim cleared the Horizon 3.0 with StimGuide PRO with the FDA on January 30, 2024.
       </p>
     </div>
     <?= $shot('h3-stimguide.jpg', 'The Magstim Horizon 3.0 system with StimGuide PRO: treatment chair, stimulator cart and navigation arm') ?>
@@ -171,8 +167,8 @@ $in_the_chair = [
       <h2 class="<?= $h2 ?>">Four things it<br><em class="italic font-normal text-brand-blue">holds steady.</em></h2>
     </div>
     <p class="m-0 mt-[22px] max-w-[380px] text-base leading-[1.75] text-[#58616a] md:mt-0 md:max-w-[330px]">
-      Magstim describes the navigation as aligning four parameters at once. Get one wrong and the
-      pulse lands somewhere other than where it was meant to.
+      Magstim's navigation lines up four measurements at once, so each pulse reaches exactly the
+      area it is meant to.
     </p>
   </div>
 
@@ -189,31 +185,6 @@ $in_the_chair = [
     <?= $shot('range.jpg', 'A clinician using the StimGuide PRO navigation screen while positioning the coil', 'aspect-[4/3] min-h-full') ?>
   </div>
 
-  <?php // The numbers get the full width: they are the point of the section,
-        // and at two-fifths of it they read as a footnote to the photograph. ?>
-  <div data-reveal class="mt-3 overflow-hidden rounded-[24px] bg-[#10202c] bg-reviews-glow px-7 py-8 text-white md:mt-4 sm:px-10 sm:py-9">
-    <div class="lg:flex lg:items-center lg:gap-14">
-      <div class="lg:w-[260px] lg:shrink-0">
-        <p class="m-0 text-[11px] font-bold uppercase tracking-[0.16em] text-brand-green">Magstim's figures</p>
-        <p class="m-0 mt-2.5 font-serif text-[22px] font-normal leading-[1.2] tracking-[-0.02em] sm:text-[25px]">How close the camera holds it.</p>
-      </div>
-
-      <dl class="m-0 mt-6 grid gap-6 sm:grid-cols-2 lg:mt-0 lg:flex-1 lg:gap-12">
-        <div class="border-t border-white/20 pt-5 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0">
-          <dt class="m-0 font-serif text-[40px] leading-none tracking-[-0.02em] sm:text-[48px]">&le;&thinsp;&plusmn;0.2<span class="text-[22px] sm:text-[26px]">mm</span></dt>
-          <dd class="m-0 mt-2.5 text-[13px] leading-[1.55] text-white/65">Typical positional accuracy of the navigation camera.</dd>
-        </div>
-        <div class="border-t border-white/20 pt-5 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0">
-          <dt class="m-0 font-serif text-[40px] leading-none tracking-[-0.02em] sm:text-[48px]">&le;&thinsp;&plusmn;0.1<span class="text-[22px] sm:text-[26px]">&deg;</span></dt>
-          <dd class="m-0 mt-2.5 text-[13px] leading-[1.55] text-white/65">Typical rotational accuracy, so the coil returns the same way round.</dd>
-        </div>
-      </dl>
-    </div>
-
-    <p class="m-0 mt-7 border-t border-white/20 pt-5 text-[12.5px] leading-[1.65] text-white/60">
-      These are the camera's published specifications, not a claim about how well treatment works.
-    </p>
-  </div>
 </section>
 
 <!-- ─── Cleared for ──────────────────────────────────────────────────── -->
@@ -221,11 +192,11 @@ $in_the_chair = [
   <div class="mb-7 sm:mb-9 md:flex md:items-end md:justify-between md:gap-10">
     <div>
       <p class="<?= $eyebrow ?>"><?= $dot ?> FDA clearance</p>
-      <h2 class="<?= $h2 ?>">What it is<br><em class="italic font-normal text-brand-blue">cleared for.</em></h2>
+      <h2 class="<?= $h2 ?>">What conditions<br><em class="italic font-normal text-brand-blue">Magstim treats.</em></h2>
     </div>
     <p class="m-0 mt-[22px] max-w-[380px] text-base leading-[1.75] text-[#58616a] md:mt-0 md:max-w-[330px]">
       Clearance means the FDA accepted the system as substantially equivalent to one already on the
-      market. It is a regulatory bar, not a prediction about you.
+      market.
     </p>
   </div>
 
@@ -242,9 +213,8 @@ $in_the_chair = [
   </ul>
 
   <p class="m-0 mt-5 max-w-[86ch] text-[13.5px] leading-[1.7] text-ink/60">
-    Whether a course is right for you is a clinical decision made at your evaluation, and whether your
-    insurer will pay for it is a separate question again —
-    <a href="insurance.php" class="font-extrabold text-brand-blue underline underline-offset-4 hover:text-brand-blue-dark">we check that before you commit</a>.
+    TMS is ordered by your clinician. Please
+    <a href="insurance.php" class="font-extrabold text-brand-blue underline underline-offset-4 hover:text-brand-blue-dark">verify your insurance today</a>.
   </p>
 </section>
 
@@ -252,7 +222,7 @@ $in_the_chair = [
 <section class="<?= $wrap ?> pb-10 sm:pb-[60px] md:pb-[76px]">
   <div class="mb-7 sm:mb-9">
     <p class="<?= $eyebrow ?>"><?= $dot ?> From the chair</p>
-    <h2 class="<?= $h2 ?>">What any of it<br><em class="italic font-normal text-brand-blue">means for you.</em></h2>
+    <h2 class="<?= $h2 ?>">What you’ll experience<br><em class="italic font-normal text-brand-blue">with Magstim.</em></h2>
   </div>
 
   <ul class="m-0 grid list-none gap-3 p-0 sm:grid-cols-2 md:gap-4">
@@ -267,14 +237,14 @@ $in_the_chair = [
   <div data-reveal class="mt-3 grid items-center gap-8 rounded-[24px] border border-[#e3e7ea] bg-white p-7 md:mt-4 md:grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)] md:gap-12 sm:p-9">
     <div>
       <p class="<?= $eyebrow ?> !mb-3"><?= $dot ?> Between sessions</p>
-      <h3 class="m-0 font-serif text-[24px] font-normal leading-[1.12] tracking-[-0.03em] text-ink sm:text-[29px]">Your targeting travels with you.</h3>
+      <h3 class="m-0 font-serif text-[24px] font-normal leading-[1.12] tracking-[-0.03em] text-ink sm:text-[29px]">Your data travels with you.</h3>
       <p class="m-0 mt-4 max-w-[48ch] text-[14.5px] leading-[1.75] text-[#58616a]">
         Magstim Connect stores the navigation data, so the target found at your first session can be
-        recalled on another Horizon 3.0 in the same organisation. If your course has to move clinic
-        mid-way, the map of your head moves with it.
+        recalled on another Horizon 3.0. If you need to do TMS treatment at a different clinic, your
+        information can be easily pulled from the database.
       </p>
       <a href="tms.php" class="mt-5 inline-flex items-center gap-2 text-sm font-extrabold text-brand-blue underline underline-offset-4 hover:text-brand-blue-dark">
-        What a Course Involves <?= arrow_icon(14) ?>
+        Learn More About TMS <?= arrow_icon(14) ?>
       </a>
     </div>
     <?= $shot('connect.jpg', 'The Magstim Connect software shown on a desktop monitor and a laptop', 'aspect-[16/10]') ?>
@@ -294,11 +264,11 @@ $in_the_chair = [
     <div class="mb-7 sm:mb-9 md:flex md:items-end md:justify-between md:gap-10">
       <div>
         <p class="<?= $eyebrow ?>"><?= $dot ?> From Magstim, our equipment maker</p>
-        <h2 class="<?= $h2 ?>">See the system,<br><em class="italic font-normal text-brand-blue">and hear a patient.</em></h2>
+        <h2 class="<?= $h2 ?>">Explore Magstim &amp;<br><em class="italic font-normal text-brand-blue">hear from a real patient.</em></h2>
       </div>
       <p class="m-0 mt-[22px] max-w-[400px] text-base leading-[1.75] text-[#58616a] md:mt-0 md:max-w-[330px]">
-        Two short films made by Magstim, who build the system we treat on. The patient in the second
-        is theirs rather than ours.
+        Get to know how the Magstim TMS system works and hear how it’s helped a real patient change
+        their life for the better.
       </p>
     </div>
 
@@ -322,7 +292,6 @@ $in_the_chair = [
           <figcaption class="p-6 sm:p-7">
             <span class="text-[10px] font-bold uppercase tracking-[0.16em] text-ink/45">Magstim</span>
             <h3 class="m-0 mt-2 font-serif text-[23px] font-normal leading-[1.15] tracking-[-0.025em] text-ink"><?= e($title) ?></h3>
-            <p class="m-0 mt-2 text-[14px] leading-[1.7] text-[#58616a]"><?= e($blurb) ?></p>
           </figcaption>
         </figure>
       <?php endforeach; ?>
@@ -339,7 +308,7 @@ $in_the_chair = [
       trademarks, and we are a clinic that treats on their equipment rather than a party to it. The
       specifications, clearance dates and photographs on this page are Magstim's own, published at
       <a href="https://www.magstim.com/" target="_blank" rel="noopener" class="font-extrabold text-brand-blue underline underline-offset-4 hover:text-brand-blue-dark">magstim.com</a>.
-      Nothing here is a claim by us about how well treatment works — for that, see
+      Nothing here is a claim by Anew Era about how well treatment works — for that, see
       <a href="tms.php" class="font-extrabold text-brand-blue underline underline-offset-4 hover:text-brand-blue-dark">what TMS is and what it does not do</a>.
     </p>
   </div>
@@ -353,8 +322,8 @@ $in_the_chair = [
       Anew Era is ready when you are.
     </h2>
     <p class="m-0 max-w-[54ch] text-[15px] leading-[1.75] text-ink/70">
-      Ask to see the room at your consultation. Most people find the machine a good deal less
-      intimidating once they have sat next to it.
+      Call us to find out how TMS could help you. Our team will answer your questions and check
+      your insurance before your first visit.
     </p>
     <div class="flex flex-wrap items-center justify-center gap-3">
       <a href="contact.php" class="<?= $btn_blue ?>">Book a Consultation <?= arrow_icon(16) ?></a>

@@ -47,11 +47,11 @@ $rest     = array_slice($all, 1);
         </nav>
 
         <h1 class="m-0 font-serif font-normal leading-[1.05] tracking-[-0.04em] text-ink text-[40px] sm:text-[54px] lg:text-[62px]">
-          Five treatments.<br>One practice.<br><em class="not-italic text-brand-blue">One plan.</em>
+          Find mental health<br>treatments <em class="not-italic text-brand-blue">that work.</em>
         </h1>
 
         <p class="m-0 mt-5 max-w-[46ch] text-[15px] leading-[1.75] text-ink/75 sm:mt-6 sm:text-base">
-          Psychiatry, therapy, TMS and Spravato®, delivered by one team sharing one set of notes. Start with an assessment, and we will work out which of these is right for you.
+          From psychiatry and transcranial magnetic stimulation (TMS) to therapy and Spravato®, get effective treatment for a mental health condition. It starts with an assessment, and then you get care from our dedicated team of experts.
         </p>
 
         <div class="mt-6 flex flex-wrap gap-3 sm:mt-8">
@@ -59,7 +59,7 @@ $rest     = array_slice($all, 1);
           <a href="<?= e($site['phone_href']) ?>" class="<?= $btn_line ?>"><?= e($site['phone']) ?></a>
         </div>
 
-        <p class="m-0 mt-5 text-[13px] leading-relaxed text-ink/65 sm:mt-6">In person and by telehealth. Most insurance accepted.</p>
+        <p class="m-0 mt-5 text-[13px] leading-relaxed text-ink/65 sm:mt-6">In-person and by telehealth. Most insurance accepted.</p>
       </div>
     </div>
 
@@ -75,10 +75,10 @@ $rest     = array_slice($all, 1);
   <div class="mb-7 sm:mb-9 md:mb-11 md:flex md:items-end md:justify-between md:gap-10">
     <div>
       <p class="<?= $eyebrow ?>"><?= $dot ?> What we offer</p>
-      <h2 class="<?= $h2 ?>">Every treatment we offer.<br><em class="italic font-normal text-brand-blue">One care team.</em></h2>
+      <h2 class="<?= $h2 ?>">Find the care<br><em class="italic font-normal text-brand-blue">that fits you.</em></h2>
     </div>
     <p class="m-0 mt-[22px] max-w-[360px] text-base leading-[1.75] text-[#58616a] md:mt-0 md:max-w-[300px]">
-      Many patients combine more than one. Your clinicians share notes, so adding a treatment takes a conversation, not a new referral.
+      Many patients combine more than one treatment. Your clinicians work together and share notes, so adding a treatment is simple, with no new referral needed.
     </p>
   </div>
 
@@ -133,11 +133,11 @@ $rest     = array_slice($all, 1);
   <div class="<?= $wrap ?> <?= $pad ?>">
     <div class="mb-7 sm:mb-9 md:mb-11 md:flex md:items-end md:justify-between md:gap-10">
       <div>
-        <p class="<?= $eyebrow ?>"><?= $dot ?> Where to start</p>
+        <p class="<?= $eyebrow ?>"><?= $dot ?> Choosing care</p>
         <h2 class="<?= $h2 ?>">Therapy, psychiatry,<br><em class="italic font-normal text-brand-blue">or both?</em></h2>
       </div>
       <p class="m-0 mt-[22px] max-w-[360px] text-base leading-[1.75] text-[#58616a] md:mt-0 md:max-w-[300px]">
-        Most people start with one and add the other when it helps. Here is the plain difference.
+        Most people start with one and add the other when it helps. Here is the plain difference between them.
       </p>
     </div>
 
@@ -166,13 +166,13 @@ $rest     = array_slice($all, 1);
 
       <div class="hidden lg:block"></div>
       <div class="rounded-b-[20px] bg-therapy px-5 pb-10 pt-7 sm:px-8">
-        <a href="therapy.php" class="inline-flex items-center gap-2 rounded-full bg-brand-blue px-6 py-3.5 text-sm font-extrabold text-white transition-colors hover:bg-brand-blue-dark">
-          About Therapy <?= arrow_icon(15) ?>
+        <a href="contact.php" class="inline-flex items-center gap-2 rounded-full bg-brand-blue px-6 py-3.5 text-sm font-extrabold text-white transition-colors hover:bg-brand-blue-dark">
+          Get Started <?= arrow_icon(15) ?>
         </a>
       </div>
       <div class="mt-4 rounded-b-[20px] bg-psych px-5 pb-10 pt-7 sm:px-8 lg:mt-0">
-        <a href="psychiatry.php" class="inline-flex items-center gap-2 rounded-full bg-brand-orange px-6 py-3.5 text-sm font-extrabold text-white transition-colors hover:bg-brand-orange-dark">
-          About Psychiatry <?= arrow_icon(15) ?>
+        <a href="contact.php" class="inline-flex items-center gap-2 rounded-full bg-brand-orange px-6 py-3.5 text-sm font-extrabold text-white transition-colors hover:bg-brand-orange-dark">
+          Get Started <?= arrow_icon(15) ?>
         </a>
       </div>
     </div>

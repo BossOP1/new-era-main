@@ -112,7 +112,7 @@ return [
             'slot'   => 'homepage/tms-new-era-2.jpg',
             'alt'    => 'A patient resting under the Magstim coil during a TMS session',
             'focus'  => 'object-[45%_66%]',   // portrait source — sit the crop on the coil and the patient's face
-            'detail' => 'FDA-cleared magnetic stimulation for depression and OCD when medication has fallen short.',
+            'detail' => 'FDA-cleared transcranial magnetic stimulation for depression and OCD when medication has fallen short.',
             'chips'  => ['Depression', 'OCD'],
         ],
         [
@@ -144,7 +144,7 @@ return [
             'page'   => 'therapy.php',
             'slot'   => 'treat-6',
             'alt'    => 'Two women talking during a therapy session',
-            'detail' => 'CBT, DBT, EMDR and ACT with therapists working alongside your provider, never in a silo.',
+            'detail' => 'Cognitive behavioral therapy, dialectical behavior therapy, eye movement desensitization and reprocessing, and acceptance and commitment therapy, with therapists working alongside your provider.',
             'chips'  => ['CBT', 'EMDR'],
         ],
     ],

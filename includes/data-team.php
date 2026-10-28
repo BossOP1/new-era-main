@@ -338,8 +338,8 @@ return [
             'zocdoc'      => 'https://www.zocdoc.com/wl/aneweratmsdallas/doctor/adele-shyntum-aprn-rn-np-647230?isNewPatient=false&exp_pps_default_new_patient=true',
             'video'       => '',
             'bio'         => [
-                'Adele Shyntum is a board-certified psychiatric nurse practitioner with a Master’s in Psychiatric and Mental Health Nursing from The University of Texas at Arlington. She has several years of experience working with adults with mental health illnesses.',
-                'Adele utilizes compassionate, client-centered, and evidence-based approaches to treat patients with different mental health conditions. She specializes in ADHD, anxiety, depression, bipolar disorder, and PTSD.',
+                'Adele Shyntum is a board-certified psychiatric nurse practitioner with a Master’s in psychiatric and mental health nursing from the University of Texas at Arlington. She has several years of experience working with adults with mental health illnesses.',
+                'Adele utilizes compassionate, patient-centered, and evidence-based approaches to treat patients with different mental health conditions. She specializes in ADHD, anxiety, depression, bipolar disorder, and PTSD.',
                 'Her main goals for her patients include reducing symptoms of anxiety and depression, improving overall well-being, and promoting personal growth and resilience.',
             ],
         ],

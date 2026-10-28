@@ -146,9 +146,9 @@ $treatments = require __DIR__ . '/data-treatments.php';
           <h1 class="on-footage m-0 font-serif font-normal leading-[1.05] tracking-[-0.04em] text-white text-[36px] sm:text-[50px] lg:text-[56px]">
             <?= e($person['name']) ?>
           </h1>
-          <?php if ($person['credentials'] !== ''): ?>
-            <p class="m-0 mt-3 text-[12px] font-extrabold uppercase tracking-[0.16em] text-brand-sky"><?= e($person['credentials']) ?></p>
-          <?php endif; ?>
+          <?php // No credentials under the name: seven clinicians have none on
+                // file, and review asked for every bio to match. They are in
+                // the At a glance card further down. ?>
           <p class="m-0 mt-3 text-[17px] leading-[1.5] text-white/85 sm:text-[19px]"><?= e($person['role']) ?></p>
 
           <?php if ($clinics): ?>
@@ -185,7 +185,7 @@ $treatments = require __DIR__ . '/data-treatments.php';
       </div>
 
       <div class="mt-8 flex flex-wrap items-center justify-between gap-3 border-t border-white/30 pt-4 text-[13px] text-white/85">
-        <span><?= e($is_therapist ? 'Therapy' : 'Psychiatry and medication management') ?> &middot; In person and by telehealth</span>
+        <span>In-person and telehealth treatment</span>
         <?php if ($city_list): ?>
           <span><?= e(count($city_list)) ?> clinic<?= count($city_list) === 1 ? '' : 's' ?> &middot; <?= e(implode(', ', $city_list)) ?></span>
         <?php endif; ?>
@@ -200,7 +200,7 @@ $treatments = require __DIR__ . '/data-treatments.php';
 
     <div data-reveal class="rounded-[24px] border border-[#e3e7ea] bg-white p-7 sm:p-9 lg:p-11">
       <p class="<?= $eyebrow ?>"><?= $dot ?> About <?= e($person['name']) ?></p>
-      <h2 class="<?= $h2 ?>">Who you would<br><em class="italic font-normal text-brand-blue">be working with.</em></h2>
+      <h2 class="<?= $h2 ?>">Who you will<br><em class="italic font-normal text-brand-blue">be working with.</em></h2>
 
       <div class="mt-6 sm:mt-8">
         <?php foreach ($person['bio'] as $para): ?>
@@ -244,13 +244,13 @@ $treatments = require __DIR__ . '/data-treatments.php';
           <?php endif; ?>
           <?php if ($states): ?>
             <div class="border-b border-ink/[0.07] py-3">
-              <dt class="m-0 text-[12.5px] uppercase tracking-[0.1em] text-ink/45">Practising in</dt>
+              <dt class="m-0 text-[12.5px] uppercase tracking-[0.1em] text-ink/45">Practicing in</dt>
               <dd class="m-0 mt-1 text-[15px] font-extrabold leading-[1.45] text-ink"><?= e(implode(', ', $states)) ?></dd>
             </div>
           <?php endif; ?>
           <div class="py-3 last:pb-0">
             <dt class="m-0 text-[12.5px] uppercase tracking-[0.1em] text-ink/45">Appointments</dt>
-            <dd class="m-0 mt-1 text-[15px] font-extrabold leading-[1.45] text-ink">In person and by secure video</dd>
+            <dd class="m-0 mt-1 text-[15px] font-extrabold leading-[1.45] text-ink">In-person and by secure video</dd>
           </div>
         </dl>
       </div>
@@ -275,7 +275,7 @@ $treatments = require __DIR__ . '/data-treatments.php';
 <section id="clinics" class="<?= $wrap ?> scroll-mt-[110px] pt-10 sm:pt-[60px] md:pt-[76px]">
   <div class="mb-7 sm:mb-9">
     <p class="<?= $eyebrow ?>"><?= $dot ?> Where to find them</p>
-    <h2 class="<?= $h2 ?>"><?= e(count($clinics)) ?> clinic<?= count($clinics) === 1 ? '' : 's' ?>,<br><em class="italic font-normal text-brand-blue">and telehealth either way.</em></h2>
+    <h2 class="<?= $h2 ?>">Get dedicated<br><em class="italic font-normal text-brand-blue">mental health care.</em></h2>
   </div>
 
   <ul class="m-0 grid list-none gap-3 p-0 sm:grid-cols-2 md:gap-4 <?= count($clinics) > 2 ? 'lg:grid-cols-3' : '' ?>">
@@ -333,10 +333,10 @@ $treatments = require __DIR__ . '/data-treatments.php';
     <div data-reveal class="mt-3 rounded-[24px] border border-[#e3e7ea] bg-white p-7 sm:p-9 md:mt-4">
       <div class="md:flex md:items-center md:gap-10">
         <div class="md:max-w-[340px]">
-          <h3 class="m-0 font-serif text-[23px] font-normal leading-[1.12] tracking-[-0.03em] text-ink">TMS, where medication has not been enough.</h3>
+          <h3 class="m-0 font-serif text-[23px] font-normal leading-[1.12] tracking-[-0.03em] text-ink">TMS: when medication has not been enough.</h3>
           <p class="m-0 mt-2.5 text-[14px] leading-[1.7] text-[#58616a]">
             A prescriber can refer you for a TMS course<?= $city_list ? ' at ' . e($city_list[0]) : '' ?>. It is FDA-cleared,
-            drug-free and non-invasive, and you drive yourself home afterwards.
+            drug-free and non-invasive, and you drive yourself home afterward.
           </p>
           <a href="tms.php" class="mt-4 inline-flex items-center gap-2 text-[13.5px] font-extrabold text-brand-blue underline underline-offset-4 hover:text-brand-blue-dark">
             How TMS Works <?= arrow_icon(13) ?>
@@ -391,7 +391,7 @@ $treatments = require __DIR__ . '/data-treatments.php';
         };
       ?>
       <p class="<?= $eyebrow ?>"><?= $dot ?> <?= e($also) ?></p>
-      <h2 class="<?= $h2 ?>">Other clinicians<br><em class="italic font-normal text-brand-blue">you could see.</em></h2>
+      <h2 class="<?= $h2 ?>">Get to know other<br><em class="italic font-normal text-brand-blue">Anew Era clinicians.</em></h2>
     </div>
     <p class="m-0 mt-[22px] max-w-[380px] text-base leading-[1.75] text-[#58616a] md:mt-0 md:max-w-[330px] lg:max-w-[500px]">
       You can change clinician later at no cost, so the first choice does not have to be the final one.
@@ -424,7 +424,7 @@ $treatments = require __DIR__ . '/data-treatments.php';
   <p class="m-0 mt-6 text-[13.5px] leading-[1.7] text-ink/60">
     Not sure who to ask for? Call <a href="<?= e($phone_href) ?>" class="font-extrabold text-brand-blue underline underline-offset-4"><?= e($phone) ?></a>
     and the intake team will match you.
-    <a href="team.php<?= $person['states'] ? '#' . e($person['states'][0]) : '' ?>" class="font-extrabold text-brand-blue underline underline-offset-4 hover:text-brand-blue-dark">See the Whole Team</a>.
+    <a href="team.php<?= $person['states'] ? '#' . e($person['states'][0]) : '' ?>" class="font-extrabold text-brand-blue underline underline-offset-4 hover:text-brand-blue-dark">Meet the Entire Team</a>.
   </p>
 </section>
 <?php else: ?>
@@ -441,12 +441,7 @@ $treatments = require __DIR__ . '/data-treatments.php';
           Start where you are.<br><em class="italic font-normal text-brand-sky">We will take it from there.</em>
         </h2>
         <p class="m-0 mt-4 max-w-[52ch] text-[15px] leading-[1.75] text-white/70">
-          We verify your benefits before the first visit, so there is no surprise at the desk.
-          <?php if ($city_list):
-                  $where = $city_list;
-                  $tail  = array_pop($where);
-                  $where = $where ? implode(', ', $where) . ' or ' . $tail : $tail;
-          ?>In person at <?= e($where) ?>, or by secure video.<?php endif; ?>
+          Verify your benefits today so you can book an appointment sooner than you think.
         </p>
       </div>
       <div class="mt-7 flex flex-wrap gap-3 md:mt-0 md:shrink-0 md:flex-col">
