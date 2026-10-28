@@ -60,6 +60,10 @@ $conditions = array_values(array_filter(
 
 $addr      = $loc['address'];
 
+// Reviewed copy for one clinic, opted into key by key so the other location
+// pages keep the defaults until their own review comes through.
+$lc = $loc['copy'] ?? [];
+
 // This clinic's Zocdoc booking page: the California practice for every CA
 // clinic, the metro's practice in Texas. Empty if none is set.
 $loc_zocdoc = $loc['zocdoc'] ?? ($loc['state'] === 'ca'
@@ -118,7 +122,7 @@ $initials = static function (string $name): string {
         <?php // The break is held back on a phone, where "Psychiatry and TMS in"
               // does not fit on one line and leaves "in" stranded on its own. ?>
         <h1 class="on-footage m-0 font-serif font-normal leading-[1.05] tracking-[-0.04em] text-white text-[34px] sm:text-[52px] lg:text-[58px]">
-          <?= e($loc['h1']) ?><br class="hidden sm:inline"> <em class="not-italic text-brand-sky"><?= e($loc['name']) ?>.</em>
+          <?= e($loc['h1']) ?><br class="hidden sm:inline"> <em class="not-italic text-brand-sky"><?= e($lc['hero_place'] ?? $loc['name']) ?>.</em>
         </h1>
 
         <p class="m-0 mt-5 max-w-[50ch] text-[15px] leading-[1.75] text-white/80 sm:mt-6 sm:text-base">
@@ -141,9 +145,9 @@ $initials = static function (string $name): string {
     </div>
 
     <div class="mx-auto mt-6 flex max-w-[1160px] flex-wrap items-center justify-between gap-3 border-t border-white/30 pt-4 text-[13px] text-white/85 sm:mt-8">
-      <?php // Allen has one, so the noun cannot be hard-coded plural. ?>
-      <span><?= e(count($people)) ?> clinician<?= count($people) === 1 ? '' : 's' ?> at this clinic &middot; In person and by telehealth</span>
-      <span>Serving <?= e(implode(', ', array_slice($loc['serves'], 0, 4))) ?> and nearby</span>
+      <?php // The clinician count that sat here came out on every location
+            // page at review, so the service area stands on its own. ?>
+      <span>Serving <?= e(implode(', ', array_slice($loc['serves'], 0, 4))) ?> and nearby<?= !empty($lc['nearby_communities']) ? ' communities.' : '' ?></span>
     </div>
   </section>
 </div>
@@ -208,20 +212,11 @@ $initials = static function (string $name): string {
 <section id="clinicians" class="<?= $wrap ?> scroll-mt-[110px] <?= $pad ?>">
   <div class="mb-7 sm:mb-9 md:flex md:items-end md:justify-between md:gap-10">
     <div>
-      <p class="<?= $eyebrow ?>"><?= $dot ?> Who you would see</p>
-      <h2 class="<?= $h2 ?>">The clinicians at<br><em class="italic font-normal text-brand-blue"><?= e($loc['name']) ?>.</em></h2>
+      <p class="<?= $eyebrow ?>"><?= $dot ?> <?= e($lc['team_eyebrow'] ?? 'Who you would see') ?></p>
+      <h2 class="<?= $h2 ?>"><?= e($lc['team_lead'] ?? 'The clinicians at') ?><br><em class="italic font-normal text-brand-blue"><?= e($loc['name']) ?>.</em></h2>
     </div>
     <p class="m-0 mt-[22px] max-w-[380px] text-base leading-[1.75] text-[#58616a] md:mt-0 md:max-w-[330px] lg:max-w-[500px]">
-      <?php
-        // Allen has one prescriber and no therapist; "and 0 therapists" is
-        // technically true and reads like a fault, so the clause drops out.
-        $plural = static fn (int $n, string $w): string => $n . ' ' . $w . ($n === 1 ? '' : 's');
-        $who = $plural(count($prescribers), 'prescriber');
-        if ($therapists) {
-            $who .= ' and ' . $plural(count($therapists), 'therapist');
-        }
-        echo e($who), count($people) === 1 ? ' works' : ' work';
-      ?> from this clinic. Book with one by name, or let the intake team match you.
+      Book with one by name, or let the intake team match you.
     </p>
   </div>
 
@@ -229,7 +224,7 @@ $initials = static function (string $name): string {
     // Prescribers lead, in their own band, because "psychiatrist near me" is
     // what brings most people to a page like this. Therapists follow.
     $blocks = [
-        ['label' => 'Psychiatry and medication', 'note' => 'Diagnosis, and medication management where it is the right tool.', 'people' => $prescribers],
+        ['label' => 'Psychiatry and medication', 'note' => $lc['prescriber_note'] ?? 'Diagnosis, and medication management where it is the right tool.', 'people' => $prescribers],
         ['label' => 'Therapy',                   'note' => 'CBT, DBT, EMDR and ACT, in person or by telehealth.',            'people' => $therapists],
     ];
     foreach ($blocks as $block):
@@ -302,7 +297,7 @@ $initials = static function (string $name): string {
 <!-- ─── Treatments here ──────────────────────────────────────────────── -->
 <section class="<?= $wrap ?> pb-10 sm:pb-[60px] md:pb-[76px]">
   <div class="mb-7 sm:mb-9">
-    <p class="<?= $eyebrow ?>"><?= $dot ?> What we offer here</p>
+    <p class="<?= $eyebrow ?>"><?= $dot ?> <?= e($lc['offer_eyebrow'] ?? 'What we offer here') ?></p>
     <h2 class="<?= $h2 ?>"><?= e(count($loc['treatments'])) ?> treatments,<br><em class="italic font-normal text-brand-blue">under one roof.</em></h2>
   </div>
 
@@ -334,8 +329,8 @@ $initials = static function (string $name): string {
     <div data-reveal class="mt-3 rounded-[24px] border border-[#e3e7ea] bg-white p-7 sm:p-9 md:mt-4">
       <div class="md:flex md:items-center md:gap-10">
         <div class="md:max-w-[300px]">
-          <h3 class="m-0 font-serif text-[23px] font-normal leading-[1.12] tracking-[-0.03em] text-ink">Most asked about here.</h3>
-          <p class="m-0 mt-2.5 text-[14px] leading-[1.7] text-[#58616a]">Every plan starts with a full diagnostic assessment, whichever of these brought you.</p>
+          <h3 class="m-0 font-serif text-[23px] font-normal leading-[1.12] tracking-[-0.03em] text-ink"><?= e($lc['conditions_title'] ?? 'Most asked about here.') ?></h3>
+          <p class="m-0 mt-2.5 text-[14px] leading-[1.7] text-[#58616a]"><?= e($lc['conditions_note'] ?? 'Every plan starts with a full diagnostic assessment, whichever of these brought you.') ?></p>
         </div>
         <ul class="m-0 mt-5 grid list-none gap-2 p-0 sm:grid-cols-2 md:mt-0 md:flex-1">
           <?php foreach ($conditions as $c): ?>
@@ -392,7 +387,7 @@ $initials = static function (string $name): string {
       <p class="<?= $eyebrow ?>"><?= $dot ?> What patients say</p>
       <h2 class="<?= $h2 ?>">
         <?php if ($rv_local): ?>
-          <?= e(number_format($rv_count)) ?> five-star reviews<br><em class="italic font-normal text-brand-blue">from <?= e($loc['name']) ?>.</em>
+          <?= empty($lc['reviews_plain']) ? e(number_format($rv_count)) . ' five-star reviews' : 'Five-star reviews' ?><br><em class="italic font-normal text-brand-blue">from <?= e($lc['reviews_from'] ?? $loc['name']) ?>.</em>
         <?php else: ?>
           Five-star reviews<br><em class="italic font-normal text-brand-blue">from across <?= e($loc['state_name']) ?>.</em>
         <?php endif; ?>
@@ -400,9 +395,10 @@ $initials = static function (string $name): string {
     </div>
     <p class="m-0 mt-[22px] max-w-[380px] text-base leading-[1.75] text-[#58616a] md:mt-0 md:max-w-[330px] lg:max-w-[500px]">
       <?php if ($rv_local): ?>
-        Left on Google, ZocDoc and Healthgrades by people treated at this clinic. We publish them unedited.
+        Here are just a few of our success stories.
       <?php else: ?>
-        <?= e($loc['name']) ?> is new, so these come from our other <?= e($loc['state_name']) ?> clinics. Each card says which.
+        <?php // Not local, so it still says where they come from. ?>
+        Here are just a few of our success stories from our other <?= e($loc['state_name']) ?> clinics. Each card says which.
       <?php endif; ?>
     </p>
   </div>
@@ -430,9 +426,13 @@ $initials = static function (string $name): string {
 
   <p class="m-0 mt-6 text-[13.5px] leading-[1.7] text-ink/60">
     <a href="reviews.php<?= $rv_local ? '?clinic=' . e($location_key) : '' ?>#all" class="font-extrabold text-brand-blue underline underline-offset-4 hover:text-brand-blue-dark">
-      <?php if ($rv_local): ?>Read All <?= e(number_format($rv_count)) ?> <?= e($loc['name']) ?> Reviews<?php else: ?>Read All <?= e(number_format(count($rv_all['reviews']))) ?> Reviews<?php endif; ?>
+      <?php if (!empty($lc['reviews_plain'])): ?><?= e($lc['reviews_link'] ?? 'Read All Reviews') ?><?php elseif ($rv_local): ?>Read All <?= e(number_format($rv_count)) ?> <?= e($loc['name']) ?> Reviews<?php else: ?>Read All <?= e(number_format(count($rv_all['reviews']))) ?> Reviews<?php endif; ?>
     </a>
-    &middot; <?= e(number_format($rv_all['meta']['five_star'])) ?> five-star reviews across the practice since <?= e($rv_all['meta']['first_year']) ?>.
+    <?php if (!empty($lc['reviews_tail'])): ?>
+      &middot; <?= e($lc['reviews_tail']) ?>
+    <?php else: ?>
+      &middot; <?= e(number_format($rv_all['meta']['five_star'])) ?> five-star reviews across the practice since <?= e($rv_all['meta']['first_year']) ?>.
+    <?php endif; ?>
   </p>
 </section>
 <?php endif; ?>
@@ -441,11 +441,15 @@ $initials = static function (string $name): string {
 <section class="<?= $wrap ?> pb-10 sm:pb-[60px] md:pb-[76px]">
   <div class="mb-7 sm:mb-9 md:flex md:items-end md:justify-between md:gap-10">
     <div>
-      <p class="<?= $eyebrow ?>"><?= $dot ?> Finding us</p>
-      <h2 class="<?= $h2 ?>">Getting to<br><em class="italic font-normal text-brand-blue"><?= e($loc['street_name']) ?>.</em></h2>
+      <p class="<?= $eyebrow ?>"><?= $dot ?> <?= e($lc['getting_eyebrow'] ?? 'Finding us') ?></p>
+      <h2 class="<?= $h2 ?>"><?= e($lc['getting_lead'] ?? 'Getting to') ?><br><em class="italic font-normal text-brand-blue"><?= e($lc['getting_to'] ?? $loc['street_name']) ?>.</em></h2>
     </div>
     <p class="m-0 mt-[22px] max-w-[380px] text-base leading-[1.75] text-[#58616a] md:mt-0 md:max-w-[330px] lg:max-w-[500px]">
-      We also see patients from <?= e(implode(', ', array_slice($loc['serves'], 0, -1))) ?> and <?= e(end($loc['serves'])) ?>.
+      <?php if (!empty($lc['getting_intro'])): ?>
+        <?= e($lc['getting_intro']) ?>
+      <?php else: ?>
+        We also see patients from <?= e(implode(', ', array_slice($loc['serves'], 0, -1))) ?> and <?= e(end($loc['serves'])) ?>.
+      <?php endif; ?>
     </p>
   </div>
 
@@ -462,7 +466,7 @@ $initials = static function (string $name): string {
     <div>
       <p class="m-0 text-[11px] font-bold uppercase tracking-[0.16em] text-ink/45">Insurance</p>
       <p class="m-0 mt-2 max-w-[62ch] text-[14.5px] leading-[1.7] text-[#58616a]">
-        We are in-network with most major <?= e($loc['state_name']) ?> carriers and verify your benefits before your first appointment.
+        We are in-network with most major <?= e($loc['state_name']) ?> <?= e($lc['carriers_word'] ?? 'carriers') ?> and verify your benefits before your first appointment.
       </p>
     </div>
     <a href="insurance.php" class="shrink-0 inline-flex items-center gap-2.5 rounded-full border-2 border-ink/20 px-6 py-3 text-[14px] font-extrabold text-ink transition-colors hover:border-ink/45">
@@ -474,8 +478,8 @@ $initials = static function (string $name): string {
 <!-- ─── Questions ────────────────────────────────────────────────────── -->
 <section class="<?= $wrap ?> pb-10 sm:pb-[60px] md:pb-[76px]">
   <div class="mb-6 sm:mb-8">
-    <p class="<?= $eyebrow ?>"><?= $dot ?> Questions</p>
-    <h2 class="<?= $h2 ?>">About this<br><em class="italic font-normal text-brand-blue">clinic.</em></h2>
+    <p class="<?= $eyebrow ?>"><?= $dot ?> <?= e($lc['faq_eyebrow'] ?? 'Questions') ?></p>
+    <h2 class="<?= $h2 ?>">About our<br><em class="italic font-normal text-brand-blue"><?= e(isset($lc['faq_named']) ? $loc['name'] . ' clinic' : 'clinic') ?>.</em></h2>
   </div>
 
   <div class="overflow-hidden rounded-[20px] border border-[#e3e7ea] bg-white">

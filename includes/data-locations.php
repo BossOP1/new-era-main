@@ -37,10 +37,18 @@ return [
     'state_name' => 'California',
     'region'     => 'Orange County',
     'page'       => 'huntington-beach.php',
-    'h1'         => 'Psychiatry and TMS in',
+    'h1'         => 'TMS therapy and more in',
     'meta'       => 'Psychiatry, therapy and TMS in Huntington Beach, CA — Bella Terra Medical Building, 7677 Center Ave, Suite 405. Meet the clinicians, see what we treat, and book with the one who fits.',
-    'lede'       => 'Psychiatry, therapy and TMS in the Bella Terra Medical Building, a few minutes inland from the pier. Most major plans accepted, and we check your benefits before your first visit.',
+    'lede'       => 'TMS therapy and more. Our offices are in Bella Terra Plaza, just off the San Diego Freeway. We accept most major plans and will guide you through the benefits process.',
     'street_name'=> 'Center Avenue',
+
+    'copy' => [
+        'conditions_title'    => 'What we treat',
+        'conditions_note'     => 'Every plan starts with a full diagnostic assessment.',
+        'reviews_plain'       => true,
+        'reviews_tail'        => 'We’ve been helping people since 2016.',
+        'getting_intro'       => 'Located in central Orange County, we welcome you no matter where you’re from.',
+    ],
 
     'address'   => [
         'building' => 'Bella Terra Medical Building',
@@ -81,11 +89,11 @@ return [
 
     'faqs' => [
         ['q' => 'Do I need a referral to be seen here?',
-         'a' => ' Most plans let you book psychiatry directly, though a few HMO products still require one from your primary care doctor. We check that when we verify your benefits.'],
+         'a' => 'Most plans let you book psychiatry directly, though a few HMO plans still require one from your primary care doctor. We check that when we verify your benefits.'],
         ['q' => 'How soon can I get an appointment in Huntington Beach?',
          'a' => 'New patient consultations are usually available within five business days, and same-week telehealth slots often open up. Say so when you call if things are urgent.'],
         ['q' => 'Can I be seen by video instead of coming in?',
-         'a' => 'Yes, for psychiatry and therapy, anywhere in California. TMS is an in-clinic treatment and has to happen at the Center Avenue suite.'],
+         'a' => 'Yes, for psychiatry and therapy, anywhere in California. TMS is an in-clinic treatment and has to happen on-site.'],
         ['q' => 'Is TMS available at this clinic?',
          'a' => 'Yes. A course of treatment is usually five sessions a week for four to six weeks, which is worth planning around before you start. We verify your benefits and handle the prior authorization first.'],
     ],
@@ -97,10 +105,19 @@ return [
     'state_name' => 'California',
     'region'     => 'Orange County',
     'page'       => 'newport-beach.php',
-    'h1'         => 'Psychiatry and TMS in',
+    'h1'         => 'Therapy and TMS in',
     'meta'       => 'Psychiatry, therapy and TMS in Newport Beach, CA — 1000 Quail Street, Suite 200. Meet the clinicians, see what we treat, and book with the one who fits.',
-    'lede'       => 'Psychiatry, therapy and TMS on Quail Street, just off Jamboree and minutes from Fashion Island. Most major plans accepted, and we check your benefits before your first visit.',
+    'lede'       => 'Therapy and TMS minutes from Fashion Island, just off Jamboree. Most major insurance plans accepted. We’ll help you through the benefits process.',
     'street_name'=> 'Quail Street',
+
+    'copy' => [
+        'nearby_communities' => true,
+        'conditions_note'    => 'These are the most common conditions we treat at Anew Era.',
+        'reviews_plain'      => true,
+        'getting_lead'       => 'TMS therapy near me:',
+        'getting_to'         => 'Directions to our Newport Beach office',
+        'getting_intro'      => 'Our office is open to anyone.',
+    ],
 
     'address'   => [
         'building' => '',
@@ -141,9 +158,9 @@ return [
 
     'faqs' => [
         ['q' => 'Do I need a referral to be seen here?',
-         'a' => ' Most plans let you book psychiatry directly, though a few HMO products still require one from your primary care doctor. We check that when we verify your benefits.'],
+         'a' => 'Most plans let you book psychiatry directly, though a few HMO plans still require one from your primary care doctor. We check that when we verify your benefits.'],
         ['q' => 'How soon can I get an appointment in Newport Beach?',
-         'a' => 'New patient consultations are usually available within five business days, and same-week telehealth slots often open up. Say so when you call if things are urgent.'],
+         'a' => 'New patient consultations are usually available within five business days, and same-week telehealth slots often open up. Let us know if you need urgent help.'],
         ['q' => 'Can I be seen by video instead of coming in?',
          'a' => 'Yes, for psychiatry and therapy, anywhere in California. TMS is an in-clinic treatment and has to happen at the Quail Street suite.'],
         ['q' => 'Is TMS available at this clinic?',
@@ -157,10 +174,25 @@ return [
     'state_name' => 'California',
     'region'     => 'Orange County',
     'page'       => 'laguna-hills.php',
-    'h1'         => 'Psychiatry and TMS in',
+    'h1'         => 'TMS therapy and more in',
     'meta'       => 'Psychiatry, therapy and TMS in Laguna Hills, CA — Saddleback Valley Medical Center, 23961 Calle De La Magdalena, Suite 420. Meet the clinicians, see what we treat, and book with the one who fits.',
-    'lede'       => 'Psychiatry, therapy and TMS at Saddleback Valley Medical Center, off the 5 at La Paz. Most major plans accepted, and we check your benefits before your first visit.',
+    'lede'       => 'Explore TMS therapy and more at our offices in the Saddleback Valley Medical Center, near El Toro Road and the I-5. We’ll help you through the benefits process.',
     'street_name'=> 'Calle De La Magdalena',
+
+    'copy' => [
+        'nearby_communities'  => true,
+        'team_eyebrow'        => 'We’re here to help',
+        'team_lead'           => 'Our team in',
+        'conditions_title'    => 'What we treat',
+        'conditions_note'     => 'We treat anxiety, depression, and more. Every plan starts with a full diagnostic assessment.',
+        'reviews_plain'       => true,
+        'reviews_from'        => 'our clients',
+        'reviews_tail'        => 'We’ve been helping people since 2016.',
+        'getting_to'          => 'our Laguna Hills offices',
+        'getting_intro'       => 'We welcome patients from all over Orange County.',
+        'carriers_word'       => 'insurance plans',
+        'faq_named'           => true,
+    ],
 
     'address'   => [
         'building' => 'Saddleback Valley Medical Center',
@@ -277,10 +309,19 @@ return [
     'state_name' => 'California',
     'region'     => 'South Bay',
     'page'       => 'torrance.php',
-    'h1'         => 'Psychiatry and TMS in',
+    'h1'         => 'TMS and more in',
     'meta'       => 'Psychiatry, therapy and TMS in Torrance, CA — 3848 W Carson St, Suite 103. Meet the clinicians, see what we treat, and book with the one who fits.',
-    'lede'       => 'Psychiatry, therapy and TMS on West Carson Street, in the middle of the South Bay. Most major plans accepted, and we check your benefits before your first visit.',
+    'lede'       => 'Our offices are conveniently located in South Bay across from the Del Amo Fashion Center. We accept most major forms of insurance and will help you navigate the insurance process.',
     'street_name'=> 'West Carson Street',
+
+    'copy' => [
+        'prescriber_note'  => 'We’ll help you find the treatment that works best for you.',
+        'offer_eyebrow'    => 'Our services',
+        'reviews_plain'    => true,
+        'reviews_tail'     => 'Successfully helping people since 2016.',
+        'getting_to'       => 'our Torrance clinic',
+        'faq_eyebrow'      => 'FAQ',
+    ],
 
     'address'   => [
         'building' => '',
@@ -321,9 +362,9 @@ return [
 
     'faqs' => [
         ['q' => 'Do I need a referral to be seen here?',
-         'a' => ' Most plans let you book psychiatry directly, though a few HMO products still require one from your primary care doctor. We check that when we verify your benefits.'],
+         'a' => 'Most plans let you book psychiatry directly, though a few HMO providers still require one from your primary care doctor. We check that when we verify your benefits.'],
         ['q' => 'How soon can I get an appointment in Torrance?',
-         'a' => 'New patient consultations are usually available within five business days, and same-week telehealth slots often open up. Say so when you call if things are urgent.'],
+         'a' => 'New patient consultations are usually available within five business days, and same-week telehealth slots often open up. Let us know if you need urgent help.'],
         ['q' => 'Can I be seen by video instead of coming in?',
          'a' => 'Yes, for psychiatry and therapy, anywhere in California. TMS is an in-clinic treatment and has to happen at the West Carson Street suite.'],
         ['q' => 'Is TMS available at this clinic?',
@@ -337,10 +378,21 @@ return [
     'state_name' => 'California',
     'region'     => 'Los Angeles County',
     'page'       => 'long-beach.php',
-    'h1'         => 'Psychiatry and TMS in',
+    'h1'         => 'TMS therapy and more in',
     'meta'       => 'Psychiatry, therapy and TMS in Long Beach, CA — 100 Oceangate Unit 610. Meet the clinicians, see what we treat, and book with the one who fits.',
-    'lede'       => 'Psychiatry, therapy and TMS at Oceangate, in downtown Long Beach a block from the water. Most major plans accepted, and we check your benefits before your first visit.',
+    'lede'       => 'TMS therapy and more in downtown Long Beach, right next to the harbor. Most major insurance is accepted; we’ll help you through the insurance process.',
     'street_name'=> 'Oceangate',
+
+    'copy' => [
+        'team_eyebrow'     => 'Meet our team',
+        'team_lead'        => 'Our team in',
+        'prescriber_note'  => 'We’ll help you find a solution that works for you.',
+        'offer_eyebrow'    => 'Our services',
+        'reviews_plain'    => true,
+        'reviews_link'     => 'Read More Reviews',
+        'reviews_tail'     => 'Helping people heal since 2016.',
+        'faq_eyebrow'      => 'FAQ',
+    ],
 
     'address'   => [
         'building' => '',
@@ -381,7 +433,7 @@ return [
 
     'faqs' => [
         ['q' => 'Do I need a referral to be seen here?',
-         'a' => ' Most plans let you book psychiatry directly, though a few HMO products still require one from your primary care doctor. We check that when we verify your benefits.'],
+         'a' => 'Most plans let you book psychiatry directly, though a few HMO plans still require one from your primary care doctor. We check that when we verify your benefits.'],
         ['q' => 'How soon can I get an appointment in Long Beach?',
          'a' => 'New patient consultations are usually available within five business days, and same-week telehealth slots often open up. Say so when you call if things are urgent.'],
         ['q' => 'Can I be seen by video instead of coming in?',
@@ -397,10 +449,23 @@ return [
     'state_name' => 'California',
     'region'     => 'Los Angeles County',
     'page'       => 'west-los-angeles.php',
-    'h1'         => 'Psychiatry and TMS in',
+    'h1'         => 'TMS therapy and more in',
     'meta'       => 'Psychiatry, therapy and TMS in West Los Angeles, CA — 10780 Santa Monica Blvd, Suite 235. Meet the clinicians, see what we treat, and book with the one who fits.',
-    'lede'       => 'Psychiatry, therapy and TMS on Santa Monica Boulevard, between Westwood and Santa Monica. Most major plans accepted, and we check your benefits before your first visit.',
+    'lede'       => 'Offering counseling, TMS therapy and more, our offices are on Santa Monica Boulevard, a short distance from the UCLA campus. We accept most major insurance and will help you through the insurance process.',
     'street_name'=> 'Santa Monica Boulevard',
+
+    'copy' => [
+        'team_eyebrow'     => 'Meet our team',
+        'team_lead'        => 'Our team in',
+        'prescriber_note'  => 'We’ll help you find your best path forward.',
+        'offer_eyebrow'    => 'Our services',
+        'conditions_title' => 'What we treat',
+        'reviews_plain'    => true,
+        'reviews_tail'     => 'Helping people since 2016.',
+        'getting_eyebrow'  => 'Our location',
+        'getting_to'       => 'our West Los Angeles clinic',
+        'faq_eyebrow'      => 'FAQ',
+    ],
 
     'address'   => [
         'building' => '',
@@ -441,7 +506,7 @@ return [
 
     'faqs' => [
         ['q' => 'Do I need a referral to be seen here?',
-         'a' => ' Most plans let you book psychiatry directly, though a few HMO products still require one from your primary care doctor. We check that when we verify your benefits.'],
+         'a' => 'Most plans let you book psychiatry directly, though a few HMO plans still require one from your primary care doctor. We check that when we verify your benefits.'],
         ['q' => 'How soon can I get an appointment in West Los Angeles?',
          'a' => 'New patient consultations are usually available within five business days, and same-week telehealth slots often open up. Say so when you call if things are urgent.'],
         ['q' => 'Can I be seen by video instead of coming in?',
@@ -457,10 +522,24 @@ return [
     'state_name' => 'Texas',
     'region'     => 'Austin',
     'page'       => 'central-austin.php',
-    'h1'         => 'Psychiatry and TMS in',
+    'h1'         => 'TMS therapy and more in',
     'meta'       => 'Psychiatry, therapy and TMS in Central Austin, TX — 8140 N MoPac Expy, Building 3, Suite 150. Meet the clinicians, see what we treat, and book with the one who fits.',
-    'lede'       => 'Psychiatry, therapy and TMS off North MoPac, a few minutes from the Arboretum. Most major plans accepted, and we check your benefits before your first visit.',
+    'lede'       => 'We provide TMS therapy and other services in Austin, just off the MoPac Expressway. We accept most major insurance providers and will help you navigate the entire insurance process.',
     'street_name'=> 'North MoPac',
+
+    'copy' => [
+        'hero_place'       => 'Austin',
+        'team_eyebrow'     => 'Meet our team',
+        'team_lead'        => 'Our team in',
+        'prescriber_note'  => 'We’ll help you find your best path.',
+        'offer_eyebrow'    => 'Our services',
+        'conditions_title' => 'What we treat.',
+        'reviews_plain'    => true,
+        'reviews_from'     => 'Austin',
+        'reviews_tail'     => 'Helping people grow since 2016.',
+        'getting_lead'     => 'How to find',
+        'getting_to'       => 'our Austin clinic',
+    ],
 
     'address'   => [
         'building' => '',
@@ -503,7 +582,7 @@ return [
 
     'faqs' => [
         ['q' => 'Do I need a referral to be seen here?',
-         'a' => ' Most plans let you book psychiatry directly, though a few HMO products still require one from your primary care doctor. We check that when we verify your benefits.'],
+         'a' => 'Most plans let you book psychiatry directly, though a few HMO plans still require one from your primary care doctor. We check that when we verify your benefits.'],
         ['q' => 'How soon can I get an appointment in Central Austin?',
          'a' => 'New patient consultations are usually available within five business days, and same-week telehealth slots often open up. Say so when you call if things are urgent.'],
         ['q' => 'Can I be seen by video instead of coming in?',
