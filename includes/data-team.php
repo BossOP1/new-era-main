@@ -112,8 +112,8 @@ return [
             'zocdoc'      => 'https://www.zocdoc.com/wl/aneweratmsdallas/doctor/doris-cudjoe-msn-pmhnp-bc-360005?isNewPatient=false',
             'video'       => '',
             'bio'         => [
-                'Doris Cudjoe is a board-certified Psychiatric Mental Health Nurse Practitioner. She has over 12 years of critical care and psychiatric nursing experience and has worked for non-profit organizations as well as the federal government. She received a Bachelor of Arts in Philosophy from the University of Ghana, a Bachelor of Science in Nursing, and a Master of Science in Nursing from the University of Texas. Doris treats every patient as the unique individual they are. She is compassionate in her care and she pays attention to detail.',
-                'Doris practices patient and family-centered care. She is married and has 3 beautiful daughters. She spends most of her free time homeschooling her kids, mentoring others who want to help people like she does, and working out.',
+                'Doris Cudjoe is a board-certified psychiatric mental health nurse practitioner. She has over 12 years of critical care and psychiatric nursing experience and has worked for non-profit organizations as well as the federal government. She received a Bachelor of Arts degree in philosophy from the University of Ghana, and a Bachelor of Science degree in nursing and a Master of Science degree in nursing from the University of Texas. Doris treats every patient as the unique individual they are. She is compassionate in her care and she pays attention to detail.',
+                'Doris practices patient- and family-centered care. She is married and has three beautiful daughters. She spends most of her free time homeschooling her kids, mentoring others who want to help people like she does, and working out.',
             ],
         ],
         [
@@ -159,7 +159,7 @@ return [
             'zocdoc'      => 'https://www.zocdoc.com/wl/aneweratmscalifornia/doctor/dexter-jones-msn-pmhnp-bc-517707?isNewPatient=false',
             'video'       => '',
             'bio'         => [
-                'Dexter has more than 16 years of dedicated experience in the medical field, including three years as a Board-Certified Psychiatric Nurse Practitioner in California. Throughout his career, he has cultivated a strong foundation in primary psychiatric care, including acute, inpatient, and outpatient mental health. His many years of experience has equipped him with the knowledge and skills to deliver comprehensive mental healthcare to patients of diverse backgrounds and needs. Dexter uses a combination of medication management and supportive therapy to work towards the goals of decreasing suffering and improving quality of life.',
+                'Dexter has more than 16 years of dedicated experience in the medical field, including three years as a board-certified psychiatric nurse practitioner in California. Throughout his career, he has cultivated a strong foundation in primary psychiatric care, including acute, inpatient, and outpatient mental health. His many years of experience has equipped him with the knowledge and skills to deliver comprehensive mental healthcare to patients of diverse backgrounds and needs. Dexter uses a combination of medication management and supportive therapy to work towards the goals of decreasing suffering and improving quality of life.',
             ],
         ],
         [
@@ -274,7 +274,7 @@ return [
             'zocdoc'      => 'https://www.zocdoc.com/wl/aneweratmshouston/doctor/abidemi-oladele-msn-pmhnp-bc-516297?isNewPatient=false',
             'video'       => '',
             'bio'         => [
-                'Ms. Abidemi Oladele is a compassionate adult psychiatric and mental health nurse practitioner. Welcoming patients of all communities in Cypress, TX, she offers her services at Anew Era TMS & Psychiatry of Houston. She also takes virtual appointments. As part of her formal education and training, Ms. Oladele earned her master’s degree in nursing from Northern Kentucky University. Following a patient-centered approach during therapy, Ms. Oladele ensures each patient receives focused attention and feels comfortable sharing their struggles. She formulates realistic solutions, keeping their unique needs and preferences at the forefront.',
+                'Ms. Abidemi Oladele is a compassionate adult psychiatric and mental health nurse practitioner. Welcoming patients of all communities in Cypress, Texas, she offers her services at Anew Era TMS & Psychiatry of Houston. She also takes virtual appointments. As part of her formal education and training, Ms. Oladele earned her master’s degree in nursing from Northern Kentucky University. Following a patient-centered approach during therapy, Ms. Oladele ensures each patient receives focused attention and feels comfortable sharing their struggles. She formulates realistic solutions, keeping their unique needs and preferences at the forefront.',
             ],
         ],
         [
@@ -355,7 +355,7 @@ return [
             'zocdoc'      => 'https://www.zocdoc.com/wl/aneweratmshouston/doctor/damilola-fowowe-msn-pmhnp-bc-471424?isNewPatient=false',
             'video'       => '',
             'bio'         => [
-                'Damilola Fowowe is a board-certified Psychiatric Mental Health Nurse Practitioner. She received her Bachelor of Science in Nursing with honors from the University of Texas at Arlington and graduated with a Master of Science in Nursing — Psychiatric Mental Health Nurse Practitioner from the University of Texas Health Science Center in Houston.',
+                'Damilola Fowowe is a board-certified psychiatric mental health nurse practitioner. She received her Bachelor of Science degree in nursing with honors from the University of Texas at Arlington and graduated with a Master of Science degree in nursing — psychiatric mental health nurse practitioner from the University of Texas Health Science Center in Houston.',
                 'She has over eight years of nursing experience and is very passionate about patient care. Damilola believes in promoting holistic care and not limiting interventions to improve mental health conditions. She coordinates individualized care plans while using evidence-based guidelines.',
                 'Committed to achieving the best possible patient outcome, she builds rapport, listens, and addresses all patient concerns. Damilola is a self-care fanatic who roots for all forms of self-care activities. Her hobbies include traveling, working out, and trying new restaurants.',
             ],
@@ -407,7 +407,7 @@ return [
             'video'       => '',
             'zocdoc'      => 'https://www.zocdoc.com/doctor/heather-k-mak-md-459997',
             'bio'         => [
-                'Dr Heather Mak is a psychiatrist, board certified in psychiatry by the American Board of Psychiatry and Neurology and licensed to practise in California. She earned her medical degree from Robert Wood Johnson Medical School at the University of Medicine and Dentistry of New Jersey in 2010.',
+                'Dr. Heather Mak is a psychiatrist, board certified in psychiatry by the American Board of Psychiatry and Neurology and licensed to practice in California. She earned her medical degree from Robert Wood Johnson Medical School at the University of Medicine and Dentistry of New Jersey in 2010.',
                 'She treats depression and treatment-resistant depression, anxiety and panic disorder, PTSD and OCD, and works across both sides of the practice — medication management, and TMS including the shorter theta-burst protocols — for patients whose depression has not responded to medication on its own.',
             ],
         ],
@@ -423,7 +423,7 @@ return [
             'zocdoc'      => 'https://www.zocdoc.com/wl/aneweratmscalifornia/doctor/frizette-pua-msn-pmhnp-bc-713645?isNewPatient=false&exp_pps_default_new_patient=true',
             'video'       => '',
             'bio'         => [
-                'Frizette Dodson Pua is a Board Certified Psychiatric Mental Health Nurse Practitioner (PMHNP-BC). She earned her Master of Science in Nursing from Walden University. She has extensive experience of diverse healthcare settings, providing comprehensive support to individuals with wide range of mental health conditions. She is dedicated to delivering compassionate, evidence-based mental health care across the life span. With a strong clinical foundation and a collaborative, patient-centered approach, she works closely with interdisciplinary teams to ensure continuity of care and optimize treatment outcomes for individuals with complex mental health needs. Her practice emphasizes safety, respect, cultural humility, and empowering individuals to actively participate in their journey toward sustained wellness. Ms. Pua is deeply committed to reducing barriers to mental health services, enhancing patient education, and advancing initiatives that promote equity, resilience, and recovery within the communities she serves.',
+                'Frizette Dodson Pua is a board-certified psychiatric mental health nurse practitioner (PMHNP-BC). She earned her Master of Science degree in nursing from Walden University. She has extensive experience of diverse healthcare settings, providing comprehensive support to individuals with wide range of mental health conditions. She is dedicated to delivering compassionate, evidence-based mental health care across the life span. With a strong clinical foundation and a collaborative, patient-centered approach, she works closely with interdisciplinary teams to ensure continuity of care and optimize treatment outcomes for individuals with complex mental health needs. Her practice emphasizes safety, respect, cultural humility, and empowering individuals to actively participate in their journey toward sustained wellness. Ms. Pua is deeply committed to reducing barriers to mental health services, enhancing patient education, and advancing initiatives that promote equity, resilience, and recovery within the communities she serves.',
             ],
         ],
         [
@@ -438,7 +438,7 @@ return [
             'zocdoc'      => 'https://www.zocdoc.com/wl/aneweratmscalifornia/doctor/ferdinand-andy-rimando-msn-pmhnp-bc-466529?isNewPatient=false',
             'video'       => '',
             'bio'         => [
-                'Ferdinand Andy Rimando, a Psychiatric Nurse Practitioner at Anew Era California since 2024, has an impressive 20-year journey in healthcare reflecting a diverse and accomplished career. His expertise spans various specialties, including sleep medicine, critical care, anesthesia, post-anesthesia care, psychiatry, and mental health.',
+                'Ferdinand Andy Rimando, a psychiatric mental health nurse practitioner at Anew Era California since 2024, has an impressive 20-year journey in healthcare reflecting a diverse and accomplished career. His expertise spans various specialties, including sleep medicine, critical care, anesthesia, post-anesthesia care, psychiatry, and mental health.',
                 'His commitment to excellence was evident during his nursing residency at Johns Hopkins Hospital in Baltimore, a prestigious institution known for its commitment to healthcare innovation and education. Andy’s dedication and skills have been recognized through his contributions to renowned medical centers, such as the University of Maryland Medical Center, Penn State Hershey Medical Center, Cedars Sinai Medical Center, Kaiser Permanente in Oakland, UCLA Health in Santa Monica, and his most recent position at Kure Medical Group, where he practiced interventional psychiatry modalities.',
                 'Currently residing in Los Angeles, California, Andy continues to bring his wealth of experience, passion for healthcare, and a well-rounded perspective to his endeavors. His journey is a testament to his dedication to both professional excellence and personal growth',
             ],
@@ -455,7 +455,7 @@ return [
             'zocdoc'      => 'https://www.zocdoc.com/wl/aneweratmscalifornia/doctor/diane-rodriguez-aprn-pmhnp-bc-824403?exp_pps_default_new_patient=true&isNewPatient=false',
             'video'       => '',
             'bio'         => [
-                'Diane Rodriguez, PMHNP-BC, is an ANCC board-certified Psychiatric Mental Health Nurse Practitioner who is passionate about helping individuals feel heard, understood, and supported throughout their mental health journey. She works with individuals experiencing concerns such as depression, anxiety, ADHD, trauma-related symptoms, bipolar disorder, and sleep difficulties. Diane believes that mental health care should be collaborative and individualized, with treatment guided by each person’s unique experiences, needs, and goals.',
+                'Diane Rodriguez, PMHNP-BC, is an ANCC board-certified psychiatric mental health nurse practitioner who is passionate about helping individuals feel heard, understood, and supported throughout their mental health journey. She works with individuals experiencing concerns such as depression, anxiety, ADHD, trauma-related symptoms, bipolar disorder, and sleep difficulties. Diane believes that mental health care should be collaborative and individualized, with treatment guided by each person’s unique experiences, needs, and goals.',
             ],
         ],
         [
@@ -494,7 +494,7 @@ return [
             'slug'        => 'bryan-walker',
             'name'        => 'Bryan Walker',
             'credentials' => '',
-            'role'        => 'Psychiatric Nurse Practitioner',
+            'role'        => 'Psychiatric Mental Health Nurse Practitioner',
             'group'       => 'psychiatry',
             'states'      => ['tx'],
             'clinics'     => ['Cedar Park, TX'],
@@ -502,7 +502,7 @@ return [
             'zocdoc'      => 'https://www.zocdoc.com/wl/aneweratmsaustin/doctor/bryan-r-walker-msn-pmhnp-bc-435367?isNewPatient=false',
             'video'       => '',
             'bio'         => [
-                'Bryan Walker is an Advanced Practice Registered Nurse (APRN) and is board-certified in psychiatry and mental health (PMHNP-BC). As an advanced practice nurse, Bryan is committed to providing holistic, patient-centered, and evidenced-based care. He believes strongly in an integrated model of care and works in partnership with clients, other healthcare providers, and psychotherapists to achieve the best outcomes. Bryan keeps up with the latest research by attending conferences and improving psychotherapy skills with continued training. He completed his MSN at Eastern Kentucky University in Richmond, Kentucky. Bryan has also been a registered nurse since 1984 and has worked in a wide variety of health care settings (emergency, trauma, intensive care, home health, telephone triage, rehabilitation, hospice and palliative care, psychiatry). His diverse background augments his practice of psychiatry and mental health care.  Prior to entering private practice, Bryan worked full time at Cedar Crest Hospital and Residential Treatment Center. As a PMHNP, Bryan can assess, diagnose, and treat patients with psychiatric disorders including the prescription of medications and administration of psychotherapy. PMHNP’s provide a full range of psychiatric and mental health services.',
+                'Bryan Walker is an advanced practice registered nurse (APRN) and is board-certified in psychiatry and mental health (PMHNP-BC). As an advanced practice nurse, Bryan is committed to providing holistic, patient-centered, and evidenced-based care. He believes strongly in an integrated model of care and works in partnership with patients, other healthcare providers, and psychotherapists to achieve the best outcomes. Bryan keeps up with the latest research by attending conferences and improving psychotherapy skills with continued training. He completed his MSN at Eastern Kentucky University in Richmond, Kentucky. Bryan has also been a registered nurse since 1984 and has worked in a wide variety of health care settings (emergency, trauma, intensive care, home health, telephone triage, rehabilitation, hospice and palliative care, psychiatry). His diverse background augments his practice of psychiatry and mental health care.  Prior to entering private practice, Bryan worked full time at Cedar Crest Hospital and Residential Treatment Center. As a PMHNP, Bryan can assess, diagnose, and treat patients with psychiatric disorders including the prescription of medications and administration of psychotherapy. PMHNP’s provide a full range of psychiatric and mental health services.',
             ],
         ],
         [
@@ -548,8 +548,8 @@ return [
             'photo'       => 'team/christina-ferrari.jpg',
             'video'       => '',
             'bio'         => [
-                'Christina Ferrari is an Associate Professional Clinical Counselor and a graduate of Northwestern University with over 12 years of experience serving others in clinics, schools, and private settings. She collaborates with clients to explore goals, develop treatment plans, and build skills to help them integrate more fully into their lives. Christina’s approach is rooted in empirically based interventions, neuroscience, and psychoeducation.',
-                'At her core, Christina believes in the power of connection and the transformative magic of feeling understood. She emphasizes the healing potential that emerges from sharing stories and building relationships focused on growth and recovery. By examining a client’s early life experiences, identifying patterns, and uncovering core beliefs, she helps create a mindful evaluation of these narratives, empowering clients to make intentional choices for their future.',
+                'Christina Ferrari is an associate professional clinical counselor and a graduate of Northwestern University with over 12 years of experience serving others in clinics, schools, and private settings. She collaborates with patients to explore goals, develop treatment plans, and build skills to help them integrate more fully into their lives. Christina’s approach is rooted in empirically based interventions, neuroscience, and psychoeducation.',
+                'At her core, Christina believes in the power of connection and the transformative magic of feeling understood. She emphasizes the healing potential that emerges from sharing stories and building relationships focused on growth and recovery. By examining a patient’s early life experiences, identifying patterns, and uncovering core beliefs, she helps create a mindful evaluation of these narratives, empowering patients to make intentional choices for their future.',
                 'Christina embraces the philosophy that “pain is inevitable, but suffering is optional,” while also acknowledging the validity of individual suffering. Over the years, she has refined this perspective, inviting the idea that peace can be a conscious choice in the face of life’s challenges. For her, pain is inevitable, but peace remains an option.',
             ],
         ],
@@ -608,9 +608,9 @@ return [
             'photo'       => 'team/john-andrew-hosier.jpg',
             'video'       => '',
             'bio'         => [
-                'John Andrew Hosier is a licensed Marriage and Family Therapist born and raised in Southern California. Andrew has work history in non-profit social service agencies, private psychiatric offices, inpatient addiction treatment centers and outpatient primary mental health facilities.',
+                'John Andrew Hosier is a licensed marriage and family therapist born and raised in Southern California. Andrew has work history in non-profit social service agencies, private psychiatric offices, inpatient addiction treatment centers and outpatient primary mental health facilities.',
                 'He has extensive personal and professional experience working with addiction, anxiety, depression, relationship/family conflict and co-dependence. He operates from a psychodynamic perspective with influences of a humanistic person-centered approach, utilizing motivational interviewing and behavior-based approaches (CBT/ACT) to aid clients in achieving their own goals for therapy.',
-                'John completed his bachelor’s degree in psychology and master’s degree in Clinical Psychology from Vanguard University of Southern California. When not doing therapy, Andrew is attempting to make his daughter and wife laugh while cuddling his corgi, reading books, watching sports and cycling.',
+                'John completed his bachelor’s degree in psychology and master’s degree in clinical psychology from Vanguard University of Southern California. When not doing therapy, Andrew is attempting to make his daughter and wife laugh while cuddling his corgi, reading books, watching sports and cycling.',
             ],
         ],
         [
@@ -685,8 +685,8 @@ return [
             'photo'       => 'team/clarissa-sourada.jpg',
             'video'       => '',
             'bio'         => [
-                'Clarissa believes therapy is a space for healing, self-discovery, and meaningful growth—a place where individuals can feel supported and empowered to become their most authentic selves. She approaches each person with respect, compassion, and sensitivity, creating a safe and collaborative environment where clients can explore their thoughts, emotions, relationships, and life experiences without judgment.',
-                'Her goal is to help clients better understand themselves, gently challenge unhelpful thought patterns, and develop practical tools for navigating life’s challenges. Clarissa believes that meaningful change happens through connection, self-awareness, and building on the strengths each person already possesses.',
+                'Clarissa believes therapy is a space for healing, self-discovery, and meaningful growth—a place where individuals can feel supported and empowered to become their most authentic selves. She approaches each person with respect, compassion, and sensitivity, creating a safe and collaborative environment where patients can explore their thoughts, emotions, relationships, and life experiences without judgment.',
+                'Her goal is to help patients better understand themselves, gently challenge unhelpful thought patterns, and develop practical tools for navigating life’s challenges. Clarissa believes that meaningful change happens through connection, self-awareness, and building on the strengths each person already possesses.',
             ],
         ],
         [
