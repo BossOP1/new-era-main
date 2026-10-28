@@ -1,0 +1,12 @@
+/*
+Theme Name:  Anew Era
+Theme URI:   https://aneweratms.com/
+Author:      Anew Era TMS & Psychiatry
+Description: The Anew Era TMS & Psychiatry site — psychiatry, therapy and TMS across California and Texas. A WordPress layer over the site's original PHP templates; copy lives in inc/data-*.php and the blog in WordPress posts. Styles are Tailwind, compiled to assets/css/tailwind.css (see README.md).
+Version:     1.0.0
+Requires at least: 6.2
+Requires PHP: 8.0
+Text Domain: anew-era
+*/
+
+/* Intentionally empty: every style is in assets/css/tailwind.css. */

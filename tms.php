@@ -436,7 +436,7 @@ require __DIR__ . '/includes/reviews-section.php';
           <?php foreach ([
             ['We verify your benefits', 'Before your first appointment, not after it. You will know what your plan covers and what it leaves you.'],
             ['We handle prior authorization', 'The paperwork that gates TMS coverage is ours to do, and we do it.'],
-            ['We quote self-pay up front', 'If you are not covered, or you would rather not involve your insurer, we will give you the total for a course before you commit. Private pay also avoids the delays that authorization can add.'],
+            ['We quote self-pay up front', 'If you are not covered, or you would rather not involve your insurer, we will give you the total for a course before you commit.'],
           ] as [$name, $copy]): ?>
             <div class="flex items-start gap-3.5">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5f8f38" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="mt-1 shrink-0"><path d="m5 12.5 4.5 4.5L19 7"/></svg>

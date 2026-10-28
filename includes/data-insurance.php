@@ -137,8 +137,8 @@ return [
             'copy' => 'For a course of treatment you get the total before you agree to it, not a per-session figure to multiply yourself.',
         ],
         [
-            'name' => 'Paying privately can be faster',
-            'copy' => 'Private pay can skip prior authorization of the treatment.',
+            'name' => 'You can choose to pay privately',
+            'copy' => 'If you would rather not use your insurance, you can pay out of pocket. The intake team will talk you through what that involves before you start.',
         ],
         [
             'name' => 'A superbill, if you want to claim',

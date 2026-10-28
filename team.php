@@ -20,6 +20,11 @@ $locations = $team['locations'];
 $roles     = $team['roles'];
 $people    = $team['people'];
 
+// Alphabetical by name as written, first name first. Sorted here, once, so
+// the grid, the bio dialog (which indexes into this array) and the marquee
+// all share the order.
+usort($people, static fn (array $a, array $b): int => strcasecmp($a['name'], $b['name']));
+
 // Shared spacing and type, lifted from treatments.php so the hub pages match.
 $wrap     = 'mx-auto max-w-[1280px] px-[22px] md:px-7 lg:px-10';
 $pad      = 'py-8 sm:py-[60px] md:py-[76px] lg:py-[100px]';

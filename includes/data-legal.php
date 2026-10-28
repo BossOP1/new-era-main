@@ -41,7 +41,7 @@ return [
 'privacy' => [
     'title'   => 'Privacy policy',
     'meta'    => 'How Anew Era Health handles information collected through this website — what we collect, why, who we share it with, and the choices you have.',
-    'updated' => '20 September 2026',
+    'updated' => 'September 20, 2026',
     'lede'    => 'This policy covers the information this website collects. Your medical record is covered separately and more strictly by our HIPAA Notice of Privacy Practices.',
     'sections' => [
         [
@@ -126,7 +126,7 @@ return [
 'hipaa' => [
     'title'   => 'HIPAA notice of privacy practices',
     'meta'    => 'How Anew Era Health may use and disclose your protected health information, and the rights you have over it under HIPAA.',
-    'updated' => '20 September 2026',
+    'updated' => 'September 20, 2026',
     'lede'    => 'This notice applies to the health information we hold about you as a patient. It is required by federal law and we are required to follow it.',
     // Required to appear prominently and in this wording. Do not soften it.
     'notice'  => 'THIS NOTICE DESCRIBES HOW MEDICAL INFORMATION ABOUT YOU MAY BE USED AND DISCLOSED AND HOW YOU CAN GET ACCESS TO THIS INFORMATION. PLEASE REVIEW IT CAREFULLY.',
@@ -212,7 +212,7 @@ return [
 'terms' => [
     'title'   => 'Terms of use',
     'meta'    => 'The terms on which this website is made available — what it is for, what it is not, and the limits of what you can rely on it for.',
-    'updated' => '20 September 2026',
+    'updated' => 'September 20, 2026',
     'lede'    => 'These terms govern your use of this website. The short version: it is information, not medical advice, and it is not the place to go in an emergency.',
     'sections' => [
         [
@@ -288,7 +288,7 @@ return [
 'accessibility' => [
     'title'   => 'Accessibility statement',
     'meta'    => 'How this website is built for accessibility, what standard it targets, what we know is not right yet, and how to tell us or get help another way.',
-    'updated' => '20 September 2026',
+    'updated' => 'September 20, 2026',
     'lede'    => 'Mental health care is hard enough to reach without the website getting in the way. This is what we have done, what we know is imperfect, and how to reach us if something blocks you.',
     'sections' => [
         [

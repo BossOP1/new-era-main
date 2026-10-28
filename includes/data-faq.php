@@ -112,7 +112,7 @@ return [
         ],
         [
             'q' => 'What if I am not covered?',
-            'a' => 'We publish self-pay rates rather than quoting them case by case, and we will give you the total for a course before you commit. Private pay also avoids the delays that authorization adds, which is occasionally the reason people choose it even when they are covered.',
+            'a' => 'We publish self-pay rates rather than quoting them case by case, and we will give you the total for a course before you commit.',
         ],
         [
             'q' => 'Can I use my insurance for some things and pay for others?',

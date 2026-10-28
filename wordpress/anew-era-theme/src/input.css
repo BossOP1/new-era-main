@@ -1,0 +1,356 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* The @font-face rules for Tobias and Untitled Sans are emitted by
+   font_faces() in includes/functions.php rather than living here — the
+   licensed files are not in the repo, and that helper only declares the
+   faces it can actually find. See assets/fonts/README.md. */
+
+@layer base {
+  /* The hidden attribute has to beat a display utility.
+     Tailwind's .flex / .inline-flex / .grid are author styles and the
+     [hidden] rule is the browser's, so a `hidden` element carrying one of
+     those classes stays visible — which is a silent, easy bug to ship. This
+     makes the attribute mean what it says everywhere. */
+  [hidden] {
+    display: none !important;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white font-sans text-ink antialiased;
+  }
+
+  /* Headings are Tobias throughout; everything else inherits Untitled Sans
+     from body. Smaller headings that should read as UI rather than editorial
+     opt back out with .font-sans — see the conditions tabs and FAQ pills. */
+  h1,
+  h2,
+  h3 {
+    @apply font-serif font-medium;
+  }
+}
+
+@layer components {
+  /* Soft fade at both ends of the insurer marquee */
+  .marquee-mask {
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+  }
+
+  /* A number or word set as a display moment rather than as copy — the TMS
+     figures, the oversized footer wordmark. Tobias, like the headings. */
+  .display-mark {
+    @apply font-serif;
+  }
+
+  /* Capsule badges that sit directly on a photo. Smoked glass rather than a
+     solid fill, so the image still reads through — and dark enough that the
+     white label holds up over a bright photo as well as a dark one. */
+  .chip-glass {
+    @apply rounded-full border border-white/30 bg-night/45 px-3 py-[7px] text-xs font-bold text-white backdrop-blur-md backdrop-saturate-150;
+    box-shadow: 0 2px 10px rgba(9, 20, 28, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.28);
+  }
+
+  /* Liquid glass: the header bar reads as a slab of glass floating over the
+     hero rather than a translucent panel. Heavy blur plus saturation and a
+     touch of brightness keeps whatever is behind it colourful instead of
+     grey; the inset edges are the specular highlights that make it read as a
+     curved, physical surface. */
+  .liquid-glass {
+    @apply relative isolate rounded-[20px] border border-white/45 bg-white/[0.22];
+    -webkit-backdrop-filter: blur(30px) saturate(200%) brightness(1.08);
+    backdrop-filter: blur(30px) saturate(200%) brightness(1.08);
+    box-shadow:
+      0 16px 48px rgba(9, 20, 28, 0.22),
+      0 2px 8px rgba(9, 20, 28, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.8),
+      inset 0 -1px 0 rgba(255, 255, 255, 0.25),
+      inset 1px 0 0 rgba(255, 255, 255, 0.32),
+      inset -1px 0 0 rgba(255, 255, 255, 0.32);
+  }
+
+  /* The sheen raking across the top-left, the way light catches a rounded
+     glass edge. Negative z-index keeps it above the fill but under the nav;
+     .liquid-glass isolates so that stays local to the bar. */
+  .liquid-glass::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    pointer-events: none;
+    background:
+      linear-gradient(135deg, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0.14) 26%, transparent 52%),
+      radial-gradient(130% 190% at 6% -45%, rgba(255, 255, 255, 0.42), transparent 62%);
+  }
+
+  /* White copy sitting directly on footage. A wide, soft shadow rather than a
+     hard one: it lifts the type off bright frames without reading as a drop
+     shadow, which lets .bg-hero-veil stay light. */
+  .on-footage {
+    text-shadow: 0 2px 28px rgba(9, 20, 28, 0.55), 0 1px 5px rgba(9, 20, 28, 0.35);
+  }
+
+  /* Motion ------------------------------------------------------------------
+     .reveal is added by assets/js/main.js, never in the markup, so a visitor
+     without JS gets the finished page rather than a blank one. Everything here
+     is opacity and transform only — the two properties a browser can animate
+     without laying the page out again. */
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.7s cubic-bezier(0.22, 0.61, 0.24, 1),
+                transform 0.7s cubic-bezier(0.22, 0.61, 0.24, 1);
+  }
+  .reveal.is-in {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Cards that lift a little under the cursor. */
+  .lift {
+    transition: transform 0.35s cubic-bezier(0.22, 0.61, 0.24, 1),
+                box-shadow 0.35s cubic-bezier(0.22, 0.61, 0.24, 1);
+  }
+  .lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(9, 20, 28, 0.12);
+  }
+
+  /* Review pager -------------------------------------------------------------
+     Targeted by attribute, so the slider needs no extra classes in the markup.
+     The outgoing page leaves towards the arrow that was pressed and the
+     incoming one arrives from the opposite side, which is what makes the
+     direction of travel legible. */
+  [data-review-page] {
+    transition: opacity 0.3s ease, transform 0.34s cubic-bezier(0.22, 0.61, 0.24, 1);
+  }
+  [data-review-page].is-off-left {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  [data-review-page].is-off-right {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+
+  /* Cards land one after another rather than as a block. */
+  [data-review-page].is-entering figure {
+    animation: review-card-in 0.5s cubic-bezier(0.22, 0.61, 0.24, 1) both;
+  }
+
+  @keyframes review-card-in {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: none; }
+  }
+
+  /* Phone action bar: the two things someone on a phone actually wants. Sits
+     above the home indicator on iOS via the safe-area inset. */
+  .action-bar {
+    padding-bottom: calc(0.75rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  /* Review pager: the hidden page. Needs to beat the slider's own sm:grid,
+     so it carries weight rather than relying on utility order. */
+  .review-off {
+    display: none !important;
+  }
+
+  /* Review cards -------------------------------------------------------------
+     reviews.php prints the same card 900-odd times, so the shape lives here
+     instead of as a utility string repeated in every one of them — the same
+     reason .lift and .chip-glass are components. The card is still Tailwind,
+     just spelled once. Anything a single card varies, like the line clamp the
+     Read more button toggles, stays a utility in the markup. */
+  .rv-card {
+    @apply m-0 flex h-full flex-col rounded-[22px] border border-[#e3e7ea] bg-white px-6 py-6 transition-colors sm:px-7 sm:py-7;
+  }
+  .rv-card:hover {
+    @apply border-brand-blue/35;
+  }
+  .rv-head {
+    @apply flex items-center justify-between gap-3;
+  }
+  .rv-stars {
+    @apply text-[13px] leading-none tracking-[0.12em] text-brand-orange;
+  }
+  .rv-source {
+    @apply text-[11px] font-bold uppercase tracking-[0.12em] text-ink/35;
+  }
+  .rv-quote {
+    @apply m-0 mt-3.5 grow text-[14.5px] leading-[1.7] text-ink/85;
+  }
+  .rv-expand {
+    @apply mt-1.5 block cursor-pointer border-0 bg-transparent p-0 text-[13px] font-extrabold text-brand-blue underline underline-offset-4;
+  }
+  .rv-expand:hover {
+    @apply text-brand-blue-dark;
+  }
+  .rv-foot {
+    @apply mt-5 flex items-center gap-3 border-t border-ink/10 pt-4;
+  }
+  .rv-avatar {
+    @apply flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-mist text-[12px] font-extrabold text-brand-blue;
+  }
+  .rv-name {
+    @apply block truncate text-[13.5px] font-extrabold text-ink;
+  }
+  .rv-place {
+    @apply block truncate text-[12px] font-semibold text-ink/50;
+  }
+
+  /* Conditions on mobile ------------------------------------------------------
+     Tabs and panel share one flow, ordered so the panel lands under whichever
+     tab is selected. --cond-order is set by main.js on selection; the default
+     puts the panel after the first tab, matching the initial state. From lg up
+     the grid is back and order is irrelevant. */
+  @media (max-width: 1023px) {
+    .cond-tab {
+      order: var(--tab-order, 0);
+    }
+    .cond-panelbox {
+      order: var(--cond-order, 1);
+      margin-top: 0.25rem;
+      margin-bottom: 0.75rem;
+    }
+    .cond-tail {
+      order: 999;
+    }
+  }
+
+  /* Call tracking ---------------------------------------------------------------
+     The tracking script swaps each phone number for a <gu-sc><gu-sc-dial>
+     element of its own. Left alone it renders in the browser's default black
+     text, which disappears on the dark hero; inheriting keeps the number in
+     whatever colour and weight the button around it sets. */
+  gu-sc,
+  gu-sc-dial {
+    color: inherit !important;
+    font: inherit !important;
+    text-decoration: inherit !important;
+  }
+
+  /* Photo hero ----------------------------------------------------------------
+     The photograph and the wash over it are the same construction on every
+     condition page, and on the reviews and FAQ heroes, but the colour changes
+     per page. Tailwind scans these files as plain text, so a class built from
+     a PHP variable is a class that never gets compiled — the colour therefore
+     arrives as a custom property set inline on the section, and these rules
+     read it. Named for the condition pages, which had it first. */
+  .cond-hero-photo {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 22% center;
+  }
+
+  .cond-hero-wash {
+    background-color: rgb(var(--cond-wash) / 0.93);
+  }
+
+  @media (min-width: 768px) {
+    /* A page can reframe its photograph through --cond-photo-size and
+       --cond-photo-pos, set inline beside --cond-wash — PTSD scales its photo
+       down from the top so the heads clear the floor wash, and fades the
+       photo's new bottom edge out with --cond-photo-mask. */
+    .cond-hero-photo {
+      background-size: var(--cond-photo-size, cover);
+      background-position: var(--cond-photo-pos, center 38%);
+      -webkit-mask-image: var(--cond-photo-mask, none);
+      mask-image: var(--cond-photo-mask, none);
+    }
+
+    /* Two washes: the left-to-right fade that clears the copy column, and a
+       short one up from the floor so the strapline row stays readable where it
+       crosses the photograph. */
+    .cond-hero-wash {
+      background-color: transparent;
+      background-image:
+        linear-gradient(90deg,
+          rgb(var(--cond-wash) / 0.97) 0%,
+          rgb(var(--cond-wash) / 0.92) 29%,
+          rgb(var(--cond-wash) / 0.5) 46%,
+          rgb(var(--cond-wash) / 0) 62%),
+        linear-gradient(0deg,
+          rgb(var(--cond-wash) / 0.94) 0%,
+          rgb(var(--cond-wash) / 0.6) 10%,
+          rgb(var(--cond-wash) / 0) 20%);
+    }
+  }
+
+  /* Navigation ----------------------------------------------------------------
+     The phone menu is shown by removing .hidden, which restarts this animation
+     every time it opens. Desktop dropdowns animate with utilities in the
+     markup instead, because they are toggled by attribute, not by display. */
+  .nav-pop {
+    transform-origin: top center;
+    animation: nav-pop 0.28s cubic-bezier(0.22, 0.61, 0.24, 1) both;
+  }
+
+  /* While the phone menu is open it shows its own call and booking buttons,
+     so the fixed action bar underneath steps out of the way rather than
+     peeking out past the edges of a long menu. */
+  .action-bar {
+    transition: opacity 0.2s ease;
+  }
+
+  .nav-open .action-bar {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  @keyframes nav-pop {
+    from { opacity: 0; transform: translateY(-6px) scale(0.985); }
+    to   { opacity: 1; transform: none; }
+  }
+
+  /* Image placeholder shown until a real photo is dropped into assets/img/ */
+  .img-slot {
+    @apply flex h-full w-full items-center justify-center bg-white/[0.06] p-6 text-center;
+  }
+  .img-slot__hint {
+    @apply max-w-[26ch] text-[13px] font-semibold leading-snug text-white/45;
+  }
+}
+
+/* Someone who has asked their system for less motion gets none of it: no
+   reveal, no lift, no smooth scrolling, and the counters land on their final
+   value immediately (see main.js). */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal,
+  .reveal.is-in {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .lift,
+  .lift:hover {
+    transition: none;
+    transform: none;
+    box-shadow: none;
+  }
+  .nav-pop {
+    animation: none;
+  }
+}
+
+/* The pager still works with reduced motion — it just cuts between pages. */
+@media (prefers-reduced-motion: reduce) {
+  [data-review-page],
+  [data-review-page].is-off-left,
+  [data-review-page].is-off-right {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+  [data-review-page].is-entering figure {
+    animation: none;
+  }
+}

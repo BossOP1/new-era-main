@@ -1,0 +1,754 @@
+<?php
+/**
+ * Treatment page content — one entry per page, all rendered by
+ * includes/treatment-page.php. TMS is not here: tms.php is bespoke.
+ *
+ * Every root page (psychiatry.php, therapy.php, spravato.php) names its key
+ * and requires the template, the same arrangement as the condition pages.
+ *
+ * Shape of an entry
+ *   hero        headline lines (one of them is the accent), lede, photograph
+ *   what        opening explanation, a four-fact strip, a photograph beside it
+ *   band        the one-line blue band
+ *   options     optional cards: services, approaches, or who it is for
+ *   process     a numbered walk-through beside a photograph, and three facts
+ *   treats      optional grid of conditions; null where it would mislead
+ *   panels      a dark photo panel and a plain "honest answers" panel
+ *   faqs, cta
+ *
+ * Spravato wording follows the FDA label (2025, reference ID 5580441) rather
+ * than the practice's old page, which described it as an infusion and called
+ * it non-addictive. Neither is right: it is a nasal spray, and abuse and misuse
+ * is one of its boxed warnings. Dot colours in 'honest' items are full class
+ * names so Tailwind finds them — this directory is in its content paths.
+ */
+
+return [
+
+/* ── Psychiatry ────────────────────────────────────────────────────── */
+'psychiatry' => [
+    'name'  => 'Psychiatry',
+    'page'  => 'psychiatry.php',
+    'title' => 'Psychiatry & Medication Management',
+    'rail_pills' => true,
+    'reviews_heading' => 'Testimonies from our clients.',
+    'combined_heading' => ['Combined', 'services.'],
+    'meta'  => 'Psychiatric evaluation and medication management from clinicians who take the time to know you. What a first visit involves, how medication is managed, and what psychiatry treats.',
+
+    'hero' => [
+        'lines'  => ['An hour to', 'understand you.', 'Then a plan.'],
+        'accent' => 'Then a plan.',
+        'lede'   => 'Psychiatry is about understanding the full picture of your mental health and determining what treatments may help, including medication when needed. During your initial visit, you’ll complete a comprehensive assessment and leave with a written roadmap for care that reflects your needs, preferences, and goals.',
+        // Shown at full height on the right from the tablet up, so nobody's
+        // head is cropped off the top of the panel.
+        'image'  => 'treatments/psychiatry-consult.jpg',
+        'photo_size' => 'auto 100%',
+        'photo_pos'  => '100% 50%',
+        'photo_mask' => 'linear-gradient(90deg, transparent 32%, #000 52%)',
+        'panel'  => '#e9eef1',
+        'wash'   => '233 238 241',
+        'cta'    => 'Book an Evaluation',
+        'note'   => 'We treat adults and adolescents from age 15, in person and by telehealth.',
+        'meta_left'  => 'In-network with most major plans.',
+        'meta_right' => 'Evaluation / Medication management / Testing',
+    ],
+
+    'what' => [
+        'lines'  => ['The medical side', 'of mental health.'],
+        'accent' => 'of mental health.',
+        'serif'  => 'Our psychiatric clinicians are psychiatrists and psychiatric nurse practitioners — licensed to diagnose, and to prescribe when medication is the right tool.',
+        'paras'  => [
+            ['html' => 'Psychiatry deals with the diagnosis and treatment of mental health conditions: <a href="depression.php" class="font-semibold text-brand-blue underline underline-offset-4 hover:text-brand-blue-dark">depression</a>, <a href="anxiety.php" class="font-semibold text-brand-blue underline underline-offset-4 hover:text-brand-blue-dark">anxiety</a>, <a href="ocd.php" class="font-semibold text-brand-blue underline underline-offset-4 hover:text-brand-blue-dark">OCD</a>, <a href="ptsd.php" class="font-semibold text-brand-blue underline underline-offset-4 hover:text-brand-blue-dark">PTSD</a>, bipolar disorder and <a href="conditions.php" class="font-semibold text-brand-blue underline underline-offset-4 hover:text-brand-blue-dark">more</a>. Where a therapist works through thoughts and behavior, a psychiatric clinician also looks at the physical side — your medical history, other prescriptions, sleep, and anything that might be imitating a mental health condition.'],
+            'Medication is one option among several, not the default. Plenty of people do well with therapy alone or with TMS, and we will say so plainly rather than reaching for a prescription.',
+        ],
+        'facts' => [
+            ['Evaluation', 'A full diagnostic assessment'],
+            ['Medication', 'Prescribed, then managed.'],
+            ['Testing',    'Cognitive and personality'],
+            ['Telehealth', 'Treatment in the comfort of home.'],
+        ],
+        'note'      => 'If medication isn’t the right answer for you, we’ll help you find an effective alternative.',
+        'link'      => ['What the First Visit Involves', '#process'],
+        'photo'     => 'treatments/psychiatry-clinician.jpg',
+        'photo_alt' => 'A psychiatric clinician at her desk with patient notes and medication beside her',
+        'focus'     => 'object-[55%_40%]',
+        'caption'   => '',
+    ],
+
+    'band' => [
+        'value'  => '60 min',
+        'rest'   => 'for your first visit: a full diagnostic assessment, not a fifteen-minute script.',
+        'note'   => 'You leave the same day with a written plan.',
+        'source' => '',
+    ],
+
+    'options' => [
+        'rail'   => 'Services',
+        'eyebrow'=> '02 / What psychiatry covers',
+        'lines'  => ['Four services.', 'One clinician.'],
+        'accent' => 'One clinician.',
+        'intro'  => 'Most people need one or two of these. The evaluation decides which.',
+        'items'  => [
+            ['Psychiatric evaluation', 'A full diagnostic assessment of your history, health and symptoms, ending in a diagnosis and a written plan.', 'Your first visit'],
+            ['Medication management',  'Prescribing, then following up: checking what is working, adjusting doses, and dealing with side effects rather than leaving you with them.', 'Ongoing'],
+            ['Psychological testing',  'Standardized cognitive, personality and neuropsychological assessments, when a diagnosis needs more than a conversation.', 'When needed'],
+            ['Coordinated care',       'Referral into therapy, TMS or Spravato®, all under the same roof, with one set of notes shared by everyone treating you.', 'Connected'],
+        ],
+    ],
+
+    'process' => [
+        'rail'   => 'First visit',
+        'eyebrow'=> '03 / Your first visit',
+        'lines'  => ['Sixty minutes.', 'A plan by the end.'],
+        'accent' => 'A plan by the end.',
+        'intro'  => 'We send the intake forms ahead of time, so the visit itself is all conversation.',
+        'photo'     => 'treatments/psychiatry-first-visit.jpg',
+        'photo_alt' => 'A psychiatrist taking notes while a new patient completes intake forms on a tablet',
+        'focus'     => 'object-[56%_50%]',
+        'caption'   => 'Everything written down.',
+        'steps' => [
+            ['Before you arrive', 'Intake forms are completed electronically before your appointment. Please bring a photo ID, insurance card, and a list of current medications to your visit. Our team will verify your insurance benefits ahead of time.'],
+            ['Your history',      'We examine your symptoms, how long you’ve had them, what you’ve already tried along with your physical health history.'],
+            ['A diagnosis',       'Your clinician tells you what they think is going on and why, in plain words, and answers whatever you ask.'],
+            ['A written plan',    'We’ll help you decide if TMS, therapy, medication, or a combination is the right treatment for you.'],
+            ['Follow-up',         'Medication changes are checked every two to four weeks at first, then less often once things settle.'],
+        ],
+        'facts' => [
+            ['60 minutes', 'first visit',              '#e8922f'],
+            ['2–4 weeks',  'between early follow-ups', '#5f8f38'],
+            ['15+',     'ages we see',              '#0f639b'],
+        ],
+    ],
+
+    'treats' => [
+        'eyebrow' => '04 / What it treats',
+        'lines'   => ['Every condition', 'we see.'],
+        'accent'  => 'we see.',
+        'intro'   => 'Psychiatric care drives everything we do, and it covers every condition below. We also treat other conditions, like ADHD.',
+        'flag'    => [],
+        'flag_label' => '',
+    ],
+
+    'panels' => [
+        'feature' => [
+            'eyebrow' => 'Medication management',
+            'heading' => 'Prescribing is the start of the work, not the end of it.',
+            'copy'    => 'Antidepressants, mood stabilizers, anti-anxiety medication and stimulants all behave differently in different people. Your clinician chooses with your history in mind, checks in while it takes effect, and changes course when it is not working rather than waiting you out.',
+            'photo'   => 'treatments/all-hero.jpg',
+            'photo_alt' => 'A doctor talking with a patient across her desk',
+            'cta'     => 'Book an Evaluation',
+        ],
+        'honest' => [
+            'eyebrow' => 'Straight answers about medication',
+            'heading' => 'What medication',
+            'accent'  => 'can and cannot do.',
+            'intro'   => 'Most people arrive with a worry about medication. These are the ones we hear most.',
+            'items'   => [
+                ['It takes time', 'Most antidepressants take several weeks to show their effect, and the first one tried is not always the one that works.', 'bg-brand-blue'],
+                ['Side effects are common early', 'Nausea, sleep changes and headaches often settle within the first couple of weeks. Tell us rather than stopping.', 'bg-brand-orange'],
+                ['You are not locked in', 'If a medication is not right we adjust or change it, and if you want to come off it we plan that with you.', 'bg-brand-green'],
+            ],
+            'note' => 'Never stop a psychiatric medication suddenly without talking to your prescriber. Some need to be tapered.',
+        ],
+    ],
+
+    'faqs' => [
+        ['What is the difference between a psychiatrist and a therapist?', 'A psychiatric clinician is medically trained and can diagnose and prescribe. A therapist treats through conversation and structured techniques such as CBT, but does not prescribe medications. Many people see both, and here they work in the same practice.'],
+        ['Do I have to take medication?', 'This question is best answered by the clinician who prescribed it.'],
+        ['What happens at my first visit?', 'A sixty-minute diagnostic assessment covering your history, physical health, sleep and current symptoms. You leave the same day with a written plan.'],
+        ['Can I be seen by telehealth?', 'Yes. Evaluations and follow-ups can both be done by video, and some people mix the two. A few medications carry rules about in-person visits, and we will tell you if one of them applies to you.'],
+        ['Do you see teenagers?', 'We see patients aged 15 and up. Adolescent care includes family sessions and, with consent, coordination with school counselors.'],
+        ['Will my insurance cover it?', 'Psychiatric evaluation and medication management are covered by most major commercial plans, as well as Medicare and Tricare. We verify your benefits before your first appointment.'],
+    ],
+
+    'cta' => [
+        'lines'  => ['Start with', 'an evaluation.'],
+        'accent' => 'an evaluation.',
+        'copy'   => 'New patient appointments are usually available within five business days. We check your benefits first, so you know what a visit costs before you walk in.',
+    ],
+],
+
+/* ── Therapy ───────────────────────────────────────────────────────── */
+'therapy' => [
+    'name'  => 'Therapy',
+    'page'  => 'therapy.php',
+    'title' => 'Therapy & Counseling in California & Texas',
+    'meta'  => 'Evidence-based therapy — CBT, DBT, EMDR, ACT and exposure work — with therapists who work alongside your prescriber. What each approach is for, and what a session is like.',
+
+    'hero' => [
+        'lines'  => ['Therapy that fits', 'what you’re going through.'],
+        'accent' => 'what you’re going through.',
+        'lede'   => 'Therapy is a conversation with a trained professional, where you safely explore your experiences and behaviors. We use approaches with peer-reviewed evidence behind them, and match the approach to what you are dealing with.',
+        'image'  => 'treatments/therapy-hero.jpg',
+        'panel'  => '#ece8e3',
+        'wash'   => '236 232 227',
+        'cta'    => 'Book Your First Session',
+        'note'   => 'In person and by telehealth. Ages 15 and up.',
+        'meta_left'  => 'Therapists working alongside your prescriber.',
+        'meta_right' => 'CBT / DBT / EMDR / ACT',
+    ],
+
+    'what' => [
+        'lines'  => ['Not just', 'someone to talk to.'],
+        'accent' => 'someone to talk to.',
+        'serif'  => 'Evidence-based therapy is structured. Each approach has a method, a goal, and research showing what it helps with.',
+        'paras'  => [
+            'Everyone arrives with a different mix of history, symptoms and circumstance, so there is no one-size approach. Your therapist chooses a method to fit what you are dealing with, and tells you why.',
+            'Therapy works on its own for many people. For others it works best alongside medication or TMS — and here, your therapist and your prescriber are in the same practice, reading the same notes.',
+        ],
+        'facts' => [
+            ['Evidence-based', 'Peer-reviewed approaches'],
+            ['Matched to you', 'The method fits the problem'],
+            ['Connected',      'Works with your prescriber'],
+            ['Flexible',       'In person or by telehealth'],
+        ],
+        'note'      => 'If the fit with your therapist is not right, you can switch at any time, at no extra cost and with no awkward conversation.',
+        'link'      => ['Which Approach Is for What', '#options'],
+        'photo'     => 'treatments/therapy-conversation.jpg',
+        'photo_alt' => 'A woman holding a mug, talking across a table',
+        'focus'     => 'object-[50%_35%]',
+        'caption'   => 'Structured, not scripted.',
+    ],
+
+    'band' => [
+        'value'  => 'Ages 15 and up:',
+        'rest'   => 'we see adults and adolescents, with family sessions for teens.',
+        'note'   => 'With consent, we coordinate with school counselors.',
+        'source' => 'Who we see',
+        'static' => true,
+    ],
+
+    'options' => [
+        'rail'   => 'Approaches',
+        'eyebrow'=> '02 / The approaches',
+        'lines'  => ['Six methods.', 'Matched to you.'],
+        'accent' => 'Matched to you.',
+        'intro'  => 'These are the approaches our therapists use most. You don’t need to pick one; your therapist will recommend the right fit for you.',
+        'items'  => [
+            ['Cognitive behavioral therapy (CBT)', 'Identifies distorted thought patterns and the behaviors they drive, then practices reshaping both. The most studied therapy there is.', 'CBT'],
+            ['Dialectical behavior therapy (DBT)', 'Emotion regulation, distress tolerance, mindfulness and interpersonal skills, for feelings that seem unmanageable.', 'DBT'],
+            ['EMDR',                          'Eye movement desensitization and reprocessing: guided bilateral stimulation that helps the brain reprocess traumatic memories.', 'Trauma'],
+            ['Exposure-based therapy (ERP)',        'Exposure and response prevention for OCD, and prolonged exposure for PTSD — facing what you avoid, gradually, until it loses its grip.', 'ERP · PE'],
+            ['Acceptance and commitment (ACT)',     'Making room for difficult thoughts rather than fighting them, and acting on what matters to you anyway.', 'ACT'],
+            ['Psychodynamic therapy (PDT)',         'Longer-term, in-depth work on how earlier experiences shape what is happening now.', 'In depth'],
+        ],
+    ],
+
+    'process' => [
+        'rail'   => 'A session',
+        'eyebrow'=> '03 / What therapy is like',
+        'lines'  => ['A conversation', 'with a structure.'],
+        'accent' => 'with a structure.',
+        'intro'  => 'Most people come weekly to begin with. Progress is reviewed monthly, and the plan changes if it is not working.',
+        'photo'     => 'treatments/therapy-adolescent.jpg',
+        'photo_alt' => 'A teenager talking with a therapist on a sofa',
+        'focus'     => 'object-[62%_40%]',
+        'caption'   => 'Ages 15 and up.',
+        'steps' => [
+            ['Your first session',      'Mostly listening: what brought you here, what you want to change, and what has and has not helped before.'],
+            ['Choosing an approach', 'Your therapist proposes a method and explains it. If it does not feel right, you say so.'],
+            ['The work',             'Sessions have a focus. Many approaches include something to practice between them, because that is where much of the change happens.'],
+            ['Reviewing progress',   'Each month you look at what has shifted, using simple measures as well as impressions, and adjust the plan.'],
+            ['Adding or finishing',  'Some people add medication or TMS along the way. Others finish once their goals are met, with the door left open.'],
+        ],
+        'facts' => [
+            ['Weekly',  'to begin with',    '#e8922f'],
+            ['Monthly', 'progress reviews', '#5f8f38'],
+            ['15+',     'ages we see',      '#0f639b'],
+        ],
+        'facts_static' => true,
+    ],
+
+    'treats' => [
+        'eyebrow' => '04 / What it treats',
+        'lines'   => ['Useful for', 'all of them.'],
+        'accent'  => 'all of them.',
+        'intro'   => 'Therapy has a role in every condition we treat, from depression and anxiety to the toll of living with chronic migraine.',
+        'flag'    => [],
+        'flag_label' => '',
+    ],
+
+    'panels' => [
+        'feature' => [
+            'eyebrow' => 'Therapy and prescribing, together',
+            'heading' => 'Your therapist and your prescriber read the same notes.',
+            'copy'    => 'Many people see a therapist in one place and a prescriber in another, and end up spending time moving between the two. Here they work in the same practice, so a change in one part of your care is known to the other the same week.',
+            'photo'   => 'treat-6',
+            'photo_alt' => 'Two women talking during a therapy session',
+            'cta'     => 'Book Your First Session',
+        ],
+        'honest' => [
+            'eyebrow' => 'Finding the right fit',
+            'heading' => 'What makes therapy',
+            'accent'  => 'actually work.',
+            'intro'   => 'The research is consistent on this: the relationship matters as much as the method.',
+            'items'   => [
+                ['Fit matters', 'Feeling understood by your therapist is one of the strongest predictors of progress. If it\'s not working, switch — we will match you with someone new.', 'bg-brand-blue'],
+                ['It can feel harder at first', 'Early sessions can feel slow, or even heavier, because you are talking about difficult things. That usually eases.', 'bg-brand-orange'],
+                ['Between sessions counts', 'What you practice between appointments is where much of the change happens.', 'bg-brand-green'],
+            ],
+            'note' => 'Therapy is not crisis care. If you are in crisis, call or text 988 any time.',
+        ],
+    ],
+
+    // Shown under the FAQ heading; pages without one keep the template's line.
+    'faq_intro' => 'Have more questions? Just give us a call — we are happy to talk through anything before you book.',
+
+    'faqs' => [
+        ['Do I need therapy?', 'Therapy treats through conversation and structured techniques. Psychiatry adds diagnosis and medication. Many people start with one and add the other when it helps, and the first appointment is where we work out which.'],
+        ['How long will I be in therapy?', 'It depends on what you are working on. Some focused approaches run for a set number of sessions; others are open-ended. Progress is reviewed monthly, so the length is a decision you make together.'],
+        ['Can I switch therapists if it is not a fit?', 'Yes, any time. Our intake team will match you with someone new at no extra cost and no awkward conversation required.'],
+        ['Is telehealth therapy as good as in person?', 'For most people and most approaches the research says yes. Some prefer the room, some prefer their own sofa, and you can change your mind.'],
+        ['Do you see teenagers?', 'We see patients aged 15 and up. Adolescent care includes family sessions and, with consent, coordination with school counselors.'],
+        ['Does insurance cover therapy?', 'Most major commercial plans cover therapy, as do Medicare and Tricare. We verify your benefits before your first appointment, so you know what a session costs.'],
+    ],
+
+    'cta' => [
+        'lines'  => ['Start with', 'one conversation.'],
+        'accent' => 'one conversation.',
+        'copy'   => 'New patient appointments are usually available within five business days, in person or by telehealth.',
+    ],
+],
+
+/* ── Spravato ──────────────────────────────────────────────────────── */
+'spravato' => [
+    'name'  => 'Spravato®',
+    'page'  => 'spravato.php',
+    'title' => 'Spravato® (esketamine)',
+    'meta'  => 'Spravato® (esketamine) nasal spray for treatment-resistant depression, given under supervision in a certified clinic. Who it is for, what a treatment day involves, and the safety facts. Texas locations only.',
+
+    'hero' => [
+        'lines'  => ['When two', 'antidepressants', 'haven’t worked.'],
+        'accent' => 'haven’t worked.',
+        'lede'   => 'Spravato® (esketamine) is an FDA-approved nasal spray for treatment-resistant depression. You take it yourself in our clinic, under a clinician’s supervision, and stay with us for at least two hours afterward.',
+        // A whole person at rest rather than a close-up of a face, shown at
+        // full height on the right from the tablet up (mirrored from the blog
+        // original so she sits clear of the copy).
+        'image'  => 'treatments/spravato-hero-rest.jpg',
+        'photo_size' => 'auto 100%',
+        'photo_pos'  => '100% 50%',
+        'photo_mask' => 'linear-gradient(90deg, transparent 34%, #000 56%)',
+        'panel'  => '#eceef0',
+        'wash'   => '236 238 240',
+        'cta'    => 'Ask About Spravato®',
+        'note'   => 'Offered at our Texas locations only.',
+        'meta_left'  => 'FDA-approved for treatment-resistant depression.',
+        'meta_right' => '',
+    ],
+
+    'what' => [
+        'lines'  => ['A nasal spray,', 'not an infusion.'],
+        'accent' => 'not an infusion.',
+        'serif'  => 'Spravato® contains esketamine, a close chemical relative of ketamine, delivered as a nasal spray rather than through a drip.',
+        'paras'  => [
+            'It works differently from standard antidepressants. Rather than acting mainly on serotonin, esketamine blocks the NMDA receptor, part of the brain’s glutamate system. That different mechanism is why it can help people whose depression has not responded to the usual medications.',
+            'Because it can cause sedation and a feeling of detachment, it is only given in certified clinics, under supervision, with monitoring afterward. It is never sent home with you.',
+        ],
+        'facts' => [
+            ['FDA-approved', 'For treatment-resistant depression'],
+            ['Nasal spray',  'Self-given, under supervision'],
+            ['Monitored',    'At least 2 hours after each dose'],
+            ['No driving',   'Until the next day, after sleep'],
+        ],
+        'note'      => 'Spravato® is a Schedule III controlled medication, prescribed only after a full psychiatric evaluation.',
+        'link'      => ['What a Treatment Day Involves', '#process'],
+        'photo'     => 'treatments/spravato-self.png',
+        'photo_alt' => 'A woman holding a nasal spray to give herself a dose',
+        'focus'     => 'object-[55%_45%]',
+        'caption'   => 'Self-given, never unsupervised.',
+    ],
+
+    'band' => [
+        'value'  => '2 hours',
+        'rest'   => 'of monitoring in our clinic after every dose, before you head home.',
+        'note'   => 'Required for every patient at every session.',
+        'source' => 'FDA label',
+        'static' => true,
+    ],
+
+    'options' => [
+        'rail'   => 'Who it’s for',
+        'eyebrow'=> '02 / Who it is for',
+        'lines'  => ['Two uses.', 'Both for adults.'],
+        'accent' => 'Both for adults.',
+        'intro'  => 'Spravato® is approved for two specific situations, and a psychiatric evaluation decides whether you fit either of them.',
+        'items'  => [
+            ['Treatment-resistant depression', 'Depression that has not improved after at least two antidepressants. Spravato® can be used on its own or alongside an oral antidepressant.', 'Adults'],
+            ['Depression with suicidal thoughts', 'Depressive symptoms in adults with major depressive disorder and acute suicidal thoughts or behavior, used alongside an oral antidepressant.', 'Adults'],
+            ['Not suitable for', 'Anyone with aneurysmal vascular disease, an arteriovenous malformation, a history of bleeding in the brain, or an allergy to esketamine or ketamine. Not recommended in pregnancy.', 'Safety screening'],
+        ],
+    ],
+
+    'process' => [
+        'rail'   => 'Treatment day',
+        'eyebrow'=> '03 / A treatment day',
+        'lines'  => ['Two hours with us.', 'Then someone drives you home.'],
+        'accent' => 'Then someone drives you home.',
+        'intro'  => 'Treatment runs twice a week for weeks one to four, then once a week for weeks five to eight. After that, sessions are weekly or every two weeks, depending on how you respond. Every session follows the same routine.',
+        'photo'     => 'homepage/home-ambience-nera.webp',
+        'photo_alt' => 'A quiet treatment room with a reclining chair, a side table and monitoring equipment',
+        'focus'     => 'object-[40%_60%]',
+        'caption'   => 'Two quiet hours.',
+        'steps' => [
+            ['First, we take your blood pressure', 'Esketamine can raise blood pressure, so we check it before every dose. If it is elevated, treatment waits until it comes down.'],
+            ['Self-administration',    'You administer the nasal spray yourself, one device at a time with a short rest between each, under direct clinical supervision.'],
+            ['Rest',                   'You rest in a reclining chair. Feeling detached, dizzy or drowsy is common, and it typically passes.'],
+            ['Monitoring period',      'A clinician monitors you for at least two hours and rechecks your blood pressure before you are cleared to leave.'],
+            ['Arrange your ride home', 'You may not drive or operate machinery until the next day, after a restful sleep. Please arrange a ride home before your appointment.'],
+        ],
+        'facts' => [
+            ['2×',    'a week, weeks 1–4', '#e8922f'],
+            ['1×',    'a week, weeks 5–8', '#5f8f38'],
+            ['2 hrs', 'minimum monitoring', '#0f639b'],
+        ],
+        'facts_static' => true,
+    ],
+
+    // Deliberately no grid of conditions: Spravato is approved for depression
+    // alone, and seven condition tiles would suggest otherwise.
+    'treats' => null,
+
+    'panels' => [
+        'feature' => [
+            'eyebrow' => 'Texas locations only',
+            'heading' => 'Available only at certified clinics, including our Texas locations.',
+            'copy'    => 'Spravato® is distributed under a federal safety program that restricts it to certified healthcare settings. We offer it at our Texas locations. If you are in California, TMS is often the next step for treatment-resistant depression, and we can talk it through with you.',
+            'photo'   => 'faq.jpg',
+            'photo_alt' => 'A bright clinic room with chairs arranged around a low table',
+            'cta'     => 'Ask About Spravato®',
+        ],
+        'honest' => [
+            'eyebrow' => 'Safety',
+            'heading' => 'The safety facts,',
+            'accent'  => 'explained clearly.',
+            'intro'   => 'Spravato® carries a boxed warning, the FDA’s most prominent kind. This is what it covers.',
+            'items'   => [
+                ['Sedation and dissociation', 'Sleepiness, and feeling detached from yourself or your surroundings, are common after a dose. It is why you stay with us for at least two hours.', 'bg-brand-orange'],
+                ['Breathing and blood pressure', 'Slowed breathing has been reported, and blood pressure can rise. Both are watched during every session.', 'bg-[#c05621]'],
+                ['Abuse and misuse', 'Esketamine can be misused, which is why it is only given in the clinic.', 'bg-brand-blue'],
+                ['Suicidal thoughts', 'Antidepressants can increase suicidal thoughts in some younger adults. Tell us straight away if your mood worsens or new thoughts of suicide appear.', 'bg-brand-green'],
+            ],
+            'note' => 'Spravato® does not replace emergency care. If you are thinking about suicide right now, call or text 988, or go to your nearest emergency room.',
+        ],
+    ],
+
+    'faqs' => [
+        ['Is Spravato® the same as a ketamine infusion?', 'No. Spravato® contains esketamine, a close relative of ketamine, and it is a nasal spray rather than an IV drip. It is FDA-approved for depression and given only in certified clinics under a federal safety program.'],
+        ['Who can have it?', 'Adults with depression that has not responded to at least two antidepressants, or adults with major depressive disorder and acute suicidal thoughts or behavior alongside an oral antidepressant. A full psychiatric evaluation comes first, including screening for the conditions that rule it out.'],
+        ['What are the common side effects?', 'Feeling disconnected from yourself or your surroundings, dizziness, nausea, sleepiness or low energy, anxiety, and a rise in blood pressure. Most settle within the monitoring period, which is what the two hours are for.'],
+        ['Why can’t I drive afterward?', 'Esketamine affects attention, judgment and reaction time. You must not drive or operate machinery until the next day, after a restful sleep — even if you feel fine.'],
+        ['How long is a course?', 'Twice a week for the first four weeks, then once a week for weeks five to eight. After that, sessions are weekly or every two weeks, set at the least frequent schedule that keeps you well.'],
+        ['Is it available in California?', 'Not at Anew Era. We offer Spravato® at our Texas locations only. In California, TMS is often the next step for treatment-resistant depression, and we can talk it through with you.'],
+        ['Does insurance cover it?', 'Many plans cover Spravato® for treatment-resistant depression, usually with prior authorization. We verify your benefits and handle the paperwork before your first session.'],
+    ],
+
+    'cta' => [
+        'lines'  => ['Find out if', 'Spravato® fits.'],
+        'accent' => 'Spravato® fits.',
+        'copy'   => 'It starts with a psychiatric evaluation. We check whether you are a candidate, verify your coverage, and tell you honestly if TMS or another option would serve you better.',
+    ],
+],
+
+/* ── Telepsychiatry ────────────────────────────────────────────────────
+   Accuracy notes, because remote care has rules that change:
+     · Licensure, not preference, is the limit. Clinicians are licensed in
+       California and Texas, and a patient has to be physically in one of
+       those states at the time of the appointment. Stated plainly rather
+       than implied.
+     · Controlled medication by video is governed federally and the rules
+       have moved several times. Nothing here states a specific rule — the
+       page says your clinician will tell you what applies. Do not replace
+       that with a definite claim without checking the current position.
+     · TMS and Spravato® are in-clinic treatments and cannot be delivered
+       remotely. The 'honest' panel says so rather than leaving it to be
+       discovered after booking.                                          */
+'telepsychiatry' => [
+    'name'  => 'Telepsychiatry',
+    'page'  => 'telepsychiatry.php',
+    'title' => 'Telepsychiatry',
+    'meta'  => 'Psychiatry and therapy by secure video, anywhere in California or Texas. The same clinicians, the same hour, the same plan — without the drive. Most insurance accepted.',
+
+    'hero' => [
+        'lines'  => ['Care that reaches you', 'where you are.'],
+        'accent' => 'where you are.',
+        'lede'   => 'Telepsychiatry is the same care delivered by secure video: a full evaluation, medication management and therapy, with the clinician you would have seen in person. No chatbot; same standards.',
+        // A portrait photo, so from the tablet up it is shown at full height on
+        // the right rather than stretched across the panel, and its left edge
+        // fades into the wash. See .cond-hero-photo in src/input.css.
+        'image'  => 'treatments/telepsychiatry-home.jpg',
+        'photo_size' => 'auto 100%',
+        'photo_pos'  => '100% 30%',
+        'photo_mask' => 'linear-gradient(90deg, transparent 50%, #000 66%)',
+        'panel'  => '#e9eef1',
+        'wash'   => '233 238 241',
+        'cta'    => 'Book a Video Visit',
+        'note'   => 'Adults and adolescents from 15. California and Texas.',
+        'meta_left'  => 'In-network with most major plans.',
+        'meta_right' => 'Evaluation / Medication management / Therapy',
+    ],
+
+    'what' => [
+        'lines'  => ['The same hour,', 'a shorter journey.'],
+        'accent' => 'a shorter journey.',
+        'serif'  => 'A video visit is a real appointment with a real clinician — the same sixty-minute evaluation, the same prescriber, the same notes in the same chart.',
+        'paras'  => [
+            'What changes is the traveling. No drive across the county, no parking, no sitting in a waiting room with your coat on. For a lot of people that is the difference between keeping an appointment every two weeks and quietly giving up on it — particularly people who are depressed, which is a condition that makes leaving the house harder.',
+            'What does not change is the care. Your clinician sees you on video, asks the same questions, tracks the same symptom scores, and writes to the same pharmacy. If something is better done in person, they will say so and we will book you into a clinic.',
+        ],
+        'facts' => [
+            ['Evaluation', 'A full 60-minute assessment'],
+            ['Medication', 'Prescribed and followed up'],
+            ['Therapy',    'CBT, DBT, EMDR and ACT'],
+            ['Where',      'California and Texas'],
+        ],
+        'note'      => 'Telehealth is not a lesser appointment. It is the same appointment, only on a screen.',
+        'link'      => ['How a Video Visit Works', '#process'],
+        'photo'     => 'treatments/telepsychiatry-session.jpg',
+        'photo_alt' => 'A woman talking with a clinician on a laptop screen at home',
+        'focus'     => 'object-[50%_35%]',
+        'caption'   => 'The same appointment, on a screen.',
+    ],
+
+    'band' => [
+        'value'  => '60 min',
+        'rest'   => 'for a first video visit — the same full diagnostic assessment we do in the room.',
+        'note'   => 'You leave your appointment with a written plan, the same day.',
+        'source' => 'Our intake',
+        'static' => true,
+    ],
+
+    'options' => [
+        'rail'    => 'What you can do',
+        'eyebrow' => '02 / What works by video',
+        'lines'   => ['The same care, in the', 'comfort of your home.'],
+        'accent'  => 'comfort of your home.',
+        'intro'   => 'Most of our care works just as well by video as it does in person. These are the services you can have from home.',
+        'items'   => [
+            ['Psychiatric evaluation', 'The full diagnostic assessment — history, physical health, sleep, current symptoms — ending in a diagnosis and a written plan.', 'Your first visit', ['psychiatry.php', 'About Psychiatry']],
+            ['Medication management', 'Starting, changing, reviewing and stopping. Prescriptions go to the pharmacy you nominate, including mail order.', 'Most follow-ups', ['psychiatry.php', 'About Psychiatry']],
+            ['Therapy', 'CBT, DBT, EMDR and ACT, weekly or every two weeks. The evidence for therapy delivered by video is good.', 'Weekly or every two weeks', ['therapy.php', 'About Therapy']],
+            ['Check-ins between visits', 'Check-ins stop small setbacks from becoming major ones and help the hard work you’re doing last for a lifetime.', 'Two to four weeks'],
+        ],
+    ],
+
+    'process' => [
+        'rail'    => 'How it works',
+        'eyebrow' => '03 / A video visit, start to finish',
+        'lines'   => ['Four steps,', 'and no waiting room.'],
+        'accent'  => 'and no waiting room.',
+        'intro'   => 'Getting set up for a video visit takes about five minutes. Here is what to expect.',
+        'photo'     => 'treatments/telepsychiatry-hero.jpg',
+        'photo_alt' => 'A woman on a video call at her laptop at home',
+        'focus'     => 'object-[78%_50%]',
+        'caption'   => 'Wherever you are actually comfortable.',
+        'steps' => [
+            ['Before the day', 'Intake forms by email, and we verify your benefits so you know what the visit costs beforehand. You will need a device with a camera, and somewhere you can speak freely.'],
+            ['Joining', 'A link arrives by email or text. No app to install and no account to make — you open the link at your appointment time.'],
+            ['The visit', 'The same hour with the same clinician. You will be asked to confirm where you are physically located, which is a licensing requirement rather than a formality.'],
+            ['Afterward', 'Your written plan and any prescription go out the same day, to you and to the pharmacy you nominate.'],
+        ],
+        'facts' => [
+            ['60 min', 'first visit',        '#e8922f'],
+            ['2–4 wks', 'between early reviews', '#5f8f38'],
+            ['0',       'apps to install',   '#0f639b'],
+        ],
+    ],
+
+    'treats' => [
+        'eyebrow' => '04 / What it treats',
+        'lines'   => ['The same conditions', 'we see in person.'],
+        'accent'  => 'we see in person.',
+        'intro'   => 'Telepsychiatry is a new way of delivering care. If you need something addressed in person, we’ll help you make that happen.',
+        'flag'    => [],
+        'flag_label' => '',
+    ],
+
+    'panels' => [
+        'feature' => [
+            'eyebrow'   => 'Who it suits',
+            'heading'   => 'Flexible treatment when and where you need it.',
+            'copy'      => 'People who work shifts, people without a car, parents who cannot get childcare for an hour, students away at college, anyone whose nearest clinic is an hour away — and anyone for whom getting out of the house is part of what they are being treated for.',
+            'photo'     => 'treat-7',
+            'photo_alt' => 'Hands gesturing toward a clinician on a laptop screen',
+            'cta'       => 'Book a Video Visit',
+        ],
+        'honest' => [
+            'eyebrow' => 'Straight answers about video care',
+            'heading' => 'What telehealth',
+            'accent'  => 'cannot do.',
+            'intro'   => 'Three limits worth knowing before you book, rather than after.',
+            'items'   => [
+                ['Some treatments need in-person care', 'TMS and Spravato® are delivered in a clinic and cannot happen remotely. Your evaluation and your follow-ups can still be by video; the treatment itself cannot.', 'bg-brand-blue'],
+                ['Where you are matters', 'Our clinicians are licensed in California and Texas, and you have to be physically in one of those states at the time of your appointment. Not where you live — where you are sitting.', 'bg-brand-green'],
+                ['Some prescriptions have extra rules', 'Prescribing controlled medication remotely is governed federally, and regulations have changed several times. Your clinician will tell you what applies to you and whether an in-person visit is needed first.', 'bg-brand-orange'],
+            ],
+            'note' => 'Telehealth is also not a crisis service. If you are in crisis, call or text 988 — any time.',
+        ],
+    ],
+
+    'faqs' => [
+        ['Is a video appointment as good as being in the room?',
+         'For psychiatric evaluation, medication management and most therapy, the evidence says it holds up well. Where it does not — and there are cases, particularly some first assessments — your clinician will say so and bring you into one of our clinics.'],
+        ['Do I need to download anything?',
+         'No. A link arrives by email or text and you open it at your appointment time. You need a device with a camera and a reasonable connection, and somewhere you can talk without being overheard.'],
+        ['Can I be seen if I am travelling?',
+         'Only if you are physically in California or Texas at the time. That is a licensing rule rather than ours — a clinician can only treat where they are licensed, and the state you are sitting in is the one that counts.'],
+        ['Will my insurance cover a video visit?',
+         'Usually, and often on the same terms as an in-person session. Plans differ, so we verify your benefits before your first appointment and tell you what it leaves you.'],
+        ['Can I get a prescription by video?',
+         'Yes. We can prescribe most medications by video, and have them sent to the pharmacy of your choice.'],
+        ['Can my teenager be seen this way?',
+         'Yes, from 15. A parent or guardian joins for part of the appointment, and your clinician will set out at the start what is shared with you and what stays between them and your child.'],
+    ],
+
+    'cta' => [
+        'lines'  => ['Start from', 'the comfort of home.'],
+        'accent' => 'the comfort of home.',
+        'copy'   => 'Most new patients are seen within a week, and we check your insurance before the first visit. If it turns out you are better seen in person, we will tell you and book it.',
+    ],
+],
+
+/* ── Adolescent care ───────────────────────────────────────────────────
+   Not a separate treatment so much as who it is for: psychiatry and therapy
+   for patients aged 15 and up. Every fact here is one the site already
+   states elsewhere — 15+, family sessions, school counselors with consent,
+   a parent joining part of a telehealth visit, and the FAQ's account of
+   what parents are told. Keep them in step if any of those change.
+     · No claim is made about TMS for under-18s. Clearance for adolescents
+       depends on the device, and the practice treats on Magstim; the
+       'honest' panel sends that question to the phone call instead.
+     · Spravato's label is adults only, so it says so.
+     · 'treats' is null: the conditions grid lists every condition, and
+       postpartum and migraines would read oddly here. The options cards
+       cover what we see in teenagers instead.                          */
+'adolescent' => [
+    'name'  => 'Adolescent Care',
+    'page'  => 'adolescent.php',
+    'title' => 'Adolescent & Teen Mental Health Care',
+    'meta'  => 'Psychiatry and therapy for teenagers aged 15 and up, in person and by telehealth across California and Texas. Family sessions, school coordination with consent, and a clear agreement on what parents are told.',
+
+    'hero' => [
+        'lines'  => ['Care for teens.', 'Room for parents.'],
+        'accent' => 'Room for parents.',
+        'lede'   => 'Get psychiatry and therapy for young people from age 15, with family sessions built in and a clear agreement, from the first visit, about what is shared with you and what stays between your teenager and their clinician.',
+        'image'  => 'adolescent/hero.jpg',
+        'panel'  => '#ece9e4',
+        'wash'   => '236 233 228',
+        'cta'    => 'Book an Evaluation',
+        'note'   => 'Ages 15 and up. In person and by telehealth.',
+        'meta_left'  => 'In-network with most major plans.',
+        'meta_right' => 'Psychiatry / Therapy / Family sessions',
+    ],
+
+    'what' => [
+        'lines'  => ['Teenagers are not', 'small adults.'],
+        'accent' => 'small adults.',
+        'serif'  => 'Adolescent care is psychiatry and therapy shaped around a young person: their own voice in the room, and a family that is part of the plan without running it.',
+        'paras'  => [
+            'The teenage years bring their own pressures — school, friendships, sleep, phones, a body and a brain still changing — and the signs of depression or anxiety can look like moodiness or a bad term. A proper assessment is how you tell the difference.',
+            'Your teenager sees the same psychiatrists, nurse practitioners and therapists our adult patients do, in the same practice. Their therapist and their prescriber read the same notes, so you are not left carrying messages between two offices.',
+        ],
+        'facts' => [
+            ['Ages 15+',        'Adolescents and adults'],
+            ['Family sessions', 'A standard part of care'],
+            ['School',          'Coordinated, with consent'],
+            ['Telehealth',      'Or in person, your choice'],
+        ],
+        'note'      => 'Safety is always shared with parents. Beyond that, your teenager’s clinician sets out at the start what you will be told — and the rules vary by state, so they will explain how they apply to you.',
+        'link'      => ['How the First Visit Works', '#process'],
+        'photo'     => 'adolescent/session.jpg',
+        'photo_alt' => 'A teenage girl on a sofa talking to a counsellor',
+        'focus'     => 'object-[50%_35%]',
+        'caption'   => 'Their hour, in their words.',
+    ],
+
+    'band' => [
+        'value'  => '15+',
+        'rest'   => 'is the age we start seeing patients, with family sessions as a standard part of care.',
+        'note'   => 'With consent, we coordinate with school counselors.',
+        'source' => 'Who we see',
+    ],
+
+    'options' => [
+        'rail'   => 'What we see',
+        'eyebrow'=> '02 / What we help with',
+        'lines'  => ['What brings', 'teenagers to us.'],
+        'accent' => 'teenagers to us.',
+        'intro'  => 'You do not need a diagnosis to book. Most families call because something has changed and they cannot tell what it is.',
+        'items'  => [
+            ['Depression',      'More than a bad mood: withdrawal, sleeping too much or too little, losing interest in things that used to matter.', 'Low mood'],
+            ['Anxiety',         'Worry that gets in the way of school or friendships, panic attacks, or avoiding places and people.', 'Panic · Social'],
+            ['ADHD',            'Trouble with focus, organisation and impulsivity, assessed properly rather than guessed at from a school report.', 'Attention'],
+            ['Trauma and PTSD', 'Trauma-focused therapy at a pace the young person sets, with family support alongside.', 'Trauma'],
+            ['OCD',             'Intrusive thoughts and rituals, treated with exposure and response prevention.', 'ERP'],
+            ['Bipolar disorder','Mood that swings between lows and highs, diagnosed carefully and managed with your teenager and you.', 'Mood'],
+        ],
+    ],
+
+    'process' => [
+        'rail'   => 'How it works',
+        'eyebrow'=> '03 / How it works',
+        'lines'  => ['Together, and', 'one to one.'],
+        'accent' => 'one to one.',
+        'intro'  => 'A parent or guardian makes the arrangements. From there, the plan is built with your teenager rather than around them.',
+        'photo'     => 'adolescent/telehealth.jpg',
+        'photo_alt' => 'A teenager smiling and waving during a video call',
+        'focus'     => 'object-[55%_30%]',
+        'caption'   => 'In person or by video.',
+        'steps' => [
+            ['A call from you',          'A parent or guardian books the first appointment. We verify your insurance benefits first, so you know the cost before anything starts.'],
+            ['The first visit',          'A full assessment rather than a fifteen-minute script. Part of it is with you in the room and part is with your teenager alone, and the clinician explains up front what is shared and what is not.'],
+            ['A written plan',           'Therapy, medication, or both — explained to your teenager and to you, with the reasons, before anything begins.'],
+            ['Ongoing care',             'Therapy is usually weekly to begin with, with family sessions along the way. Progress is reviewed monthly and the plan changes if it is not working.'],
+            ['School, with your consent','Where it helps, we coordinate with your teenager’s school counselor. Nothing is shared with the school without consent.'],
+        ],
+        'facts' => [
+            ['15+',     'ages we see',      '#0f639b'],
+            ['Weekly',  'therapy to begin', '#e8922f'],
+            ['Monthly', 'progress reviews', '#5f8f38'],
+        ],
+    ],
+
+    'treats' => null,
+
+    'panels' => [
+        'feature' => [
+            'eyebrow' => 'Parents, kept in the loop',
+            'heading' => 'Enough to support them. Not a transcript.',
+            'copy'    => 'Adolescent care works because the young person can speak freely. So you are told what you need to help — and anything about safety, always — while what they say in the room stays theirs.',
+            'photo'   => 'adolescent/teens.jpg',
+            'photo_alt' => 'Two teenage boys laughing together at a table outdoors',
+            'cta'     => 'Book an Evaluation',
+        ],
+        'honest' => [
+            'eyebrow' => 'What parents ask',
+            'heading' => 'The plain',
+            'accent'  => 'answers.',
+            'intro'   => 'The questions families ask most often before a first visit.',
+            'items'   => [
+                ['Privacy is part of the treatment', 'Teenagers say more when they know where it goes. The clinician sets out the rules at the first visit, and safety is always shared with you.', 'bg-brand-blue'],
+                ['Medication is not the default', 'Many teenagers do well with therapy alone. When medication is considered, the reasons and the likely side effects are explained to both of you, and it is followed up.', 'bg-brand-orange'],
+                ['Some treatments are adults only', 'Spravato® is approved for adults only. If you are wondering about TMS, ask us on the call and we will tell you plainly whether it applies.', 'bg-brand-green'],
+            ],
+            'note' => 'If your teenager is in crisis or talking about suicide, call or text 988 any time, or go to the nearest emergency room.',
+        ],
+    ],
+
+    'faqs' => [
+        ['What ages do you see?', 'We see patients aged 15 and up. Adolescent care includes family sessions and, with consent, coordination with school counselors.'],
+        ['My child is a teenager. What will I be told?', 'Enough to support them, not a transcript. Adolescent care works because the young person can speak freely, so clinicians set out at the start what will be shared with you and what will not — with safety always being shared. The rules also vary by state, and your clinician will tell you how they apply.'],
+        ['Do I need to come to every appointment?', 'A parent or guardian makes the arrangements and joins for part of the first visit. After that it depends on the plan: some sessions are one to one, and family sessions bring you in on purpose.'],
+        ['Can my teenager be seen by telehealth?', 'Yes, from 15. A parent or guardian joins for part of the appointment, and your clinician will set out at the start what is shared with you and what stays between them and your child.'],
+        ['Will you talk to my teenager’s school?', 'Only with consent. Where it helps, we coordinate with the school counselor, so support at school and support here point the same way.'],
+        ['Does insurance cover it?', 'We accept most major insurance plans and verify your benefits before the first appointment, so you know what a visit costs before you commit to anything.'],
+    ],
+
+    'cta' => [
+        'lines'  => ['Start with', 'one phone call.'],
+        'accent' => 'one phone call.',
+        'copy'   => 'A parent or guardian books the first appointment. New patients are usually seen within five business days, in person or by telehealth.',
+    ],
+],
+
+
+];

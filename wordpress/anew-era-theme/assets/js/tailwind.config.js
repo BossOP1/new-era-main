@@ -1,0 +1,114 @@
+/**
+ * Single Tailwind config, shared by two consumers:
+ *   1. the Play CDN loaded in includes/header.php (no build step needed)
+ *   2. the Tailwind CLI (`npm run build:css`) for a production stylesheet
+ */
+const anewEraTailwindConfig = {
+  // Theme paths. inc/posts/*.html stays in the list after the posts are
+  // imported: their Tailwind classes live in the database from then on, and
+  // without these files the build would purge them.
+  content: ['./*.php', './inc/**/*.php', './inc/posts/*.html', './assets/js/**/*.js'],
+  theme: {
+    extend: {
+      colors: {
+        brand: {
+          blue: '#0f639b',
+          'blue-mid': '#0c5081',
+          'blue-dark': '#0a4268',
+          sky: '#8fc7e8',
+          orange: '#e8922f',
+          'orange-dark': '#c97a1f',
+          green: '#86be52',
+          'green-dark': '#5f8f38',
+        },
+        ink: '#14202b',
+        // Tints and a darker green, for the vibrant variant (index2.php) where
+        // sections carry colour rather than sitting on white.
+        grove: '#eef7e6',
+        blush: '#fdeee0',
+        sky: '#e4f1fa',
+        night: '#0b1720',
+        surface: '#f7f6f4',
+        therapy: '#eaf2f8',
+        psych: '#fdf1e4',
+        clay: '#8a5a1d',
+        'clay-deep': '#7c4f18',
+        mist: '#eef6f9',
+        cream: '#fdfaf6',
+      },
+      // Tobias sets the headings and the display moments; Untitled Sans does
+      // the reading. Both are Klim retail faces — see assets/fonts/README.md.
+      // Manrope and Newsreader stay on as fallbacks so the page never loses
+      // its shape while the licensed files are missing.
+      fontFamily: {
+        sans: ['Untitled Sans', 'Manrope', 'system-ui', 'sans-serif'],
+        // Headings. Still called "serif" so the templates did not all have to
+        // change, but review asked for a sans-serif display face site-wide
+        // (Ruttl, "Global: … montserrat or poppins"), so it is Montserrat.
+        serif: ['Montserrat', 'system-ui', 'sans-serif'],
+      },
+      // Untitled Sans ships Regular, Medium and Bold. The design reaches for
+      // extrabold and semibold constantly, so point those at the cuts that
+      // exist rather than letting the browser fake a heavier one.
+      fontWeight: {
+        semibold: '500',
+        extrabold: '700',
+      },
+      backgroundImage: {
+        // Daylight footage under white type: enough shade to hold the copy,
+        // but light-handed — the frame should still read as daylight. The
+        // headline carries a soft text-shadow so this can stay this gentle.
+        'hero-veil':
+          'radial-gradient(ellipse 68% 52% at 50% 44%, rgba(9,20,28,0.34) 0%, rgba(9,20,28,0.12) 66%, transparent 100%), radial-gradient(circle at 90% 84%, rgba(9,20,28,0.42) 0%, rgba(9,20,28,0.16) 42%, transparent 70%), linear-gradient(180deg, rgba(20,20,20,0.2) 0%, rgba(15,20,25,0.26) 45%, rgba(10,15,20,0.52) 100%), radial-gradient(circle at 15% 90%, rgba(232,146,47,0.16), transparent 55%), radial-gradient(circle at 85% 5%, rgba(134,190,82,0.12), transparent 50%)',
+        'cond-veil':
+          'linear-gradient(100deg, rgba(9,20,28,0.7) 0%, rgba(9,20,28,0.35) 55%, rgba(9,20,28,0.1) 100%)',
+        // Location heroes: the photograph is of a real place and should keep
+        // its colour, so the darkness is concentrated behind the copy column
+        // rather than spread over the whole frame. Two layers in one class —
+        // the side gradient that carries the type, and a light top-and-tail
+        // so the nav and the strapline row have something to sit on.
+        'place-veil':
+          'linear-gradient(100deg, rgba(9,20,28,0.88) 0%, rgba(9,20,28,0.74) 34%, rgba(9,20,28,0.28) 62%, rgba(9,20,28,0.05) 100%),'
+          + ' linear-gradient(180deg, rgba(9,20,28,0.30) 0%, rgba(9,20,28,0) 30%, rgba(9,20,28,0.52) 100%)',
+        'card-veil':
+          'linear-gradient(0deg, rgba(9,20,28,0.45) 0%, rgba(9,20,28,0) 55%)',
+        'tms-veil':
+          'linear-gradient(0deg, rgba(9,20,28,0.9) 0%, rgba(9,20,28,0.55) 45%, rgba(9,20,28,0.15) 75%, rgba(9,20,28,0) 100%), radial-gradient(circle at 90% 10%, rgba(232,146,47,0.18), transparent 50%)',
+        'reviews-glow':
+          'radial-gradient(circle at 90% -10%, rgba(232,146,47,0.35), transparent 55%), radial-gradient(circle at -10% 110%, rgba(134,190,82,0.3), transparent 55%)',
+        'cta-glow':
+          'radial-gradient(circle at 8% 15%, rgba(15,99,155,0.85), transparent 42%), radial-gradient(circle at 92% 85%, rgba(15,99,155,0.85), transparent 42%), radial-gradient(circle at 30% 90%, rgba(232,146,47,0.55), transparent 45%), radial-gradient(circle at 75% 10%, rgba(134,190,82,0.5), transparent 45%)',
+        // The CTA wash, reworked to hold up at section scale: same four points
+        // of brand colour on cream, pulled back so it sits under content
+        // instead of competing with it. 'aurora-warm' rotates the hues so two
+        // sections in a row do not read as the same image.
+        'aurora':
+          'radial-gradient(circle at 6% 12%, rgba(15,99,155,0.30), transparent 46%), radial-gradient(circle at 94% 22%, rgba(134,190,82,0.26), transparent 44%), radial-gradient(circle at 78% 92%, rgba(232,146,47,0.30), transparent 46%), radial-gradient(circle at 22% 88%, rgba(15,99,155,0.22), transparent 44%)',
+        'aurora-warm':
+          'radial-gradient(circle at 90% 10%, rgba(232,146,47,0.32), transparent 46%), radial-gradient(circle at 10% 30%, rgba(15,99,155,0.24), transparent 46%), radial-gradient(circle at 30% 95%, rgba(134,190,82,0.30), transparent 46%), radial-gradient(circle at 70% 70%, rgba(15,99,155,0.16), transparent 42%)',
+        'footer-glow':
+          'radial-gradient(circle at 90% 0%, rgba(232,146,47,0.16), transparent 45%), radial-gradient(circle at 0% 100%, rgba(134,190,82,0.14), transparent 45%)',
+      },
+      boxShadow: {
+        glass: '0 8px 32px rgba(9,20,28,0.18), inset 0 1px 0 rgba(255,255,255,0.7)',
+      },
+      keyframes: {
+        marquee: {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(-50%)' },
+        },
+      },
+      animation: {
+        marquee: 'marquee 34s linear infinite',
+      },
+    },
+  },
+};
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = anewEraTailwindConfig;              // Tailwind CLI
+}
+if (typeof window !== 'undefined') {
+  window.tailwind = window.tailwind || {};
+  window.tailwind.config = anewEraTailwindConfig;      // Play CDN
+}
