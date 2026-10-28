@@ -249,7 +249,7 @@ $blurb_here = [
   <div data-reveal class="mt-7 flex flex-col items-start gap-4 rounded-[24px] border border-ink/10 bg-cream bg-aurora px-5 py-5 sm:mt-9 sm:flex-row sm:items-center sm:justify-between sm:gap-8 sm:px-8 sm:py-6">
     <div>
       <p class="m-0 text-[16px] font-extrabold tracking-[-0.01em] text-ink">Not sure which of these is yours?</p>
-      <p class="m-0 mt-1 max-w-[52ch] text-sm leading-relaxed text-ink/65">That is what the assessment is for. The PHQ-9 takes two minutes and gives us somewhere to start — it is a screening questionnaire, not a diagnosis.</p>
+      <p class="m-0 mt-1 max-w-[52ch] text-sm leading-relaxed text-ink/65">That is what the assessment is for. If you think it might be depression, the PHQ-9 takes two minutes and screens for depression only — it is a screening questionnaire, not a diagnosis.</p>
     </div>
     <a href="phq9.php" class="<?= $btn_blue ?> shrink-0">Take the PHQ-9 <?= arrow_icon(15) ?></a>
   </div>

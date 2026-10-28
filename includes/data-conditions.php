@@ -537,6 +537,8 @@ return [
 /* ── OCD ───────────────────────────────────────────────────────────── */
 'ocd' => [
     'name'  => 'OCD',
+    // Reviewed wording for the line beside "Five routes out. One plan."
+    'options_note' => 'Everything below is delivered by one team, so your clinician and your therapist are reading the same notes.',
     'art'   => 'ocd',
     'title' => 'OCD',
     'meta'  => 'Obsessive-compulsive disorder is treatable, and TMS is FDA-cleared for it. Understand obsessions, compulsions, and what to do when therapy alone has not been enough.',

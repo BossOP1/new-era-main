@@ -39,7 +39,10 @@ const anewEraTailwindConfig = {
       // its shape while the licensed files are missing.
       fontFamily: {
         sans: ['Untitled Sans', 'Manrope', 'system-ui', 'sans-serif'],
-        serif: ['Tobias', 'Newsreader', 'Georgia', 'serif'],
+        // Headings. Still called "serif" so the templates did not all have to
+        // change, but review asked for a sans-serif display face site-wide
+        // (Ruttl, "Global: … montserrat or poppins"), so it is Montserrat.
+        serif: ['Montserrat', 'system-ui', 'sans-serif'],
       },
       // Untitled Sans ships Regular, Medium and Bold. The design reaches for
       // extrabold and semibold constantly, so point those at the cuts that

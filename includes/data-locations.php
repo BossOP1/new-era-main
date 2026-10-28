@@ -995,7 +995,7 @@ return [
     ],
     'phone'      => '(281) 206-4678',
     'phone_href' => 'tel:+12812064678',
-    'maps'       => 'https://www.google.com/maps/dir/?api=1&destination=Anew%20Era%20TMS%20%26%20Psychiatry%2C%201733%20Woodstead%20Ct%2C%20Suite%20102%2C%20The%20Woodlands%2C%20TX%2077380',
+    'maps'       => 'https://maps.app.goo.gl/6kpdArWPxPMB3Uq9A',
 
     'hours' => [
         ['days' => 'Monday – Friday', 'time' => '6:00am – 6:00pm'],

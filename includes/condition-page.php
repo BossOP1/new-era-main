@@ -342,7 +342,7 @@ $rail['#faq'] = 'FAQs';
       <h2 class="<?= $h2 ?>">Five routes out.<br><em class="<?= $em_section ?>">One plan.</em></h2>
     </div>
     <p class="m-0 mt-[22px] max-w-[360px] text-base leading-[1.75] text-[#58616a] md:mt-0 md:max-w-[290px] lg:max-w-[460px]">
-      Everything below is delivered by one team, so your prescriber and your therapist are reading the same notes.
+      <?= e($c['options_note'] ?? 'Everything below is delivered by one team, so your prescriber and your therapist are reading the same notes.') ?>
     </p>
   </div>
 

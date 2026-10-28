@@ -75,7 +75,7 @@ $bands = [
     ['min' => 0,  'max' => 4,  'name' => 'Minimal',           'copy' => 'This score does not suggest depression. If something still feels wrong, that is worth a conversation anyway — a questionnaire is a blunt instrument and it does not know you.'],
     ['min' => 5,  'max' => 9,  'name' => 'Mild',              'copy' => 'Scores in this range often improve with watchful waiting, exercise, sleep and time. They are also worth mentioning to a clinician, particularly if this has been going on a while.'],
     ['min' => 10, 'max' => 14, 'name' => 'Moderate',          'copy' => 'Ten is the point at which clinicians usually start talking about treatment — therapy, medication, or both. It is a reasonable moment to book an evaluation.'],
-    ['min' => 15, 'max' => 19, 'name' => 'Moderately severe', 'copy' => 'A score here usually warrants active treatment rather than waiting to see. Please make an appointment — with us or with anyone.'],
+    ['min' => 15, 'max' => 19, 'name' => 'Moderately severe', 'copy' => 'A score here usually warrants active treatment.'],
     ['min' => 20, 'max' => 27, 'name' => 'Severe',            'copy' => 'This is a high score and it deserves prompt attention. Please contact a clinician soon. If you are struggling to hold on, call or text 988 now rather than waiting for an appointment.'],
 ];
 ?>
@@ -102,12 +102,11 @@ $bands = [
         </nav>
 
         <h1 class="on-footage m-0 font-serif font-normal leading-[1.05] tracking-[-0.04em] text-white text-[36px] sm:text-[50px] lg:text-[56px]">
-          Nine questions,<br class="hidden sm:inline"> <em class="not-italic text-brand-sky">two minutes.</em>
+          Take the mental<br class="hidden sm:inline"> <em class="not-italic text-brand-sky">health questionnaire.</em>
         </h1>
 
         <p class="m-0 mt-5 max-w-[50ch] text-[15px] leading-[1.75] text-white/80 sm:mt-6 sm:text-base">
-          The PHQ-9 is the questionnaire clinicians use to gauge how heavy depression is sitting right
-          now. It is a screening tool, not a diagnosis — but it is a good place to start a conversation.
+          The PHQ-9 is a questionnaire that clinicians use to gauge depression. It is a screening tool, not a diagnosis — but it is a good place to start a conversation.
         </p>
 
         <div class="mt-6 flex flex-wrap gap-3 sm:mt-8">
@@ -149,7 +148,7 @@ $bands = [
     <h2 class="<?= $h2 ?>">Over the last<br><em class="italic font-normal text-brand-blue">two weeks…</em></h2>
     <p class="m-0 mt-5 max-w-[60ch] text-base leading-[1.75] text-[#58616a]">
       …how often have you been bothered by any of the following problems? Answer as honestly as you
-      can. Nobody sees this but you.
+      can.
     </p>
   </div>
 
@@ -263,8 +262,7 @@ $bands = [
         <?php // Item nine gets its own panel, shown on any response above zero. ?>
         <div data-phq-risk hidden class="mt-6">
           <div class="rounded-[18px] border-2 border-brand-orange/45 bg-[#fdf1e4] px-6 py-5">
-            <p class="m-0 text-[11px] font-bold uppercase tracking-[0.16em] text-clay">Please read this one</p>
-            <p class="m-0 mt-2 max-w-[62ch] text-[14.5px] leading-[1.7] text-ink/80">
+            <p class="m-0 max-w-[62ch] text-[14.5px] leading-[1.7] text-ink/80">
               You said you have had thoughts of being better off dead or of hurting yourself. Whatever
               the total came to, that answer matters on its own and it is worth telling somebody today.
               Call or text <strong>988</strong> — any time, free, and you do not have to be in crisis

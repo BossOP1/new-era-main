@@ -76,10 +76,10 @@ $nav_link  = 'relative inline-flex items-center gap-1.5 whitespace-nowrap rounde
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!-- Fallbacks only. Tobias and Untitled Sans are self-hosted out of
-     assets/fonts/ by font_faces() below; these two stand in until the
-     licensed files are dropped in. -->
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Newsreader:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<!-- Montserrat sets the headings. Manrope stands in for the body face until
+     the licensed Untitled Sans files are dropped into assets/fonts/ (picked
+     up by font_faces() below). -->
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
 <?= font_faces() ?>
 
 <?php if ($compiled_css): ?>

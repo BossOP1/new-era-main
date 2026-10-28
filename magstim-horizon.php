@@ -164,7 +164,7 @@ $in_the_chair = [
   <div class="mb-7 sm:mb-9 md:flex md:items-end md:justify-between md:gap-10">
     <div>
       <p class="<?= $eyebrow ?>"><?= $dot ?> StimGuide PRO</p>
-      <h2 class="<?= $h2 ?>">Four things it<br><em class="italic font-normal text-brand-blue">holds steady.</em></h2>
+      <h2 class="<?= $h2 ?>">How Magstim<br><em class="italic font-normal text-brand-blue">works.</em></h2>
     </div>
     <p class="m-0 mt-[22px] max-w-[380px] text-base leading-[1.75] text-[#58616a] md:mt-0 md:max-w-[330px]">
       Magstim's navigation lines up four measurements at once, so each pulse reaches exactly the

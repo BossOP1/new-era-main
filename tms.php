@@ -49,8 +49,8 @@ $em       = 'italic font-normal text-brand-blue';
           </ol>
         </nav>
 
-        <h1 class="m-0 font-serif font-normal leading-[1.05] tracking-[-0.04em] text-ink text-[40px] sm:text-[54px] lg:text-[62px]">
-          Magnetic pulses.<br>No medication.<br><em class="not-italic text-brand-blue">No downtime.</em>
+        <h1 class="m-0 font-serif font-normal leading-[1.05] tracking-[-0.04em] text-ink text-[34px] sm:text-[46px] lg:text-[52px]">
+          All about <em class="not-italic text-brand-blue">transcranial magnetic stimulation</em> (TMS) therapy.
         </h1>
 
         <p class="m-0 mt-5 max-w-[46ch] text-[15px] leading-[1.75] text-ink/75 sm:mt-6 sm:text-base">
@@ -174,10 +174,10 @@ $em       = 'italic font-normal text-brand-blue';
     </div>
 
     <figure class="relative m-0 mb-3 h-[190px] overflow-hidden rounded-[24px] bg-night sm:mb-4 sm:h-[320px] lg:mb-[22px] lg:h-[360px]">
-      <?= image_slot('treat-1', 'Brain imaging', 'A rendering of the human brain with the prefrontal cortex highlighted') ?>
+      <?= image_slot('tms/prefrontal-cortex.jpg', 'Brain imaging', 'A rendering of the human brain with the prefrontal cortex, at the front, highlighted in orange', false, 'object-[78%_50%]') ?>
       <div aria-hidden="true" class="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(9,20,28,0.80)_0%,rgba(9,20,28,0.36)_48%,rgba(9,20,28,0.06)_100%)]"></div>
       <figcaption class="absolute bottom-5 left-5 max-w-[26ch] font-serif text-[20px] leading-[1.25] text-white sm:bottom-7 sm:left-9 sm:max-w-[32ch] sm:text-[26px]">
-        The target is the <em class="not-italic text-[#cde3de]">prefrontal cortex.</em>
+        The target is the <em class="not-italic text-[#f2a65a]">prefrontal cortex.</em>
       </figcaption>
     </figure>
 
