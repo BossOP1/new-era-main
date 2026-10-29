@@ -76,7 +76,7 @@ $bands = [
     ['min' => 5,  'max' => 9,  'name' => 'Mild',              'copy' => 'Scores in this range often improve with watchful waiting, exercise, sleep and time. They are also worth mentioning to a clinician, particularly if this has been going on a while.'],
     ['min' => 10, 'max' => 14, 'name' => 'Moderate',          'copy' => 'Ten is the point at which clinicians usually start talking about treatment — therapy, medication, or both. It is a reasonable moment to book an evaluation.'],
     ['min' => 15, 'max' => 19, 'name' => 'Moderately severe', 'copy' => 'A score here usually warrants active treatment.'],
-    ['min' => 20, 'max' => 27, 'name' => 'Severe',            'copy' => 'This is a high score and it deserves prompt attention. Please contact a clinician soon. If you are struggling to hold on, call or text 988 now rather than waiting for an appointment.'],
+    ['min' => 20, 'max' => 27, 'name' => 'Severe',            'copy' => 'This score suggests you’re having a particularly difficult time right now, and it’s worth getting support soon. Please reach out to a clinician to talk through what’s going on and what your next steps could be. If things feel overwhelming or you’re worried about your immediate safety, call or text 988 now rather than waiting for an appointment.'],
 ];
 ?>
 <div class="bg-[#faf8f3] [&_a:focus-visible]:outline [&_a:focus-visible]:outline-[3px] [&_a:focus-visible]:outline-brand-orange [&_a:focus-visible]:outline-offset-[5px]">
@@ -263,10 +263,10 @@ $bands = [
         <div data-phq-risk hidden class="mt-6">
           <div class="rounded-[18px] border-2 border-brand-orange/45 bg-[#fdf1e4] px-6 py-5">
             <p class="m-0 max-w-[62ch] text-[14.5px] leading-[1.7] text-ink/80">
-              You said you have had thoughts of being better off dead or of hurting yourself. Whatever
-              the total came to, that answer matters on its own and it is worth telling somebody today.
-              Call or text <strong>988</strong> — any time, free, and you do not have to be in crisis
-              to use it.
+              One of your answers tells us that you’ve had thoughts of self-harm or even taking your own
+              life. That matters regardless of your total score, and you deserve support. Please consider
+              telling someone you trust or reaching out for help today. You can call or text
+              <strong>988</strong> anytime, even if you’re not sure what you’re experiencing counts as a crisis.
             </p>
             <div class="mt-4 flex flex-wrap gap-2.5">
               <a href="tel:988" class="inline-flex items-center rounded-full bg-ink px-5 py-3 text-[13.5px] font-extrabold text-white transition-colors hover:bg-brand-blue-dark">Call 988</a>
@@ -295,7 +295,7 @@ $bands = [
     <div class="mb-7 sm:mb-9 md:flex md:items-end md:justify-between md:gap-10">
       <div>
         <p class="<?= $eyebrow ?>"><?= $dot ?> About the PHQ-9</p>
-        <h2 class="<?= $h2 ?>">What it is,<br><em class="italic font-normal text-brand-blue">and what it is not.</em></h2>
+        <h2 class="<?= $h2 ?>">What it is,<br><em class="italic font-normal text-brand-blue">and what it’s for.</em></h2>
       </div>
       <p class="m-0 mt-[22px] max-w-[380px] text-base leading-[1.75] text-[#58616a] md:mt-0 md:max-w-[330px]">
         It is the most widely used depression screener in primary care, and it is nine questions long

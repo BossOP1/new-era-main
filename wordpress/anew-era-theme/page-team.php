@@ -461,9 +461,14 @@ $haystack = static function (array $p) use ($locations): string {
           </button>
           <span data-bio-position class="ml-2 text-[12px] font-semibold text-ink/45"></span>
         </div>
+        <div class="flex flex-wrap items-center gap-2">
+        <a href="#" data-bio-profile class="inline-flex items-center gap-2 rounded-full border-2 border-ink/20 px-5 py-2 text-[13.5px] font-extrabold text-ink transition-colors hover:border-ink/45">
+          View Full Profile <?= arrow_icon(14) ?>
+        </a>
         <a href="contact.php" data-bio-book class="inline-flex items-center gap-2 rounded-full bg-brand-blue px-5 py-2.5 text-[13.5px] font-extrabold text-white transition-colors hover:bg-brand-blue-dark">
           Book a Consultation <?= arrow_icon(14) ?>
         </a>
+        </div>
       </div>
     </div>
   </div>
@@ -496,6 +501,9 @@ $haystack = static function (array $p) use ($locations): string {
           // (not seeing patients) gets no booking button at all.
           'book'   => $p['zocdoc'] ?? '',
           'bookable' => !empty($p['zocdoc']) || $p['group'] !== 'leadership',
+          // Their own page, where one exists: anew_page_kind() gives every
+          // clinician tagged with a clinic a page at /their-slug/.
+          'page'   => !empty($p['clinics']) ? $p['slug'] . '.php' : '',
       ];
   }, $people), JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?>;
 
@@ -692,6 +700,10 @@ $haystack = static function (array $p) use ($locations): string {
     // Their Zocdoc page in a new tab where they have one; otherwise the
     // contact form, so the intake team can book them. Leadership who do not
     // see patients get no button.
+    var profile = dialog.querySelector('[data-bio-profile]');
+    profile.style.display = p.page ? '' : 'none';
+    if (p.page) profile.href = p.page;
+
     var book = dialog.querySelector('[data-bio-book]');
     // style, not the hidden attribute: the link's inline-flex class would win.
     book.style.display = p.bookable ? '' : 'none';

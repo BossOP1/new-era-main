@@ -229,6 +229,9 @@ $rail['#faq'] = 'FAQs';
         <p class="m-0 mt-6 rounded-2xl border border-brand-orange/30 bg-blush/60 px-5 py-4 text-[14px] leading-[1.7] text-clay-deep"><?= e($c['symptoms']['note']) ?></p>
       <?php endif; ?>
 
+      <?php // The PHQ-9 screens for depression only, so it is offered where the
+            // condition is depression (postpartum) and not on the others. ?>
+      <?php if ($condition_key === 'postpartum'): ?>
       <div data-reveal class="mt-7 flex flex-col items-start gap-4 rounded-[24px] border border-ink/10 bg-cream bg-aurora px-5 py-5 sm:mt-8 sm:flex-row sm:items-center sm:justify-between sm:gap-8 sm:px-8 sm:py-6">
         <div>
           <p class="m-0 text-[16px] font-extrabold tracking-[-0.01em] text-ink">Not sure how you are really doing?</p>
@@ -236,6 +239,7 @@ $rail['#faq'] = 'FAQs';
         </div>
         <a href="phq9.php" class="<?= $btn_blue ?> shrink-0">Take the PHQ-9 <?= arrow_icon(15) ?></a>
       </div>
+      <?php endif; ?>
     </div>
   </div>
 </section>
@@ -346,10 +350,12 @@ $rail['#faq'] = 'FAQs';
     </p>
   </div>
 
-  <div class="-mx-[22px] flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-pl-[22px] px-[22px] pb-3 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:mx-0 md:grid md:snap-none md:grid-cols-2 md:overflow-visible md:px-0 md:pb-0 lg:grid-cols-3">
+  <?php // Stacked on a phone rather than a swipe carousel: reviewers on Android
+        // could not side-scroll the hidden-scrollbar version. ?>
+  <div class="grid gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
     <?php foreach ($data['treatments'] as $treatment): ?>
-      <article data-reveal class="lift flex w-[82%] shrink-0 snap-center flex-col overflow-hidden rounded-[20px] border border-[#e3e7ea] bg-white md:w-auto md:shrink">
-        <div class="relative min-h-[170px] overflow-hidden bg-night sm:min-h-[200px]">
+      <article data-reveal class="lift flex flex-col overflow-hidden rounded-[20px] border border-[#e3e7ea] bg-white">
+        <div class="relative min-h-[150px] overflow-hidden bg-night sm:min-h-[200px]">
           <?= image_slot($treatment['slot'], $treatment['name'] . ' photo', $treatment['alt'], false, $treatment['focus'] ?? '') ?>
           <div aria-hidden="true" class="pointer-events-none absolute inset-0 bg-card-veil"></div>
           <div class="absolute inset-x-3 bottom-3 flex flex-wrap gap-2">

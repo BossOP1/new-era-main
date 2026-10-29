@@ -139,7 +139,7 @@ return [
             ],
         ],
         [
-            'heading' => 'How we may use and disclose your information without your authorization',
+            'heading' => 'When we may share your information without your authorization',
             'terms' => [
                 ['Treatment', 'To provide, coordinate and manage your care — so a prescriber and a therapist in this practice can discuss your treatment, or so we can send information to another clinician treating you.'],
                 ['Payment', 'To bill and collect from you or your health plan: verifying benefits, obtaining prior authorization, and submitting claims.'],
@@ -292,7 +292,7 @@ return [
     'lede'    => 'Mental health care is hard enough to reach without the website getting in the way. This is what we have done, what we know is imperfect, and how to reach us if something blocks you.',
     'sections' => [
         [
-            'heading' => 'The standard we are aiming at',
+            'heading' => 'The standard we are aiming for',
             'paras' => [
                 'We are working towards the Web Content Accessibility Guidelines (WCAG) 2.1 at Level AA. That is the benchmark most commonly referenced in U.S. accessibility law and the one we measure against.',
                 'We have not obtained a formal third-party audit. This statement describes what has actually been built and tested, not a certificate.',
@@ -311,7 +311,7 @@ return [
             ],
         ],
         [
-            'heading' => 'What we know is not right yet',
+            'heading' => 'Known issues we are working on',
             'list' => [
                 'Embedded video is hosted by a third party. Its player and captions are outside our control, though we load it only when you choose to play something.',
                 'Map links open a third-party mapping service whose accessibility we do not control. Every clinic\'s full address is written out on its page so you do not have to use the map.',

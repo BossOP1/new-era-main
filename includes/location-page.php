@@ -31,7 +31,7 @@ if (!isset($location_key, $locations[$location_key])) {
 
 $loc = $locations[$location_key];
 
-$page_title        = 'Psychiatrist in ' . $loc['name'] . ', ' . $loc['address']['region'];
+$page_title        = 'Psychiatrist & TMS Therapy in ' . $loc['name'] . ', ' . $loc['address']['region'];
 $page_description  = $loc['meta'];
 $header_hero_light = true;
 $header_inset      = true;
@@ -387,7 +387,7 @@ $initials = static function (string $name): string {
       <p class="<?= $eyebrow ?>"><?= $dot ?> What patients say</p>
       <h2 class="<?= $h2 ?>">
         <?php if ($rv_local): ?>
-          <?= empty($lc['reviews_plain']) ? e(number_format($rv_count)) . ' five-star reviews' : 'Five-star reviews' ?><br><em class="italic font-normal text-brand-blue">from <?= e($lc['reviews_from'] ?? $loc['name']) ?>.</em>
+          <?= empty($lc['reviews_plain']) ? e(number_format($rv_count)) . ' five-star reviews' : 'Five-star reviews' ?><br><em class="italic font-normal text-brand-blue"><?= e($lc['reviews_prep'] ?? 'from') ?> <?= e($lc['reviews_from'] ?? $loc['name']) ?>.</em>
         <?php else: ?>
           Five-star reviews<br><em class="italic font-normal text-brand-blue">from across <?= e($loc['state_name']) ?>.</em>
         <?php endif; ?>
@@ -457,7 +457,11 @@ $initials = static function (string $name): string {
     <?php foreach ($loc['getting_here'] as $item): ?>
       <li data-reveal class="rounded-[22px] bg-white p-7">
         <h3 class="m-0 text-[15.5px] font-extrabold tracking-[-0.01em] text-ink"><?= e($item['name']) ?></h3>
-        <p class="m-0 mt-2.5 text-[14px] leading-[1.7] text-[#58616a]"><?= e($item['copy']) ?></p>
+        <?php if (!empty($item['map_link'])): ?>
+          <p class="m-0 mt-2.5 text-[14px] leading-[1.7] text-[#58616a]"><a href="<?= e($loc['maps']) ?>" target="_blank" rel="noopener noreferrer" class="font-extrabold text-brand-blue underline underline-offset-4 hover:text-brand-blue-dark"><?= e($item['copy']) ?></a></p>
+        <?php else: ?>
+          <p class="m-0 mt-2.5 text-[14px] leading-[1.7] text-[#58616a]"><?= e($item['copy']) ?></p>
+        <?php endif; ?>
       </li>
     <?php endforeach; ?>
   </ul>
@@ -479,7 +483,7 @@ $initials = static function (string $name): string {
 <section class="<?= $wrap ?> pb-10 sm:pb-[60px] md:pb-[76px]">
   <div class="mb-6 sm:mb-8">
     <p class="<?= $eyebrow ?>"><?= $dot ?> <?= e($lc['faq_eyebrow'] ?? 'Questions') ?></p>
-    <h2 class="<?= $h2 ?>">About our<br><em class="italic font-normal text-brand-blue"><?= e(isset($lc['faq_named']) ? $loc['name'] . ' clinic' : 'clinic') ?>.</em></h2>
+    <h2 class="<?= $h2 ?>"><?= e($lc['faq_lead'] ?? 'About our') ?><br><em class="italic font-normal text-brand-blue"><?= e($lc['faq_place'] ?? (isset($lc['faq_named']) ? $loc['name'] . ' clinic' : 'clinic')) ?>.</em></h2>
   </div>
 
   <div class="overflow-hidden rounded-[20px] border border-[#e3e7ea] bg-white">

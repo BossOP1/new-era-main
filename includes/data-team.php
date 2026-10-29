@@ -556,7 +556,7 @@ return [
         [
             'slug'        => 'rickie-lanette-fleck',
             'name'        => 'Rickie Lanette Fleck',
-            'credentials' => 'MSW, PhD, LCSW',
+            'credentials' => 'PhD, LCSW, MSW',
             'role'        => 'Therapist',
             'group'       => 'therapy',
             'states'      => ['tx'],
@@ -565,8 +565,8 @@ return [
             'video'       => '',
             'bio'         => [
                 'Rickie Lanette Fleck, PhD, is trained in EMDR and Motivational Interviewing and has experience utilizing CBT, ACT, and DBT in her clinical work.',
-                'Her specialties include short-term, solution-focused therapy and working with caregiver wounds. She works with clients across the lifespan and has experience supporting individuals of various ages.',
-                'A native Texan, Rickie earned both her undergraduate and graduate degrees from Texas State University and received her PhD from Our Lady of the Lake University in San Antonio. She is a member of the queer community and lives with her wife and family just outside of Austin.',
+                'Her specialties include short-term, solution-focused therapy and working with caregiver wounds. She works with patients across the lifespan and has experience supporting individuals of various ages.',
+                'A native Texan, Dr. Fleck earned both her undergraduate and graduate degrees from Texas State University and received her PhD from Our Lady of the Lake University in San Antonio. She is a member of the queer community and lives with her wife and family just outside of Austin.',
             ],
         ],
         [

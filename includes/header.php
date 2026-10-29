@@ -40,7 +40,19 @@ $inset_bar    = $header_inset ? 'w-full max-w-[1200px] !gap-3 !shadow-none !back
 $nav_show     = 'xl:flex';
 $nav_hide     = 'xl:hidden';
 
-$title = $page_title ? $page_title . ' · ' . $site['name'] : $site['name'] . ' — Anew Era of mental health care';
+// SEO standard (Oct 2026): "Primary keyword | Anew Era Health", one separator
+// site-wide, kept to 60 characters so Google shows it whole. The brand is
+// dropped rather than the keyword when both do not fit. $meta_title, where a
+// page sets it, is the finished title and is used as written.
+$seo = (require __DIR__ . '/data-seo.php')[basename(current_page(), '.php')] ?? [];
+$page_description = $seo['description'] ?? $page_description;
+$title = $meta_title ?? $seo['title'] ?? null;
+if ($title === null) {
+    $title = $page_title ? $page_title . ' | ' . $site['name'] : $site['name'] . ' | TMS Therapy, Psychiatry & Counseling';
+    if ($page_title && mb_strlen($title) > 60) {
+        $title = $page_title;
+    }
+}
 
 // Use the compiled stylesheet when it exists; fall back to the Play CDN otherwise.
 $compiled_css = is_file(__DIR__ . '/../assets/css/tailwind.css');

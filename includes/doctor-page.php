@@ -67,11 +67,42 @@ $states    = array_values(array_filter(array_map(
     $person['states']
 )));
 
-$page_title       = $full_name . ' — ' . $person['role'];
-$page_description = $person['name'] . ($person['credentials'] !== '' ? ', ' . $person['credentials'] : '')
-    . ' is a ' . lcfirst($person['role']) . ' with Anew Era TMS & Psychiatry'
-    . ($city_list ? ' in ' . implode(' and ', array_slice($city_list, 0, 3)) : '')
-    . '. Read their background and book an appointment.';
+// SEO title: name, a short form of the role, and where they practise, kept
+// to 60 characters. The brand is appended by header.php only if it still fits.
+$role_short = [
+    'Psychiatric Mental Health Nurse Practitioner' => 'Psychiatric NP',
+    'Psychiatric Nurse Practitioner'               => 'Psychiatric NP',
+    'Child, adolescent and adult psychiatrist'     => 'Psychiatrist',
+][$person['role']] ?? $person['role'];
+$where = $home ? $home['name'] . ', ' . $home['address']['region'] : implode(', ', $states);
+$page_title = $person['name'] . ' | ' . $role_short . ($where !== '' ? ' in ' . $where : '');
+if (mb_strlen($page_title) > 60) {
+    $page_title = $person['name'] . ' | ' . $role_short;
+}
+
+// Description, aimed at 120–160 characters: credentials are dropped first if
+// it runs long, and the insurance line is added only if it runs short.
+$first = strtok($person['name'], ' ');
+$desc = static function (bool $creds, bool $extra) use ($person, $city_list, $first): string {
+    return $person['name'] . ($creds && $person['credentials'] !== '' ? ', ' . $person['credentials'] . ',' : '')
+        . ' is a ' . lcfirst($person['role']) . ' at Anew Era'
+        . ($city_list ? ' in ' . implode(' and ', array_slice($city_list, 0, 2)) : '')
+        . '. Read ' . $first . '’s background and book in person or by telehealth.'
+        . ($extra ? ' Most insurance accepted.' : '');
+};
+$page_description = $desc(true, false);
+if (mb_strlen($page_description) > 160) {
+    $page_description = $desc(false, false);
+}
+if (mb_strlen($page_description) > 160) {
+    $page_description = str_replace('Read ' . $first . '’s background and book', 'Book', $page_description);
+}
+if (mb_strlen($page_description) < 120) {
+    $page_description = $desc(true, true);
+    if (mb_strlen($page_description) > 160) {
+        $page_description = $desc(false, true);
+    }
+}
 $header_hero_light = true;
 $header_inset      = true;
 require __DIR__ . '/header.php';
@@ -228,7 +259,9 @@ $treatments = require __DIR__ . '/data-treatments.php';
       <?php endif; ?>
     </div>
 
-    <div class="grid gap-3 md:gap-4">
+    <?php // Natural height, not stretched to the bio column: a bio with a video
+          // otherwise left both cards with a large empty gap inside. ?>
+    <div class="grid content-start gap-3 self-start md:sticky md:top-[110px] md:gap-4">
       <div data-reveal class="rounded-[24px] border border-[#e3e7ea] bg-white p-7">
         <p class="m-0 text-[11px] font-bold uppercase tracking-[0.16em] text-ink/45">At a glance</p>
         <dl class="m-0 mt-4">

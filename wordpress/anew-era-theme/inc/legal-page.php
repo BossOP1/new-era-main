@@ -107,6 +107,17 @@ $page_of = static fn (string $k): string => ($k === 'hipaa' ? 'hipaa' : $k) . '.
         </p>
       <?php endif; ?>
 
+      <?php
+        // Phone numbers in the copy become tap-to-call links, as everywhere else
+        // on the site: 988, 911 and any (xxx) xxx-xxxx number.
+        $link_phones = static function (string $html): string {
+            return preg_replace_callback('/\(\d{3}\) \d{3}-\d{4}|\b(?:988|911)\b/', static function (array $m): string {
+                $digits = preg_replace('/\D/', '', $m[0]);
+                $href = strlen($digits) === 10 ? '+1' . $digits : $digits;
+                return '<a href="tel:' . $href . '" class="font-extrabold text-brand-blue underline underline-offset-4">' . $m[0] . '</a>';
+            }, $html);
+        };
+      ?>
       <?php foreach ($doc['sections'] as $section): ?>
         <section id="<?= e($slug($section['heading'])) ?>" class="mb-10 scroll-mt-[110px] last:mb-0">
           <h2 class="m-0 mb-4 font-serif text-[24px] font-normal leading-[1.2] tracking-[-0.025em] text-ink sm:text-[28px]">
@@ -114,7 +125,7 @@ $page_of = static fn (string $k): string => ($k === 'hipaa' ? 'hipaa' : $k) . '.
           </h2>
 
           <?php foreach ($section['paras'] ?? [] as $para): ?>
-            <p class="m-0 mb-4 text-[15px] leading-[1.8] text-[#58616a] last:mb-0"><?= e($para) ?></p>
+            <p class="m-0 mb-4 text-[15px] leading-[1.8] text-[#58616a] last:mb-0"><?= $link_phones(e($para)) ?></p>
           <?php endforeach; ?>
 
           <?php if (!empty($section['terms'])): ?>

@@ -38,7 +38,7 @@ return [
     'region'     => 'Orange County',
     'page'       => 'huntington-beach.php',
     'h1'         => 'TMS therapy and more in',
-    'meta'       => 'Psychiatry, therapy and TMS in Huntington Beach, CA — Bella Terra Medical Building, 7677 Center Ave, Suite 405. Meet the clinicians, see what we treat, and book with the one who fits.',
+    'meta'       => 'TMS therapy, psychiatry and counseling in Huntington Beach, CA, at 7677 Center Ave. Most major insurance accepted. Meet our clinicians and book today.',
     'lede'       => 'TMS therapy and more. Our offices are in Bella Terra Plaza, just off the San Diego Freeway. We accept most major plans and will guide you through the benefits process.',
     'street_name'=> 'Center Avenue',
 
@@ -106,7 +106,7 @@ return [
     'region'     => 'Orange County',
     'page'       => 'newport-beach.php',
     'h1'         => 'Therapy and TMS in',
-    'meta'       => 'Psychiatry, therapy and TMS in Newport Beach, CA — 1000 Quail Street, Suite 200. Meet the clinicians, see what we treat, and book with the one who fits.',
+    'meta'       => 'TMS therapy, psychiatry and counseling in Newport Beach, CA, at 1000 Quail Street. Most major insurance accepted. Meet our clinicians and book today.',
     'lede'       => 'Therapy and TMS minutes from Fashion Island, just off Jamboree. Most major insurance plans accepted. We’ll help you through the benefits process.',
     'street_name'=> 'Quail Street',
 
@@ -175,7 +175,7 @@ return [
     'region'     => 'Orange County',
     'page'       => 'laguna-hills.php',
     'h1'         => 'TMS therapy and more in',
-    'meta'       => 'Psychiatry, therapy and TMS in Laguna Hills, CA — Saddleback Valley Medical Center, 23961 Calle De La Magdalena, Suite 420. Meet the clinicians, see what we treat, and book with the one who fits.',
+    'meta'       => 'TMS therapy, psychiatry and counseling in Laguna Hills, CA, at 23961 Calle De La Magdalena. Most major insurance accepted. Meet our clinicians and book today.',
     'lede'       => 'Explore TMS therapy and more at our offices in the Saddleback Valley Medical Center, near El Toro Road and the I-5. We’ll help you through the benefits process.',
     'street_name'=> 'Calle De La Magdalena',
 
@@ -250,7 +250,7 @@ return [
     'region'     => 'Orange County',
     'page'       => 'orange.php',
     'h1'         => 'TMS therapy and more in',
-    'meta'       => 'Psychiatry, therapy and TMS in Orange, CA — 2050 W Chapman Ave, Suite 201. Meet the clinicians, see what we treat, and book with the one who fits.',
+    'meta'       => 'TMS therapy, psychiatry and counseling in Orange, CA, at 2050 W Chapman Ave. Most major insurance accepted. Meet our clinicians and book today.',
     'lede'       => 'We provide TMS therapy and other services at our office on West Chapman Avenue. We’ll help you navigate the insurance process.',
     'street_name'=> 'West Chapman Avenue',
 
@@ -320,7 +320,7 @@ return [
     'region'     => 'South Bay',
     'page'       => 'torrance.php',
     'h1'         => 'TMS and more in',
-    'meta'       => 'Psychiatry, therapy and TMS in Torrance, CA — 3848 W Carson St, Suite 103. Meet the clinicians, see what we treat, and book with the one who fits.',
+    'meta'       => 'TMS therapy, psychiatry and counseling in Torrance, CA, at 3848 W Carson St. Most major insurance accepted. Meet our clinicians and book today.',
     'lede'       => 'Our offices are conveniently located in South Bay across from the Del Amo Fashion Center. We accept most major forms of insurance and will help you navigate the insurance process.',
     'street_name'=> 'West Carson Street',
 
@@ -389,7 +389,7 @@ return [
     'region'     => 'Los Angeles County',
     'page'       => 'long-beach.php',
     'h1'         => 'TMS therapy and more in',
-    'meta'       => 'Psychiatry, therapy and TMS in Long Beach, CA — 100 Oceangate Unit 610. Meet the clinicians, see what we treat, and book with the one who fits.',
+    'meta'       => 'TMS therapy, psychiatry and counseling in Long Beach, CA, at 100 Oceangate Unit 610. Most major insurance accepted. Meet our clinicians and book a visit today.',
     'lede'       => 'TMS therapy and more in downtown Long Beach, right next to the harbor. Most major insurance is accepted; we’ll help you through the insurance process.',
     'street_name'=> 'Oceangate',
 
@@ -460,7 +460,7 @@ return [
     'region'     => 'Los Angeles County',
     'page'       => 'west-los-angeles.php',
     'h1'         => 'TMS therapy and more in',
-    'meta'       => 'Psychiatry, therapy and TMS in West Los Angeles, CA — 10780 Santa Monica Blvd, Suite 235. Meet the clinicians, see what we treat, and book with the one who fits.',
+    'meta'       => 'TMS therapy, psychiatry and counseling in West Los Angeles, CA, at 10780 Santa Monica Blvd. Most major insurance accepted. Meet our clinicians and book today.',
     'lede'       => 'Offering counseling, TMS therapy and more, our offices are on Santa Monica Boulevard, a short distance from the UCLA campus. We accept most major insurance and will help you through the insurance process.',
     'street_name'=> 'Santa Monica Boulevard',
 
@@ -533,7 +533,7 @@ return [
     'region'     => 'Austin',
     'page'       => 'central-austin.php',
     'h1'         => 'TMS therapy and more in',
-    'meta'       => 'Psychiatry, therapy and TMS in Central Austin, TX — 8140 N MoPac Expy, Building 3, Suite 150. Meet the clinicians, see what we treat, and book with the one who fits.',
+    'meta'       => 'TMS therapy, psychiatry and counseling in Central Austin, TX, at 8140 N MoPac Expy. Most major insurance accepted. Meet our clinicians and book today.',
     'lede'       => 'We provide TMS therapy and other services in Austin, just off the MoPac Expressway. We accept most major insurance providers and will help you navigate the entire insurance process.',
     'street_name'=> 'North MoPac',
 
@@ -608,10 +608,23 @@ return [
     'state_name' => 'Texas',
     'region'     => 'Austin',
     'page'       => 'cedar-park.php',
-    'h1'         => 'Psychiatry and TMS in',
-    'meta'       => 'Psychiatry, therapy and TMS in Cedar Park, TX — 1210 Cottonwood Creek Trail, Suite 230. Meet the clinicians, see what we treat, and book with the one who fits.',
-    'lede'       => 'Psychiatry, therapy and TMS on Cottonwood Creek Trail, north of Austin off the 183A. Most major plans accepted, and we check your benefits before your first visit.',
+    'h1'         => 'TMS therapy and more in',
+    'meta'       => 'TMS therapy, psychiatry and counseling in Cedar Park, TX, at 1210 Cottonwood Creek Trail. Most major insurance accepted. Meet our clinicians and book today.',
+    'lede'       => 'TMS therapy and more in Cedar Park, just north of Austin. We accept most major insurance providers, and we’ll help you through the insurance process, too.',
     'street_name'=> 'Cottonwood Creek Trail',
+
+    'copy' => [
+        'team_eyebrow'     => 'Meet the team',
+        'team_lead'        => 'Your team at',
+        'prescriber_note'  => 'We’ll help you find what works.',
+        'conditions_title' => 'Conditions we treat.',
+        'reviews_plain'    => true,
+        'reviews_tail'     => 'We’ve been helping people thrive since 2016.',
+        'getting_to'       => 'our Cedar Park clinic',
+        'faq_eyebrow'      => 'FAQ',
+        'faq_lead'         => 'Learn more',
+        'faq_place'        => 'about us',
+    ],
 
     'address'   => [
         'building' => '',
@@ -632,7 +645,7 @@ return [
 
     'getting_here' => [
         ['name' => 'Where it is',
-         'copy' => '1210 Cottonwood Creek Trail, Suite 230, in Cedar Park.'],
+         'copy' => '1210 Cottonwood Creek Trail, Suite 230, in Cedar Park.', 'map_link' => true],
         ['name' => 'Before your first visit',
          'copy' => 'Signposting inside a medical building is never as obvious as it looks on the way in. Give yourself a few extra minutes to find the suite rather than arriving at a run.'],
     ],
@@ -654,7 +667,7 @@ return [
 
     'faqs' => [
         ['q' => 'Do I need a referral to be seen here?',
-         'a' => ' Most plans let you book psychiatry directly, though a few HMO products still require one from your primary care doctor. We check that when we verify your benefits.'],
+         'a' => 'Most plans let you book psychiatry directly, though a few HMO plans still require one from your primary care doctor. We check that when we verify your benefits.'],
         ['q' => 'How soon can I get an appointment in Cedar Park?',
          'a' => 'New patient consultations are usually available within five business days, and same-week telehealth slots often open up. Say so when you call if things are urgent.'],
         ['q' => 'Can I be seen by video instead of coming in?',
@@ -670,10 +683,26 @@ return [
     'state_name' => 'Texas',
     'region'     => 'Austin',
     'page'       => 'westlake.php',
-    'h1'         => 'Psychiatry and TMS in',
-    'meta'       => 'Psychiatry, therapy and TMS in Westlake, TX — 1715 S Capital of Texas Hwy, Suite 205. Meet the clinicians, see what we treat, and book with the one who fits.',
-    'lede'       => 'Psychiatry, therapy and TMS on Capital of Texas Highway, in the hills west of downtown Austin. Most major plans accepted, and we check your benefits before your first visit.',
+    'h1'         => 'TMS therapy and more in',
+    'meta'       => 'TMS therapy, psychiatry and counseling in Westlake, TX, at 1715 S Capital of Texas Hwy. Most major insurance accepted. Meet our clinicians and book today.',
+    'lede'       => 'We offer TMS therapy and more in Austin’s Westlake area. We accept most forms of insurance and will help you through the entire insurance process.',
     'street_name'=> 'Capital of Texas Highway',
+
+    'copy' => [
+        'hero_place'      => 'Austin (Westlake)',
+        'team_eyebrow'    => 'Meet our team',
+        'team_lead'       => 'Our team at',
+        'team_place'      => 'our Westlake clinic',
+        'prescriber_note' => 'We’ll help you find the care you’re looking for.',
+        'offer_eyebrow'   => 'Our treatments',
+        'reviews_plain'   => true,
+        'reviews_prep'    => 'of',
+        'reviews_from'    => 'our Westlake clinic',
+        'reviews_tail'    => 'We’ve helped people grow and thrive since 2016.',
+        'getting_lead'    => 'How to find',
+        'getting_to'      => 'our Westlake clinic',
+        'faq_eyebrow'     => 'FAQ',
+    ],
 
     'address'   => [
         'building' => '',
@@ -716,7 +745,7 @@ return [
 
     'faqs' => [
         ['q' => 'Do I need a referral to be seen here?',
-         'a' => ' Most plans let you book psychiatry directly, though a few HMO products still require one from your primary care doctor. We check that when we verify your benefits.'],
+         'a' => 'Most plans let you book psychiatry directly, though a few HMO plans still require one from your primary care doctor. We check that when we verify your benefits.'],
         ['q' => 'How soon can I get an appointment in Westlake?',
          'a' => 'New patient consultations are usually available within five business days, and same-week telehealth slots often open up. Say so when you call if things are urgent.'],
         ['q' => 'Can I be seen by video instead of coming in?',
@@ -732,10 +761,25 @@ return [
     'state_name' => 'Texas',
     'region'     => 'Dallas',
     'page'       => 'central-dallas.php',
-    'h1'         => 'Psychiatry and TMS in',
-    'meta'       => 'Psychiatry, therapy and TMS in Central Dallas, TX — 17480 Dallas Pkwy, Suite 101. Meet the clinicians, see what we treat, and book with the one who fits.',
-    'lede'       => 'Psychiatry, therapy and TMS on Dallas Parkway, up the Tollway at the Plano line. Most major plans accepted, and we check your benefits before your first visit.',
+    'h1'         => 'TMS therapy and more in',
+    'meta'       => 'TMS therapy, psychiatry and counseling in Central Dallas, TX, at 17480 Dallas Pkwy. Most major insurance accepted. Meet our clinicians and book today.',
+    'lede'       => 'We offer TMS therapy and other services at our clinic in central Dallas. We accept most major insurance and will help you navigate the insurance process.',
     'street_name'=> 'Dallas Parkway',
+
+    'copy' => [
+        'hero_place'      => 'Dallas',
+        'team_eyebrow'    => 'Meet our team',
+        'team_lead'       => 'Your team at',
+        'team_place'      => 'our central Dallas clinic',
+        'prescriber_note' => 'We’ll help you find your best path to the life you deserve.',
+        'reviews_plain'   => true,
+        'reviews_from'    => 'our central Dallas clinic',
+        'reviews_tail'    => 'Helping people grow and thrive since 2016.',
+        'getting_to'      => 'our central Dallas clinic',
+        'faq_eyebrow'     => 'FAQ',
+        'faq_lead'        => 'Our clinic',
+        'faq_place'       => 'FAQ',
+    ],
 
     'address'   => [
         'building' => '',
@@ -781,7 +825,7 @@ return [
 
     'faqs' => [
         ['q' => 'Do I need a referral to be seen here?',
-         'a' => ' Most plans let you book psychiatry directly, though a few HMO products still require one from your primary care doctor. We check that when we verify your benefits.'],
+         'a' => 'Most plans let you book psychiatry directly, though a few HMO plans still require one from your primary care doctor. We check that when we verify your benefits.'],
         ['q' => 'How soon can I get an appointment in Central Dallas?',
          'a' => 'New patient consultations are usually available within five business days, and same-week telehealth slots often open up. Say so when you call if things are urgent.'],
         ['q' => 'Can I be seen by video instead of coming in?',
@@ -797,10 +841,24 @@ return [
     'state_name' => 'Texas',
     'region'     => 'Dallas',
     'page'       => 'allen.php',
-    'h1'         => 'Psychiatry and TMS in',
-    'meta'       => 'Psychiatry, therapy and TMS in Allen, TX — 1101 Raintree Circle, Suite 210. Meet the clinicians, see what we treat, and book with the one who fits.',
-    'lede'       => 'Psychiatry, therapy and TMS on Raintree Circle, off Central Expressway in Allen. Most major plans accepted, and we check your benefits before your first visit.',
+    'h1'         => 'TMS therapy and more in',
+    'meta'       => 'TMS therapy, psychiatry and counseling in Allen, TX, at 1101 Raintree Circle. Most major insurance accepted. Meet our clinicians and book today.',
+    'lede'       => 'At our Allen clinic, we offer evidence-based treatment, including TMS therapy. We accept most major forms of insurance, and we’ll work with you to help you get the care you need.',
     'street_name'=> 'Raintree Circle',
+
+    'copy' => [
+        'team_eyebrow'     => 'Meet our team',
+        'team_lead'        => 'Your team at',
+        'team_place'       => 'our Allen clinic',
+        'prescriber_note'  => 'We’ll help you find the care you’re looking for.',
+        'conditions_title' => 'What we treat.',
+        'conditions_note'  => 'We offer evidence-based treatment for mood disorders, anxiety disorders, and more. It all starts with a full diagnostic assessment.',
+        'reviews_plain'    => true,
+        'reviews_from'     => 'our Allen clinic',
+        'reviews_tail'     => 'We’ve been helping people grow and thrive since 2016.',
+        'getting_to'       => 'our Allen clinic',
+        'faq_eyebrow'      => 'FAQ',
+    ],
 
     'address'   => [
         'building' => '',
@@ -843,7 +901,7 @@ return [
 
     'faqs' => [
         ['q' => 'Do I need a referral to be seen here?',
-         'a' => ' Most plans let you book psychiatry directly, though a few HMO products still require one from your primary care doctor. We check that when we verify your benefits.'],
+         'a' => 'Most plans let you book psychiatry directly, though a few HMO plans still require one from your primary care doctor. We check that when we verify your benefits.'],
         ['q' => 'How soon can I get an appointment in Allen?',
          'a' => 'New patient consultations are usually available within five business days, and same-week telehealth slots often open up. Say so when you call if things are urgent.'],
         ['q' => 'Can I be seen by video instead of coming in?',
@@ -860,9 +918,24 @@ return [
     'region'     => 'Dallas',
     'page'       => 'grapevine.php',
     'h1'         => 'Psychiatry and TMS in',
-    'meta'       => 'Psychiatry, therapy and TMS in Grapevine, TX — 1643 Lancaster Dr, Suite 201. Meet the clinicians, see what we treat, and book with the one who fits.',
-    'lede'       => 'Psychiatry, therapy and TMS on Lancaster Drive, minutes from DFW and Southlake. Most major plans accepted, and we check your benefits before your first visit.',
+    'meta'       => 'TMS therapy, psychiatry and counseling in Grapevine, TX, at 1643 Lancaster Dr. Most major insurance accepted. Meet our clinicians and book today.',
+    'lede'       => 'Located between Dallas and Fort Worth, our Grapevine clinic provides TMS therapy and more. Most major insurance accepted, and we’ll help you navigate the insurance process.',
     'street_name'=> 'Lancaster Drive',
+
+    'copy' => [
+        'team_eyebrow'     => 'Meet our team',
+        'team_lead'        => 'Our team in',
+        'conditions_title' => 'What we treat.',
+        'conditions_note'  => 'We provide effective, evidence-based care for anxiety, depression, and more.',
+        'reviews_plain'    => true,
+        'reviews_from'     => 'our Grapevine clinic',
+        'reviews_tail'     => 'Helping people thrive and grow since 2016.',
+        'getting_lead'     => 'How to find',
+        'getting_to'       => 'our Grapevine clinic',
+        'faq_eyebrow'      => 'FAQ',
+        'faq_lead'         => 'Learn more',
+        'faq_place'        => 'about us',
+    ],
 
     'address'   => [
         'building' => '',
@@ -905,7 +978,7 @@ return [
 
     'faqs' => [
         ['q' => 'Do I need a referral to be seen here?',
-         'a' => ' Most plans let you book psychiatry directly, though a few HMO products still require one from your primary care doctor. We check that when we verify your benefits.'],
+         'a' => 'Most plans let you book psychiatry directly, though a few HMO plans still require one from your primary care doctor. We check that when we verify your benefits.'],
         ['q' => 'How soon can I get an appointment in Grapevine?',
          'a' => 'New patient consultations are usually available within five business days, and same-week telehealth slots often open up. Say so when you call if things are urgent.'],
         ['q' => 'Can I be seen by video instead of coming in?',
@@ -921,10 +994,20 @@ return [
     'state_name' => 'Texas',
     'region'     => 'Houston',
     'page'       => 'cypress.php',
-    'h1'         => 'Psychiatry and TMS in',
-    'meta'       => 'Psychiatry, therapy and TMS in Cypress, TX — 27700 Northwest Fwy, Suite 340. Meet the clinicians, see what we treat, and book with the one who fits.',
-    'lede'       => 'Psychiatry, therapy and TMS on the Northwest Freeway, serving north-west Houston. Most major plans accepted, and we check your benefits before your first visit.',
+    'h1'         => 'TMS therapy and more in',
+    'meta'       => 'TMS therapy, psychiatry and counseling in Cypress, TX, at 27700 Northwest Fwy. Most major insurance accepted. Meet our clinicians and book today.',
+    'lede'       => 'We offer evidence-based care, including TMS therapy, at our clinic in Cypress. We accept most major insurance, and we’ll help you explore every option you have.',
     'street_name'=> 'Northwest Freeway',
+
+    'copy' => [
+        'team_eyebrow'    => 'Our team',
+        'team_lead'       => 'Meet your treatment team at',
+        'team_place'      => 'our Cypress clinic',
+        'prescriber_note' => 'We’ll help you find your best way forward. We’ve been doing it since 2016.',
+        'reviews_plain'   => true,
+        'reviews_from'    => 'our Cypress clinic',
+        'reviews_tail'    => 'Explore our clients’ stories.',
+    ],
 
     'address'   => [
         'building' => '',
@@ -965,7 +1048,7 @@ return [
 
     'faqs' => [
         ['q' => 'Do I need a referral to be seen here?',
-         'a' => 'Most plans let you book psychiatry directly, though a few HMO products still require one from your primary care doctor. We check that when we verify your benefits.'],
+         'a' => 'Most plans let you book psychiatry directly, though a few HMO plans still require one from your primary care doctor. We check that when we verify your benefits.'],
         ['q' => 'How soon can I get an appointment in Cypress?',
          'a' => 'New patient consultations are usually available within five business days, and same-week telehealth slots often open up. Say so when you call if things are urgent.'],
         ['q' => 'Can I be seen by video instead of coming in?',
@@ -981,10 +1064,25 @@ return [
     'state_name' => 'Texas',
     'region'     => 'Houston',
     'page'       => 'the-woodlands.php',
-    'h1'         => 'Psychiatry and TMS in',
-    'meta'       => 'Psychiatry, therapy and TMS in The Woodlands, TX — 1733 Woodstead Ct, Suite 102. Meet the clinicians, see what we treat, and book with the one who fits.',
-    'lede'       => 'Psychiatry, therapy and TMS on Woodstead Court, in the middle of The Woodlands. Most major plans accepted, and we check your benefits before your first visit.',
+    'h1'         => 'TMS therapy in',
+    'meta'       => 'TMS therapy, psychiatry and counseling in The Woodlands, TX, at 1733 Woodstead Ct. Most major insurance accepted. Meet our clinicians and book today.',
+    'lede'       => 'Our clinic in The Woodlands offers evidence-based treatment, including TMS therapy. We accept most major insurance, and we’ll help you overcome any barrier in the way of your treatment.',
     'street_name'=> 'Woodstead Court',
+
+    'copy' => [
+        'team_eyebrow'     => 'Our team',
+        'team_lead'        => 'Meet your team at',
+        'team_place'       => 'our clinic in The Woodlands',
+        'prescriber_note'  => 'We’ll help you find your best path to the life you deserve.',
+        'conditions_title' => 'What we treat.',
+        'conditions_note'  => 'We provide evidence-based treatment for mood disorders, anxiety disorders, and more. It all starts with a full diagnostic assessment.',
+        'reviews_plain'    => true,
+        'reviews_tail'     => 'We’ve been helping people thrive and grow since 2016.',
+        'getting_eyebrow'  => 'How to find us',
+        'getting_to'       => 'our clinic in The Woodlands',
+        'faq_eyebrow'      => 'FAQ',
+        'faq_place'        => 'clinic in The Woodlands',
+    ],
 
     'address'   => [
         'building' => '',
@@ -1027,7 +1125,7 @@ return [
 
     'faqs' => [
         ['q' => 'Do I need a referral to be seen here?',
-         'a' => ' Most plans let you book psychiatry directly, though a few HMO products still require one from your primary care doctor. We check that when we verify your benefits.'],
+         'a' => 'Most plans let you book psychiatry directly, though a few HMO plans still require one from your primary care doctor. We check that when we verify your benefits.'],
         ['q' => 'How soon can I get an appointment in The Woodlands?',
          'a' => 'New patient consultations are usually available within five business days, and same-week telehealth slots often open up. Say so when you call if things are urgent.'],
         ['q' => 'Can I be seen by video instead of coming in?',
